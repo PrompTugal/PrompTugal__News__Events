@@ -84,7 +84,8 @@ jobs:
         uses: actions/deploy-pages@v4
   tag:
     needs: [build, deploy]
-    if: ${{ always() && needs.build.result == 'success' && (needs.deploy.result == 'success' || needs.deploy.result == 'skipped') }}
+    # A scheduled rebuild only refreshes the data: it deploys but does not tag a new version (AppSec review, 18 Nov 2026).
+    if: ${{ always() && github.event_name != 'schedule' && needs.build.result == 'success' && (needs.deploy.result == 'success' || needs.deploy.result == 'skipped') }}
     runs-on: ubuntu-latest
     permissions:
       contents: write

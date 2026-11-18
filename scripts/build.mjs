@@ -10,7 +10,7 @@ const version = process.env.SITE_VERSION || 'dev';
 const REPO = 'https://github.com/PrompTugal/PrompTugal__News__Events';
 const builtAt = new Date();
 const R = await import(pathToFileURL(resolve('src/assets/render.mjs')).href);
-const { SITE, DATA, CCBY, REGION, NAMES, nameOf, lisbonDay, clean, esc, escUrl, okUrl, link, mdText, mdLink, host, fmtDay, fmtWhen, fmtStamp, addDays, readItemsOf, foundItemsOf, endOf, startOf, isCurrent, groupByDay, eventHtml, eventMd, listHtml, listMd, timePart } = R;
+const { okId, SITE, DATA, CCBY, REGION, NAMES, nameOf, lisbonDay, clean, esc, escUrl, okUrl, link, mdText, mdLink, host, fmtDay, fmtWhen, fmtStamp, addDays, readItemsOf, foundItemsOf, endOf, startOf, isCurrent, groupByDay, eventHtml, eventMd, listHtml, listMd, timePart } = R;
 R.setToday(lisbonDay(builtAt));
 const today = R.today;
 
@@ -20,7 +20,10 @@ cpSync('src', '_site', { recursive: true });
 // ---------------------------------------------------------------- data
 const readJson = (f, fallback = null) => { try { return JSON.parse(readFileSync(f, 'utf8')); } catch { return fallback; } };
 const index = readJson('data/api/index.json', { places: [] });
+if (!Array.isArray(index.places)) index.places = [];
 const claimsIndex = readJson('data/api/claims-index.json', { places: [] });
+if (!Array.isArray(claimsIndex.places)) claimsIndex.places = [];
+const num = (x) => String(Math.max(0, Math.floor(Number(x) || 0)));
 const eventsPt = readJson('data/api/events-pt.json', {});
 const sync = readJson('data/api/sync.json', {});
 
@@ -256,7 +259,7 @@ const TELL_US = `<aside class="tell-us" role="note"><p><b>Tell us, and we change
 {
   const reg = readJson('data/api/sources/index.json', { entries: [] });
   const gapsF = readJson('data/api/sources/gaps.json', { hosts: [] });
-  const src = reg.entries.map((e) => readJson(`data/api/sources/${e.id}.json`, e)).filter((s) => s && /^[a-z0-9-]+$/.test(s.id || ''));
+  const src = (Array.isArray(reg.entries) ? reg.entries : []).filter((e) => e && okId(e.id)).map((e) => readJson(`data/api/sources/${e.id}.json`, e)).filter((s) => s && typeof s === 'object' && okId(s.id)).map((s) => ({ ...s, name: String(s.name || s.id), gives: Array.isArray(s.gives) ? s.gives : [], places: Array.isArray(s.places) ? s.places.filter(okId) : [] }));
   const STATUS = { read: 'read', 'not-read': 'not read', asked: 'asked', allowed: 'allowed', refused: 'refused', 'no-answer': 'no answer' };
   const givesEvents = (s) => (s.gives || []).some((g) => /event/i.test(g));
   const placesText = (s) => (s.places || []).map((p) => (p === 'portugal' ? 'Portugal' : nameOf(p))).join(', ');
@@ -273,7 +276,7 @@ const TELL_US = `<aside class="tell-us" role="note"><p><b>Tell us, and we change
 <h4><a class="anchor" href="#${s.id}" aria-label="Link to this source">#</a> ${link(s.url, s.name)} <span class="flag ${read ? 'ok' : 'no'}">${esc(STATUS[s.status] || s.status)}</span>${givesEvents(s) ? ' <span class="flag">events</span>' : ''}</h4>
 <dl class="ev-facts"><dt>Kind</dt><dd>${esc(s.kind || '')}</dd><dt>Owner</dt><dd>${esc(s.owner || 'not known')}</dd><dt>Places</dt><dd>${esc(placesText(s))}</dd><dt>Would give</dt><dd>${esc((s.gives || []).join('; '))}</dd>
 ${read ? `<dt>How we read it</dt><dd>${esc(s.how || '')}${s.on_this_site ? ` (${link(s.on_this_site, 'its card')})` : ''}</dd>` : ''}${why}${limits}
-${!read && s.interface ? `<dt>Interface</dt><dd>${esc(s.interface)}</dd>` : ''}${s.cited_by ? `<dt>Cited by</dt><dd>${s.cited_by.claims} events found through Perplexity, in ${(s.cited_by.places || []).length} places</dd>` : ''}
+${!read && s.interface ? `<dt>Interface</dt><dd>${esc(s.interface)}</dd>` : ''}${s.cited_by ? `<dt>Cited by</dt><dd>${num(s.cited_by.claims)} events found through Perplexity, in ${(s.cited_by.places || []).length} places</dd>` : ''}
 <dt>Asked them?</dt><dd>${['asked', 'allowed', 'refused', 'no-answer'].includes(s.status) ? esc(STATUS[s.status]) : 'not yet: a request on the record, through its own published channel, drafted by an agent and sent by a person'}</dd>
 ${s.notes ? `<dt>Notes</dt><dd>${esc(s.notes)}</dd>` : ''}${checks ? `<dt>Open</dt><dd><ul>${checks}</ul></dd>` : ''}
 <dt>Record</dt><dd>${link(`${DATA}/api/v1/sources/${s.id}.json`, `${s.id}.json`)}${s.researched_by ? ` <span class="small">researched by ${esc(s.researched_by)}</span>` : ''}</dd></dl>
@@ -284,8 +287,9 @@ ${s.notes ? `<dt>Notes</dt><dd>${esc(s.notes)}</dd>` : ''}${checks ? `<dt>Open</
   const byBasis = {};
   for (const s of notS) { const k = (s.why?.basis || 'not recorded').replace(/[:(].*$/, '').trim(); byBasis[k] = (byBasis[k] || 0) + 1; }
   const regIds = new Set(src.map((s) => s.id));
-  const unreg = (gapsF.hosts || []).filter((h) => !h.register || !regIds.has(h.register)).sort((a, b) => b.claims - a.claims);
-  const regGaps = (gapsF.hosts || []).filter((h) => h.register && regIds.has(h.register));
+  const hosts = (Array.isArray(gapsF.hosts) ? gapsF.hosts : []).filter((h) => h && typeof h.host === 'string').map((h) => ({ ...h, places: Array.isArray(h.places) ? h.places.filter(okId) : [] }));
+  const unreg = hosts.filter((h) => !h.register || !regIds.has(h.register)).sort((a, b) => Number(b.claims || 0) - Number(a.claims || 0));
+  const regGaps = hosts.filter((h) => h.register && regIds.has(h.register));
   page({
     path: '/sources/', section: '/sources/', title: 'Every source: read, not read, and why · PrompTugal.news Events',
     description: `Every source PrompTugal.news knows of: ${readS.length} we read and ${notS.length} we do not, each with why not, its licence limits and the rules we follow; plus ${unreg.length} sites Perplexity cited that are not on the register yet.`,
@@ -302,9 +306,9 @@ ${TELL_US}
 <section id="cited"><h2>Cited by Perplexity, not on the register yet (${unreg.length})</h2>
 <p>Sites Perplexity cited as evidence for an event, that we do not read and have not yet researched. Each is a gap: its terms go on the register next, then a request on the record. Counts are the events found that point to it.</p>
 <table class="places-table"><thead><tr><th scope="col">Site</th><th scope="col">Events</th><th scope="col">Places</th></tr></thead><tbody>
-${unreg.map((h) => `<tr id="host-${esc(h.host.replace(/[^a-z0-9]+/gi, '-'))}"><th scope="row">${link(h.example || `https://${h.host}/`, h.host)}</th><td class="n">${h.claims}</td><td>${esc((h.places || []).map(nameOf).join(', '))}</td></tr>`).join('\n')}
+${unreg.map((h) => `<tr id="host-${esc(h.host.replace(/[^a-z0-9]+/gi, '-'))}"><th scope="row">${link(h.example || `https://${h.host}/`, h.host)}</th><td class="n">${num(h.claims)}</td><td>${esc((h.places || []).map(nameOf).join(', '))}</td></tr>`).join('\n')}
 </tbody></table>
-${regGaps.length ? `<p class="small">Also cited and already on the register: ${regGaps.map((h) => `<a href="#${esc(h.register)}">${esc(h.host)}</a> (${h.claims})`).join(', ')}.</p>` : ''}</section>
+${regGaps.length ? `<p class="small">Also cited and already on the register: ${regGaps.map((h) => `<a href="#${okId(h.register) ? h.register : ''}">${esc(h.host)}</a> (${num(h.claims)})`).join(', ')}.</p>` : ''}</section>
 <section id="limits"><h2>Licence limits, in short</h2>
 <ul>
 <li><b>What we make</b> (our pages, words, records, this register) is <a class="lic" href="${CCBY}">CC BY 4.0</a>: reuse it with credit.</li>
@@ -313,7 +317,7 @@ ${regGaps.length ? `<p class="small">Also cited and already on the register: ${r
 <li><b>Sources we do not read</b>: nothing copied. At most a link, as evidence.</li>
 </ul></section>
 <section id="rules"><h2>The rules we follow</h2><p>In full on <a href="/principles/#rules">our principles</a>: public sources only, through supported interfaces; robots.txt, terms and refusals respected; a licence on everything; credit for how we found it; asking on the record; public and professional only.</p></section>`,
-    md: `${readS.length} sources read, ${notS.length} not read, ${unreg.length} cited by Perplexity and not on the register yet. Tell us, and we change: ${SITE}/report/\n\n## Read\n\n${readS.map((s) => `- ${mdLink(s.url, s.name)} (${s.kind}): ${mdText(s.terms?.summary || '')}`).join('\n')}\n\n## Not read\n\n${notS.map((s) => `- ${mdLink(s.url, s.name)} (${s.kind}): ${mdText(s.why?.basis || '')}${s.why?.quote ? `: "${mdText(s.why.quote)}"` : s.why?.text ? `: ${mdText(s.why.text)}` : ''}${s.why?.page ? ` (${s.why.page}, ${s.why.read_at || ''})` : ''}`).join('\n')}\n\n## Cited, not on the register\n\n${unreg.map((h) => `- ${h.host}: ${h.claims} events`).join('\n')}`,
+    md: `${readS.length} sources read, ${notS.length} not read, ${unreg.length} cited by Perplexity and not on the register yet. Tell us, and we change: ${SITE}/report/\n\n## Read\n\n${readS.map((s) => `- ${mdLink(s.url, s.name)} (${s.kind}): ${mdText(s.terms?.summary || '')}`).join('\n')}\n\n## Not read\n\n${notS.map((s) => `- ${mdLink(s.url, s.name)} (${s.kind}): ${mdText(s.why?.basis || '')}${s.why?.quote ? `: "${mdText(s.why.quote)}"` : s.why?.text ? `: ${mdText(s.why.text)}` : ''}${s.why?.page ? ` (${mdLink(s.why.page, 'source')}, ${mdText(s.why.read_at || '')})` : ''}`).join('\n')}\n\n## Cited, not on the register\n\n${unreg.map((h) => `- ${mdText(h.host)}: ${num(h.claims)} events`).join('\n')}`,
   });
 }
 

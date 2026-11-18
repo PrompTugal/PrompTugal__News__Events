@@ -11,7 +11,10 @@ export const NAMES = {
   portimao: 'Portimão', quarteira: 'Quarteira', 'sao-bras-de-alportel': 'São Brás de Alportel', silves: 'Silves',
   tavira: 'Tavira', 'vila-do-bispo': 'Vila do Bispo', 'vila-real-de-santo-antonio': 'Vila Real de Santo António',
 };
-export const nameOf = (id) => NAMES[id] || id.split('-').map((w) => w[0].toUpperCase() + w.slice(1)).join(' ');
+export const nameOf = (id) => NAMES[id] || String(id || '').split('-').filter(Boolean).map((w) => w[0].toUpperCase() + w.slice(1)).join(' ');
+// Every value from the API is untrusted (AppSec review, 18 Nov 2026): ids and dates are checked before use in a link, an id or a heading.
+export const okId = (p) => typeof p === 'string' && /^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(p);
+export const okDate = (d) => typeof d === 'string' && /^\d{4}-\d{2}-\d{2}(?:T\d{2}:\d{2}(?::\d{2})?(?:Z|[+-]\d{2}:?\d{2})?)?$/.test(d);
 export const lisbonDay = (d) => new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Lisbon', year: 'numeric', month: '2-digit', day: '2-digit' }).format(d);
 export let today = lisbonDay(new Date());
 export const setToday = (d) => { today = d; };
@@ -20,10 +23,10 @@ export const setToday = (d) => { today = d; };
 export const clean = (s) => String(s ?? '').replace(/—/g, '–').replace(/\s+/g, ' ').trim();
 export const esc = (s) => clean(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 export const escUrl = (u) => String(u ?? '').replace(/&/g, '&amp;').replace(/"/g, '%22').replace(/</g, '%3C').replace(/>/g, '%3E');
-export const okUrl = (u) => typeof u === 'string' && /^https?:\/\//.test(u);
+export const okUrl = (u) => typeof u === 'string' && /^https?:\/\/[^\s<>"'`\\]+$/i.test(u);
 export const link = (u, text) => (okUrl(u) ? `<a href="${escUrl(u)}">${esc(text)}</a>` : esc(text));
 export const mdText = (s) => clean(s).replace(/([\[\]*_`<>|])/g, '\\$1');
-export const mdLink = (u, text) => (okUrl(u) ? `[${mdText(text)}](${String(u).replace(/ /g, '%20').replace(/\)/g, '%29')})` : mdText(text));
+export const mdLink = (u, text) => (okUrl(u) ? `[${mdText(text)}](${String(u).replace(/\(/g, '%28').replace(/\)/g, '%29').replace(/</g, '%3C').replace(/>/g, '%3E')})` : mdText(text));
 export const host = (u) => { try { return new URL(u).host.replace(/^www\./, ''); } catch { return ''; } };
 
 export const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
@@ -45,8 +48,11 @@ export const fmtStamp = (iso) => {
 export const addDays = (day, n) => { const t = ymd(day); return new Date(Date.UTC(t.y, t.m - 1, t.d + n)).toISOString().slice(0, 10); };
 
 // One shape for both kinds: "read" (details from a source we may read) and "found" (a claim found through Perplexity).
-export const readItemsOf = (f, place) => (f?.events || []).filter((e) => e && e.name && e.startDate).map((e) => ({ kind: 'read', place: e.place || place, e }));
-export const foundItemsOf = (f, place) => (f?.claims || []).filter((c) => c && c.name && c.startDate).map((c) => ({ kind: 'found', place: c.place || place, e: c, discovery: f.discovery }));
+const okItem = (e) => e && typeof e === 'object' && typeof e.name === 'string' && e.name.trim() && okDate(e.startDate) && (e.endDate == null || e.endDate === '' || okDate(e.endDate));
+const pid = (p, fallback) => (okId(p) ? p : okId(fallback) ? fallback : 'algarve');
+const arr = (a) => (Array.isArray(a) ? a : []);
+export const readItemsOf = (f, place) => arr(f?.events).filter(okItem).map((e) => ({ kind: 'read', place: pid(e.place, place), e }));
+export const foundItemsOf = (f, place) => arr(f?.claims).filter(okItem).map((c) => ({ kind: 'found', place: pid(c.place, place), e: c, discovery: f.discovery && typeof f.discovery === 'object' ? f.discovery : null }));
 export const endOf = (it) => dayPart(it.e.endDate || it.e.startDate);
 export const startOf = (it) => dayPart(it.e.startDate);
 export const isCurrent = (it) => endOf(it) >= today;
@@ -91,11 +97,11 @@ export function eventHtml(it, { showPlace = false } = {}) {
 <p class="report"><a href="/report/">Something wrong? Tell us</a></p>
 </li>`;
   }
-  const ev = (e.evidence || []).filter((x) => okUrl(x.url));
+  const ev = arr(e.evidence).filter((x) => x && okUrl(x.url));
   const evHtml = ev.map((x) => `${link(x.url, x.host || host(x.url))} <span class="flag ${x.readable ? 'ok' : 'no'}">${x.readable ? 'we may read it' : 'we do not copy it'}</span>`).join('; ') || '<span class="none">none kept</span>';
   const df = e.details_from;
   const confirm = e.status === 'confirmed'
-    ? `<p class="withheld">Confirmed at a source we may read${df ? `: ${(() => { const u = String(typeof df === 'string' ? df : df.url || '').split(' ')[0]; return okUrl(u) ? link(u, host(u)) : esc(String(df)); })()}` : ''}.</p>`
+    ? `<p class="withheld">Confirmed at a source we may read${df ? `: ${(() => { const u = String(typeof df === 'string' ? df : df.url || '').split(' ')[0]; return okUrl(u) ? link(u, host(u)) : esc(typeof df === 'string' ? df : ''); })()}` : ''}.</p>`
     : e.status === 'details withheld'
     ? `<p class="withheld">Details withheld: the source's terms do not let us copy them. <a href="/organisers/">Organisers, send them to us.</a></p>`
     : `<p class="withheld">${esc(e.status === 'to confirm at a readable source' ? 'To confirm: a source we may read is cited, and its details are not read yet.' : (e.details_note || e.status || ''))} <a href="/organisers/">Organisers, send us the details.</a></p>`;
@@ -119,7 +125,7 @@ export function eventMd(it) {
       `  - Evidence: ${mdLink(e.url, "the event's page")}${sourceUrl(e) ? `; ${mdLink(sourceUrl(e), sourceLabel(e) || 'the list it was read from')}` : ''}; read ${fmtStamp(e.read_at)}`,
       `  - Licence: ${licenceMd(e.license)}`].join('\n');
   }
-  const ev = (e.evidence || []).filter((x) => okUrl(x.url)).map((x) => `${mdLink(x.url, x.host || host(x.url))} (${x.readable ? 'we may read it' : 'we do not copy it'})`).join('; ');
+  const ev = arr(e.evidence).filter((x) => x && okUrl(x.url)).map((x) => `${mdLink(x.url, x.host || host(x.url))} (${x.readable ? 'we may read it' : 'we do not copy it'})`).join('; ');
   return [`- **${mdText(e.name)}** (found through Perplexity)`, `  - When: ${mdText(fmtWhen(e.startDate, e.endDate))}; place: ${mdText(place)}`,
     `  - Evidence: ${ev || 'none kept'}`, `  - ${e.status === 'confirmed' ? 'Confirmed at a source we may read.' : e.status === 'details withheld' ? "Details withheld: the source's terms do not let us copy them. Organisers, send them to us: " + SITE + '/organisers/' : 'To confirm at a source we may read.'}`,
     `  - Licence: ${licenceMd(e.license)}; each evidence link under its own source's terms`].join('\n');
