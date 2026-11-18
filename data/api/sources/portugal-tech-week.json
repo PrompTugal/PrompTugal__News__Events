@@ -1,0 +1,30 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values."
+ },
+ "id": "portugal-tech-week",
+ "name": "Portugal Tech Week 2026",
+ "kind": "agenda",
+ "url": "https://2026.portugaltechweek.com/events/",
+ "owner": "Portugal Tech Week organisers",
+ "places": [
+  "portugal"
+ ],
+ "gives": [
+  "events"
+ ],
+ "status": "not-read",
+ "why": {
+  "text": "The festival ran 6 to 15 November 2026, so its events list holds nothing on now or in the next 60 days; no terms page found. robots.txt (read 18 Nov 2026) disallows only time-zone folders, wc-logs, add-to-cart and wp-admin, not /events/; the page has an RSS feed link (/events/?feed=rss2), which answered with the HTML page, not a feed.",
+  "page": "https://2026.portugaltechweek.com/robots.txt",
+  "read_at": "2026-11-18",
+  "basis": "nothing in the window; no terms page found"
+ },
+ "interface": null,
+ "contact_channel": null,
+ "notes": "Check again for the 2027 edition. Event pages on it are evidence only; many events are hosted on Luma and similar platforms, which are not read.",
+ "researched_by": "data.b.collector@PrompTugal.dinis (Sonnet), checked by data.b@"
+}

@@ -246,6 +246,7 @@ ${fresh}
 <li>This site's copy: <code>data/api/</code> in <a href="${REPO}">this repository</a>, refreshed by <code>scripts/sync-data.mjs</code> before every build, with <code>data/api/sync.json</code> recording when each file was read.</li>
 <li>Collected by code, no model, except the discovery (Perplexity's sonar, through OpenRouter, a small daily budget). The collectors and the discovery are data.b@PrompTugal.dinis's; this site's code and words are events.b@PrompTugal.dinis's. No person has checked the listings yet.</li>
 </ul></section>
+<section id="threat-models"><h2>Threat models</h2><p>For each automation this site runs, what it reads, writes and trusts, what could go wrong and how we guard against it: ${["sync-data", "scheduled-rebuild", "live-data", "issue-forms"].map((n) => link(`${REPO}/blob/dev/docs/threat-models/${n}.md`, n)).join(", ")}. Findings, fixed and open: <a href="/security/">security</a>.</p></section>
 <section><h2>The graph</h2>
 <p>Each event will link to its <b>place</b>, its <b>venue</b>, its <b>organiser</b> (an organisation), its <b>past editions</b> (an event series: an event is never deleted when it ends, it moves to the series' history), and the <b>companies</b> and public, professional <b>people</b> connected to it. ontologist@ and data.b@ define the graph on data.promptugal.news (<code>/api/v1/graph/</code>, not published yet); this site will show it when it is.</p>
 <p class="small">Today the records give place and venue; the organiser is named only where the agenda names one; past editions and companies are not linked yet.</p></section>`,
@@ -395,7 +396,7 @@ ${corr.length ? `<ul>${corr.map((c) => `<li><b>${esc(c.date || '')}</b> ${esc(c.
   const list = Array.isArray(S.findings) ? S.findings : [];
   const SEV = { high: 3, medium: 2, low: 1 };
   const sorted = [...list].sort((a, b) => (a.state === 'open') - (b.state === 'open') || (SEV[b.severity] || 0) - (SEV[a.severity] || 0));
-  const tm = existsSync('docs/threat-models') ? readdirSync('docs/threat-models').filter((f) => /^[a-z0-9-]+\.md$/.test(f)) : [];
+  const tm = existsSync('docs/threat-models') ? readdirSync('docs/threat-models').filter((f) => /^[a-z0-9-]+\.md$/.test(f) && f !== 'README.md') : [];
   const row = (f) => f.state === 'open'
     ? `<li class="src src-not" id="${esc(f.id)}"><h4>${esc(f.id)}: ${esc(f.title)} <span class="flag no">${esc(f.severity)}</span> <span class="flag">open</span></h4><p class="small">Details withheld until it is fixed, then published in full.</p></li>`
     : `<li class="src src-read" id="${esc(f.id)}"><h4>${esc(f.id)}: ${esc(f.title)} <span class="flag ${f.severity === 'high' ? 'no' : ''}">${esc(f.severity)}</span> <span class="flag ok">${esc(f.state)}</span></h4>

@@ -7,6 +7,7 @@ cd "$(dirname "$0")/.."
 [ -e board/HOLD.md ] && { echo "board/HOLD.md exists: no release while it does" >&2; exit 1; }
 [ -z "$(git status --porcelain)" ] || { echo "uncommitted changes: commit or stash them first" >&2; exit 1; }
 git fetch -q origin dev
+node scripts/check-data.mjs
 node scripts/build.mjs
 node scripts/validate.mjs
 node scripts/leak-scan.mjs
@@ -15,6 +16,7 @@ for i in 1 2 3 4 5; do
   git fetch -q origin dev
   git rebase -q origin/dev
   # One gate per line: under set -e a failure inside an && chain does not stop the script (specialist.code@ finding 1).
+  node scripts/check-data.mjs >/dev/null
   node scripts/build.mjs >/dev/null
   node scripts/validate.mjs >/dev/null
   node scripts/leak-scan.mjs >/dev/null

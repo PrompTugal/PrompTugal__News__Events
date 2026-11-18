@@ -1,0 +1,35 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values."
+ },
+ "id": "cnpd-decisions",
+ "name": "CNPD (Comissão Nacional de Protecção de Dados) decisions",
+ "kind": "cyber data source",
+ "url": "https://www.cnpd.pt/decisoes/deliberacoes/",
+ "owner": "Comissão Nacional de Proteção de Dados (CNPD), Portugal",
+ "places": [
+  "portugal"
+ ],
+ "gives": [
+  "data-protection decisions",
+  "deliberations",
+  "guidelines",
+  "opinions"
+ ],
+ "status": "not-read",
+ "why": {
+  "quote": "A reprodução total ou parcial deste site, em suporte de papel ou em suporte eletrónico, é autorizada desde que respeite as seguintes condições: Gratuitidade da sua difusão; Respeito pela integridade dos documentos reproduzidos; Citação explícita do site www.cnpd.pt, como fonte e menção que os direitos são reservados. As informações só devem ser utilizadas para fins pessoais, associativos ou profissionais; estando excluída toda a utilização para fins comerciais ou publicitários.",
+  "quote_lang": "pt",
+  "page": "https://www.cnpd.pt/avisos-legais-e-outras-informacoes/",
+  "read_at": "2026-11-18",
+  "basis": "published terms page (Avisos legais), reproduction clause"
+ },
+ "interface": "Decision lists on the website (HTML pages under /decisoes/: deliberacoes, autorizacoes, diretrizes, pareceres); no API or feed found.",
+ "feed": null,
+ "contact_channel": "https://www.cnpd.pt/avisos-legais-e-outras-informacoes/",
+ "notes": "quote_lang is Portuguese (pt), not en. Aggregate-only fit: counts of decisions per month would be our own statistics, but the clause excludes commercial or advertising use, and PrompTugal plans revenue, so it RESTRICTS reuse of the text; counts and links may be fine, lead to ask CNPD. robots.txt returned 404 (no rule). Decisions can name organisations and people: link only, never copy text.",
+ "researched_by": "data.b.collector@PrompTugal.dinis (Sonnet), checked by data.b@"
+}

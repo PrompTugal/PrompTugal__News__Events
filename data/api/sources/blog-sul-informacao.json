@@ -1,0 +1,31 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values."
+ },
+ "id": "blog-sul-informacao",
+ "name": "Sul Informação",
+ "kind": "blog",
+ "url": "https://www.sulinformacao.pt/",
+ "owner": "Sul Informação",
+ "places": [
+  "algarve"
+ ],
+ "gives": [
+  "local news"
+ ],
+ "status": "not-read",
+ "why": {
+  "text": "no terms found in the feed; the site's own terms page was not fetched (request budget)",
+  "page": "https://www.sulinformacao.pt/feed/",
+  "read_at": "2026-11-18",
+  "basis": "feed fetched, answered 200 with items"
+ },
+ "interface": "Public RSS/Atom feed, answered 200 on 2026-11-18; newest item in the feed: 18 Nov 2026.",
+ "feed": "https://www.sulinformacao.pt/feed/",
+ "contact_channel": null,
+ "notes": "A newspaper, not a blog: kind set to blog only because the schema has no outlet value here; lead may move it to the news register. Only Algarve feed that answered. Topics: Algarve local news.",
+ "researched_by": "data.b.collector@PrompTugal.dinis (Sonnet), checked by data.b@"
+}

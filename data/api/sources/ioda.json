@@ -1,0 +1,31 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values."
+ },
+ "id": "ioda",
+ "name": "IODA, Internet Outage Detection and Analysis (Georgia Tech)",
+ "kind": "cyber data source",
+ "url": "https://ioda.inetintel.cc.gatech.edu/",
+ "owner": "Georgia Institute of Technology, Internet Intelligence Research Lab",
+ "places": [
+  "portugal"
+ ],
+ "gives": [
+  "country and region internet outage signals (aggregates)"
+ ],
+ "status": "not-read",
+ "why": {
+  "text": "No terms or licence found on the site or the API documentation page.",
+  "page": "https://ioda.inetintel.cc.gatech.edu/",
+  "read_at": "2026-11-18",
+  "basis": "no terms found"
+ },
+ "interface": "HTTP API at https://api.ioda.inetintel.cc.gatech.edu/v2/ (the documentation page answered 200; it names no licence).",
+ "feed": null,
+ "contact_channel": "https://ioda.inetintel.cc.gatech.edu/",
+ "notes": "No terms or licence found: the site is script-rendered (/terms and /data returned the same shell) and the API docs page has no licence text. Treat as unknown; lead to ask the lab. Would give Portugal: outage signal time series for the country (aggregates, no devices).",
+ "researched_by": "data.b.collector@PrompTugal.dinis (Sonnet), checked by data.b@"
+}

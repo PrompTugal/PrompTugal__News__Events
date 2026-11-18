@@ -1,0 +1,33 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values."
+ },
+ "id": "blog-blasfemias",
+ "name": "Blasfémias",
+ "kind": "blog",
+ "url": "https://blasfemias.net/",
+ "owner": "Blasfémias (collective blog)",
+ "places": [
+  "portugal"
+ ],
+ "gives": [
+  "public policy",
+  "economics",
+  "opinion"
+ ],
+ "status": "not-read",
+ "why": {
+  "text": "no terms found in the feed; the site's own terms page was not fetched (request budget)",
+  "page": "https://blasfemias.net/feed/",
+  "read_at": "2026-11-18",
+  "basis": "feed fetched, answered 200 with items"
+ },
+ "interface": "Public RSS/Atom feed, answered 200 on 2026-11-18; newest item in the feed: 18 Nov 2026.",
+ "feed": "https://blasfemias.net/feed/",
+ "contact_channel": null,
+ "notes": "Collective blog; byline per post as published. Topics: politics and economics, liberal viewpoint.",
+ "researched_by": "data.b.collector@PrompTugal.dinis (Sonnet), checked by data.b@"
+}

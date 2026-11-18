@@ -1,0 +1,32 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values."
+ },
+ "id": "theportugalnews",
+ "name": "The Portugal News",
+ "kind": "news outlet",
+ "url": "https://www.theportugalnews.com/",
+ "owner": "The Portugal News",
+ "places": [
+  "portugal",
+  "algarve"
+ ],
+ "gives": [
+  "news",
+  "events"
+ ],
+ "status": "not-read",
+ "why": {
+  "text": "https://www.theportugalnews.com/robots.txt answered HTTP 202 with an empty body (no robots rules readable, a bot check or queue page); no terms page read. Register only: a news outlet, no collector.",
+  "page": "https://www.theportugalnews.com/robots.txt",
+  "read_at": "2026-11-18",
+  "basis": "could not read"
+ },
+ "interface": null,
+ "contact_channel": null,
+ "notes": "Cited as evidence for 6 claims (discovery/gaps.json). Its articles are the outlet's own text: link, never copy.",
+ "researched_by": "data.b.collector@PrompTugal.dinis (Sonnet), checked by data.b@"
+}

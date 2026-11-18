@@ -1,0 +1,29 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values."
+ },
+ "id": "impic-dados-gov-pt",
+ "name": "IMPIC open data of the Portal BASE contracts (dados.gov.pt)",
+ "kind": "open data",
+ "url": "https://dados.gov.pt/pt/datasets/66d72d488ca4b7cb2de28712/",
+ "owner": "IMPIC, Instituto dos Mercados Públicos, do Imobiliário e da Construção",
+ "places": [
+  "lisboa",
+  "algarve"
+ ],
+ "gives": [
+  "public contracts"
+ ],
+ "status": "read",
+ "how": "the dataset's public API (https://dados.gov.pt/api/1/datasets/66d72d488ca4b7cb2de28712/) names the yearly file contratos<year>.zip; sources/base-gov-pt/collect.mjs downloads it when it has changed (updated weekly, about 70 MB), stream-parses it in memory and keeps the last 90 days of contracts whose contracting entity is the câmara of Lisboa or of an Algarve municipality, every 6 hours",
+ "terms": {
+  "licence": "Outra (Domínio Público), id other-pd, as the dataset's API states on 2026-11-18",
+  "page": "https://dados.gov.pt/api/1/datasets/66d72d488ca4b7cb2de28712/",
+  "read_at": "2026-11-18"
+ },
+ "notes": "dados.gov.pt/robots.txt answered with an HTML error page (HTTP 500) on 18 Nov 2026: no rule readable; only the documented dataset API and the file link are used, 2 to 3 requests a run. Contractors that are natural persons are shown as 'a natural person' (no name, no NIF, no object text). Same file PrompTugal__News__Civic reads (tools/extract-base.mjs); one collector, shared (Dinis, 18 Nov 2026).",
+ "researched_by": "data.b.dev2@PrompTugal.dinis (Sonnet), checked by data.b@"
+}

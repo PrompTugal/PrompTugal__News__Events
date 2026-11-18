@@ -1,0 +1,32 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values."
+ },
+ "id": "cloudflare-radar",
+ "name": "Cloudflare Radar",
+ "kind": "cyber data source",
+ "url": "https://radar.cloudflare.com/",
+ "owner": "Cloudflare, Inc.",
+ "places": [
+  "portugal"
+ ],
+ "gives": [
+  "country-level traffic, outages, attacks and DNS trends (aggregates)"
+ ],
+ "status": "not-read",
+ "why": {
+  "quote": "Data available via Radar API endpoints is made available under the CC BY-NC 4.0 license.",
+  "quote_lang": "en",
+  "page": "https://developers.cloudflare.com/radar/",
+  "read_at": "2026-11-18",
+  "basis": "Radar API documentation home page"
+ },
+ "interface": "Radar API (needs a Cloudflare account and token; not read); radar.cloudflare.com itself returned 403 to our user agent.",
+ "feed": null,
+ "contact_channel": "https://www.cloudflare.com/policies/terms/",
+ "notes": "RESTRICTS: CC BY-NC 4.0 bars commercial use; PrompTugal's plans to earn from traffic make that doubtful, lead to decide or ask Cloudflare. Cloudflare's general terms page was linked but not read. Aggregates by country are what Radar gives by design.",
+ "researched_by": "data.b.collector@PrompTugal.dinis (Sonnet), checked by data.b@"
+}

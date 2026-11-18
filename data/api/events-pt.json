@@ -7,13 +7,13 @@
  },
  "source": "events-pt",
  "title": "Events in Portugal, by place",
- "read_at": "2026-11-18T14:43:12Z",
+ "read_at": "2026-11-18T16:30:08Z",
  "provenance": {
   "source": "https://www.agendalx.pt/wp-json/agendalx/v1/events?per_page=50",
   "page": "https://www.agendalx.pt/",
-  "read_at": "2026-11-18T14:43:12Z",
+  "read_at": "2026-11-18T16:30:08Z",
   "by": "sources/events-pt/collect.mjs (code, no model; run by data.b@PrompTugal.dinis)",
-  "terms": "Strictest of the sources: no reuse licence or terms page was found for either host. Both robots.txt files allow the paths read; agendalx.pt sets Content-Signal search=yes, ai-train=no, use=reference. So: reference use only, name the source, link to the event, no AI training. Not reviewed by a person: whether this is enough to republish is for Dinis.",
+  "terms": "Strictest of the sources: no reuse licence or terms page was found for any of the four hosts (teatrodasfiguras.pt and cm-tavira.pt show only \"Todos os direitos reservados\" in their footers, and cm-tavira.pt has no robots.txt). The robots.txt files that exist allow the paths read; agendalx.pt sets Content-Signal search=yes, ai-train=no, use=reference. So: reference use only, name the source, link to the event, no AI training. Not reviewed by a person: whether this is enough to republish is for Dinis.",
   "sources": [
    {
     "host": "www.agendalx.pt",
@@ -26,16 +26,30 @@
     "what": "Câmara Municipal de Lagos, events list",
     "route": "https://www.cm-lagos.pt/municipio/eventos",
     "terms": "No terms page found. robots.txt (read 18 Nov 2026) disallows only administrative folders, not /municipio/eventos."
+   },
+   {
+    "host": "teatrodasfiguras.pt",
+    "what": "Teatro das Figuras, Faro (municipal theatre), agenda page",
+    "route": "https://teatrodasfiguras.pt/agenda",
+    "terms": "No terms of use page found (its information pages are directions, opening hours, privacy and cookies only). robots.txt (read 18 Nov 2026) allows all but /private/. The footer says \"Todos os direitos reservados\". Titles, dates and links only; each event links to its page."
+   },
+   {
+    "host": "cm-tavira.pt",
+    "what": "Câmara Municipal de Tavira, events (Events Calendar REST route)",
+    "route": "https://cm-tavira.pt/site/wp-json/tribe/events/v1/events",
+    "terms": "No terms of use page found (only a privacy policy). No robots.txt (404, read 18 Nov 2026). The route is advertised in the events page head (link to /site/wp-json/tribe/events/v1/). The footer says \"Todos os direitos reservados\". Titles, dates, venues and organisers only; each event links to its page."
    }
   ]
  },
  "about": "Events on now or starting within 60 days (to 2027-01-17) in the places listed, as schema.org Event records, each with its source URL and the time read. Dates are as the source gives them (Lisbon time; a time is added only where a single start hour is shown); a long-running event shows its first and last day. organizer is null where the source does not name an organiser (the agenda's publisher is in source). A dated record read by code, not a ticketing or booking service: check the organiser before travelling.",
  "counts": {
-  "events": 90,
-  "places": 1,
+  "events": 141,
+  "places": 3,
   "by_source": {
    "www.agendalx.pt": 0,
-   "www.cm-lagos.pt": 90
+   "www.cm-lagos.pt": 92,
+   "teatrodasfiguras.pt": 10,
+   "cm-tavira.pt": 39
   },
   "dropped_duplicates_or_unknown_place": 0
  },
@@ -51,9 +65,29 @@
    "read_at": "2026-11-18T14:00:00Z"
   },
   {
-   "host": "visitalgarve.pt",
-   "why": "robots.txt allows all, but the site is a JavaScript app over a private POST API (api.visitalgarve.pt/website/Travelplanner/Search/Events) with no published feed, no terms read and an unreachable robots.txt on the API host. Not used.",
-   "read_at": "2026-11-18T14:00:00Z"
+   "host": "visitalgarve.pt, eventos.visitalgarve.pt",
+   "why": "eventos.visitalgarve.pt robots.txt allows all (read 18 Nov 2026), but the agenda is an empty JavaScript page (a React app, no server-rendered list, no feed or sitemap found) over a private POST API (api.visitalgarve.pt/website/Travelplanner/Search/Events) whose robots.txt was unreachable and whose terms were not found. Not used.",
+   "read_at": "2026-11-18T18:00:00Z"
+  },
+  {
+   "host": "autodromodoalgarve.com",
+   "why": "robots.txt allows /race-calendar/ and the list is plain HTML, but the site terms (Parkalgar, PDF) say the user may not \"make available to the public, publish, ... copy ... or distribute the texts, images or other information contained on the Website ... without previous written authorisation\". Respected; not read.",
+   "read_at": "2026-11-18T18:00:00Z"
+  },
+  {
+   "host": "www.portugalmotogp.com",
+   "why": "self-described \"not the official Portuguese Grand Prix website ... independent fan guide and reseller\" (TicketsGP s.r.o.); only purchase terms published. Not used.",
+   "read_at": "2026-11-18T18:00:00Z"
+  },
+  {
+   "host": "2026.portugaltechweek.com",
+   "why": "robots.txt allows /events/; the festival ran 6 to 15 Nov 2026, so nothing is on in the window; no terms page found. Not used.",
+   "read_at": "2026-11-18T18:00:00Z"
+  },
+  {
+   "host": "algarveevolution.pt",
+   "why": "connection reset on robots.txt and on /pt/event/ (18 Nov 2026); nothing read, not worked around.",
+   "read_at": "2026-11-18T18:00:00Z"
   },
   {
    "host": "www.visitlisboa.com",
@@ -63,11 +97,6 @@
   {
    "host": "www.cm-faro.pt, www.cm-loule.pt, www.cm-silves.pt",
    "why": "connection reset on the first request (robots.txt); nothing read.",
-   "read_at": "2026-11-18T14:00:00Z"
-  },
-  {
-   "host": "www.cm-tavira.pt",
-   "why": "no robots.txt (404); events pages not looked at yet.",
    "read_at": "2026-11-18T14:00:00Z"
   },
   {
@@ -83,7 +112,7 @@
   {
    "host": "www.agendalx.pt",
    "why": "events route HTTP 403",
-   "read_at": "2026-11-18T14:43:16Z"
+   "read_at": "2026-11-18T16:30:12Z"
   }
  ]
 }

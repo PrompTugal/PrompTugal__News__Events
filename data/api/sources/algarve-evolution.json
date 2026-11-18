@@ -1,0 +1,30 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values."
+ },
+ "id": "algarve-evolution",
+ "name": "Algarve Evolution",
+ "kind": "agenda",
+ "url": "https://algarveevolution.pt/pt/event/",
+ "owner": "Algarve Evolution",
+ "places": [
+  "algarve"
+ ],
+ "gives": [
+  "events"
+ ],
+ "status": "not-read",
+ "why": {
+  "text": "Connection reset by peer on https://algarveevolution.pt/robots.txt and on /pt/event/ (curl error 35, two tries, 18 Nov 2026). Nothing read; not worked around.",
+  "page": "https://algarveevolution.pt/robots.txt",
+  "read_at": "2026-11-18",
+  "basis": "could not read"
+ },
+ "interface": null,
+ "contact_channel": null,
+ "notes": "Retry later.",
+ "researched_by": "data.b.collector@PrompTugal.dinis (Sonnet), checked by data.b@"
+}

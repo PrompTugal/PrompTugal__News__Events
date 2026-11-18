@@ -1,0 +1,31 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values."
+ },
+ "id": "portugalmotogp",
+ "name": "portugalmotogp.com (independent MotoGP Portugal fan guide and ticket reseller)",
+ "kind": "events guide",
+ "url": "https://www.portugalmotogp.com/",
+ "owner": "TicketsGP s.r.o. (Brno), self-described independent reseller",
+ "places": [
+  "portimao"
+ ],
+ "gives": [
+  "events"
+ ],
+ "status": "not-read",
+ "why": {
+  "quote": "This website is not the official Portuguese Grand Prix website. We are independent fan guide and reseller.",
+  "quote_lang": "en",
+  "page": "https://www.portugalmotogp.com/en/legal-documents",
+  "read_at": "2026-11-18",
+  "basis": "not an official source; only purchase terms published (a PDF on another host, not read); robots.txt (301 from the bare domain, then read at www) disallows only /*?*do= and */tickets/sherlock"
+ },
+ "interface": null,
+ "contact_channel": null,
+ "notes": "A reseller is not the organiser: the circuit (autodromodoalgarve.com) and Dorna are. Not used.",
+ "researched_by": "data.b.collector@PrompTugal.dinis (Sonnet), checked by data.b@"
+}

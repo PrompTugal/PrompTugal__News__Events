@@ -1,0 +1,33 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values."
+ },
+ "id": "cncs-certpt",
+ "name": "CNCS and CERT.PT (Centro Nacional de Cibersegurança)",
+ "kind": "cyber data source",
+ "url": "https://www.cncs.gov.pt/",
+ "owner": "Centro Nacional de Cibersegurança (CNCS), Portugal",
+ "places": [
+  "portugal"
+ ],
+ "gives": [
+  "cyber advisories",
+  "alerts",
+  "national threat statistics"
+ ],
+ "status": "not-read",
+ "why": {
+  "text": "No terms read: https://www.cncs.gov.pt/ looped on a 307 redirect to itself, then 517 and a failed connection (2026-11-18).",
+  "page": "https://www.cncs.gov.pt/",
+  "read_at": "2026-11-18",
+  "basis": "unreachable; terms not read"
+ },
+ "interface": "Website advisories and alerts; no API or feed confirmed.",
+ "feed": null,
+ "contact_channel": "https://www.cncs.gov.pt/",
+ "notes": "Terms NOT checked. https://www.cncs.gov.pt/ answered 307 redirecting to itself in a loop (curl stopped after 50), then 517 and a failed connection on retries; robots.txt and a /pt/ page did not answer. Lead to retry later or ask CNCS. Would give Portugal: official advisories (titles, dates, links) and any published national incident counts; aggregate-only use fits in principle (advisories are not victim data) but unconfirmed. Specific findings about an organisation go privately to CERT.PT/CNCS, never published (Dinis).",
+ "researched_by": "data.b.collector@PrompTugal.dinis (Sonnet), checked by data.b@"
+}

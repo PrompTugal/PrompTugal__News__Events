@@ -17,16 +17,17 @@
   "news",
   "events"
  ],
- "status": "not-read",
+ "status": "read",
  "why": {
-  "quote": "could not read the terms: not kept (robots.txt and terms were not saved this session; docs.bsky.app rate-limits page returned 200 with no extractable text)",
+  "quote": "Crawling the public parts of the API is allowed. HTTP 429 (\"backoff\") status codes are used for rate-limiting. Up to a handful concurrent requests should be ok.",
   "quote_lang": "en",
-  "page": "https://docs.bsky.app/docs/advanced-guides/rate-limits",
+  "page": "https://public.api.bsky.app/robots.txt",
   "read_at": "2026-11-18",
-  "basis": "could not read"
+  "basis": "the API host's own robots.txt, which names crawling the public API as allowed; and the Terms of Service (https://bsky.social/about/support/tos, last updated 14 August 2025): \"You retain ownership of your Content on the Bluesky application and website.\" (no reuse licence is given to others: each post stays its author's, so we store links and metadata only)"
  },
  "interface": "AT Protocol public XRPC API (public.api.bsky.app) and firehose; open by design per the register brief.",
  "contact_channel": null,
- "notes": "Open by design is the brief's claim, not yet confirmed from Bluesky's terms by this collector. Needs a second read before status changes.",
- "researched_by": "data.b.collector@PrompTugal.dinis (Sonnet), checked by data.b@"
+ "notes": "Read 18 Nov 2026 by data.b.collector@. Posts remain their authors' content under the Terms; we keep link and metadata only. Rate limits: https://docs.bsky.app/docs/advanced-guides/rate-limits (page is a client-side redirect; its text was not extractable).",
+ "researched_by": "data.b.collector@PrompTugal.dinis (Sonnet), checked by data.b@",
+ "how": "Bluesky public AppView API, no login: https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed, app.bsky.feed.searchPosts and app.bsky.actor.getProfiles, with our named user agent, 2.5 s between requests, organisations' accounts only (register/social-accounts.json). Post text read in memory only to match topics and places; never stored. Each post shown by link, credited, licence \"the platform's terms\"."
 }

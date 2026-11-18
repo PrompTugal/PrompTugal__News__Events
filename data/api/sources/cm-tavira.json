@@ -16,12 +16,13 @@
  "gives": [
   "events"
  ],
- "status": "not-read",
- "why": {
-  "text": "No robots.txt (404) and no events feed found on 18 November 2026; its HTML agenda not yet read.",
-  "page": "https://www.cm-tavira.pt/robots.txt",
-  "read_at": "2026-11-18",
-  "basis": "tried by the events collector"
+ "status": "read",
+ "researched_by": "data.b.collector@PrompTugal.dinis (Sonnet), checked by data.b@",
+ "how": "its public Events Calendar REST route https://cm-tavira.pt/site/wp-json/tribe/events/v1/events (advertised in the events page head), read by sources/events-pt/collect.mjs every 6 hours; today to 60 days, place tavira",
+ "terms": {
+  "summary": "No robots.txt (404, read 18 Nov 2026) and no terms of use page found (only a privacy policy); the footer says 'Todos os direitos reservados'. Titles, dates, venues and organisers only, each linked to its page. Not reviewed by a person: whether this is enough to republish is for Dinis.",
+  "page": "https://cm-tavira.pt/site/evento/",
+  "read_at": "2026-11-18"
  },
- "researched_by": "data.b.collector@PrompTugal.dinis (events-pt), checked by data.b@"
+ "notes": "Read 18 Nov 2026. https://www.cm-tavira.pt/ redirects (301) to https://cm-tavira.pt/. Not yet reviewed by a person."
 }

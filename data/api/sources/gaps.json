@@ -5,7 +5,7 @@
   "holder": "PrompTugal.news",
   "note": "What PrompTugal.news makes: this file's structure, records and derived values."
  },
- "read_at": "2026-11-18T14:45:23Z",
+ "read_at": "2026-11-18T16:32:56Z",
  "about": "Every host cited as evidence for an event that this site does not read, with how many claims point to it and in which places. Each is a gap in our sources; the register says why we do not read it.",
  "hosts": [
   {
@@ -64,7 +64,7 @@
     "lagoa",
     "lagos"
    ],
-   "register": null,
+   "register": "theportugalnews",
    "example": "https://www.theportugalnews.com/news/2026-10-22/autumn-festivals-and-events-in-the-algarve/1104742"
   },
   {
@@ -132,7 +132,7 @@
     "monchique",
     "olhao"
    ],
-   "register": null,
+   "register": "blog-sul-informacao",
    "example": "https://www.sulinformacao.pt/2026/10/afonso-dias-e-o-filho-dinis-cantam-a-liberdade-em-loule/"
   },
   {

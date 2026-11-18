@@ -57,6 +57,8 @@ jobs:
           node scripts/check-commits.mjs "${last:-$BEFORE}" "$AFTER"
       - name: Copy the events data from data.promptugal.news (a failed read keeps the copy in git)
         run: node scripts/sync-data.mjs
+      - name: Check the synced data (on failure, keep the last copy in git; finding EV-2026-006)
+        run: node scripts/check-data.mjs --restore
       - run: node scripts/build.mjs
         env:
           SITE_VERSION: ${{ steps.version.outputs.version }}

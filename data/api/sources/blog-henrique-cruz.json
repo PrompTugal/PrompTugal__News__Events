@@ -1,0 +1,33 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values."
+ },
+ "id": "blog-henrique-cruz",
+ "name": "Henrique's Newsletter (Henrique Cruz)",
+ "kind": "newsletter",
+ "url": "https://henriquecruz.substack.com/",
+ "owner": "Henrique Cruz",
+ "places": [
+  "portugal"
+ ],
+ "gives": [
+  "AI",
+  "public policy"
+ ],
+ "status": "not-read",
+ "why": {
+  "quote": "Henrique Cruz",
+  "quote_lang": "en",
+  "page": "https://henriquecruz.substack.com/feed",
+  "read_at": "2026-11-18",
+  "basis": "copyright line inside the feed itself (no site terms page read)"
+ },
+ "interface": "Public RSS/Atom feed, answered 200 on 2026-11-18; newest item in the feed: 9 Nov 2026.",
+ "feed": "https://henriquecruz.substack.com/feed",
+ "contact_channel": "https://henriquecruz.substack.com/about",
+ "notes": "Author named as the feed publishes it (Henrique Cruz), own public newsletter. Substack feed: free posts only; the feed carries just a preview for any paid post, which we never collect. Topics: AI and public policy, e.g. recommendations for the national AI strategy.",
+ "researched_by": "data.b.collector@PrompTugal.dinis (Sonnet), checked by data.b@"
+}

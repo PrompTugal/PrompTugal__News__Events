@@ -1,0 +1,32 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values."
+ },
+ "id": "ripestat",
+ "name": "RIPEstat (RIPE NCC)",
+ "kind": "cyber data source",
+ "url": "https://stat.ripe.net/",
+ "owner": "RIPE NCC",
+ "places": [
+  "portugal"
+ ],
+ "gives": [
+  "country and ASN routing, resource and visibility statistics"
+ ],
+ "status": "not-read",
+ "why": {
+  "quote": "A User may not re-package, compile, re-distribute the RIPEstat Service and any (or all) of the RIPEstat Data. Use of the RIPEstat Service for commercial purposes, such as by providing paid services, products or any other derivatives that are based on the RIPEstat Service, ... is not allowed unless permission to do so is granted in writing by the RIPE NCC.",
+  "quote_lang": "en",
+  "page": "https://www.ripe.net/about-us/legal/ripestat-service-terms-and-conditions/",
+  "read_at": "2026-11-18",
+  "basis": "published terms and conditions, Article 3.3"
+ },
+ "interface": "RIPEstat Data API (stat.ripe.net/docs/02.data-api/): at most 1000 requests a day without a registered sourceapp, 8 concurrent requests per IP.",
+ "feed": null,
+ "contact_channel": "https://www.ripe.net/about-us/legal/ripestat-service-terms-and-conditions/",
+ "notes": "RESTRICTS: purpose is network analysis, monitoring, debugging and research (3.1); commercial derivatives need written permission from stat@ripe.net (a role address of the organisation; a person at PrompTugal would send the request). Research results must be attributed to RIPE NCC. Not-for-profit aggregate research may fit; lead to decide.",
+ "researched_by": "data.b.collector@PrompTugal.dinis (Sonnet), checked by data.b@"
+}

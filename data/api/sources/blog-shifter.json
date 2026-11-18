@@ -1,0 +1,33 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values."
+ },
+ "id": "blog-shifter",
+ "name": "Shifter",
+ "kind": "blog",
+ "url": "https://shifter.pt/",
+ "owner": "Shifter",
+ "places": [
+  "portugal"
+ ],
+ "gives": [
+  "tech",
+  "startups",
+  "AI"
+ ],
+ "status": "not-read",
+ "why": {
+  "text": "no terms found in the feed; the site's own terms page was not fetched (request budget)",
+  "page": "https://shifter.pt/feed/",
+  "read_at": "2026-11-18",
+  "basis": "feed fetched, answered 200 with items"
+ },
+ "interface": "Public RSS/Atom feed, answered 200 on 2026-11-18; newest item in the feed: 15 Nov 2026.",
+ "feed": "https://shifter.pt/feed/",
+ "contact_channel": null,
+ "notes": "Online magazine rather than a personal blog; feed items carry per-article bylines. Topics: Portuguese tech, startups, digital culture.",
+ "researched_by": "data.b.collector@PrompTugal.dinis (Sonnet), checked by data.b@"
+}

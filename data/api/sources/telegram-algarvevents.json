@@ -1,0 +1,30 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values."
+ },
+ "id": "telegram-algarvevents",
+ "name": "algarvevents (public Telegram channel)",
+ "kind": "social network",
+ "url": "https://t.me/s/algarvevents",
+ "owner": "unknown (a public Telegram channel)",
+ "places": [
+  "algarve"
+ ],
+ "gives": [
+  "events"
+ ],
+ "status": "not-read",
+ "why": {
+  "text": "Not fetched. Lead from Dinis's own Perplexity pass (relayed by conductor.b@, 18 Nov 2026); kept as an evidence link only.",
+  "page": "https://t.me/s/algarvevents",
+  "read_at": "2026-11-18",
+  "basis": "evidence link only (Dinis, 18 Nov 2026)"
+ },
+ "interface": null,
+ "contact_channel": null,
+ "notes": "A public Telegram channel; not fetched (t.me is never machine-read). Its terms and robots.txt were not read.",
+ "researched_by": "data.b.collector@PrompTugal.dinis (Sonnet), checked by data.b@"
+}

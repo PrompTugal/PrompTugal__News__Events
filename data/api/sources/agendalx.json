@@ -1,0 +1,30 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values."
+ },
+ "id": "agendalx",
+ "name": "Agenda Cultural de Lisboa (Agenda LX)",
+ "kind": "agenda",
+ "url": "https://www.agendalx.pt/",
+ "owner": "Câmara Municipal de Lisboa",
+ "places": [
+  "lisboa"
+ ],
+ "gives": [
+  "events"
+ ],
+ "status": "read",
+ "how": "its public route /wp-json/agendalx/v1/events, read by sources/events-pt/collect.mjs every 6 hours",
+ "notes": "18 Nov 2026 14:27 UTC: the events route answered HTTP 403 to the GitHub Actions runner (a refusal at its edge; reads from data.b@'s session succeed). Respected, not worked around: the last good read is kept up to 48 hours, marked stale. Kept shown as a public body's agenda (Dinis, 18 Nov 2026 ~14:55 UTC); to be asked on the record.",
+ "refusals": [
+  {
+   "at": "2026-11-18T14:27:00Z",
+   "from": "GitHub Actions runner",
+   "status": 403
+  }
+ ],
+ "researched_by": "data.b@PrompTugal.dinis"
+}

@@ -1,0 +1,28 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values."
+ },
+ "id": "teatro-das-figuras",
+ "name": "Teatro das Figuras (Faro)",
+ "kind": "agenda",
+ "url": "https://teatrodasfiguras.pt/agenda",
+ "owner": "Teatro das Figuras, Faro (municipal theatre)",
+ "places": [
+  "faro"
+ ],
+ "gives": [
+  "events"
+ ],
+ "status": "read",
+ "how": "its agenda page https://teatrodasfiguras.pt/agenda, whose event list is in the page's own server-rendered data (Next.js); read by sources/events-pt/collect.mjs every 6 hours; today to 60 days, place faro",
+ "terms": {
+  "summary": "robots.txt (read 18 Nov 2026): 'User-Agent: * Allow: / Disallow: /private/'. No terms of use page found (its information pages are directions, opening hours, privacy and cookies); the footer says 'Todos os direitos reservados'. Titles, dates and links only. Not reviewed by a person: for Dinis to decide.",
+  "page": "https://teatrodasfiguras.pt/robots.txt",
+  "read_at": "2026-11-18"
+ },
+ "notes": "Read 18 Nov 2026. Each event links to its page on teatrodasfiguras.pt; ticket links (bol.pt) are not kept.",
+ "researched_by": "data.b.collector@PrompTugal.dinis (Sonnet), checked by data.b@"
+}

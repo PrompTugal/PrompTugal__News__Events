@@ -1,0 +1,32 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values."
+ },
+ "id": "shadowserver",
+ "name": "Shadowserver Foundation (public dashboard and reports)",
+ "kind": "cyber data source",
+ "url": "https://dashboard.shadowserver.org/",
+ "owner": "The Shadowserver Foundation",
+ "places": [
+  "portugal"
+ ],
+ "gives": [
+  "country-level counts of exposed or vulnerable services and infections (dashboard)"
+ ],
+ "status": "not-read",
+ "why": {
+  "quote": "Non-Profit Research. You may perform research and analysis on a non-profit basis. ... Attribution. For published distribution other than the above Licensed Uses, attribution is required. ... you will not ... attempt to copy, reproduce, bundle, repackage, alter, modify, adapt, translate, ... or make derivative works based on the Restricted Content",
+  "quote_lang": "en",
+  "page": "https://www.shadowserver.org/privacy-and-terms/",
+  "read_at": "2026-11-18",
+  "basis": "published terms, License Agreement section"
+ },
+ "interface": "Public dashboard (dashboard.shadowserver.org: connection reset when fetched); reports to network owners need registration.",
+ "feed": null,
+ "contact_channel": "https://www.shadowserver.org/privacy-and-terms/",
+ "notes": "RESTRICTS: the licence grants non-profit research and own-organisation defence, and bars repackaging or derivative works; a commercial news product likely does not fit. Ask Shadowserver in writing (outreach@ drafts, a person sends) before any use. The dashboard itself could not be fetched, so its own terms are unread. Country dashboards are aggregates by design; never take network-owner reports (they list IPs).",
+ "researched_by": "data.b.collector@PrompTugal.dinis (Sonnet), checked by data.b@"
+}

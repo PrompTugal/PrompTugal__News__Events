@@ -1,0 +1,30 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values."
+ },
+ "id": "eventbrite-portimao-digital-nomads",
+ "name": "Portimão Digital Nomads on Eventbrite",
+ "kind": "event platform",
+ "url": "https://www.eventbrite.com/",
+ "owner": "Portimão Digital Nomads (organiser)",
+ "places": [
+  "algarve"
+ ],
+ "gives": [
+  "events"
+ ],
+ "status": "not-read",
+ "why": {
+  "text": "Not fetched. Lead from Dinis's own Perplexity pass (relayed by conductor.b@, 18 Nov 2026); kept as an evidence link only.",
+  "page": "https://www.eventbrite.com/",
+  "read_at": "2026-11-18",
+  "basis": "house rule"
+ },
+ "interface": null,
+ "contact_channel": null,
+ "notes": "Not fetched (eventbrite.* is never machine-read; see eventbrite). The lead named the organiser (Portimão Digital Nomads) but gave no address, so the page is the platform root.",
+ "researched_by": "data.b.collector@PrompTugal.dinis (Sonnet), checked by data.b@"
+}

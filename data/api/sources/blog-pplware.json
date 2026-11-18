@@ -1,0 +1,33 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values."
+ },
+ "id": "blog-pplware",
+ "name": "Pplware",
+ "kind": "blog",
+ "url": "https://pplware.sapo.pt/",
+ "owner": "Pplware (SAPO)",
+ "places": [
+  "portugal"
+ ],
+ "gives": [
+  "tech",
+  "AI",
+  "security"
+ ],
+ "status": "not-read",
+ "why": {
+  "text": "no terms found in the feed; the site's own terms page was not fetched (request budget)",
+  "page": "https://pplware.sapo.pt/feed/",
+  "read_at": "2026-11-18",
+  "basis": "feed fetched, answered 200 with items"
+ },
+ "interface": "Public RSS/Atom feed, answered 200 on 2026-11-18; newest item in the feed: 18 Nov 2026.",
+ "feed": "https://pplware.sapo.pt/feed/",
+ "contact_channel": null,
+ "notes": "Tech blog hosted by SAPO; more a publication than an individual blog. Topics: consumer tech, software, security news in Portuguese.",
+ "researched_by": "data.b.collector@PrompTugal.dinis (Sonnet), checked by data.b@"
+}

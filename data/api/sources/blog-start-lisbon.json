@@ -1,0 +1,33 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values."
+ },
+ "id": "blog-start-lisbon",
+ "name": "START Lisbon's Newsletter",
+ "kind": "newsletter",
+ "url": "https://startlisboa.substack.com/",
+ "owner": "START Lisbon",
+ "places": [
+  "lisbon"
+ ],
+ "gives": [
+  "startups",
+  "tech"
+ ],
+ "status": "not-read",
+ "why": {
+  "quote": "START Lisbon",
+  "quote_lang": "en",
+  "page": "https://startlisboa.substack.com/feed",
+  "read_at": "2026-11-18",
+  "basis": "copyright line inside the feed itself (no site terms page read)"
+ },
+ "interface": "Public RSS/Atom feed, answered 200 on 2026-11-18; newest item in the feed: 22 Nov 2024.",
+ "feed": "https://startlisboa.substack.com/feed",
+ "contact_channel": null,
+ "notes": "Byline as published: START Lisbon. Substack feed: free posts only; the feed carries just a preview for any paid post, which we never collect. Stale: latest item 22 November 2024; likely dormant. Topics: Lisbon startup scene.",
+ "researched_by": "data.b.collector@PrompTugal.dinis (Sonnet), checked by data.b@"
+}

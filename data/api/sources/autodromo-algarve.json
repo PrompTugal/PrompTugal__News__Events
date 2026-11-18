@@ -1,0 +1,31 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values."
+ },
+ "id": "autodromo-algarve",
+ "name": "Autódromo Internacional do Algarve (race calendar)",
+ "kind": "agenda",
+ "url": "https://autodromodoalgarve.com/race-calendar/",
+ "owner": "Parkalgar, Parques Tecnológicos e Desportivos, S.A.",
+ "places": [
+  "portimao"
+ ],
+ "gives": [
+  "events"
+ ],
+ "status": "not-read",
+ "why": {
+  "quote": "The User is also not authorised to transmit, communicate or make available to the public, publish, modify, transform, copy, sell, use or distribute the texts, images or other information contained on the Website or Online Shop, partially or totally by any means or form, without previous written authorisation of Parkalgar.",
+  "quote_lang": "en",
+  "page": "https://autodromodoalgarve.com/wp-content/uploads/2020/08/termsconditions_2020_EN_2.pdf",
+  "read_at": "2026-11-18",
+  "basis": "site terms and conditions of use (PDF, 2020)"
+ },
+ "interface": null,
+ "contact_channel": "https://autodromodoalgarve.com/",
+ "notes": "robots.txt allows /race-calendar/ (disallows only plugins, wp-admin, readme.html, /refer/) and the calendar is a plain server-rendered list, but the terms forbid reuse without written authorisation. Respected: not read by the collector. Race-calendar links stay as evidence only (MotoGP Grand Prix of Portugal listed there as 20 to 22 November 2026, read once for this check). A request for authorisation is for outreach@ to draft and a person to send.",
+ "researched_by": "data.b.collector@PrompTugal.dinis (Sonnet), checked by data.b@"
+}

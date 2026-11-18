@@ -19,14 +19,14 @@
  ],
  "status": "not-read",
  "why": {
-  "quote": "could not read the terms: www.visitalgarve.pt/robots.txt answered 301 (redirect not followed or kept)",
+  "quote": "User-agent: * Disallow:",
   "quote_lang": "en",
-  "page": "https://www.visitalgarve.pt/robots.txt",
+  "page": "https://eventos.visitalgarve.pt/robots.txt",
   "read_at": "2026-11-18",
-  "basis": "could not read"
+  "basis": "robots.txt allows all (an access rule, not a reuse licence); but the agenda has no feed and no server-rendered list, and no terms page was found"
  },
  "interface": null,
  "contact_channel": null,
- "notes": "Needs a second read at the redirect target.",
+ "notes": "eventos.visitalgarve.pt (the events guide, 'Guia de Eventos', built by Autarquia 360) read 18 Nov 2026: robots.txt allows all; the home page and an event page are an empty React shell (about 1.2 kB, 'You need to enable JavaScript'); /sitemap.xml and /feed return the same shell; its data comes from a private POST API (api.visitalgarve.pt/website/Travelplanner/Search/Events) whose robots.txt was unreachable and whose terms were not found. Not used. www.visitalgarve.pt/robots.txt redirects (301) to visitalgarve.pt. Event links on it (eventos.visitalgarve.pt/en/<id>/<slug>) stay as evidence only. Ask Região de Turismo do Algarve for a feed or iCal.",
  "researched_by": "data.b.collector@PrompTugal.dinis (Sonnet), checked by data.b@"
 }

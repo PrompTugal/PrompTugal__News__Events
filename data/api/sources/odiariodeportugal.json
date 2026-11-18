@@ -1,0 +1,31 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values."
+ },
+ "id": "odiariodeportugal",
+ "name": "O Diário de Portugal",
+ "kind": "news outlet",
+ "url": "https://odiariodeportugal.pt/",
+ "owner": "O Diário de Portugal (company seated in Barcelona)",
+ "places": [
+  "portugal"
+ ],
+ "gives": [
+  "news"
+ ],
+ "status": "not-read",
+ "why": {
+  "quote": "O utilizador pode ler, partilhar e criar ligações para os nossos artigos livremente. Para os reproduzir na íntegra ou para fins comerciais, necessita da nossa autorização.",
+  "quote_lang": "pt",
+  "page": "https://odiariodeportugal.pt/termos-e-condicoes",
+  "read_at": "2026-11-18",
+  "basis": "site terms: reading, sharing and linking are free; reproduction in full or commercial use needs authorisation"
+ },
+ "interface": null,
+ "contact_channel": "https://odiariodeportugal.pt/termos-e-condicoes",
+ "notes": "robots.txt (read 18 Nov 2026) allows all except /api/, admin and publishing paths; it has per-agent groups for GPTBot and ClaudeBot (disallowing only publishing paths). Register only: a news outlet, no collector; link to its articles, never copy.",
+ "researched_by": "data.b.collector@PrompTugal.dinis (Sonnet), checked by data.b@"
+}

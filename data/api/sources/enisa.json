@@ -1,0 +1,35 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values."
+ },
+ "id": "enisa",
+ "name": "ENISA (European Union Agency for Cybersecurity)",
+ "kind": "cyber data source",
+ "url": "https://www.enisa.europa.eu/",
+ "owner": "ENISA",
+ "places": [
+  "portugal",
+  "eu"
+ ],
+ "gives": [
+  "EU threat reports",
+  "advisories",
+  "publications"
+ ],
+ "status": "not-read",
+ "why": {
+  "quote": "Reproduction of ENISA material published on this website is authorized, provided the source is acknowledged, unless it is stated otherwise.",
+  "quote_lang": "en",
+  "page": "https://www.enisa.europa.eu/about-enisa/legal-notice",
+  "read_at": "2026-11-18",
+  "basis": "published legal notice, 1.2 Authorization"
+ },
+ "interface": "Website publications; RSS not checked.",
+ "feed": null,
+ "contact_channel": "https://www.enisa.europa.eu/about-enisa/legal-notice",
+ "notes": "Fits aggregate-only use with attribution, unless a specific report says otherwise. Not a feed we have tested; nothing collected.",
+ "researched_by": "data.b.collector@PrompTugal.dinis (Sonnet), checked by data.b@"
+}

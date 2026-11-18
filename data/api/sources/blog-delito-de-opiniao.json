@@ -1,0 +1,32 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values."
+ },
+ "id": "blog-delito-de-opiniao",
+ "name": "Delito de Opinião",
+ "kind": "blog",
+ "url": "https://delitodeopiniao.blogs.sapo.pt/",
+ "owner": "Delito de Opinião (collective blog on SAPO Blogs)",
+ "places": [
+  "portugal"
+ ],
+ "gives": [
+  "public policy",
+  "opinion"
+ ],
+ "status": "not-read",
+ "why": {
+  "text": "no terms found in the feed; the site's own terms page was not fetched (request budget)",
+  "page": "https://delitodeopiniao.blogs.sapo.pt/data/rss",
+  "read_at": "2026-11-18",
+  "basis": "feed fetched, answered 200 with items"
+ },
+ "interface": "Public RSS/Atom feed, answered 200 on 2026-11-18; newest item in the feed: 23 Jun 2026.",
+ "feed": "https://delitodeopiniao.blogs.sapo.pt/data/rss",
+ "contact_channel": null,
+ "notes": "Hosted on SAPO Blogs. Stale: latest item 23 June 2026. Topics: politics and society, opinion.",
+ "researched_by": "data.b.collector@PrompTugal.dinis (Sonnet), checked by data.b@"
+}

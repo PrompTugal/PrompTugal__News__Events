@@ -6,7 +6,7 @@
   "note": "What PrompTugal.news makes: this file's structure, records and derived values."
  },
  "place": "tavira",
- "read_at": "2026-11-18T14:45:23Z",
+ "read_at": "2026-11-18T16:32:56Z",
  "discovery": {
   "asked_at": "2026-11-18T14:17:33Z",
   "model": "perplexity/sonar",

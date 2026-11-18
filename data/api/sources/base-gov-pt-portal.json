@@ -1,0 +1,31 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values."
+ },
+ "id": "base-gov-pt-portal",
+ "name": "Portal BASE (base.gov.pt), its own search and pages",
+ "kind": "public portal",
+ "url": "https://www.base.gov.pt/",
+ "owner": "IMPIC, Instituto dos Mercados Públicos, do Imobiliário e da Construção",
+ "places": [
+  "portugal"
+ ],
+ "gives": [
+  "public contracts"
+ ],
+ "status": "not-read",
+ "why": {
+  "quote": "base.gov.pt not read (firewall)",
+  "quote_lang": "en",
+  "page": "https://github.com/PrompTugal/PrompTugal__News__Civic/blob/dev/REALITY.md",
+  "read_at": "2026-11-18",
+  "basis": "PrompTugal__News__Civic's own record: the portal's search answered civic.b@ with a firewall alert; treated as a refusal and not retried (data.b@, 18 Nov 2026, from civic.b@ via conductor.b@). https://www.base.gov.pt/robots.txt answered HTTP 404 (no rules) on 2026-11-18."
+ },
+ "interface": "None read. The same records are read from IMPIC's open data on dados.gov.pt (entry impic-dados-gov-pt); each contract links its own page on base.gov.pt, which we do not fetch.",
+ "contact_channel": null,
+ "notes": "No terms of use page of the portal was read. A request to IMPIC on the record would be drafted by outreach@ and sent by a person; not needed while the open data covers the need.",
+ "researched_by": "data.b.dev2@PrompTugal.dinis (Sonnet), checked by data.b@"
+}

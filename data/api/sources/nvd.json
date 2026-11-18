@@ -1,0 +1,32 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values."
+ },
+ "id": "nvd",
+ "name": "NVD (National Vulnerability Database)",
+ "kind": "cyber data source",
+ "url": "https://nvd.nist.gov/",
+ "owner": "NIST (US)",
+ "places": [
+  "portugal"
+ ],
+ "gives": [
+  "CVE records with CVSS, CPE, CWE; CVE API 2.0"
+ ],
+ "status": "not-read",
+ "why": {
+  "quote": "The software developed by NIST employees is not subject to copyright protection within the United States.",
+  "quote_lang": "en",
+  "page": "https://www.nist.gov/oism/copyrights",
+  "read_at": "2026-11-18",
+  "basis": "NIST copyright page (general NIST site, not an NVD-specific terms page)"
+ },
+ "interface": "CVE API 2.0 (services.nvd.nist.gov); rate limits not read.",
+ "feed": null,
+ "contact_channel": "https://nvd.nist.gov/",
+ "notes": "NVD's own developers and terms pages are script-rendered (only a shell was returned), so the API terms and rate limits were NOT read; check them before collecting. NIST's general page also says NIST gives no warranty on the data. Aggregate-only use (counts by vendor or severity) fits on this evidence; CVE records are not personal data.",
+ "researched_by": "data.b.collector@PrompTugal.dinis (Sonnet), checked by data.b@"
+}

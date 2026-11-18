@@ -1,0 +1,32 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values."
+ },
+ "id": "cisa-kev",
+ "name": "CISA Known Exploited Vulnerabilities (KEV) catalogue",
+ "kind": "cyber data source",
+ "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
+ "owner": "CISA (US)",
+ "places": [
+  "portugal"
+ ],
+ "gives": [
+  "list of CVEs known to be exploited, with dates added"
+ ],
+ "status": "not-read",
+ "why": {
+  "quote": "The KEV database is distributed under the Creative Commons 0 1.0 License. You may use this data in any legal manner but note that information provided at any 3rd party links included in the KEV database are bound by the policies and licenses of those 3rd party websites.",
+  "quote_lang": "en",
+  "page": "https://raw.githubusercontent.com/cisagov/kev-data/develop/LICENSE",
+  "read_at": "2026-11-18",
+  "basis": "licence file of the cisagov/kev-data repository"
+ },
+ "interface": "JSON feed https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json (answered 200, 1.8 MB, catalogVersion 2026.11.17, 1782 entries). Also CSV and the GitHub repo cisagov/kev-data.",
+ "feed": null,
+ "contact_channel": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
+ "notes": "Allows aggregate reuse (CC0). The HTML catalogue page and robots.txt returned 403 Access Denied to our user agent, so use the JSON or GitHub copy only. Would give Portugal: counts of exploited vulnerabilities in products Portuguese organisations commonly run, as aggregates; the KEV itself has no country field, so any Portugal angle is our own labelled inference.",
+ "researched_by": "data.b.collector@PrompTugal.dinis (Sonnet), checked by data.b@"
+}

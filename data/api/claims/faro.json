@@ -6,7 +6,7 @@
   "note": "What PrompTugal.news makes: this file's structure, records and derived values."
  },
  "place": "faro",
- "read_at": "2026-11-18T14:45:23Z",
+ "read_at": "2026-11-18T16:32:56Z",
  "discovery": {
   "asked_at": "2026-11-18T14:17:05Z",
   "model": "perplexity/sonar",
@@ -88,7 +88,7 @@
      "url": "https://www.theportugalnews.com/news/2026-10-22/autumn-festivals-and-events-in-the-algarve/1104742",
      "host": "theportugalnews.com",
      "readable": false,
-     "register": null
+     "register": "theportugalnews"
     }
    ],
    "status": "details withheld",
@@ -175,7 +175,7 @@
      "url": "https://www.theportugalnews.com/news/2026-10-22/autumn-festivals-and-events-in-the-algarve/1104742",
      "host": "theportugalnews.com",
      "readable": false,
-     "register": null
+     "register": "theportugalnews"
     }
    ],
    "status": "details withheld",

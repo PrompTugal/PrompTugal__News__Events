@@ -1,0 +1,32 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values."
+ },
+ "id": "blog-unbabel",
+ "name": "Unbabel blog",
+ "kind": "blog",
+ "url": "https://unbabel.com/blog/",
+ "owner": "Unbabel (company, Lisbon)",
+ "places": [
+  "lisbon"
+ ],
+ "gives": [
+  "AI",
+  "tech"
+ ],
+ "status": "not-read",
+ "why": {
+  "text": "no terms found in the feed; the site's own terms page was not fetched (request budget)",
+  "page": "https://unbabel.com/blog/feed/",
+  "read_at": "2026-11-18",
+  "basis": "feed fetched, answered 200 with items"
+ },
+ "interface": "Public RSS/Atom feed, answered 200 on 2026-11-18; newest item in the feed: 28 May 2025.",
+ "feed": "https://unbabel.com/blog/feed/",
+ "contact_channel": null,
+ "notes": "Company blog. Stale: latest item 28 May 2025; probably dormant. Topics: AI translation, language technology.",
+ "researched_by": "data.b.collector@PrompTugal.dinis (Sonnet), checked by data.b@"
+}

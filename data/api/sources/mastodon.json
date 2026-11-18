@@ -17,16 +17,17 @@
   "news",
   "events"
  ],
- "status": "not-read",
+ "status": "read",
  "why": {
-  "quote": "# You are not allowed to use the contents of this website for LLM training",
+  "quote": "Whoever owns the Content retains ownership.",
   "quote_lang": "en",
-  "page": "https://mastodon.social/robots.txt",
+  "page": "https://mastodon.social/api/v1/instance/terms_of_service (Terms for registered users of mastodon.social, effective 2026-08-31; the same text is at https://mastodon.social/terms-of-service)",
   "read_at": "2026-11-18",
-  "basis": "robots.txt (an access rule, not a reuse licence)"
+  "basis": "the instance's terms (content stays its owner's; the licence given to the operator covers making content available \"via one or more APIs for application access, via RSS\") and https://mastodon.social/robots.txt, whose group for User-agent: * disallows only /media_proxy/, /interact/ and /api/v1/instance/domain_blocks"
  },
  "interface": "Public REST API and per-account RSS/Atom (.rss) on the instance; each instance sets its own rules.",
  "contact_channel": null,
- "notes": "robots.txt for User-agent: * disallows only /media_proxy/, /interact/ and a few API paths; named AI-training agents are fully disallowed. Instance terms of service not read.",
- "researched_by": "data.b.collector@PrompTugal.dinis (Sonnet), checked by data.b@"
+ "notes": "Read 18 Nov 2026 by data.b.collector@. Other instances (e.g. masto.pt) have their own terms, not yet read: add each instance here before listing an account on it. Named AI-training agents are disallowed by robots.txt: we are a news data collector, not an AI-training crawler, and store no text.",
+ "researched_by": "data.b.collector@PrompTugal.dinis (Sonnet), checked by data.b@",
+ "how": "Mastodon public instance API, without credentials: /api/v1/accounts/lookup and /api/v1/accounts/:id/statuses (exclude_replies) on the instance of each listed organisation account (register/social-accounts.json; none yet), with our named user agent and 2.5 s between requests. Post text read in memory only; never stored. Each instance sets its own terms: the collector reads only instances whose terms were read, and mastodon.social's are the ones read so far."
 }

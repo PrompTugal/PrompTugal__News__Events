@@ -1,0 +1,35 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values."
+ },
+ "id": "blog-matosinhos-tech",
+ "name": "matosinhos.tech",
+ "kind": "newsletter",
+ "url": "https://matosinhostech.substack.com/",
+ "owner": "matosinhos.tech",
+ "places": [
+  "matosinhos",
+  "portugal"
+ ],
+ "gives": [
+  "tech",
+  "startups",
+  "events"
+ ],
+ "status": "not-read",
+ "why": {
+  "quote": "matosinhos.tech",
+  "quote_lang": "en",
+  "page": "https://matosinhostech.substack.com/feed",
+  "read_at": "2026-11-18",
+  "basis": "copyright line inside the feed itself (no site terms page read)"
+ },
+ "interface": "Public RSS/Atom feed, answered 200 on 2026-11-18; newest item in the feed: 8 Nov 2026.",
+ "feed": "https://matosinhostech.substack.com/feed",
+ "contact_channel": "https://matosinhostech.substack.com/about",
+ "notes": "Byline as published: matosinhos.tech. Substack feed: free posts only; the feed carries just a preview for any paid post, which we never collect. Topics: tech community and events in Matosinhos.",
+ "researched_by": "data.b.collector@PrompTugal.dinis (Sonnet), checked by data.b@"
+}

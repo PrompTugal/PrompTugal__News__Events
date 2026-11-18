@@ -1,0 +1,32 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values."
+ },
+ "id": "abusech-urlhaus",
+ "name": "abuse.ch URLhaus",
+ "kind": "cyber data source",
+ "url": "https://urlhaus.abuse.ch/",
+ "owner": "abuse.ch AG (with Spamhaus Technology Limited as primary licensee)",
+ "places": [
+  "portugal"
+ ],
+ "gives": [
+  "counts of malware URLs or indicators by country or hosting network (only as our own aggregates)"
+ ],
+ "status": "not-read",
+ "why": {
+  "quote": "THE ABUSE.CH PLATFORMS ARE PROVIDED FREE OF CHARGE, SUBJECT TO THE FAIR USE PRINCIPLES SET OUT IN THESE TERMS. ... Authenticated Users may access the Platforms for not-for-profit purposes, subject to usage limitations imposed by abuse.ch and/or Spamhaus.",
+  "quote_lang": "en",
+  "page": "https://abuse.ch/terms-of-use/",
+  "read_at": "2026-11-18",
+  "basis": "published Terms of Use (effective 4 November 2025, last updated 21 October 2026)"
+ },
+ "interface": "malicious URL feed; API at urlhaus.abuse.ch/api/. Terms require an authenticated account (auth.abuse.ch).",
+ "feed": null,
+ "contact_channel": "https://abuse.ch/terms-of-use/",
+ "notes": "RESTRICTS: not-for-profit access only, needs an account, volume limits, paid subscription beyond them. The raw data is lists of URLs, hosts and hashes: we must never publish or store such lists, only our own counts, and a commercial use would need a paid agreement; lead to decide. Terms read once for both platforms.",
+ "researched_by": "data.b.collector@PrompTugal.dinis (Sonnet), checked by data.b@"
+}

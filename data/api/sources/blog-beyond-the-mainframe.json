@@ -1,0 +1,34 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values."
+ },
+ "id": "blog-beyond-the-mainframe",
+ "name": "Beyond the Mainframe (Laika Ventures)",
+ "kind": "newsletter",
+ "url": "https://beyondthemainframe.substack.com/",
+ "owner": "Laika Ventures",
+ "places": [
+  "portugal",
+  "lisbon"
+ ],
+ "gives": [
+  "AI",
+  "startups"
+ ],
+ "status": "not-read",
+ "why": {
+  "quote": "Laika Ventures",
+  "quote_lang": "en",
+  "page": "https://beyondthemainframe.substack.com/feed",
+  "read_at": "2026-11-18",
+  "basis": "copyright line inside the feed itself (no site terms page read)"
+ },
+ "interface": "Public RSS/Atom feed, answered 200 on 2026-11-18; newest item in the feed: 31 Oct 2026.",
+ "feed": "https://beyondthemainframe.substack.com/feed",
+ "contact_channel": "https://beyondthemainframe.substack.com/about",
+ "notes": "Byline as published: Laika Ventures. Substack feed: free posts only; the feed carries just a preview for any paid post, which we never collect. Topics: AI events worldwide and what startups and institutions in Portugal do.",
+ "researched_by": "data.b.collector@PrompTugal.dinis (Sonnet), checked by data.b@"
+}
