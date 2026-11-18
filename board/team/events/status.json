@@ -2,8 +2,8 @@
   "role": "events.b@PrompTugal.dinis",
   "account": "B",
   "started_by": "conductor.b@PrompTugal.dinis at Dinis's word, 18 Nov 2026 (~14:30 UTC: \"repo is created\")",
-  "state": "run 1b (Dinis's ask, ~14:45 UTC): /sources/, /principles/ and /report/ added; waits for the next wake",
-  "updated": "2026-11-18T15:05Z",
+  "state": "run 1c (Dinis's answers ~14:55 UTC): live data in the browser, issue forms, takedown disclaimer, scheduled rebuild; keygen refused again; waits for the next wake",
+  "updated": "2026-11-18T15:20Z",
   "debrief": "board/team/events/debriefs/2026-11-18-handover.md",
   "done": [
     "home page: counts, places, events starting in the next seven days",
@@ -17,23 +17,26 @@
     "/sources/: every source on the register (read and not read), each at /sources/#<id>, with why not (quote, basis, link, date), licence limits, asked or not, cited-by counts; and the hosts Perplexity cited that are not on the register yet",
     "/principles/: what we aim for (accurate, never presented as other than it is, corrections in the open, we listen and change) and the rules of engagement with sources",
     "/report/: what to report, how (a public GitHub issue; 'please take down' for anything private), what happens next, the corrections log (data/corrections.json)",
-    "every page's footer carries the principles line and links; every event card links /report/"
+    "every page's footer carries the principles line and links; every event card links /report/",
+    "live data: assets/live.js re-draws each place page and the home page's next seven days from data.promptugal.news in the browser (same renderer as the build, src/assets/render.mjs; 'today' in Lisbon now); the built page is the fallback",
+    "organisers send events through a GitHub issue form (.github/ISSUE_TEMPLATE/event.yml), linked from /organisers/ (Dinis, ~14:55 UTC)",
+    "report form (.github/ISSUE_TEMPLATE/report.yml), linked from /report/ and every page",
+    "disclaimer on every page: 'If you think we should not show your data, open an issue and we take it down while we talk'",
+    "scheduled rebuild: pages.yml at :47 past 00, 06, 12, 18 UTC, after data.promptugal.news's agenda reads"
   ],
   "next": [
+    "when keygen is allowed: make the key, publish it, then the observability lane 'events' (tokens out of the repo and logs; drain credentials sealed to conductor.b-promptugal)",
+    "publish an organiser's submitted event from an issue (data file data/submissions/, credited and dated), when the first arrives",
     "conductor.b@ asked to make the principles and the report process PrompTugal-wide; follow its answer",
     "link social signals (data.promptugal.news /api/v1/social/, Dinis 18 Nov, board/guidance/2026-11-18-social-signals.md in the Website repo) on events as evidence when they arrive",
     "the graph and past editions on each event, when data.b@ and ontologist@ publish /api/v1/graph/ and /api/v1/events/past/",
     "Lisboa: show events as soon as data.b@'s agendalx.pt read works again (403 at 14:27 UTC)",
     "a map of the places with their counts on the home page",
-    "observability (obs.js, lane 'events') as on the five sites, when conductor.b@ confirms the lane",
-    "the brand fonts copied from the Website repository",
-    "an organiser submission flow beyond a GitHub issue, once Dinis chooses the channel"
+    "the brand fonts copied from the Website repository"
   ],
   "asks": [
-    "Dinis: allow 'node pki-agent.mjs keygen --session' in this environment's permissions (refused by the auto-mode classifier at ~14:40 UTC), or say how this team should sign",
-    "Dinis: the organisers' channel: is a public GitHub issue on this repository acceptable for now, or which channel (a form, an address)?",
-    "Dinis: may CI rebuild this site on a schedule (every 6 hours, after data.promptugal.news's events read) so pages follow the data without a push?",
-    "Dinis: the agendas read (cm-lagos.pt, agendalx.pt) publish no reuse licence; this site shows their events with name, link and 'the source's terms', as data.promptugal.news's card proposes. Keep, or ask the câmaras first?",
+    "Dinis: keygen is still refused after your yes (~14:55 UTC): at ~15:10 UTC the auto-mode classifier refused even 'node pki-agent.mjs help' ('Undermining Oversight'). Please confirm it in this session (or add a permission rule for 'node pki-agent.mjs'); then I make the key, publish events.b-promptugal in board/keys.json, and tell conductor.b@",
+    "Dinis: observability lane 'events' waits on the key: the drain credentials must be sealed to conductor.b@'s key, which needs mine; not started, so no token exists",
     "Dinis: a private reporting channel (a form or an address) for reports that should not be public; until then /report/ says to give only the page link and 'please take down'",
     "Dinis (via conductor.b@): observability lane 'events' needs its tokens from observability@ on account A"
   ],

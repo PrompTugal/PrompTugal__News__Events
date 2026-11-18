@@ -3,14 +3,16 @@
 // SITE_VERSION is set by CI only (v0.1.N); a local build says "dev". Node 18+, no dependencies.
 // Template build by factory@AgentiCCells.dinis; the pages by events.b@PrompTugal.dinis, 18 November 2026. Code: Apache-2.0.
 import { cpSync, rmSync, readdirSync, readFileSync, writeFileSync, statSync, existsSync, mkdirSync } from 'node:fs';
-import { join, dirname } from 'node:path';
+import { join, dirname, resolve } from 'node:path';
+import { pathToFileURL } from 'node:url';
 
 const version = process.env.SITE_VERSION || 'dev';
-const SITE = 'https://events.promptugal.news';
-const DATA = 'https://data.promptugal.news';
 const REPO = 'https://github.com/PrompTugal/PrompTugal__News__Events';
-const CCBY = 'https://creativecommons.org/licenses/by/4.0/';
 const builtAt = new Date();
+const R = await import(pathToFileURL(resolve('src/assets/render.mjs')).href);
+const { SITE, DATA, CCBY, REGION, NAMES, nameOf, lisbonDay, clean, esc, escUrl, okUrl, link, mdText, mdLink, host, fmtDay, fmtWhen, fmtStamp, addDays, readItemsOf, foundItemsOf, endOf, startOf, isCurrent, groupByDay, eventHtml, eventMd, listHtml, listMd, timePart } = R;
+R.setToday(lisbonDay(builtAt));
+const today = R.today;
 
 rmSync('_site', { recursive: true, force: true });
 cpSync('src', '_site', { recursive: true });
@@ -22,14 +24,6 @@ const claimsIndex = readJson('data/api/claims-index.json', { places: [] });
 const eventsPt = readJson('data/api/events-pt.json', {});
 const sync = readJson('data/api/sync.json', {});
 
-const NAMES = {
-  albufeira: 'Albufeira', alcoutim: 'Alcoutim', algarve: 'The Algarve', aljezur: 'Aljezur', 'castro-marim': 'Castro Marim',
-  faro: 'Faro', lagoa: 'Lagoa', lagos: 'Lagos', lisboa: 'Lisboa', loule: 'Loulé', monchique: 'Monchique', olhao: 'Olhão',
-  portimao: 'Portimão', quarteira: 'Quarteira', 'sao-bras-de-alportel': 'São Brás de Alportel', silves: 'Silves',
-  tavira: 'Tavira', 'vila-do-bispo': 'Vila do Bispo', 'vila-real-de-santo-antonio': 'Vila Real de Santo António',
-};
-const nameOf = (id) => NAMES[id] || id.split('-').map((w) => w[0].toUpperCase() + w.slice(1)).join(' ');
-const REGION = 'algarve';
 const placeIds = [...new Set([...index.places.map((p) => p.id), ...claimsIndex.places.map((p) => p.place)])]
   .filter((p) => /^[a-z0-9-]+$/.test(p) && p !== REGION)
   .sort((a, b) => (a === 'lisboa') - (b === 'lisboa') || nameOf(a).localeCompare(nameOf(b), 'pt'));
@@ -43,147 +37,18 @@ for (const p of [...placeIds, REGION]) {
 }
 
 // Lisbon's calendar day, for "today": the site is about Portugal.
-const lisbonDay = (d) => new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Lisbon', year: 'numeric', month: '2-digit', day: '2-digit' }).format(d);
-const today = lisbonDay(builtAt);
-
-// House style: no em dashes in what we print (the gate). A source's em dash is shown as an en dash; the JSON keeps the original.
-const clean = (s) => String(s ?? '').replace(/—/g, '–').replace(/\s+/g, ' ').trim();
-const esc = (s) => clean(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
-const escUrl = (u) => String(u ?? '').replace(/&/g, '&amp;').replace(/"/g, '%22').replace(/</g, '%3C').replace(/>/g, '%3E');
-const okUrl = (u) => typeof u === 'string' && /^https?:\/\//.test(u);
-const link = (u, text) => (okUrl(u) ? `<a href="${escUrl(u)}">${esc(text)}</a>` : esc(text));
-const mdText = (s) => clean(s).replace(/([\[\]*_`<>|])/g, '\\$1');
-const mdLink = (u, text) => (okUrl(u) ? `[${mdText(text)}](${String(u).replace(/ /g, '%20').replace(/\)/g, '%29')})` : mdText(text));
-const host = (u) => { try { return new URL(u).host.replace(/^www\./, ''); } catch { return ''; } };
-
-const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-const DAYS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-const dayPart = (s) => String(s || '').slice(0, 10);
-const timePart = (s) => (/T(\d{2}:\d{2})/.exec(String(s || '')) || [])[1] || '';
-const ymd = (s) => { const [y, m, d] = dayPart(s).split('-').map(Number); return { y, m, d, dow: new Date(Date.UTC(y, m - 1, d)).getUTCDay() }; };
-const fmtDay = (s, withYear = true) => { const t = ymd(s); return `${DAYS[t.dow]} ${t.d} ${MONTHS[t.m - 1]}${withYear ? ` ${t.y}` : ''}`; };
-const fmtWhen = (start, end) => {
-  const t = timePart(start);
-  if (!end || dayPart(end) === dayPart(start)) return `${fmtDay(start)}${t ? `, ${t}` : ''}`;
-  return `${fmtDay(start, ymd(start).y !== ymd(end).y)} to ${fmtDay(end)}${t ? ` (from ${t})` : ''}`;
-};
-const fmtStamp = (iso) => {
-  if (!iso) return 'unknown';
-  const d = new Date(iso); if (isNaN(d)) return esc(iso);
-  return `${d.getUTCDate()} ${MONTHS[d.getUTCMonth()]} ${d.getUTCFullYear()}, ${String(d.getUTCHours()).padStart(2, '0')}:${String(d.getUTCMinutes()).padStart(2, '0')} UTC`;
-};
-const addDays = (day, n) => { const t = ymd(day); return new Date(Date.UTC(t.y, t.m - 1, t.d + n)).toISOString().slice(0, 10); };
 
 // One shape for both kinds: "read" (details from a source we may read) and "found" (a claim found through Perplexity).
-function readItems(place) {
-  const f = feeds[place]?.read; if (!f) return [];
-  return (f.events || []).filter((e) => e && e.name && e.startDate).map((e) => ({ kind: 'read', place: e.place || place, e }));
-}
-function foundItems(place) {
-  const f = feeds[place]?.claims; if (!f) return [];
-  return (f.claims || []).filter((c) => c && c.name && c.startDate).map((c) => ({ kind: 'found', place: c.place || place, e: c, discovery: f.discovery }));
-}
+const readItems = (place) => readItemsOf(feeds[place]?.read, place);
+const foundItems = (place) => foundItemsOf(feeds[place]?.claims, place);
 function itemsFor(place) {
   if (place === REGION) {
     const read = readItems(REGION);
-    const found = algarveIds.flatMap(foundItems);
+    const found = feeds[REGION]?.claims ? foundItems(REGION) : algarveIds.flatMap(foundItems);
     return [...read, ...found];
   }
   return [...readItems(place), ...foundItems(place)];
 }
-const endOf = (it) => dayPart(it.e.endDate || it.e.startDate);
-const startOf = (it) => dayPart(it.e.startDate);
-const isCurrent = (it) => endOf(it) >= today;
-function groupByDay(items) {
-  const now = [], days = new Map();
-  for (const it of items.filter(isCurrent)) {
-    if (startOf(it) < today) now.push(it);
-    else { const k = startOf(it); if (!days.has(k)) days.set(k, []); days.get(k).push(it); }
-  }
-  const order = (a, b) => (a.kind === b.kind ? 0 : a.kind === 'read' ? -1 : 1) || (timePart(a.e.startDate) || '99').localeCompare(timePart(b.e.startDate) || '99') || clean(a.e.name).localeCompare(clean(b.e.name), 'pt');
-  now.sort((a, b) => endOf(a).localeCompare(endOf(b)) || order(a, b));
-  const sorted = [...days.keys()].sort().map((k) => [k, days.get(k).sort(order)]);
-  return { now, days: sorted };
-}
-
-// ---------------------------------------------------------------- one event, as HTML and as markdown
-const PUBLISHER_FALLBACK = (e) => e.license?.holder || host(e.url) || 'the source';
-function licenceHtml(l) {
-  if (!l) return `<a class="lic" href="${CCBY}">CC BY 4.0</a> (our record)`;
-  const name = l.name === "the source's terms" ? `the source's terms${l.holder ? ` (${l.holder})` : ''}` : `${l.name}${l.holder && l.holder !== 'PrompTugal.news' ? ` (${l.holder})` : ''}`;
-  return link(l.url, name).replace('<a ', '<a class="lic" ');
-}
-function licenceMd(l) {
-  if (!l) return `${mdLink(CCBY, 'CC BY 4.0')} (our record)`;
-  const name = l.name === "the source's terms" ? `the source's terms${l.holder ? ` (${l.holder})` : ''}` : l.name;
-  return mdLink(l.url, name);
-}
-function sourceLabel(e) { return clean(String(e.source || '').replace(/^https?:\/\/\S+\s*/, '').replace(/^\(|\)$/g, '')) || host(e.url); }
-function sourceUrl(e) { return (/^(https?:\/\/\S+)/.exec(String(e.source || '')) || [])[1] || ''; }
-
-function eventHtml(it, { showPlace = false } = {}) {
-  const e = it.e;
-  const place = nameOf(it.place);
-  if (it.kind === 'read') {
-    const venue = e.location?.name ? esc(e.location.name) : '<span class="none">not given by the source</span>';
-    const org = e.organizer?.name ? esc(e.organizer.name) : `<span class="none">not named by the source; listed by ${esc(PUBLISHER_FALLBACK(e))}</span>`;
-    return `<li class="ev ev-read">
-<h4 class="ev-name">${link(e.url, e.name)}</h4>
-<dl class="ev-facts"><dt>When</dt><dd>${esc(fmtWhen(e.startDate, e.endDate))}</dd>${showPlace ? `<dt>Place</dt><dd><a href="/places/${it.place}/">${esc(place)}</a></dd>` : `<dt>Place</dt><dd>${esc(place)}</dd>`}<dt>Venue</dt><dd>${venue}</dd><dt>Organiser</dt><dd>${org}</dd>
-<dt>Evidence</dt><dd>${link(e.url, `the event's page on ${host(e.url) || 'the source'}`)}${sourceUrl(e) ? `; ${link(sourceUrl(e), sourceLabel(e) || 'the list it was read from')}` : ''}; ${e.stale ? `<b>as read at ${esc(fmtStamp(e.read_at))}</b> (the source has not answered since; kept up to 48 hours)` : `read ${esc(fmtStamp(e.read_at))}`}</dd>
-<dt>Licence</dt><dd>${licenceHtml(e.license)}</dd></dl>
-<p class="report"><a href="/report/">Something wrong? Tell us</a></p>
-</li>`;
-  }
-  const ev = (e.evidence || []).filter((x) => okUrl(x.url));
-  const evHtml = ev.map((x) => `${link(x.url, x.host || host(x.url))} <span class="flag ${x.readable ? 'ok' : 'no'}">${x.readable ? 'we may read it' : 'we do not copy it'}</span>`).join('; ') || '<span class="none">none kept</span>';
-  const df = e.details_from;
-  const confirm = e.status === 'confirmed'
-    ? `<p class="withheld">Confirmed at a source we may read${df ? `: ${(() => { const u = String(typeof df === 'string' ? df : df.url || '').split(' ')[0]; return okUrl(u) ? link(u, host(u)) : esc(String(df)); })()}` : ''}.</p>`
-    : e.status === 'details withheld'
-    ? `<p class="withheld">Details withheld: the source's terms do not let us copy them. <a href="/organisers/">Organisers, send them to us.</a></p>`
-    : `<p class="withheld">${esc(e.status === 'to confirm at a readable source' ? 'To confirm: a source we may read is cited, and its details are not read yet.' : (e.details_note || e.status || ''))} <a href="/organisers/">Organisers, send us the details.</a></p>`;
-  const d = it.discovery;
-  return `<li class="ev ev-found">
-<p class="badge">Found through Perplexity</p>
-<h4 class="ev-name">${esc(e.name)}</h4>
-<dl class="ev-facts"><dt>When</dt><dd>${esc(fmtWhen(e.startDate, e.endDate))}</dd><dt>Place</dt><dd>${showPlace ? `<a href="/places/${it.place}/">${esc(place)}</a>` : esc(place)}</dd>
-<dt>Evidence</dt><dd>${evHtml}</dd>
-<dt>Found</dt><dd>through Perplexity${d ? ` (${esc(d.model || 'sonar')}, via ${esc(d.via || 'OpenRouter')}, asked ${esc(fmtStamp(d.asked_at))})` : ''}, by <a href="${DATA}/">data.promptugal.news</a></dd>
-<dt>Licence</dt><dd>${licenceHtml(e.license)}; each evidence link is under its own source's terms</dd></dl>
-${confirm}
-<p class="report"><a href="/report/">Something wrong? Tell us</a></p>
-</li>`;
-}
-function eventMd(it) {
-  const e = it.e, place = nameOf(it.place);
-  if (it.kind === 'read') {
-    return [`- **${mdLink(e.url, e.name)}**`, `  - When: ${mdText(fmtWhen(e.startDate, e.endDate))}; place: ${mdText(place)}; venue: ${mdText(e.location?.name || 'not given by the source')}`,
-      `  - Organiser: ${mdText(e.organizer?.name || `not named by the source; listed by ${PUBLISHER_FALLBACK(e)}`)}`,
-      `  - Evidence: ${mdLink(e.url, "the event's page")}${sourceUrl(e) ? `; ${mdLink(sourceUrl(e), sourceLabel(e) || 'the list it was read from')}` : ''}; read ${fmtStamp(e.read_at)}`,
-      `  - Licence: ${licenceMd(e.license)}`].join('\n');
-  }
-  const ev = (e.evidence || []).filter((x) => okUrl(x.url)).map((x) => `${mdLink(x.url, x.host || host(x.url))} (${x.readable ? 'we may read it' : 'we do not copy it'})`).join('; ');
-  return [`- **${mdText(e.name)}** (found through Perplexity)`, `  - When: ${mdText(fmtWhen(e.startDate, e.endDate))}; place: ${mdText(place)}`,
-    `  - Evidence: ${ev || 'none kept'}`, `  - ${e.status === 'confirmed' ? 'Confirmed at a source we may read.' : e.status === 'details withheld' ? "Details withheld: the source's terms do not let us copy them. Organisers, send them to us: " + SITE + '/organisers/' : 'To confirm at a source we may read.'}`,
-    `  - Licence: ${licenceMd(e.license)}; each evidence link under its own source's terms`].join('\n');
-}
-
-function listHtml(items, opts = {}) {
-  const { now, days } = groupByDay(items);
-  const out = [];
-  if (now.length) out.push(`<section class="day" id="on-now"><h3>On now <span class="n">${now.length}</span></h3><p class="small">Started before today and still running, ending soonest first.</p><ul class="evs">${now.map((it) => eventHtml(it, opts)).join('\n')}</ul></section>`);
-  for (const [day, list] of days) out.push(`<section class="day" id="d-${day}"><h3>${esc(fmtDay(day))}${day === today ? ' (today)' : ''} <span class="n">${list.length}</span></h3><ul class="evs">${list.map((it) => eventHtml(it, opts)).join('\n')}</ul></section>`);
-  return { html: out.join('\n'), count: now.length + days.reduce((n, [, l]) => n + l.length, 0) };
-}
-function listMd(items) {
-  const { now, days } = groupByDay(items);
-  const out = [];
-  if (now.length) out.push(`### On now\n\n${now.map(eventMd).join('\n')}`);
-  for (const [day, list] of days) out.push(`### ${fmtDay(day)}\n\n${list.map(eventMd).join('\n')}`);
-  return out.join('\n\n');
-}
-
 // ---------------------------------------------------------------- the page frame
 const SITES = [['Events', 'https://events.promptugal.news/'], ['Weather', 'https://weather.promptugal.news/'], ['Civic', 'https://civic.promptugal.news/'], ['Startups', 'https://startups.promptugal.news/'], ['Travel', 'https://travel.promptugal.news/'], ['Data', 'https://data.promptugal.news/']];
 const NAV = [['/', 'Events'], ['/places/', 'Places'], ['/sources/', 'Sources'], ['/organisers/', 'Organisers'], ['/how/', 'How it works'], ['/principles/', 'Principles']];
@@ -201,6 +66,7 @@ function page({ path, title, description, section, body, md }) {
 <link rel="alternate" type="text/markdown" href="${path}index.md">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="/site.css?v=${esc(version)}">
+<script type="module" src="/assets/live.js?v=${esc(version)}"></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to the content</a>
@@ -219,6 +85,7 @@ ${body}
 <footer class="footer">
   <p>Part of <a href="https://promptugal.news/">PrompTugal.news</a>: Portugal, town by town. Independent: not an official or government site, and not a ticketing or booking service: check with the organiser before you travel.</p>
   <p class="licences">Licences: our pages, words and records <a class="lic" href="${CCBY}">CC BY 4.0</a>; each event read from a source stays under that source's licence or terms, linked on the event. Data from <a href="${DATA}/">data.promptugal.news</a> (<a href="${DATA}/sources/">what it reads</a>, <a href="${DATA}/sources/not-read/">what it does not, and why</a>).</p>
+  <p class="disclaimer"><b>Your data, your say.</b> If you think we should not show your data, <a href="${REPO}/issues/new?template=report.yml">open an issue</a> and we take it down while we talk.</p>
   <p class="principles-line"><b>We aim to be accurate and never to present anything as other than it is; mistakes happen, and we correct them as soon as we can.</b> <a href="/principles/">Our principles</a> · <a href="/sources/">Every source, and why</a> · <a href="/report/">Report a mistake</a></p>
   <p class="small">How this page was made: code (<code>scripts/build.mjs</code>) built it from data.promptugal.news's API; the code and words are by events.b@PrompTugal.dinis, an AI agent (Claude, Opus), for Dinis Cruz; no person has checked the listings yet.</p>
   <p class="small">Version ${esc(version)} · Built ${esc(fmtStamp(builtAt.toISOString()))} · <a href="${REPO}">Source</a> · Code Apache-2.0, text CC BY 4.0 · <a href="/llms.txt">llms.txt</a></p>
@@ -258,7 +125,7 @@ function counts(p) {
 // ---------------------------------------------------------------- home
 {
   const week = addDays(today, 7);
-  const algItems = [...readItems(REGION), ...algarveIds.flatMap(foundItems), ...readItems('lisboa'), ...foundItems('lisboa')]
+  const algItems = [...itemsFor(REGION), ...itemsFor('lisboa')]
     .filter((it) => startOf(it) >= today && startOf(it) < week);
   const wk = listHtml(algItems, { showPlace: true });
   const placeRows = [REGION, ...placeIds].map((p) => `<li><a href="/places/${p}/">${esc(nameOf(p))}</a>${p === REGION ? ' <span class="small">(every Algarve place together)</span>' : ''} <span class="small">${counts(p)}</span></li>`).join('\n');
@@ -273,7 +140,7 @@ ${fresh}
 <p class="note">Two kinds of listing: <b>read</b> events come from a public agenda we may read (the agendas data.promptugal.news reads: ${esc(sourcesRead.join(' and ') || 'none yet')}), with the details it gives; events <b>found through Perplexity</b> show only their title, date, place and the links that point to them, because the sites those links lead to do not let us copy their details. <a href="/organisers/">Organisers: send us yours.</a></p>
 </section>
 <section><h2>Places</h2><ul class="places">${placeRows}</ul>${lisbonNote ? `<p class="small">${lisbonNote}</p>` : ''}</section>
-<section><h2>Starting in the next seven days</h2>${wk.count ? wk.html : '<p class="none">Nothing listed yet for the next seven days.</p>'}<p class="small">Long-running exhibitions and events already on are on each place's page, under "On now".</p></section>`,
+<section><h2>Starting in the next seven days</h2><div id="events" data-places="algarve,lisboa" data-window="7" data-show-place="1" data-read-at="${esc(dataReadAt || '')}">${wk.count ? wk.html : '<p class="none">Nothing listed yet for the next seven days.</p>'}</div><p class="small">Long-running exhibitions and events already on are on each place's page, under "On now".</p></section>`,
     md: `${totalRead} events read from official agendas and ${totalFound} found through Perplexity, across ${placeIds.length} places. Data read ${fmtStamp(dataReadAt)}.\n\n## Places\n\n${[REGION, ...placeIds].map((p) => `- ${mdLink(`${SITE}/places/${p}/`, nameOf(p))}: ${counts(p).replace(/<[^>]+>/g, '')}`).join('\n')}\n\n## Starting in the next seven days\n\n${listMd(algItems) || 'Nothing listed yet.'}`,
   });
 }
@@ -306,7 +173,7 @@ for (const p of [REGION, ...placeIds]) {
 <p class="standfirst">${stats[p].read} events read from official agendas${stats[p].found ? ` and ${stats[p].found} found through Perplexity` : ''}, on now or starting within about 60 days, by day.</p>
 ${fresh}
 ${read?.source_note && stats[p].read ? `<details class="small"><summary>The sources and their terms</summary><p>${esc(read.source_note)}</p></details>` : ''}
-${L.count ? L.html : `<p class="none">${empty}</p>`}
+<div id="events" data-places="${p}" data-show-place="${p === REGION ? 1 : 0}" data-read-at="${esc(dataReadAt || '')}">${L.count ? L.html : `<p class="none">${empty}</p>`}</div>
 <p class="small">The data: ${apiLinks || 'none yet'}. ${p === REGION ? `The Algarve's Perplexity finds are gathered from each place's own file.` : ''} Licences: the records CC BY 4.0, each event under its source's terms as linked.</p>`,
     md: `${stats[p].read} read from official agendas, ${stats[p].found} found through Perplexity. Data read ${fmtStamp(dataReadAt)}.\n\n${listMd(items) || 'No events listed yet: no source we may read covers this place.'}`,
   });
@@ -340,9 +207,9 @@ page({
   "license": "https://creativecommons.org/licenses/by/4.0/"
 }</pre></section>
 <section><h2>Where to send it</h2>
-<p>For now, open an issue on this site's public repository, <a href="${REPO}/issues">github.com/PrompTugal/PrompTugal__News__Events</a>, titled with your event's name, from an account that is your organisation's or that your organisation's site names. A form and an email address are coming; until then this is the one public channel we have, and anything you post there is public.</p>
-<p class="small">This page is a first version, and the channel is a proposal: written by events.b@PrompTugal.dinis (an AI agent) from Dinis Cruz's rule of 18 November 2026 ("When he sends his own details, we publish them, credited ... eventually we want to have PKI here").</p></section>`,
-  md: `If your event is listed with "details withheld", send its details yourself and we publish them, credited to you and dated.\n\n- Published as yours, credited and dated, with a link to your page.\n- Under the licence you choose (we suggest CC BY 4.0).\n- Signed later (PKI), added as we go.\n- Only from the organiser; a third party's details are a lead to check (a proposal for Dinis Cruz).\n\nSend: name; start and end; town and venue; your organisation and website; the event's link; an optional short description; the licence. Where: an issue on ${REPO}/issues (public), until a form and an email address exist.`,
+<p><a class="button" href="${REPO}/issues/new?template=event.yml">Send us your event</a></p><p>It opens a short form on this site's public repository (a GitHub issue; you need a GitHub account). Send it from an account that is your organisation's or that your organisation's site names. Everything you post there is public. This is the channel Dinis Cruz chose on 18 November 2026; we will revisit it as more organisers send events.</p>
+<p class="small">Written by events.b@PrompTugal.dinis (an AI agent) from Dinis Cruz's rule of 18 November 2026 ("When he sends his own details, we publish them, credited ... eventually we want to have PKI here").</p></section>`,
+  md: `If your event is listed with "details withheld", send its details yourself and we publish them, credited to you and dated.\n\n- Published as yours, credited and dated, with a link to your page.\n- Under the licence you choose (we suggest CC BY 4.0).\n- Signed later (PKI), added as we go.\n- Only from the organiser; a third party's details are a lead to check (a proposal for Dinis Cruz).\n\nSend: name; start and end; town and venue; your organisation and website; the event's link; an optional short description; the licence. Where: the form at ${REPO}/issues/new?template=event.yml (a public GitHub issue).`,
 });
 
 // ---------------------------------------------------------------- how it works
@@ -424,6 +291,7 @@ ${s.notes ? `<dt>Notes</dt><dd>${esc(s.notes)}</dd>` : ''}${checks ? `<dt>Open</
     body: `<h1>Every source: what we read, what we do not, and why</h1>
 <p class="standfirst">Every source PrompTugal.news knows of, for events and for everything else the PrompTugal sites show: ${readS.length} we read today and ${notS.length} we do not, each with the reason, quoted from its own terms or robots.txt with the link and the date read. We respect what each says.</p>
 ${TELL_US}
+<p class="disclaimer"><b>Your data, your say.</b> If you think we should not show your data, <a href="${REPO}/issues/new?template=report.yml">open an issue</a> and we take it down while we talk.</p>
 <p class="fresh">From the register on data.promptugal.news, read ${esc(fmtStamp(sync.finished))}. Each source has its own link: <code>${SITE}/sources/#&lt;id&gt;</code>.</p>
 <nav class="toc" aria-label="On this page"><a href="#read">We read (${readS.length})</a> · <a href="#not-read">We do not read (${notS.length})</a> · <a href="#cited">Cited, not on the register (${unreg.length})</a> · <a href="#limits">Licence limits</a> · <a href="#rules">The rules we follow</a></nav>
 <section id="read"><h2>Sources we read (${readS.length})</h2><p>Read by code through the interface each offers (an open-data API, a public list page), politely, and only where its robots.txt and terms allow. What we show from each follows its licence or terms, stated on the source and on every item.</p><ul class="srcs">${readS.map(card).join('\n')}</ul></section>
@@ -498,7 +366,7 @@ ${TELL_US}
 <li>Anything else that breaks <a href="/principles/">our principles</a>.</li>
 </ul></section>
 <section id="how"><h2>How</h2>
-<p>For now, open an issue on this site's public repository: <a href="${REPO}/issues">github.com/PrompTugal/PrompTugal__News__Events/issues</a>. Say which page (its link), what is wrong, and, if you can, a public link that shows what is right. Everything posted there is public.</p>
+<p><a class="button" href="${REPO}/issues/new?template=report.yml">Report it</a></p><p>It opens a short form on this site's public repository (a GitHub issue; you need a GitHub account). <b>If you think we should not show your data, say so: we take it down while we talk.</b> Say which page (its link), what is wrong, and, if you can, a public link that shows what is right. Everything posted there is public.</p>
 <p><b>If it should not be public</b> (a private detail about a person, say), do not repeat it in the issue: give only the page's link and the words "please take down". We take it down first and ask afterwards. A private channel (a form or an address) is coming; this page will say when.</p></section>
 <section id="next"><h2>What happens next</h2>
 <ol>
@@ -512,7 +380,7 @@ ${TELL_US}
 <section id="log"><h2>Corrections log</h2>
 ${corr.length ? `<ul>${corr.map((c) => `<li><b>${esc(c.date || '')}</b> ${esc(c.page || '')}: ${esc(c.what || '')}${c.changed ? `. Changed: ${esc(c.changed)}` : ''}</li>`).join('\n')}</ul>` : '<p class="none">No corrections yet. This log started on 18 November 2026; when there is one, it is here, dated, and never removed.</p>'}
 <p class="small">The log as data: <a href="${REPO}/blob/dev/data/corrections.json">data/corrections.json</a> (CC BY 4.0).</p></section>`,
-    md: `Something wrong? Tell us: ${REPO}/issues (public). If it should not be public, give only the page's link and "please take down".\n\nWhat happens: take down first where it matters; look; answer; change; record on the corrections log.\n\n## Corrections log\n\n${corr.length ? corr.map((c) => `- ${c.date}: ${mdText(c.page || '')}: ${mdText(c.what || '')}`).join('\n') : 'No corrections yet (log started 18 November 2026).'}`,
+    md: `Something wrong? Tell us: ${REPO}/issues/new?template=report.yml (public). If you think we should not show your data, we take it down while we talk. If it should not be public, give only the page's link and "please take down".\n\nWhat happens: take down first where it matters; look; answer; change; record on the corrections log.\n\n## Corrections log\n\n${corr.length ? corr.map((c) => `- ${c.date}: ${mdText(c.page || '')}: ${mdText(c.what || '')}`).join('\n') : 'No corrections yet (log started 18 November 2026).'}`,
   });
 }
 

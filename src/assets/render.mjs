@@ -1,0 +1,142 @@
+// The shared renderer: one event card and the day-by-day list, used by scripts/build.mjs (the built pages)
+// and by assets/live.js in the browser (the same pages refreshed from data.promptugal.news's API).
+// No dependencies; runs in Node 18+ and in browsers. events.b@PrompTugal.dinis, 18 November 2026. Code: Apache-2.0.
+export const SITE = 'https://events.promptugal.news';
+export const DATA = 'https://data.promptugal.news';
+export const CCBY = 'https://creativecommons.org/licenses/by/4.0/';
+export const REGION = 'algarve';
+export const NAMES = {
+  albufeira: 'Albufeira', alcoutim: 'Alcoutim', algarve: 'The Algarve', aljezur: 'Aljezur', 'castro-marim': 'Castro Marim',
+  faro: 'Faro', lagoa: 'Lagoa', lagos: 'Lagos', lisboa: 'Lisboa', loule: 'Loulé', monchique: 'Monchique', olhao: 'Olhão',
+  portimao: 'Portimão', quarteira: 'Quarteira', 'sao-bras-de-alportel': 'São Brás de Alportel', silves: 'Silves',
+  tavira: 'Tavira', 'vila-do-bispo': 'Vila do Bispo', 'vila-real-de-santo-antonio': 'Vila Real de Santo António',
+};
+export const nameOf = (id) => NAMES[id] || id.split('-').map((w) => w[0].toUpperCase() + w.slice(1)).join(' ');
+export const lisbonDay = (d) => new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Lisbon', year: 'numeric', month: '2-digit', day: '2-digit' }).format(d);
+export let today = lisbonDay(new Date());
+export const setToday = (d) => { today = d; };
+
+// House style: no em dashes in what we print (the gate). A source's em dash is shown as an en dash; the JSON keeps the original.
+export const clean = (s) => String(s ?? '').replace(/—/g, '–').replace(/\s+/g, ' ').trim();
+export const esc = (s) => clean(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+export const escUrl = (u) => String(u ?? '').replace(/&/g, '&amp;').replace(/"/g, '%22').replace(/</g, '%3C').replace(/>/g, '%3E');
+export const okUrl = (u) => typeof u === 'string' && /^https?:\/\//.test(u);
+export const link = (u, text) => (okUrl(u) ? `<a href="${escUrl(u)}">${esc(text)}</a>` : esc(text));
+export const mdText = (s) => clean(s).replace(/([\[\]*_`<>|])/g, '\\$1');
+export const mdLink = (u, text) => (okUrl(u) ? `[${mdText(text)}](${String(u).replace(/ /g, '%20').replace(/\)/g, '%29')})` : mdText(text));
+export const host = (u) => { try { return new URL(u).host.replace(/^www\./, ''); } catch { return ''; } };
+
+export const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+export const DAYS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+export const dayPart = (s) => String(s || '').slice(0, 10);
+export const timePart = (s) => (/T(\d{2}:\d{2})/.exec(String(s || '')) || [])[1] || '';
+export const ymd = (s) => { const [y, m, d] = dayPart(s).split('-').map(Number); return { y, m, d, dow: new Date(Date.UTC(y, m - 1, d)).getUTCDay() }; };
+export const fmtDay = (s, withYear = true) => { const t = ymd(s); return `${DAYS[t.dow]} ${t.d} ${MONTHS[t.m - 1]}${withYear ? ` ${t.y}` : ''}`; };
+export const fmtWhen = (start, end) => {
+  const t = timePart(start);
+  if (!end || dayPart(end) === dayPart(start)) return `${fmtDay(start)}${t ? `, ${t}` : ''}`;
+  return `${fmtDay(start, ymd(start).y !== ymd(end).y)} to ${fmtDay(end)}${t ? ` (from ${t})` : ''}`;
+};
+export const fmtStamp = (iso) => {
+  if (!iso) return 'unknown';
+  const d = new Date(iso); if (isNaN(d)) return esc(iso);
+  return `${d.getUTCDate()} ${MONTHS[d.getUTCMonth()]} ${d.getUTCFullYear()}, ${String(d.getUTCHours()).padStart(2, '0')}:${String(d.getUTCMinutes()).padStart(2, '0')} UTC`;
+};
+export const addDays = (day, n) => { const t = ymd(day); return new Date(Date.UTC(t.y, t.m - 1, t.d + n)).toISOString().slice(0, 10); };
+
+// One shape for both kinds: "read" (details from a source we may read) and "found" (a claim found through Perplexity).
+export const readItemsOf = (f, place) => (f?.events || []).filter((e) => e && e.name && e.startDate).map((e) => ({ kind: 'read', place: e.place || place, e }));
+export const foundItemsOf = (f, place) => (f?.claims || []).filter((c) => c && c.name && c.startDate).map((c) => ({ kind: 'found', place: c.place || place, e: c, discovery: f.discovery }));
+export const endOf = (it) => dayPart(it.e.endDate || it.e.startDate);
+export const startOf = (it) => dayPart(it.e.startDate);
+export const isCurrent = (it) => endOf(it) >= today;
+export function groupByDay(items) {
+  const now = [], days = new Map();
+  for (const it of items.filter(isCurrent)) {
+    if (startOf(it) < today) now.push(it);
+    else { const k = startOf(it); if (!days.has(k)) days.set(k, []); days.get(k).push(it); }
+  }
+  const order = (a, b) => (a.kind === b.kind ? 0 : a.kind === 'read' ? -1 : 1) || (timePart(a.e.startDate) || '99').localeCompare(timePart(b.e.startDate) || '99') || clean(a.e.name).localeCompare(clean(b.e.name), 'pt');
+  now.sort((a, b) => endOf(a).localeCompare(endOf(b)) || order(a, b));
+  const sorted = [...days.keys()].sort().map((k) => [k, days.get(k).sort(order)]);
+  return { now, days: sorted };
+}
+
+// ---------------------------------------------------------------- one event, as HTML and as markdown
+export const PUBLISHER_FALLBACK = (e) => e.license?.holder || host(e.url) || 'the source';
+export function licenceHtml(l) {
+  if (!l) return `<a class="lic" href="${CCBY}">CC BY 4.0</a> (our record)`;
+  const name = l.name === "the source's terms" ? `the source's terms${l.holder ? ` (${l.holder})` : ''}` : `${l.name}${l.holder && l.holder !== 'PrompTugal.news' ? ` (${l.holder})` : ''}`;
+  return link(l.url, name).replace('<a ', '<a class="lic" ');
+}
+export function licenceMd(l) {
+  if (!l) return `${mdLink(CCBY, 'CC BY 4.0')} (our record)`;
+  const name = l.name === "the source's terms" ? `the source's terms${l.holder ? ` (${l.holder})` : ''}` : l.name;
+  return mdLink(l.url, name);
+}
+export function sourceLabel(e) { return clean(String(e.source || '').replace(/^https?:\/\/\S+\s*/, '').replace(/^\(|\)$/g, '')) || host(e.url); }
+export function sourceUrl(e) { return (/^(https?:\/\/\S+)/.exec(String(e.source || '')) || [])[1] || ''; }
+
+export function eventHtml(it, { showPlace = false } = {}) {
+  const e = it.e;
+  const place = nameOf(it.place);
+  if (it.kind === 'read') {
+    const venue = e.location?.name ? esc(e.location.name) : '<span class="none">not given by the source</span>';
+    const org = e.organizer?.name ? esc(e.organizer.name) : `<span class="none">not named by the source; listed by ${esc(PUBLISHER_FALLBACK(e))}</span>`;
+    return `<li class="ev ev-read">
+<h4 class="ev-name">${link(e.url, e.name)}</h4>
+<dl class="ev-facts"><dt>When</dt><dd>${esc(fmtWhen(e.startDate, e.endDate))}</dd>${showPlace ? `<dt>Place</dt><dd><a href="/places/${it.place}/">${esc(place)}</a></dd>` : `<dt>Place</dt><dd>${esc(place)}</dd>`}<dt>Venue</dt><dd>${venue}</dd><dt>Organiser</dt><dd>${org}</dd>
+<dt>Evidence</dt><dd>${link(e.url, `the event's page on ${host(e.url) || 'the source'}`)}${sourceUrl(e) ? `; ${link(sourceUrl(e), sourceLabel(e) || 'the list it was read from')}` : ''}; ${e.stale ? `<b>as read at ${esc(fmtStamp(e.read_at))}</b> (the source has not answered since; kept up to 48 hours)` : `read ${esc(fmtStamp(e.read_at))}`}</dd>
+<dt>Licence</dt><dd>${licenceHtml(e.license)}</dd></dl>
+<p class="report"><a href="/report/">Something wrong? Tell us</a></p>
+</li>`;
+  }
+  const ev = (e.evidence || []).filter((x) => okUrl(x.url));
+  const evHtml = ev.map((x) => `${link(x.url, x.host || host(x.url))} <span class="flag ${x.readable ? 'ok' : 'no'}">${x.readable ? 'we may read it' : 'we do not copy it'}</span>`).join('; ') || '<span class="none">none kept</span>';
+  const df = e.details_from;
+  const confirm = e.status === 'confirmed'
+    ? `<p class="withheld">Confirmed at a source we may read${df ? `: ${(() => { const u = String(typeof df === 'string' ? df : df.url || '').split(' ')[0]; return okUrl(u) ? link(u, host(u)) : esc(String(df)); })()}` : ''}.</p>`
+    : e.status === 'details withheld'
+    ? `<p class="withheld">Details withheld: the source's terms do not let us copy them. <a href="/organisers/">Organisers, send them to us.</a></p>`
+    : `<p class="withheld">${esc(e.status === 'to confirm at a readable source' ? 'To confirm: a source we may read is cited, and its details are not read yet.' : (e.details_note || e.status || ''))} <a href="/organisers/">Organisers, send us the details.</a></p>`;
+  const d = it.discovery;
+  return `<li class="ev ev-found">
+<p class="badge">Found through Perplexity</p>
+<h4 class="ev-name">${esc(e.name)}</h4>
+<dl class="ev-facts"><dt>When</dt><dd>${esc(fmtWhen(e.startDate, e.endDate))}</dd><dt>Place</dt><dd>${showPlace ? `<a href="/places/${it.place}/">${esc(place)}</a>` : esc(place)}</dd>
+<dt>Evidence</dt><dd>${evHtml}</dd>
+<dt>Found</dt><dd>through Perplexity${d ? ` (${esc(d.model || 'sonar')}, via ${esc(d.via || 'OpenRouter')}, asked ${esc(fmtStamp(d.asked_at))})` : ''}, by <a href="${DATA}/">data.promptugal.news</a></dd>
+<dt>Licence</dt><dd>${licenceHtml(e.license)}; each evidence link is under its own source's terms</dd></dl>
+${confirm}
+<p class="report"><a href="/report/">Something wrong? Tell us</a></p>
+</li>`;
+}
+export function eventMd(it) {
+  const e = it.e, place = nameOf(it.place);
+  if (it.kind === 'read') {
+    return [`- **${mdLink(e.url, e.name)}**`, `  - When: ${mdText(fmtWhen(e.startDate, e.endDate))}; place: ${mdText(place)}; venue: ${mdText(e.location?.name || 'not given by the source')}`,
+      `  - Organiser: ${mdText(e.organizer?.name || `not named by the source; listed by ${PUBLISHER_FALLBACK(e)}`)}`,
+      `  - Evidence: ${mdLink(e.url, "the event's page")}${sourceUrl(e) ? `; ${mdLink(sourceUrl(e), sourceLabel(e) || 'the list it was read from')}` : ''}; read ${fmtStamp(e.read_at)}`,
+      `  - Licence: ${licenceMd(e.license)}`].join('\n');
+  }
+  const ev = (e.evidence || []).filter((x) => okUrl(x.url)).map((x) => `${mdLink(x.url, x.host || host(x.url))} (${x.readable ? 'we may read it' : 'we do not copy it'})`).join('; ');
+  return [`- **${mdText(e.name)}** (found through Perplexity)`, `  - When: ${mdText(fmtWhen(e.startDate, e.endDate))}; place: ${mdText(place)}`,
+    `  - Evidence: ${ev || 'none kept'}`, `  - ${e.status === 'confirmed' ? 'Confirmed at a source we may read.' : e.status === 'details withheld' ? "Details withheld: the source's terms do not let us copy them. Organisers, send them to us: " + SITE + '/organisers/' : 'To confirm at a source we may read.'}`,
+    `  - Licence: ${licenceMd(e.license)}; each evidence link under its own source's terms`].join('\n');
+}
+
+export function listHtml(items, opts = {}) {
+  const { now, days } = groupByDay(items);
+  const out = [];
+  if (now.length) out.push(`<section class="day" id="on-now"><h3>On now <span class="n">${now.length}</span></h3><p class="small">Started before today and still running, ending soonest first.</p><ul class="evs">${now.map((it) => eventHtml(it, opts)).join('\n')}</ul></section>`);
+  for (const [day, list] of days) out.push(`<section class="day" id="d-${day}"><h3>${esc(fmtDay(day))}${day === today ? ' (today)' : ''} <span class="n">${list.length}</span></h3><ul class="evs">${list.map((it) => eventHtml(it, opts)).join('\n')}</ul></section>`);
+  return { html: out.join('\n'), count: now.length + days.reduce((n, [, l]) => n + l.length, 0) };
+}
+export function listMd(items) {
+  const { now, days } = groupByDay(items);
+  const out = [];
+  if (now.length) out.push(`### On now\n\n${now.map(eventMd).join('\n')}`);
+  for (const [day, list] of days) out.push(`### ${fmtDay(day)}\n\n${list.map(eventMd).join('\n')}`);
+  return out.join('\n\n');
+}
+

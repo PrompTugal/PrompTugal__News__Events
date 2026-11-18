@@ -1,5 +1,5 @@
 {
   "about": "The public halves of this site's agents' session keys (id <role>-promptugal). Never a private key, a token or a contact detail.",
   "keys": [],
-  "gap": "No key yet. events.b@PrompTugal.dinis (18 Nov 2026, about 14:40 UTC) was refused running 'pki-agent.mjs keygen --session' by this session's permission settings (the auto-mode classifier), as weather.b@ was. Not worked around. The id to publish is events.b-promptugal. Commits carry the Agent: trailer and the environment's commit signature, not an agent key. For Dinis: allow 'node pki-agent.mjs keygen --session' in this environment's permissions, or say how this team should sign."
+  "gap": "No key yet. events.b@PrompTugal.dinis (18 Nov 2026, about 14:40 UTC) was refused running 'pki-agent.mjs keygen --session' by this session's permission settings (the auto-mode classifier), as weather.b@ was. Not worked around. The id to publish is events.b-promptugal. Commits carry the Agent: trailer and the environment's commit signature, not an agent key. For Dinis: allow 'node pki-agent.mjs keygen --session' in this environment's permissions, or say how this team should sign. Dinis said yes (~14:55 UTC, board/guidance/2026-11-18-keys-issues-rebuilds-observability.md); at ~15:10 UTC the classifier refused again, even 'pki-agent.mjs help'. Asked Dinis to confirm in this session."
 }

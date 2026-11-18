@@ -1,0 +1,25 @@
+name: Report a mistake, a concern, or "please take this down"
+description: Something wrong, out of date, unfair or not ours to show. We take it down while we talk where it matters. Everything here is public.
+title: "Report: "
+labels: ["report"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you. **Everything in this issue is public.** If it is about a private detail, do not repeat it here: give only the page's link and the words "please take down". We take it down first and ask afterwards.
+        If you think we should not show your data at all, say so: we take it down while we talk.
+        What happens next: https://events.promptugal.news/report/
+  - type: input
+    id: page
+    attributes: { label: The page (its link) }
+    validations: { required: true }
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What kind of report
+      options: ["A mistake on an event (date, place, venue, organiser, link)", "An event cancelled, moved or never held", "My organisation's data: please take it down", "My organisation's data: show it differently, or read it", "A licence or credit missing or wrong", "Something about a person that should not be here", "Something else"]
+    validations: { required: true }
+  - type: textarea
+    id: what
+    attributes: { label: What is wrong, description: "And, if you can, a public link that shows what is right." }
+    validations: { required: true }

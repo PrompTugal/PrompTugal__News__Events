@@ -1,0 +1,54 @@
+name: Send us your event (organisers)
+description: An organiser sends its own event. We publish it credited to you and dated. Everything here is public.
+title: "Event: "
+labels: ["event submission"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you. We publish an event's details on its organiser's word, credited to you and dated, with a link to your own page for it.
+        Send it from an account that is your organisation's or that your organisation's website names. Details sent by someone else are a lead we check, not published on their word alone.
+        **Everything in this issue is public.** Give your organisation's public channels only, never a private person's phone or address.
+        How we handle it: https://events.promptugal.news/organisers/
+  - type: input
+    id: name
+    attributes: { label: Event name }
+    validations: { required: true }
+  - type: input
+    id: start
+    attributes: { label: Starts, description: "Date, and time if it has one, e.g. 2026-12-05 18:00 (Lisbon time)" }
+    validations: { required: true }
+  - type: input
+    id: end
+    attributes: { label: Ends, description: "Date and time, if different" }
+  - type: input
+    id: town
+    attributes: { label: Town }
+    validations: { required: true }
+  - type: input
+    id: venue
+    attributes: { label: Venue, description: "Name and address" }
+  - type: input
+    id: organiser
+    attributes: { label: Organiser, description: "Your organisation's name and website" }
+    validations: { required: true }
+  - type: input
+    id: url
+    attributes: { label: The event's own page }
+    validations: { required: true }
+  - type: textarea
+    id: description
+    attributes: { label: Short description (optional), description: "Shown as you write it, credited to you." }
+  - type: dropdown
+    id: licence
+    attributes:
+      label: Licence for your text
+      options: ["CC BY 4.0 (reuse with credit; as ours)", "All rights reserved: show it here only", "Other (say which below)"]
+    validations: { required: true }
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Confirmation
+      options:
+        - label: I organise this event, or act for the organisation that does, and these details may be published.
+          required: true

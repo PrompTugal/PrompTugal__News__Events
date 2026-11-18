@@ -6,6 +6,10 @@ on:
   push:
     branches: [dev]
   workflow_dispatch:
+  # Rebuild after data.promptugal.news reads the agendas (at :17 past 00, 06, 12, 18 UTC), so the built pages
+  # follow the data without a push (Dinis, 18 Nov 2026 ~14:55 UTC). Pages also load the data live in the browser.
+  schedule:
+    - cron: '47 0,6,12,18 * * *'
 permissions:
   contents: read
 concurrency:

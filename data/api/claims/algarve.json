@@ -1,0 +1,2959 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values."
+ },
+ "place": "algarve",
+ "read_at": "2026-11-18T14:45:23Z",
+ "about": "Every Algarve place's claims in one file (the places in index.json other than lisboa).",
+ "counts": {
+  "claims": 109,
+  "confirmed": 0,
+  "withheld": 107
+ },
+ "claims": [
+  {
+   "@type": "Event",
+   "name": "Photography Exhibition “Times that Pass … Memories that Remain\" by Vítor de Sousa",
+   "startDate": "2026-11-18",
+   "endDate": "2027-01-30",
+   "place": "albufeira",
+   "municipality": "Albufeira",
+   "evidence": [
+    {
+     "url": "https://www.algarveatlas.com/en/municipalities/albufeira",
+     "host": "algarveatlas.com",
+     "readable": false,
+     "register": "algarveatlas"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarveatlas.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "APS L Longevity Summit 2026",
+   "startDate": "2026-11-18",
+   "endDate": "2026-11-20",
+   "place": "albufeira",
+   "municipality": "Albufeira",
+   "evidence": [
+    {
+     "url": "https://www.algarveatlas.com/en/municipalities/albufeira",
+     "host": "algarveatlas.com",
+     "readable": false,
+     "register": "algarveatlas"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarveatlas.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Saber-Fazer Workshops - Macramé",
+   "startDate": "2026-11-18",
+   "endDate": null,
+   "place": "albufeira",
+   "municipality": "Albufeira",
+   "evidence": [
+    {
+     "url": "https://www.algarveatlas.com/en/municipalities/albufeira",
+     "host": "algarveatlas.com",
+     "readable": false,
+     "register": "algarveatlas"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarveatlas.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Saber-Fazer Workshops - Artistic Drawing",
+   "startDate": "2026-11-18",
+   "endDate": null,
+   "place": "albufeira",
+   "municipality": "Albufeira",
+   "evidence": [
+    {
+     "url": "https://www.algarveatlas.com/en/municipalities/albufeira",
+     "host": "algarveatlas.com",
+     "readable": false,
+     "register": "algarveatlas"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarveatlas.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Presentation of the book The Time Traveller by Ana Alexandra Resende",
+   "startDate": "2026-11-18",
+   "endDate": null,
+   "place": "albufeira",
+   "municipality": "Albufeira",
+   "evidence": [
+    {
+     "url": "https://www.algarveatlas.com/en/municipalities/albufeira",
+     "host": "algarveatlas.com",
+     "readable": false,
+     "register": "algarveatlas"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarveatlas.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Circular Tapestry Workshop",
+   "startDate": "2026-11-18",
+   "endDate": null,
+   "place": "albufeira",
+   "municipality": "Albufeira",
+   "evidence": [
+    {
+     "url": "https://www.algarveatlas.com/en/municipalities/albufeira",
+     "host": "algarveatlas.com",
+     "readable": false,
+     "register": "algarveatlas"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarveatlas.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Feira Franca Annual Fair",
+   "startDate": "2026-11-30",
+   "endDate": null,
+   "place": "albufeira",
+   "municipality": "Albufeira",
+   "evidence": [
+    {
+     "url": "https://albufeira.com/events/regular/",
+     "host": "albufeira.com",
+     "readable": false,
+     "register": null
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (albufeira.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Albufeira Christmas Market",
+   "startDate": "2026-12-05",
+   "endDate": null,
+   "place": "albufeira",
+   "municipality": "Albufeira",
+   "evidence": [
+    {
+     "url": "https://albufeira.com/events/regular/",
+     "host": "albufeira.com",
+     "readable": false,
+     "register": null
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (albufeira.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Santas on Bike Parade",
+   "startDate": "2026-12-15",
+   "endDate": null,
+   "place": "albufeira",
+   "municipality": "Albufeira",
+   "evidence": [
+    {
+     "url": "https://albufeira.com/events/regular/",
+     "host": "albufeira.com",
+     "readable": false,
+     "register": null
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (albufeira.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "A água e o mar para mim",
+   "startDate": "2026-11-05",
+   "endDate": "2026-12-18",
+   "place": "alcoutim",
+   "municipality": "Alcoutim",
+   "evidence": [
+    {
+     "url": "https://activealgarve.pt/events",
+     "host": "activealgarve.pt",
+     "readable": false,
+     "register": null
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (activealgarve.pt) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Uma Mirada por el Jardim de Pepe Gámez",
+   "startDate": "2026-12-13",
+   "endDate": "2026-12-31",
+   "place": "alcoutim",
+   "municipality": "Alcoutim",
+   "evidence": [
+    {
+     "url": "https://algarvecircle.com/whats-on/december-2026",
+     "host": "algarvecircle.com",
+     "readable": false,
+     "register": "algarvecircle"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarvecircle.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "ALUT Algarviana Ultra Trail 2026 (8th edition)",
+   "startDate": "2026-11-26",
+   "endDate": "2026-11-29",
+   "place": "alcoutim",
+   "municipality": "Alcoutim",
+   "evidence": [
+    {
+     "url": "https://algarvecircle.com/events/alut-algarviana-ultra-trail-2026-8th-edition-2026-11-26",
+     "host": "algarvecircle.com",
+     "readable": false,
+     "register": "algarvecircle"
+    },
+    {
+     "url": "https://gotrail.run/en/event/alut-algarviana-ultra-trail",
+     "host": "gotrail.run",
+     "readable": false,
+     "register": null
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarvecircle.com, gotrail.run) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Aljezur Sweet Potato Festival",
+   "startDate": "2026-11-27",
+   "endDate": "2026-11-29",
+   "place": "aljezur",
+   "municipality": "Aljezur",
+   "evidence": [
+    {
+     "url": "https://www.visitportugal.com/en/node/525149",
+     "host": "visitportugal.com",
+     "readable": false,
+     "register": "turismo-portugal"
+    },
+    {
+     "url": "https://eventos.visitalgarve.pt/en/16443/aljezur-sweet-potato-festival",
+     "host": "eventos.visitalgarve.pt",
+     "readable": false,
+     "register": null
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (visitportugal.com, eventos.visitalgarve.pt) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "The Great World Race",
+   "startDate": "2026-11-19",
+   "endDate": "2026-11-19",
+   "place": "castro-marim",
+   "municipality": "Castro Marim",
+   "evidence": [
+    {
+     "url": "https://cm-castromarim.pt/site/eventos",
+     "host": "cm-castromarim.pt",
+     "readable": false,
+     "register": "cm-castromarim"
+    },
+    {
+     "url": "http://cm-castromarim.pt/info/",
+     "host": "cm-castromarim.pt",
+     "readable": false,
+     "register": "cm-castromarim"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (cm-castromarim.pt) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Encontro Transfronteiriço de Mulheres Empreendedoras",
+   "startDate": "2026-11-19",
+   "endDate": "2026-11-19",
+   "place": "castro-marim",
+   "municipality": "Castro Marim",
+   "evidence": [
+    {
+     "url": "https://cm-castromarim.pt/site/eventos",
+     "host": "cm-castromarim.pt",
+     "readable": false,
+     "register": "cm-castromarim"
+    },
+    {
+     "url": "http://cm-castromarim.pt/info/",
+     "host": "cm-castromarim.pt",
+     "readable": false,
+     "register": "cm-castromarim"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (cm-castromarim.pt) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Vila Coração",
+   "startDate": "2026-11-28",
+   "endDate": "2026-12-01",
+   "place": "castro-marim",
+   "municipality": "Castro Marim",
+   "evidence": [
+    {
+     "url": "http://cm-castromarim.pt/info/evento/vila-coracao",
+     "host": "cm-castromarim.pt",
+     "readable": false,
+     "register": "cm-castromarim"
+    },
+    {
+     "url": "https://cm-castromarim.pt/site/eventos",
+     "host": "cm-castromarim.pt",
+     "readable": false,
+     "register": "cm-castromarim"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (cm-castromarim.pt) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Mercado mensal no Azinhal",
+   "startDate": "2026-11-29",
+   "endDate": "2026-11-29",
+   "place": "castro-marim",
+   "municipality": "Castro Marim",
+   "evidence": [
+    {
+     "url": "http://cm-castromarim.pt/info/",
+     "host": "cm-castromarim.pt",
+     "readable": false,
+     "register": "cm-castromarim"
+    },
+    {
+     "url": "https://cm-castromarim.pt/site/eventos",
+     "host": "cm-castromarim.pt",
+     "readable": false,
+     "register": "cm-castromarim"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (cm-castromarim.pt) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Photography Exhibition Almeida d'Eça",
+   "startDate": "2026-11-18",
+   "endDate": "2026-12-31",
+   "place": "faro",
+   "municipality": "Faro",
+   "evidence": [
+    {
+     "url": "https://www.algarveatlas.com/en/municipalities/faro",
+     "host": "algarveatlas.com",
+     "readable": false,
+     "register": "algarveatlas"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarveatlas.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Painting Exhibition by José Passos Silva",
+   "startDate": "2026-11-18",
+   "endDate": "2026-11-30",
+   "place": "faro",
+   "municipality": "Faro",
+   "evidence": [
+    {
+     "url": "https://www.algarveatlas.com/en/municipalities/faro",
+     "host": "algarveatlas.com",
+     "readable": false,
+     "register": "algarveatlas"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarveatlas.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "XIX International Organ Festival of the Algarve 2026",
+   "startDate": "2026-11-21",
+   "endDate": "2026-11-21",
+   "place": "faro",
+   "municipality": "Faro",
+   "evidence": [
+    {
+     "url": "https://www.algarveatlas.com/en/municipalities/faro",
+     "host": "algarveatlas.com",
+     "readable": false,
+     "register": "algarveatlas"
+    },
+    {
+     "url": "https://www.theportugalnews.com/news/2026-10-22/autumn-festivals-and-events-in-the-algarve/1104742",
+     "host": "theportugalnews.com",
+     "readable": false,
+     "register": null
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarveatlas.com, theportugalnews.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "The Whole World Awaits",
+   "startDate": "2026-11-21",
+   "endDate": "2026-11-21",
+   "place": "faro",
+   "municipality": "Faro",
+   "evidence": [
+    {
+     "url": "https://www.algarveatlas.com/en/municipalities/faro",
+     "host": "algarveatlas.com",
+     "readable": false,
+     "register": "algarveatlas"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarveatlas.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Moby Dick",
+   "startDate": "2026-11-27",
+   "endDate": "2026-11-27",
+   "place": "faro",
+   "municipality": "Faro",
+   "evidence": [
+    {
+     "url": "https://www.algarveatlas.com/en/municipalities/faro",
+     "host": "algarveatlas.com",
+     "readable": false,
+     "register": "algarveatlas"
+    },
+    {
+     "url": "https://algarvecircle.com/whats-on/november-2026",
+     "host": "algarvecircle.com",
+     "readable": false,
+     "register": "algarvecircle"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarveatlas.com, algarvecircle.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "XIX International Organ Festival of the Algarve 2026",
+   "startDate": "2026-11-28",
+   "endDate": "2026-11-28",
+   "place": "faro",
+   "municipality": "Faro",
+   "evidence": [
+    {
+     "url": "https://www.algarveatlas.com/en/municipalities/faro",
+     "host": "algarveatlas.com",
+     "readable": false,
+     "register": "algarveatlas"
+    },
+    {
+     "url": "https://www.theportugalnews.com/news/2026-10-22/autumn-festivals-and-events-in-the-algarve/1104742",
+     "host": "theportugalnews.com",
+     "readable": false,
+     "register": null
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarveatlas.com, theportugalnews.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Daniel Kemish in concert",
+   "startDate": "2026-11-28",
+   "endDate": "2026-11-28",
+   "place": "faro",
+   "municipality": "Faro",
+   "evidence": [
+    {
+     "url": "https://algarvecircle.com/whats-on/november-2026",
+     "host": "algarvecircle.com",
+     "readable": false,
+     "register": "algarvecircle"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarvecircle.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Algarve Real Estate Summit 2026",
+   "startDate": "2026-11-20",
+   "endDate": "2026-11-20",
+   "place": "lagoa",
+   "municipality": "Lagoa",
+   "evidence": [
+    {
+     "url": "https://www.theportugalnews.com/news/2026-11-02/the-algarve-deserves-its-own-stage-the-vision-behind-the-algarve-real-estate-summit-2026/1109007",
+     "host": "theportugalnews.com",
+     "readable": false,
+     "register": null
+    },
+    {
+     "url": "https://www.theportugalnews.com/news/2026-10-09/algarve-real-estate-summit-2026-where-the-algarve-meets-the-world/1097777",
+     "host": "theportugalnews.com",
+     "readable": false,
+     "register": null
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (theportugalnews.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Alice in Wonderland",
+   "startDate": "2026-11-19",
+   "endDate": "2026-11-21",
+   "place": "lagoa",
+   "municipality": "Lagoa",
+   "evidence": [
+    {
+     "url": "https://algarvecircle.com/whats-on/november-2026",
+     "host": "algarvecircle.com",
+     "readable": false,
+     "register": "algarvecircle"
+    },
+    {
+     "url": "https://www.algarveaddicts.com/algarve-events-november-2026",
+     "host": "algarveaddicts.com",
+     "readable": false,
+     "register": null
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarvecircle.com, algarveaddicts.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Harp concert with Rebeca Csalog",
+   "startDate": "2026-11-25",
+   "endDate": "2026-11-25",
+   "place": "lagoa",
+   "municipality": "Lagoa",
+   "evidence": [
+    {
+     "url": "https://algarvecircle.com/whats-on/november-2026",
+     "host": "algarvecircle.com",
+     "readable": false,
+     "register": "algarvecircle"
+    },
+    {
+     "url": "https://dailynata.com/whats-on",
+     "host": "dailynata.com",
+     "readable": false,
+     "register": null
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarvecircle.com, dailynata.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Deliver Us from Hunger!",
+   "startDate": "2026-11-28",
+   "endDate": "2026-11-28",
+   "place": "lagoa",
+   "municipality": "Lagoa",
+   "evidence": [
+    {
+     "url": "https://algarvecircle.com/whats-on/november-2026",
+     "host": "algarvecircle.com",
+     "readable": false,
+     "register": "algarvecircle"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarvecircle.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "VI Charity Christmas Choir Concert - Artenata",
+   "startDate": "2026-12-05",
+   "endDate": "2026-12-05",
+   "place": "lagoa",
+   "municipality": "Lagoa",
+   "evidence": [
+    {
+     "url": "https://www.algarveatlas.com/en/municipalities/lagoa",
+     "host": "algarveatlas.com",
+     "readable": false,
+     "register": "algarveatlas"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarveatlas.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "26th Lagoa Christmas Concert",
+   "startDate": "2026-12-06",
+   "endDate": "2026-12-06",
+   "place": "lagoa",
+   "municipality": "Lagoa",
+   "evidence": [
+    {
+     "url": "https://blog.algarve-ferias.com/en/events/",
+     "host": "blog.algarve-ferias.com",
+     "readable": false,
+     "register": null
+    },
+    {
+     "url": "https://www.algarveatlas.com/en/municipalities/lagoa",
+     "host": "algarveatlas.com",
+     "readable": false,
+     "register": "algarveatlas"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (blog.algarve-ferias.com, algarveatlas.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Lagoa Christmas Concert",
+   "startDate": "2026-12-08",
+   "endDate": "2026-12-08",
+   "place": "lagoa",
+   "municipality": "Lagoa",
+   "evidence": [
+    {
+     "url": "https://www.algarveatlas.com/en/municipalities/lagoa",
+     "host": "algarveatlas.com",
+     "readable": false,
+     "register": "algarveatlas"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarveatlas.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Estátuas Vivas no Natal",
+   "startDate": "2026-12-11",
+   "endDate": "2026-12-12",
+   "place": "lagoa",
+   "municipality": "Lagoa",
+   "evidence": [
+    {
+     "url": "https://www.theportugalnews.com/news/2026-10-22/autumn-festivals-and-events-in-the-algarve/1104742",
+     "host": "theportugalnews.com",
+     "readable": false,
+     "register": null
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (theportugalnews.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Feira Franca de Lagos 2026",
+   "startDate": "2026-11-20",
+   "endDate": "2026-11-22",
+   "place": "lagos",
+   "municipality": "Lagos",
+   "evidence": [
+    {
+     "url": "https://algarvecircle.com/events",
+     "host": "algarvecircle.com",
+     "readable": false,
+     "register": "algarvecircle"
+    },
+    {
+     "url": "https://www.cm-lagos.pt/municipio/eventos?filter_34[1]=2026-11-17&start=20",
+     "host": "cm-lagos.pt",
+     "readable": true,
+     "register": "events-pt"
+    }
+   ],
+   "status": "to confirm at a readable source",
+   "details_from": null,
+   "details_note": "A readable source is cited; its details are not yet read.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Lagos Baía de Natal",
+   "startDate": "2026-11-28",
+   "endDate": "2027-01-05",
+   "place": "lagos",
+   "municipality": "Lagos",
+   "evidence": [
+    {
+     "url": "https://algarvecircle.com/whats-on/december-2026",
+     "host": "algarvecircle.com",
+     "readable": false,
+     "register": "algarvecircle"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarvecircle.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Mercadinho do Lagos Baía de Natal",
+   "startDate": "2026-11-28",
+   "endDate": "2027-01-05",
+   "place": "lagos",
+   "municipality": "Lagos",
+   "evidence": [
+    {
+     "url": "https://algarvecircle.com/whats-on/december-2026",
+     "host": "algarvecircle.com",
+     "readable": false,
+     "register": "algarvecircle"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarvecircle.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "International Algarve Organ Festival 2026",
+   "startDate": "2026-11-18",
+   "endDate": "2026-11-29",
+   "place": "lagos",
+   "municipality": "Lagos",
+   "evidence": [
+    {
+     "url": "https://www.cm-lagos.pt/municipio/eventos?filter_34[1]=2026-11-17&start=20",
+     "host": "cm-lagos.pt",
+     "readable": true,
+     "register": "events-pt"
+    },
+    {
+     "url": "https://www.theportugalnews.com/news/2026-10-22/autumn-festivals-and-events-in-the-algarve/1104742",
+     "host": "theportugalnews.com",
+     "readable": false,
+     "register": null
+    }
+   ],
+   "status": "to confirm at a readable source",
+   "details_from": null,
+   "details_note": "A readable source is cited; its details are not yet read.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Organ concert of the Algarve International Organ Festival 2026",
+   "startDate": "2026-11-18",
+   "endDate": "2026-11-18",
+   "place": "lagos",
+   "municipality": "Lagos",
+   "evidence": [
+    {
+     "url": "https://algarvecircle.com/events",
+     "host": "algarvecircle.com",
+     "readable": false,
+     "register": "algarvecircle"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarvecircle.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Reunião de Câmara",
+   "startDate": "2026-11-18",
+   "endDate": "2026-11-18",
+   "place": "loule",
+   "municipality": "Loulé",
+   "evidence": [
+    {
+     "url": "https://www.cm-loule.pt/pt/agenda.aspx",
+     "host": "cm-loule.pt",
+     "readable": false,
+     "register": "cm-loule"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (cm-loule.pt) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Crescendo Cycle Concert",
+   "startDate": "2026-11-21",
+   "endDate": "2026-11-21",
+   "place": "loule",
+   "municipality": "Loulé",
+   "evidence": [
+    {
+     "url": "https://conservatoriodeloule.pt/en/events/crescendo-cycle-concert-november-2026/",
+     "host": "conservatoriodeloule.pt",
+     "readable": false,
+     "register": null
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (conservatoriodeloule.pt) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "St. Cecilia's Concert",
+   "startDate": "2026-11-23",
+   "endDate": "2026-11-23",
+   "place": "loule",
+   "municipality": "Loulé",
+   "evidence": [
+    {
+     "url": "https://conservatoriodeloule.pt/en/events/crescendo-cycle-concert-november-2026/",
+     "host": "conservatoriodeloule.pt",
+     "readable": false,
+     "register": null
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (conservatoriodeloule.pt) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Loulé Saturday Gypsy Market",
+   "startDate": "2026-11-28",
+   "endDate": "2026-11-28",
+   "place": "loule",
+   "municipality": "Loulé",
+   "evidence": [
+    {
+     "url": "https://algarvecircle.com/events/loule-gypsy-market-2026-11-28",
+     "host": "algarvecircle.com",
+     "readable": false,
+     "register": "algarvecircle"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarvecircle.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Contrapeso Festival #6: Vincent Peirani",
+   "startDate": "2026-11-28",
+   "endDate": "2026-11-28",
+   "place": "loule",
+   "municipality": "Loulé",
+   "evidence": [
+    {
+     "url": "https://algarvecircle.com/events/contrapeso-festival-6-vincent-peirani-2026-11-28",
+     "host": "algarvecircle.com",
+     "readable": false,
+     "register": "algarvecircle"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarvecircle.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Palm, Esparto and Cane",
+   "startDate": "2026-09-25",
+   "endDate": "2026-11-21",
+   "place": "loule",
+   "municipality": "Loulé",
+   "evidence": [
+    {
+     "url": "https://activealgarve.pt/event/exhibition-palm-esparto-and-cane-2026-09",
+     "host": "activealgarve.pt",
+     "readable": false,
+     "register": null
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (activealgarve.pt) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Som Riscado Festival",
+   "startDate": "2026-11-01",
+   "endDate": "2026-11-30",
+   "place": "loule",
+   "municipality": "Loulé",
+   "evidence": [
+    {
+     "url": "https://algarvecircle.com/events",
+     "host": "algarvecircle.com",
+     "readable": false,
+     "register": "algarvecircle"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarvecircle.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Loulé Flea Market",
+   "startDate": "2026-11-18",
+   "endDate": "2026-12-20",
+   "place": "loule",
+   "municipality": "Loulé",
+   "evidence": [
+    {
+     "url": "https://www.algarveatlas.com/en/municipalities/loule",
+     "host": "algarveatlas.com",
+     "readable": false,
+     "register": "algarveatlas"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarveatlas.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Misty Fest: Raül Refree & Maria Mazzotta",
+   "startDate": "2026-11-18",
+   "endDate": "2026-11-18",
+   "place": "loule",
+   "municipality": "Loulé",
+   "evidence": [
+    {
+     "url": "https://quintaproperty.com/whats-on-in-the-algarve-september-october-november-2026/",
+     "host": "quintaproperty.com",
+     "readable": false,
+     "register": null
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (quintaproperty.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Wine and Cheese Experience",
+   "startDate": "2026-11-18",
+   "endDate": "2026-11-18",
+   "place": "loule",
+   "municipality": "Loulé",
+   "evidence": [
+    {
+     "url": "https://happeningnext.com/event/wine-and-cheese-experience-eid3a0eavoi6e",
+     "host": "happeningnext.com",
+     "readable": false,
+     "register": null
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (happeningnext.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Feira da Serra de Natal",
+   "startDate": "2026-12-05",
+   "endDate": "2026-12-06",
+   "place": "loule",
+   "municipality": "Loulé",
+   "evidence": [
+    {
+     "url": "https://activealgarve.pt/events",
+     "host": "activealgarve.pt",
+     "readable": false,
+     "register": null
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (activealgarve.pt) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Hridaya Silent Meditation Retreat November 2026",
+   "startDate": "2026-11-18",
+   "endDate": "2026-11-20",
+   "place": "monchique",
+   "municipality": "Monchique",
+   "evidence": [
+    {
+     "url": "https://ecstatic.events/popular/portugal/november-2026",
+     "host": "ecstatic.events",
+     "readable": false,
+     "register": null
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (ecstatic.events) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Monchique Walking Festival",
+   "startDate": "2026-11-27",
+   "endDate": "2026-11-29",
+   "place": "monchique",
+   "municipality": "Monchique",
+   "evidence": [
+    {
+     "url": "https://algarvecircle.com/events/6th-monchique-walking-festival-2026-11-27",
+     "host": "algarvecircle.com",
+     "readable": false,
+     "register": "algarvecircle"
+    },
+    {
+     "url": "https://www.visitportugal.com/en/node/515845",
+     "host": "visitportugal.com",
+     "readable": false,
+     "register": "turismo-portugal"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarvecircle.com, visitportugal.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Algarve Harp Festival concert in Monchique",
+   "startDate": "2026-11-28",
+   "endDate": "2026-11-28",
+   "place": "monchique",
+   "municipality": "Monchique",
+   "evidence": [
+    {
+     "url": "https://www.sulinformacao.pt/2026/10/festival-de-harpa-vai-espalhar-musica-por-lagoa-albufeira-e-monchique/",
+     "host": "sulinformacao.pt",
+     "readable": false,
+     "register": null
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (sulinformacao.pt) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Visual Arts Exhibition | Rita Tavares",
+   "startDate": "2026-11-18",
+   "endDate": "2026-12-11",
+   "place": "olhao",
+   "municipality": "Olhão",
+   "evidence": [
+    {
+     "url": "https://www.algarveatlas.com/en/events/exposicao-de-artes-visuais-rita-tavares-7849",
+     "host": "algarveatlas.com",
+     "readable": false,
+     "register": "algarveatlas"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarveatlas.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Bienal da Participação Cívica e Cultura",
+   "startDate": "2026-11-19",
+   "endDate": "2026-11-22",
+   "place": "olhao",
+   "municipality": "Olhão",
+   "evidence": [
+    {
+     "url": "https://www.sulinformacao.pt/2026/10/participacao-civica-na-area-cultural-inspira-nova-bienal-em-olhao/",
+     "host": "sulinformacao.pt",
+     "readable": false,
+     "register": null
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (sulinformacao.pt) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Mostra-te: Hip Hop Fusion",
+   "startDate": "2026-11-21",
+   "endDate": null,
+   "place": "olhao",
+   "municipality": "Olhão",
+   "evidence": [
+    {
+     "url": "https://algarvecircle.com/events",
+     "host": "algarvecircle.com",
+     "readable": false,
+     "register": "algarvecircle"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarvecircle.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Olhão Saturday Riverside Market",
+   "startDate": "2026-11-21",
+   "endDate": null,
+   "place": "olhao",
+   "municipality": "Olhão",
+   "evidence": [
+    {
+     "url": "https://algarvecircle.com/events",
+     "host": "algarvecircle.com",
+     "readable": false,
+     "register": "algarvecircle"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarvecircle.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Reinis Jaunais: a solo musical journey",
+   "startDate": "2026-11-21",
+   "endDate": null,
+   "place": "olhao",
+   "municipality": "Olhão",
+   "evidence": [
+    {
+     "url": "https://algarvecircle.com/events",
+     "host": "algarvecircle.com",
+     "readable": false,
+     "register": "algarvecircle"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarvecircle.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "“Love is Like This”",
+   "startDate": "2026-11-27",
+   "endDate": "2026-11-28",
+   "place": "olhao",
+   "municipality": "Olhão",
+   "evidence": [
+    {
+     "url": "https://www.visitolhao.pt/agenda",
+     "host": "visitolhao.pt",
+     "readable": false,
+     "register": null
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (visitolhao.pt) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Fado on Sundays - César Matoso",
+   "startDate": "2026-11-29",
+   "endDate": null,
+   "place": "olhao",
+   "municipality": "Olhão",
+   "evidence": [
+    {
+     "url": "https://www.algarveatlas.com/en/municipalities/olhao",
+     "host": "algarveatlas.com",
+     "readable": false,
+     "register": "algarveatlas"
+    },
+    {
+     "url": "https://dailynata.com/whats-on",
+     "host": "dailynata.com",
+     "readable": false,
+     "register": null
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarveatlas.com, dailynata.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Exhibition by the Cultural Sports Association",
+   "startDate": "2026-11-18",
+   "endDate": "2026-11-30",
+   "place": "olhao",
+   "municipality": "Olhão",
+   "evidence": [
+    {
+     "url": "https://www.algarveatlas.com/en/municipalities/olhao",
+     "host": "algarveatlas.com",
+     "readable": false,
+     "register": "algarveatlas"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarveatlas.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Looking through the past",
+   "startDate": "2026-11-18",
+   "endDate": "2026-12-12",
+   "place": "olhao",
+   "municipality": "Olhão",
+   "evidence": [
+    {
+     "url": "https://www.algarveatlas.com/en/events/looking-through-the-past-7475",
+     "host": "algarveatlas.com",
+     "readable": false,
+     "register": "algarveatlas"
+    },
+    {
+     "url": "https://www.algarveatlas.com/eventos/looking-through-the-past-7475",
+     "host": "algarveatlas.com",
+     "readable": false,
+     "register": "algarveatlas"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarveatlas.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Choque Frontal ao Vivo 2026",
+   "startDate": "2026-11-19",
+   "endDate": "2026-11-19",
+   "place": "portimao",
+   "municipality": "Portimão",
+   "evidence": [
+    {
+     "url": "https://algarveholidaytips.com/events/choque-frontal-ao-vivo-2026-portimao-tempo/",
+     "host": "algarveholidaytips.com",
+     "readable": false,
+     "register": null
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarveholidaytips.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "November Workshops at the Educational Farm of Portimão",
+   "startDate": "2026-11-28",
+   "endDate": "2026-11-28",
+   "place": "portimao",
+   "municipality": "Portimão",
+   "evidence": [
+    {
+     "url": "https://www.algarveatlas.com/en/events/atelies-de-novembro-na-quinta-pedagogica-de-portimao-7805",
+     "host": "algarveatlas.com",
+     "readable": false,
+     "register": "algarveatlas"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarveatlas.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "European Rapid, Blitz, and Fischer Random Chess Championships 2026",
+   "startDate": "2026-12-04",
+   "endDate": "2026-12-09",
+   "place": "portimao",
+   "municipality": "Portimão",
+   "evidence": [
+    {
+     "url": "https://www.europechess.org/wp-content/uploads/2026/09/Regulations_ERBCC2026.pdf",
+     "host": "europechess.org",
+     "readable": false,
+     "register": null
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (europechess.org) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Fairy Gala of Portimão",
+   "startDate": "2026-12-05",
+   "endDate": "2026-12-05",
+   "place": "portimao",
+   "municipality": "Portimão",
+   "evidence": [
+    {
+     "url": "https://ground.news/article/fairy-gala-of-portimao-honors-helder-marques-and-receives-teresa-tapadas",
+     "host": "ground.news",
+     "readable": false,
+     "register": null
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (ground.news) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Quarteira Wednesday Market",
+   "startDate": "2026-11-18",
+   "endDate": "2026-11-18",
+   "place": "quarteira",
+   "municipality": "Quarteira",
+   "evidence": [
+    {
+     "url": "https://algarvecircle.com/whats-on/november-2026",
+     "host": "algarvecircle.com",
+     "readable": false,
+     "register": "algarvecircle"
+    },
+    {
+     "url": "https://algarvecircle.com/events",
+     "host": "algarvecircle.com",
+     "readable": false,
+     "register": "algarvecircle"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarvecircle.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Baile Social",
+   "startDate": "2026-11-28",
+   "endDate": "2026-11-28",
+   "place": "quarteira",
+   "municipality": "Quarteira",
+   "evidence": [
+    {
+     "url": "https://jf-quarteira.pt/agenda",
+     "host": "jf-quarteira.pt",
+     "readable": false,
+     "register": null
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (jf-quarteira.pt) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Noite Afrolatina no Illuminati",
+   "startDate": "2026-11-21",
+   "endDate": "2026-11-21",
+   "place": "quarteira",
+   "municipality": "Quarteira",
+   "evidence": [
+    {
+     "url": "https://bailaspot.com/portugal/quarteira",
+     "host": "bailaspot.com",
+     "readable": false,
+     "register": null
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (bailaspot.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Noite Afrolatina no Illuminati",
+   "startDate": "2026-11-28",
+   "endDate": "2026-11-28",
+   "place": "quarteira",
+   "municipality": "Quarteira",
+   "evidence": [
+    {
+     "url": "https://bailaspot.com/portugal/quarteira",
+     "host": "bailaspot.com",
+     "readable": false,
+     "register": null
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (bailaspot.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Noite Afrolatina no Illuminati",
+   "startDate": "2026-12-05",
+   "endDate": "2026-12-05",
+   "place": "quarteira",
+   "municipality": "Quarteira",
+   "evidence": [
+    {
+     "url": "https://bailaspot.com/portugal/quarteira",
+     "host": "bailaspot.com",
+     "readable": false,
+     "register": null
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (bailaspot.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Maratona do Algarve",
+   "startDate": "2026-12-06",
+   "endDate": "2026-12-06",
+   "place": "quarteira",
+   "municipality": "Quarteira",
+   "evidence": [
+    {
+     "url": "https://worldsmarathons.com/fr/marathon/maratona-do-algarve",
+     "host": "worldsmarathons.com",
+     "readable": false,
+     "register": null
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (worldsmarathons.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Noite Afrolatina no Illuminati",
+   "startDate": "2026-12-12",
+   "endDate": "2026-12-12",
+   "place": "quarteira",
+   "municipality": "Quarteira",
+   "evidence": [
+    {
+     "url": "https://bailaspot.com/portugal/quarteira",
+     "host": "bailaspot.com",
+     "readable": false,
+     "register": null
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (bailaspot.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Noite Afrolatina no Illuminati",
+   "startDate": "2026-12-19",
+   "endDate": "2026-12-19",
+   "place": "quarteira",
+   "municipality": "Quarteira",
+   "evidence": [
+    {
+     "url": "https://bailaspot.com/portugal/quarteira",
+     "host": "bailaspot.com",
+     "readable": false,
+     "register": null
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (bailaspot.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "New Years Eve Quarteira 2026/2027 Programme",
+   "startDate": "2026-12-29",
+   "endDate": "2026-12-31",
+   "place": "quarteira",
+   "municipality": "Quarteira",
+   "evidence": [
+    {
+     "url": "https://activealgarve.pt/event/new-years-eve-20262027-2026-12",
+     "host": "activealgarve.pt",
+     "readable": false,
+     "register": null
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (activealgarve.pt) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Saturdays at the Market",
+   "startDate": "2026-11-18",
+   "endDate": null,
+   "place": "sao-bras-de-alportel",
+   "municipality": "São Brás de Alportel",
+   "evidence": [
+    {
+     "url": "https://eventos.visitalgarve.pt/en/events",
+     "host": "eventos.visitalgarve.pt",
+     "readable": false,
+     "register": null
+    },
+    {
+     "url": "https://algarvecircle.com/councils/sao-bras-de-alportel",
+     "host": "algarvecircle.com",
+     "readable": false,
+     "register": "algarvecircle"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (eventos.visitalgarve.pt, algarvecircle.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Seminar Series on Rural Spaces",
+   "startDate": "2026-11-21",
+   "endDate": "2026-11-28",
+   "place": "sao-bras-de-alportel",
+   "municipality": "São Brás de Alportel",
+   "evidence": [
+    {
+     "url": "https://www.sustainableliving.pt/events/seminar-series-on-rural-spaces-dbc2c9b4",
+     "host": "sustainableliving.pt",
+     "readable": false,
+     "register": null
+    },
+    {
+     "url": "https://www.sustainableliving.pt/events",
+     "host": "sustainableliving.pt",
+     "readable": false,
+     "register": null
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (sustainableliving.pt) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Youth Accordion Festival of São Brás de Alportel",
+   "startDate": "2026-11-22",
+   "endDate": null,
+   "place": "sao-bras-de-alportel",
+   "municipality": "São Brás de Alportel",
+   "evidence": [
+    {
+     "url": "https://www.portugal-news.today/en/article/374719",
+     "host": "portugal-news.today",
+     "readable": false,
+     "register": null
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (portugal-news.today) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Photography Exhibition Wabi Sabi",
+   "startDate": "2026-11-15",
+   "endDate": "2026-11-26",
+   "place": "sao-bras-de-alportel",
+   "municipality": "São Brás de Alportel",
+   "evidence": [
+    {
+     "url": "https://algarvecircle.com/whats-on/november-2026",
+     "host": "algarvecircle.com",
+     "readable": false,
+     "register": "algarvecircle"
+    },
+    {
+     "url": "https://algarvecircle.com/events",
+     "host": "algarvecircle.com",
+     "readable": false,
+     "register": "algarvecircle"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarvecircle.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Concert Os Amadores",
+   "startDate": "2026-11-20",
+   "endDate": null,
+   "place": "sao-bras-de-alportel",
+   "municipality": "São Brás de Alportel",
+   "evidence": [
+    {
+     "url": "https://www.algarveatlas.com/en/municipalities/sao-bras-de-alportel",
+     "host": "algarveatlas.com",
+     "readable": false,
+     "register": "algarveatlas"
+    },
+    {
+     "url": "https://algarvecircle.com/events",
+     "host": "algarvecircle.com",
+     "readable": false,
+     "register": "algarvecircle"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarveatlas.com, algarvecircle.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Youth Awards 2026",
+   "startDate": "2026-11-28",
+   "endDate": null,
+   "place": "sao-bras-de-alportel",
+   "municipality": "São Brás de Alportel",
+   "evidence": [
+    {
+     "url": "https://www.algarveatlas.com/en/municipalities/sao-bras-de-alportel",
+     "host": "algarveatlas.com",
+     "readable": false,
+     "register": "algarveatlas"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarveatlas.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Fado Night",
+   "startDate": "2026-11-29",
+   "endDate": null,
+   "place": "sao-bras-de-alportel",
+   "municipality": "São Brás de Alportel",
+   "evidence": [
+    {
+     "url": "https://www.algarveatlas.com/en/municipalities/sao-bras-de-alportel",
+     "host": "algarveatlas.com",
+     "readable": false,
+     "register": "algarveatlas"
+    },
+    {
+     "url": "https://algarvecircle.com/towns/sao-bras-de-alportel",
+     "host": "algarvecircle.com",
+     "readable": false,
+     "register": "algarvecircle"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarveatlas.com, algarvecircle.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Saturdays at the Market",
+   "startDate": "2026-11-21",
+   "endDate": null,
+   "place": "sao-bras-de-alportel",
+   "municipality": "São Brás de Alportel",
+   "evidence": [
+    {
+     "url": "https://www.algarveatlas.com/en/municipalities/sao-bras-de-alportel",
+     "host": "algarveatlas.com",
+     "readable": false,
+     "register": "algarveatlas"
+    },
+    {
+     "url": "https://algarvecircle.com/councils/sao-bras-de-alportel",
+     "host": "algarvecircle.com",
+     "readable": false,
+     "register": "algarvecircle"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarveatlas.com, algarvecircle.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Swap Fair",
+   "startDate": "2026-12-20",
+   "endDate": null,
+   "place": "sao-bras-de-alportel",
+   "municipality": "São Brás de Alportel",
+   "evidence": [
+    {
+     "url": "https://eventos.visitalgarve.pt/en/events",
+     "host": "eventos.visitalgarve.pt",
+     "readable": false,
+     "register": null
+    },
+    {
+     "url": "https://algarvecircle.com/towns/sao-bras-de-alportel",
+     "host": "algarvecircle.com",
+     "readable": false,
+     "register": "algarvecircle"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (eventos.visitalgarve.pt, algarvecircle.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Markets of Silves",
+   "startDate": "2026-11-18",
+   "endDate": "2026-12-28",
+   "place": "silves",
+   "municipality": "Silves",
+   "evidence": [
+    {
+     "url": "https://www.algarveatlas.com/en/municipalities/silves",
+     "host": "algarveatlas.com",
+     "readable": false,
+     "register": "algarveatlas"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarveatlas.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Antique Fair",
+   "startDate": "2026-11-18",
+   "endDate": "2026-12-26",
+   "place": "silves",
+   "municipality": "Silves",
+   "evidence": [
+    {
+     "url": "https://www.algarveatlas.com/en/municipalities/silves",
+     "host": "algarveatlas.com",
+     "readable": false,
+     "register": "algarveatlas"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarveatlas.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "A participação cívica em Portugal: desafios e oportunidades na área cultural",
+   "startDate": "2026-11-27",
+   "endDate": null,
+   "place": "silves",
+   "municipality": "Silves",
+   "evidence": [
+    {
+     "url": "https://www.sustainableliving.pt/pulse/2026-11-18",
+     "host": "sustainableliving.pt",
+     "readable": false,
+     "register": null
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (sustainableliving.pt) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Jazz nas Adegas: Low Tech Groove",
+   "startDate": "2026-11-27",
+   "endDate": null,
+   "place": "silves",
+   "municipality": "Silves",
+   "evidence": [
+    {
+     "url": "https://ma.to/event/jazz-nas-adegas-low-tech-groove-27-nov-2026",
+     "host": "ma.to",
+     "readable": false,
+     "register": null
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (ma.to) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Visual Arts Exhibition by Rita Tavares",
+   "startDate": "2026-11-18",
+   "endDate": "2026-12-11",
+   "place": "tavira",
+   "municipality": "Tavira",
+   "evidence": [
+    {
+     "url": "https://www.taviratimes.com/events",
+     "host": "taviratimes.com",
+     "readable": false,
+     "register": null
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (taviratimes.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "The Images that Look at Us – Fernando Lemos",
+   "startDate": "2026-11-18",
+   "endDate": "2027-04-03",
+   "place": "tavira",
+   "municipality": "Tavira",
+   "evidence": [
+    {
+     "url": "https://www.algarveatlas.com/en/municipalities/tavira",
+     "host": "algarveatlas.com",
+     "readable": false,
+     "register": "algarveatlas"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarveatlas.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Rituais a Sul",
+   "startDate": "2026-11-21",
+   "endDate": "2026-11-22",
+   "place": "tavira",
+   "municipality": "Tavira",
+   "evidence": [
+    {
+     "url": "https://www.taviratimes.com/events",
+     "host": "taviratimes.com",
+     "readable": false,
+     "register": null
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (taviratimes.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "The Impact of Food Systems on Climate Action - The Role of Local Power",
+   "startDate": "2026-11-26",
+   "endDate": null,
+   "place": "tavira",
+   "municipality": "Tavira",
+   "evidence": [
+    {
+     "url": "https://www.taviratimes.com/news/tavira-initiates-discussion-on-the-impact-of-food-systems-on-climate-action",
+     "host": "taviratimes.com",
+     "readable": false,
+     "register": null
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (taviratimes.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "O Amor é Assim",
+   "startDate": "2026-11-27",
+   "endDate": "2026-11-28",
+   "place": "tavira",
+   "municipality": "Tavira",
+   "evidence": [
+    {
+     "url": "https://www.taviratimes.com/events",
+     "host": "taviratimes.com",
+     "readable": false,
+     "register": null
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (taviratimes.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Maiúscula",
+   "startDate": "2026-11-21",
+   "endDate": null,
+   "place": "tavira",
+   "municipality": "Tavira",
+   "evidence": [
+    {
+     "url": "https://algarvecircle.com/events",
+     "host": "algarvecircle.com",
+     "readable": false,
+     "register": "algarvecircle"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarvecircle.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "East Algarve Golf Festival 2026",
+   "startDate": "2026-11-28",
+   "endDate": "2026-12-05",
+   "place": "tavira",
+   "municipality": "Tavira",
+   "evidence": [
+    {
+     "url": "https://algarvecircle.com/events/east-algarve-golf-festival-2026-2026-11-28",
+     "host": "algarvecircle.com",
+     "readable": false,
+     "register": "algarvecircle"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarvecircle.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Grande Entre os Assassinos",
+   "startDate": "2026-12-01",
+   "endDate": null,
+   "place": "tavira",
+   "municipality": "Tavira",
+   "evidence": [
+    {
+     "url": "https://algarvecircle.com/whats-on/december-2026",
+     "host": "algarvecircle.com",
+     "readable": false,
+     "register": "algarvecircle"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarvecircle.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Christmas Lights & Markets  -  Tavira",
+   "startDate": "2026-12-06",
+   "endDate": "2027-01-06",
+   "place": "tavira",
+   "municipality": "Tavira",
+   "evidence": [
+    {
+     "url": "https://www.taviratimes.com/events/christmas-lights-markets-tavira-december-2026",
+     "host": "taviratimes.com",
+     "readable": false,
+     "register": null
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (taviratimes.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Gospel Collective",
+   "startDate": "2026-12-05",
+   "endDate": null,
+   "place": "tavira",
+   "municipality": "Tavira",
+   "evidence": [
+    {
+     "url": "https://algarvecircle.com/whats-on/december-2026",
+     "host": "algarvecircle.com",
+     "readable": false,
+     "register": "algarvecircle"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarvecircle.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Movimento e Magia: Tavira's Christmas in Dance 2026",
+   "startDate": "2026-12-06",
+   "endDate": "2026-12-08",
+   "place": "tavira",
+   "municipality": "Tavira",
+   "evidence": [
+    {
+     "url": "https://algarvecircle.com/events/movimento-e-magia-tavira-s-christmas-in-dance-2026-12-06",
+     "host": "algarvecircle.com",
+     "readable": false,
+     "register": "algarvecircle"
+    },
+    {
+     "url": "https://algarvecircle.com/whats-on/december-2026",
+     "host": "algarvecircle.com",
+     "readable": false,
+     "register": "algarvecircle"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarvecircle.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Swan Lake",
+   "startDate": "2026-12-12",
+   "endDate": null,
+   "place": "tavira",
+   "municipality": "Tavira",
+   "evidence": [
+    {
+     "url": "https://algarvecircle.com/whats-on/december-2026",
+     "host": "algarvecircle.com",
+     "readable": false,
+     "register": "algarvecircle"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarvecircle.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Christmas concert",
+   "startDate": "2026-12-13",
+   "endDate": null,
+   "place": "tavira",
+   "municipality": "Tavira",
+   "evidence": [
+    {
+     "url": "https://algarvecircle.com/whats-on/december-2026",
+     "host": "algarvecircle.com",
+     "readable": false,
+     "register": "algarvecircle"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarvecircle.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Orquestra do Algarve Christmas concert",
+   "startDate": "2026-12-19",
+   "endDate": null,
+   "place": "tavira",
+   "municipality": "Tavira",
+   "evidence": [
+    {
+     "url": "https://algarvecircle.com/whats-on/december-2026",
+     "host": "algarvecircle.com",
+     "readable": false,
+     "register": "algarvecircle"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarvecircle.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Travelling Exhibition - Principles of the Charter of Educating Cities",
+   "startDate": "2026-11-02",
+   "endDate": "2026-12-04",
+   "place": "vila-do-bispo",
+   "municipality": "Vila do Bispo",
+   "evidence": [
+    {
+     "url": "https://www.algarveatlas.com/en/events/exposicao-itinerante-principios-da-carta-das-cidades-educado-7722",
+     "host": "algarveatlas.com",
+     "readable": false,
+     "register": "algarveatlas"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarveatlas.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "The Eternal Boy",
+   "startDate": "2026-11-20",
+   "endDate": null,
+   "place": "vila-do-bispo",
+   "municipality": "Vila do Bispo",
+   "evidence": [
+    {
+     "url": "https://www.algarveatlas.com/en/events/exposicao-itinerante-principios-da-carta-das-cidades-educado-7722",
+     "host": "algarveatlas.com",
+     "readable": false,
+     "register": "algarveatlas"
+    },
+    {
+     "url": "https://algarvecircle.com/whats-on/november-2026",
+     "host": "algarvecircle.com",
+     "readable": false,
+     "register": "algarvecircle"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarveatlas.com, algarvecircle.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "The Eternal Boy",
+   "startDate": "2026-11-21",
+   "endDate": null,
+   "place": "vila-do-bispo",
+   "municipality": "Vila do Bispo",
+   "evidence": [
+    {
+     "url": "https://www.algarveatlas.com/en/events/exposicao-itinerante-principios-da-carta-das-cidades-educado-7722",
+     "host": "algarveatlas.com",
+     "readable": false,
+     "register": "algarveatlas"
+    },
+    {
+     "url": "https://algarvecircle.com/whats-on/november-2026",
+     "host": "algarvecircle.com",
+     "readable": false,
+     "register": "algarvecircle"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarveatlas.com, algarvecircle.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "The Nest",
+   "startDate": "2026-12-11",
+   "endDate": null,
+   "place": "vila-do-bispo",
+   "municipality": "Vila do Bispo",
+   "evidence": [
+    {
+     "url": "https://www.algarveatlas.com/en/events/exposicao-itinerante-principios-da-carta-das-cidades-educado-7722",
+     "host": "algarveatlas.com",
+     "readable": false,
+     "register": "algarveatlas"
+    },
+    {
+     "url": "https://algarvecircle.com/whats-on/december-2026",
+     "host": "algarvecircle.com",
+     "readable": false,
+     "register": "algarvecircle"
+    },
+    {
+     "url": "https://www.hostelworld.com/events/e/6aee978114b147c7975bef77/burromaquia/",
+     "host": "hostelworld.com",
+     "readable": false,
+     "register": null
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarveatlas.com, algarvecircle.com, hostelworld.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Burromaquia",
+   "startDate": "2026-12-12",
+   "endDate": null,
+   "place": "vila-do-bispo",
+   "municipality": "Vila do Bispo",
+   "evidence": [
+    {
+     "url": "https://www.hostelworld.com/events/e/6aee978114b147c7975bef77/burromaquia/",
+     "host": "hostelworld.com",
+     "readable": false,
+     "register": null
+    },
+    {
+     "url": "https://algarvecircle.com/whats-on/december-2026",
+     "host": "algarvecircle.com",
+     "readable": false,
+     "register": "algarvecircle"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (hostelworld.com, algarvecircle.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Vila do Bispo Market",
+   "startDate": "2026-12-07",
+   "endDate": null,
+   "place": "vila-do-bispo",
+   "municipality": "Vila do Bispo",
+   "evidence": [
+    {
+     "url": "https://algarvecircle.com/events/vila-do-bispo-street-market-2026-11-02",
+     "host": "algarvecircle.com",
+     "readable": false,
+     "register": "algarvecircle"
+    },
+    {
+     "url": "https://www.hostelworld.com/events/e/6ad1988aaa5f4fc6f57f70cd/vila-do-bispo-market/",
+     "host": "hostelworld.com",
+     "readable": false,
+     "register": null
+    },
+    {
+     "url": "https://algarvecircle.com/whats-on/december-2026",
+     "host": "algarvecircle.com",
+     "readable": false,
+     "register": "algarvecircle"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarvecircle.com, hostelworld.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Monte Gordo Sand Race 2026",
+   "startDate": "2026-11-27",
+   "endDate": "2026-11-29",
+   "place": "vila-real-de-santo-antonio",
+   "municipality": "Vila Real de Santo António",
+   "evidence": [
+    {
+     "url": "https://algarvecircle.com/events",
+     "host": "algarvecircle.com",
+     "readable": false,
+     "register": "algarvecircle"
+    },
+    {
+     "url": "https://algarvecircle.com/whats-on/november-2026",
+     "host": "algarvecircle.com",
+     "readable": false,
+     "register": "algarvecircle"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarvecircle.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Monte Gordo Flea Market 2026",
+   "startDate": "2026-11-28",
+   "endDate": null,
+   "place": "vila-real-de-santo-antonio",
+   "municipality": "Vila Real de Santo António",
+   "evidence": [
+    {
+     "url": "https://algarvecircle.com/events/vila-real-de-santo-antonio-flea-market-2026-11-28",
+     "host": "algarvecircle.com",
+     "readable": false,
+     "register": "algarvecircle"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarvecircle.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Vila Natal and Giant Nativity Scene",
+   "startDate": "2026-11-30",
+   "endDate": "2027-01-06",
+   "place": "vila-real-de-santo-antonio",
+   "municipality": "Vila Real de Santo António",
+   "evidence": [
+    {
+     "url": "https://algarvecircle.com/events/vila-natal-and-giant-nativity-scene-vila-real-de-s-2026-11-30",
+     "host": "algarvecircle.com",
+     "readable": false,
+     "register": "algarvecircle"
+    },
+    {
+     "url": "https://algarvecircle.com/whats-on/november-2026",
+     "host": "algarvecircle.com",
+     "readable": false,
+     "register": "algarvecircle"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarvecircle.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  }
+ ]
+}

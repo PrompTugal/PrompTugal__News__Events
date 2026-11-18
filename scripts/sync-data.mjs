@@ -46,10 +46,10 @@ async function copy(path, file, pick) {
 
 const index = await copy('events/by-place/index.json', 'data/api/index.json');
 const claimsIndex = await copy('events/claims/by-place/index.json', 'data/api/claims-index.json');
-// Claims exist per town only (the region "algarve" has none of its own: the build gathers its towns' claims).
+// Claims per town, and for the region "algarve" (all its towns; added by data.b@ on 18 Nov, not yet in the index).
 const okId = (p) => /^[a-z0-9-]+$/.test(p) || (log.failed.push({ path: String(p), why: 'not a place id' }), false);
 for (const p of (index?.places || []).map((x) => x.id).filter(okId).sort()) await copy(`events/by-place/${p}.json`, `data/api/by-place/${p}.json`);
-for (const p of (claimsIndex?.places || []).map((x) => x.place).filter(okId).sort()) await copy(`events/claims/by-place/${p}.json`, `data/api/claims/${p}.json`);
+for (const p of [...new Set([...(claimsIndex?.places || []).map((x) => x.place), 'algarve'])].filter(okId).sort()) await copy(`events/claims/by-place/${p}.json`, `data/api/claims/${p}.json`);
 // The sources register (every source, read and not read, and why) and the hosts Perplexity cited that we do not read.
 const register = await copy('sources/index.json', 'data/api/sources/index.json');
 for (const id of (register?.entries || []).map((x) => x.id).filter(okId).sort()) await copy(`sources/${id}.json`, `data/api/sources/${id}.json`);
