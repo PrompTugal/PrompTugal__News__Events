@@ -1,0 +1,255 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values."
+ },
+ "place": "quarteira",
+ "read_at": "2026-11-18T14:35:29Z",
+ "discovery": {
+  "asked_at": "2026-11-18T14:17:20Z",
+  "model": "perplexity/sonar",
+  "via": "OpenRouter",
+  "file": "discovery/by-place/quarteira/2026-11-18.json"
+ },
+ "about": "Events claimed for this place, each with every evidence link and whether this site may read that source (the register). Name, date and place come from discovery (Perplexity, through OpenRouter); other details only from a readable source. Not a confirmed listing.",
+ "counts": {
+  "claims": 9,
+  "confirmed": 0,
+  "withheld": 9
+ },
+ "claims": [
+  {
+   "@type": "Event",
+   "name": "Quarteira Wednesday Market",
+   "startDate": "2026-11-18",
+   "endDate": "2026-11-18",
+   "place": "quarteira",
+   "municipality": "Quarteira",
+   "evidence": [
+    {
+     "url": "https://algarvecircle.com/whats-on/november-2026",
+     "host": "algarvecircle.com",
+     "readable": false,
+     "register": "algarvecircle"
+    },
+    {
+     "url": "https://algarvecircle.com/events",
+     "host": "algarvecircle.com",
+     "readable": false,
+     "register": "algarvecircle"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarvecircle.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Baile Social",
+   "startDate": "2026-11-28",
+   "endDate": "2026-11-28",
+   "place": "quarteira",
+   "municipality": "Quarteira",
+   "evidence": [
+    {
+     "url": "https://jf-quarteira.pt/agenda",
+     "host": "jf-quarteira.pt",
+     "readable": false,
+     "register": null
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (jf-quarteira.pt) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Noite Afrolatina no Illuminati",
+   "startDate": "2026-11-21",
+   "endDate": "2026-11-21",
+   "place": "quarteira",
+   "municipality": "Quarteira",
+   "evidence": [
+    {
+     "url": "https://bailaspot.com/portugal/quarteira",
+     "host": "bailaspot.com",
+     "readable": false,
+     "register": null
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (bailaspot.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Noite Afrolatina no Illuminati",
+   "startDate": "2026-11-28",
+   "endDate": "2026-11-28",
+   "place": "quarteira",
+   "municipality": "Quarteira",
+   "evidence": [
+    {
+     "url": "https://bailaspot.com/portugal/quarteira",
+     "host": "bailaspot.com",
+     "readable": false,
+     "register": null
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (bailaspot.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Noite Afrolatina no Illuminati",
+   "startDate": "2026-12-05",
+   "endDate": "2026-12-05",
+   "place": "quarteira",
+   "municipality": "Quarteira",
+   "evidence": [
+    {
+     "url": "https://bailaspot.com/portugal/quarteira",
+     "host": "bailaspot.com",
+     "readable": false,
+     "register": null
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (bailaspot.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Maratona do Algarve",
+   "startDate": "2026-12-06",
+   "endDate": "2026-12-06",
+   "place": "quarteira",
+   "municipality": "Quarteira",
+   "evidence": [
+    {
+     "url": "https://worldsmarathons.com/fr/marathon/maratona-do-algarve",
+     "host": "worldsmarathons.com",
+     "readable": false,
+     "register": null
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (worldsmarathons.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Noite Afrolatina no Illuminati",
+   "startDate": "2026-12-12",
+   "endDate": "2026-12-12",
+   "place": "quarteira",
+   "municipality": "Quarteira",
+   "evidence": [
+    {
+     "url": "https://bailaspot.com/portugal/quarteira",
+     "host": "bailaspot.com",
+     "readable": false,
+     "register": null
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (bailaspot.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Noite Afrolatina no Illuminati",
+   "startDate": "2026-12-19",
+   "endDate": "2026-12-19",
+   "place": "quarteira",
+   "municipality": "Quarteira",
+   "evidence": [
+    {
+     "url": "https://bailaspot.com/portugal/quarteira",
+     "host": "bailaspot.com",
+     "readable": false,
+     "register": null
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (bailaspot.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "New Years Eve Quarteira 2026/2027 Programme",
+   "startDate": "2026-12-29",
+   "endDate": "2026-12-31",
+   "place": "quarteira",
+   "municipality": "Quarteira",
+   "evidence": [
+    {
+     "url": "https://activealgarve.pt/event/new-years-eve-20262027-2026-12",
+     "host": "activealgarve.pt",
+     "readable": false,
+     "register": null
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (activealgarve.pt) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  }
+ ]
+}

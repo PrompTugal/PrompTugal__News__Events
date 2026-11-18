@@ -1,0 +1,55 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values."
+ },
+ "place": "aljezur",
+ "read_at": "2026-11-18T14:35:29Z",
+ "discovery": {
+  "asked_at": "2026-11-18T14:18:21Z",
+  "model": "perplexity/sonar",
+  "via": "OpenRouter",
+  "file": "discovery/by-place/aljezur/2026-11-18.json"
+ },
+ "about": "Events claimed for this place, each with every evidence link and whether this site may read that source (the register). Name, date and place come from discovery (Perplexity, through OpenRouter); other details only from a readable source. Not a confirmed listing.",
+ "counts": {
+  "claims": 1,
+  "confirmed": 0,
+  "withheld": 1
+ },
+ "claims": [
+  {
+   "@type": "Event",
+   "name": "Aljezur Sweet Potato Festival",
+   "startDate": "2026-11-27",
+   "endDate": "2026-11-29",
+   "place": "aljezur",
+   "municipality": "Aljezur",
+   "evidence": [
+    {
+     "url": "https://www.visitportugal.com/en/node/525149",
+     "host": "visitportugal.com",
+     "readable": false,
+     "register": "turismo-portugal"
+    },
+    {
+     "url": "https://eventos.visitalgarve.pt/en/16443/aljezur-sweet-potato-festival",
+     "host": "eventos.visitalgarve.pt",
+     "readable": false,
+     "register": null
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (visitportugal.com, eventos.visitalgarve.pt) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  }
+ ]
+}

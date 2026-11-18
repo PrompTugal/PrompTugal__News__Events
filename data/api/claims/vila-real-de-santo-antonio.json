@@ -1,0 +1,111 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values."
+ },
+ "place": "vila-real-de-santo-antonio",
+ "read_at": "2026-11-18T14:35:29Z",
+ "discovery": {
+  "asked_at": "2026-11-18T14:17:41Z",
+  "model": "perplexity/sonar",
+  "via": "OpenRouter",
+  "file": "discovery/by-place/vila-real-de-santo-antonio/2026-11-18.json"
+ },
+ "about": "Events claimed for this place, each with every evidence link and whether this site may read that source (the register). Name, date and place come from discovery (Perplexity, through OpenRouter); other details only from a readable source. Not a confirmed listing.",
+ "counts": {
+  "claims": 3,
+  "confirmed": 0,
+  "withheld": 3
+ },
+ "claims": [
+  {
+   "@type": "Event",
+   "name": "Monte Gordo Sand Race 2026",
+   "startDate": "2026-11-27",
+   "endDate": "2026-11-29",
+   "place": "vila-real-de-santo-antonio",
+   "municipality": "Vila Real de Santo António",
+   "evidence": [
+    {
+     "url": "https://algarvecircle.com/events",
+     "host": "algarvecircle.com",
+     "readable": false,
+     "register": "algarvecircle"
+    },
+    {
+     "url": "https://algarvecircle.com/whats-on/november-2026",
+     "host": "algarvecircle.com",
+     "readable": false,
+     "register": "algarvecircle"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarvecircle.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Monte Gordo Flea Market 2026",
+   "startDate": "2026-11-28",
+   "endDate": null,
+   "place": "vila-real-de-santo-antonio",
+   "municipality": "Vila Real de Santo António",
+   "evidence": [
+    {
+     "url": "https://algarvecircle.com/events/vila-real-de-santo-antonio-flea-market-2026-11-28",
+     "host": "algarvecircle.com",
+     "readable": false,
+     "register": "algarvecircle"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarvecircle.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Vila Natal and Giant Nativity Scene",
+   "startDate": "2026-11-30",
+   "endDate": "2027-01-06",
+   "place": "vila-real-de-santo-antonio",
+   "municipality": "Vila Real de Santo António",
+   "evidence": [
+    {
+     "url": "https://algarvecircle.com/events/vila-natal-and-giant-nativity-scene-vila-real-de-s-2026-11-30",
+     "host": "algarvecircle.com",
+     "readable": false,
+     "register": "algarvecircle"
+    },
+    {
+     "url": "https://algarvecircle.com/whats-on/november-2026",
+     "host": "algarvecircle.com",
+     "readable": false,
+     "register": "algarvecircle"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarvecircle.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  }
+ ]
+}

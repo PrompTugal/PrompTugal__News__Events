@@ -1,0 +1,249 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values."
+ },
+ "place": "albufeira",
+ "read_at": "2026-11-18T14:35:29Z",
+ "discovery": {
+  "asked_at": "2026-11-18T14:18:02Z",
+  "model": "perplexity/sonar",
+  "via": "OpenRouter",
+  "file": "discovery/by-place/albufeira/2026-11-18.json"
+ },
+ "about": "Events claimed for this place, each with every evidence link and whether this site may read that source (the register). Name, date and place come from discovery (Perplexity, through OpenRouter); other details only from a readable source. Not a confirmed listing.",
+ "counts": {
+  "claims": 9,
+  "confirmed": 0,
+  "withheld": 9
+ },
+ "claims": [
+  {
+   "@type": "Event",
+   "name": "Photography Exhibition “Times that Pass … Memories that Remain\" by Vítor de Sousa",
+   "startDate": "2026-11-18",
+   "endDate": "2027-01-30",
+   "place": "albufeira",
+   "municipality": "Albufeira",
+   "evidence": [
+    {
+     "url": "https://www.algarveatlas.com/en/municipalities/albufeira",
+     "host": "algarveatlas.com",
+     "readable": false,
+     "register": "algarveatlas"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarveatlas.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "APS L Longevity Summit 2026",
+   "startDate": "2026-11-18",
+   "endDate": "2026-11-20",
+   "place": "albufeira",
+   "municipality": "Albufeira",
+   "evidence": [
+    {
+     "url": "https://www.algarveatlas.com/en/municipalities/albufeira",
+     "host": "algarveatlas.com",
+     "readable": false,
+     "register": "algarveatlas"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarveatlas.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Saber-Fazer Workshops - Macramé",
+   "startDate": "2026-11-18",
+   "endDate": null,
+   "place": "albufeira",
+   "municipality": "Albufeira",
+   "evidence": [
+    {
+     "url": "https://www.algarveatlas.com/en/municipalities/albufeira",
+     "host": "algarveatlas.com",
+     "readable": false,
+     "register": "algarveatlas"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarveatlas.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Saber-Fazer Workshops - Artistic Drawing",
+   "startDate": "2026-11-18",
+   "endDate": null,
+   "place": "albufeira",
+   "municipality": "Albufeira",
+   "evidence": [
+    {
+     "url": "https://www.algarveatlas.com/en/municipalities/albufeira",
+     "host": "algarveatlas.com",
+     "readable": false,
+     "register": "algarveatlas"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarveatlas.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Presentation of the book The Time Traveller by Ana Alexandra Resende",
+   "startDate": "2026-11-18",
+   "endDate": null,
+   "place": "albufeira",
+   "municipality": "Albufeira",
+   "evidence": [
+    {
+     "url": "https://www.algarveatlas.com/en/municipalities/albufeira",
+     "host": "algarveatlas.com",
+     "readable": false,
+     "register": "algarveatlas"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarveatlas.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Circular Tapestry Workshop",
+   "startDate": "2026-11-18",
+   "endDate": null,
+   "place": "albufeira",
+   "municipality": "Albufeira",
+   "evidence": [
+    {
+     "url": "https://www.algarveatlas.com/en/municipalities/albufeira",
+     "host": "algarveatlas.com",
+     "readable": false,
+     "register": "algarveatlas"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarveatlas.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Feira Franca Annual Fair",
+   "startDate": "2026-11-30",
+   "endDate": null,
+   "place": "albufeira",
+   "municipality": "Albufeira",
+   "evidence": [
+    {
+     "url": "https://albufeira.com/events/regular/",
+     "host": "albufeira.com",
+     "readable": false,
+     "register": null
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (albufeira.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Albufeira Christmas Market",
+   "startDate": "2026-12-05",
+   "endDate": null,
+   "place": "albufeira",
+   "municipality": "Albufeira",
+   "evidence": [
+    {
+     "url": "https://albufeira.com/events/regular/",
+     "host": "albufeira.com",
+     "readable": false,
+     "register": null
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (albufeira.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Santas on Bike Parade",
+   "startDate": "2026-12-15",
+   "endDate": null,
+   "place": "albufeira",
+   "municipality": "Albufeira",
+   "evidence": [
+    {
+     "url": "https://albufeira.com/events/regular/",
+     "host": "albufeira.com",
+     "readable": false,
+     "register": null
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (albufeira.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  }
+ ]
+}

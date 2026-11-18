@@ -1,0 +1,161 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values."
+ },
+ "place": "lagos",
+ "read_at": "2026-11-18T14:35:29Z",
+ "discovery": {
+  "asked_at": "2026-11-18T14:17:51Z",
+  "model": "perplexity/sonar",
+  "via": "OpenRouter",
+  "file": "discovery/by-place/lagos/2026-11-18.json"
+ },
+ "about": "Events claimed for this place, each with every evidence link and whether this site may read that source (the register). Name, date and place come from discovery (Perplexity, through OpenRouter); other details only from a readable source. Not a confirmed listing.",
+ "counts": {
+  "claims": 5,
+  "confirmed": 0,
+  "withheld": 3
+ },
+ "claims": [
+  {
+   "@type": "Event",
+   "name": "Feira Franca de Lagos 2026",
+   "startDate": "2026-11-20",
+   "endDate": "2026-11-22",
+   "place": "lagos",
+   "municipality": "Lagos",
+   "evidence": [
+    {
+     "url": "https://algarvecircle.com/events",
+     "host": "algarvecircle.com",
+     "readable": false,
+     "register": "algarvecircle"
+    },
+    {
+     "url": "https://www.cm-lagos.pt/municipio/eventos?filter_34[1]=2026-11-17&start=20",
+     "host": "cm-lagos.pt",
+     "readable": true,
+     "register": "events-pt"
+    }
+   ],
+   "status": "to confirm at a readable source",
+   "details_from": null,
+   "details_note": "A readable source is cited; its details are not yet read.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Lagos Baía de Natal",
+   "startDate": "2026-11-28",
+   "endDate": "2027-01-05",
+   "place": "lagos",
+   "municipality": "Lagos",
+   "evidence": [
+    {
+     "url": "https://algarvecircle.com/whats-on/december-2026",
+     "host": "algarvecircle.com",
+     "readable": false,
+     "register": "algarvecircle"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarvecircle.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Mercadinho do Lagos Baía de Natal",
+   "startDate": "2026-11-28",
+   "endDate": "2027-01-05",
+   "place": "lagos",
+   "municipality": "Lagos",
+   "evidence": [
+    {
+     "url": "https://algarvecircle.com/whats-on/december-2026",
+     "host": "algarvecircle.com",
+     "readable": false,
+     "register": "algarvecircle"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarvecircle.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "International Algarve Organ Festival 2026",
+   "startDate": "2026-11-18",
+   "endDate": "2026-11-29",
+   "place": "lagos",
+   "municipality": "Lagos",
+   "evidence": [
+    {
+     "url": "https://www.cm-lagos.pt/municipio/eventos?filter_34[1]=2026-11-17&start=20",
+     "host": "cm-lagos.pt",
+     "readable": true,
+     "register": "events-pt"
+    },
+    {
+     "url": "https://www.theportugalnews.com/news/2026-10-22/autumn-festivals-and-events-in-the-algarve/1104742",
+     "host": "theportugalnews.com",
+     "readable": false,
+     "register": null
+    }
+   ],
+   "status": "to confirm at a readable source",
+   "details_from": null,
+   "details_note": "A readable source is cited; its details are not yet read.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Organ concert of the Algarve International Organ Festival 2026",
+   "startDate": "2026-11-18",
+   "endDate": "2026-11-18",
+   "place": "lagos",
+   "municipality": "Lagos",
+   "evidence": [
+    {
+     "url": "https://algarvecircle.com/events",
+     "host": "algarvecircle.com",
+     "readable": false,
+     "register": "algarvecircle"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarvecircle.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  }
+ ]
+}

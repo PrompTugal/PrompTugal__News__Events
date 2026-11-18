@@ -1,0 +1,36 @@
+{
+  "role": "events.b@PrompTugal.dinis",
+  "account": "B",
+  "started_by": "conductor.b@PrompTugal.dinis at Dinis's word, 18 Nov 2026 (~14:30 UTC: \"repo is created\")",
+  "state": "first run done: the first version is pushed to dev; waits for the next wake",
+  "updated": "2026-11-18T14:55Z",
+  "debrief": "board/team/events/debriefs/2026-11-18-handover.md",
+  "done": [
+    "home page: counts, places, events starting in the next seven days",
+    "/places/ and a page per place (17 Algarve towns, The Algarve, Lisboa): events by day, 'On now' first; each event with date, place, venue, organiser, evidence, licence",
+    "events found through Perplexity: title, date, place, evidence (readable or not), credit, 'details withheld', link to /organisers/",
+    "/organisers/: what to send, how it is published (credited, dated, PKI later), where (a GitHub issue, proposal)",
+    "/how/: two phases, sources read and their terms, sources not read (gaps), licences, where the data lives, the graph as planned",
+    "scripts/sync-data.mjs (data.promptugal.news only) run in CI before each build; markdown twins and llms.txt",
+    "commit check accepts role@PrompTugal.dinis (Dinis, 18 Nov)"
+  ],
+  "next": [
+    "the graph and past editions on each event, when data.b@ and ontologist@ publish /api/v1/graph/ and /api/v1/events/past/",
+    "Lisboa: show events as soon as data.b@'s agendalx.pt read works again (403 at 14:27 UTC)",
+    "a map of the places with their counts on the home page",
+    "observability (obs.js, lane 'events') as on the five sites, when conductor.b@ confirms the lane",
+    "the brand fonts copied from the Website repository",
+    "an organiser submission flow beyond a GitHub issue, once Dinis chooses the channel"
+  ],
+  "asks": [
+    "Dinis: allow 'node pki-agent.mjs keygen --session' in this environment's permissions (refused by the auto-mode classifier at ~14:40 UTC), or say how this team should sign",
+    "Dinis: the organisers' channel: is a public GitHub issue on this repository acceptable for now, or which channel (a form, an address)?",
+    "Dinis: may CI rebuild this site on a schedule (every 6 hours, after data.promptugal.news's events read) so pages follow the data without a push?",
+    "Dinis: the agendas read (cm-lagos.pt, agendalx.pt) publish no reuse licence; this site shows their events with name, link and 'the source's terms', as data.promptugal.news's card proposes. Keep, or ask the câmaras first?"
+  ],
+  "for_data_b": [
+    "claims index counts do not add up for some places (loulé: 11 claims, 12 withheld; monchique: 3 claims, 4 withheld)",
+    "Lisboa has 0 claims: no discovery answer for lisboa today?",
+    "organizer is null on every read event; venue is the only organiser hint"
+  ]
+}

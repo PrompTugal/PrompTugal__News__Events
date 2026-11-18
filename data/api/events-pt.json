@@ -1,0 +1,89 @@
+{
+ "license": {
+  "name": "the source's terms",
+  "url": "https://www.agendalx.pt/",
+  "holder": "the agenda each event comes from",
+  "note": "No reuse licence or terms page was found; each event carries its own source's link."
+ },
+ "source": "events-pt",
+ "title": "Events in Portugal, by place",
+ "read_at": "2026-11-18T14:33:19Z",
+ "provenance": {
+  "source": "https://www.agendalx.pt/wp-json/agendalx/v1/events?per_page=50",
+  "page": "https://www.agendalx.pt/",
+  "read_at": "2026-11-18T14:33:19Z",
+  "by": "sources/events-pt/collect.mjs (code, no model; run by data.b@PrompTugal.dinis)",
+  "terms": "Strictest of the sources: no reuse licence or terms page was found for either host. Both robots.txt files allow the paths read; agendalx.pt sets Content-Signal search=yes, ai-train=no, use=reference. So: reference use only, name the source, link to the event, no AI training. Not reviewed by a person: whether this is enough to republish is for Dinis.",
+  "sources": [
+   {
+    "host": "www.agendalx.pt",
+    "what": "Agenda Cultural de Lisboa (Câmara Municipal de Lisboa)",
+    "route": "https://www.agendalx.pt/wp-json/agendalx/v1/events?per_page=50",
+    "terms": "No terms page found. robots.txt (read 18 Nov 2026) allows all paths and sets \"Content-Signal: search=yes,ai-train=no,use=reference\": reference use with the source named and linked; no AI training."
+   },
+   {
+    "host": "www.cm-lagos.pt",
+    "what": "Câmara Municipal de Lagos, events list",
+    "route": "https://www.cm-lagos.pt/municipio/eventos",
+    "terms": "No terms page found. robots.txt (read 18 Nov 2026) disallows only administrative folders, not /municipio/eventos."
+   }
+  ]
+ },
+ "about": "Events on now or starting within 60 days (to 2027-01-17) in the places listed, as schema.org Event records, each with its source URL and the time read. Dates are as the source gives them (Lisbon time; a time is added only where a single start hour is shown); a long-running event shows its first and last day. organizer is null where the source does not name an organiser (the agenda's publisher is in source). A dated record read by code, not a ticketing or booking service: check the organiser before travelling.",
+ "counts": {
+  "events": 90,
+  "places": 1,
+  "by_source": {
+   "www.agendalx.pt": 0,
+   "www.cm-lagos.pt": 90
+  },
+  "dropped_unknown_place": 0
+ },
+ "gaps": [
+  {
+   "host": "dados.cm-lisboa.pt",
+   "why": "Cloudflare bot check (\"Just a moment...\") on the open data API; its robots.txt also sets Content-Signal ai-train=no, use=reference. Respected, not worked around.",
+   "read_at": "2026-11-18T14:00:00Z"
+  },
+  {
+   "host": "www.lisboa.pt",
+   "why": "HTTP 403 on its legal and terms pages (aviso-legal, termos-e-condicoes). Respected.",
+   "read_at": "2026-11-18T14:00:00Z"
+  },
+  {
+   "host": "visitalgarve.pt",
+   "why": "robots.txt allows all, but the site is a JavaScript app over a private POST API (api.visitalgarve.pt/website/Travelplanner/Search/Events) with no published feed, no terms read and an unreachable robots.txt on the API host. Not used.",
+   "read_at": "2026-11-18T14:00:00Z"
+  },
+  {
+   "host": "www.visitlisboa.com",
+   "why": "robots.txt allows all; no machine-readable events feed found in the research. Not used.",
+   "read_at": "2026-11-18T14:00:00Z"
+  },
+  {
+   "host": "www.cm-faro.pt, www.cm-loule.pt, www.cm-silves.pt",
+   "why": "connection reset on the first request (robots.txt); nothing read.",
+   "read_at": "2026-11-18T14:00:00Z"
+  },
+  {
+   "host": "www.cm-tavira.pt",
+   "why": "no robots.txt (404); events pages not looked at yet.",
+   "read_at": "2026-11-18T14:00:00Z"
+  },
+  {
+   "host": "www.cm-portimao.pt, www.cm-albufeira.pt",
+   "why": "home pages read; no RSS or iCal feed found, only HTML and a PDF agenda. Not parsed yet.",
+   "read_at": "2026-11-18T14:00:00Z"
+  },
+  {
+   "host": "eventbrite.*, lu.ma, luma.com, meetup.com, websummit.com",
+   "why": "never machine-read (Dinis, 18 Nov 2026).",
+   "read_at": "2026-11-18T14:00:00Z"
+  },
+  {
+   "host": "www.agendalx.pt",
+   "why": "events route HTTP 403",
+   "read_at": "2026-11-18T14:33:23Z"
+  }
+ ]
+}

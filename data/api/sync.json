@@ -1,0 +1,208 @@
+{
+ "about": "When this site last read each file from data.promptugal.news, and what failed. Written by scripts/sync-data.mjs.",
+ "started": "2026-11-18T14:36:08.137Z",
+ "read": [
+  {
+   "path": "events/by-place/index.json",
+   "file": "data/api/index.json",
+   "at": "2026-11-18T14:36:08.377Z"
+  },
+  {
+   "path": "events/claims/by-place/index.json",
+   "file": "data/api/claims-index.json",
+   "at": "2026-11-18T14:36:08.722Z"
+  },
+  {
+   "path": "events/by-place/albufeira.json",
+   "file": "data/api/by-place/albufeira.json",
+   "at": "2026-11-18T14:36:09.069Z"
+  },
+  {
+   "path": "events/by-place/alcoutim.json",
+   "file": "data/api/by-place/alcoutim.json",
+   "at": "2026-11-18T14:36:09.418Z"
+  },
+  {
+   "path": "events/by-place/algarve.json",
+   "file": "data/api/by-place/algarve.json",
+   "at": "2026-11-18T14:36:09.764Z"
+  },
+  {
+   "path": "events/by-place/aljezur.json",
+   "file": "data/api/by-place/aljezur.json",
+   "at": "2026-11-18T14:36:10.122Z"
+  },
+  {
+   "path": "events/by-place/castro-marim.json",
+   "file": "data/api/by-place/castro-marim.json",
+   "at": "2026-11-18T14:36:10.472Z"
+  },
+  {
+   "path": "events/by-place/faro.json",
+   "file": "data/api/by-place/faro.json",
+   "at": "2026-11-18T14:36:10.832Z"
+  },
+  {
+   "path": "events/by-place/lagoa.json",
+   "file": "data/api/by-place/lagoa.json",
+   "at": "2026-11-18T14:36:11.165Z"
+  },
+  {
+   "path": "events/by-place/lagos.json",
+   "file": "data/api/by-place/lagos.json",
+   "at": "2026-11-18T14:36:11.483Z"
+  },
+  {
+   "path": "events/by-place/lisboa.json",
+   "file": "data/api/by-place/lisboa.json",
+   "at": "2026-11-18T14:36:11.800Z"
+  },
+  {
+   "path": "events/by-place/loule.json",
+   "file": "data/api/by-place/loule.json",
+   "at": "2026-11-18T14:36:12.123Z"
+  },
+  {
+   "path": "events/by-place/monchique.json",
+   "file": "data/api/by-place/monchique.json",
+   "at": "2026-11-18T14:36:12.442Z"
+  },
+  {
+   "path": "events/by-place/olhao.json",
+   "file": "data/api/by-place/olhao.json",
+   "at": "2026-11-18T14:36:12.759Z"
+  },
+  {
+   "path": "events/by-place/portimao.json",
+   "file": "data/api/by-place/portimao.json",
+   "at": "2026-11-18T14:36:13.076Z"
+  },
+  {
+   "path": "events/by-place/quarteira.json",
+   "file": "data/api/by-place/quarteira.json",
+   "at": "2026-11-18T14:36:13.393Z"
+  },
+  {
+   "path": "events/by-place/sao-bras-de-alportel.json",
+   "file": "data/api/by-place/sao-bras-de-alportel.json",
+   "at": "2026-11-18T14:36:13.709Z"
+  },
+  {
+   "path": "events/by-place/silves.json",
+   "file": "data/api/by-place/silves.json",
+   "at": "2026-11-18T14:36:14.028Z"
+  },
+  {
+   "path": "events/by-place/tavira.json",
+   "file": "data/api/by-place/tavira.json",
+   "at": "2026-11-18T14:36:14.345Z"
+  },
+  {
+   "path": "events/by-place/vila-do-bispo.json",
+   "file": "data/api/by-place/vila-do-bispo.json",
+   "at": "2026-11-18T14:36:14.664Z"
+  },
+  {
+   "path": "events/by-place/vila-real-de-santo-antonio.json",
+   "file": "data/api/by-place/vila-real-de-santo-antonio.json",
+   "at": "2026-11-18T14:36:14.980Z"
+  },
+  {
+   "path": "events/claims/by-place/albufeira.json",
+   "file": "data/api/claims/albufeira.json",
+   "at": "2026-11-18T14:36:15.330Z"
+  },
+  {
+   "path": "events/claims/by-place/alcoutim.json",
+   "file": "data/api/claims/alcoutim.json",
+   "at": "2026-11-18T14:36:15.678Z"
+  },
+  {
+   "path": "events/claims/by-place/aljezur.json",
+   "file": "data/api/claims/aljezur.json",
+   "at": "2026-11-18T14:36:16.027Z"
+  },
+  {
+   "path": "events/claims/by-place/castro-marim.json",
+   "file": "data/api/claims/castro-marim.json",
+   "at": "2026-11-18T14:36:16.373Z"
+  },
+  {
+   "path": "events/claims/by-place/faro.json",
+   "file": "data/api/claims/faro.json",
+   "at": "2026-11-18T14:36:16.721Z"
+  },
+  {
+   "path": "events/claims/by-place/lagoa.json",
+   "file": "data/api/claims/lagoa.json",
+   "at": "2026-11-18T14:36:17.038Z"
+  },
+  {
+   "path": "events/claims/by-place/lagos.json",
+   "file": "data/api/claims/lagos.json",
+   "at": "2026-11-18T14:36:17.354Z"
+  },
+  {
+   "path": "events/claims/by-place/lisboa.json",
+   "file": "data/api/claims/lisboa.json",
+   "at": "2026-11-18T14:36:17.688Z"
+  },
+  {
+   "path": "events/claims/by-place/loule.json",
+   "file": "data/api/claims/loule.json",
+   "at": "2026-11-18T14:36:18.003Z"
+  },
+  {
+   "path": "events/claims/by-place/monchique.json",
+   "file": "data/api/claims/monchique.json",
+   "at": "2026-11-18T14:36:18.321Z"
+  },
+  {
+   "path": "events/claims/by-place/olhao.json",
+   "file": "data/api/claims/olhao.json",
+   "at": "2026-11-18T14:36:18.637Z"
+  },
+  {
+   "path": "events/claims/by-place/portimao.json",
+   "file": "data/api/claims/portimao.json",
+   "at": "2026-11-18T14:36:18.954Z"
+  },
+  {
+   "path": "events/claims/by-place/quarteira.json",
+   "file": "data/api/claims/quarteira.json",
+   "at": "2026-11-18T14:36:19.271Z"
+  },
+  {
+   "path": "events/claims/by-place/sao-bras-de-alportel.json",
+   "file": "data/api/claims/sao-bras-de-alportel.json",
+   "at": "2026-11-18T14:36:19.589Z"
+  },
+  {
+   "path": "events/claims/by-place/silves.json",
+   "file": "data/api/claims/silves.json",
+   "at": "2026-11-18T14:36:19.907Z"
+  },
+  {
+   "path": "events/claims/by-place/tavira.json",
+   "file": "data/api/claims/tavira.json",
+   "at": "2026-11-18T14:36:20.224Z"
+  },
+  {
+   "path": "events/claims/by-place/vila-do-bispo.json",
+   "file": "data/api/claims/vila-do-bispo.json",
+   "at": "2026-11-18T14:36:20.539Z"
+  },
+  {
+   "path": "events/claims/by-place/vila-real-de-santo-antonio.json",
+   "file": "data/api/claims/vila-real-de-santo-antonio.json",
+   "at": "2026-11-18T14:36:20.857Z"
+  },
+  {
+   "path": "events-pt/latest.json",
+   "file": "data/api/events-pt.json",
+   "at": "2026-11-18T14:36:21.175Z"
+  }
+ ],
+ "failed": [],
+ "finished": "2026-11-18T14:36:21.475Z"
+}

@@ -1,0 +1,124 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values."
+ },
+ "place": "silves",
+ "read_at": "2026-11-18T14:35:29Z",
+ "discovery": {
+  "asked_at": "2026-11-18T14:17:27Z",
+  "model": "perplexity/sonar",
+  "via": "OpenRouter",
+  "file": "discovery/by-place/silves/2026-11-18.json"
+ },
+ "about": "Events claimed for this place, each with every evidence link and whether this site may read that source (the register). Name, date and place come from discovery (Perplexity, through OpenRouter); other details only from a readable source. Not a confirmed listing.",
+ "counts": {
+  "claims": 4,
+  "confirmed": 0,
+  "withheld": 4
+ },
+ "claims": [
+  {
+   "@type": "Event",
+   "name": "Markets of Silves",
+   "startDate": "2026-11-18",
+   "endDate": "2026-12-28",
+   "place": "silves",
+   "municipality": "Silves",
+   "evidence": [
+    {
+     "url": "https://www.algarveatlas.com/en/municipalities/silves",
+     "host": "algarveatlas.com",
+     "readable": false,
+     "register": "algarveatlas"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarveatlas.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Antique Fair",
+   "startDate": "2026-11-18",
+   "endDate": "2026-12-26",
+   "place": "silves",
+   "municipality": "Silves",
+   "evidence": [
+    {
+     "url": "https://www.algarveatlas.com/en/municipalities/silves",
+     "host": "algarveatlas.com",
+     "readable": false,
+     "register": "algarveatlas"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarveatlas.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "A participação cívica em Portugal: desafios e oportunidades na área cultural",
+   "startDate": "2026-11-27",
+   "endDate": null,
+   "place": "silves",
+   "municipality": "Silves",
+   "evidence": [
+    {
+     "url": "https://www.sustainableliving.pt/pulse/2026-11-18",
+     "host": "sustainableliving.pt",
+     "readable": false,
+     "register": null
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (sustainableliving.pt) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Jazz nas Adegas: Low Tech Groove",
+   "startDate": "2026-11-27",
+   "endDate": null,
+   "place": "silves",
+   "municipality": "Silves",
+   "evidence": [
+    {
+     "url": "https://ma.to/event/jazz-nas-adegas-low-tech-groove-27-nov-2026",
+     "host": "ma.to",
+     "readable": false,
+     "register": null
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (ma.to) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  }
+ ]
+}

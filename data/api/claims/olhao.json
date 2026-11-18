@@ -1,0 +1,261 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values."
+ },
+ "place": "olhao",
+ "read_at": "2026-11-18T14:35:29Z",
+ "discovery": {
+  "asked_at": "2026-11-18T14:17:56Z",
+  "model": "perplexity/sonar",
+  "via": "OpenRouter",
+  "file": "discovery/by-place/olhao/2026-11-18.json"
+ },
+ "about": "Events claimed for this place, each with every evidence link and whether this site may read that source (the register). Name, date and place come from discovery (Perplexity, through OpenRouter); other details only from a readable source. Not a confirmed listing.",
+ "counts": {
+  "claims": 9,
+  "confirmed": 0,
+  "withheld": 9
+ },
+ "claims": [
+  {
+   "@type": "Event",
+   "name": "Visual Arts Exhibition | Rita Tavares",
+   "startDate": "2026-11-18",
+   "endDate": "2026-12-11",
+   "place": "olhao",
+   "municipality": "Olhão",
+   "evidence": [
+    {
+     "url": "https://www.algarveatlas.com/en/events/exposicao-de-artes-visuais-rita-tavares-7849",
+     "host": "algarveatlas.com",
+     "readable": false,
+     "register": "algarveatlas"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarveatlas.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Bienal da Participação Cívica e Cultura",
+   "startDate": "2026-11-19",
+   "endDate": "2026-11-22",
+   "place": "olhao",
+   "municipality": "Olhão",
+   "evidence": [
+    {
+     "url": "https://www.sulinformacao.pt/2026/10/participacao-civica-na-area-cultural-inspira-nova-bienal-em-olhao/",
+     "host": "sulinformacao.pt",
+     "readable": false,
+     "register": null
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (sulinformacao.pt) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Mostra-te: Hip Hop Fusion",
+   "startDate": "2026-11-21",
+   "endDate": null,
+   "place": "olhao",
+   "municipality": "Olhão",
+   "evidence": [
+    {
+     "url": "https://algarvecircle.com/events",
+     "host": "algarvecircle.com",
+     "readable": false,
+     "register": "algarvecircle"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarvecircle.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Olhão Saturday Riverside Market",
+   "startDate": "2026-11-21",
+   "endDate": null,
+   "place": "olhao",
+   "municipality": "Olhão",
+   "evidence": [
+    {
+     "url": "https://algarvecircle.com/events",
+     "host": "algarvecircle.com",
+     "readable": false,
+     "register": "algarvecircle"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarvecircle.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Reinis Jaunais: a solo musical journey",
+   "startDate": "2026-11-21",
+   "endDate": null,
+   "place": "olhao",
+   "municipality": "Olhão",
+   "evidence": [
+    {
+     "url": "https://algarvecircle.com/events",
+     "host": "algarvecircle.com",
+     "readable": false,
+     "register": "algarvecircle"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarvecircle.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "“Love is Like This”",
+   "startDate": "2026-11-27",
+   "endDate": "2026-11-28",
+   "place": "olhao",
+   "municipality": "Olhão",
+   "evidence": [
+    {
+     "url": "https://www.visitolhao.pt/agenda",
+     "host": "visitolhao.pt",
+     "readable": false,
+     "register": null
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (visitolhao.pt) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Fado on Sundays - César Matoso",
+   "startDate": "2026-11-29",
+   "endDate": null,
+   "place": "olhao",
+   "municipality": "Olhão",
+   "evidence": [
+    {
+     "url": "https://www.algarveatlas.com/en/municipalities/olhao",
+     "host": "algarveatlas.com",
+     "readable": false,
+     "register": "algarveatlas"
+    },
+    {
+     "url": "https://dailynata.com/whats-on",
+     "host": "dailynata.com",
+     "readable": false,
+     "register": null
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarveatlas.com, dailynata.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Exhibition by the Cultural Sports Association",
+   "startDate": "2026-11-18",
+   "endDate": "2026-11-30",
+   "place": "olhao",
+   "municipality": "Olhão",
+   "evidence": [
+    {
+     "url": "https://www.algarveatlas.com/en/municipalities/olhao",
+     "host": "algarveatlas.com",
+     "readable": false,
+     "register": "algarveatlas"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarveatlas.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Looking through the past",
+   "startDate": "2026-11-18",
+   "endDate": "2026-12-12",
+   "place": "olhao",
+   "municipality": "Olhão",
+   "evidence": [
+    {
+     "url": "https://www.algarveatlas.com/en/events/looking-through-the-past-7475",
+     "host": "algarveatlas.com",
+     "readable": false,
+     "register": "algarveatlas"
+    },
+    {
+     "url": "https://www.algarveatlas.com/eventos/looking-through-the-past-7475",
+     "host": "algarveatlas.com",
+     "readable": false,
+     "register": "algarveatlas"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarveatlas.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  }
+ ]
+}

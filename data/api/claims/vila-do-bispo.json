@@ -1,0 +1,216 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values."
+ },
+ "place": "vila-do-bispo",
+ "read_at": "2026-11-18T14:35:29Z",
+ "discovery": {
+  "asked_at": "2026-11-18T14:18:26Z",
+  "model": "perplexity/sonar",
+  "via": "OpenRouter",
+  "file": "discovery/by-place/vila-do-bispo/2026-11-18.json"
+ },
+ "about": "Events claimed for this place, each with every evidence link and whether this site may read that source (the register). Name, date and place come from discovery (Perplexity, through OpenRouter); other details only from a readable source. Not a confirmed listing.",
+ "counts": {
+  "claims": 6,
+  "confirmed": 0,
+  "withheld": 6
+ },
+ "claims": [
+  {
+   "@type": "Event",
+   "name": "Travelling Exhibition - Principles of the Charter of Educating Cities",
+   "startDate": "2026-11-02",
+   "endDate": "2026-12-04",
+   "place": "vila-do-bispo",
+   "municipality": "Vila do Bispo",
+   "evidence": [
+    {
+     "url": "https://www.algarveatlas.com/en/events/exposicao-itinerante-principios-da-carta-das-cidades-educado-7722",
+     "host": "algarveatlas.com",
+     "readable": false,
+     "register": "algarveatlas"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarveatlas.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "The Eternal Boy",
+   "startDate": "2026-11-20",
+   "endDate": null,
+   "place": "vila-do-bispo",
+   "municipality": "Vila do Bispo",
+   "evidence": [
+    {
+     "url": "https://www.algarveatlas.com/en/events/exposicao-itinerante-principios-da-carta-das-cidades-educado-7722",
+     "host": "algarveatlas.com",
+     "readable": false,
+     "register": "algarveatlas"
+    },
+    {
+     "url": "https://algarvecircle.com/whats-on/november-2026",
+     "host": "algarvecircle.com",
+     "readable": false,
+     "register": "algarvecircle"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarveatlas.com, algarvecircle.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "The Eternal Boy",
+   "startDate": "2026-11-21",
+   "endDate": null,
+   "place": "vila-do-bispo",
+   "municipality": "Vila do Bispo",
+   "evidence": [
+    {
+     "url": "https://www.algarveatlas.com/en/events/exposicao-itinerante-principios-da-carta-das-cidades-educado-7722",
+     "host": "algarveatlas.com",
+     "readable": false,
+     "register": "algarveatlas"
+    },
+    {
+     "url": "https://algarvecircle.com/whats-on/november-2026",
+     "host": "algarvecircle.com",
+     "readable": false,
+     "register": "algarvecircle"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarveatlas.com, algarvecircle.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "The Nest",
+   "startDate": "2026-12-11",
+   "endDate": null,
+   "place": "vila-do-bispo",
+   "municipality": "Vila do Bispo",
+   "evidence": [
+    {
+     "url": "https://www.algarveatlas.com/en/events/exposicao-itinerante-principios-da-carta-das-cidades-educado-7722",
+     "host": "algarveatlas.com",
+     "readable": false,
+     "register": "algarveatlas"
+    },
+    {
+     "url": "https://algarvecircle.com/whats-on/december-2026",
+     "host": "algarvecircle.com",
+     "readable": false,
+     "register": "algarvecircle"
+    },
+    {
+     "url": "https://www.hostelworld.com/events/e/6aee978114b147c7975bef77/burromaquia/",
+     "host": "hostelworld.com",
+     "readable": false,
+     "register": null
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarveatlas.com, algarvecircle.com, hostelworld.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Burromaquia",
+   "startDate": "2026-12-12",
+   "endDate": null,
+   "place": "vila-do-bispo",
+   "municipality": "Vila do Bispo",
+   "evidence": [
+    {
+     "url": "https://www.hostelworld.com/events/e/6aee978114b147c7975bef77/burromaquia/",
+     "host": "hostelworld.com",
+     "readable": false,
+     "register": null
+    },
+    {
+     "url": "https://algarvecircle.com/whats-on/december-2026",
+     "host": "algarvecircle.com",
+     "readable": false,
+     "register": "algarvecircle"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (hostelworld.com, algarvecircle.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Vila do Bispo Market",
+   "startDate": "2026-12-07",
+   "endDate": null,
+   "place": "vila-do-bispo",
+   "municipality": "Vila do Bispo",
+   "evidence": [
+    {
+     "url": "https://algarvecircle.com/events/vila-do-bispo-street-market-2026-11-02",
+     "host": "algarvecircle.com",
+     "readable": false,
+     "register": "algarvecircle"
+    },
+    {
+     "url": "https://www.hostelworld.com/events/e/6ad1988aaa5f4fc6f57f70cd/vila-do-bispo-market/",
+     "host": "hostelworld.com",
+     "readable": false,
+     "register": null
+    },
+    {
+     "url": "https://algarvecircle.com/whats-on/december-2026",
+     "host": "algarvecircle.com",
+     "readable": false,
+     "register": "algarvecircle"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarvecircle.com, hostelworld.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  }
+ ]
+}

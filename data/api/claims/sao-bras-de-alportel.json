@@ -1,0 +1,291 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values."
+ },
+ "place": "sao-bras-de-alportel",
+ "read_at": "2026-11-18T14:35:29Z",
+ "discovery": {
+  "asked_at": "2026-11-18T14:18:49Z",
+  "model": "perplexity/sonar",
+  "via": "OpenRouter",
+  "file": "discovery/by-place/sao-bras-de-alportel/2026-11-18.json"
+ },
+ "about": "Events claimed for this place, each with every evidence link and whether this site may read that source (the register). Name, date and place come from discovery (Perplexity, through OpenRouter); other details only from a readable source. Not a confirmed listing.",
+ "counts": {
+  "claims": 9,
+  "confirmed": 0,
+  "withheld": 9
+ },
+ "claims": [
+  {
+   "@type": "Event",
+   "name": "Saturdays at the Market",
+   "startDate": "2026-11-18",
+   "endDate": null,
+   "place": "sao-bras-de-alportel",
+   "municipality": "São Brás de Alportel",
+   "evidence": [
+    {
+     "url": "https://eventos.visitalgarve.pt/en/events",
+     "host": "eventos.visitalgarve.pt",
+     "readable": false,
+     "register": null
+    },
+    {
+     "url": "https://algarvecircle.com/councils/sao-bras-de-alportel",
+     "host": "algarvecircle.com",
+     "readable": false,
+     "register": "algarvecircle"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (eventos.visitalgarve.pt, algarvecircle.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Seminar Series on Rural Spaces",
+   "startDate": "2026-11-21",
+   "endDate": "2026-11-28",
+   "place": "sao-bras-de-alportel",
+   "municipality": "São Brás de Alportel",
+   "evidence": [
+    {
+     "url": "https://www.sustainableliving.pt/events/seminar-series-on-rural-spaces-dbc2c9b4",
+     "host": "sustainableliving.pt",
+     "readable": false,
+     "register": null
+    },
+    {
+     "url": "https://www.sustainableliving.pt/events",
+     "host": "sustainableliving.pt",
+     "readable": false,
+     "register": null
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (sustainableliving.pt) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Youth Accordion Festival of São Brás de Alportel",
+   "startDate": "2026-11-22",
+   "endDate": null,
+   "place": "sao-bras-de-alportel",
+   "municipality": "São Brás de Alportel",
+   "evidence": [
+    {
+     "url": "https://www.portugal-news.today/en/article/374719",
+     "host": "portugal-news.today",
+     "readable": false,
+     "register": null
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (portugal-news.today) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Photography Exhibition Wabi Sabi",
+   "startDate": "2026-11-15",
+   "endDate": "2026-11-26",
+   "place": "sao-bras-de-alportel",
+   "municipality": "São Brás de Alportel",
+   "evidence": [
+    {
+     "url": "https://algarvecircle.com/whats-on/november-2026",
+     "host": "algarvecircle.com",
+     "readable": false,
+     "register": "algarvecircle"
+    },
+    {
+     "url": "https://algarvecircle.com/events",
+     "host": "algarvecircle.com",
+     "readable": false,
+     "register": "algarvecircle"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarvecircle.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Concert Os Amadores",
+   "startDate": "2026-11-20",
+   "endDate": null,
+   "place": "sao-bras-de-alportel",
+   "municipality": "São Brás de Alportel",
+   "evidence": [
+    {
+     "url": "https://www.algarveatlas.com/en/municipalities/sao-bras-de-alportel",
+     "host": "algarveatlas.com",
+     "readable": false,
+     "register": "algarveatlas"
+    },
+    {
+     "url": "https://algarvecircle.com/events",
+     "host": "algarvecircle.com",
+     "readable": false,
+     "register": "algarvecircle"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarveatlas.com, algarvecircle.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Youth Awards 2026",
+   "startDate": "2026-11-28",
+   "endDate": null,
+   "place": "sao-bras-de-alportel",
+   "municipality": "São Brás de Alportel",
+   "evidence": [
+    {
+     "url": "https://www.algarveatlas.com/en/municipalities/sao-bras-de-alportel",
+     "host": "algarveatlas.com",
+     "readable": false,
+     "register": "algarveatlas"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarveatlas.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Fado Night",
+   "startDate": "2026-11-29",
+   "endDate": null,
+   "place": "sao-bras-de-alportel",
+   "municipality": "São Brás de Alportel",
+   "evidence": [
+    {
+     "url": "https://www.algarveatlas.com/en/municipalities/sao-bras-de-alportel",
+     "host": "algarveatlas.com",
+     "readable": false,
+     "register": "algarveatlas"
+    },
+    {
+     "url": "https://algarvecircle.com/towns/sao-bras-de-alportel",
+     "host": "algarvecircle.com",
+     "readable": false,
+     "register": "algarvecircle"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarveatlas.com, algarvecircle.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Saturdays at the Market",
+   "startDate": "2026-11-21",
+   "endDate": null,
+   "place": "sao-bras-de-alportel",
+   "municipality": "São Brás de Alportel",
+   "evidence": [
+    {
+     "url": "https://www.algarveatlas.com/en/municipalities/sao-bras-de-alportel",
+     "host": "algarveatlas.com",
+     "readable": false,
+     "register": "algarveatlas"
+    },
+    {
+     "url": "https://algarvecircle.com/councils/sao-bras-de-alportel",
+     "host": "algarvecircle.com",
+     "readable": false,
+     "register": "algarvecircle"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarveatlas.com, algarvecircle.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Swap Fair",
+   "startDate": "2026-12-20",
+   "endDate": null,
+   "place": "sao-bras-de-alportel",
+   "municipality": "São Brás de Alportel",
+   "evidence": [
+    {
+     "url": "https://eventos.visitalgarve.pt/en/events",
+     "host": "eventos.visitalgarve.pt",
+     "readable": false,
+     "register": null
+    },
+    {
+     "url": "https://algarvecircle.com/towns/sao-bras-de-alportel",
+     "host": "algarvecircle.com",
+     "readable": false,
+     "register": "algarvecircle"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (eventos.visitalgarve.pt, algarvecircle.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  }
+ ]
+}

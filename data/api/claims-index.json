@@ -1,0 +1,119 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values."
+ },
+ "read_at": "2026-11-18T14:35:29Z",
+ "places": [
+  {
+   "place": "albufeira",
+   "claims": 9,
+   "confirmed": 0,
+   "withheld": 9
+  },
+  {
+   "place": "alcoutim",
+   "claims": 3,
+   "confirmed": 0,
+   "withheld": 3
+  },
+  {
+   "place": "aljezur",
+   "claims": 1,
+   "confirmed": 0,
+   "withheld": 1
+  },
+  {
+   "place": "castro-marim",
+   "claims": 4,
+   "confirmed": 0,
+   "withheld": 4
+  },
+  {
+   "place": "faro",
+   "claims": 7,
+   "confirmed": 0,
+   "withheld": 7
+  },
+  {
+   "place": "lagoa",
+   "claims": 8,
+   "confirmed": 0,
+   "withheld": 8
+  },
+  {
+   "place": "lagos",
+   "claims": 5,
+   "confirmed": 0,
+   "withheld": 3
+  },
+  {
+   "place": "lisboa",
+   "claims": 0,
+   "confirmed": 0,
+   "withheld": 0
+  },
+  {
+   "place": "loule",
+   "claims": 11,
+   "confirmed": 0,
+   "withheld": 12
+  },
+  {
+   "place": "monchique",
+   "claims": 3,
+   "confirmed": 0,
+   "withheld": 4
+  },
+  {
+   "place": "olhao",
+   "claims": 9,
+   "confirmed": 0,
+   "withheld": 9
+  },
+  {
+   "place": "portimao",
+   "claims": 4,
+   "confirmed": 0,
+   "withheld": 4
+  },
+  {
+   "place": "quarteira",
+   "claims": 9,
+   "confirmed": 0,
+   "withheld": 9
+  },
+  {
+   "place": "sao-bras-de-alportel",
+   "claims": 9,
+   "confirmed": 0,
+   "withheld": 9
+  },
+  {
+   "place": "silves",
+   "claims": 4,
+   "confirmed": 0,
+   "withheld": 4
+  },
+  {
+   "place": "tavira",
+   "claims": 14,
+   "confirmed": 0,
+   "withheld": 14
+  },
+  {
+   "place": "vila-do-bispo",
+   "claims": 6,
+   "confirmed": 0,
+   "withheld": 6
+  },
+  {
+   "place": "vila-real-de-santo-antonio",
+   "claims": 3,
+   "confirmed": 0,
+   "withheld": 3
+  }
+ ]
+}

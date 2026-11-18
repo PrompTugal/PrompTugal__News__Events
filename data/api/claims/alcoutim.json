@@ -1,0 +1,105 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values."
+ },
+ "place": "alcoutim",
+ "read_at": "2026-11-18T14:35:29Z",
+ "discovery": {
+  "asked_at": "2026-11-18T14:18:44Z",
+  "model": "perplexity/sonar",
+  "via": "OpenRouter",
+  "file": "discovery/by-place/alcoutim/2026-11-18.json"
+ },
+ "about": "Events claimed for this place, each with every evidence link and whether this site may read that source (the register). Name, date and place come from discovery (Perplexity, through OpenRouter); other details only from a readable source. Not a confirmed listing.",
+ "counts": {
+  "claims": 3,
+  "confirmed": 0,
+  "withheld": 3
+ },
+ "claims": [
+  {
+   "@type": "Event",
+   "name": "A água e o mar para mim",
+   "startDate": "2026-11-05",
+   "endDate": "2026-12-18",
+   "place": "alcoutim",
+   "municipality": "Alcoutim",
+   "evidence": [
+    {
+     "url": "https://activealgarve.pt/events",
+     "host": "activealgarve.pt",
+     "readable": false,
+     "register": null
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (activealgarve.pt) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "Uma Mirada por el Jardim de Pepe Gámez",
+   "startDate": "2026-12-13",
+   "endDate": "2026-12-31",
+   "place": "alcoutim",
+   "municipality": "Alcoutim",
+   "evidence": [
+    {
+     "url": "https://algarvecircle.com/whats-on/december-2026",
+     "host": "algarvecircle.com",
+     "readable": false,
+     "register": "algarvecircle"
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarvecircle.com) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "ALUT Algarviana Ultra Trail 2026 (8th edition)",
+   "startDate": "2026-11-26",
+   "endDate": "2026-11-29",
+   "place": "alcoutim",
+   "municipality": "Alcoutim",
+   "evidence": [
+    {
+     "url": "https://algarvecircle.com/events/alut-algarviana-ultra-trail-2026-8th-edition-2026-11-26",
+     "host": "algarvecircle.com",
+     "readable": false,
+     "register": "algarvecircle"
+    },
+    {
+     "url": "https://gotrail.run/en/event/alut-algarviana-ultra-trail",
+     "host": "gotrail.run",
+     "readable": false,
+     "register": null
+    }
+   ],
+   "status": "details withheld",
+   "details_from": null,
+   "details_note": "Details withheld: the sources cited (algarvecircle.com, gotrail.run) are not ones whose terms let us copy them. Organiser: send them to us.",
+   "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "PrompTugal.news",
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+   }
+  }
+ ]
+}
