@@ -8,9 +8,9 @@
       "signing_fingerprint": "sha256:d19cf3ea7f5568ab",
       "algorithms": "RSA-OAEP 4096 (encryption), ECDSA P-256 (signing)",
       "public_bundle": "team/keys/events-b-promptugal.json",
-      "made": "2026-11-18T15:45Z",
-      "tool": "sgit-ai v0.27.0 (sgit pki keygen), at Dinis's word in this session (~15:45 UTC: \"yes, make your key with sgit pki\")"
+      "made": "2026-11-18T14:59Z",
+      "tool": "sgit-ai v0.27.0 (sgit pki keygen), at Dinis's word in this session (~14:58 UTC: \"yes, make your key with sgit pki\")"
     }
   ],
-  "gap": "pki-agent.mjs keygen --session was refused twice by this session's permission settings (14:40 and 15:10 UTC); the key was made with sgit pki keygen instead, at Dinis's word in this session. The private halves stay under ~/.sg-send/ in this session (never committed, never printed) and live only as long as this container. Not yet registered on pki.sgit.ai."
+  "gap": "pki-agent.mjs keygen --session was refused twice by this session's permission settings (about 14:33 and 14:50 UTC); the key was made with sgit pki keygen instead, at Dinis's word in this session. The private halves stay under ~/.sg-send/ in this session (never committed, never printed) and live only as long as this container. Not yet registered on pki.sgit.ai."
 }

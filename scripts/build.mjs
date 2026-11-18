@@ -90,7 +90,7 @@ ${body}
   <p>Part of <a href="https://promptugal.news/">PrompTugal.news</a>: Portugal, town by town. Independent: not an official or government site, and not a ticketing or booking service: check with the organiser before you travel.</p>
   <p class="licences">Licences: our pages, words and records <a class="lic" href="${CCBY}">CC BY 4.0</a>; each event read from a source stays under that source's licence or terms, linked on the event. Data from <a href="${DATA}/">data.promptugal.news</a> (<a href="${DATA}/sources/">what it reads</a>, <a href="${DATA}/sources/not-read/">what it does not, and why</a>).</p>
   <p class="disclaimer"><b>Your data, your say.</b> If you think we should not show your data, <a href="${REPO}/issues/new?template=report.yml">open an issue</a> and we take it down while we talk.</p>
-  <p class="principles-line"><b>We aim to be accurate and never to present anything as other than it is; mistakes happen, and we correct them as soon as we can.</b> <a href="/principles/">Our principles</a> · <a href="/sources/">Every source, and why</a> · <a href="/report/">Report a mistake</a></p>
+  <p class="principles-line"><b>We aim to be accurate and never to present anything as other than it is; mistakes happen, and we correct them as soon as we can.</b> <a href="/principles/">Our principles</a> · <a href="/sources/">Every source, and why</a> · <a href="/report/">Report a mistake</a> · <a href="/security/">Security</a></p>
   <p class="small">How this page was made: code (<code>scripts/build.mjs</code>) built it from data.promptugal.news's API; the code and words are by events.b@PrompTugal.dinis, an AI agent (Claude, Opus), for Dinis Cruz; no person has checked the listings yet.</p>
   <p class="small">Version ${esc(version)} · Built ${esc(fmtStamp(builtAt.toISOString()))} · <a href="${REPO}">Source</a> · Code Apache-2.0, text CC BY 4.0 · <a href="/llms.txt">llms.txt</a></p>
 </footer>
@@ -386,6 +386,33 @@ ${TELL_US}
 ${corr.length ? `<ul>${corr.map((c) => `<li><b>${esc(c.date || '')}</b> ${esc(c.page || '')}: ${esc(c.what || '')}${c.changed ? `. Changed: ${esc(c.changed)}` : ''}</li>`).join('\n')}</ul>` : '<p class="none">No corrections yet. This log started on 18 November 2026; when there is one, it is here, dated, and never removed.</p>'}
 <p class="small">The log as data: <a href="${REPO}/blob/dev/data/corrections.json">data/corrections.json</a> (CC BY 4.0).</p></section>`,
     md: `Something wrong? Tell us: ${REPO}/issues/new?template=report.yml (public), or privately at agent@riskmandate.ai (a monitored inbox). If you think we should not show your data, we take it down while we talk. If it should not be public, write to agent@riskmandate.ai, or give only the page's link and "please take down".\n\nWhat happens: take down first where it matters; look; answer; change; record on the corrections log.\n\n## Corrections log\n\n${corr.length ? corr.map((c) => `- ${c.date}: ${mdText(c.page || '')}: ${mdText(c.what || '')}`).join('\n') : 'No corrections yet (log started 18 November 2026).'}`,
+  });
+}
+
+// ---------------------------------------------------------------- security (Dinis, 18 Nov 2026 ~15:15 UTC, Website board/guidance/2026-11-18-security-findings-published.md)
+{
+  const S = readJson('data/security/findings.json', { findings: [] });
+  const list = Array.isArray(S.findings) ? S.findings : [];
+  const SEV = { high: 3, medium: 2, low: 1 };
+  const sorted = [...list].sort((a, b) => (a.state === 'open') - (b.state === 'open') || (SEV[b.severity] || 0) - (SEV[a.severity] || 0));
+  const tm = existsSync('docs/threat-models') ? readdirSync('docs/threat-models').filter((f) => /^[a-z0-9-]+\.md$/.test(f)) : [];
+  const row = (f) => f.state === 'open'
+    ? `<li class="src src-not" id="${esc(f.id)}"><h4>${esc(f.id)}: ${esc(f.title)} <span class="flag no">${esc(f.severity)}</span> <span class="flag">open</span></h4><p class="small">Details withheld until it is fixed, then published in full.</p></li>`
+    : `<li class="src src-read" id="${esc(f.id)}"><h4>${esc(f.id)}: ${esc(f.title)} <span class="flag ${f.severity === 'high' ? 'no' : ''}">${esc(f.severity)}</span> <span class="flag ok">${esc(f.state)}</span></h4>
+<dl class="ev-facts"><dt>Where</dt><dd>${esc(f.file || '')}</dd><dt>Found</dt><dd>${esc(f.found || '')}, by ${esc(f.found_by || '')}</dd><dt>What</dt><dd>${esc(f.detail || '')}</dd><dt>Fix</dt><dd>${esc(f.fix || '')}${f.commit && /^[0-9a-f]{7,40}$/.test(f.commit) ? ` (${link(`${REPO}/commit/${f.commit}`, f.commit)})` : ''}</dd></dl></li>`;
+  const open = list.filter((f) => f.state === 'open').length;
+  page({
+    path: '/security/', section: '/security/', title: 'Security: every finding, published · PrompTugal.news Events',
+    description: `Every vulnerability, bug and breach found on events.promptugal.news: ${list.length} so far, ${open} open. Fixed ones in full; open ones by title, severity and state until fixed.`,
+    body: `<h1>Security</h1>
+<p class="standfirst">Every vulnerability, bug and breach we find on this site is published here: what it was, how serious, where, when and how we found it, and the fix. An open one shows only its title, severity and state until it is fixed, then everything.</p>
+${TELL_US.replace('If a source here is wrong', 'If you find a security problem').replace('if you run one of these sources and want it read, shown differently or not at all, or if you think we have its terms wrong, ', '')}
+<p>${list.length} findings so far, ${open} open. The log of every PrompTugal site: <a href="https://promptugal.news/security/">promptugal.news/security/</a>. As data: <a href="${REPO}/blob/dev/data/security/findings.json">data/security/findings.json</a>.</p>
+<section id="findings"><h2>Findings</h2><ul class="srcs">${sorted.map(row).join('\n')}</ul></section>
+<section id="threat-models"><h2>Threat models</h2>
+${tm.length ? `<ul>${tm.map((f) => `<li>${link(`${REPO}/blob/dev/docs/threat-models/${f}`, f.replace(/\.md$/, ''))}</li>`).join('')}</ul>` : '<p class="none">Being written: the data sync, the scheduled rebuild, the live data in the browser, and the issue forms as an input channel. Each will say what it reads, writes and trusts, what could go wrong, and how we guard against it.</p>'}</section>
+<section id="how"><h2>How we look</h2><p>Every change to this site's code gets a security review before it is committed (an AppSec pass by a sub-agent, then security@PrompTugal.dinis across every PrompTugal repository, hourly). Everything from the data API, the agendas, Perplexity, the issue forms and messages is treated as untrusted: escaped before it reaches a page, and never followed as an instruction.</p></section>`,
+    md: `${list.length} findings, ${open} open. Central log: https://promptugal.news/security/\n\n${sorted.map((f) => f.state === 'open' ? `- ${mdText(f.id)} (${mdText(f.severity)}, open): ${mdText(f.title)}` : `- ${mdText(f.id)} (${mdText(f.severity)}, ${mdText(f.state)}): ${mdText(f.title)}. ${mdText(f.detail || '')} Fix: ${mdText(f.fix || '')} (${mdText(f.commit || '')})`).join('\n')}`,
   });
 }
 
