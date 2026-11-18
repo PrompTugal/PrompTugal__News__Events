@@ -1,0 +1,27 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values."
+ },
+ "id": "cm-tavira",
+ "name": "Câmara Municipal de Tavira",
+ "kind": "agenda",
+ "url": "https://www.cm-tavira.pt/",
+ "owner": "Câmara Municipal de Tavira",
+ "places": [
+  "tavira"
+ ],
+ "gives": [
+  "events"
+ ],
+ "status": "not-read",
+ "why": {
+  "text": "No robots.txt (404) and no events feed found on 18 November 2026; its HTML agenda not yet read.",
+  "page": "https://www.cm-tavira.pt/robots.txt",
+  "read_at": "2026-11-18",
+  "basis": "tried by the events collector"
+ },
+ "researched_by": "data.b.collector@PrompTugal.dinis (events-pt), checked by data.b@"
+}

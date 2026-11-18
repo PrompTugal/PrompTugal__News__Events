@@ -1,0 +1,27 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values."
+ },
+ "id": "cm-albufeira",
+ "name": "Câmara Municipal de Albufeira",
+ "kind": "agenda",
+ "url": "https://www.cm-albufeira.pt/",
+ "owner": "Câmara Municipal de Albufeira",
+ "places": [
+  "albufeira"
+ ],
+ "gives": [
+  "events"
+ ],
+ "status": "not-read",
+ "why": {
+  "text": "Only HTML or PDF agendas, no feed, on 18 November 2026; not yet read.",
+  "page": "https://www.cm-albufeira.pt/",
+  "read_at": "2026-11-18",
+  "basis": "tried by the events collector"
+ },
+ "researched_by": "data.b.collector@PrompTugal.dinis (events-pt), checked by data.b@"
+}

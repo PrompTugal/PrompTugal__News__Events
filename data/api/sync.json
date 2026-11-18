@@ -1,208 +1,433 @@
 {
  "about": "When this site last read each file from data.promptugal.news, and what failed. Written by scripts/sync-data.mjs.",
- "started": "2026-11-18T14:36:08.137Z",
+ "started": "2026-11-18T14:43:25.564Z",
  "read": [
   {
    "path": "events/by-place/index.json",
    "file": "data/api/index.json",
-   "at": "2026-11-18T14:36:08.377Z"
+   "at": "2026-11-18T14:43:26.067Z"
   },
   {
    "path": "events/claims/by-place/index.json",
    "file": "data/api/claims-index.json",
-   "at": "2026-11-18T14:36:08.722Z"
+   "at": "2026-11-18T14:43:26.435Z"
   },
   {
    "path": "events/by-place/albufeira.json",
    "file": "data/api/by-place/albufeira.json",
-   "at": "2026-11-18T14:36:09.069Z"
+   "at": "2026-11-18T14:43:26.792Z"
   },
   {
    "path": "events/by-place/alcoutim.json",
    "file": "data/api/by-place/alcoutim.json",
-   "at": "2026-11-18T14:36:09.418Z"
+   "at": "2026-11-18T14:43:27.219Z"
   },
   {
    "path": "events/by-place/algarve.json",
    "file": "data/api/by-place/algarve.json",
-   "at": "2026-11-18T14:36:09.764Z"
+   "at": "2026-11-18T14:43:27.585Z"
   },
   {
    "path": "events/by-place/aljezur.json",
    "file": "data/api/by-place/aljezur.json",
-   "at": "2026-11-18T14:36:10.122Z"
+   "at": "2026-11-18T14:43:27.941Z"
   },
   {
    "path": "events/by-place/castro-marim.json",
    "file": "data/api/by-place/castro-marim.json",
-   "at": "2026-11-18T14:36:10.472Z"
+   "at": "2026-11-18T14:43:28.299Z"
   },
   {
    "path": "events/by-place/faro.json",
    "file": "data/api/by-place/faro.json",
-   "at": "2026-11-18T14:36:10.832Z"
+   "at": "2026-11-18T14:43:28.649Z"
   },
   {
    "path": "events/by-place/lagoa.json",
    "file": "data/api/by-place/lagoa.json",
-   "at": "2026-11-18T14:36:11.165Z"
+   "at": "2026-11-18T14:43:29.007Z"
   },
   {
    "path": "events/by-place/lagos.json",
    "file": "data/api/by-place/lagos.json",
-   "at": "2026-11-18T14:36:11.483Z"
+   "at": "2026-11-18T14:43:29.362Z"
   },
   {
    "path": "events/by-place/lisboa.json",
    "file": "data/api/by-place/lisboa.json",
-   "at": "2026-11-18T14:36:11.800Z"
+   "at": "2026-11-18T14:43:29.743Z"
   },
   {
    "path": "events/by-place/loule.json",
    "file": "data/api/by-place/loule.json",
-   "at": "2026-11-18T14:36:12.123Z"
+   "at": "2026-11-18T14:43:30.093Z"
   },
   {
    "path": "events/by-place/monchique.json",
    "file": "data/api/by-place/monchique.json",
-   "at": "2026-11-18T14:36:12.442Z"
+   "at": "2026-11-18T14:43:30.442Z"
   },
   {
    "path": "events/by-place/olhao.json",
    "file": "data/api/by-place/olhao.json",
-   "at": "2026-11-18T14:36:12.759Z"
+   "at": "2026-11-18T14:43:30.794Z"
   },
   {
    "path": "events/by-place/portimao.json",
    "file": "data/api/by-place/portimao.json",
-   "at": "2026-11-18T14:36:13.076Z"
+   "at": "2026-11-18T14:43:31.142Z"
   },
   {
    "path": "events/by-place/quarteira.json",
    "file": "data/api/by-place/quarteira.json",
-   "at": "2026-11-18T14:36:13.393Z"
+   "at": "2026-11-18T14:43:31.491Z"
   },
   {
    "path": "events/by-place/sao-bras-de-alportel.json",
    "file": "data/api/by-place/sao-bras-de-alportel.json",
-   "at": "2026-11-18T14:36:13.709Z"
+   "at": "2026-11-18T14:43:31.851Z"
   },
   {
    "path": "events/by-place/silves.json",
    "file": "data/api/by-place/silves.json",
-   "at": "2026-11-18T14:36:14.028Z"
+   "at": "2026-11-18T14:43:32.214Z"
   },
   {
    "path": "events/by-place/tavira.json",
    "file": "data/api/by-place/tavira.json",
-   "at": "2026-11-18T14:36:14.345Z"
+   "at": "2026-11-18T14:43:32.561Z"
   },
   {
    "path": "events/by-place/vila-do-bispo.json",
    "file": "data/api/by-place/vila-do-bispo.json",
-   "at": "2026-11-18T14:36:14.664Z"
+   "at": "2026-11-18T14:43:32.909Z"
   },
   {
    "path": "events/by-place/vila-real-de-santo-antonio.json",
    "file": "data/api/by-place/vila-real-de-santo-antonio.json",
-   "at": "2026-11-18T14:36:14.980Z"
+   "at": "2026-11-18T14:43:33.266Z"
   },
   {
    "path": "events/claims/by-place/albufeira.json",
    "file": "data/api/claims/albufeira.json",
-   "at": "2026-11-18T14:36:15.330Z"
+   "at": "2026-11-18T14:43:33.617Z"
   },
   {
    "path": "events/claims/by-place/alcoutim.json",
    "file": "data/api/claims/alcoutim.json",
-   "at": "2026-11-18T14:36:15.678Z"
+   "at": "2026-11-18T14:43:33.997Z"
   },
   {
    "path": "events/claims/by-place/aljezur.json",
    "file": "data/api/claims/aljezur.json",
-   "at": "2026-11-18T14:36:16.027Z"
+   "at": "2026-11-18T14:43:34.463Z"
   },
   {
    "path": "events/claims/by-place/castro-marim.json",
    "file": "data/api/claims/castro-marim.json",
-   "at": "2026-11-18T14:36:16.373Z"
+   "at": "2026-11-18T14:43:34.817Z"
   },
   {
    "path": "events/claims/by-place/faro.json",
    "file": "data/api/claims/faro.json",
-   "at": "2026-11-18T14:36:16.721Z"
+   "at": "2026-11-18T14:43:35.167Z"
   },
   {
    "path": "events/claims/by-place/lagoa.json",
    "file": "data/api/claims/lagoa.json",
-   "at": "2026-11-18T14:36:17.038Z"
+   "at": "2026-11-18T14:43:35.529Z"
   },
   {
    "path": "events/claims/by-place/lagos.json",
    "file": "data/api/claims/lagos.json",
-   "at": "2026-11-18T14:36:17.354Z"
+   "at": "2026-11-18T14:43:35.876Z"
   },
   {
    "path": "events/claims/by-place/lisboa.json",
    "file": "data/api/claims/lisboa.json",
-   "at": "2026-11-18T14:36:17.688Z"
+   "at": "2026-11-18T14:43:36.252Z"
   },
   {
    "path": "events/claims/by-place/loule.json",
    "file": "data/api/claims/loule.json",
-   "at": "2026-11-18T14:36:18.003Z"
+   "at": "2026-11-18T14:43:36.608Z"
   },
   {
    "path": "events/claims/by-place/monchique.json",
    "file": "data/api/claims/monchique.json",
-   "at": "2026-11-18T14:36:18.321Z"
+   "at": "2026-11-18T14:43:36.979Z"
   },
   {
    "path": "events/claims/by-place/olhao.json",
    "file": "data/api/claims/olhao.json",
-   "at": "2026-11-18T14:36:18.637Z"
+   "at": "2026-11-18T14:43:37.331Z"
   },
   {
    "path": "events/claims/by-place/portimao.json",
    "file": "data/api/claims/portimao.json",
-   "at": "2026-11-18T14:36:18.954Z"
+   "at": "2026-11-18T14:43:37.686Z"
   },
   {
    "path": "events/claims/by-place/quarteira.json",
    "file": "data/api/claims/quarteira.json",
-   "at": "2026-11-18T14:36:19.271Z"
+   "at": "2026-11-18T14:43:38.040Z"
   },
   {
    "path": "events/claims/by-place/sao-bras-de-alportel.json",
    "file": "data/api/claims/sao-bras-de-alportel.json",
-   "at": "2026-11-18T14:36:19.589Z"
+   "at": "2026-11-18T14:43:38.390Z"
   },
   {
    "path": "events/claims/by-place/silves.json",
    "file": "data/api/claims/silves.json",
-   "at": "2026-11-18T14:36:19.907Z"
+   "at": "2026-11-18T14:43:38.744Z"
   },
   {
    "path": "events/claims/by-place/tavira.json",
    "file": "data/api/claims/tavira.json",
-   "at": "2026-11-18T14:36:20.224Z"
+   "at": "2026-11-18T14:43:39.120Z"
   },
   {
    "path": "events/claims/by-place/vila-do-bispo.json",
    "file": "data/api/claims/vila-do-bispo.json",
-   "at": "2026-11-18T14:36:20.539Z"
+   "at": "2026-11-18T14:43:39.473Z"
   },
   {
    "path": "events/claims/by-place/vila-real-de-santo-antonio.json",
    "file": "data/api/claims/vila-real-de-santo-antonio.json",
-   "at": "2026-11-18T14:36:20.857Z"
+   "at": "2026-11-18T14:43:39.824Z"
+  },
+  {
+   "path": "sources/index.json",
+   "file": "data/api/sources/index.json",
+   "at": "2026-11-18T14:43:40.173Z"
+  },
+  {
+   "path": "sources/adsb-faro.json",
+   "file": "data/api/sources/adsb-faro.json",
+   "at": "2026-11-18T14:43:40.524Z"
+  },
+  {
+   "path": "sources/algarveatlas.json",
+   "file": "data/api/sources/algarveatlas.json",
+   "at": "2026-11-18T14:43:40.882Z"
+  },
+  {
+   "path": "sources/algarvecircle.json",
+   "file": "data/api/sources/algarvecircle.json",
+   "at": "2026-11-18T14:43:41.258Z"
+  },
+  {
+   "path": "sources/ana.json",
+   "file": "data/api/sources/ana.json",
+   "at": "2026-11-18T14:43:41.610Z"
+  },
+  {
+   "path": "sources/ansr.json",
+   "file": "data/api/sources/ansr.json",
+   "at": "2026-11-18T14:43:43.950Z"
+  },
+  {
+   "path": "sources/aps-algarve.json",
+   "file": "data/api/sources/aps-algarve.json",
+   "at": "2026-11-18T14:43:44.304Z"
+  },
+  {
+   "path": "sources/bluesky.json",
+   "file": "data/api/sources/bluesky.json",
+   "at": "2026-11-18T14:43:44.652Z"
+  },
+  {
+   "path": "sources/ccdr-algarve.json",
+   "file": "data/api/sources/ccdr-algarve.json",
+   "at": "2026-11-18T14:43:45.071Z"
+  },
+  {
+   "path": "sources/cm-albufeira.json",
+   "file": "data/api/sources/cm-albufeira.json",
+   "at": "2026-11-18T14:43:45.455Z"
+  },
+  {
+   "path": "sources/cm-castromarim.json",
+   "file": "data/api/sources/cm-castromarim.json",
+   "at": "2026-11-18T14:43:45.807Z"
+  },
+  {
+   "path": "sources/cm-faro.json",
+   "file": "data/api/sources/cm-faro.json",
+   "at": "2026-11-18T14:43:46.185Z"
+  },
+  {
+   "path": "sources/cm-lisboa-open-data.json",
+   "file": "data/api/sources/cm-lisboa-open-data.json",
+   "at": "2026-11-18T14:43:46.543Z"
+  },
+  {
+   "path": "sources/cm-loule.json",
+   "file": "data/api/sources/cm-loule.json",
+   "at": "2026-11-18T14:43:46.893Z"
+  },
+  {
+   "path": "sources/cm-portimao.json",
+   "file": "data/api/sources/cm-portimao.json",
+   "at": "2026-11-18T14:43:47.241Z"
+  },
+  {
+   "path": "sources/cm-silves.json",
+   "file": "data/api/sources/cm-silves.json",
+   "at": "2026-11-18T14:43:47.589Z"
+  },
+  {
+   "path": "sources/cm-tavira.json",
+   "file": "data/api/sources/cm-tavira.json",
+   "at": "2026-11-18T14:43:47.941Z"
+  },
+  {
+   "path": "sources/cp.json",
+   "file": "data/api/sources/cp.json",
+   "at": "2026-11-18T14:43:48.299Z"
+  },
+  {
+   "path": "sources/eventbrite.json",
+   "file": "data/api/sources/eventbrite.json",
+   "at": "2026-11-18T14:43:48.667Z"
+  },
+  {
+   "path": "sources/events-pt.json",
+   "file": "data/api/sources/events-pt.json",
+   "at": "2026-11-18T14:43:49.090Z"
+  },
+  {
+   "path": "sources/google-news.json",
+   "file": "data/api/sources/google-news.json",
+   "at": "2026-11-18T14:43:49.440Z"
+  },
+  {
+   "path": "sources/ipma-city-forecasts.json",
+   "file": "data/api/sources/ipma-city-forecasts.json",
+   "at": "2026-11-18T14:43:49.807Z"
+  },
+  {
+   "path": "sources/ipma-fire-risk.json",
+   "file": "data/api/sources/ipma-fire-risk.json",
+   "at": "2026-11-18T14:43:50.158Z"
+  },
+  {
+   "path": "sources/ipma-observations.json",
+   "file": "data/api/sources/ipma-observations.json",
+   "at": "2026-11-18T14:43:50.507Z"
+  },
+  {
+   "path": "sources/ipma-sea.json",
+   "file": "data/api/sources/ipma-sea.json",
+   "at": "2026-11-18T14:43:50.872Z"
+  },
+  {
+   "path": "sources/ipma-uv.json",
+   "file": "data/api/sources/ipma-uv.json",
+   "at": "2026-11-18T14:43:51.235Z"
+  },
+  {
+   "path": "sources/ipma-warnings.json",
+   "file": "data/api/sources/ipma-warnings.json",
+   "at": "2026-11-18T14:43:51.599Z"
+  },
+  {
+   "path": "sources/linkedin.json",
+   "file": "data/api/sources/linkedin.json",
+   "at": "2026-11-18T14:43:51.955Z"
+  },
+  {
+   "path": "sources/lisboa-pt.json",
+   "file": "data/api/sources/lisboa-pt.json",
+   "at": "2026-11-18T14:43:52.308Z"
+  },
+  {
+   "path": "sources/luma.json",
+   "file": "data/api/sources/luma.json",
+   "at": "2026-11-18T14:43:52.673Z"
+  },
+  {
+   "path": "sources/mastodon.json",
+   "file": "data/api/sources/mastodon.json",
+   "at": "2026-11-18T14:43:53.023Z"
+  },
+  {
+   "path": "sources/meetup.json",
+   "file": "data/api/sources/meetup.json",
+   "at": "2026-11-18T14:43:53.378Z"
+  },
+  {
+   "path": "sources/meta.json",
+   "file": "data/api/sources/meta.json",
+   "at": "2026-11-18T14:43:53.753Z"
+  },
+  {
+   "path": "sources/meteoalarm-pt.json",
+   "file": "data/api/sources/meteoalarm-pt.json",
+   "at": "2026-11-18T14:43:54.113Z"
+  },
+  {
+   "path": "sources/perplexity.json",
+   "file": "data/api/sources/perplexity.json",
+   "at": "2026-11-18T14:43:54.468Z"
+  },
+  {
+   "path": "sources/sideevents-guide.json",
+   "file": "data/api/sources/sideevents-guide.json",
+   "at": "2026-11-18T14:43:54.834Z"
+  },
+  {
+   "path": "sources/storm-charles-archive.json",
+   "file": "data/api/sources/storm-charles-archive.json",
+   "at": "2026-11-18T14:43:55.187Z"
+  },
+  {
+   "path": "sources/tiktok.json",
+   "file": "data/api/sources/tiktok.json",
+   "at": "2026-11-18T14:43:55.559Z"
+  },
+  {
+   "path": "sources/turismo-portugal.json",
+   "file": "data/api/sources/turismo-portugal.json",
+   "at": "2026-11-18T14:43:55.906Z"
+  },
+  {
+   "path": "sources/ualg.json",
+   "file": "data/api/sources/ualg.json",
+   "at": "2026-11-18T14:43:56.273Z"
+  },
+  {
+   "path": "sources/visitalgarve.json",
+   "file": "data/api/sources/visitalgarve.json",
+   "at": "2026-11-18T14:43:56.623Z"
+  },
+  {
+   "path": "sources/visitlisboa.json",
+   "file": "data/api/sources/visitlisboa.json",
+   "at": "2026-11-18T14:43:56.973Z"
+  },
+  {
+   "path": "sources/x-twitter.json",
+   "file": "data/api/sources/x-twitter.json",
+   "at": "2026-11-18T14:43:57.323Z"
+  },
+  {
+   "path": "sources/youtube.json",
+   "file": "data/api/sources/youtube.json",
+   "at": "2026-11-18T14:43:57.679Z"
+  },
+  {
+   "path": "sources/gaps.json",
+   "file": "data/api/sources/gaps.json",
+   "at": "2026-11-18T14:43:58.039Z"
   },
   {
    "path": "events-pt/latest.json",
    "file": "data/api/events-pt.json",
-   "at": "2026-11-18T14:36:21.175Z"
+   "at": "2026-11-18T14:43:58.395Z"
   }
  ],
  "failed": [],
- "finished": "2026-11-18T14:36:21.475Z"
+ "finished": "2026-11-18T14:43:58.695Z"
 }

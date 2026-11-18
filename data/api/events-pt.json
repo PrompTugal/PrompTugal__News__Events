@@ -7,11 +7,11 @@
  },
  "source": "events-pt",
  "title": "Events in Portugal, by place",
- "read_at": "2026-11-18T14:33:19Z",
+ "read_at": "2026-11-18T14:40:08Z",
  "provenance": {
   "source": "https://www.agendalx.pt/wp-json/agendalx/v1/events?per_page=50",
   "page": "https://www.agendalx.pt/",
-  "read_at": "2026-11-18T14:33:19Z",
+  "read_at": "2026-11-18T14:40:08Z",
   "by": "sources/events-pt/collect.mjs (code, no model; run by data.b@PrompTugal.dinis)",
   "terms": "Strictest of the sources: no reuse licence or terms page was found for either host. Both robots.txt files allow the paths read; agendalx.pt sets Content-Signal search=yes, ai-train=no, use=reference. So: reference use only, name the source, link to the event, no AI training. Not reviewed by a person: whether this is enough to republish is for Dinis.",
   "sources": [
@@ -83,7 +83,7 @@
   {
    "host": "www.agendalx.pt",
    "why": "events route HTTP 403",
-   "read_at": "2026-11-18T14:33:23Z"
+   "read_at": "2026-11-18T14:40:13Z"
   }
  ]
 }

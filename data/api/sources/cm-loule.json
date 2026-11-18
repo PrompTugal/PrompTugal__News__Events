@@ -1,0 +1,39 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values."
+ },
+ "id": "cm-loule",
+ "name": "Câmara Municipal de Loulé",
+ "kind": "public body",
+ "url": "https://www.cm-loule.pt/",
+ "owner": "Câmara Municipal de Loulé",
+ "places": [
+  "algarve",
+  "loule"
+ ],
+ "gives": [
+  "events",
+  "notices"
+ ],
+ "status": "not-read",
+ "why": {
+  "quote": "upstream connect error or disconnect/reset before headers. retried and the latest reset reason: remote reset",
+  "quote_lang": "en",
+  "page": "https://www.cm-loule.pt/robots.txt",
+  "read_at": "2026-11-18",
+  "basis": "could not read (HTTP 503, connection reset, tried twice)"
+ },
+ "interface": null,
+ "contact_channel": null,
+ "notes": "Retry later.",
+ "researched_by": "data.b.collector@PrompTugal.dinis (Sonnet), checked by data.b@",
+ "cited_by": {
+  "claims": 1,
+  "places": [
+   "loule"
+  ]
+ }
+}

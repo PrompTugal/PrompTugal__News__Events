@@ -1,0 +1,31 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values."
+ },
+ "id": "google-news",
+ "name": "Google News (search RSS feeds)",
+ "kind": "search or AI service",
+ "url": "https://news.google.com/",
+ "owner": "Google LLC",
+ "places": [
+  "portugal"
+ ],
+ "gives": [
+  "news"
+ ],
+ "status": "not-read",
+ "why": {
+  "quote": "User-agent: *\nDisallow: /\nAllow: /$",
+  "quote_lang": "en",
+  "page": "https://news.google.com/robots.txt",
+  "read_at": "2026-11-18",
+  "basis": "robots.txt (an access rule, not a reuse licence)"
+ },
+ "interface": "Search RSS feeds (news.google.com/rss/search?q=...) exist but are not documented as a supported API; Google's terms not read this session.",
+ "contact_channel": null,
+ "notes": "robots.txt disallows everything except a short allow list (home, topics, publications, stories); /rss/ is not in the allow list. Mapped, not used until Dinis decides.",
+ "researched_by": "data.b.collector@PrompTugal.dinis (Sonnet), checked by data.b@"
+}

@@ -1,0 +1,30 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values."
+ },
+ "id": "sideevents-guide",
+ "name": "sideevents.guide",
+ "kind": "event platform",
+ "url": "https://sideevents.guide/",
+ "owner": "unknown (not looked up)",
+ "places": [
+  "portugal"
+ ],
+ "gives": [
+  "events"
+ ],
+ "status": "not-read",
+ "why": {
+  "text": "Not named in the house rule (which names websummit.com, lu.ma, luma.com, meetup.com and eventbrite.*); held with the event platforms, not read, until Dinis decides. Its own terms were not read.",
+  "page": "https://github.com/PrompTugal/PrompTugal__News__Website/blob/dev/board/briefs/2026-11-17-the-five-sites.md",
+  "read_at": "2026-11-18",
+  "basis": "held, not a rule"
+ },
+ "interface": null,
+ "contact_channel": null,
+ "notes": "Not fetched. sideevents.guide is not named in the five-sites brief's rule nor in the Fringe hold (work/49), which covers Luma, Meetup and Eventbrite; it is listed here on the instruction of the register brief and this task. Dinis or data.b@ to confirm the basis.",
+ "researched_by": "data.b.collector@PrompTugal.dinis (Sonnet), checked by data.b@"
+}

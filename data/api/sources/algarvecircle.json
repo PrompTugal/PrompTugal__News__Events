@@ -1,0 +1,47 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values."
+ },
+ "id": "algarvecircle",
+ "name": "Algarve Circle",
+ "kind": "events guide",
+ "url": "https://algarvecircle.com/",
+ "owner": "Algarve Circle (operator not confirmed)",
+ "places": [
+  "algarve"
+ ],
+ "gives": [
+  "events"
+ ],
+ "status": "not-read",
+ "why": {
+  "text": "Its robots.txt request got HTTP 429 and a 'Vercel Security Checkpoint' bot-check page on 18 November 2026. Respected, not worked around; no terms or feed could be read.",
+  "page": "https://algarvecircle.com/robots.txt",
+  "read_at": "2026-11-18",
+  "basis": "bot check (access refused to automated clients)"
+ },
+ "interface": null,
+ "contact_channel": null,
+ "notes": "Retry later; if the check stays, ask the organisation through its own published channel (drafted by outreach@, sent by a person).",
+ "researched_by": "data.b.collector@PrompTugal.dinis (Sonnet), checked by data.b@",
+ "cited_by": {
+  "claims": 47,
+  "places": [
+   "alcoutim",
+   "faro",
+   "lagoa",
+   "lagos",
+   "loule",
+   "monchique",
+   "olhao",
+   "quarteira",
+   "sao-bras-de-alportel",
+   "tavira",
+   "vila-do-bispo",
+   "vila-real-de-santo-antonio"
+  ]
+ }
+}

@@ -6,6 +6,7 @@
 //   data/api/claims-index.json           /api/v1/events/claims/by-place/index.json
 //   data/api/claims/<place>.json         /api/v1/events/claims/by-place/<place>.json (found through Perplexity)
 //   data/api/events-pt.json              /api/v1/events-pt/latest.json: provenance, counts and gaps only (not the events again)
+//   data/api/sources/            /api/v1/sources/index.json, /api/v1/sources/<id>.json and /api/v1/sources/gaps.json (the register)
 //   data/api/sync.json                   when each file was read, and what failed
 // On a failed read the last copy in git is kept and the failure is recorded. Node 18+, no dependencies.
 // events.b@PrompTugal.dinis, 18 November 2026. Code: Apache-2.0.
@@ -49,6 +50,10 @@ const claimsIndex = await copy('events/claims/by-place/index.json', 'data/api/cl
 const okId = (p) => /^[a-z0-9-]+$/.test(p) || (log.failed.push({ path: String(p), why: 'not a place id' }), false);
 for (const p of (index?.places || []).map((x) => x.id).filter(okId).sort()) await copy(`events/by-place/${p}.json`, `data/api/by-place/${p}.json`);
 for (const p of (claimsIndex?.places || []).map((x) => x.place).filter(okId).sort()) await copy(`events/claims/by-place/${p}.json`, `data/api/claims/${p}.json`);
+// The sources register (every source, read and not read, and why) and the hosts Perplexity cited that we do not read.
+const register = await copy('sources/index.json', 'data/api/sources/index.json');
+for (const id of (register?.entries || []).map((x) => x.id).filter(okId).sort()) await copy(`sources/${id}.json`, `data/api/sources/${id}.json`);
+await copy('sources/gaps.json', 'data/api/sources/gaps.json');
 await copy('events-pt/latest.json', 'data/api/events-pt.json', (d) => ({ license: d.license, source: d.source, title: d.title, read_at: d.read_at, provenance: d.provenance, about: d.about, counts: d.counts, gaps: d.gaps }));
 log.finished = new Date().toISOString();
 save('data/api/sync.json', log);

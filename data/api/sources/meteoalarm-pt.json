@@ -1,0 +1,28 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values."
+ },
+ "id": "meteoalarm-pt",
+ "name": "MeteoAlarm CAP feed for Portugal",
+ "kind": "open-data API",
+ "url": "https://feeds.meteoalarm.org/api/v1/warnings/feeds-portugal",
+ "owner": "MeteoAlarm (EUMETNET), from IPMA",
+ "places": [
+  "portugal"
+ ],
+ "gives": [
+  "Every CAP warning message in MeteoAlarm's Portugal feed, one line each: area, hazard, level, onset, expiry, time of issue and text, with what appeared or left since the read before."
+ ],
+ "status": "read",
+ "how": "sources/meteoalarm-pt/collect.mjs reads https://feeds.meteoalarm.org/api/v1/warnings/feeds-portugal (hourly)",
+ "terms": {
+  "summary": "MeteoAlarm: re-users must name the national service (IPMA), keep the time of issue, link www.meteoalarm.org and publish MeteoAlarm's disclaimer. latest.json carries all four.",
+  "page": "https://www.meteoalarm.org/en/live/page/terms-and-conditions",
+  "read_at": "2026-11-11"
+ },
+ "on_this_site": "https://data.promptugal.news/sources/meteoalarm-pt/",
+ "collector": "sources/meteoalarm-pt/collect.mjs"
+}

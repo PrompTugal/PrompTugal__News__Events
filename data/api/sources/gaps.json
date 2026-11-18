@@ -1,0 +1,313 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values."
+ },
+ "read_at": "2026-11-18T14:42:19Z",
+ "about": "Every host cited as evidence for an event that this site does not read, with how many claims point to it and in which places. Each is a gap in our sources; the register says why we do not read it.",
+ "hosts": [
+  {
+   "host": "algarvecircle.com",
+   "claims": 47,
+   "places": [
+    "alcoutim",
+    "faro",
+    "lagoa",
+    "lagos",
+    "loule",
+    "monchique",
+    "olhao",
+    "quarteira",
+    "sao-bras-de-alportel",
+    "tavira",
+    "vila-do-bispo",
+    "vila-real-de-santo-antonio"
+   ],
+   "register": "algarvecircle",
+   "example": "https://algarvecircle.com/whats-on/december-2026"
+  },
+  {
+   "host": "algarveatlas.com",
+   "claims": 34,
+   "places": [
+    "albufeira",
+    "faro",
+    "lagoa",
+    "loule",
+    "monchique",
+    "olhao",
+    "portimao",
+    "sao-bras-de-alportel",
+    "silves",
+    "tavira",
+    "vila-do-bispo"
+   ],
+   "register": "algarveatlas",
+   "example": "https://www.algarveatlas.com/en/municipalities/albufeira"
+  },
+  {
+   "host": "cm-castromarim.pt",
+   "claims": 8,
+   "places": [
+    "castro-marim"
+   ],
+   "register": "cm-castromarim",
+   "example": "https://cm-castromarim.pt/site/eventos"
+  },
+  {
+   "host": "theportugalnews.com",
+   "claims": 6,
+   "places": [
+    "faro",
+    "lagoa",
+    "lagos"
+   ],
+   "register": null,
+   "example": "https://www.theportugalnews.com/news/2026-10-22/autumn-festivals-and-events-in-the-algarve/1104742"
+  },
+  {
+   "host": "bailaspot.com",
+   "claims": 5,
+   "places": [
+    "quarteira"
+   ],
+   "register": null,
+   "example": "https://bailaspot.com/portugal/quarteira"
+  },
+  {
+   "host": "taviratimes.com",
+   "claims": 5,
+   "places": [
+    "tavira"
+   ],
+   "register": null,
+   "example": "https://www.taviratimes.com/events"
+  },
+  {
+   "host": "activealgarve.pt",
+   "claims": 4,
+   "places": [
+    "alcoutim",
+    "loule",
+    "quarteira"
+   ],
+   "register": null,
+   "example": "https://activealgarve.pt/events"
+  },
+  {
+   "host": "albufeira.com",
+   "claims": 3,
+   "places": [
+    "albufeira"
+   ],
+   "register": null,
+   "example": "https://albufeira.com/events/regular/"
+  },
+  {
+   "host": "eventos.visitalgarve.pt",
+   "claims": 3,
+   "places": [
+    "aljezur",
+    "sao-bras-de-alportel"
+   ],
+   "register": null,
+   "example": "https://eventos.visitalgarve.pt/en/16443/aljezur-sweet-potato-festival"
+  },
+  {
+   "host": "hostelworld.com",
+   "claims": 3,
+   "places": [
+    "vila-do-bispo"
+   ],
+   "register": null,
+   "example": "https://www.hostelworld.com/events/e/6aee978114b147c7975bef77/burromaquia/"
+  },
+  {
+   "host": "sulinformacao.pt",
+   "claims": 3,
+   "places": [
+    "loule",
+    "monchique",
+    "olhao"
+   ],
+   "register": null,
+   "example": "https://www.sulinformacao.pt/2026/10/afonso-dias-e-o-filho-dinis-cantam-a-liberdade-em-loule/"
+  },
+  {
+   "host": "sustainableliving.pt",
+   "claims": 3,
+   "places": [
+    "sao-bras-de-alportel",
+    "silves"
+   ],
+   "register": null,
+   "example": "https://www.sustainableliving.pt/events/seminar-series-on-rural-spaces-dbc2c9b4"
+  },
+  {
+   "host": "conservatoriodeloule.pt",
+   "claims": 2,
+   "places": [
+    "loule"
+   ],
+   "register": null,
+   "example": "https://conservatoriodeloule.pt/en/events/crescendo-cycle-concert-november-2026/"
+  },
+  {
+   "host": "dailynata.com",
+   "claims": 2,
+   "places": [
+    "lagoa",
+    "olhao"
+   ],
+   "register": null,
+   "example": "https://dailynata.com/whats-on"
+  },
+  {
+   "host": "visitportugal.com",
+   "claims": 2,
+   "places": [
+    "aljezur",
+    "monchique"
+   ],
+   "register": "turismo-portugal",
+   "example": "https://www.visitportugal.com/en/node/525149"
+  },
+  {
+   "host": "algarveaddicts.com",
+   "claims": 1,
+   "places": [
+    "lagoa"
+   ],
+   "register": null,
+   "example": "https://www.algarveaddicts.com/algarve-events-november-2026"
+  },
+  {
+   "host": "algarveholidaytips.com",
+   "claims": 1,
+   "places": [
+    "portimao"
+   ],
+   "register": null,
+   "example": "https://algarveholidaytips.com/events/choque-frontal-ao-vivo-2026-portimao-tempo/"
+  },
+  {
+   "host": "blog.algarve-ferias.com",
+   "claims": 1,
+   "places": [
+    "lagoa"
+   ],
+   "register": null,
+   "example": "https://blog.algarve-ferias.com/en/events/"
+  },
+  {
+   "host": "cm-loule.pt",
+   "claims": 1,
+   "places": [
+    "loule"
+   ],
+   "register": "cm-loule",
+   "example": "https://www.cm-loule.pt/pt/agenda.aspx"
+  },
+  {
+   "host": "ecstatic.events",
+   "claims": 1,
+   "places": [
+    "monchique"
+   ],
+   "register": null,
+   "example": "https://ecstatic.events/popular/portugal/november-2026"
+  },
+  {
+   "host": "europechess.org",
+   "claims": 1,
+   "places": [
+    "portimao"
+   ],
+   "register": null,
+   "example": "https://www.europechess.org/wp-content/uploads/2026/09/Regulations_ERBCC2026.pdf"
+  },
+  {
+   "host": "gotrail.run",
+   "claims": 1,
+   "places": [
+    "alcoutim"
+   ],
+   "register": null,
+   "example": "https://gotrail.run/en/event/alut-algarviana-ultra-trail"
+  },
+  {
+   "host": "ground.news",
+   "claims": 1,
+   "places": [
+    "portimao"
+   ],
+   "register": null,
+   "example": "https://ground.news/article/fairy-gala-of-portimao-honors-helder-marques-and-receives-teresa-tapadas"
+  },
+  {
+   "host": "happeningnext.com",
+   "claims": 1,
+   "places": [
+    "loule"
+   ],
+   "register": null,
+   "example": "https://happeningnext.com/event/wine-and-cheese-experience-eid3a0eavoi6e"
+  },
+  {
+   "host": "jf-quarteira.pt",
+   "claims": 1,
+   "places": [
+    "quarteira"
+   ],
+   "register": null,
+   "example": "https://jf-quarteira.pt/agenda"
+  },
+  {
+   "host": "ma.to",
+   "claims": 1,
+   "places": [
+    "silves"
+   ],
+   "register": null,
+   "example": "https://ma.to/event/jazz-nas-adegas-low-tech-groove-27-nov-2026"
+  },
+  {
+   "host": "portugal-news.today",
+   "claims": 1,
+   "places": [
+    "sao-bras-de-alportel"
+   ],
+   "register": null,
+   "example": "https://www.portugal-news.today/en/article/374719"
+  },
+  {
+   "host": "quintaproperty.com",
+   "claims": 1,
+   "places": [
+    "loule"
+   ],
+   "register": null,
+   "example": "https://quintaproperty.com/whats-on-in-the-algarve-september-october-november-2026/"
+  },
+  {
+   "host": "visitolhao.pt",
+   "claims": 1,
+   "places": [
+    "olhao"
+   ],
+   "register": null,
+   "example": "https://www.visitolhao.pt/agenda"
+  },
+  {
+   "host": "worldsmarathons.com",
+   "claims": 1,
+   "places": [
+    "quarteira"
+   ],
+   "register": null,
+   "example": "https://worldsmarathons.com/fr/marathon/maratona-do-algarve"
+  }
+ ]
+}

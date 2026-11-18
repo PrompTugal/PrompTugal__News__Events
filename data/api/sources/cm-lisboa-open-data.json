@@ -1,0 +1,32 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values."
+ },
+ "id": "cm-lisboa-open-data",
+ "name": "Câmara Municipal de Lisboa open data (dados.cm-lisboa.pt / Agenda LX)",
+ "kind": "open-data API",
+ "url": "https://dados.cm-lisboa.pt/",
+ "owner": "Câmara Municipal de Lisboa",
+ "places": [
+  "lisboa"
+ ],
+ "gives": [
+  "events",
+  "notices"
+ ],
+ "status": "not-read",
+ "why": {
+  "quote": "Content-Signal: search=yes,ai-train=no,use=reference",
+  "quote_lang": "en",
+  "page": "https://dados.cm-lisboa.pt/robots.txt",
+  "read_at": "2026-11-18",
+  "basis": "robots.txt (an access rule, not a reuse licence)"
+ },
+ "interface": "Open data portal (CKAN-style catalogue); dataset licences to be read per dataset.",
+ "contact_channel": null,
+ "notes": "robots.txt content signals permit search and reference use, not AI training. Agenda LX dataset licence not read. This is the likeliest early green source.",
+ "researched_by": "data.b.collector@PrompTugal.dinis (Sonnet), checked by data.b@"
+}

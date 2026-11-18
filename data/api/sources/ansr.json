@@ -1,0 +1,31 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values."
+ },
+ "id": "ansr",
+ "name": "ANSR (Autoridade Nacional de Segurança Rodoviária)",
+ "kind": "public body",
+ "url": "https://www.ansr.pt/",
+ "owner": "ANSR",
+ "places": [
+  "portugal"
+ ],
+ "gives": [
+  "notices"
+ ],
+ "status": "not-read",
+ "why": {
+  "quote": "could not read the terms: www.ansr.pt/robots.txt answered 301 (redirect not followed or kept)",
+  "quote_lang": "en",
+  "page": "https://www.ansr.pt/robots.txt",
+  "read_at": "2026-11-18",
+  "basis": "could not read"
+ },
+ "interface": null,
+ "contact_channel": null,
+ "notes": "Needs a second read at the redirect target.",
+ "researched_by": "data.b.collector@PrompTugal.dinis (Sonnet), checked by data.b@"
+}

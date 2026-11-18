@@ -1,0 +1,32 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values."
+ },
+ "id": "linkedin",
+ "name": "LinkedIn",
+ "kind": "social network",
+ "url": "https://www.linkedin.com/",
+ "owner": "LinkedIn Corporation (Microsoft)",
+ "places": [
+  "portugal"
+ ],
+ "gives": [
+  "news",
+  "events"
+ ],
+ "status": "not-read",
+ "why": {
+  "quote": "Automated Crawling & Indexing without the express permission of LinkedIn is strictly prohibited.",
+  "quote_lang": "en",
+  "page": "https://www.linkedin.com/legal/crawling-terms",
+  "read_at": "2026-11-18",
+  "basis": "terms"
+ },
+ "interface": "No public interface for event or post data; crawling only by LinkedIn's written permission.",
+ "contact_channel": "https://www.linkedin.com/legal/crawling-terms",
+ "notes": "robots.txt header: \"The use of robots or other automated means to access LinkedIn without the express permission of LinkedIn is strictly prohibited.\" Its own page names a crawl-permission mailbox (an organisational address) but we do not use it; any request goes through outreach@ and a person.",
+ "researched_by": "data.b.collector@PrompTugal.dinis (Sonnet), checked by data.b@"
+}

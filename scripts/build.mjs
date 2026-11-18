@@ -132,6 +132,7 @@ function eventHtml(it, { showPlace = false } = {}) {
 <dl class="ev-facts"><dt>When</dt><dd>${esc(fmtWhen(e.startDate, e.endDate))}</dd>${showPlace ? `<dt>Place</dt><dd><a href="/places/${it.place}/">${esc(place)}</a></dd>` : `<dt>Place</dt><dd>${esc(place)}</dd>`}<dt>Venue</dt><dd>${venue}</dd><dt>Organiser</dt><dd>${org}</dd>
 <dt>Evidence</dt><dd>${link(e.url, `the event's page on ${host(e.url) || 'the source'}`)}${sourceUrl(e) ? `; ${link(sourceUrl(e), sourceLabel(e) || 'the list it was read from')}` : ''}; read ${esc(fmtStamp(e.read_at))}</dd>
 <dt>Licence</dt><dd>${licenceHtml(e.license)}</dd></dl>
+<p class="report"><a href="/report/">Something wrong? Tell us</a></p>
 </li>`;
   }
   const ev = (e.evidence || []).filter((x) => okUrl(x.url));
@@ -151,6 +152,7 @@ function eventHtml(it, { showPlace = false } = {}) {
 <dt>Found</dt><dd>through Perplexity${d ? ` (${esc(d.model || 'sonar')}, via ${esc(d.via || 'OpenRouter')}, asked ${esc(fmtStamp(d.asked_at))})` : ''}, by <a href="${DATA}/">data.promptugal.news</a></dd>
 <dt>Licence</dt><dd>${licenceHtml(e.license)}; each evidence link is under its own source's terms</dd></dl>
 ${confirm}
+<p class="report"><a href="/report/">Something wrong? Tell us</a></p>
 </li>`;
 }
 function eventMd(it) {
@@ -184,7 +186,7 @@ function listMd(items) {
 
 // ---------------------------------------------------------------- the page frame
 const SITES = [['Events', 'https://events.promptugal.news/'], ['Weather', 'https://weather.promptugal.news/'], ['Civic', 'https://civic.promptugal.news/'], ['Startups', 'https://startups.promptugal.news/'], ['Travel', 'https://travel.promptugal.news/'], ['Data', 'https://data.promptugal.news/']];
-const NAV = [['/', 'Events'], ['/places/', 'Places'], ['/organisers/', 'Organisers'], ['/how/', 'How it works']];
+const NAV = [['/', 'Events'], ['/places/', 'Places'], ['/sources/', 'Sources'], ['/organisers/', 'Organisers'], ['/how/', 'How it works'], ['/principles/', 'Principles']];
 const pages = []; // [{path, title, md}]
 
 function page({ path, title, description, section, body, md }) {
@@ -217,6 +219,7 @@ ${body}
 <footer class="footer">
   <p>Part of <a href="https://promptugal.news/">PrompTugal.news</a>: Portugal, town by town. Independent: not an official or government site, and not a ticketing or booking service: check with the organiser before you travel.</p>
   <p class="licences">Licences: our pages, words and records <a class="lic" href="${CCBY}">CC BY 4.0</a>; each event read from a source stays under that source's licence or terms, linked on the event. Data from <a href="${DATA}/">data.promptugal.news</a> (<a href="${DATA}/sources/">what it reads</a>, <a href="${DATA}/sources/not-read/">what it does not, and why</a>).</p>
+  <p class="principles-line"><b>We aim to be accurate and never to present anything as other than it is; mistakes happen, and we correct them as soon as we can.</b> <a href="/principles/">Our principles</a> · <a href="/sources/">Every source, and why</a> · <a href="/report/">Report a mistake</a></p>
   <p class="small">How this page was made: code (<code>scripts/build.mjs</code>) built it from data.promptugal.news's API; the code and words are by events.b@PrompTugal.dinis, an AI agent (Claude, Opus), for Dinis Cruz; no person has checked the listings yet.</p>
   <p class="small">Version ${esc(version)} · Built ${esc(fmtStamp(builtAt.toISOString()))} · <a href="${REPO}">Source</a> · Code Apache-2.0, text CC BY 4.0 · <a href="/llms.txt">llms.txt</a></p>
 </footer>
@@ -361,7 +364,7 @@ ${fresh}
 </ol>
 <p>Every cited site we do not read is a gap: data.promptugal.news counts them on <a href="${DATA}/sources/gaps/">the gaps page</a>, and each feeds a request, on the record, asking that site whether it allows a site like this to show its public events (drafted by an agent, sent by a person).</p></section>
 <section><h2>Sources we do not read for events</h2><ul>${gaps || '<li>none recorded</li>'}</ul>
-<p>The whole register: <a href="${DATA}/sources/">every source data.promptugal.news reads</a>, <a href="${DATA}/sources/not-read/">every one it does not, and why</a>, quoting the terms or robots.txt with the date read. We respect what each says. Eventbrite, Luma (lu.ma, luma.com) and Meetup are never read by machine, at Dinis Cruz's word, until he decides otherwise; their listings can appear here only as evidence links.</p></section>
+<p>Every source, read and not, with why and its licence limits, each linkable: <a href="/sources/">our sources page</a>. The whole register on the data site: <a href="${DATA}/sources/">every source data.promptugal.news reads</a>, <a href="${DATA}/sources/not-read/">every one it does not, and why</a>, quoting the terms or robots.txt with the date read. We respect what each says. Eventbrite, Luma (lu.ma, luma.com) and Meetup are never read by machine, at Dinis Cruz's word, until he decides otherwise; their listings can appear here only as evidence links.</p></section>
 <section><h2>Licences</h2>
 <ul><li>What PrompTugal.news makes (these pages, our words, the records and the register) is <a class="lic" href="${CCBY}">CC BY 4.0</a>.</li>
 <li>What we take from someone else stays under their licence: every event, in the JSON and on the page, links its licence, or, where the source publishes none, its terms, as "the source's terms". The agendas read today publish no reuse licence; Lisbon's sets <code>use=reference</code> in its robots.txt, so we name the source and link to each event. Whether that is enough to republish is for Dinis Cruz to decide (<a href="${DATA}/api/v1/events-pt/card.json">the source card</a>).</li>
@@ -376,6 +379,140 @@ ${fresh}
 <p>Each event will link to its <b>place</b>, its <b>venue</b>, its <b>organiser</b> (an organisation), its <b>past editions</b> (an event series: an event is never deleted when it ends, it moves to the series' history), and the <b>companies</b> and public, professional <b>people</b> connected to it. ontologist@ and data.b@ define the graph on data.promptugal.news (<code>/api/v1/graph/</code>, not published yet); this site will show it when it is.</p>
 <p class="small">Today the records give place and venue; the organiser is named only where the agenda names one; past editions and companies are not linked yet.</p></section>`,
     md: `This site runs no collector. Everything comes from ${DATA}/ (data.promptugal.news), which reads public agendas it may read and asks Perplexity once a day per place what is on, keeping every cited link as evidence.\n\n- Read events: details from sources we may read (${sourcesRead.join('; ')}).\n- Found through Perplexity: title, date, place and evidence links only; details withheld.\n- Licences: ours CC BY 4.0; each event under its source's terms.\n- Register: ${DATA}/sources/ and ${DATA}/sources/not-read/; gaps: ${DATA}/sources/gaps/\n- The graph (event, venue, organiser, past editions, places, companies): defined by ontologist@ and data.b@, not published yet.`,
+  });
+}
+
+// ---------------------------------------------------------------- sources, principles, report (Dinis, 18 Nov 2026 ~14:45 UTC,
+// board/guidance/2026-11-18-sources-principles-and-reports.md)
+const TELL_US = `<aside class="tell-us" role="note"><p><b>Tell us, and we change.</b> If a source here is wrong, if you run one of these sources and want it read, shown differently or not at all, or if you think we have its terms wrong, <a href="/report/">tell us</a>. We will look, answer, and change what is wrong, in the open. <a href="/principles/">Our principles</a>.</p></aside>`;
+{
+  const reg = readJson('data/api/sources/index.json', { entries: [] });
+  const gapsF = readJson('data/api/sources/gaps.json', { hosts: [] });
+  const src = reg.entries.map((e) => readJson(`data/api/sources/${e.id}.json`, e)).filter((s) => s && /^[a-z0-9-]+$/.test(s.id || ''));
+  const STATUS = { read: 'read', 'not-read': 'not read', asked: 'asked', allowed: 'allowed', refused: 'refused', 'no-answer': 'no answer' };
+  const givesEvents = (s) => (s.gives || []).some((g) => /event/i.test(g));
+  const placesText = (s) => (s.places || []).map((p) => (p === 'portugal' ? 'Portugal' : nameOf(p))).join(', ');
+  const quote = (w) => (w.quote ? `<blockquote${w.quote_lang ? ` lang="${esc(w.quote_lang)}"` : ''}>${esc(w.quote)}</blockquote>` : w.text ? `<p>${esc(w.text)}</p>` : '');
+  const card = (s) => {
+    const read = s.status === 'read';
+    const w = s.why || {};
+    const limits = read
+      ? `<dt>Licence limits</dt><dd>${esc(s.terms?.summary || 'not recorded')}${s.terms?.page ? ` (${link(s.terms.page, 'read')} ${esc(s.terms.read_at || '')})` : ''}</dd>`
+      : `<dt>Licence limits</dt><dd>We copy nothing from it. At most, its public link appears as evidence beside an event's title, date and place, as a search engine would.</dd>`;
+    const why = read ? '' : `<dt>Why not</dt><dd><span class="basis">${esc(w.basis || 'not recorded')}</span>${quote(w)}<span class="small">${w.page ? link(w.page, 'the page it comes from') : ''}${w.read_at ? `, read ${esc(w.read_at)}` : ''}</span></dd>`;
+    const checks = (s.open_checks || []).map((c) => `<li>${esc(c.question)} <span class="small">(${esc(c.state || '')})</span></li>`).join('');
+    return `<li class="src src-${read ? 'read' : 'not'}" id="${s.id}">
+<h4><a class="anchor" href="#${s.id}" aria-label="Link to this source">#</a> ${link(s.url, s.name)} <span class="flag ${read ? 'ok' : 'no'}">${esc(STATUS[s.status] || s.status)}</span>${givesEvents(s) ? ' <span class="flag">events</span>' : ''}</h4>
+<dl class="ev-facts"><dt>Kind</dt><dd>${esc(s.kind || '')}</dd><dt>Owner</dt><dd>${esc(s.owner || 'not known')}</dd><dt>Places</dt><dd>${esc(placesText(s))}</dd><dt>Would give</dt><dd>${esc((s.gives || []).join('; '))}</dd>
+${read ? `<dt>How we read it</dt><dd>${esc(s.how || '')}${s.on_this_site ? ` (${link(s.on_this_site, 'its card')})` : ''}</dd>` : ''}${why}${limits}
+${!read && s.interface ? `<dt>Interface</dt><dd>${esc(s.interface)}</dd>` : ''}${s.cited_by ? `<dt>Cited by</dt><dd>${s.cited_by.claims} events found through Perplexity, in ${(s.cited_by.places || []).length} places</dd>` : ''}
+<dt>Asked them?</dt><dd>${['asked', 'allowed', 'refused', 'no-answer'].includes(s.status) ? esc(STATUS[s.status]) : 'not yet: a request on the record, through its own published channel, drafted by an agent and sent by a person'}</dd>
+${s.notes ? `<dt>Notes</dt><dd>${esc(s.notes)}</dd>` : ''}${checks ? `<dt>Open</dt><dd><ul>${checks}</ul></dd>` : ''}
+<dt>Record</dt><dd>${link(`${DATA}/api/v1/sources/${s.id}.json`, `${s.id}.json`)}${s.researched_by ? ` <span class="small">researched by ${esc(s.researched_by)}</span>` : ''}</dd></dl>
+</li>`;
+  };
+  const readS = src.filter((s) => s.status === 'read');
+  const notS = src.filter((s) => s.status !== 'read').sort((a, b) => (b.cited_by?.claims || 0) - (a.cited_by?.claims || 0) || givesEvents(b) - givesEvents(a) || a.name.localeCompare(b.name));
+  const byBasis = {};
+  for (const s of notS) { const k = (s.why?.basis || 'not recorded').replace(/[:(].*$/, '').trim(); byBasis[k] = (byBasis[k] || 0) + 1; }
+  const regIds = new Set(src.map((s) => s.id));
+  const unreg = (gapsF.hosts || []).filter((h) => !h.register || !regIds.has(h.register)).sort((a, b) => b.claims - a.claims);
+  const regGaps = (gapsF.hosts || []).filter((h) => h.register && regIds.has(h.register));
+  page({
+    path: '/sources/', section: '/sources/', title: 'Every source: read, not read, and why · PrompTugal.news Events',
+    description: `Every source PrompTugal.news knows of: ${readS.length} we read and ${notS.length} we do not, each with why not, its licence limits and the rules we follow; plus ${unreg.length} sites Perplexity cited that are not on the register yet.`,
+    body: `<h1>Every source: what we read, what we do not, and why</h1>
+<p class="standfirst">Every source PrompTugal.news knows of, for events and for everything else the PrompTugal sites show: ${readS.length} we read today and ${notS.length} we do not, each with the reason, quoted from its own terms or robots.txt with the link and the date read. We respect what each says.</p>
+${TELL_US}
+<p class="fresh">From the register on data.promptugal.news, read ${esc(fmtStamp(sync.finished))}. Each source has its own link: <code>${SITE}/sources/#&lt;id&gt;</code>.</p>
+<nav class="toc" aria-label="On this page"><a href="#read">We read (${readS.length})</a> · <a href="#not-read">We do not read (${notS.length})</a> · <a href="#cited">Cited, not on the register (${unreg.length})</a> · <a href="#limits">Licence limits</a> · <a href="#rules">The rules we follow</a></nav>
+<section id="read"><h2>Sources we read (${readS.length})</h2><p>Read by code through the interface each offers (an open-data API, a public list page), politely, and only where its robots.txt and terms allow. What we show from each follows its licence or terms, stated on the source and on every item.</p><ul class="srcs">${readS.map(card).join('\n')}</ul></section>
+<section id="not-read"><h2>Sources we do not read (${notS.length})</h2>
+<p>Why, in short: ${Object.entries(byBasis).sort((a, b) => b[1] - a[1]).map(([k, n]) => `${esc(k)} (${n})`).join('; ')}. A robots.txt rule is an access rule, not a licence, and we follow it; a bot check or a refusal is respected, never worked around; a house rule is Dinis Cruz's, until he decides otherwise. The most cited by the events we found come first.</p>
+<ul class="srcs">${notS.map(card).join('\n')}</ul></section>
+<section id="cited"><h2>Cited by Perplexity, not on the register yet (${unreg.length})</h2>
+<p>Sites Perplexity cited as evidence for an event, that we do not read and have not yet researched. Each is a gap: its terms go on the register next, then a request on the record. Counts are the events found that point to it.</p>
+<table class="places-table"><thead><tr><th scope="col">Site</th><th scope="col">Events</th><th scope="col">Places</th></tr></thead><tbody>
+${unreg.map((h) => `<tr id="host-${esc(h.host.replace(/[^a-z0-9]+/gi, '-'))}"><th scope="row">${link(h.example || `https://${h.host}/`, h.host)}</th><td class="n">${h.claims}</td><td>${esc((h.places || []).map(nameOf).join(', '))}</td></tr>`).join('\n')}
+</tbody></table>
+${regGaps.length ? `<p class="small">Also cited and already on the register: ${regGaps.map((h) => `<a href="#${esc(h.register)}">${esc(h.host)}</a> (${h.claims})`).join(', ')}.</p>` : ''}</section>
+<section id="limits"><h2>Licence limits, in short</h2>
+<ul>
+<li><b>What we make</b> (our pages, words, records, this register) is <a class="lic" href="${CCBY}">CC BY 4.0</a>: reuse it with credit.</li>
+<li><b>What we read from a source</b> stays under its licence or terms, linked on every item. Where a source publishes none, we say "the source's terms" and link them; we never assume it is open.</li>
+<li><b>The agendas we read for events</b> (Câmara Municipal de Lagos, and Lisbon's Agenda LX when it answers) publish no reuse licence; Lisbon's robots.txt asks for reference use. So we name the source, link each event to its own page, and show its title, dates and venue. Whether that is enough is Dinis Cruz's decision, recorded on <a href="${DATA}/api/v1/events-pt/card.json">the source card</a>.</li>
+<li><b>Sources we do not read</b>: nothing copied. At most a link, as evidence.</li>
+</ul></section>
+<section id="rules"><h2>The rules we follow</h2><p>In full on <a href="/principles/#rules">our principles</a>: public sources only, through supported interfaces; robots.txt, terms and refusals respected; a licence on everything; credit for how we found it; asking on the record; public and professional only.</p></section>`,
+    md: `${readS.length} sources read, ${notS.length} not read, ${unreg.length} cited by Perplexity and not on the register yet. Tell us, and we change: ${SITE}/report/\n\n## Read\n\n${readS.map((s) => `- ${mdLink(s.url, s.name)} (${s.kind}): ${mdText(s.terms?.summary || '')}`).join('\n')}\n\n## Not read\n\n${notS.map((s) => `- ${mdLink(s.url, s.name)} (${s.kind}): ${mdText(s.why?.basis || '')}${s.why?.quote ? `: "${mdText(s.why.quote)}"` : s.why?.text ? `: ${mdText(s.why.text)}` : ''}${s.why?.page ? ` (${s.why.page}, ${s.why.read_at || ''})` : ''}`).join('\n')}\n\n## Cited, not on the register\n\n${unreg.map((h) => `- ${h.host}: ${h.claims} events`).join('\n')}`,
+  });
+}
+
+page({
+  path: '/principles/', section: '/principles/', title: 'Our principles and rules of engagement · PrompTugal.news Events',
+  description: 'What PrompTugal.news Events aims for: accurate, never presenting anything as other than it is, mistakes corrected as soon as possible and in the open; and the rules we follow with every source.',
+  body: `<h1>Our principles</h1>
+<p class="standfirst">We aim to be accurate. We aim never to present anything as other than it is. Mistakes will happen; when they do, we correct them as soon as we can, and say so.</p>
+${TELL_US}
+<section id="principles"><h2>What we aim for</h2>
+<ol class="principles">
+<li id="accurate"><b>Accurate.</b> Every fact has its source, the link and the time it was read. If we cannot source it, we do not state it.</li>
+<li id="as-it-is"><b>Never presented as other than it is.</b> What a source says is shown as that source's; what we found but could not confirm is marked as found, not confirmed; what an AI agent wrote says so and names the agent and model; nothing is called checked by a person unless a person checked it. We are not an official or government site, and never say we are.</li>
+<li id="provenance"><b>Provenance shown.</b> Where each piece of data came from, how it was read, where it is kept and how to reach it, on every page and in every file (<a href="/how/">how it works</a>).</li>
+<li id="licences"><b>Licences shown.</b> What we make is Creative Commons (CC BY 4.0). What we take stays under its owner's licence, linked on every item; "the source's terms" where there is none; never assumed open.</li>
+<li id="corrections"><b>Mistakes corrected, in the open.</b> When something is wrong we fix it as soon as we can and record it, dated, on <a href="/report/#log">the corrections log</a>. We do not quietly rewrite.</li>
+<li id="listen"><b>We listen and change.</b> A reader, an organiser or a source that tells us something is wrong gets an answer, and the site changes when they are right. Our own rules change too, in the open.</li>
+<li id="people"><b>Public and professional only.</b> Organisations and their public channels; never a private person's contact, never anything from behind a login.</li>
+</ol></section>
+<section id="rules"><h2>The rules of engagement we follow with sources</h2>
+<ol class="principles">
+<li><b>Public sources, through supported interfaces:</b> an open-data API, a feed (iCal, RSS), a public list page. Never behind a login.</li>
+<li><b>robots.txt, terms and refusals are respected.</b> A disallow, a bot check, a 403 or a "please don't" is followed and recorded on <a href="/sources/#not-read">the sources page</a> with the quote and the date, never worked around.</li>
+<li><b>Read politely:</b> a named user agent, pauses between requests, back off on errors, no more often than the data changes.</li>
+<li><b>Some platforms are never read by machine</b> (Eventbrite, Luma, Meetup, websummit.com) until Dinis Cruz decides otherwise: a house rule. Their public links can appear as evidence only.</li>
+<li><b>Show only what we may.</b> From a source we do not read: a title, date, place and link, as a search engine would; no text, no images, no details.</li>
+<li><b>Credit how we found it.</b> An event found through Perplexity says so, with every link it cited. Perplexity and the other services we use will be told, on the record, how we use them.</li>
+<li><b>Ask on the record.</b> Every source we do not read gets, in time, a short public question through its own published channel: may a site like this show your public events, and how? Drafted by an agent, sent by a person; the answer, or none after 14 days, goes on the register as written.</li>
+<li><b>Organisers own their events.</b> An organiser's own details are published as theirs, credited and dated; signed with their key later. Someone else's details are a lead we check, never published on their word alone.</li>
+<li><b>A source that asks to be left out is left out,</b> at once, and the request recorded.</li>
+</ol></section>
+<section><h2>Where these come from</h2>
+<p>Dinis Cruz's guidance of 18 November 2026 (licences and submissions, the two phases, the sources register, and these principles), kept word for word in the <a href="https://github.com/PrompTugal/PrompTugal__News__Website/tree/dev/board/guidance">PrompTugal.news board</a> and in <a href="${REPO}/tree/dev/board/guidance">this site's</a>. Written up by events.b@PrompTugal.dinis, an AI agent; meant to become every PrompTugal site's, and proposed to the team for that.</p></section>`,
+  md: `We aim to be accurate. We aim never to present anything as other than it is. Mistakes will happen; we correct them as soon as we can, and say so. Tell us: ${SITE}/report/\n\n## What we aim for\n\n1. Accurate: every fact sourced, linked and dated.\n2. Never presented as other than it is: source's vs ours, found vs confirmed, AI vs person; not official.\n3. Provenance shown.\n4. Licences shown: ours CC BY 4.0; theirs stays theirs.\n5. Mistakes corrected in the open (corrections log).\n6. We listen and change.\n7. Public and professional only.\n\n## Rules of engagement\n\n1. Public sources, supported interfaces.\n2. robots.txt, terms and refusals respected, never worked around.\n3. Read politely.\n4. Eventbrite, Luma, Meetup, websummit.com never read by machine (house rule).\n5. From sources we do not read: title, date, place, link only.\n6. Credit how we found it (Perplexity).\n7. Ask on the record.\n8. Organisers own their events.\n9. A source that asks to be left out is left out.`,
+});
+
+{
+  const corr = readJson('data/corrections.json', { corrections: [] }).corrections || [];
+  page({
+    path: '/report/', section: '/report/', title: 'Report a mistake or a concern · PrompTugal.news Events',
+    description: 'How to tell PrompTugal.news Events that something is wrong: what to send, where, what happens next, and the log of every correction.',
+    body: `<h1>Report a mistake or a concern</h1>
+<p class="standfirst">Something wrong, out of date, unfair, or not ours to show? Tell us. We will look, answer, and change what is wrong.</p>
+<section id="what"><h2>What you can report</h2>
+<ul>
+<li>A wrong date, place, venue, organiser or link on an event; an event that is cancelled, moved or never existed.</li>
+<li>You run a source listed here and want it read, shown differently, or left out; or we have your terms wrong.</li>
+<li>You organise an event and want to send its details (see <a href="/organisers/">organisers</a>).</li>
+<li>A licence or credit that is missing or wrong.</li>
+<li>Anything about a person that should not be here.</li>
+<li>Anything else that breaks <a href="/principles/">our principles</a>.</li>
+</ul></section>
+<section id="how"><h2>How</h2>
+<p>For now, open an issue on this site's public repository: <a href="${REPO}/issues">github.com/PrompTugal/PrompTugal__News__Events/issues</a>. Say which page (its link), what is wrong, and, if you can, a public link that shows what is right. Everything posted there is public.</p>
+<p><b>If it should not be public</b> (a private detail about a person, say), do not repeat it in the issue: give only the page's link and the words "please take down". We take it down first and ask afterwards. A private channel (a form or an address) is coming; this page will say when.</p></section>
+<section id="next"><h2>What happens next</h2>
+<ol>
+<li><b>Take down first, where it matters:</b> anything about a person, or a source asking to be left out, comes off at the next release, before we look further.</li>
+<li><b>Look:</b> we check the report against the source.</li>
+<li><b>Answer:</b> on the issue, saying what we found.</li>
+<li><b>Change:</b> fix what is wrong, or explain why we think it is right.</li>
+<li><b>Record:</b> every correction goes on the log below, dated, with what changed. A source's answer goes on its register entry.</li>
+</ol>
+<p class="small">We aim to answer within a day. The site is run by AI agents with Dinis Cruz as the person responsible; a report about the agents' work reaches him.</p></section>
+<section id="log"><h2>Corrections log</h2>
+${corr.length ? `<ul>${corr.map((c) => `<li><b>${esc(c.date || '')}</b> ${esc(c.page || '')}: ${esc(c.what || '')}${c.changed ? `. Changed: ${esc(c.changed)}` : ''}</li>`).join('\n')}</ul>` : '<p class="none">No corrections yet. This log started on 18 November 2026; when there is one, it is here, dated, and never removed.</p>'}
+<p class="small">The log as data: <a href="${REPO}/blob/dev/data/corrections.json">data/corrections.json</a> (CC BY 4.0).</p></section>`,
+    md: `Something wrong? Tell us: ${REPO}/issues (public). If it should not be public, give only the page's link and "please take down".\n\nWhat happens: take down first where it matters; look; answer; change; record on the corrections log.\n\n## Corrections log\n\n${corr.length ? corr.map((c) => `- ${c.date}: ${mdText(c.page || '')}: ${mdText(c.what || '')}`).join('\n') : 'No corrections yet (log started 18 November 2026).'}`,
   });
 }
 

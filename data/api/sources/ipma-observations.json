@@ -1,0 +1,28 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values."
+ },
+ "id": "ipma-observations",
+ "name": "IPMA station observations",
+ "kind": "open-data API",
+ "url": "https://api.ipma.pt/open-data/observation/meteorology/stations/observations.json",
+ "owner": "IPMA, Instituto Português do Mar e da Atmosfera",
+ "places": [
+  "portugal"
+ ],
+ "gives": [
+  "The latest hourly observation of each IPMA surface station: temperature, humidity, wind, rain, pressure and radiation, with the station's name and position."
+ ],
+ "status": "read",
+ "how": "sources/ipma-observations/collect.mjs reads https://api.ipma.pt/open-data/observation/meteorology/stations/observations.json (hourly)",
+ "terms": {
+  "summary": "IPMA: free to copy and use for personal or public use if the use has no profit-making or offensive purpose; always name IPMA as the source.",
+  "page": "https://api.ipma.pt/",
+  "read_at": "2026-11-17"
+ },
+ "on_this_site": "https://data.promptugal.news/sources/ipma-observations/",
+ "collector": "sources/ipma-observations/collect.mjs"
+}

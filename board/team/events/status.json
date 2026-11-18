@@ -2,8 +2,8 @@
   "role": "events.b@PrompTugal.dinis",
   "account": "B",
   "started_by": "conductor.b@PrompTugal.dinis at Dinis's word, 18 Nov 2026 (~14:30 UTC: \"repo is created\")",
-  "state": "first run done: live at https://events.promptugal.news (v0.1.3, 14:41 UTC); waits for the next wake",
-  "updated": "2026-11-18T14:50Z",
+  "state": "run 1b (Dinis's ask, ~14:45 UTC): /sources/, /principles/ and /report/ added; waits for the next wake",
+  "updated": "2026-11-18T15:05Z",
   "debrief": "board/team/events/debriefs/2026-11-18-handover.md",
   "done": [
     "home page: counts, places, events starting in the next seven days",
@@ -13,9 +13,14 @@
     "/how/: two phases, sources read and their terms, sources not read (gaps), licences, where the data lives, the graph as planned",
     "scripts/sync-data.mjs (data.promptugal.news only) run in CI before each build; markdown twins and llms.txt",
     "commit check accepts role@PrompTugal.dinis (Dinis, 18 Nov)",
-    "live: v0.1.3 deployed 14:41 UTC; all pages answer 200; CI's sync read the data at 14:35 UTC"
+    "live: v0.1.3 deployed 14:41 UTC; all pages answer 200; CI's sync read the data at 14:35 UTC",
+    "/sources/: every source on the register (read and not read), each at /sources/#<id>, with why not (quote, basis, link, date), licence limits, asked or not, cited-by counts; and the hosts Perplexity cited that are not on the register yet",
+    "/principles/: what we aim for (accurate, never presented as other than it is, corrections in the open, we listen and change) and the rules of engagement with sources",
+    "/report/: what to report, how (a public GitHub issue; 'please take down' for anything private), what happens next, the corrections log (data/corrections.json)",
+    "every page's footer carries the principles line and links; every event card links /report/"
   ],
   "next": [
+    "conductor.b@ asked to make the principles and the report process PrompTugal-wide; follow its answer",
     "the graph and past editions on each event, when data.b@ and ontologist@ publish /api/v1/graph/ and /api/v1/events/past/",
     "Lisboa: show events as soon as data.b@'s agendalx.pt read works again (403 at 14:27 UTC)",
     "a map of the places with their counts on the home page",
@@ -27,7 +32,8 @@
     "Dinis: allow 'node pki-agent.mjs keygen --session' in this environment's permissions (refused by the auto-mode classifier at ~14:40 UTC), or say how this team should sign",
     "Dinis: the organisers' channel: is a public GitHub issue on this repository acceptable for now, or which channel (a form, an address)?",
     "Dinis: may CI rebuild this site on a schedule (every 6 hours, after data.promptugal.news's events read) so pages follow the data without a push?",
-    "Dinis: the agendas read (cm-lagos.pt, agendalx.pt) publish no reuse licence; this site shows their events with name, link and 'the source's terms', as data.promptugal.news's card proposes. Keep, or ask the câmaras first?"
+    "Dinis: the agendas read (cm-lagos.pt, agendalx.pt) publish no reuse licence; this site shows their events with name, link and 'the source's terms', as data.promptugal.news's card proposes. Keep, or ask the câmaras first?",
+    "Dinis: a private reporting channel (a form or an address) for reports that should not be public; until then /report/ says to give only the page link and 'please take down'"
   ],
   "for_data_b": [
     "claims index counts do not add up for some places (loulé: 11 claims, 12 withheld; monchique: 3 claims, 4 withheld)",

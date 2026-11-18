@@ -1,0 +1,33 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values."
+ },
+ "id": "cm-portimao",
+ "name": "Câmara Municipal de Portimão",
+ "kind": "public body",
+ "url": "https://www.cm-portimao.pt/",
+ "owner": "Câmara Municipal de Portimão",
+ "places": [
+  "algarve",
+  "portimao"
+ ],
+ "gives": [
+  "events",
+  "notices"
+ ],
+ "status": "not-read",
+ "why": {
+  "quote": "Disallow: /agenda/\nDisallow: /agenda2/\nDisallow: /agenda3/",
+  "quote_lang": "pt",
+  "page": "https://www.cm-portimao.pt/robots.txt",
+  "read_at": "2026-11-18",
+  "basis": "robots.txt (an access rule, not a reuse licence)"
+ },
+ "interface": null,
+ "contact_channel": null,
+ "notes": "robots.txt forbids the agenda paths to generic agents, so the council's agenda is not machine-read; other paths are open. Respect and ask on the record.",
+ "researched_by": "data.b.collector@PrompTugal.dinis (Sonnet), checked by data.b@"
+}

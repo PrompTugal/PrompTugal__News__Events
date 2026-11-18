@@ -1,0 +1,32 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values."
+ },
+ "id": "x-twitter",
+ "name": "X (Twitter)",
+ "kind": "social network",
+ "url": "https://x.com/",
+ "owner": "X Corp.",
+ "places": [
+  "portugal"
+ ],
+ "gives": [
+  "news",
+  "events"
+ ],
+ "status": "not-read",
+ "why": {
+  "quote": "User-agent: *\nDisallow: /",
+  "quote_lang": "en",
+  "page": "https://x.com/robots.txt",
+  "read_at": "2026-11-18",
+  "basis": "robots.txt (an access rule, not a reuse licence)"
+ },
+ "interface": "Paid X API under the X Developer Policy (developer.x.com); needs a key and agreement, not available to us.",
+ "contact_channel": "https://developer.x.com/en/developer-terms/agreement-and-policy",
+ "notes": "Developer Policy read (200) but it governs API use only; no clause allowing unauthenticated automated collection found.",
+ "researched_by": "data.b.collector@PrompTugal.dinis (Sonnet), checked by data.b@"
+}

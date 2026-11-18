@@ -1,0 +1,32 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values."
+ },
+ "id": "visitlisboa",
+ "name": "Visit Lisboa (visitlisboa.com)",
+ "kind": "public body",
+ "url": "https://www.visitlisboa.com/",
+ "owner": "Associação Turismo de Lisboa (Visit Lisboa)",
+ "places": [
+  "lisboa"
+ ],
+ "gives": [
+  "events",
+  "news"
+ ],
+ "status": "not-read",
+ "why": {
+  "quote": "# See http://www.robotstxt.org/robotstxt.html for documentation on how to use the robots.txt file",
+  "quote_lang": "en",
+  "page": "https://www.visitlisboa.com/robots.txt",
+  "read_at": "2026-11-18",
+  "basis": "robots.txt (an access rule, not a reuse licence)"
+ },
+ "interface": null,
+ "contact_channel": null,
+ "notes": "robots.txt is only that comment line: no Disallow rules. That is not a grant; its terms page was not read.",
+ "researched_by": "data.b.collector@PrompTugal.dinis (Sonnet), checked by data.b@"
+}

@@ -1,0 +1,35 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values."
+ },
+ "id": "ana",
+ "name": "ANA Aeroportos de Portugal",
+ "kind": "airport operator",
+ "url": "https://www.aeroportos.pt/",
+ "owner": "ANA Aeroportos de Portugal, S.A. (VINCI Airports)",
+ "places": [
+  "portugal",
+  "lisboa",
+  "faro"
+ ],
+ "gives": [
+  "flights",
+  "cancellations",
+  "schedules"
+ ],
+ "status": "not-read",
+ "why": {
+  "quote": "could not read the terms: proxy 502 (www.aeroportos.pt robots.txt)",
+  "quote_lang": "en",
+  "page": "https://www.aeroportos.pt/robots.txt",
+  "read_at": "2026-11-18",
+  "basis": "could not read"
+ },
+ "interface": null,
+ "contact_channel": null,
+ "notes": "Not readable this session; the arrivals/departures pages' machine-reading rules are unknown. Retry from another route or ask on the record.",
+ "researched_by": "data.b.collector@PrompTugal.dinis (Sonnet), checked by data.b@"
+}

@@ -1,0 +1,32 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values."
+ },
+ "id": "aps-algarve",
+ "name": "APS - Administração dos Portos de Sines e do Algarve (Porto de Portimão)",
+ "kind": "public body",
+ "url": "https://www.apsinesalgarve.pt/",
+ "owner": "APS - Administração dos Portos de Sines e do Algarve, S.A.",
+ "places": [
+  "algarve"
+ ],
+ "gives": [
+  "notices",
+  "schedules"
+ ],
+ "status": "not-read",
+ "why": {
+  "quote": "could not read the terms: proxy 502 (host guessed as www.apsinesealgarve.pt; the correct host was not confirmed)",
+  "quote_lang": "en",
+  "page": "https://www.apsinesalgarve.pt/robots.txt",
+  "read_at": "2026-11-18",
+  "basis": "could not read"
+ },
+ "interface": null,
+ "contact_channel": null,
+ "notes": "Host unverified; retry with the right host. The host was guessed and is unverified; the right address is still to find.",
+ "researched_by": "data.b.collector@PrompTugal.dinis (Sonnet), checked by data.b@"
+}

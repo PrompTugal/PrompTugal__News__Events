@@ -1,0 +1,32 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values."
+ },
+ "id": "meta",
+ "name": "Meta (Instagram and Facebook)",
+ "kind": "social network",
+ "url": "https://www.instagram.com/",
+ "owner": "Meta Platforms, Inc.",
+ "places": [
+  "portugal"
+ ],
+ "gives": [
+  "news",
+  "events"
+ ],
+ "status": "not-read",
+ "why": {
+  "quote": "Collection of data on Instagram through automated means is prohibited unless you have express written permission from Instagram",
+  "quote_lang": "en",
+  "page": "https://www.instagram.com/robots.txt",
+  "read_at": "2026-11-18",
+  "basis": "robots.txt (an access rule, not a reuse licence)"
+ },
+ "interface": "Meta's Graph API / Content Library need approved access; none requested.",
+ "contact_channel": "https://www.facebook.com/legal/automated_data_collection_terms",
+ "notes": "robots.txt also has User-agent: * Disallow: /. Facebook automated data collection terms page returned 200 but is script-rendered; text not extracted.",
+ "researched_by": "data.b.collector@PrompTugal.dinis (Sonnet), checked by data.b@"
+}

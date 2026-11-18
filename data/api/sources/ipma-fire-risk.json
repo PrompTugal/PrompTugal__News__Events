@@ -1,0 +1,28 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values."
+ },
+ "id": "ipma-fire-risk",
+ "name": "IPMA fire risk",
+ "kind": "open-data API",
+ "url": "https://api.ipma.pt/open-data/forecast/meteorology/rcm/",
+ "owner": "IPMA, Instituto Português do Mar e da Atmosfera",
+ "places": [
+  "portugal"
+ ],
+ "gives": [
+  "The daily fire risk class (RCM, low to maximum) for every municipality of mainland Portugal, today and the next two days."
+ ],
+ "status": "read",
+ "how": "sources/ipma-fire-risk/collect.mjs reads https://api.ipma.pt/open-data/forecast/meteorology/rcm/ (hourly)",
+ "terms": {
+  "summary": "IPMA: free to copy and use for personal or public use if the use has no profit-making or offensive purpose; always name IPMA as the source.",
+  "page": "https://api.ipma.pt/",
+  "read_at": "2026-11-17"
+ },
+ "on_this_site": "https://data.promptugal.news/sources/ipma-fire-risk/",
+ "collector": "sources/ipma-fire-risk/collect.mjs"
+}

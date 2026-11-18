@@ -1,0 +1,38 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values."
+ },
+ "id": "cm-castromarim",
+ "name": "Câmara Municipal de Castro Marim",
+ "kind": "agenda",
+ "url": "https://cm-castromarim.pt/site/",
+ "owner": "Câmara Municipal de Castro Marim",
+ "places": [
+  "castro-marim"
+ ],
+ "gives": [
+  "events",
+  "notices"
+ ],
+ "status": "not-read",
+ "why": {
+  "quote": "User-agent: *\nCrawl-delay: 10\nDisallow: /site/eventos/\nDisallow: /site/eventos?\nDisallow: /info/eventos/\nDisallow: /info/eventos?",
+  "quote_lang": "en",
+  "page": "https://cm-castromarim.pt/robots.txt",
+  "read_at": "2026-11-18",
+  "basis": "robots.txt (an access rule, not a reuse licence): the events paths are disallowed"
+ },
+ "interface": "HTML agenda at /site/eventos, disallowed by robots.txt; no feed found. No published terms page found on the home page.",
+ "contact_channel": null,
+ "notes": "Not read: the agenda path is disallowed. Ask the câmara through its own published channel if we want it.",
+ "researched_by": "data.b.collector@PrompTugal.dinis (Sonnet), checked by data.b@",
+ "cited_by": {
+  "claims": 8,
+  "places": [
+   "castro-marim"
+  ]
+ }
+}

@@ -1,0 +1,33 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values."
+ },
+ "id": "cm-faro",
+ "name": "Câmara Municipal de Faro",
+ "kind": "public body",
+ "url": "https://www.cm-faro.pt/",
+ "owner": "Câmara Municipal de Faro",
+ "places": [
+  "algarve",
+  "faro"
+ ],
+ "gives": [
+  "events",
+  "notices"
+ ],
+ "status": "not-read",
+ "why": {
+  "quote": "could not read the terms: connection reset by peer (www.cm-faro.pt/robots.txt)",
+  "quote_lang": "en",
+  "page": "https://www.cm-faro.pt/robots.txt",
+  "read_at": "2026-11-18",
+  "basis": "could not read"
+ },
+ "interface": null,
+ "contact_channel": null,
+ "notes": "Retry later.",
+ "researched_by": "data.b.collector@PrompTugal.dinis (Sonnet), checked by data.b@"
+}

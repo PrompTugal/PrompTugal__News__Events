@@ -1,0 +1,28 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values."
+ },
+ "id": "events-pt",
+ "name": "Events in Portugal, by place",
+ "kind": "open-data API",
+ "url": "https://www.agendalx.pt/wp-json/agendalx/v1/events",
+ "owner": "Câmara Municipal de Lisboa (Agenda Cultural de Lisboa, agendalx.pt) and Câmara Municipal de Lagos (cm-lagos.pt)",
+ "places": [
+  "portugal"
+ ],
+ "gives": [
+  "Public events on now or in the next 60 days in Lisbon and the Algarve places, as schema.org Event records, each with its source URL and the time read."
+ ],
+ "status": "read",
+ "how": "sources/events-pt/collect.mjs reads https://www.agendalx.pt/wp-json/agendalx/v1/events (every 6 hours)",
+ "terms": {
+  "summary": "Strictest of the sources: no reuse licence or terms page was found for either host. Both robots.txt files allow the paths read; agendalx.pt sets Content-Signal search=yes, ai-train=no, use=reference. So: reference use only, name the source, link to the event, no AI training. Not reviewed by a person: whether this is enough to republish is for Dinis.",
+  "page": "https://www.agendalx.pt/robots.txt",
+  "read_at": "2026-11-18"
+ },
+ "on_this_site": "https://data.promptugal.news/sources/events-pt/",
+ "collector": "sources/events-pt/collect.mjs"
+}

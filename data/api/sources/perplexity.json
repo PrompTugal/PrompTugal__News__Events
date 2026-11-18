@@ -1,0 +1,31 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values."
+ },
+ "id": "perplexity",
+ "name": "Perplexity",
+ "kind": "search or AI service",
+ "url": "https://www.perplexity.ai/",
+ "owner": "Perplexity AI, Inc.",
+ "places": [
+  "portugal"
+ ],
+ "gives": [
+  "news"
+ ],
+ "status": "not-read",
+ "why": {
+  "quote": "could not read the terms: not read this session (robots.txt returned 200 but was not saved; terms not fetched within budget)",
+  "quote_lang": "en",
+  "page": "https://www.perplexity.ai/robots.txt",
+  "read_at": "2026-11-18",
+  "basis": "could not read"
+ },
+ "interface": "Commercial API with a key; not requested.",
+ "contact_channel": null,
+ "notes": "Per the brief: asking a service does not change what we may republish; mapped, not used until Dinis decides. Note TikTok's robots.txt names PerplexityBot, which shows platforms restrict it.",
+ "researched_by": "data.b.collector@PrompTugal.dinis (Sonnet), checked by data.b@"
+}

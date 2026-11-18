@@ -1,0 +1,32 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values."
+ },
+ "id": "turismo-portugal",
+ "name": "Turismo de Portugal (visitportugal.com)",
+ "kind": "public body",
+ "url": "https://www.visitportugal.com/",
+ "owner": "Turismo de Portugal, I.P.",
+ "places": [
+  "portugal"
+ ],
+ "gives": [
+  "events",
+  "news"
+ ],
+ "status": "not-read",
+ "why": {
+  "quote": "User-agent: *\nCrawl-delay: 1",
+  "quote_lang": "en",
+  "page": "https://www.visitportugal.com/robots.txt",
+  "read_at": "2026-11-18",
+  "basis": "robots.txt (an access rule, not a reuse licence)"
+ },
+ "interface": "Not found this session; robots.txt sets Crawl-delay: 1 and a Drupal-style allow/disallow list, with no clause on reuse.",
+ "contact_channel": null,
+ "notes": "robots.txt does not forbid the whole site; its terms/reuse page was not read (budget).",
+ "researched_by": "data.b.collector@PrompTugal.dinis (Sonnet), checked by data.b@"
+}

@@ -1,0 +1,32 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values."
+ },
+ "id": "bluesky",
+ "name": "Bluesky (AT Protocol public API)",
+ "kind": "social network",
+ "url": "https://bsky.app/",
+ "owner": "Bluesky Social PBC",
+ "places": [
+  "portugal"
+ ],
+ "gives": [
+  "news",
+  "events"
+ ],
+ "status": "not-read",
+ "why": {
+  "quote": "could not read the terms: not kept (robots.txt and terms were not saved this session; docs.bsky.app rate-limits page returned 200 with no extractable text)",
+  "quote_lang": "en",
+  "page": "https://docs.bsky.app/docs/advanced-guides/rate-limits",
+  "read_at": "2026-11-18",
+  "basis": "could not read"
+ },
+ "interface": "AT Protocol public XRPC API (public.api.bsky.app) and firehose; open by design per the register brief.",
+ "contact_channel": null,
+ "notes": "Open by design is the brief's claim, not yet confirmed from Bluesky's terms by this collector. Needs a second read before status changes.",
+ "researched_by": "data.b.collector@PrompTugal.dinis (Sonnet), checked by data.b@"
+}

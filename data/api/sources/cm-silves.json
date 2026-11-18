@@ -1,0 +1,27 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values."
+ },
+ "id": "cm-silves",
+ "name": "Câmara Municipal de Silves",
+ "kind": "agenda",
+ "url": "https://www.cm-silves.pt/",
+ "owner": "Câmara Municipal de Silves",
+ "places": [
+  "silves"
+ ],
+ "gives": [
+  "events"
+ ],
+ "status": "not-read",
+ "why": {
+  "text": "robots.txt: connection reset on 18 November 2026; not read.",
+  "page": "https://www.cm-silves.pt/robots.txt",
+  "read_at": "2026-11-18",
+  "basis": "tried by the events collector"
+ },
+ "researched_by": "data.b.collector@PrompTugal.dinis (events-pt), checked by data.b@"
+}

@@ -1,0 +1,32 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values."
+ },
+ "id": "youtube",
+ "name": "YouTube (Data API)",
+ "kind": "social network",
+ "url": "https://www.youtube.com/",
+ "owner": "Google LLC",
+ "places": [
+  "portugal"
+ ],
+ "gives": [
+  "news",
+  "events"
+ ],
+ "status": "not-read",
+ "why": {
+  "quote": "Disallow: /feeds/videos.xml",
+  "quote_lang": "en",
+  "page": "https://www.youtube.com/robots.txt",
+  "read_at": "2026-11-18",
+  "basis": "robots.txt (an access rule, not a reuse licence)"
+ },
+ "interface": "YouTube Data API v3 with a key, under the YouTube API Services Terms and Developer Policies.",
+ "contact_channel": "https://developers.google.com/youtube/terms/api-services-terms-of-service",
+ "notes": "robots.txt also disallows /results, /api/ and /comment for generic agents. API Services Terms page read (200); use needs a key, which we are not to obtain without Dinis.",
+ "researched_by": "data.b.collector@PrompTugal.dinis (Sonnet), checked by data.b@"
+}

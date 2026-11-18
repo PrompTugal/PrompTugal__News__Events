@@ -1,0 +1,28 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values."
+ },
+ "id": "ipma-city-forecasts",
+ "name": "IPMA daily forecasts by place",
+ "kind": "open-data API",
+ "url": "https://api.ipma.pt/open-data/forecast/meteorology/cities/daily/",
+ "owner": "IPMA, Instituto Português do Mar e da Atmosfera",
+ "places": [
+  "portugal"
+ ],
+ "gives": [
+  "Five-day forecasts (minimum and maximum temperature, chance of rain, weather type, wind) for each district capital and island, and Loulé, Portimão and Sagres."
+ ],
+ "status": "read",
+ "how": "sources/ipma-city-forecasts/collect.mjs reads https://api.ipma.pt/open-data/forecast/meteorology/cities/daily/ (hourly)",
+ "terms": {
+  "summary": "IPMA: free to copy and use for personal or public use if the use has no profit-making or offensive purpose; always name IPMA as the source.",
+  "page": "https://api.ipma.pt/",
+  "read_at": "2026-11-17"
+ },
+ "on_this_site": "https://data.promptugal.news/sources/ipma-city-forecasts/",
+ "collector": "sources/ipma-city-forecasts/collect.mjs"
+}

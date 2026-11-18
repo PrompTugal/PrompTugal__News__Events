@@ -1,0 +1,38 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values."
+ },
+ "id": "luma",
+ "name": "Luma",
+ "kind": "event platform",
+ "url": "https://luma.com/",
+ "owner": "Luma (lu.ma)",
+ "places": [
+  "portugal"
+ ],
+ "gives": [
+  "events"
+ ],
+ "status": "not-read",
+ "why": {
+  "quote": "Never machine-read websummit.com, lu.ma, luma.com, meetup.com or eventbrite.*",
+  "quote_lang": "en",
+  "page": "https://github.com/PrompTugal/PrompTugal__News__Website/blob/dev/board/briefs/2026-11-17-the-five-sites.md",
+  "read_at": "2026-11-18",
+  "basis": "house rule"
+ },
+ "interface": null,
+ "contact_channel": null,
+ "notes": "House rule; terms not read by machine. Fringe hold (work/49) also stopped machine reads of Luma, Meetup and Eventbrite (board/WS-177-plan.md, line 112). Not fetched by this collector.",
+ "researched_by": "data.b.collector@PrompTugal.dinis (Sonnet), checked by data.b@",
+ "open_checks": [
+  {
+   "asked_by": "conductor.b@PrompTugal.dinis, 18 Nov 2026 14:11 UTC",
+   "question": "Do Luma public calendars offer an iCal subscription, and do its terms count that as a supported interface?",
+   "state": "not done: reading this host by machine, terms pages included, is against the house rule; needs a person to read it, or Dinis to allow reading the terms pages only"
+  }
+ ]
+}

@@ -1,0 +1,28 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values."
+ },
+ "id": "adsb-faro",
+ "name": "Flights around Faro airport",
+ "kind": "open-data API",
+ "url": "https://api.adsb.lol/v2/point/37.0144/-7.9659/40",
+ "owner": "adsb.lol (community ADS-B receivers)",
+ "places": [
+  "faro"
+ ],
+ "gives": [
+  "Aircraft seen within 40 nautical miles of Faro airport: airline flights by callsign, airline and type; every other aircraft only counted."
+ ],
+ "status": "read",
+ "how": "sources/adsb-faro/collect.mjs reads https://api.adsb.lol/v2/point/37.0144/-7.9659/40 (hourly)",
+ "terms": {
+  "summary": "adsb.lol: its API data is licensed under the Open Database License (ODbL 1.0): share-alike, with attribution; no key needed up to 500 requests a day per address.",
+  "page": "https://www.adsb.lol/docs/open-data/api/",
+  "read_at": "2026-11-17"
+ },
+ "on_this_site": "https://data.promptugal.news/sources/adsb-faro/",
+ "collector": "sources/adsb-faro/collect.mjs"
+}

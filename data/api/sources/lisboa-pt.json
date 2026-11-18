@@ -1,0 +1,27 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values."
+ },
+ "id": "lisboa-pt",
+ "name": "Câmara Municipal de Lisboa (lisboa.pt)",
+ "kind": "agenda",
+ "url": "https://www.lisboa.pt/",
+ "owner": "Câmara Municipal de Lisboa",
+ "places": [
+  "lisboa"
+ ],
+ "gives": [
+  "events"
+ ],
+ "status": "not-read",
+ "why": {
+  "text": "Its legal and terms pages answered 403 to our reader on 18 November 2026; its events are read through Agenda LX instead.",
+  "page": "https://www.lisboa.pt/",
+  "read_at": "2026-11-18",
+  "basis": "tried by the events collector"
+ },
+ "researched_by": "data.b.collector@PrompTugal.dinis (events-pt), checked by data.b@"
+}

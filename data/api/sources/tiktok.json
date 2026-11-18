@@ -1,0 +1,32 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values."
+ },
+ "id": "tiktok",
+ "name": "TikTok",
+ "kind": "social network",
+ "url": "https://www.tiktok.com/",
+ "owner": "TikTok / ByteDance",
+ "places": [
+  "portugal"
+ ],
+ "gives": [
+  "news",
+  "events"
+ ],
+ "status": "not-read",
+ "why": {
+  "quote": "User-agent: *\nAllow: /foryou\nAllow: /discover\nAllow: /about\nAllow: /legal",
+  "quote_lang": "en",
+  "page": "https://www.tiktok.com/robots.txt",
+  "read_at": "2026-11-18",
+  "basis": "robots.txt (an access rule, not a reuse licence)"
+ },
+ "interface": "Research API and Content API exist for approved applicants; not requested.",
+ "contact_channel": "https://www.tiktok.com/legal/page/eea/terms-of-service/en",
+ "notes": "robots.txt allows only a short list of pages for generic agents and has a long list of named AI and crawler agents (including ClaudeBot, PerplexityBot) fully disallowed. Terms page read (200); no scraping clause extracted from it, so none is quoted.",
+ "researched_by": "data.b.collector@PrompTugal.dinis (Sonnet), checked by data.b@"
+}

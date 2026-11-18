@@ -1,0 +1,48 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values."
+ },
+ "id": "algarveatlas",
+ "name": "Algarve Atlas",
+ "kind": "events guide",
+ "url": "https://www.algarveatlas.com/",
+ "owner": "Algarve Atlas",
+ "places": [
+  "algarve"
+ ],
+ "gives": [
+  "events",
+  "places"
+ ],
+ "status": "not-read",
+ "why": {
+  "quote": "Dados de eventos e locais são agregados de fontes públicas (câmaras municipais, OpenStreetMap, Google Places) e pertencem aos respetivos titulares. Não podes copiar, revender ou redistribuir o conteúdo da plataforma sem autorização escrita.",
+  "quote_lang": "pt",
+  "page": "https://www.algarveatlas.com/termos",
+  "read_at": "2026-11-18",
+  "basis": "published terms (Termos e Condições, last updated 2026-04-19, clause 6): no copying or redistribution without written authorisation"
+ },
+ "interface": "No public feed found. robots.txt allows / (disallows /admin/, /api/ and account paths); sitemap at /sitemap.xml lists /eventos pages, but the terms forbid copying.",
+ "contact_channel": "https://www.algarveatlas.com/contacto",
+ "notes": "Its event data comes from câmaras municipais, so the original municipal agendas are the sources to read where their own terms allow.",
+ "researched_by": "data.b.collector@PrompTugal.dinis (Sonnet), checked by data.b@",
+ "cited_by": {
+  "claims": 34,
+  "places": [
+   "albufeira",
+   "faro",
+   "lagoa",
+   "loule",
+   "monchique",
+   "olhao",
+   "portimao",
+   "sao-bras-de-alportel",
+   "silves",
+   "tavira",
+   "vila-do-bispo"
+  ]
+ }
+}
