@@ -27,10 +27,17 @@ const num = (x) => String(Math.max(0, Math.floor(Number(x) || 0)));
 const eventsPt = readJson('data/api/events-pt.json', {});
 const sync = readJson('data/api/sync.json', {});
 
+// The Algarve's places, explicitly: anything else is Lisbon or beyond Portugal, never folded into the Algarve.
+const ALGARVE = new Set(['albufeira', 'alcoutim', 'aljezur', 'castro-marim', 'faro', 'lagoa', 'lagos', 'loule', 'monchique', 'olhao', 'portimao', 'quarteira', 'sao-bras-de-alportel', 'silves', 'tavira', 'vila-do-bispo', 'vila-real-de-santo-antonio']);
+const PORTUGAL = new Set([...ALGARVE, 'lisboa']);
+const group = (p) => (ALGARVE.has(p) ? 0 : p === 'lisboa' ? 1 : 2);
 const placeIds = [...new Set([...index.places.map((p) => p.id), ...claimsIndex.places.map((p) => p.place)])]
-  .filter((p) => /^[a-z0-9-]+$/.test(p) && p !== REGION)
-  .sort((a, b) => (a === 'lisboa') - (b === 'lisboa') || nameOf(a).localeCompare(nameOf(b), 'pt'));
-const algarveIds = placeIds.filter((p) => p !== 'lisboa');
+  .filter((p) => okId(p) && p !== REGION)
+  .sort((a, b) => group(a) - group(b) || nameOf(a).localeCompare(nameOf(b), 'pt'));
+const algarveIds = placeIds.filter((p) => ALGARVE.has(p));
+const beyondIds = placeIds.filter((p) => !PORTUGAL.has(p)); // places outside Portugal (London first, Dinis 18 Nov 2026 ~22:20 UTC)
+// "Beyond Portugal: <place>" is conductor.b@'s proposed label; the label and where it sits are Dinis's to change.
+const placeLabel = (p) => (beyondIds.includes(p) ? `Beyond Portugal: ${nameOf(p)}` : nameOf(p));
 
 const feeds = {};
 for (const p of [...placeIds, REGION]) {
@@ -133,22 +140,22 @@ function counts(p) {
 // ---------------------------------------------------------------- home
 {
   const week = addDays(today, 7);
-  const algItems = [...itemsFor(REGION), ...itemsFor('lisboa')]
+  const algItems = [...itemsFor(REGION), ...itemsFor('lisboa'), ...beyondIds.flatMap((p) => itemsFor(p))]
     .filter((it) => startOf(it) >= today && startOf(it) < week);
   const wk = listHtml(algItems, { showPlace: true });
-  const placeRows = [REGION, ...placeIds].map((p) => `<li><a href="/places/${p}/">${esc(nameOf(p))}</a>${p === REGION ? ' <span class="small">(every Algarve place together)</span>' : ''} <span class="small">${counts(p)}</span></li>`).join('\n');
+  const placeRows = [REGION, ...placeIds].map((p) => `<li><a href="/places/${p}/">${esc(placeLabel(p))}</a>${p === REGION ? ' <span class="small">(every Algarve place together)</span>' : ''} <span class="small">${counts(p)}</span></li>`).join('\n');
   page({
     path: '/', section: '/', title: "PrompTugal.news Events: what's on, town by town",
     description: `Events across Portugal, town by town: ${totalRead} read from official agendas and ${totalFound} found through Perplexity, for the Algarve's places and Lisbon, each with its evidence and licence.`,
     body: `<section class="hero">
 <p class="kicker">Events · Portugal, town by town</p>
-<h1>What's on in the Algarve and Lisbon</h1>
+<h1>What's on in the Algarve and Lisbon${beyondIds.length ? ', and beyond Portugal' : ''}</h1>
 <p class="standfirst">${totalRead} events read from official agendas and ${totalFound} more found through Perplexity, across ${placeIds.length} places. Every event shows its date, place, venue and organiser where a source we may read gives them, the evidence for it, and its licence.</p>
 ${fresh}
 <p class="note">Two kinds of listing: <b>read</b> events come from a public agenda we may read (the agendas data.promptugal.news reads: ${esc(sourcesRead.join(' and ') || 'none yet')}), with the details it gives; events <b>found through Perplexity</b> show only their title, date, place and the links that point to them, because the sites those links lead to do not let us copy their details. <a href="/organisers/">Organisers: send us yours.</a></p>
 </section>
 <section><h2>Places</h2><ul class="places">${placeRows}</ul>${lisbonNote ? `<p class="small">${lisbonNote}</p>` : ''}</section>
-<section><h2>Starting in the next seven days</h2><div id="events" data-places="algarve,lisboa" data-window="7" data-show-place="1" data-read-at="${esc(dataReadAt || '')}">${wk.count ? wk.html : '<p class="none">Nothing listed yet for the next seven days.</p>'}</div><p class="small">Long-running exhibitions and events already on are on each place's page, under "On now".</p></section>`,
+<section><h2>Starting in the next seven days</h2><div id="events" data-places="${["algarve", "lisboa", ...beyondIds].join(",")}" data-window="7" data-show-place="1" data-read-at="${esc(dataReadAt || '')}">${wk.count ? wk.html : '<p class="none">Nothing listed yet for the next seven days.</p>'}</div><p class="small">Long-running exhibitions and events already on are on each place's page, under "On now".</p></section>`,
     md: `${totalRead} events read from official agendas and ${totalFound} found through Perplexity, across ${placeIds.length} places. Data read ${fmtStamp(dataReadAt)}.\n\n## Places\n\n${[REGION, ...placeIds].map((p) => `- ${mdLink(`${SITE}/places/${p}/`, nameOf(p))}: ${counts(p).replace(/<[^>]+>/g, '')}`).join('\n')}\n\n## Starting in the next seven days\n\n${listMd(algItems) || 'Nothing listed yet.'}`,
   });
 }
@@ -159,7 +166,7 @@ page({
   description: "Every place the events site covers: the Algarve's towns and Lisbon, with how many events each lists.",
   body: `<h1>Places</h1><p class="standfirst">The Algarve's places and Lisbon first; more as data.promptugal.news reads more agendas.</p>${fresh}
 <table class="places-table"><thead><tr><th scope="col">Place</th><th scope="col">Read from an agenda</th><th scope="col">Found through Perplexity</th></tr></thead><tbody>
-${[REGION, ...placeIds].map((p) => `<tr><th scope="row"><a href="/places/${p}/">${esc(nameOf(p))}</a></th><td class="n">${stats[p].read}</td><td class="n">${stats[p].found}</td></tr>`).join('\n')}
+${[REGION, ...placeIds].map((p) => `<tr><th scope="row"><a href="/places/${p}/">${esc(placeLabel(p))}</a></th><td class="n">${stats[p].read}</td><td class="n">${stats[p].found}</td></tr>`).join('\n')}
 </tbody></table>
 <p class="small">Counts are events on now or still to come. "The Algarve" gathers every Algarve place. A zero means no source we may read covers the place yet, not that nothing is on: see <a href="/how/">how it works</a> and <a href="${DATA}/sources/gaps/">the sources we do not read</a>.</p>`,
   md: [REGION, ...placeIds].map((p) => `- ${mdLink(`${SITE}/places/${p}/`, nameOf(p))}: ${stats[p].read} read, ${stats[p].found} found through Perplexity`).join('\n'),
@@ -425,7 +432,7 @@ ${tm.length ? `<ul>${tm.map((f) => `<li>${link(`${REPO}/blob/dev/docs/threat-mod
 // (Dinis, 18 Nov 2026 ~22:00 UTC, Website board/guidance/2026-11-18-the-sites-bar.md). Built from the same data as the pages.
 {
   const week = addDays(today, 7);
-  const all = [...itemsFor(REGION), ...itemsFor('lisboa')];
+  const all = [...itemsFor(REGION), ...itemsFor('lisboa'), ...beyondIds.flatMap((p) => itemsFor(p))];
   const thisWeek = all.filter((it) => startOf(it) >= today && startOf(it) < week).length;
   const withRead = placeIds.filter((p) => stats[p].read).map(nameOf);
   const reg = readJson('data/api/sources/index.json', { entries: [] });
