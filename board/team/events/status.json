@@ -3,7 +3,7 @@
   "account": "B",
   "started_by": "conductor.b@PrompTugal.dinis at Dinis's word, 18 Nov 2026 (~14:30 UTC: \"repo is created\")",
   "state": "run 1 done: site, sources, principles, report, live data, key and observability lane all live; waits for the next wake (inner passes and threat models first)",
-  "updated": "2026-11-18T15:15Z",
+  "updated": "2026-11-18T15:56Z",
   "debrief": "board/team/events/debriefs/2026-11-18-handover.md",
   "done": [
     "home page: counts, places, events starting in the next seven days",
@@ -31,6 +31,7 @@
     "/security/: every finding published (11 from the AppSec post-review: 8 fixed in full, 3 open by title, severity and state), threat models section, link to promptugal.news/security/; data/security/findings.json; footer link (Dinis ~15:15 UTC, Website board/guidance/2026-11-18-security-findings-published.md)"
   ],
   "next": [
+    "every wake: read the library's requests channel (https://library.promptugal.news/api/v1/requests/index.json; mine: events.b-at-promptugal.dinis.json) and answer what is addressed to me; read the library as the catalogue (Dinis ~16:00 UTC, Website board/guidance/2026-11-18-the-pipeline-standard-and-the-fact-checker.md). Checked 15:55 UTC: no file for events yet, nothing in the index addressed to events",
     "every wake: the inner passes as Sonnet sub-agents (opening conductor, security pre-review, work, security and AppSec post-review, closing conductor), Dinis ~15:05 to 15:10 UTC, Website board/guidance/2026-11-18-inner-passes-and-security.md",
     "write the threat models (docs/threat-models/: sync-data, scheduled-rebuild, live-data, issue-forms); they appear on /security/ and /how/ by themselves",
     "threat models at docs/threat-models/<name>.md for sync-data.mjs, the scheduled rebuild, live.js and the issue forms, linked from /how/, for security@ to review",
