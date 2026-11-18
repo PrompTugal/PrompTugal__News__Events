@@ -67,6 +67,7 @@ function page({ path, title, description, section, body, md }) {
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="/site.css?v=${esc(version)}">
 <script type="module" src="/assets/live.js?v=${esc(version)}"></script>
+<script defer src="/assets/obs/obs.js?v=${esc(version)}" data-lane="events"></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to the content</a>

@@ -1,5 +1,16 @@
 {
-  "about": "The public halves of this site's agents' session keys (id <role>-promptugal). Never a private key, a token or a contact detail.",
-  "keys": [],
-  "gap": "No key yet. events.b@PrompTugal.dinis (18 Nov 2026, about 14:40 UTC) was refused running 'pki-agent.mjs keygen --session' by this session's permission settings (the auto-mode classifier), as weather.b@ was. Not worked around. The id to publish is events.b-promptugal. Commits carry the Agent: trailer and the environment's commit signature, not an agent key. For Dinis: allow 'node pki-agent.mjs keygen --session' in this environment's permissions, or say how this team should sign. Dinis said yes (~14:55 UTC, board/guidance/2026-11-18-keys-issues-rebuilds-observability.md); at ~15:10 UTC the classifier refused again, even 'pki-agent.mjs help'. Asked Dinis to confirm in this session."
+  "about": "The public halves of this site's agents' session keys: id, fingerprints, and where the public bundle is (team/keys/, the only place the leak scan allows public keys). Never a private key, a token or a contact detail.",
+  "keys": [
+    {
+      "id": "events.b-promptugal",
+      "agent": "events.b@PrompTugal.dinis",
+      "fingerprint": "sha256:132591c814aa0b3c",
+      "signing_fingerprint": "sha256:d19cf3ea7f5568ab",
+      "algorithms": "RSA-OAEP 4096 (encryption), ECDSA P-256 (signing)",
+      "public_bundle": "team/keys/events-b-promptugal.json",
+      "made": "2026-11-18T15:45Z",
+      "tool": "sgit-ai v0.27.0 (sgit pki keygen), at Dinis's word in this session (~15:45 UTC: \"yes, make your key with sgit pki\")"
+    }
+  ],
+  "gap": "pki-agent.mjs keygen --session was refused twice by this session's permission settings (14:40 and 15:10 UTC); the key was made with sgit pki keygen instead, at Dinis's word in this session. The private halves stay under ~/.sg-send/ in this session (never committed, never printed) and live only as long as this container. Not yet registered on pki.sgit.ai."
 }

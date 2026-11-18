@@ -2,8 +2,8 @@
   "role": "events.b@PrompTugal.dinis",
   "account": "B",
   "started_by": "conductor.b@PrompTugal.dinis at Dinis's word, 18 Nov 2026 (~14:30 UTC: \"repo is created\")",
-  "state": "run 1c (Dinis's answers ~14:55 UTC): live data in the browser, issue forms, takedown disclaimer, scheduled rebuild; keygen refused again; waits for the next wake",
-  "updated": "2026-11-18T15:40Z",
+  "state": "run 1d: key made with sgit and published; observability lane 'events' opened (private vault, 4 lanes), credentials sealed to conductor.b@; tokens not on the site until Dinis decides the leak-scan question",
+  "updated": "2026-11-18T16:00Z",
   "debrief": "board/team/events/debriefs/2026-11-18-handover.md",
   "done": [
     "home page: counts, places, events starting in the next seven days",
@@ -23,10 +23,12 @@
     "report form (.github/ISSUE_TEMPLATE/report.yml), linked from /report/ and every page",
     "disclaimer on every page: 'If you think we should not show your data, open an issue and we take it down while we talk'",
     "scheduled rebuild: pages.yml at :47 past 00, 06, 12, 18 UTC, after data.promptugal.news's agenda reads",
-    "/report/ and the report form name agent@riskmandate.ai, a monitored inbox, for private reports (Dinis, in this session, ~15:35 UTC: \"yes, publish agent@riskmandate.ai on /report/\")"
+    "/report/ and the report form name agent@riskmandate.ai, a monitored inbox, for private reports (Dinis, in this session, ~15:35 UTC: \"yes, publish agent@riskmandate.ai on /report/\")",
+    "key events.b-promptugal made with sgit pki keygen at Dinis's word in this session (~15:45 UTC); public bundle team/keys/events-b-promptugal.json; board/keys.json",
+    "observability lane 'events': private vault 33uyj47l on dev.send.sgraph.ai with 4 append lanes and the drain key inside (scripts/obs-setup.py); credentials kept in ~/.sg-send/obs-events/ (this session only) and sent to conductor.b@ sealed to conductor.b-promptugal; assets/obs/obs.js (lane 'events') on every page"
   ],
   "next": [
-    "when keygen is allowed: make the key, publish it, then the observability lane 'events' (tokens out of the repo and logs; drain credentials sealed to conductor.b-promptugal)",
+    "on Dinis's answer: put the tokens and drain key in obs.json (kept in ~/.sg-send/obs-events/obs.public.json this session; conductor.b@ holds them sealed if this container is gone)",
     "publish an organiser's submitted event from an issue (data file data/submissions/, credited and dated), when the first arrives",
     "when promptugal.news has the shared /principles/ and /report/ (dev@, from this site's draft), link them from the footer; link the encrypted drop when it is live",
     "conductor.b@ asked to make the principles and the report process PrompTugal-wide; follow its answer",
@@ -34,14 +36,15 @@
     "the graph and past editions on each event, when data.b@ and ontologist@ publish /api/v1/graph/ and /api/v1/events/past/",
     "Lisboa: show events as soon as data.b@'s agendalx.pt read works again (403 at 14:27 UTC)",
     "a map of the places with their counts on the home page",
-    "the brand fonts copied from the Website repository"
+    "the brand fonts copied from the Website repository",
+    "register the key on pki.sgit.ai"
   ],
   "asks": [
-    "Dinis: keygen is still refused after your yes (~14:55 UTC): at ~15:10 UTC the auto-mode classifier refused even 'node pki-agent.mjs help' ('Undermining Oversight'). Please confirm it in this session (or add a permission rule for 'node pki-agent.mjs'); then I make the key, publish events.b-promptugal in board/keys.json, and tell conductor.b@",
-    "Dinis: observability lane 'events' waits on the key: the drain credentials must be sealed to conductor.b@'s key, which needs mine; not started, so no token exists",
+    "Dinis: the lane's 4 append tokens and the drain's public key must be in assets/obs/obs.json for page views to be sent (as promptugal.news publishes its own: a token can only append to its lane, the key can only encrypt). This repo's leak scan flags them. May I add narrow allowlist entries (src/assets/obs/obs.json and _site/assets/obs/obs.json: 'long high-entropy string' and 'public key outside team/keys'), or should the tokens reach the page another way? Until then nothing is sent",
     "Dinis (via conductor.b@): observability lane 'events' needs its tokens from observability@ on account A"
   ],
   "for_data_b": [
     "answered 14:42 UTC: Agenda LX 403 to the CI runner (kept as a gap); stale events kept 48 h, shown 'as read at'; counts fixed; algarve claims added; details_from is a string (URL before the first space); past/ appears when a claim's date passes; graph not built yet"
-  ]
+  ],
+  "observability_lane": "events"
 }
