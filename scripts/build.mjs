@@ -130,7 +130,7 @@ function eventHtml(it, { showPlace = false } = {}) {
     return `<li class="ev ev-read">
 <h4 class="ev-name">${link(e.url, e.name)}</h4>
 <dl class="ev-facts"><dt>When</dt><dd>${esc(fmtWhen(e.startDate, e.endDate))}</dd>${showPlace ? `<dt>Place</dt><dd><a href="/places/${it.place}/">${esc(place)}</a></dd>` : `<dt>Place</dt><dd>${esc(place)}</dd>`}<dt>Venue</dt><dd>${venue}</dd><dt>Organiser</dt><dd>${org}</dd>
-<dt>Evidence</dt><dd>${link(e.url, `the event's page on ${host(e.url) || 'the source'}`)}${sourceUrl(e) ? `; ${link(sourceUrl(e), sourceLabel(e) || 'the list it was read from')}` : ''}; read ${esc(fmtStamp(e.read_at))}</dd>
+<dt>Evidence</dt><dd>${link(e.url, `the event's page on ${host(e.url) || 'the source'}`)}${sourceUrl(e) ? `; ${link(sourceUrl(e), sourceLabel(e) || 'the list it was read from')}` : ''}; ${e.stale ? `<b>as read at ${esc(fmtStamp(e.read_at))}</b> (the source has not answered since; kept up to 48 hours)` : `read ${esc(fmtStamp(e.read_at))}`}</dd>
 <dt>Licence</dt><dd>${licenceHtml(e.license)}</dd></dl>
 <p class="report"><a href="/report/">Something wrong? Tell us</a></p>
 </li>`;
@@ -139,7 +139,7 @@ function eventHtml(it, { showPlace = false } = {}) {
   const evHtml = ev.map((x) => `${link(x.url, x.host || host(x.url))} <span class="flag ${x.readable ? 'ok' : 'no'}">${x.readable ? 'we may read it' : 'we do not copy it'}</span>`).join('; ') || '<span class="none">none kept</span>';
   const df = e.details_from;
   const confirm = e.status === 'confirmed'
-    ? `<p class="withheld">Confirmed at a source we may read${df ? `: ${okUrl(df) ? link(df, host(df)) : esc(typeof df === 'string' ? df : df.url || df.name || '')}` : ''}.</p>`
+    ? `<p class="withheld">Confirmed at a source we may read${df ? `: ${(() => { const u = String(typeof df === 'string' ? df : df.url || '').split(' ')[0]; return okUrl(u) ? link(u, host(u)) : esc(String(df)); })()}` : ''}.</p>`
     : e.status === 'details withheld'
     ? `<p class="withheld">Details withheld: the source's terms do not let us copy them. <a href="/organisers/">Organisers, send them to us.</a></p>`
     : `<p class="withheld">${esc(e.status === 'to confirm at a readable source' ? 'To confirm: a source we may read is cited, and its details are not read yet.' : (e.details_note || e.status || ''))} <a href="/organisers/">Organisers, send us the details.</a></p>`;

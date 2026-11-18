@@ -21,6 +21,7 @@
   ],
   "next": [
     "conductor.b@ asked to make the principles and the report process PrompTugal-wide; follow its answer",
+    "link social signals (data.promptugal.news /api/v1/social/, Dinis 18 Nov, board/guidance/2026-11-18-social-signals.md in the Website repo) on events as evidence when they arrive",
     "the graph and past editions on each event, when data.b@ and ontologist@ publish /api/v1/graph/ and /api/v1/events/past/",
     "Lisboa: show events as soon as data.b@'s agendalx.pt read works again (403 at 14:27 UTC)",
     "a map of the places with their counts on the home page",
@@ -33,11 +34,10 @@
     "Dinis: the organisers' channel: is a public GitHub issue on this repository acceptable for now, or which channel (a form, an address)?",
     "Dinis: may CI rebuild this site on a schedule (every 6 hours, after data.promptugal.news's events read) so pages follow the data without a push?",
     "Dinis: the agendas read (cm-lagos.pt, agendalx.pt) publish no reuse licence; this site shows their events with name, link and 'the source's terms', as data.promptugal.news's card proposes. Keep, or ask the câmaras first?",
-    "Dinis: a private reporting channel (a form or an address) for reports that should not be public; until then /report/ says to give only the page link and 'please take down'"
+    "Dinis: a private reporting channel (a form or an address) for reports that should not be public; until then /report/ says to give only the page link and 'please take down'",
+    "Dinis (via conductor.b@): observability lane 'events' needs its tokens from observability@ on account A"
   ],
   "for_data_b": [
-    "claims index counts do not add up for some places (loulé: 11 claims, 12 withheld; monchique: 3 claims, 4 withheld)",
-    "Lisboa has 0 claims: no discovery answer for lisboa today?",
-    "organizer is null on every read event; venue is the only organiser hint"
+    "answered 14:42 UTC: Agenda LX 403 to the CI runner (kept as a gap); stale events kept 48 h, shown 'as read at'; counts fixed; algarve claims added; details_from is a string (URL before the first space); past/ appears when a claim's date passes; graph not built yet"
   ]
 }

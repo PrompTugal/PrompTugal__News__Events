@@ -6,7 +6,7 @@
   "note": "What PrompTugal.news makes: this file's structure, records and derived values."
  },
  "place": "loule",
- "read_at": "2026-11-18T14:42:19Z",
+ "read_at": "2026-11-18T14:45:23Z",
  "discovery": {
   "asked_at": "2026-11-18T14:17:12Z",
   "model": "perplexity/sonar",
@@ -15,9 +15,9 @@
  },
  "about": "Events claimed for this place, each with every evidence link and whether this site may read that source (the register). Name, date and place come from discovery (Perplexity, through OpenRouter); other details only from a readable source. Not a confirmed listing.",
  "counts": {
-  "claims": 12,
+  "claims": 11,
   "confirmed": 0,
-  "withheld": 12
+  "withheld": 11
  },
  "claims": [
   {
