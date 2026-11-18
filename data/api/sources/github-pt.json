@@ -1,0 +1,28 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values."
+ },
+ "id": "github-pt",
+ "name": "Code from Portuguese organisations on GitHub",
+ "kind": "open-data API",
+ "url": "https://api.github.com/",
+ "owner": "The organisations listed in sources/github-pt/orgs.json, through GitHub, Inc.'s REST API",
+ "places": [
+  "portugal"
+ ],
+ "gives": [
+  "Public repositories and latest releases of Portuguese startups, companies, public bodies, universities and open-source projects on GitHub, each with its source URL, licence and the time read."
+ ],
+ "status": "read",
+ "how": "sources/github-pt/collect.mjs reads https://api.github.com/ (every 6 hours)",
+ "terms": {
+  "summary": "GitHub's terms allow this use: reading public data through the API is permitted; excessive requests may be suspended; data must not be used for spam or to sell users' personal information. We read organisations' public repositories and releases only, collect no personal data, stay well under the rate limits, and keep each repository's own licence (or a link to its terms) on every item. Not reviewed by a person.",
+  "page": "https://docs.github.com/en/site-policy/github-terms/github-terms-of-service#h-api-terms",
+  "read_at": "2026-11-18"
+ },
+ "on_this_site": "https://data.promptugal.news/sources/github-pt/",
+ "collector": "sources/github-pt/collect.mjs"
+}

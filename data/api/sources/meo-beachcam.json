@@ -1,0 +1,40 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values."
+ },
+ "id": "meo-beachcam",
+ "name": "MEO BeachCam",
+ "kind": "public live camera",
+ "url": "https://beachcam.meo.pt/",
+ "owner": "MEO (Altice Portugal); the privacy page names Wavenation, Conteúdos e Media Lda. as operator (to confirm)",
+ "places": [
+  "faro",
+  "castro-marim",
+  "portimao",
+  "lagoa",
+  "silves",
+  "albufeira",
+  "loule",
+  "lagos",
+  "aljezur",
+  "vila-do-bispo"
+ ],
+ "gives": [
+  "live cameras (link only)"
+ ],
+ "status": "not-read",
+ "why": {
+  "quote": "A reprodução, redistribuição ou retransmissão depende de autorização prévia dos respetivos titulares, salvo nos casos legalmente permitidos.",
+  "quote_lang": "pt",
+  "page": "https://beachcam.meo.pt/termos-e-condicoes/",
+  "read_at": "2026-11-18",
+  "basis": "The host answered 403 to our fetches on 18 November 2026; the refusal is respected, not retried. The quote is from search snippets of MEO's camera pages, not read in full. Dinis decided MEO is included through its official cameras and embeds (18 Nov ~19:00 UTC): 19 cameras are listed by link only, status not checked, embedding not allowed until MEO consents."
+ },
+ "interface": "none we use: links to MEO's own camera pages",
+ "contact_channel": null,
+ "researched_by": "data.b.collector@PrompTugal.dinis (Sonnet), checked by data.b@",
+ "notes": "A consent or embed request to MEO is a draft for a person to send, never sent by an agent."
+}

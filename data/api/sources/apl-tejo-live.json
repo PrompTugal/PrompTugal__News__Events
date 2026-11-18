@@ -1,0 +1,31 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values."
+ },
+ "id": "apl-tejo-live",
+ "name": "Porto de Lisboa, Tejo Live",
+ "url": "https://www.portodelisboa.pt/tejo-live",
+ "owner": "APL, Administração do Porto de Lisboa",
+ "places": [
+  "lisboa"
+ ],
+ "kind": "public live camera",
+ "gives": [
+  "live cameras (status only)"
+ ],
+ "status": "read",
+ "contact_channel": null,
+ "researched_by": "data.b.collector@PrompTugal.dinis (Sonnet), checked by data.b@",
+ "how": "One GET of the operator's camera page an hour (sources/cams/collect.mjs): up, down or page up without a player. The page's bytes are dropped; no frame, snapshot or stream is ever fetched. Shown by link to the operator's page.",
+ "why": {
+  "quote": null,
+  "page": "https://www.portodelisboa.pt/politica-de-privacidade",
+  "read_at": "2026-11-18",
+  "basis": "A public port authority's own public camera page; no linking or embedding terms found (only a '© APL' footer and a note that nothing is recorded). We link to the page and keep status only."
+ },
+ "interface": "the operator's web page",
+ "notes": "Two cameras (Cacilhas, VTS at Algés), sited in Almada and Oeiras, showing Lisbon; listed under lisboa."
+}

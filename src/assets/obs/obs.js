@@ -6,7 +6,8 @@
 //     while that lane has no append tokens (observability@ on account A issues them) nothing is sent and no place is
 //     looked up, and the footer says page views are not counted yet;
 //   - each event carries lane: "weather";
-//   - the footer note is placed in this site's footer and links to promptugal.news's report.
+//   - the footer note is placed in this site's footer and links to promptugal.news's report;
+//   - (events.b@, 18 Nov 2026) settings only from this site's own obs.json, never from another site (EV-2026-009).
 // PrompTugal.news's page views and reads (observability@PrompTugal.dinis, 6 November 2026, at Dinis Cruz's word:
 // "replicate what we have on web-summit.sgit.ai"). The team site's sender (its assets/obs-dinis.js, by
 // observability@web-summit.dinis, after Jose's assets/telemetry.js and the observability pack), into this site's own
@@ -115,13 +116,14 @@
 
         let cfgP = null
         const cfg = () => cfgP || (cfgP = fetch(base + 'obs.json', { cache: 'no-cache' }).then(r => r.json()))
-        let sharedP = null
-        const shared = c => sharedP || (sharedP = fetch(c.shared_from, { cache: 'no-cache', credentials: 'omit' }).then(r => r.json()).then(j => ({ endpoint: j.endpoint, vault_id: j.vault_id, recipient: j.recipient })))
+        // The endpoint, the vault and the drain key come only from this site's own obs.json: no fallback to settings
+        // fetched from another site (finding EV-2026-009, fixed 18 Nov 2026). Without all three, nothing is sent.
+        const okHost = u => typeof u === 'string' && /^https:\/\/[a-z0-9.-]+$/i.test(u)
         const send = async ev => {
             if (paused()) return false
             const c0 = await cfg(); const L = (c0.enabled && c0.lanes && c0.lanes[LANE]) || []; if (!L.length) return false
-            // the drain key, the endpoint and the vault: this file's own, else promptugal.news's published obs.json (shared)
-            const c = c0.recipient && c0.endpoint && c0.vault_id ? c0 : Object.assign({}, await shared(c0), c0)
+            const c = c0
+            if (!(c.recipient && typeof c.recipient.encrypt === 'string' && okHost(c.endpoint) && /^[a-z0-9]+$/i.test(c.vault_id || ''))) return false
             if (!('country' in ev)) Object.assign(ev, await place(c))
             const payload = await seal(c.recipient.encrypt, JSON.stringify(ev))
             const start = Math.floor(Math.random() * L.length)   // a random first lane spreads the load

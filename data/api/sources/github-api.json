@@ -1,0 +1,34 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values."
+ },
+ "id": "github-api",
+ "name": "GitHub REST API (public organisations, repositories and releases)",
+ "kind": "open-data API",
+ "url": "https://api.github.com/",
+ "owner": "GitHub, Inc.",
+ "places": [
+  "portugal"
+ ],
+ "gives": [
+  "code",
+  "releases",
+  "open-source activity"
+ ],
+ "status": "read",
+ "how": "The official REST API (https://api.github.com), version 2022-11-28, public endpoints only: GET /orgs/{org}/repos and GET /repos/{org}/{repo}/releases for the Portuguese organisations listed in sources/github-pt/orgs.json. Anonymous (60 requests an hour) or with the workflow's GITHUB_TOKEN (5000 an hour); one request a second; stops at 10 requests remaining. No contributors, emails, user profiles or members are read. Collector: sources/github-pt/collect.mjs, every 6 hours.",
+ "terms": {
+  "page": "https://docs.github.com/en/site-policy/github-terms/github-terms-of-service#h-api-terms",
+  "read_at": "2026-11-18",
+  "quote": "\"You may not use the API to download data or Content from GitHub for spamming purposes, including for the purposes of selling GitHub users' personal information, such as to recruiters, headhunters, and job boards.\" / \"Abuse or excessively frequent requests to GitHub via the API may result in the temporary or permanent suspension of your Account's access to the API.\" Acceptable Use Policies, section 7 (https://docs.github.com/en/site-policy/acceptable-use-policies/github-acceptable-use-policies, read 2026-11-18): \"Scraping does not refer to the collection of information through our API.\"",
+  "quote_lang": "en",
+  "basis": "published terms (API Terms, section H; Acceptable Use Policies, information usage); quotes as returned by a page reader, which cut some sentences short"
+ },
+ "licence": "Each repository's own licence (SPDX id) where it declares one; otherwise the repository's terms, linked. Repository text is the organisation's own.",
+ "contact_channel": "https://support.github.com/",
+ "notes": "Not reviewed by a person. Personal information is outside the collection and GitHub's Privacy Statement applies to any that appears.",
+ "researched_by": "data.b.dev@PrompTugal.dinis (Sonnet), for data.b@"
+}

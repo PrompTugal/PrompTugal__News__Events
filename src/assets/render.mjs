@@ -42,7 +42,7 @@ export const fmtWhen = (start, end) => {
 };
 export const fmtStamp = (iso) => {
   if (!iso) return 'unknown';
-  const d = new Date(iso); if (isNaN(d)) return esc(iso);
+  const d = new Date(iso); if (isNaN(d)) return '(time not given)';
   return `${d.getUTCDate()} ${MONTHS[d.getUTCMonth()]} ${d.getUTCFullYear()}, ${String(d.getUTCHours()).padStart(2, '0')}:${String(d.getUTCMinutes()).padStart(2, '0')} UTC`;
 };
 export const addDays = (day, n) => { const t = ymd(day); return new Date(Date.UTC(t.y, t.m - 1, t.d + n)).toISOString().slice(0, 10); };
@@ -51,7 +51,10 @@ export const addDays = (day, n) => { const t = ymd(day); return new Date(Date.UT
 const okItem = (e) => e && typeof e === 'object' && typeof e.name === 'string' && e.name.trim() && okDate(e.startDate) && (e.endDate == null || e.endDate === '' || okDate(e.endDate));
 const pid = (p, fallback) => (okId(p) ? p : okId(fallback) ? fallback : 'algarve');
 const arr = (a) => (Array.isArray(a) ? a : []);
-export const readItemsOf = (f, place) => arr(f?.events).filter(okItem).map((e) => ({ kind: 'read', place: pid(e.place, place), e }));
+export const readItemsOf = (f, place) => arr(f?.events).filter(okItem).map((e) => ({ kind: 'read', place: pid(e.place, place), e, by: typeof f?.by === 'string' ? f.by : '' }));
+// Provenance on every item (Dinis, 18 Nov 2026 ~19:00 UTC): how it was read, by what, and who shows it here.
+const SHOWN = 'shown here by events.b@PrompTugal.dinis (an AI agent)';
+const readHow = (it) => `read by ${it.by ? clean(it.by).slice(0, 200) : 'a collector not stated'}, on data.promptugal.news; ${SHOWN}`;
 export const foundItemsOf = (f, place) => arr(f?.claims).filter(okItem).map((c) => ({ kind: 'found', place: pid(c.place, place), e: c, discovery: f.discovery && typeof f.discovery === 'object' ? f.discovery : null }));
 export const endOf = (it) => dayPart(it.e.endDate || it.e.startDate);
 export const startOf = (it) => dayPart(it.e.startDate);
@@ -93,7 +96,8 @@ export function eventHtml(it, { showPlace = false } = {}) {
 <h4 class="ev-name">${link(e.url, e.name)}</h4>
 <dl class="ev-facts"><dt>When</dt><dd>${esc(fmtWhen(e.startDate, e.endDate))}</dd>${showPlace ? `<dt>Place</dt><dd><a href="/places/${it.place}/">${esc(place)}</a></dd>` : `<dt>Place</dt><dd>${esc(place)}</dd>`}<dt>Venue</dt><dd>${venue}</dd><dt>Organiser</dt><dd>${org}</dd>
 <dt>Evidence</dt><dd>${link(e.url, `the event's page on ${host(e.url) || 'the source'}`)}${sourceUrl(e) ? `; ${link(sourceUrl(e), sourceLabel(e) || 'the list it was read from')}` : ''}; ${e.stale ? `<b>as read at ${esc(fmtStamp(e.read_at))}</b> (the source has not answered since; kept up to 48 hours)` : `read ${esc(fmtStamp(e.read_at))}`}</dd>
-<dt>Licence</dt><dd>${licenceHtml(e.license)}</dd></dl>
+<dt>Licence</dt><dd>${licenceHtml(e.license)}</dd>
+<dt>Provenance</dt><dd>${esc(readHow(it))} (<a href="/how/">how it works</a>)</dd></dl>
 <p class="report"><a href="/report/">Something wrong? Tell us</a></p>
 </li>`;
   }
@@ -111,7 +115,7 @@ export function eventHtml(it, { showPlace = false } = {}) {
 <h4 class="ev-name">${esc(e.name)}</h4>
 <dl class="ev-facts"><dt>When</dt><dd>${esc(fmtWhen(e.startDate, e.endDate))}</dd><dt>Place</dt><dd>${showPlace ? `<a href="/places/${it.place}/">${esc(place)}</a>` : esc(place)}</dd>
 <dt>Evidence</dt><dd>${evHtml}</dd>
-<dt>Found</dt><dd>through Perplexity${d ? ` (${esc(d.model || 'sonar')}, via ${esc(d.via || 'OpenRouter')}, asked ${esc(fmtStamp(d.asked_at))})` : ''}, by <a href="${DATA}/">data.promptugal.news</a></dd>
+<dt>Found</dt><dd>through Perplexity${d ? ` (${esc(d.model || 'sonar')}, via ${esc(d.via || 'OpenRouter')}, asked ${esc(fmtStamp(d.asked_at))})` : ''}, by <a href="${DATA}/">data.promptugal.news</a>; ${esc(SHOWN)} (<a href="/how/">how it works</a>)</dd>
 <dt>Licence</dt><dd>${licenceHtml(e.license)}; each evidence link is under its own source's terms</dd></dl>
 ${confirm}
 <p class="report"><a href="/report/">Something wrong? Tell us</a></p>
@@ -123,12 +127,12 @@ export function eventMd(it) {
     return [`- **${mdLink(e.url, e.name)}**`, `  - When: ${mdText(fmtWhen(e.startDate, e.endDate))}; place: ${mdText(place)}; venue: ${mdText(e.location?.name || 'not given by the source')}`,
       `  - Organiser: ${mdText(e.organizer?.name || `not named by the source; listed by ${PUBLISHER_FALLBACK(e)}`)}`,
       `  - Evidence: ${mdLink(e.url, "the event's page")}${sourceUrl(e) ? `; ${mdLink(sourceUrl(e), sourceLabel(e) || 'the list it was read from')}` : ''}; read ${fmtStamp(e.read_at)}`,
-      `  - Licence: ${licenceMd(e.license)}`].join('\n');
+      `  - Licence: ${licenceMd(e.license)}`, `  - Provenance: ${mdText(readHow(it))}`].join('\n');
   }
   const ev = arr(e.evidence).filter((x) => x && okUrl(x.url)).map((x) => `${mdLink(x.url, x.host || host(x.url))} (${x.readable ? 'we may read it' : 'we do not copy it'})`).join('; ');
   return [`- **${mdText(e.name)}** (found through Perplexity)`, `  - When: ${mdText(fmtWhen(e.startDate, e.endDate))}; place: ${mdText(place)}`,
     `  - Evidence: ${ev || 'none kept'}`, `  - ${e.status === 'confirmed' ? 'Confirmed at a source we may read.' : e.status === 'details withheld' ? "Details withheld: the source's terms do not let us copy them. Organisers, send them to us: " + SITE + '/organisers/' : 'To confirm at a source we may read.'}`,
-    `  - Licence: ${licenceMd(e.license)}; each evidence link under its own source's terms`].join('\n');
+    `  - Licence: ${licenceMd(e.license)}; each evidence link under its own source's terms`, `  - Provenance: found through Perplexity${it.discovery ? ` (${mdText(it.discovery.model || 'sonar')}, asked ${fmtStamp(it.discovery.asked_at)})` : ''} by data.promptugal.news; ${SHOWN}`].join('\n');
 }
 
 export function listHtml(items, opts = {}) {

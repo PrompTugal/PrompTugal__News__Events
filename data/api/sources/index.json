@@ -7,8 +7,8 @@
  },
  "about": "Every source PrompTugal knows of, read or not. For each one we do not read, the reason, quoted from its terms or robots.txt with the page and the date read. We respect whatever a source says; a request on the record is drafted by outreach@ and sent by a person, and the answer is kept here as written.",
  "counts": {
-  "read": 18,
-  "not-read": 74,
+  "read": 23,
+  "not-read": 75,
   "asked": 0,
   "allowed": 0,
   "refused": 0,
@@ -36,6 +36,16 @@
    "url": "https://data.promptugal.news/api/v1/sources/base-gov-pt.json"
   },
   {
+   "id": "cams",
+   "name": "Public live cameras: where they are and whether they are up",
+   "kind": "open-data API",
+   "status": "read",
+   "places": [
+    "portugal"
+   ],
+   "url": "https://data.promptugal.news/api/v1/sources/cams.json"
+  },
+  {
    "id": "events-pt",
    "name": "Events in Portugal, by place",
    "kind": "open-data API",
@@ -44,6 +54,16 @@
     "portugal"
    ],
    "url": "https://data.promptugal.news/api/v1/sources/events-pt.json"
+  },
+  {
+   "id": "github-pt",
+   "name": "Code from Portuguese organisations on GitHub",
+   "kind": "open-data API",
+   "status": "read",
+   "places": [
+    "portugal"
+   ],
+   "url": "https://data.promptugal.news/api/v1/sources/github-pt.json"
   },
   {
    "id": "ipma-city-forecasts",
@@ -948,6 +968,55 @@
     "portugal"
    ],
    "url": "https://data.promptugal.news/api/v1/sources/base-gov-pt-portal.json"
+  },
+  {
+   "id": "apl-tejo-live",
+   "name": "Porto de Lisboa, Tejo Live",
+   "kind": "public live camera",
+   "status": "read",
+   "places": [
+    "lisboa"
+   ],
+   "url": "https://data.promptugal.news/api/v1/sources/apl-tejo-live.json"
+  },
+  {
+   "id": "aemtg-praia-da-rocha",
+   "name": "Ondas em Direto, Praia da Rocha (AEMTG)",
+   "kind": "public live camera",
+   "status": "read",
+   "places": [
+    "portimao"
+   ],
+   "url": "https://data.promptugal.news/api/v1/sources/aemtg-praia-da-rocha.json"
+  },
+  {
+   "id": "meo-beachcam",
+   "name": "MEO BeachCam",
+   "kind": "public live camera",
+   "status": "not-read",
+   "places": [
+    "faro",
+    "castro-marim",
+    "portimao",
+    "lagoa",
+    "silves",
+    "albufeira",
+    "loule",
+    "lagos",
+    "aljezur",
+    "vila-do-bispo"
+   ],
+   "url": "https://data.promptugal.news/api/v1/sources/meo-beachcam.json"
+  },
+  {
+   "id": "github-api",
+   "name": "GitHub REST API (public organisations, repositories and releases)",
+   "kind": "open-data API",
+   "status": "read",
+   "places": [
+    "portugal"
+   ],
+   "url": "https://data.promptugal.news/api/v1/sources/github-api.json"
   }
  ]
 }

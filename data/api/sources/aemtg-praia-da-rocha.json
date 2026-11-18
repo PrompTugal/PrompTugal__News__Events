@@ -1,0 +1,31 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values."
+ },
+ "id": "aemtg-praia-da-rocha",
+ "name": "Ondas em Direto, Praia da Rocha (AEMTG)",
+ "url": "https://meteorologia.aemtg.pt/video",
+ "owner": "Agrupamento de Escolas Manuel Teixeira Gomes, with Câmara Municipal de Portimão",
+ "places": [
+  "portimao"
+ ],
+ "kind": "public live camera",
+ "gives": [
+  "live cameras (status only)"
+ ],
+ "status": "read",
+ "contact_channel": null,
+ "researched_by": "data.b.collector@PrompTugal.dinis (Sonnet), checked by data.b@",
+ "how": "One GET of the operator's camera page an hour (sources/cams/collect.mjs): up, down or page up without a player. The page's bytes are dropped; no frame, snapshot or stream is ever fetched. Shown by link to the operator's page.",
+ "why": {
+  "quote": null,
+  "page": "https://meteorologia.aemtg.pt/video",
+  "read_at": "2026-11-18",
+  "basis": "A public school group's own page, linked from cm-portimao.pt and carrying the municipality's logo; no terms page found. Flagged: the page does not name the camera; to confirm with the operator."
+ },
+ "interface": "the operator's web page",
+ "notes": "Flagged in register/cams.json."
+}

@@ -1,0 +1,28 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values."
+ },
+ "id": "cams",
+ "name": "Public live cameras: where they are and whether they are up",
+ "kind": "open-data API",
+ "url": "https://github.com/PrompTugal/PrompTugal__News__Data/blob/dev/register/cams.json",
+ "owner": "Each camera's operator, on its own page (register/cams.json lists them)",
+ "places": [
+  "portugal"
+ ],
+ "gives": [
+  "Public live cameras in Lisboa and the Algarve from official operators (câmaras, Infraestruturas de Portugal, ports, airports, parks, public agencies, tourism boards) and operators' own public pages, each with operator, place, coordinates, terms and licence link, and an hourly check of whether its operator's page is up, with the history of changes. No frame, picture or stream is fetched, kept or analysed."
+ ],
+ "status": "read",
+ "how": "sources/cams/collect.mjs reads https://github.com/PrompTugal/PrompTugal__News__Data/blob/dev/register/cams.json (hourly)",
+ "terms": {
+  "summary": "Official cameras of public bodies and operators' own pages only, by link; each camera's terms are recorded in register/cams.json (terms_page, terms_summary, licence_link). We ask for the operator's page only, once an hour, and keep only whether it answered and whether it still carries a player: never a frame, snapshot or stream, no face or plate recognition, no recording. Never an unsecured private camera. Take-down on request. Rules confirmed by Dinis Cruz on 18 November 2026, about 19:00 UTC (official cameras only; the operator's own embed or a link; never record; MEO BeachCam through its official embeds; Windy's webcams API under its terms, attributed). Not reviewed by a person.",
+  "page": "https://github.com/PrompTugal/PrompTugal__News__Data/blob/dev/register/cams-README.md",
+  "read_at": "2026-11-18"
+ },
+ "on_this_site": "https://data.promptugal.news/sources/cams/",
+ "collector": "sources/cams/collect.mjs"
+}
