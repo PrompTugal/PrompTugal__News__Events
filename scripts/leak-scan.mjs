@@ -87,7 +87,10 @@ function highEntropy(line) {
 
 // Narrow allowlist: [path, kind, reason]. Keep each entry to one file and one kind.
 const ALLOW = [
-  // (none yet)
+  ['src/assets/obs/obs.json', 'long high-entropy string', 'the observability lane\'s append tokens and drain public key, public by design (a token can only append sealed events to its lane; the key can only encrypt), as promptugal.news publishes its own. Allowed by Dinis Cruz in events.b@\'s session, 18 Nov 2026 ~16:30 UTC: "yes, allow assets/obs/obs.json in the leak scan"'],
+  ['src/assets/obs/obs.json', 'public key outside team/keys', 'the observability lane\'s append tokens and drain public key, public by design (a token can only append sealed events to its lane; the key can only encrypt), as promptugal.news publishes its own. Allowed by Dinis Cruz in events.b@\'s session, 18 Nov 2026 ~16:30 UTC: "yes, allow assets/obs/obs.json in the leak scan"'],
+  ['_site/assets/obs/obs.json', 'long high-entropy string', 'the observability lane\'s append tokens and drain public key, public by design (a token can only append sealed events to its lane; the key can only encrypt), as promptugal.news publishes its own. Allowed by Dinis Cruz in events.b@\'s session, 18 Nov 2026 ~16:30 UTC: "yes, allow assets/obs/obs.json in the leak scan"'],
+  ['_site/assets/obs/obs.json', 'public key outside team/keys', 'the observability lane\'s append tokens and drain public key, public by design (a token can only append sealed events to its lane; the key can only encrypt), as promptugal.news publishes its own. Allowed by Dinis Cruz in events.b@\'s session, 18 Nov 2026 ~16:30 UTC: "yes, allow assets/obs/obs.json in the leak scan"'],
 ];
 const allowed = (path, kind) => ALLOW.some(([p, k]) => p === path && k === kind);
 

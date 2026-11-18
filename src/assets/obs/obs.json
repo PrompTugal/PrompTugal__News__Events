@@ -7,7 +7,12 @@
   "enabled": true,
   "lane": "events",
   "lanes": {
-    "events": []
+    "events": [
+      "3ca66893068318ada5590cb6ee90cd199df52d8d5af10ce35270a559c6b2488c",
+      "deb58b875c80239a966dde79cf433fe9bcf6906ed9a1ceb041f8e1ade1c49e75",
+      "c0750e4d9bbeb47129199c219f51fa8eceba40f3cfd2ac6569b859d828a79a24",
+      "ee258bc6c2558282413d5b6864d8c77eb59dac1533a40b3dc1edfcefa2670421"
+    ]
   },
   "geo": [
     "https://ipapi.co/json/",
@@ -16,5 +21,9 @@
   "what": "This site counts page views and reading time, publicly, to learn what is read: the page, the referring site (host only), the time to the minute, the site version, a random id that ends with the tab, the screen size class, the browser's language and time zone, the country, region and city (and the city's position, rounded to about 10 km), a link's tag (?via=) if there is one, and an automation class if a bot declares itself. To find the place, the browser asks ipapi.co (or ipwho.is), which see the reader's IP address; this site reads only the place from the answer and keeps no IP address, no cookie, no user-agent string and no fingerprint. Do Not Track, Global Privacy Control and Pause in the footer turn it all off. ",
   "endpoint": "https://dev.send.sgraph.ai",
   "vault_id": "33uyj47l",
-  "opened": "18 November 2026, by events.b@PrompTugal.dinis: a private vault of its own on account B; drained by conductor.b@PrompTugal.dinis. The lane's four append tokens and the drain key (fingerprint sha256:8af5c1bacad94a7c) are not published here yet: the leak scan flags them, and whether to allow them (as promptugal.news publishes its own) is for Dinis. Until then nothing is sent."
+  "opened": "18 November 2026, by events.b@PrompTugal.dinis: a private vault of its own on account B; drained by conductor.b@PrompTugal.dinis. Tokens and the drain key published 18 Nov 2026 ~16:30 UTC, at Dinis's word allowing this file in the leak scan.",
+  "recipient": {
+    "fingerprint": "sha256:8af5c1bacad94a7c",
+    "encrypt": "-----BEGIN PUBLIC KEY-----\nMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAxmZjT3s+GmHFeVkzhqSf\nEHDZ4TjH5Sk3fMfmTEFD7hAdqKQenf65LMayNusNF2jtXmDDZ7RRt2xvTLIDxPAO\nRR1bwEGTdLs1W4eAvdNDkLHjFzWVvc+skj7bCQaYRM7XYPNpn3OCf2lmdsTEoimT\ndtqwowh81a9ttujFeb7088VoNzjwUnRCIUSNYKOWidO3rw3j/xmCg9CB05xs1SgU\nsXz+Lf9wbg4OvQyunfFTZPPXpNA9JTLF3HhaC/7MCkiK7n3/L2Bhlo4Z0a7C4xs7\nEI7M5MT2gHYgc1x8wjS1w8mJLHnNo54eZEkNYcjfS3vY9yODHwc+SjcZQaMohJSe\nIrqKYOwCDoAcGK2CbplOd9G4FkKvunmYTbiCqvn1aryzs2cEbhi4/GfZWAbrPCNQ\nbi9tuTVnNEmy3nHzk2PnLZ1m8Q4O6evtWsSm1FG3Q7mq9zSRay+UBfIZgAcTVTw4\ndii0W+nxX0lYLRiKkysC68mLNGce68+UVY+NrjBk+MDvRh7UBu7hVs29vl5oQRQx\n8MGK5NbLMNzo73BFDAjLHGOlpjJQdqimuNgdNlDpXjY9Yeo6AjVjBa3IFvhjYX5w\nKbo08FssaPPsrAnNiDmHKf4FIx/A0TkZVEbCbxWOHhShaGIUGNjreEJYUEvs66Z1\nQGUfE7+XFuAtVDRgtquY9FkCAwEAAQ==\n-----END PUBLIC KEY-----\n"
+  }
 }
