@@ -110,7 +110,10 @@
    "file": "src/assets/obs/obs.js",
    "found": "2026-11-18 ~15:05 UTC",
    "found_by": "AppSec post-review (events.b.security@, a Sonnet sub-agent of events.b@PrompTugal.dinis)",
-   "state": "open"
+   "state": "fixed",
+   "detail": "The page-view script used its own settings file, but if that lacked the endpoint, vault or encryption key it fetched them from promptugal.news's published settings. Had that site been compromised, this site's page views could have been sealed to another key and sent elsewhere. It was not reached in practice: this site's own settings were complete.",
+   "fix": "The fallback is removed: settings come only from this site's obs.json, and nothing is sent unless the endpoint, vault id and key are all well-formed.",
+   "commit": "e48c3f1"
   },
   {
    "id": "EV-2026-010",
@@ -131,7 +134,10 @@
    "file": "github workflow pages.yml",
    "found": "2026-11-18 ~15:05 UTC",
    "found_by": "AppSec post-review (events.b.security@, a Sonnet sub-agent of events.b@PrompTugal.dinis)",
-   "state": "open"
+   "state": "fixed",
+   "detail": "The workflow named its GitHub actions by moving version tags (such as v4), so a changed tag upstream would have run different code in the build and deploy.",
+   "fix": "Every action is pinned to the full commit its tag pointed to on 18 Nov 2026, with the tag in a comment and how to update it.",
+   "commit": "e48c3f1"
   }
  ]
 }
