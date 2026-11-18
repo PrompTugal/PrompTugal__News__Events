@@ -136,7 +136,10 @@ function eventHtml(it, { showPlace = false } = {}) {
   }
   const ev = (e.evidence || []).filter((x) => okUrl(x.url));
   const evHtml = ev.map((x) => `${link(x.url, x.host || host(x.url))} <span class="flag ${x.readable ? 'ok' : 'no'}">${x.readable ? 'we may read it' : 'we do not copy it'}</span>`).join('; ') || '<span class="none">none kept</span>';
-  const confirm = e.status === 'details withheld'
+  const df = e.details_from;
+  const confirm = e.status === 'confirmed'
+    ? `<p class="withheld">Confirmed at a source we may read${df ? `: ${okUrl(df) ? link(df, host(df)) : esc(typeof df === 'string' ? df : df.url || df.name || '')}` : ''}.</p>`
+    : e.status === 'details withheld'
     ? `<p class="withheld">Details withheld: the source's terms do not let us copy them. <a href="/organisers/">Organisers, send them to us.</a></p>`
     : `<p class="withheld">${esc(e.status === 'to confirm at a readable source' ? 'To confirm: a source we may read is cited, and its details are not read yet.' : (e.details_note || e.status || ''))} <a href="/organisers/">Organisers, send us the details.</a></p>`;
   const d = it.discovery;
@@ -160,7 +163,7 @@ function eventMd(it) {
   }
   const ev = (e.evidence || []).filter((x) => okUrl(x.url)).map((x) => `${mdLink(x.url, x.host || host(x.url))} (${x.readable ? 'we may read it' : 'we do not copy it'})`).join('; ');
   return [`- **${mdText(e.name)}** (found through Perplexity)`, `  - When: ${mdText(fmtWhen(e.startDate, e.endDate))}; place: ${mdText(place)}`,
-    `  - Evidence: ${ev || 'none kept'}`, `  - ${e.status === 'details withheld' ? "Details withheld: the source's terms do not let us copy them. Organisers, send them to us: " + SITE + '/organisers/' : 'To confirm at a source we may read.'}`,
+    `  - Evidence: ${ev || 'none kept'}`, `  - ${e.status === 'confirmed' ? 'Confirmed at a source we may read.' : e.status === 'details withheld' ? "Details withheld: the source's terms do not let us copy them. Organisers, send them to us: " + SITE + '/organisers/' : 'To confirm at a source we may read.'}`,
     `  - Licence: ${licenceMd(e.license)}; each evidence link under its own source's terms`].join('\n');
 }
 
