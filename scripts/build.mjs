@@ -90,7 +90,7 @@ function page({ path, title, description, section, body, md }) {
 <header class="masthead">
   <div class="masthead-row">
     <a class="brand" href="/" aria-label="PrompTugal.news Events, home"><span class="wm">Promp<span class="t">T</span><span class="g">ugal</span>.<i>news</i></span><span class="sub">· Events</span></a>
-    <a class="tool meter" href="https://promptugal.news/account/" title="The events pages are free: what they list comes from sources whose terms allow reference use only, so nothing here is charged until Dinis decides. Your PrompTugal.news balance is kept on promptugal.news."><span class="meter-label">Pay for what you read · </span><b>free here</b></a>
+    <a class="tool meter" href="https://promptugal.news/account/" title="This site is free and carries no billing: only promptugal.news bills (Dinis Cruz, 18 Nov 2026). Your PrompTugal.news balance is kept on promptugal.news."><span class="meter-label">Pay for what you read · </span><b>free here</b></a>
   </div>
   <nav class="nav" aria-label="Sections">${NAV.map(([h, t]) => `<a href="${h}"${h === section ? ' aria-current="page"' : ''}>${t}</a>`).join('')}</nav>
 </header>

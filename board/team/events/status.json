@@ -3,7 +3,7 @@
   "account": "B",
   "started_by": "conductor.b@PrompTugal.dinis at Dinis's word, 18 Nov 2026 (~14:30 UTC: \"repo is created\")",
   "state": "wake 22:33 UTC done (last of the day): Content Security Policy on every page; debrief updated; waits for London data, the sites bar and tomorrow's first wake",
-  "updated": "2026-11-18T22:55Z",
+  "updated": "2026-11-18T23:45Z",
   "debrief": "board/team/events/debriefs/2026-11-18-handover.md",
   "done": [
     "home page: counts, places, events starting in the next seven days",
@@ -33,9 +33,11 @@
     "wake 19:33 UTC: a Provenance line on every event card (Dinis ~19:00 UTC); EV-2026-009 (obs.js settings only from this site) and EV-2026-011 (actions pinned by SHA) fixed in e48c3f1; data refreshed (Lagos 92+, Faro, Tavira; 141 read). Inner passes ran; post-review clean after one low fix. Library requests: none for events",
     "22:05 UTC: /preview.svg built at every deploy from this site's live numbers (events read, found through Perplexity, starting this week, places; agendas read; register counts), with provenance and licence; /preview.png (social card) rendered by scripts/preview-png.cjs at each wake; og:image on every page; data refreshed. Post-review: clean",
     "22:35 UTC: London-ready (Dinis ~22:20 UTC, Website board/guidance/2026-11-18-london.md): the Algarve is an explicit list; a place outside Portugal gets its own page labelled 'Beyond Portugal: London' (conductor.b@'s proposed label, Dinis's to change), joins the home week and the live data, and is never folded into the Algarve; tested with a made-up London file. Post-review: clean (two low notes applied)",
-    "wake 22:33 UTC: a Content Security Policy on every page (scripts and styles from this site only; connections only to data.promptugal.news, the page-view endpoint and the two place lookups); tested on nine pages, no violations, live data and page views working; live-data threat model updated; /preview.png refreshed. Inner passes: post-review clean. Library requests: none for events. London data and the sites bar: not published yet"
+    "wake 22:33 UTC: a Content Security Policy on every page (scripts and styles from this site only; connections only to data.promptugal.news, the page-view endpoint and the two place lookups); tested on nine pages, no violations, live data and page views working; live-data threat model updated; /preview.png refreshed. Inner passes: post-review clean. Library requests: none for events. London data and the sites bar: not published yet",
+    "23:40 UTC: the meter chip's text says this site is free and carries no billing, only promptugal.news bills (Dinis ~23:45 UTC, Website board/guidance/2026-11-18-billing-only-on-the-main-site.md); from now on one piece of work per push, so each push is one tagged release"
   ],
   "next": [
+    "every push: one piece of work in one commit, so each CI run releases and tags it (Dinis, billing guidance point 4)",
     "when conductor.b@ says dev@ and designer@ have published the sites bar: vendor its code pinned by version and sha256, render promptugal.news/api/v1/sites.json escaped with https links to *.promptugal.news only, replace the sites rail (Dinis ~22:00 UTC, Website board/guidance/2026-11-18-the-sites-bar.md)",
     "London: when data.promptugal.news publishes events/by-place/london.json, check the page, the label and the licences (UK sources mostly under the Open Government Licence); add London to /how/ and the preview",
     "each wake: run node scripts/preview-png.cjs after the build so /preview.png follows the numbers",
