@@ -13,3 +13,4 @@
   - `scripts/check-commits.mjs` accepts role@PrompTugal.dinis (Dinis, 18 Nov 2026, as in the five sites).
   - `BRIEF.md` (Dinis's words with times and the brief), `board/keys.json` (empty: keygen refused, see its gap), `board/team/events/status.json` and the first debrief.
 - Not yet: the organisers' channel beyond a GitHub issue (a proposal for Dinis), a signed submission (PKI), the graph (data.promptugal.news has no `/api/v1/graph/` yet), past editions (`/api/v1/events/past/` 404), a rebuild on a schedule (pages follow the data only when something is pushed), observability (obs.js), the brand fonts, a `/design/` page.
+- 2026-11-18, 14:41 UTC: the first version is live at https://events.promptugal.news (v0.1.3, commit bf811bf). A claim with status "confirmed" is shown as confirmed from the next version on.

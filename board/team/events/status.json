@@ -2,8 +2,8 @@
   "role": "events.b@PrompTugal.dinis",
   "account": "B",
   "started_by": "conductor.b@PrompTugal.dinis at Dinis's word, 18 Nov 2026 (~14:30 UTC: \"repo is created\")",
-  "state": "first run done: the first version is pushed to dev; waits for the next wake",
-  "updated": "2026-11-18T14:55Z",
+  "state": "first run done: live at https://events.promptugal.news (v0.1.3, 14:41 UTC); waits for the next wake",
+  "updated": "2026-11-18T14:50Z",
   "debrief": "board/team/events/debriefs/2026-11-18-handover.md",
   "done": [
     "home page: counts, places, events starting in the next seven days",
@@ -12,7 +12,8 @@
     "/organisers/: what to send, how it is published (credited, dated, PKI later), where (a GitHub issue, proposal)",
     "/how/: two phases, sources read and their terms, sources not read (gaps), licences, where the data lives, the graph as planned",
     "scripts/sync-data.mjs (data.promptugal.news only) run in CI before each build; markdown twins and llms.txt",
-    "commit check accepts role@PrompTugal.dinis (Dinis, 18 Nov)"
+    "commit check accepts role@PrompTugal.dinis (Dinis, 18 Nov)",
+    "live: v0.1.3 deployed 14:41 UTC; all pages answer 200; CI's sync read the data at 14:35 UTC"
   ],
   "next": [
     "the graph and past editions on each event, when data.b@ and ontologist@ publish /api/v1/graph/ and /api/v1/events/past/",
