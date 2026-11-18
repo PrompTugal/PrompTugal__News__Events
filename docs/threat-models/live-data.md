@@ -26,5 +26,7 @@ On each place page and the home page, the reader's browser fetches that place's 
 - (3) Malformed items are skipped; a failure leaves the built page (EV-2026-007, fixed).
 - (4) The built page is the fallback.
 
+- (1, 2) A Content Security Policy on every page (a meta tag, since GitHub Pages sets no headers): scripts and styles from this site only, no inline script, no plugins, and connections only to data.promptugal.news and the page-view endpoint and place lookups. Added 18 November 2026, tested on nine pages with no violations.
+
 ## Open
-- A Content Security Policy for the pages (GitHub Pages sets none; a meta tag could limit scripts to this site). Proposal.
+- Framing (clickjacking) cannot be refused from a meta tag; low risk for a static site with no login or actions.

@@ -70,6 +70,7 @@ function page({ path, title, description, section, body, md }) {
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self' https://data.promptugal.news https://dev.send.sgraph.ai https://ipapi.co https://ipwho.is; object-src 'none'; base-uri 'self'; form-action 'none'">
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(description)}">
 <link rel="canonical" href="${SITE}${path}">
