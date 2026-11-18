@@ -1,0 +1,11 @@
+{
+  "schema": "hub.json (draft)",
+  "name": "PrompTugal.news Events",
+  "what_it_does": "Events across Portugal, town by town: part of PrompTugal.news. First version coming.",
+  "owner": "AgentiCCells",
+  "team": "factory@AgentiCCells.dinis, instructed by Dinis Cruz",
+  "licence": { "code": "Apache-2.0", "text": "CC BY 4.0" },
+  "repository": "https://github.com/PrompTugal/PrompTugal__News__Events",
+  "live_address": "https://events.promptugal.news",
+  "version_from": "https://events.promptugal.news/version.json"
+}
