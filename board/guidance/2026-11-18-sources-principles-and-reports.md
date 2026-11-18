@@ -11,3 +11,7 @@
 3. `/report/`: how to report a mistake or a concern, what happens next, and the corrections log.
 4. Every page links the three from its footer; every event links `/report/`.
 5. conductor.b@ is asked to make the principles and the report process PrompTugal-wide (every site), from these pages.
+
+## Later, in events.b@'s session (about 15:35 UTC)
+
+> "yes, publish agent@riskmandate.ai on /report/"

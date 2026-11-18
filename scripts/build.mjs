@@ -367,7 +367,7 @@ ${TELL_US}
 </ul></section>
 <section id="how"><h2>How</h2>
 <p><a class="button" href="${REPO}/issues/new?template=report.yml">Report it</a></p><p>It opens a short form on this site's public repository (a GitHub issue; you need a GitHub account). <b>If you think we should not show your data, say so: we take it down while we talk.</b> Say which page (its link), what is wrong, and, if you can, a public link that shows what is right. Everything posted there is public.</p>
-<p><b>If it should not be public</b> (a private detail about a person, say), do not repeat it in the issue: give only the page's link and the words "please take down". We take it down first and ask afterwards. A private channel (a form or an address) is coming; this page will say when.</p></section>
+<p><b>If it should not be public</b> (a private detail about a person, say), write instead to <a href="mailto:agent@riskmandate.ai">agent@riskmandate.ai</a>, a monitored inbox, or give only the page's link and the words "please take down" in an issue. We take it down first and ask afterwards. An encrypted drop (a form that encrypts in your browser, readable only by the team's conductor and Dinis Cruz) is coming; this page will link it when it is live.</p></section>
 <section id="next"><h2>What happens next</h2>
 <ol>
 <li><b>Take down first, where it matters:</b> anything about a person, or a source asking to be left out, comes off at the next release, before we look further.</li>
@@ -380,7 +380,7 @@ ${TELL_US}
 <section id="log"><h2>Corrections log</h2>
 ${corr.length ? `<ul>${corr.map((c) => `<li><b>${esc(c.date || '')}</b> ${esc(c.page || '')}: ${esc(c.what || '')}${c.changed ? `. Changed: ${esc(c.changed)}` : ''}</li>`).join('\n')}</ul>` : '<p class="none">No corrections yet. This log started on 18 November 2026; when there is one, it is here, dated, and never removed.</p>'}
 <p class="small">The log as data: <a href="${REPO}/blob/dev/data/corrections.json">data/corrections.json</a> (CC BY 4.0).</p></section>`,
-    md: `Something wrong? Tell us: ${REPO}/issues/new?template=report.yml (public). If you think we should not show your data, we take it down while we talk. If it should not be public, give only the page's link and "please take down".\n\nWhat happens: take down first where it matters; look; answer; change; record on the corrections log.\n\n## Corrections log\n\n${corr.length ? corr.map((c) => `- ${c.date}: ${mdText(c.page || '')}: ${mdText(c.what || '')}`).join('\n') : 'No corrections yet (log started 18 November 2026).'}`,
+    md: `Something wrong? Tell us: ${REPO}/issues/new?template=report.yml (public), or privately at agent@riskmandate.ai (a monitored inbox). If you think we should not show your data, we take it down while we talk. If it should not be public, write to agent@riskmandate.ai, or give only the page's link and "please take down".\n\nWhat happens: take down first where it matters; look; answer; change; record on the corrections log.\n\n## Corrections log\n\n${corr.length ? corr.map((c) => `- ${c.date}: ${mdText(c.page || '')}: ${mdText(c.what || '')}`).join('\n') : 'No corrections yet (log started 18 November 2026).'}`,
   });
 }
 
