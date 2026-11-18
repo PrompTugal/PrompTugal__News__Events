@@ -74,7 +74,10 @@
    "file": "scripts/sync-data.mjs, pages.yml",
    "found": "2026-11-18 ~15:05 UTC",
    "found_by": "AppSec post-review (events.b.security@, a Sonnet sub-agent of events.b@PrompTugal.dinis)",
-   "state": "open"
+   "state": "fixed",
+   "detail": "A scheduled rebuild deployed whatever the data sync fetched, with no check on its shape or size, so malformed or hostile data could reach the site unattended (each field was still escaped by the renderer).",
+   "fix": "A data gate (scripts/check-data.mjs) checks every synced file (JSON, licence, size and count limits, ids, dates, links); on failure CI builds from the last committed copy and shows a warning.",
+   "commit": "072b74b"
   },
   {
    "id": "EV-2026-007",
