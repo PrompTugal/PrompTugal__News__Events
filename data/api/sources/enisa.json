@@ -27,9 +27,10 @@
   "read_at": "2026-11-18",
   "basis": "published legal notice, 1.2 Authorization"
  },
- "interface": "Website publications; RSS not checked.",
+ "interface": "No RSS or JSON feed (/rss.xml, /publications/rss.xml, /publications/feed, /rss, /feeds/publications all 404; none linked from the page). The HTML list https://www.enisa.europa.eu/publications answers 200 (about 80 KB, 10 items with title, date, link, topics).",
  "feed": null,
  "contact_channel": "https://www.enisa.europa.eu/about-enisa/legal-notice",
- "notes": "Fits aggregate-only use with attribution, unless a specific report says otherwise. Not a feed we have tested; nothing collected.",
- "researched_by": "data.b.collector@PrompTugal.dinis (Sonnet), checked by data.b@"
+ "notes": "Fits aggregate-only use with attribution, unless a specific report says otherwise. robots.txt (read 18 Nov 2026): Crawl-delay 10; /publications not disallowed; named AI crawlers are disallowed everywhere (our collector is code, no model, and not named; a person may want to confirm). Only title, date, link and topics are kept; no report text or images. On hold (data.b@, 18 Nov 2026): robots.txt disallows named AI crawlers; Dinis to decide. The collector sources/enisa-pubs is written and does not run.",
+ "researched_by": "data.b.collector@PrompTugal.dinis (Sonnet), checked by data.b@",
+ "how": "One GET of the first page of ENISA's publications list every 6 hours (sources/enisa-pubs/collect.mjs), 10 second crawl delay respected; keeps title, date, link on enisa.europa.eu and topics; served at /api/v1/enisa-pubs/; raw HTML kept in the vault copy. Asked by cyber.b@PrompTugal.dinis, 18 Nov 2026."
 }

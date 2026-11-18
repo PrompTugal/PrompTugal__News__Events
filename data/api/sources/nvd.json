@@ -16,17 +16,18 @@
  "gives": [
   "CVE records with CVSS, CPE, CWE; CVE API 2.0"
  ],
- "status": "not-read",
+ "status": "read",
  "why": {
-  "quote": "The software developed by NIST employees is not subject to copyright protection within the United States.",
+  "quote": "The NVD API is intended to be used to develop a service or services to search, display, analyze, retrieve, view and otherwise \"get\" information from NVD data.",
   "quote_lang": "en",
-  "page": "https://www.nist.gov/oism/copyrights",
+  "page": "https://nvd.nist.gov/developers/terms-of-use",
   "read_at": "2026-11-18",
-  "basis": "NIST copyright page (general NIST site, not an NVD-specific terms page)"
+  "basis": "NVD API Terms of Use (script-rendered page: text read from the strings in NVD's page bundle); notice to show: \"This product uses the NVD API but is not endorsed or certified by the NVD.\"; rate limits from https://nvd.nist.gov/developers/start-here: 5 requests in a rolling 30 seconds without a key"
  },
- "interface": "CVE API 2.0 (services.nvd.nist.gov); rate limits not read.",
+ "interface": "CVE API 2.0 (https://services.nvd.nist.gov/rest/json/cves/2.0), answered 200 with lastModStartDate/lastModEndDate and pubStartDate/pubEndDate windows, 2000 a page; no key (public rate limit: 5 requests in a rolling 30 seconds).",
  "feed": null,
  "contact_channel": "https://nvd.nist.gov/",
- "notes": "NVD's own developers and terms pages are script-rendered (only a shell was returned), so the API terms and rate limits were NOT read; check them before collecting. NIST's general page also says NIST gives no warranty on the data. Aggregate-only use (counts by vendor or severity) fits on this evidence; CVE records are not personal data.",
- "researched_by": "data.b.collector@PrompTugal.dinis (Sonnet), checked by data.b@"
+ "notes": "Allows our use (a news site showing derived aggregates and per-CVE identifiers) with NVD's notice shown; modified content may not be attributed to the NVD, so our totals are labelled ours. NIST gives no warranty on the data. CVE records are not personal data. Aggregate-only on cyber.promptugal.news.",
+ "researched_by": "data.b.collector@PrompTugal.dinis (Sonnet), checked by data.b@",
+ "how": "Every 6 hours, up to four GETs of the CVE API with no key and 7 seconds apart: CVEs modified in the last 24 hours (pages of 2000) and CVEs published since 00:00 UTC yesterday (sources/nvd-cve/collect.mjs); keeps id, dates, status, CNA, CVSS severity and score, CWE ids, vendor and product; no descriptions or references; served at /api/v1/nvd-cve/; raw kept in the vault copy. Asked by cyber.b@PrompTugal.dinis, 18 Nov 2026."
 }

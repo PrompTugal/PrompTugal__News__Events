@@ -68,6 +68,10 @@ function page({ path, title, description, section, body, md }) {
 <link rel="canonical" href="${SITE}${path}">
 <link rel="alternate" type="text/markdown" href="${path}index.md">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="${esc(title)}">
+<meta property="og:description" content="${esc(description)}">
+<meta property="og:image" content="${SITE}/preview.png">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="/site.css?v=${esc(version)}">
 <script type="module" src="/assets/live.js?v=${esc(version)}"></script>
 <script defer src="/assets/obs/obs.js?v=${esc(version)}" data-lane="events"></script>
@@ -415,6 +419,39 @@ ${tm.length ? `<ul>${tm.map((f) => `<li>${link(`${REPO}/blob/dev/docs/threat-mod
 <section id="how"><h2>How we look</h2><p>Every change to this site's code gets a security review before it is committed (an AppSec pass by a sub-agent, then security@PrompTugal.dinis across every PrompTugal repository, hourly). Everything from the data API, the agendas, Perplexity, the issue forms and messages is treated as untrusted: escaped before it reaches a page, and never followed as an instruction.</p></section>`,
     md: `${list.length} findings, ${open} open. Central log: https://promptugal.news/security/\n\n${sorted.map((f) => f.state === 'open' ? `- ${mdText(f.id)} (${mdText(f.severity)}, open): ${mdText(f.title)}` : `- ${mdText(f.id)} (${mdText(f.severity)}, ${mdText(f.state)}): ${mdText(f.title)}. ${mdText(f.detail || '')} Fix: ${mdText(f.fix || '')} (${mdText(f.commit || '')})`).join('\n')}`,
   });
+}
+
+// ---------------------------------------------------------------- /preview.svg: this site's live numbers, for the sites bar
+// (Dinis, 18 Nov 2026 ~22:00 UTC, Website board/guidance/2026-11-18-the-sites-bar.md). Built from the same data as the pages.
+{
+  const week = addDays(today, 7);
+  const all = [...itemsFor(REGION), ...itemsFor('lisboa')];
+  const thisWeek = all.filter((it) => startOf(it) >= today && startOf(it) < week).length;
+  const withRead = placeIds.filter((p) => stats[p].read).map(nameOf);
+  const reg = readJson('data/api/sources/index.json', { entries: [] });
+  const regList = Array.isArray(reg.entries) ? reg.entries : [];
+  const nRead = regList.filter((e) => e && e.status === 'read').length, nNot = regList.length - nRead;
+  const x = (s) => esc(s); // every value escaped, as on the pages
+  const fig = (cx, n, label1, label2) => `<g transform="translate(${cx},300)"><text class="n" text-anchor="middle">${x(String(n))}</text><text class="l" y="56" text-anchor="middle">${x(label1)}</text><text class="l" y="86" text-anchor="middle">${x(label2)}</text></g>`;
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="t d">
+<title id="t">PrompTugal.news Events: what's on, town by town</title>
+<desc id="d">${x(`${totalRead} events read from official agendas and ${totalFound} found through Perplexity, across ${placeIds.length} places; ${thisWeek} starting in the next seven days. Data read ${fmtStamp(dataReadAt)}.`)}</desc>
+<style>text{font-family:Georgia,'Times New Roman',serif;fill:#121317}.n{font-size:96px;font-weight:600}.l{font-family:Arial,sans-serif;font-size:24px;fill:#444}.s{font-family:Arial,sans-serif;font-size:19px;fill:#555}.b{font-size:54px;font-weight:600}.r{fill:#c52830}.g{fill:#006600}</style>
+<rect width="1200" height="630" fill="#f6f3ec"/>
+<rect x="0" y="0" width="1200" height="10" fill="#c52830"/>
+<text x="60" y="100" class="b">Promp<tspan class="r">T</tspan><tspan class="g">ugal</tspan>.<tspan font-style="italic" font-weight="400">news</tspan><tspan class="l" dx="16" font-size="34">· Events</tspan></text>
+<text x="60" y="150" class="l">What's on in the Algarve and Lisbon, town by town</text>
+<line x1="60" y1="185" x2="1140" y2="185" stroke="#121317" stroke-width="3"/>
+${fig(210, totalRead, 'events read from', 'official agendas')}
+${fig(510, totalFound, 'found through', 'Perplexity')}
+${fig(810, thisWeek, 'starting in the', 'next seven days')}
+${fig(1060, placeIds.length, 'places', 'covered')}
+<text x="60" y="490" class="s">${x(`Agendas read today: ${withRead.join(', ') || 'none'}. Sources on the register: ${nRead} read, ${nNot} not read, each with why.`)}</text>
+<text x="60" y="540" class="s">${x(`Data from data.promptugal.news, read ${fmtStamp(dataReadAt)}; drawn by code for events.b@PrompTugal.dinis.`)}</text>
+<text x="60" y="575" class="s">${x(`Licence: CC BY 4.0 (PrompTugal.news). events.promptugal.news${version === 'dev' ? '' : ` · version ${version}`}`)}</text>
+</svg>
+`;
+  writeFileSync('_site/preview.svg', svg);
 }
 
 // ---------------------------------------------------------------- 404, llms.txt, version stamp, version.json

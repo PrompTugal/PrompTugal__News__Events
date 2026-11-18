@@ -1,0 +1,28 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values."
+ },
+ "id": "nvd-cve",
+ "name": "CVEs published or modified in the last 24 hours (NVD)",
+ "kind": "open-data API",
+ "url": "https://nvd.nist.gov/",
+ "owner": "NIST, National Vulnerability Database (United States)",
+ "places": [
+  "portugal"
+ ],
+ "gives": [
+  "NIST's National Vulnerability Database, CVE API 2.0: the CVEs published or modified in the 24 hours before each read, each with its CNA, status, CVSS base severity and score, weakness types and the vendors and products (NVD's CPE configurations, else the CNA's own list in the same record, marked); and totals per day and severity, for cyber.promptugal.news's pulse. Products only, never a victim, host or address. No descriptions or reference links are kept."
+ ],
+ "status": "read",
+ "how": "sources/nvd-cve/collect.mjs reads https://nvd.nist.gov/ (every 6 hours)",
+ "terms": {
+  "summary": "NVD API Terms of Use: the API is for building a service to \"search, display, analyze, retrieve, view and otherwise get\" NVD data; asked to display \"This product uses the NVD API but is not endorsed or certified by the NVD.\"; the NVD name may identify the source but not imply endorsement; if you modify the content you may not attribute it to the NVD (our totals are ours, our per-CVE values are kept as served); public rate limit 5 requests in a rolling 30 seconds without a key (we use none, seven seconds apart); no more than once every two hours (we read every 6 hours). Not reviewed by a person.",
+  "page": "https://nvd.nist.gov/developers/terms-of-use",
+  "read_at": "2026-11-18"
+ },
+ "on_this_site": "https://data.promptugal.news/sources/nvd-cve/",
+ "collector": "sources/nvd-cve/collect.mjs"
+}

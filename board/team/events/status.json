@@ -2,8 +2,8 @@
   "role": "events.b@PrompTugal.dinis",
   "account": "B",
   "started_by": "conductor.b@PrompTugal.dinis at Dinis's word, 18 Nov 2026 (~14:30 UTC: \"repo is created\")",
-  "state": "wake 19:33 UTC done: provenance on every event; EV-2026-009 and EV-2026-011 fixed (no open findings); waits for the next wake",
-  "updated": "2026-11-18T19:55Z",
+  "state": "22:05 UTC: /preview.svg and /preview.png made (Dinis ~22:00, the sites bar); waits for dev@ and designer@'s bar, then the next wake",
+  "updated": "2026-11-18T22:20Z",
   "debrief": "board/team/events/debriefs/2026-11-18-handover.md",
   "done": [
     "home page: counts, places, events starting in the next seven days",
@@ -30,9 +30,12 @@
     "observability live: the 'events' lane's tokens and drain key published in assets/obs/obs.json; leak scan allows that one file for two kinds (Dinis in this session ~15:08 UTC: \"yes, allow assets/obs/obs.json in the leak scan\"); a local test view was accepted (HTTP 200)",
     "/security/: every finding published (11 from the AppSec post-review: 8 fixed in full, 3 open by title, severity and state), threat models section, link to promptugal.news/security/; data/security/findings.json; footer link (Dinis ~15:15 UTC, Website board/guidance/2026-11-18-security-findings-published.md)",
     "wake 16:33 UTC: data gate scripts/check-data.mjs in CI (fails closed to the last committed copy) and release.sh; threat models docs/threat-models/ (sync-data, scheduled-rebuild, live-data, issue-forms) on /how/ and /security/; EV-2026-006 fixed; data refreshed (Faro 10, Tavira 39, Lagos 92 read). Inner passes ran: opening conductor and security pre-review; security and AppSec post-review found 4 low, all fixed. Library requests: none for events",
-    "wake 19:33 UTC: a Provenance line on every event card (Dinis ~19:00 UTC); EV-2026-009 (obs.js settings only from this site) and EV-2026-011 (actions pinned by SHA) fixed in e48c3f1; data refreshed (Lagos 92+, Faro, Tavira; 141 read). Inner passes ran; post-review clean after one low fix. Library requests: none for events"
+    "wake 19:33 UTC: a Provenance line on every event card (Dinis ~19:00 UTC); EV-2026-009 (obs.js settings only from this site) and EV-2026-011 (actions pinned by SHA) fixed in e48c3f1; data refreshed (Lagos 92+, Faro, Tavira; 141 read). Inner passes ran; post-review clean after one low fix. Library requests: none for events",
+    "22:05 UTC: /preview.svg built at every deploy from this site's live numbers (events read, found through Perplexity, starting this week, places; agendas read; register counts), with provenance and licence; /preview.png (social card) rendered by scripts/preview-png.cjs at each wake; og:image on every page; data refreshed. Post-review: clean"
   ],
   "next": [
+    "when conductor.b@ says dev@ and designer@ have published the sites bar: vendor its code pinned by version and sha256, render promptugal.news/api/v1/sites.json escaped with https links to *.promptugal.news only, replace the sites rail (Dinis ~22:00 UTC, Website board/guidance/2026-11-18-the-sites-bar.md)",
+    "each wake: run node scripts/preview-png.cjs after the build so /preview.png follows the numbers",
     "every wake: read the library's requests channel (https://library.promptugal.news/api/v1/requests/index.json; mine: events.b-at-promptugal.dinis.json) and answer what is addressed to me; read the library as the catalogue (Dinis ~16:00 UTC, Website board/guidance/2026-11-18-the-pipeline-standard-and-the-fact-checker.md). Checked 15:55 UTC: no file for events yet, nothing in the index addressed to events",
     "a Content Security Policy for the pages (proposal in docs/threat-models/live-data.md); security@'s review of the threat models when it comes",
     "every wake: the inner passes as Sonnet sub-agents (opening conductor, security pre-review, work, security and AppSec post-review, closing conductor), Dinis ~15:05 to 15:10 UTC, Website board/guidance/2026-11-18-inner-passes-and-security.md",
