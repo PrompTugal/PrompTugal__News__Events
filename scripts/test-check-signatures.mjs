@@ -126,6 +126,10 @@ t('a new history that does not descend from the trusted base fails', (x) => {
   x.g('checkout', '-q', '--orphan', 'fresh');
   x.g('-c', 'commit.gpgsign=true', '-c', `user.signingkey=${KA.priv}`, 'commit', '-q', '-m', `fresh root with its own keys\n\nAgent: ${AGENT_A}\nClaude-Session: ${SESSION_A}`);
 }, /does not descend from the trusted base/);
+t('a commit that removes the checker and adds an unsigned change fails (skips by ancestry, never by tree)', (x) => {
+  x.g('rm', '-q', 'scripts/check-signatures.mjs');
+  x.commit('remove the checker, unsigned');
+}, /: unsigned$/);
 t('one bad commit among good ones fails the whole range', (x) => { x.commit('g1', { signer: KA }); x.commit('bad'); x.commit('g2', { signer: KA }); }, /: unsigned$/);
 
 // The checker is run from the trusted copy, never the pushed tree's: a push that replaces it with one that always passes,
@@ -137,8 +141,15 @@ cases.push({ name: 'a pushed checker that always passes cannot check itself: the
   writeFileSync(trusted, execFileSync('git', ['-C', x.r, 'show', `${x.base}:scripts/check-signatures.mjs`]));
   const pushed = (() => { try { execFileSync('node', [join(x.r, 'scripts/check-signatures.mjs')], { cwd: x.r, stdio: 'pipe' }); return 'passes'; } catch { return 'fails'; } })();
   let out = '';
-  try { execFileSync('node', [trusted, 'HEAD', `--base=${x.base}`], { cwd: x.r, stdio: 'pipe' }); out = '(passed)'; } catch (e) { out = String(e.stderr); }
+  const noCI = { ...process.env }; delete noCI.CI; delete noCI.GITHUB_ACTIONS;
+  try { execFileSync('node', [trusted, 'HEAD', `--base=${x.base}`], { cwd: x.r, stdio: 'pipe', env: noCI }); out = '(passed)'; } catch (e) { out = String(e.stderr); }
   x.result = pushed === 'passes' && /: unsigned/.test(out) ? [] : [`pushed copy ${pushed}; trusted copy: ${out.trim()}`];
+}, expect: 'custom' });
+cases.push({ name: 'under CI, --base cannot override the pinned base', fn: (x) => {
+  x.commit('ok', { signer: KA });
+  let out = '';
+  try { execFileSync('node', [join(here, 'check-signatures.mjs'), 'HEAD', `--base=${x.base}`], { cwd: x.r, stdio: 'pipe', env: { ...process.env, CI: 'true' } }); out = '(passed)'; } catch (e) { out = String(e.stderr); }
+  x.result = /--base is refused under CI/.test(out) ? [] : [`got: ${out.trim()}`];
 }, expect: 'custom' });
 cases.push({ name: 'a shallow checkout is refused', fn: (x) => {
   x.commit('ok', { signer: KA });

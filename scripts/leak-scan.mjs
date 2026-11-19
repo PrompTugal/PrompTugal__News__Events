@@ -24,7 +24,9 @@ import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { execFileSync } from 'node:child_process';
 
-const root = join(dirname(fileURLToPath(import.meta.url)), '..');
+// The repository scanned is the one the scan is run in (its working directory), so CI can run the last release's copy from a
+// temp file (security@'s control 7). Not inside a git repository: the scan fails.
+const root = (() => { try { return execFileSync('git', ['rev-parse', '--show-toplevel'], { encoding: 'utf8' }).trim(); } catch { console.error('leak-scan: not inside a git repository'); process.exit(1); } })();
 
 // Built from parts so that this file does not match its own patterns.
 const DASHES = '-'.repeat(5);

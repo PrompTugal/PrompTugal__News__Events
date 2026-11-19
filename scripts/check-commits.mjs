@@ -1,8 +1,8 @@
 // ACC-015: every non-merge commit a push adds to dev must carry a readable Agent: trailer,
 // read the way git reads it: git log --format=%(trailers:key=Agent,valueonly).
 // Usage: node scripts/check-commits.mjs <before> <after>   (the pushed range, before..after)
-// Commits older than this check are skipped: those that neither descend from the commit
-// that added this file nor were committed after it. History is not rewritten (ACC-015).
+// Only ancestors of the pinned trusted base are skipped, decided by ancestry (security@'s control 8). No exemptions.
+// It is run from the last release tag's copy in CI (security@'s control 7). History is not rewritten (ACC-015).
 // Prints OK or lists each commit that fails and exits 1.
 import { execFileSync } from 'node:child_process';
 import { existsSync, readFileSync } from 'node:fs';
@@ -15,16 +15,16 @@ const [beforeArg, afterArg] = process.argv.slice(2);
 const after = afterArg || 'HEAD';
 if (!tryGit('rev-parse', '--verify', '--quiet', `${after}^{commit}`)) { console.error(`check-commits: unknown commit ${after}`); process.exit(1); }
 
-const first = lines(git('log', '--format=%H', '--diff-filter=A', '--reverse', after, '--', 'scripts/check-commits.mjs'))[0];
-if (!first) { console.error('check-commits: cannot find the commit that added scripts/check-commits.mjs'); process.exit(1); }
-const firstTime = Number(git('log', '-1', '--format=%ct', first));
+// The trusted base: this repository's seed commit, pinned by its full id. Only commits that are ancestors of it are
+// skipped, decided by ancestry, never by what a tree holds, so deleting this file skips nothing (security@'s control 8).
+const TRUSTED_BASE = 'aea4fc914369954a4c4a516ae65f4f770e25f812';
+if (tryGit('merge-base', '--is-ancestor', TRUSTED_BASE, after) === null) { console.error(`check-commits: ${after} does not descend from the trusted base`); process.exit(1); }
 
 // A new branch, a forced push or a manual run has no usable "before": check everything since the check began.
 const zero = /^0+$/;
 const before = beforeArg && !zero.test(beforeArg) && tryGit('rev-parse', '--verify', '--quiet', `${beforeArg}^{commit}`);
 const range = before ? [`${before}..${after}`] : [after];
 const added = lines(git('rev-list', '--no-merges', ...range));
-const descendants = new Set([first, ...lines(git('rev-list', '--ancestry-path', `${first}..${after}`))]);
 
 // A role may be dotted, role.speciality (Dinis, 16 Nov 2026: "we definitely should allow dots because that's our terminology").
 // PrompTugal agents sign as role@PrompTugal.dinis (Dinis, 18 Nov 2026, kept by conductor.b@ in
@@ -32,29 +32,11 @@ const descendants = new Set([first, ...lines(git('rev-list', '--ancestry-path', 
 // repos, the commit check accepts @PrompTugal.dinis agents"; the same change as PrompTugal__News__Weather's).
 // Only that one address is added.
 const agentShape = /^[a-z0-9]+(?:[.-][a-z0-9]+)*@(?:agenticcells\.[a-z0-9][a-z0-9.-]*|promptugal\.dinis)$/i;
-// Exemptions (specialist.code@, 2026-11-16). CI checks from the last release tag, so one failing commit
-// would block every later release, and history is never rewritten. A person may exempt that one commit in
-// scripts/commit-exemptions.json: [{ "commit": "<full 40-hex sha>", "reason": "...", "approved_by": "Dinis Cruz",
-// "date": "YYYY-MM-DD" }]. Each entry names exactly one commit; malformed entries fail the check.
-const exempt = new Map();
-const EX = 'scripts/commit-exemptions.json';
-if (existsSync(EX)) {
-  let list;
-  try { list = JSON.parse(readFileSync(EX, 'utf8')); } catch (e) { console.error(`${EX}: not JSON (${e.message})`); process.exit(1); }
-  if (!Array.isArray(list)) { console.error(`${EX}: must be a list`); process.exit(1); }
-  for (const x of list) {
-    if (!x || !/^[0-9a-f]{40}$/.test(x.commit || '') || !(x.reason || '').trim() || !(x.approved_by || '').trim() || !/^\d{4}-\d{2}-\d{2}$/.test(x.date || '')) {
-      console.error(`${EX}: each entry needs a full 40-hex commit, a reason, approved_by and a date`); process.exit(1);
-    }
-    exempt.set(x.commit, x);
-  }
-}
+// No exemptions of any kind (security@'s controls 1 and 7: no config from the pushed tree, no exemption by name).
 const errors = [];
-let checked = 0, exempted = 0;
+let checked = 0;
 for (const c of added) {
-  const ct = Number(git('log', '-1', '--format=%ct', c));
-  if (!descendants.has(c) && ct < firstTime) continue;
-  if (exempt.has(c)) { exempted++; continue; }
+  if (tryGit('merge-base', '--is-ancestor', c, TRUSTED_BASE) !== null) continue;
   checked++;
   const agents = lines(git('log', '-1', '--format=%(trailers:key=Agent,valueonly)', c)).map((s) => s.trim());
   const subject = git('log', '-1', '--format=%s', c);
@@ -67,4 +49,4 @@ if (errors.length) {
   console.error(`FAILED (${errors.length} of ${checked} commits checked)`);
   process.exit(1);
 }
-console.log(`OK (${checked} commits checked, ${exempted} exempted, ${added.length - checked - exempted} older than the check skipped)`);
+console.log(`OK (${checked} commits checked, ${added.length - checked} ancestors of the trusted base skipped)`);

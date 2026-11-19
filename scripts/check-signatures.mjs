@@ -84,6 +84,8 @@ export function check(tip = 'HEAD', cwd = process.cwd(), { base: trusted = TRUST
 if (import.meta.url === `file://${process.argv[1]}`) {
   // node check-signatures.mjs [tip] [--base=<sha>]: --base is for the tests' own repositories; CI and release.sh pass none.
   const args = process.argv.slice(2), opt = args.find((a) => a.startsWith('--base='));
+  // A pushed workflow could pass --base, so under CI it is refused (security@, 19 Nov 2026): only the pinned base counts there.
+  if (opt && (process.env.CI || process.env.GITHUB_ACTIONS)) { console.error('check-signatures: --base is refused under CI'); process.exit(1); }
   const { failures, checked } = check(args.find((a) => !a.startsWith('--')) || 'HEAD', process.cwd(), opt ? { base: opt.slice(7) } : {});
   if (failures.length) { console.error(failures.join('\n')); console.error(`signatures FAILED (${failures.length} of ${checked} commits)`); process.exit(1); }
   console.log(`signatures OK (${checked} commits since the check began)`);
