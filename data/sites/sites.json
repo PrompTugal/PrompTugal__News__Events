@@ -120,25 +120,6 @@
    "preview": "https://bulletins.promptugal.news/preview.svg"
   }
  ],
- "bar": {
-  "version": "1.1.0",
-  "js": "https://promptugal.news/assets/sites-bar/1.1.0/sites-bar.js",
-  "css": "https://promptugal.news/assets/sites-bar/1.1.0/sites-bar.css",
-  "sha256": {
-   "js": "bc97a820a8f4fbda60ff65c3073be6fe79b2d1d3ee954257e3a59bca7429e9b0",
-   "css": "302e2544eb34e3d6ce8d8e14fe2918c9f658a587f62d47d4ca20b2b4f3f7854d",
-   "render": "b9b50ae32fd5dc234ba6e9b4660061afb25554b542a1c779f68d1d8c61a98dbc"
-  },
-  "render": "https://promptugal.news/assets/sites-bar/1.1.0/sites-bar-render.mjs",
-  "spec": "https://github.com/promptugal/promptugal__news__website/blob/dev/board/spec-the-sites-bar.md",
-  "install": "Copy the three files of this version into your site, check each sha256 against these, never load them from promptugal.news. At build: import render from sites-bar-render.mjs, render(the registry, { here: your hostname }) and put the HTML first in <body>, above your masthead; refuse to publish the bar if it returns ''. On every page: the CSS in <head> and sites-bar.js with defer. Serve your own /preview.svg (320 by 180, the template in design/sites-bar/preview-template.svg.txt) as image/svg+xml with nosniff, and /version.json."
- },
- "preview_spec": [
-  "Each site makes its own preview at every build, from its own numbers: /preview.svg, 1200 by 630, an infographic of what is live there now (events this week, cameras up, contracts in 90 days, the pulse), with the site's name and mark, the version and the time built.",
-  "It carries its provenance and licence inside: an SVG <title> and <desc> naming the files the numbers come from and the licence (CC BY 4.0 for what we make).",
-  "No script, no external reference, no font file in the SVG: system fonts only, so any site can show it as an <img>.",
-  "/preview.png, the same picture for social cards (og:image), when the site's build can render one; until then the SVG alone."
- ],
  "license": {
   "name": "CC BY 4.0",
   "url": "https://creativecommons.org/licenses/by/4.0/",

@@ -59,7 +59,10 @@ await copy('events-pt/latest.json', 'data/api/events-pt.json', (d) => ({ license
 try {
   const r = await fetch('https://promptugal.news/api/v1/sites.json', { headers: UA, signal: AbortSignal.timeout(20000) });
   if (!r.ok) throw new Error(`HTTP ${r.status}`);
-  save('data/sites/sites.json', await r.json());
+  // Only what the bar renders: the site list, with its about, version and licence. The pins (bar, obs_tz) are never copied
+  // into this repository; the build reads them from the live registry (security@'s ruling, Website 5109e7a0, option 1).
+  const reg = await r.json();
+  save('data/sites/sites.json', { about: reg.about, version: reg.version, sites: reg.sites, license: reg.license });
   log.read.push({ path: 'https://promptugal.news/api/v1/sites.json', file: 'data/sites/sites.json', at: new Date().toISOString() });
 } catch (e) { log.failed.push({ path: 'https://promptugal.news/api/v1/sites.json', why: e.message, kept: existsSync('data/sites/sites.json') ? 'the last copy in git' : 'none' }); }
 log.finished = new Date().toISOString();

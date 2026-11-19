@@ -11,25 +11,47 @@ const version = process.env.SITE_VERSION || 'dev';
 const REPO = 'https://github.com/PrompTugal/PrompTugal__News__Events';
 const builtAt = new Date();
 const R = await import(pathToFileURL(resolve('src/assets/render.mjs')).href);
-// The PrompTugal sites bar v1.1.0, vendored unchanged from PrompTugal__News__Website assets/sites-bar/1.1.0/ (dev@, designer@'s
-// spec, security@'s go 90dfdd3baf; Dinis, 18 Nov 2026, the sites bar), pinned by sha256: the build stops if a file differs.
-const BAR = 'src/assets/sites-bar/1.1.0/';
-const BAR_SHA = {
-  'sites-bar-render.mjs': 'b9b50ae32fd5dc234ba6e9b4660061afb25554b542a1c779f68d1d8c61a98dbc',
-  'sites-bar.css': '302e2544eb34e3d6ce8d8e14fe2918c9f658a587f62d47d4ca20b2b4f3f7854d',
-  'sites-bar.js': 'bc97a820a8f4fbda60ff65c3073be6fe79b2d1d3ee954257e3a59bca7429e9b0',
-};
-for (const [f, h] of Object.entries(BAR_SHA)) if (createHash('sha256').update(readFileSync(BAR + f)).digest('hex') !== h) { console.error(`build: ${BAR}${f} does not match its pinned sha256`); process.exit(1); }
-const { render: renderBar } = await import(pathToFileURL(resolve(BAR + 'sites-bar-render.mjs')).href);
+// The PrompTugal sites bar, vendored unchanged from PrompTugal__News__Website assets/sites-bar/<version>/ (dev@, designer@'s spec;
+// security@'s go on 1.2.1, Website 2d812d6da). Each file is checked against its own version's pin in the live registry
+// (promptugal.news/api/v1/sites.json, bar.versions[v].integrity.<file>, or the older bar.versions[v].<file>), read at build and
+// never copied into this repository (security@'s ruling, Website 5109e7a0, option 1). A file that differs stops the build.
+// If the registry cannot be read or no longer lists this version, the bar is left out, never shipped unchecked, and the
+// log says so (security@, 1acd10498).
+const BAR_VERSION = '1.2.1';
+const BAR = `src/assets/sites-bar/${BAR_VERSION}/`;
+const BAR_FILES = { js: 'sites-bar.js', css: 'sites-bar.css', render: 'sites-bar-render.mjs' };
+const SRI = /^sha(256|384|512)-[A-Za-z0-9+/]{43,86}={0,2}$/;
+const sri = (alg, buf) => `${alg}-${createHash(alg).update(buf).digest('base64')}`;
+let BAR_OFF = '';
+await (async () => {
+  let reg;
+  try {
+    const r = await fetch('https://promptugal.news/api/v1/sites.json', { redirect: 'error', signal: AbortSignal.timeout(20000) });
+    if (!r.ok) throw new Error(`HTTP ${r.status}`);
+    reg = await r.json();
+  } catch (e) { BAR_OFF = `sites bar ${BAR_VERSION} off: the registry could not be read (${e.message})`; return; }
+  const v = reg?.bar?.versions?.[BAR_VERSION];
+  if (!v || typeof v !== 'object') { BAR_OFF = `sites bar ${BAR_VERSION} off: the registry no longer lists it (it names ${String(reg?.bar?.version || 'none').slice(0, 20)})`; return; }
+  for (const [key, file] of Object.entries(BAR_FILES)) {
+    const pin = (v.integrity && typeof v.integrity === 'object' ? v.integrity[key] : undefined) ?? v[key];
+    if (typeof pin !== 'string' || !SRI.test(pin)) { BAR_OFF = `sites bar ${BAR_VERSION} off: the registry gives no usable pin for ${file}`; return; }
+    const alg = pin.slice(0, pin.indexOf('-'));
+    if (sri(alg, readFileSync(BAR + file)) !== pin) { console.error(`build: ${BAR}${file} does not match the registry's pin for ${BAR_VERSION}`); process.exit(1); }
+  }
+})();
+if (BAR_OFF) console.warn(`build: ${BAR_OFF}`);
+// The renderer is loaded only once its file has passed the check; with the bar off, nothing of it runs.
+const BAR_MOD = BAR_OFF ? null : await import(pathToFileURL(resolve(BAR + 'sites-bar-render.mjs')).href);
+const renderBar = BAR_MOD ? BAR_MOD.render : () => '';
 // The registry, copied by scripts/sync-data.mjs (if it is down, the last good copy in git is used). An empty result means no bar,
 // never a hand-made one.
 // The exact hosts the pages may load images from and connect to (Dinis, 19 Nov 2026: connect-src lists the exact hosts):
 // this site, the data site, the page-view endpoint and lookups, and each site in the registry that passed the bar's own check.
-const { check: checkRegistry } = await import(pathToFileURL(resolve(BAR + 'sites-bar-render.mjs')).href);
+const checkRegistry = BAR_MOD ? BAR_MOD.check : () => null;
 const SITE_HOSTS = (() => { try { return [...new Set((checkRegistry(JSON.parse(readFileSync('data/sites/sites.json', 'utf8'))) || []).map((x) => new URL(x.url).hostname))].filter((h) => /^([a-z0-9-]+\.)*promptugal\.news$/.test(h)).map((h) => `https://${h}`); } catch { return []; } })();
 const CSP_SITES = [...new Set(['https://promptugal.news', 'https://data.promptugal.news', ...SITE_HOSTS])].join(' ');
-const SITES_BAR = (() => { try { return renderBar(JSON.parse(readFileSync('data/sites/sites.json', 'utf8')), { here: 'events.promptugal.news' }); } catch { return ''; } })();
-if (!SITES_BAR) console.warn('build: the sites registry was refused or missing: pages built without the sites bar');
+const SITES_BAR = BAR_OFF ? '' : (() => { try { return renderBar(JSON.parse(readFileSync('data/sites/sites.json', 'utf8')), { here: 'events.promptugal.news' }); } catch { return ''; } })();
+if (!SITES_BAR && !BAR_OFF) console.warn('build: the sites registry copy was refused or missing: pages built without the sites bar');
 const { licenceOf } = R;
 const { okId, SITE, DATA, CCBY, REGION, NAMES, nameOf, lisbonDay, clean, esc, escUrl, okUrl, link, mdText, mdLink, host, fmtDay, fmtWhen, fmtStamp, addDays, readItemsOf, foundItemsOf, endOf, startOf, isCurrent, groupByDay, eventHtml, eventMd, listHtml, listMd, timePart } = R;
 R.setToday(lisbonDay(builtAt));
@@ -100,9 +122,9 @@ function page({ path, title, description, section, body, md }) {
 <meta property="og:description" content="${esc(description)}">
 <meta property="og:image" content="${SITE}/preview.png">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="stylesheet" href="/assets/sites-bar/1.1.0/sites-bar.css">
+${SITES_BAR ? `<link rel="stylesheet" href="/assets/sites-bar/${BAR_VERSION}/sites-bar.css">` : ''}
 <link rel="stylesheet" href="/site.css?v=${esc(version)}">
-<script defer src="/assets/sites-bar/1.1.0/sites-bar.js"></script>
+${SITES_BAR ? `<script defer src="/assets/sites-bar/${BAR_VERSION}/sites-bar.js"></script>` : ''}
 <script type="module" src="/assets/live.js?v=${esc(version)}"></script>
 <script defer src="/assets/obs/obs.js?v=${esc(version)}" data-lane="events"></script>
 </head>
