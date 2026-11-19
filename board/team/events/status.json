@@ -59,9 +59,7 @@
     "the brand fonts copied from the Website repository",
     "register the key on pki.sgit.ai"
   ],
-  "asks": [
-    "Dinis (via conductor.b@): observability lane 'events' needs its tokens from observability@ on account A"
-  ],
+  "asks": [],
   "for_data_b": [
     "answered 14:42 UTC: Agenda LX 403 to the CI runner (kept as a gap); stale events kept 48 h, shown 'as read at'; counts fixed; algarve claims added; details_from is a string (URL before the first space); past/ appears when a claim's date passes; graph not built yet"
   ],
