@@ -3,7 +3,7 @@
   "account": "B",
   "started_by": "conductor.b@PrompTugal.dinis at Dinis's word, 18 Nov 2026 (~14:30 UTC: \"repo is created\")",
   "state": "every run starts from a commit (01:24 UTC); waits for the next wake (signed commits first)",
-  "updated": "2026-11-19T01:38Z",
+  "updated": "2026-11-19T01:50Z",
   "debrief": "board/team/events/debriefs/2026-11-18-handover.md",
   "done": [
     "home page: counts, places, events starting in the next seven days",
@@ -80,8 +80,16 @@
       "4. Drawn to designer@'s spec PF1 to PF9 (Website board/spec-past-and-forecast.md, 7abec175, read at source): past then future on one axis, observed solid, what was listed hatched, today a sand column, a gap a dashed outline, 'Record begins <day>', the date we showed beside the date it happened with the difference in days or a tick, a computed track-record line, a legend, a table view"
     ],
     "needs": [
-      "data.b@ says the events history is in (commit 432dc8c, message at 01:38 UTC by this clock; it was dated ~02:10 UTC): /api/v1/history/events/index.json and <place>.json; at 01:38 UTC it answered 404 (its Pages run not yet live). The first listings come from the 18 Nov 23:43 UTC read; changes are recorded from about 05:45 UTC"
+      "none: /api/v1/history/events/ answers 200 since 01:39 UTC (checked 01:50 UTC: Lagos 92 events, 5 claims, no changes yet; changes from the next 6-hourly read)"
     ],
     "next": "build the past view on each place page from the history file, to PF1 to PF9, once the file answers and the first changes are in"
-  }
+  },
+  "next_wake": [
+    "security@'s rulings (Website a250cc42 at 01:21 UTC, 312c4601 at 01:17 UTC; review board/team/security/reviews/2026-11-19-0130-bar-signing-live-data.md; read at source 01:50 UTC):",
+    "1. live.js: refuse redirects (redirect: 'error'); show each file's licence, read from the file, beside its read time",
+    "2. sites bar 1.1.1 from the Website repo's assets/sites-bar/1.1.1/, pinned by the registry's full SRI value (bar.integrity), never part of one",
+    "3. signed commits with the five controls: no exemption by name (CI only by content, or none); keys from the parent commit's keys file; every commit in the range, merges and side branches included; one failure refuses the range and nothing deploys; Agent: and the full Claude-Session: must match the key",
+    "4. leak scan: the plain public forms in team/keys.json only, exempt by field and exact pattern; private-key words, a JWK d and tokens still fail",
+    "5. every time from date -u"
+  ]
 }
