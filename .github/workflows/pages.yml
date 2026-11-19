@@ -74,18 +74,30 @@ jobs:
     # A..AFTER. A missing A, an A that is not an ancestor of AFTER, or a missing checker fails: no fallback, no tags.
     # A run by hand (workflow_dispatch) checks A..HEAD the same way.
     needs: build
-    if: needs.build.outputs.deploy == 'true'
+    if: github.ref == 'refs/heads/dev' && needs.build.outputs.deploy == 'true'
     runs-on: ubuntu-latest
     permissions:
       contents: read
       actions: read
     env:
       GIT_NO_REPLACE_OBJECTS: '1'
+      GIT_ATTR_SOURCE: 4b825dc642cb6eb9a060e54bf8d69288fbee4904
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
           fetch-depth: 0
           persist-credentials: false
+      # live.b@'s a4c6fce: a pushed _site (a symlink, say) is refused before the artifact is downloaded. Pushed .gitattributes
+      # are switched off for every git command here by GIT_ATTR_SOURCE (the empty tree; git 2.42 or later), which also
+      # overrides the index copy, unlike removing the files (AppSec review, 19 Nov 2026); the leak scan still scans them.
+      - name: Refuse a pushed _site path; need a git that honours GIT_ATTR_SOURCE
+        shell: bash
+        env:
+          AFTER: ${{ github.sha }}
+        run: |
+          if [ -n "$(git ls-tree "$AFTER" _site)" ] || [ -e _site ] || [ -L _site ]; then echo "the pushed tree holds a _site path: refused" >&2; exit 1; fi
+          v=$(git version | sed -E 's/^git version ([0-9]+)\.([0-9]+).*/\1 \2/'); set -- $v
+          if [ "$1" -lt 2 ] || { [ "$1" -eq 2 ] && [ "$2" -lt 42 ]; }; then echo "git $1.$2 ignores GIT_ATTR_SOURCE: refused" >&2; exit 1; fi
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with:
           node-version: 22
@@ -102,10 +114,17 @@ jobs:
           if [ "$(git rev-parse --is-shallow-repository)" != "false" ]; then echo "a shallow checkout: the checks need the full history" >&2; exit 1; fi
           # A: the head commit of the latest run of this workflow file, on dev, for a push, that concluded success (security@'s
           # sixth ruling, Website 0ba439611; only GitHub Actions creates runs). Read from GitHub's API, never from git.
-          row=$(gh api "repos/$GITHUB_REPOSITORY/actions/workflows/pages.yml/runs?branch=dev&event=push&status=success&per_page=1" \
-            --jq '.workflow_runs[0] | select(.path == ".github/workflows/pages.yml" and .head_branch == "dev" and .event == "push" and .conclusion == "success") | .head_sha') \
+          # ... and in which the job named verify itself passed: a pushed workflow that drops verify can "succeed" but never
+          # becomes A (live.b@'s a4c6fce). The newest such run among the last 20 is taken.
+          A=""
+          rows=$(gh api "repos/$GITHUB_REPOSITORY/actions/workflows/pages.yml/runs?branch=dev&event=push&status=success&per_page=20" \
+            --jq '.workflow_runs[] | select(.path == ".github/workflows/pages.yml" and .head_branch == "dev" and .event == "push" and .conclusion == "success") | "\(.id):\(.head_sha)"') \
             || { echo "cannot read this workflow's runs" >&2; exit 1; }
-          A="$row"
+          for row in $rows; do
+            printf '%s' "$row" | grep -Eq '^[0-9]+:[0-9a-f]{40}$' || { echo "an unexpected run row: refused" >&2; exit 1; }
+            v=$(gh api "repos/$GITHUB_REPOSITORY/actions/runs/${row%%:*}/jobs?per_page=50" --jq '[.jobs[] | select(.name == "verify" and .conclusion == "success")] | length') || { echo "cannot read a run's jobs" >&2; exit 1; }
+            if [ "$v" = "1" ]; then A="${row##*:}"; break; fi
+          done
           if ! printf '%s' "$A" | grep -Eq '^[0-9a-f]{40}$'; then echo "no successful push run of this workflow on dev to anchor on" >&2; exit 1; fi
           git cat-file -e "$A^{commit}" 2>/dev/null || { echo "the anchor $A is not in this history" >&2; exit 1; }
           git merge-base --is-ancestor "$A" "$AFTER" || { echo "the anchor $A is not an ancestor of $AFTER (a force push?)" >&2; exit 1; }
@@ -124,12 +143,12 @@ jobs:
             git show "$A:scripts/$f" > "$T/$f"
           done
           chmod -R a-w "$T"
-          env -i PATH="$PATH" HOME="$HOME" GIT_NO_REPLACE_OBJECTS=1 "$NODE" "$T/check-commits.mjs" "$A" "$AFTER"
-          env -i PATH="$PATH" HOME="$HOME" GIT_NO_REPLACE_OBJECTS=1 "$NODE" "$T/check-signatures.mjs" "$AFTER"
-          env -i PATH="$PATH" HOME="$HOME" GIT_NO_REPLACE_OBJECTS=1 "$NODE" "$T/leak-scan.mjs"
+          env -i PATH="$PATH" HOME="$HOME" GIT_NO_REPLACE_OBJECTS=1 GIT_ATTR_SOURCE="$GIT_ATTR_SOURCE" "$NODE" "$T/check-commits.mjs" "$A" "$AFTER"
+          env -i PATH="$PATH" HOME="$HOME" GIT_NO_REPLACE_OBJECTS=1 GIT_ATTR_SOURCE="$GIT_ATTR_SOURCE" "$NODE" "$T/check-signatures.mjs" "$AFTER"
+          env -i PATH="$PATH" HOME="$HOME" GIT_NO_REPLACE_OBJECTS=1 GIT_ATTR_SOURCE="$GIT_ATTR_SOURCE" "$NODE" "$T/leak-scan.mjs"
   deploy:
     needs: [build, verify]
-    if: needs.build.outputs.deploy == 'true'
+    if: github.ref == 'refs/heads/dev' && needs.build.outputs.deploy == 'true' && needs.verify.result == 'success'
     runs-on: ubuntu-latest
     permissions:
       pages: write
@@ -143,7 +162,7 @@ jobs:
   tag:
     needs: [build, verify, deploy]
     # Tags a push only; a run by hand deploys but does not tag (AppSec review, 18 Nov 2026).
-    if: ${{ always() && github.event_name == 'push' && needs.build.result == 'success' && needs.verify.result == 'success' && needs.deploy.result == 'success' }}
+    if: ${{ always() && github.ref == 'refs/heads/dev' && github.event_name == 'push' && needs.build.result == 'success' && needs.verify.result == 'success' && needs.deploy.result == 'success' }}
     runs-on: ubuntu-latest
     permissions:
       contents: write

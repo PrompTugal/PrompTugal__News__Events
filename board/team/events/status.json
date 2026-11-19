@@ -3,7 +3,7 @@
   "account": "B",
   "started_by": "conductor.b@PrompTugal.dinis at Dinis's word, 18 Nov 2026 (~14:30 UTC: \"repo is created\")",
   "state": "signed commits live from this release (13:45 UTC); next: the past view and predictions file once the history records changes",
-  "updated": "2026-11-19T14:37Z",
+  "updated": "2026-11-19T16:21Z",
   "debrief": "board/team/events/debriefs/2026-11-18-handover.md",
   "done": [
     "home page: counts, places, events starting in the next seven days",
@@ -74,7 +74,7 @@
     "register the key on pki.sgit.ai"
   ],
   "asks": [
-    "Dinis: branch protection on dev with a required check: CI now anchors its security checks on this workflow's latest successful push run on dev (no tags, no deployment records), but a pushed workflow file can still choose what CI runs; only branch protection closes that (security@'s rulings, 19 Nov 2026); and please restrict the github-pages environment's deployment branches to dev, since anyone with deployments write access could otherwise post a fake successful deployment and so choose the anchor"
+    "Dinis: branch protection on dev with a required check and review of .github/** and scripts/** (CODEOWNERS): CI anchors its security checks on the newest successful push run on dev whose job named verify passed, but a pushed workflow can name any job verify and can drop the refs/heads/dev guard, so only branch protection closes that (security@'s rulings and live.b@'s a4c6fce, 19 Nov 2026); please also add a tag ruleset, and restrict the github-pages environment's deployment branches to dev"
   ],
   "for_data_b": [
     "answered 14:42 UTC: Agenda LX 403 to the CI runner (kept as a gap); stale events kept 48 h, shown 'as read at'; counts fixed; algarve claims added; details_from is a string (URL before the first space); past/ appears when a claim's date passes; graph not built yet"

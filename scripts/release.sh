@@ -20,16 +20,26 @@ node scripts/test-workflow.mjs
 # are not used. No anchor, an anchor that is not an ancestor of HEAD, or a missing checker fails: there is no fallback.
 anchor() {
   # The head commit of the latest successful push run of this workflow on dev (security@'s sixth ruling), from GitHub's API;
-  # if the API is rate-limited from this shared host, the live /version.json, which only a passing run deploys. CI is the authority.
+  # only if the API is rate-limited from this shared host (403 or 429; any other error fails), the live /version.json. CI is the
+  # authority: this local check is advisory, and the CI verify job never falls back.
   node -e '
-    const q = "https://api.github.com/repos/PrompTugal/PrompTugal__News__Events/actions/workflows/pages.yml/runs?branch=dev&event=push&status=success&per_page=1";
+    // ... a run in which the job named verify passed (live.b@, a4c6fce), the newest of the last 20.
+    const R = "https://api.github.com/repos/PrompTugal/PrompTugal__News__Events/actions";
+    const H = { headers: { "user-agent": "events-release-check", accept: "application/vnd.github+json" }, redirect: "error", signal: AbortSignal.timeout(20000) };
     const ok = (sha) => typeof sha === "string" && /^[0-9a-f]{40}$/.test(sha);
-    fetch(q, { headers: { "user-agent": "events-release-check", accept: "application/vnd.github+json" }, redirect: "error", signal: AbortSignal.timeout(20000) })
-      .then((r) => r.ok ? r.json() : Promise.reject(new Error("HTTP " + r.status)))
-      .then((d) => { const r = d.workflow_runs && d.workflow_runs[0]; if (!r || r.path !== ".github/workflows/pages.yml" || r.head_branch !== "dev" || r.event !== "push" || r.conclusion !== "success" || !ok(r.head_sha)) process.exit(1); console.log(r.head_sha); })
-      .catch(() => fetch("https://events.promptugal.news/version.json", { cache: "no-store", redirect: "error", signal: AbortSignal.timeout(20000) })
+    const get = (u) => fetch(u, H).then((r) => r.ok ? r.json() : Promise.reject(Object.assign(new Error("HTTP " + r.status), { status: r.status })));
+    get(R + "/workflows/pages.yml/runs?branch=dev&event=push&status=success&per_page=20")
+      .then(async (d) => {
+        for (const r of d.workflow_runs || []) {
+          if (r.path !== ".github/workflows/pages.yml" || r.head_branch !== "dev" || r.event !== "push" || r.conclusion !== "success" || !ok(r.head_sha) || !Number.isInteger(r.id)) continue;
+          const j = await get(R + "/runs/" + r.id + "/jobs?per_page=50");
+          if ((j.jobs || []).filter((x) => x.name === "verify" && x.conclusion === "success").length === 1) { console.log(r.head_sha); return; }
+        }
+        process.exit(1);
+      })
+      .catch((e) => (e.status === 403 || e.status === 429) ? fetch("https://events.promptugal.news/version.json", { cache: "no-store", redirect: "error", signal: AbortSignal.timeout(20000) })
         .then((r) => r.ok ? r.json() : Promise.reject(new Error("HTTP " + r.status)))
-        .then((v) => { if (!ok(v.commit)) process.exit(1); console.error("(the API is rate-limited here: anchoring on the live version.json)"); console.log(v.commit); }))
+        .then((v) => { if (!ok(v.commit)) process.exit(1); console.error("(the API is rate-limited here: anchoring on the live version.json)"); console.log(v.commit); }) : process.exit(1))
       .catch(() => process.exit(1));'
 }
 trusted_check() {
