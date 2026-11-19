@@ -3,7 +3,7 @@
   "account": "B",
   "started_by": "conductor.b@PrompTugal.dinis at Dinis's word, 18 Nov 2026 (~14:30 UTC: \"repo is created\")",
   "state": "no IP lookup (03:21 UTC); next wake: live.js redirects and licences, sites bar 1.1.1, signed commits",
-  "updated": "2026-11-19T03:21Z",
+  "updated": "2026-11-19T03:24Z",
   "debrief": "board/team/events/debriefs/2026-11-18-handover.md",
   "done": [
     "home page: counts, places, events starting in the next seven days",
@@ -81,7 +81,7 @@
       "none: /api/v1/history/events/ answers 200 since 01:39 UTC (checked 01:50 UTC: Lagos 92 events, 5 claims, no changes yet; changes from the next 6-hourly read)"
     ],
     "next": "build the past view on each place page from the history file, to PF1 to PF9, once the file answers and the first changes are in",
-    "library": "Predictions are one collection in the library (Dinis ~03:15 UTC): this site sends its prediction files to library.promptugal.news in the form library.b@ sets, and still keeps and checks its own"
+    "library": "Predictions are one collection in the library (Dinis ~03:15 UTC). The form is live (checked 03:24 UTC: library.promptugal.news/api/v1/predictions/form.json answers 200, library.b@ 8f8117b). Plan: data/predictions/predictions.jsonl in this repo, append-only JSON Lines (prediction lines: each event's date and place as first shown, from the events history; outcome lines when the date passes), first form kept, corrections beside it; then tell library.b@ (session_01Kw9UwFNC1sX4AKoWo4XhEP) the repo name for a PRED series. Built with the past view, after the first changes are recorded (from about 05:45 UTC)"
   },
   "next_wake": [
     "security@'s rulings (Website a250cc42 at 01:21 UTC, 312c4601 at 01:17 UTC; review board/team/security/reviews/2026-11-19-0130-bar-signing-live-data.md; read at source 01:50 UTC):",
