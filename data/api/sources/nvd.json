@@ -3,7 +3,9 @@
   "name": "CC BY 4.0",
   "url": "https://creativecommons.org/licenses/by/4.0/",
   "holder": "PrompTugal.news",
-  "note": "What PrompTugal.news makes: this file's structure, records and derived values."
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values.",
+  "commercial_use": "allowed",
+  "commercial_note": "With credit to PrompTugal.news; values taken from a source keep that source's licence."
  },
  "id": "nvd",
  "name": "NVD (National Vulnerability Database)",
@@ -29,5 +31,5 @@
  "contact_channel": "https://nvd.nist.gov/",
  "notes": "Allows our use (a news site showing derived aggregates and per-CVE identifiers) with NVD's notice shown; modified content may not be attributed to the NVD, so our totals are labelled ours. NIST gives no warranty on the data. CVE records are not personal data. Aggregate-only on cyber.promptugal.news.",
  "researched_by": "data.b.collector@PrompTugal.dinis (Sonnet), checked by data.b@",
- "how": "Every 6 hours, up to four GETs of the CVE API with no key and 7 seconds apart: CVEs modified in the last 24 hours (pages of 2000) and CVEs published since 00:00 UTC yesterday (sources/nvd-cve/collect.mjs); keeps id, dates, status, CNA, CVSS severity and score, CWE ids, vendor and product; no descriptions or references; served at /api/v1/nvd-cve/; raw kept in the vault copy. Asked by cyber.b@PrompTugal.dinis, 18 Nov 2026."
+ "how": "Every 6 hours, up to four GETs of the CVE API with no key and 7 seconds apart: one window of CVEs modified since 00:00 UTC yesterday (pages of 2000; the new CVEs are those published in the same window) (sources/nvd-cve/collect.mjs); keeps id, dates, status, CNA, CVSS severity and score, CWE ids, vendor and product, and whole-day totals (daily_totals, 30 days); no descriptions or references; served at /api/v1/nvd-cve/; raw kept in the vault copy. Asked by cyber.b@PrompTugal.dinis, 18 Nov 2026."
 }

@@ -1,0 +1,37 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values.",
+  "commercial_use": "allowed",
+  "commercial_note": "With credit to PrompTugal.news; values taken from a source keep that source's licence."
+ },
+ "id": "london-luton-airport",
+ "name": "London Luton Airport flight information",
+ "kind": "airport data",
+ "url": "https://www.london-luton.co.uk/",
+ "owner": "London Luton Airport",
+ "places": [
+  "london",
+  "portugal"
+ ],
+ "country": "GB",
+ "gives": [
+  "flights to Faro, Lisbon and Porto"
+ ],
+ "status": "not-read",
+ "why": {
+  "quote": "Recv failure: Connection reset by peer (the terms pages tried did not answer our reader)",
+  "quote_lang": "en",
+  "page": "https://www.londonluton.co.uk/terms-and-conditions",
+  "read_at": "2026-11-18",
+  "basis": "no answer; the correct domain and terms page are to find"
+ },
+ "interface": "Flight pages.",
+ "feed": null,
+ "contact_channel": "https://www.london-luton.co.uk/",
+ "notes": "Gap: terms unread.",
+ "researched_by": "data.b.dev@PrompTugal.dinis (Sonnet), for data.b@",
+ "how": "Not collected yet. Decision by Dinis, 18 Nov 2026 about 22:20 UTC (PrompTugal__News__Website board/guidance/2026-11-18-london.md): London is the first place beyond Portugal; each UK source goes on the register with its terms read first, then is collected to the pipeline standard."
+}

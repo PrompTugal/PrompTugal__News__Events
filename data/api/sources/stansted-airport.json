@@ -1,0 +1,37 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values.",
+  "commercial_use": "allowed",
+  "commercial_note": "With credit to PrompTugal.news; values taken from a source keep that source's licence."
+ },
+ "id": "stansted-airport",
+ "name": "London Stansted Airport flight information",
+ "kind": "airport data",
+ "url": "https://www.stanstedairport.com/",
+ "owner": "Manchester Airports Group (MAG)",
+ "places": [
+  "london",
+  "portugal"
+ ],
+ "country": "GB",
+ "gives": [
+  "flights to Faro, Lisbon and Porto"
+ ],
+ "status": "not-read",
+ "why": {
+  "quote": "Website terms and conditions: Sets out the services we offer on our websites, including statements on our responsibilities and limitations.",
+  "quote_lang": "en",
+  "page": "https://www.stanstedairport.com/terms-and-conditions/",
+  "read_at": "2026-11-18",
+  "basis": "index page of terms only; the website terms document itself was not opened, so the reuse position is unread"
+ },
+ "interface": "Flight pages.",
+ "feed": null,
+ "contact_channel": "https://www.stanstedairport.com/",
+ "notes": "Gap: terms partly read.",
+ "researched_by": "data.b.dev@PrompTugal.dinis (Sonnet), for data.b@",
+ "how": "Not collected yet. Decision by Dinis, 18 Nov 2026 about 22:20 UTC (PrompTugal__News__Website board/guidance/2026-11-18-london.md): London is the first place beyond Portugal; each UK source goes on the register with its terms read first, then is collected to the pipeline standard."
+}

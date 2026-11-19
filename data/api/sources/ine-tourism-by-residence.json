@@ -1,0 +1,37 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values.",
+  "commercial_use": "allowed",
+  "commercial_note": "With credit to PrompTugal.news; values taken from a source keep that source's licence."
+ },
+ "id": "ine-tourism-by-residence",
+ "name": "INE Portugal: guests and nights by country of residence",
+ "kind": "statistics",
+ "url": "https://www.ine.pt/",
+ "owner": "INE - Statistics Portugal",
+ "places": [
+  "london",
+  "portugal"
+ ],
+ "country": "PT",
+ "gives": [
+  "guests and overnight stays in Portuguese accommodation by country of residence, UK included"
+ ],
+ "status": "not-read",
+ "why": {
+  "quote": "The statistical data made available on this website is free of charge and can be used and reused by the users in accordance with the Creative Commons CC BY Attribuition 4.0 license provided that the source is acknowledged, as follows: Source: Instituto Nacional de Estatística – Portugal (Statistics Portugal) (identification of the statistical information mentioned; reference period of the information)",
+  "quote_lang": "en",
+  "page": "https://www.ine.pt/xportal/xmain?xpid=INE&xpgid=ine_cont_inst&INST=3585857&xlang=en",
+  "read_at": "2026-11-18",
+  "basis": "INE's Terms and Conditions of Use, read in English; the API page (ine_api_v2) says use of the API is subject to these terms and that its data is of public character (linked to CC BY 4.0)"
+ },
+ "interface": "Statistical database and an API (not yet looked at).",
+ "feed": null,
+ "contact_channel": "https://www.ine.pt/",
+ "notes": "Terms now read (CC BY 4.0 with source acknowledgement; changes to the data must be stated). Still not collected: (1) the indicator for guests and nights by NUTS II and country of residence was not found (searches and API probes gave only indicator 0010416, guests by place of residence Portugal or abroad, and 13751 on the SMI site, guests by type); (2) INE reset the connection on about half of the requests after a burst of eight probes on 18 Nov 2026 and its legal-notice page answered 'server under maintenance', so the piece was stopped as instructed and recorded as a gap. The API page also says 'By using this API, the user acknowledges and accepts the conditions': Dinis to decide whether reading counts as accepting terms on our behalf before any collection.",
+ "researched_by": "data.b.dev@PrompTugal.dinis (Sonnet), for data.b@",
+ "how": "Not collected: gap recorded 18 Nov 2026 by data.b.dev@PrompTugal.dinis (WS-177). Terms read; indicator code for the UK breakdown not found; connection reset by INE. To resume: find the indicator in INE's catalogue, one request at a time, after Dinis's word on the API's acceptance wording."
+}

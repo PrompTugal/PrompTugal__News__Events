@@ -1,0 +1,37 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values.",
+  "commercial_use": "allowed",
+  "commercial_note": "With credit to PrompTugal.news; values taken from a source keep that source's licence."
+ },
+ "id": "copernicus-cams",
+ "name": "Copernicus Atmosphere Monitoring Service (CAMS), Atmosphere Data Store",
+ "kind": "air quality forecast API (needs an account and key)",
+ "url": "https://ads.atmosphere.copernicus.eu/",
+ "owner": "ECMWF for the European Commission (Copernicus)",
+ "places": [
+  "europe",
+  "portugal",
+  "london"
+ ],
+ "country": "EU",
+ "gives": [
+  "CAMS European air quality forecasts and analyses (PM, NO2, O3, pollen), global atmospheric composition forecasts"
+ ],
+ "status": "not-read",
+ "why": {
+  "quote": "Here is how to setup the CDS Api key: If you do not have an account yet, please",
+  "quote_lang": "en",
+  "page": "https://ads.atmosphere.copernicus.eu/how-to-api",
+  "read_at": "2026-11-18",
+  "basis": "how-to-api page (account and token required); robots.txt: 'User-agent: *' 'Allow: /'"
+ },
+ "interface": "Python cdsapi client or the REST API with a personal access token from a free account. GRIB or NetCDF.",
+ "contact_channel": null,
+ "researched_by": "data.b.collector@PrompTugal.dinis (Sonnet)",
+ "notes": "WAITING FOR A KEY: answer to the brief's question is 'account, not keyless'. Keyless alternatives for air quality: the EEA download service above (measurements) and Open-Meteo's air quality endpoint, which is built on CAMS (its own terms to read). Licence per dataset not read.",
+ "how": null
+}

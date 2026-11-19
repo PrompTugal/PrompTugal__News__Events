@@ -1,0 +1,36 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values.",
+  "commercial_use": "allowed",
+  "commercial_note": "With credit to PrompTugal.news; values taken from a source keep that source's licence."
+ },
+ "id": "copernicus-efas",
+ "name": "European Flood Awareness System (EFAS), Copernicus Emergency Management Service",
+ "kind": "flood forecasts",
+ "url": "https://european-flood.emergency.copernicus.eu/",
+ "owner": "Copernicus Emergency Management Service (European Commission JRC and ECMWF)",
+ "places": [
+  "europe",
+  "portugal"
+ ],
+ "country": "EU",
+ "gives": [
+  "river discharge and flood forecasts, with notifications"
+ ],
+ "status": "not-read",
+ "why": {
+  "quote": "(robots.txt not available: the host returns its single-page application for /robots.txt)",
+  "quote_lang": "en",
+  "page": "https://european-flood.emergency.copernicus.eu/robots.txt",
+  "read_at": "2026-11-18",
+  "basis": "robots.txt not published as a text file; the site is a JavaScript application"
+ },
+ "interface": "Forecast data is distributed through the Copernicus Climate Data Store (account and token needed, see copernicus-cds); the public site is a map viewer. A keyless data endpoint was not found.",
+ "contact_channel": null,
+ "researched_by": "data.b.collector@PrompTugal.dinis (Sonnet)",
+ "notes": "Gap: terms and a keyless interface not found. EFAS access to full forecasts is for registered partners; public map only. Treat as 'waiting for a key' via the CDS unless a keyless endpoint is found.",
+ "how": null
+}

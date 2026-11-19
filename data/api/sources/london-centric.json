@@ -1,0 +1,36 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values.",
+  "commercial_use": "allowed",
+  "commercial_note": "With credit to PrompTugal.news; values taken from a source keep that source's licence."
+ },
+ "id": "london-centric",
+ "name": "London Centric",
+ "kind": "news feed",
+ "url": "https://www.londoncentric.media/",
+ "owner": "London Centric",
+ "places": [
+  "london"
+ ],
+ "country": "GB",
+ "gives": [
+  "London journalism: title, link, date from the Substack RSS feed"
+ ],
+ "status": "not-read",
+ "why": {
+  "quote": "London Centric reports on the people, decisions and - crucially - money that our city runs on.",
+  "quote_lang": "en",
+  "page": "https://www.londoncentric.media/about",
+  "read_at": "2026-11-18",
+  "basis": "about page read; no reuse terms found there; robots.txt blocks GPTBot, ClaudeBot and others by name"
+ },
+ "interface": "Substack RSS (address not tried).",
+ "feed": null,
+ "contact_channel": "https://www.londoncentric.media/",
+ "notes": "Terms unread: Substack's and the publisher's own to be found. Paid and free posts differ.",
+ "researched_by": "data.b.dev@PrompTugal.dinis (Sonnet), for data.b@",
+ "how": "Not collected yet. Decision by Dinis, 18 Nov 2026 about 22:20 UTC (PrompTugal__News__Website board/guidance/2026-11-18-london.md): London is the first place beyond Portugal; each UK source goes on the register with its terms read first, then is collected to the pipeline standard."
+}

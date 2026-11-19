@@ -1,0 +1,37 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values.",
+  "commercial_use": "allowed",
+  "commercial_note": "With credit to PrompTugal.news; values taken from a source keep that source's licence."
+ },
+ "id": "copernicus-cds",
+ "name": "Copernicus Climate Change Service, Climate Data Store (CDS) API",
+ "kind": "climate data API (needs an account and key)",
+ "url": "https://cds.climate.copernicus.eu/",
+ "owner": "ECMWF for the European Commission (Copernicus)",
+ "places": [
+  "europe",
+  "portugal",
+  "london"
+ ],
+ "country": "EU",
+ "gives": [
+  "ERA5 and ERA5-Land reanalysis, seasonal forecasts, climate projections, and EFAS and GloFAS flood datasets"
+ ],
+ "status": "not-read",
+ "why": {
+  "quote": "Here is how to setup the CDS Api key: If you do not have an account yet, please",
+  "quote_lang": "en",
+  "page": "https://ads.atmosphere.copernicus.eu/how-to-api",
+  "read_at": "2026-11-18",
+  "basis": "how-to-api page of the sister Atmosphere Data Store (the CDS how-to path returned 404); cds robots.txt: 'User-agent: *' 'Allow: /'"
+ },
+ "interface": "Python cdsapi client or the REST API, using a personal access token from a free account; each dataset also needs its licence accepted in the account. Data as GRIB or NetCDF.",
+ "contact_channel": null,
+ "researched_by": "data.b.collector@PrompTugal.dinis (Sonnet)",
+ "notes": "WAITING FOR A KEY: needs a free account, a personal access token and acceptance of dataset licences (which this team does not do on anyone's behalf). Not built until Dinis decides. Licence text of each dataset not read. Reachable terms-of-use pages returned 404 on the paths tried.",
+ "how": null
+}

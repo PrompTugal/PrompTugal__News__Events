@@ -3,9 +3,11 @@
   "name": "CC BY 4.0",
   "url": "https://creativecommons.org/licenses/by/4.0/",
   "holder": "PrompTugal.news",
-  "note": "What PrompTugal.news makes: this file's structure, records and derived values."
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values.",
+  "commercial_use": "allowed",
+  "commercial_note": "With credit to PrompTugal.news; values taken from a source keep that source's licence."
  },
- "read_at": "2026-11-18T22:29:52Z",
+ "read_at": "2026-11-19T00:59:20Z",
  "about": "Every host cited as evidence for an event that this site does not read, with how many claims point to it and in which places. Each is a gap in our sources; the register says why we do not read it.",
  "hosts": [
   {

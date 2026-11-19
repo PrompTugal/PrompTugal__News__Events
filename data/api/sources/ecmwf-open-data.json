@@ -1,0 +1,37 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values.",
+  "commercial_use": "allowed",
+  "commercial_note": "With credit to PrompTugal.news; values taken from a source keep that source's licence."
+ },
+ "id": "ecmwf-open-data",
+ "name": "ECMWF Open Data (IFS and AIFS real-time forecasts)",
+ "kind": "weather forecast data",
+ "url": "https://data.ecmwf.int/forecasts/",
+ "owner": "European Centre for Medium-Range Weather Forecasts (ECMWF)",
+ "places": [
+  "europe",
+  "portugal",
+  "london"
+ ],
+ "country": "EU",
+ "gives": [
+  "global weather forecasts (temperature, wind, precipitation rate, pressure and more) from the IFS and AIFS models, four runs a day"
+ ],
+ "status": "not-read",
+ "why": {
+  "quote": "A subset of ECMWF real-time forecast data from the IFS and AIFS models is made available to the public free of charge. Their use is governed by the Creative Commons CC-BY-4.0 licence and the ECMWF Terms of Use. This means that the data may be redistributed and used commercially, subject to appropriate attribution.",
+  "quote_lang": "en",
+  "page": "https://www.ecmwf.int/en/forecasts/datasets/open-data",
+  "read_at": "2026-11-18",
+  "basis": "licence statement (CC BY 4.0 plus ECMWF Terms of Use); data.ecmwf.int/robots.txt returns 404 (no robots rules published)"
+ },
+ "interface": "Files over HTTPS in GRIB2 at https://data.ecmwf.int/forecasts/YYYYMMDD/HHz/{ifs|aifs-single}/0p25/oper/ (0.25 degree; 0.1 degree files split into -sfc and -pl). Mirrored on AWS, Azure and Google Cloud public buckets. Official Python client: ecmwf-opendata (not run here). No key, no account.",
+ "contact_channel": null,
+ "researched_by": "data.b.collector@PrompTugal.dinis (Sonnet)",
+ "notes": "Keyless. Licence page of the Terms of Use (https://apps.ecmwf.int/datasets/licences/general/): attribution must be displayed prominently and include 'this document/data/output/Results is/are based on data and products of the European Centre for Medium-Range Weather Forecasts (ECMWF)'; users must remove attribution if requested; no warranty. Limits stated on the open-data page: portal access limited to between 500 and 2000 simultaneous connections; rolling archive of the latest 12 runs (about 2 to 3 days); the cloud mirrors are recommended for heavy use. No per-IP rate limit found. The page also says accessing or arranging delivery of open data 'may be subject to Service Charges and a Service Agreement' (that concerns delivery services, not the public files; to confirm). Size: global GRIB2 files, tens to hundreds of MB per step, so a collector must cut out a Europe or Portugal box and write small JSON (needs a GRIB reader). Easier keyless forecasts for Portugal exist via Open-Meteo (already in the brief).",
+ "how": null
+}

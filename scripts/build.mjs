@@ -5,11 +5,26 @@
 import { cpSync, rmSync, readdirSync, readFileSync, writeFileSync, statSync, existsSync, mkdirSync } from 'node:fs';
 import { join, dirname, resolve } from 'node:path';
 import { pathToFileURL } from 'node:url';
+import { createHash } from 'node:crypto';
 
 const version = process.env.SITE_VERSION || 'dev';
 const REPO = 'https://github.com/PrompTugal/PrompTugal__News__Events';
 const builtAt = new Date();
 const R = await import(pathToFileURL(resolve('src/assets/render.mjs')).href);
+// The PrompTugal sites bar v1.1.0, vendored unchanged from PrompTugal__News__Website assets/sites-bar/1.1.0/ (dev@, designer@'s
+// spec, security@'s go 90dfdd3baf; Dinis, 18 Nov 2026, the sites bar), pinned by sha256: the build stops if a file differs.
+const BAR = 'src/assets/sites-bar/1.1.0/';
+const BAR_SHA = {
+  'sites-bar-render.mjs': 'b9b50ae32fd5dc234ba6e9b4660061afb25554b542a1c779f68d1d8c61a98dbc',
+  'sites-bar.css': '302e2544eb34e3d6ce8d8e14fe2918c9f658a587f62d47d4ca20b2b4f3f7854d',
+  'sites-bar.js': 'bc97a820a8f4fbda60ff65c3073be6fe79b2d1d3ee954257e3a59bca7429e9b0',
+};
+for (const [f, h] of Object.entries(BAR_SHA)) if (createHash('sha256').update(readFileSync(BAR + f)).digest('hex') !== h) { console.error(`build: ${BAR}${f} does not match its pinned sha256`); process.exit(1); }
+const { render: renderBar } = await import(pathToFileURL(resolve(BAR + 'sites-bar-render.mjs')).href);
+// The registry, copied by scripts/sync-data.mjs (if it is down, the last good copy in git is used). An empty result means no bar,
+// never a hand-made one.
+const SITES_BAR = (() => { try { return renderBar(JSON.parse(readFileSync('data/sites/sites.json', 'utf8')), { here: 'events.promptugal.news' }); } catch { return ''; } })();
+if (!SITES_BAR) console.warn('build: the sites registry was refused or missing: pages built without the sites bar');
 const { okId, SITE, DATA, CCBY, REGION, NAMES, nameOf, lisbonDay, clean, esc, escUrl, okUrl, link, mdText, mdLink, host, fmtDay, fmtWhen, fmtStamp, addDays, readItemsOf, foundItemsOf, endOf, startOf, isCurrent, groupByDay, eventHtml, eventMd, listHtml, listMd, timePart } = R;
 R.setToday(lisbonDay(builtAt));
 const today = R.today;
@@ -60,7 +75,6 @@ function itemsFor(place) {
   return [...readItems(place), ...foundItems(place)];
 }
 // ---------------------------------------------------------------- the page frame
-const SITES = [['Events', 'https://events.promptugal.news/'], ['Weather', 'https://weather.promptugal.news/'], ['Civic', 'https://civic.promptugal.news/'], ['Startups', 'https://startups.promptugal.news/'], ['Travel', 'https://travel.promptugal.news/'], ['Data', 'https://data.promptugal.news/']];
 const NAV = [['/', 'Events'], ['/places/', 'Places'], ['/sources/', 'Sources'], ['/organisers/', 'Organisers'], ['/how/', 'How it works'], ['/principles/', 'Principles']];
 const pages = []; // [{path, title, md}]
 
@@ -70,7 +84,7 @@ function page({ path, title, description, section, body, md }) {
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self' https://data.promptugal.news https://dev.send.sgraph.ai https://ipapi.co https://ipwho.is; object-src 'none'; base-uri 'self'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: https://promptugal.news https://*.promptugal.news; connect-src 'self' https://promptugal.news https://*.promptugal.news https://dev.send.sgraph.ai https://ipapi.co https://ipwho.is; object-src 'none'; base-uri 'self'; form-action 'none'">
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(description)}">
 <link rel="canonical" href="${SITE}${path}">
@@ -80,12 +94,15 @@ function page({ path, title, description, section, body, md }) {
 <meta property="og:description" content="${esc(description)}">
 <meta property="og:image" content="${SITE}/preview.png">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/assets/sites-bar/1.1.0/sites-bar.css">
 <link rel="stylesheet" href="/site.css?v=${esc(version)}">
+<script defer src="/assets/sites-bar/1.1.0/sites-bar.js"></script>
 <script type="module" src="/assets/live.js?v=${esc(version)}"></script>
 <script defer src="/assets/obs/obs.js?v=${esc(version)}" data-lane="events"></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to the content</a>
+${SITES_BAR}
 <div class="version-bar"><span>Version ${esc(version)}</span><span><a href="${path}index.md">This page as markdown</a></span></div>
 <header class="masthead">
   <div class="masthead-row">
@@ -94,7 +111,6 @@ function page({ path, title, description, section, body, md }) {
   </div>
   <nav class="nav" aria-label="Sections">${NAV.map(([h, t]) => `<a href="${h}"${h === section ? ' aria-current="page"' : ''}>${t}</a>`).join('')}</nav>
 </header>
-<nav class="em-net" aria-label="The PrompTugal.news sites"><span>Also from <a href="https://promptugal.news/">PrompTugal.news</a></span>${SITES.map(([t, u]) => `<a href="${u}"${t === 'Events' ? ' aria-current="page"' : ''}>${t}</a>`).join('')}</nav>
 <main id="main">
 ${body}
 </main>
@@ -459,7 +475,23 @@ ${fig(1060, placeIds.length, 'places', 'covered')}
 <text x="60" y="575" class="s">${x(`Licence: CC BY 4.0 (PrompTugal.news). events.promptugal.news${version === 'dev' ? '' : ` · version ${version}`}`)}</text>
 </svg>
 `;
-  writeFileSync('_site/preview.svg', svg);
+  writeFileSync('_site/preview-card.svg', svg); // the 1200x630 social card (rendered to /preview.png at each wake)
+  // /preview.svg for the sites bar's pop-up: 320x180, designer@'s template (design/sites-bar/preview-template.svg.txt), every value escaped
+  const small = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 180" width="320" height="180" role="img" aria-label="${x(`Events: ${totalRead + totalFound} events listed, ${thisWeek} this week, ${placeIds.length} places`)}">
+  <rect width="320" height="180" rx="6" fill="#f6f3ec"/>
+  <rect x="0" y="0" width="320" height="4" fill="#b5179e"/>
+  <text x="16" y="30" font-family="IBM Plex Mono, monospace" font-size="10.5" letter-spacing="1.2" fill="#666860">EVENTS · NOW</text>
+  <text x="16" y="84" font-family="Newsreader, Georgia, serif" font-size="46" fill="#121317">${x(String(totalRead + totalFound))}</text>
+  <text x="16" y="104" font-family="IBM Plex Sans, Arial, sans-serif" font-size="12" fill="#3a3b40">events listed</text>
+  <text x="176" y="72" font-family="Newsreader, Georgia, serif" font-size="26" fill="#121317">${x(String(thisWeek))}</text>
+  <text x="176" y="88" font-family="IBM Plex Sans, Arial, sans-serif" font-size="11" fill="#3a3b40">starting this week</text>
+  <text x="176" y="120" font-family="Newsreader, Georgia, serif" font-size="26" fill="#121317">${x(String(placeIds.length))}</text>
+  <text x="176" y="136" font-family="IBM Plex Sans, Arial, sans-serif" font-size="11" fill="#3a3b40">places</text>
+  <line x1="16" y1="150" x2="304" y2="150" stroke="#d8d4cb"/>
+  <text x="16" y="168" font-family="IBM Plex Mono, monospace" font-size="10" fill="#666860">${x(`read ${fmtStamp(dataReadAt)} · CC BY 4.0`)}</text>
+</svg>
+`;
+  writeFileSync('_site/preview.svg', small);
 }
 
 // ---------------------------------------------------------------- 404, llms.txt, version stamp, version.json

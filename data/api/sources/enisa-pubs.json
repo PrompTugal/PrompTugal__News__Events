@@ -1,0 +1,30 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values.",
+  "commercial_use": "allowed",
+  "commercial_note": "With credit to PrompTugal.news; values taken from a source keep that source's licence."
+ },
+ "id": "enisa-pubs",
+ "name": "ENISA publications",
+ "kind": "open-data API",
+ "url": "https://www.enisa.europa.eu/",
+ "owner": "ENISA (European Union Agency for Cybersecurity)",
+ "places": [
+  "portugal"
+ ],
+ "gives": [
+  "The newest publications on the European Union Agency for Cybersecurity's publications page: title, date, link and the topics ENISA gives, for cyber.promptugal.news. ENISA has no feed, so the HTML list (one page) is read. No report text is kept."
+ ],
+ "status": "read",
+ "how": "sources/enisa-pubs/collect.mjs reads https://www.enisa.europa.eu/ (every 6 hours)",
+ "terms": {
+  "summary": "ENISA legal notice 1.2: reproduction of material on its website is authorised if the source is acknowledged, unless stated otherwise; the logo only for press and media use with the source acknowledged. robots.txt allows /publications to our agent and asks for a 10 second crawl delay; it blocks named AI crawlers (we are code, no model, and not named). Dinis decided on 18 Nov 2026 that ENISA is read through its published interfaces. Not reviewed by a person.",
+  "page": "https://www.enisa.europa.eu/about-enisa/legal-notice",
+  "read_at": "2026-11-18"
+ },
+ "on_this_site": "https://data.promptugal.news/sources/enisa-pubs/",
+ "collector": "sources/enisa-pubs/collect.mjs"
+}

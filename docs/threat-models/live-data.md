@@ -28,5 +28,8 @@ On each place page and the home page, the reader's browser fetches that place's 
 
 - (1, 2) A Content Security Policy on every page (a meta tag, since GitHub Pages sets no headers): scripts and styles from this site only, no inline script, no plugins, and connections only to data.promptugal.news and the page-view endpoint and place lookups. Added 18 November 2026, tested on nine pages with no violations.
 
+- The PrompTugal sites bar (v1.1.0, vendored unchanged and pinned by sha256; reviewed by security@) is rendered at build from the sites registry, and its script fetches only other PrompTugal sites' `/version.json` and shows their `/preview.svg` as an image. The policy allows images and connections to `https://promptugal.news` and `https://*.promptugal.news`.
+
 ## Open
+- The `*.promptugal.news` wildcard trusts any subdomain, including one that was abandoned or taken over; accepted because the registry keeps adding sites, and the bar fetches only JSON and images, never scripts.
 - Framing (clickjacking) cannot be refused from a meta tag; low risk for a static site with no login or actions.

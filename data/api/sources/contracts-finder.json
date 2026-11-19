@@ -1,0 +1,36 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values.",
+  "commercial_use": "allowed",
+  "commercial_note": "With credit to PrompTugal.news; values taken from a source keep that source's licence."
+ },
+ "id": "contracts-finder",
+ "name": "Contracts Finder (UK government procurement notices)",
+ "kind": "open-data API",
+ "url": "https://www.contractsfinder.service.gov.uk/",
+ "owner": "Crown Commercial Service / Cabinet Office",
+ "places": [
+  "london"
+ ],
+ "country": "GB",
+ "gives": [
+  "public contract notices, London buyers and suppliers"
+ ],
+ "status": "not-read",
+ "why": {
+  "quote": "All content is available under the Open Government Licence v3.0 except where otherwise stated.",
+  "quote_lang": "en",
+  "page": "https://www.contractsfinder.service.gov.uk/apidocumentation",
+  "read_at": "2026-11-18",
+  "basis": "page footer of the service and its API documentation page"
+ },
+ "interface": "Published OCDS and notice search API (documented); no key stated on the pages read.",
+ "feed": null,
+ "contact_channel": "https://www.contractsfinder.service.gov.uk/",
+ "notes": "Names of sole traders in notices: apply the same natural-person rule as base-gov-pt.",
+ "researched_by": "data.b.dev@PrompTugal.dinis (Sonnet), for data.b@",
+ "how": "Not collected yet. Decision by Dinis, 18 Nov 2026 about 22:20 UTC (PrompTugal__News__Website board/guidance/2026-11-18-london.md): London is the first place beyond Portugal; each UK source goes on the register with its terms read first, then is collected to the pipeline standard."
+}

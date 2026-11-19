@@ -1,0 +1,37 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values.",
+  "commercial_use": "allowed",
+  "commercial_note": "With credit to PrompTugal.news; values taken from a source keep that source's licence."
+ },
+ "id": "ted-api",
+ "name": "TED (Tenders Electronic Daily) API v3 search",
+ "kind": "public procurement API",
+ "url": "https://api.ted.europa.eu/v3/notices/search",
+ "owner": "Publications Office of the European Union (TED)",
+ "places": [
+  "europe",
+  "portugal",
+  "london"
+ ],
+ "country": "EU",
+ "gives": [
+  "EU public procurement notices (contract notices and award notices) with buyer, subject, value, place of performance"
+ ],
+ "status": "not-read",
+ "why": {
+  "quote": "TED API allows anonymous access to all services manipulating published notices (i.e., searching for or retrieving notices already published on TED).",
+  "quote_lang": "en",
+  "page": "https://docs.ted.europa.eu/api/latest/index.html",
+  "read_at": "2026-11-18",
+  "basis": "API documentation (anonymous access to published notices; 'The Search API does not require a key'); the TED legal notice and reuse terms were not readable (ted.europa.eu answered HTTP 202 to a plain request, which reads as a bot check, so it is a gap); api.ted.europa.eu/robots.txt returns 404"
+ },
+ "interface": "POST https://api.ted.europa.eu/v3/notices/search with JSON {query, fields, limit, page, scope}, for example query 'organisation-country-buyer=PRT'; returns JSON with notice-identifier, publication-date, buyer-name and links to XML and PDF. No key for search.",
+ "contact_channel": null,
+ "researched_by": "data.b.collector@PrompTugal.dinis (Sonnet)",
+ "notes": "Keyless for search; probed once on 2026-11-18 (two Portuguese buyers returned). Reuse licence and rate limits not read: the legal notice page was behind a bot check, so someone should read the terms by hand before building. Privacy rule: buyers and winners may be public bodies or companies, but sole traders and individuals appear as winners, so a collector must keep only organisations and never name a natural person, as for the Portuguese contracts. Notices cover contracts above EU thresholds only, so most small Portuguese contracts (see BASE) are not here.",
+ "how": null
+}

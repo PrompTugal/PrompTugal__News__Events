@@ -1,0 +1,31 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values.",
+  "commercial_use": "allowed",
+  "commercial_note": "With credit to PrompTugal.news; values taken from a source keep that source's licence."
+ },
+ "id": "open-meteo-london",
+ "name": "London forecast (Open-Meteo)",
+ "kind": "open-data API",
+ "url": "https://open-meteo.com/",
+ "owner": "Open-Meteo (OpenMeteo GmbH, Switzerland)",
+ "places": [
+  "london"
+ ],
+ "country": "GB",
+ "gives": [
+  "Forecast for London from Open-Meteo: hourly temperature, chance and amount of rain, wind and weather code for 3 days, each day's lowest and highest temperature, and every forecast we served kept for 14 days. A model forecast for a grid point, not a warning."
+ ],
+ "status": "read",
+ "how": "sources/open-meteo-london/collect.mjs reads https://open-meteo.com/ (every 6 hours)",
+ "terms": {
+  "summary": "Used under Open-Meteo's free non-commercial terms because data.promptugal.news is free and carries no subscriptions or adverts (Dinis, 18 Nov 2026). Sites that charge must not reuse it without a paid plan; that line is still being settled. Data CC BY 4.0: credit Open-Meteo (link to https://open-meteo.com/) and the models' providers, and say if changed. Not reviewed by a person.",
+  "page": "https://open-meteo.com/en/terms",
+  "read_at": "2026-11-18"
+ },
+ "on_this_site": "https://data.promptugal.news/sources/open-meteo-london/",
+ "collector": "sources/open-meteo-london/collect.mjs"
+}

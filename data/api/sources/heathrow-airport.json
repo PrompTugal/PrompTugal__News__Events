@@ -1,0 +1,37 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values.",
+  "commercial_use": "allowed",
+  "commercial_note": "With credit to PrompTugal.news; values taken from a source keep that source's licence."
+ },
+ "id": "heathrow-airport",
+ "name": "Heathrow Airport flight information and statistics",
+ "kind": "airport data",
+ "url": "https://www.heathrow.com/",
+ "owner": "Heathrow Airport Limited",
+ "places": [
+  "london",
+  "portugal"
+ ],
+ "country": "GB",
+ "gives": [
+  "flights to Faro, Lisbon and Porto: schedules, statistics"
+ ],
+ "status": "not-read",
+ "why": {
+  "quote": "The contents of the pages contained in this Website may not be distributed, displayed or copied to third parties",
+  "quote_lang": "en",
+  "page": "https://www.heathrow.com/terms-and-conditions",
+  "read_at": "2026-11-18",
+  "basis": "website terms, clauses 5.2 and 5.3"
+ },
+ "interface": "Flight pages and traffic statistics (no open licence found).",
+ "feed": null,
+ "contact_channel": "https://www.heathrow.com/",
+ "notes": "No reuse licence on the pages read; not collected. A request may be drafted by outreach@ and sent by a person.",
+ "researched_by": "data.b.dev@PrompTugal.dinis (Sonnet), for data.b@",
+ "how": "Not collected yet. Decision by Dinis, 18 Nov 2026 about 22:20 UTC (PrompTugal__News__Website board/guidance/2026-11-18-london.md): London is the first place beyond Portugal; each UK source goes on the register with its terms read first, then is collected to the pipeline standard."
+}

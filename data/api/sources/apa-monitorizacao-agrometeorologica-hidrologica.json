@@ -1,0 +1,44 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values.",
+  "commercial_use": "allowed",
+  "commercial_note": "With credit to PrompTugal.news; values taken from a source keep that source's licence."
+ },
+ "id": "apa-monitorizacao-agrometeorologica-hidrologica",
+ "name": "APA / Comissão Permanente da Seca: monthly agrometeorological and hydrological monitoring report (PDF)",
+ "kind": "public body",
+ "url": "https://apambiente.pt/agua/ano-hidrologico-20252026",
+ "owner": "Agência Portuguesa do Ambiente (APA), with IPMA, GPP, DGADR, AdP, EDIA",
+ "places": [
+  "portugal",
+  "algarve"
+ ],
+ "country": "PT",
+ "gives": [
+  "reservoir storage for 77 monitored Portuguese reservoirs by river basin, in a monthly PDF report",
+  "storage for the six large Algarve reservoirs (Arade, Funcho, Bravura, Odelouca, Odeleite, Beliche) as a chart",
+  "table of AdP supply reservoirs incl. Beliche, Bravura, Odeleite, Odelouca (volume hm3 and percent, four dates)",
+  "drought status text"
+ ],
+ "status": "not-read",
+ "why": {
+  "quote": "Armazenamento de Água Superficial (albufeiras) APA Semanal",
+  "quote_lang": "pt",
+  "page": "https://apambiente.pt/sites/default/files/_SNIAMB_Agua/DRH/OrgaosConsultivos/ComissaoPermanenteSeca/Relatorios/119_Relatorio_Monitorizacao_30Set2026.pdf (Tabela 1, p. 6)",
+  "read_at": "2026-11-18",
+  "basis": "report text stating APA monitors surface storage weekly; the report states no reuse licence, and the APA site footer reads 'APA © 2021 - Consulte aqui a Política de privacidade da APA.' (https://apambiente.pt/, read 2026-11-18). robots.txt (https://apambiente.pt/robots.txt, 200): 'User-agent: * / Allow: / / Disallow: /adm/ / Disallow: /user/'. Not a reuse licence."
+ },
+ "interface": "Index page https://apambiente.pt/agua/ano-hidrologico-20252026 (HTML) links one PDF per month, numbered: 119_Relatorio_Monitorizacao_30Set2026.pdf is the newest (about 5.8 MB, ~60 pages, text layer readable with pdftotext). URL pattern /sites/default/files/_SNIAMB_Agua/DRH/OrgaosConsultivos/ComissaoPermanenteSeca/Relatorios/<n>_Relatorio_Monitorizacao_<DDMonYYYY>.pdf. No key. No JSON or CSV.",
+ "contact_channel": null,
+ "researched_by": "data.b.collector@PrompTugal.dinis (Sonnet), for data.b@PrompTugal.dinis",
+ "notes": "Read 18 Nov 2026: the index page and the 30 Sep 2026 report (one download, 5.8 MB). Monthly, published after month end, so the November picture is about 4 to 6 weeks old; as of 18 Nov the 31 Oct report was not yet listed. The report's own Tabela 1 says APA monitors surface storage weekly but only the monthly PDF is public here; the weekly series lives on SNIRH (403, see gap). Tabela (30 Set 2026, AdA group): Beliche 31.17 hm3, 64.93%; Bravura 26.97 hm3, 77.44%; Odeleite 94.80 hm3, 72.93%; Odelouca 115.11 hm3, 73.32% (the table has four date columns; I took the last as 30 Sep, not checked against the column header). Arade and Funcho appear only in a chart image (Figura 21), so would need image reading or SNIRH. Figures need cross-checking against the page layout before any build. Same reports are mirrored by GPP (https://www.gpp.pt/images/Estatisticas_e_analises/Analises/MonitorizaSeca/Relatorio_Monitorizacao_<mes>_<ano>.pdf; gpp.pt robots: User-agent * disallows only Joomla system paths); not read beyond robots. Best official keyless source for all Portugal, but a PDF with free-text and tables, so extraction is brittle; no licence, so reuse of figures with attribution should be confirmed with APA.",
+ "how": null,
+ "licence": {
+  "name": "none stated",
+  "url": "https://apambiente.pt/",
+  "read_at": "2026-11-18"
+ }
+}

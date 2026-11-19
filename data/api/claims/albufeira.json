@@ -3,10 +3,12 @@
   "name": "CC BY 4.0",
   "url": "https://creativecommons.org/licenses/by/4.0/",
   "holder": "PrompTugal.news",
-  "note": "What PrompTugal.news makes: this file's structure, records and derived values."
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values.",
+  "commercial_use": "allowed",
+  "commercial_note": "With credit to PrompTugal.news; values taken from a source keep that source's licence."
  },
  "place": "albufeira",
- "read_at": "2026-11-18T22:29:52Z",
+ "read_at": "2026-11-19T00:59:20Z",
  "discovery": {
   "asked_at": "2026-11-18T14:18:02Z",
   "model": "perplexity/sonar",
@@ -15,9 +17,9 @@
  },
  "about": "Events claimed for this place, each with every evidence link and whether this site may read that source (the register). Name, date and place come from discovery (Perplexity, through OpenRouter); other details only from a readable source. Not a confirmed listing.",
  "counts": {
-  "claims": 9,
+  "claims": 5,
   "confirmed": 0,
-  "withheld": 9
+  "withheld": 5
  },
  "claims": [
   {
@@ -42,7 +44,9 @@
     "name": "CC BY 4.0",
     "url": "https://creativecommons.org/licenses/by/4.0/",
     "holder": "PrompTugal.news",
-    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms.",
+    "commercial_use": "allowed",
+    "commercial_note": "With credit to PrompTugal.news; values taken from a source keep that source's licence."
    }
   },
   {
@@ -67,107 +71,9 @@
     "name": "CC BY 4.0",
     "url": "https://creativecommons.org/licenses/by/4.0/",
     "holder": "PrompTugal.news",
-    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
-   }
-  },
-  {
-   "@type": "Event",
-   "name": "Saber-Fazer Workshops - Macramé",
-   "startDate": "2026-11-18",
-   "endDate": null,
-   "place": "albufeira",
-   "municipality": "Albufeira",
-   "evidence": [
-    {
-     "url": "https://www.algarveatlas.com/en/municipalities/albufeira",
-     "host": "algarveatlas.com",
-     "readable": false,
-     "register": "algarveatlas"
-    }
-   ],
-   "status": "details withheld",
-   "details_from": null,
-   "details_note": "Details withheld: the sources cited (algarveatlas.com) are not ones whose terms let us copy them. Organiser: send them to us.",
-   "license": {
-    "name": "CC BY 4.0",
-    "url": "https://creativecommons.org/licenses/by/4.0/",
-    "holder": "PrompTugal.news",
-    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
-   }
-  },
-  {
-   "@type": "Event",
-   "name": "Saber-Fazer Workshops - Artistic Drawing",
-   "startDate": "2026-11-18",
-   "endDate": null,
-   "place": "albufeira",
-   "municipality": "Albufeira",
-   "evidence": [
-    {
-     "url": "https://www.algarveatlas.com/en/municipalities/albufeira",
-     "host": "algarveatlas.com",
-     "readable": false,
-     "register": "algarveatlas"
-    }
-   ],
-   "status": "details withheld",
-   "details_from": null,
-   "details_note": "Details withheld: the sources cited (algarveatlas.com) are not ones whose terms let us copy them. Organiser: send them to us.",
-   "license": {
-    "name": "CC BY 4.0",
-    "url": "https://creativecommons.org/licenses/by/4.0/",
-    "holder": "PrompTugal.news",
-    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
-   }
-  },
-  {
-   "@type": "Event",
-   "name": "Presentation of the book The Time Traveller by Ana Alexandra Resende",
-   "startDate": "2026-11-18",
-   "endDate": null,
-   "place": "albufeira",
-   "municipality": "Albufeira",
-   "evidence": [
-    {
-     "url": "https://www.algarveatlas.com/en/municipalities/albufeira",
-     "host": "algarveatlas.com",
-     "readable": false,
-     "register": "algarveatlas"
-    }
-   ],
-   "status": "details withheld",
-   "details_from": null,
-   "details_note": "Details withheld: the sources cited (algarveatlas.com) are not ones whose terms let us copy them. Organiser: send them to us.",
-   "license": {
-    "name": "CC BY 4.0",
-    "url": "https://creativecommons.org/licenses/by/4.0/",
-    "holder": "PrompTugal.news",
-    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
-   }
-  },
-  {
-   "@type": "Event",
-   "name": "Circular Tapestry Workshop",
-   "startDate": "2026-11-18",
-   "endDate": null,
-   "place": "albufeira",
-   "municipality": "Albufeira",
-   "evidence": [
-    {
-     "url": "https://www.algarveatlas.com/en/municipalities/albufeira",
-     "host": "algarveatlas.com",
-     "readable": false,
-     "register": "algarveatlas"
-    }
-   ],
-   "status": "details withheld",
-   "details_from": null,
-   "details_note": "Details withheld: the sources cited (algarveatlas.com) are not ones whose terms let us copy them. Organiser: send them to us.",
-   "license": {
-    "name": "CC BY 4.0",
-    "url": "https://creativecommons.org/licenses/by/4.0/",
-    "holder": "PrompTugal.news",
-    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms.",
+    "commercial_use": "allowed",
+    "commercial_note": "With credit to PrompTugal.news; values taken from a source keep that source's licence."
    }
   },
   {
@@ -192,7 +98,9 @@
     "name": "CC BY 4.0",
     "url": "https://creativecommons.org/licenses/by/4.0/",
     "holder": "PrompTugal.news",
-    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms.",
+    "commercial_use": "allowed",
+    "commercial_note": "With credit to PrompTugal.news; values taken from a source keep that source's licence."
    }
   },
   {
@@ -217,7 +125,9 @@
     "name": "CC BY 4.0",
     "url": "https://creativecommons.org/licenses/by/4.0/",
     "holder": "PrompTugal.news",
-    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms.",
+    "commercial_use": "allowed",
+    "commercial_note": "With credit to PrompTugal.news; values taken from a source keep that source's licence."
    }
   },
   {
@@ -242,7 +152,9 @@
     "name": "CC BY 4.0",
     "url": "https://creativecommons.org/licenses/by/4.0/",
     "holder": "PrompTugal.news",
-    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms.",
+    "commercial_use": "allowed",
+    "commercial_note": "With credit to PrompTugal.news; values taken from a source keep that source's licence."
    }
   }
  ]

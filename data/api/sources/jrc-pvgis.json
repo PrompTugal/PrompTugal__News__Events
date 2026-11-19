@@ -1,0 +1,36 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values.",
+  "commercial_use": "allowed",
+  "commercial_note": "With credit to PrompTugal.news; values taken from a source keep that source's licence."
+ },
+ "id": "jrc-pvgis",
+ "name": "JRC Photovoltaic Geographical Information System (PVGIS) API",
+ "kind": "solar radiation data",
+ "url": "https://re.jrc.ec.europa.eu/pvg_tools/en/",
+ "owner": "Joint Research Centre (European Commission)",
+ "places": [
+  "europe",
+  "portugal"
+ ],
+ "country": "EU",
+ "gives": [
+  "hourly solar radiation and PV output estimates for any point in Europe, including Portugal"
+ ],
+ "status": "not-read",
+ "why": {
+  "quote": "User-agent: *\nDisallow: /",
+  "quote_lang": "en",
+  "page": "https://re.jrc.ec.europa.eu/robots.txt",
+  "read_at": "2026-11-18",
+  "basis": "robots.txt disallows everything on re.jrc.ec.europa.eu. The JRC documentation page gives a rate limit of 30 calls per second per IP address and bars browser (AJAX) calls, but the host's robots rule governs and is respected here"
+ },
+ "interface": "GET https://re.jrc.ec.europa.eu/api/v5_3/seriescalc?lat=..&lon=..&outputformat=json (no key). Not to be used by this service while robots.txt disallows it.",
+ "contact_channel": null,
+ "researched_by": "data.b.collector@PrompTugal.dinis (Sonnet)",
+ "notes": "Refused by robots.txt: recorded as a gap, never worked around. Disclosure: one single probe request to the API was sent in the same step as the robots.txt fetch, before the disallow was read; it returned data and nothing was kept. Ask the JRC (PVGIS support page) if an automated read is allowed, a person to send.",
+ "how": null
+}

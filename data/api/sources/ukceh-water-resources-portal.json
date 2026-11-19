@@ -1,0 +1,37 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values.",
+  "commercial_use": "allowed",
+  "commercial_note": "With credit to PrompTugal.news; values taken from a source keep that source's licence."
+ },
+ "id": "ukceh-water-resources-portal",
+ "name": "UKCEH: UK Water Resources Portal",
+ "kind": "public portal",
+ "url": "https://eip.ceh.ac.uk/hydrology/water-resources/",
+ "owner": "UK Centre for Ecology and Hydrology (UKCEH)",
+ "places": [
+  "london",
+  "uk"
+ ],
+ "country": "GB",
+ "gives": [
+  "rainfall, river flow, groundwater and soil moisture; reservoir stocks are reported in the separate monthly UK Hydrological Summary, not confirmed on the portal"
+ ],
+ "status": "not-read",
+ "why": {
+  "quote": "Operation timed out after 25001 milliseconds with 0 bytes received",
+  "quote_lang": "en",
+  "page": "https://eip.ceh.ac.uk/robots.txt",
+  "read_at": "2026-11-18",
+  "basis": "two requests (robots.txt and the portal page) timed out on 18 Nov 2026; robots.txt of the parent site https://www.ceh.ac.uk/robots.txt answered 200 but is a different host and was not applied to eip.ceh.ac.uk. Terms not read."
+ },
+ "interface": "unknown; not reached",
+ "contact_channel": null,
+ "researched_by": "data.b.collector@PrompTugal.dinis (Sonnet), for data.b@PrompTugal.dinis",
+ "notes": "GAP. Not reached; robots, terms and contents unread. A web search found it described as a prototype portal (2019 to 2020 sources) for rainfall, river flow, groundwater and soil moisture, with no sign that it tracks reservoir levels. UKCEH and BGS publish a monthly Hydrological Summary for the UK that reports reservoir stocks (not read). A static inventory of 273 reservoirs covering about 90% of UK storage (capacity, not levels) is at https://data.gov.uk/dataset/aa1e16e8-eded-4a60-8d1d-0df920c319b6/inventory-of-reservoirs-amounting-to-90-of-total-uk-storage (listed by search; terms not read). Retry once later; do not hammer.",
+ "how": null,
+ "refusals": []
+}

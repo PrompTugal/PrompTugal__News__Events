@@ -1,0 +1,37 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values.",
+  "commercial_use": "allowed",
+  "commercial_note": "With credit to PrompTugal.news; values taken from a source keep that source's licence."
+ },
+ "id": "copernicus-land",
+ "name": "Copernicus Land Monitoring Service (CLMS)",
+ "kind": "land cover data",
+ "url": "https://land.copernicus.eu/",
+ "owner": "European Environment Agency for the European Commission (Copernicus)",
+ "places": [
+  "europe",
+  "portugal",
+  "london"
+ ],
+ "country": "EU",
+ "gives": [
+  "CORINE Land Cover, high-resolution layers, urban atlas, Europe-wide, Portugal included"
+ ],
+ "status": "not-read",
+ "why": {
+  "quote": "Free, full and open access to the products and services of the Copernicus Land Monitoring Service is made on the conditions that: ... users shall inform the public of the source of these products ...",
+  "quote_lang": "en",
+  "page": "https://land.copernicus.eu/en/data-policy",
+  "read_at": "2026-11-18",
+  "basis": "data policy (full, open and free access; attribution required, changes to be stated, no impression of EU endorsement); robots.txt: 'Disallow: /api' and '/en/sandbox'"
+ },
+ "interface": "Downloads and view and download services from the portal; the /api path is disallowed by robots.txt, so it must not be used. Whether bulk download needs an EU Login was not confirmed.",
+ "contact_channel": null,
+ "researched_by": "data.b.collector@PrompTugal.dinis (Sonnet)",
+ "notes": "Large rasters and vectors (hundreds of MB to GB), useful for maps, not for news cycles; a low priority. Required wording for derivatives: 'Generated using European Union's Copernicus Land Monitoring Service information'. Whether it is keyless is unconfirmed (probably an EU Login for downloads), so treat as not buildable until checked.",
+ "how": null
+}

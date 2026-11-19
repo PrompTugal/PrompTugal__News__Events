@@ -3,15 +3,17 @@
   "name": "CC BY 4.0",
   "url": "https://creativecommons.org/licenses/by/4.0/",
   "holder": "PrompTugal.news",
-  "note": "What PrompTugal.news makes: this file's structure, records and derived values."
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values.",
+  "commercial_use": "allowed",
+  "commercial_note": "With credit to PrompTugal.news; values taken from a source keep that source's licence."
  },
- "read_at": "2026-11-18T22:29:52Z",
+ "read_at": "2026-11-19T00:59:20Z",
  "places": [
   {
    "place": "albufeira",
-   "claims": 9,
+   "claims": 5,
    "confirmed": 0,
-   "withheld": 9
+   "withheld": 5
   },
   {
    "place": "alcoutim",
@@ -45,9 +47,9 @@
   },
   {
    "place": "lagos",
-   "claims": 5,
+   "claims": 4,
    "confirmed": 0,
-   "withheld": 3
+   "withheld": 2
   },
   {
    "place": "lisboa",
@@ -57,9 +59,9 @@
   },
   {
    "place": "loule",
-   "claims": 11,
+   "claims": 8,
    "confirmed": 0,
-   "withheld": 11
+   "withheld": 8
   },
   {
    "place": "monchique",
@@ -81,15 +83,15 @@
   },
   {
    "place": "quarteira",
-   "claims": 9,
+   "claims": 8,
    "confirmed": 0,
-   "withheld": 9
+   "withheld": 8
   },
   {
    "place": "sao-bras-de-alportel",
-   "claims": 9,
+   "claims": 8,
    "confirmed": 0,
-   "withheld": 9
+   "withheld": 8
   },
   {
    "place": "silves",

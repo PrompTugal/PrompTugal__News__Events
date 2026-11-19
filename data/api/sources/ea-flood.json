@@ -1,0 +1,31 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values.",
+  "commercial_use": "allowed",
+  "commercial_note": "With credit to PrompTugal.news; values taken from a source keep that source's licence."
+ },
+ "id": "ea-flood",
+ "name": "London flood warnings and Thames levels (Environment Agency)",
+ "kind": "open-data API",
+ "url": "https://environment.data.gov.uk/flood-monitoring/doc/reference",
+ "owner": "Environment Agency (England)",
+ "places": [
+  "london"
+ ],
+ "country": "GB",
+ "gives": [
+  "Flood warnings and alerts in force around London, and the latest water or tidal level at the Thames stations in London, and the nearest ten rainfall gauges (latest 15-minute total and rain per UTC day, 14 days kept), from the Environment Agency's real-time flood-monitoring API. Each warning with its severity, area and times; each station with its latest readings. Not a warning service."
+ ],
+ "status": "read",
+ "how": "sources/ea-flood/collect.mjs reads https://environment.data.gov.uk/flood-monitoring/doc/reference (hourly)",
+ "terms": {
+  "summary": "Open Government Licence v3.0, no registration; acknowledge with: \"this uses Environment Agency flood and river level data from the real-time data API (Beta)\". Not reviewed by a person.",
+  "page": "https://environment.data.gov.uk/flood-monitoring/doc/reference",
+  "read_at": "2026-11-18"
+ },
+ "on_this_site": "https://data.promptugal.news/sources/ea-flood/",
+ "collector": "sources/ea-flood/collect.mjs"
+}

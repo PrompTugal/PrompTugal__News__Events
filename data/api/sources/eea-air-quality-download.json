@@ -1,0 +1,37 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values.",
+  "commercial_use": "allowed",
+  "commercial_note": "With credit to PrompTugal.news; values taken from a source keep that source's licence."
+ },
+ "id": "eea-air-quality-download",
+ "name": "EEA air quality download service (Parquet, E1a up-to-date measurements)",
+ "kind": "environmental data API",
+ "url": "https://eeadmz1-downloads-api-appservice.azurewebsites.net/",
+ "owner": "European Environment Agency (EEA)",
+ "places": [
+  "europe",
+  "portugal",
+  "london"
+ ],
+ "country": "EU",
+ "gives": [
+  "hourly measurements of PM10, PM2.5, NO2, O3 and other pollutants from member-state monitoring stations, including Portugal, as Parquet files per station"
+ ],
+ "status": "not-read",
+ "why": {
+  "quote": "Information, documents and material available on this website and for which the EEA holds the rights of use are public and may be re-used without prior permission, free of charge, for commercial or non-commercial purposes, provided that the EEA is always acknowledged as the original source of the material and that the original meaning or message of the content is not distorted.",
+  "quote_lang": "en",
+  "page": "https://www.eea.europa.eu/en/legal-notice",
+  "read_at": "2026-11-18",
+  "basis": "EEA legal notice (re-use policy; it adds that certain data may carry different conditions); robots.txt on the API host returns 404 (no rules); on www.eea.europa.eu robots disallows /api, which is a different host and path"
+ },
+ "interface": "OpenAPI at https://eeadmz1-downloads-api-appservice.azurewebsites.net/swagger/v1/swagger.json. POST /ParquetFile/urls with JSON {countries, cities, pollutants, dataset (2 = up-to-date E1a), source 'Api', dateTimeStart, dateTimeEnd} returns a list of Parquet file URLs on eeadmz1batchservice02.blob.core.windows.net. No key.",
+ "contact_channel": null,
+ "researched_by": "data.b.collector@PrompTugal.dinis (Sonnet)",
+ "notes": "Keyless; probed once on 2026-11-18 (Portugal, PM10, one day) and it returned Portuguese station file URLs. Parquet needs a reader (pyarrow or DuckDB) and files are per station, so a collector would aggregate to a small JSON per city. Data is validated or near-real-time as the member states report it, so expect delays. Dataset-level licence not read (gap). Rate limits not found. London and UK stations are in the EEA data only up to the UK's reporting; not checked. A map-service host (discomap.eea.europa.eu) returned 404 on robots.txt and was not used.",
+ "how": null
+}

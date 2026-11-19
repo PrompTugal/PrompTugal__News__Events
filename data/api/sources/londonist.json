@@ -1,0 +1,36 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values.",
+  "commercial_use": "allowed",
+  "commercial_note": "With credit to PrompTugal.news; values taken from a source keep that source's licence."
+ },
+ "id": "londonist",
+ "name": "Londonist",
+ "kind": "news feed",
+ "url": "https://londonist.com/",
+ "owner": "Londonist",
+ "places": [
+  "london"
+ ],
+ "country": "GB",
+ "gives": [
+  "London articles: title, link, date from the RSS feed"
+ ],
+ "status": "not-read",
+ "why": {
+  "quote": "Just a moment... Enable JavaScript and cookies to continue (403 bot check on the terms page)",
+  "quote_lang": "en",
+  "page": "https://www.londonist.com/terms-and-conditions",
+  "read_at": "2026-11-18",
+  "basis": "bot check on the terms page respected, a gap; robots.txt 'User-agent: * Disallow:' (nothing disallowed) was readable"
+ },
+ "interface": "RSS at the usual path not tried.",
+ "feed": null,
+ "contact_channel": "https://londonist.com/",
+ "notes": "Gap: terms unread; nothing machine-read.",
+ "researched_by": "data.b.dev@PrompTugal.dinis (Sonnet), for data.b@",
+ "how": "Not collected yet. Decision by Dinis, 18 Nov 2026 about 22:20 UTC (PrompTugal__News__Website board/guidance/2026-11-18-london.md): London is the first place beyond Portugal; each UK source goes on the register with its terms read first, then is collected to the pipeline standard."
+}

@@ -1,0 +1,37 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values.",
+  "commercial_use": "allowed",
+  "commercial_note": "With credit to PrompTugal.news; values taken from a source keep that source's licence."
+ },
+ "id": "copernicus-marine",
+ "name": "Copernicus Marine Service (CMEMS) data store",
+ "kind": "ocean data (needs an account)",
+ "url": "https://data.marine.copernicus.eu/",
+ "owner": "Mercator Ocean International for the European Commission",
+ "places": [
+  "europe",
+  "portugal",
+  "london"
+ ],
+ "country": "EU",
+ "gives": [
+  "ocean physics, waves, sea surface temperature and biogeochemistry for European seas and the Atlantic off Portugal"
+ ],
+ "status": "not-read",
+ "why": {
+  "quote": "This Licence is granted free of charge.",
+  "quote_lang": "en",
+  "page": "https://marine.copernicus.eu/user-corner/service-commitments-and-licence",
+  "read_at": "2026-11-18",
+  "basis": "service commitments and licence page (the user signs a service level agreement before use); data.marine robots.txt allows crawling; marine.copernicus.eu robots sets 'Crawl-delay: 10'"
+ },
+ "interface": "Copernicus Marine Toolbox (Python/CLI) and APIs (subset, WMTS) after logging in with a free account.",
+ "contact_channel": null,
+ "researched_by": "data.b.collector@PrompTugal.dinis (Sonnet)",
+ "notes": "WAITING FOR A KEY: registration and acceptance of a licence and service agreement, which we cannot accept on anyone's behalf. Worth it later for sea state and waves off Portugal. Attribution wording not extracted (gap).",
+ "how": null
+}

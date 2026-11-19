@@ -1,0 +1,37 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values.",
+  "commercial_use": "allowed",
+  "commercial_note": "With credit to PrompTugal.news; values taken from a source keep that source's licence."
+ },
+ "id": "meteoalarm-eu",
+ "name": "EUMETNET MeteoAlarm feeds (all participating countries)",
+ "kind": "weather warnings feed",
+ "url": "https://feeds.meteoalarm.org/",
+ "owner": "EUMETNET (MeteoAlarm)",
+ "places": [
+  "europe",
+  "portugal",
+  "london"
+ ],
+ "country": "EU",
+ "gives": [
+  "official severe-weather warnings (CAP) for each participating European country, including Portugal and the UK"
+ ],
+ "status": "not-read",
+ "why": {
+  "quote": "(robots.txt on feeds.meteoalarm.org is empty, so it sets no rule)",
+  "quote_lang": "en",
+  "page": "https://feeds.meteoalarm.org/robots.txt",
+  "read_at": "2026-11-18",
+  "basis": "robots.txt (empty, HTTP 200). The terms page www.meteoalarm.org/en/live/page/terms-of-use is a JavaScript application and returned only 'this app doesn't work properly without JavaScript enabled', so the terms are a gap"
+ },
+ "interface": "GET https://feeds.meteoalarm.org/api/v1/warnings/feeds-{country} (for example feeds-portugal) returns JSON of CAP warnings (about 119 KB for Portugal). No key.",
+ "contact_channel": null,
+ "researched_by": "data.b.collector@PrompTugal.dinis (Sonnet)",
+ "notes": "Already read and collected here as meteoalarm-pt (sources/meteoalarm; the status board calls its licence 'the source's terms'). This entry is only the Europe-wide extension: the same feed pattern per country. register/sources.json is mid-merge (see gaps), so I could not check how meteoalarm-pt is recorded there. Terms still unread by a person; attribution to the issuing national service is the usual condition (not confirmed). Rate limits not found.",
+ "how": null
+}

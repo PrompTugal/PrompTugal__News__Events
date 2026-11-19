@@ -1,0 +1,35 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values.",
+  "commercial_use": "allowed",
+  "commercial_note": "With credit to PrompTugal.news; values taken from a source keep that source's licence."
+ },
+ "id": "youtube-data-api",
+ "name": "YouTube Data API v3: Web Summit's official channel (replays of Web Summit 2026)",
+ "kind": "events data source",
+ "url": "https://www.youtube.com/@WebSummit",
+ "owner": "Web Summit (the videos); YouTube LLC (the API)",
+ "places": [
+  "lisboa"
+ ],
+ "gives": [
+  "the channel's uploads since 1 November 2026 with title, time published, length, view and like counts, and chapters from description timestamp lines"
+ ],
+ "status": "read",
+ "why": {
+  "quote": "API Clients may temporarily store limited amounts of Non-Authorized Data for as long as is necessary for the purposes of the API Client but not longer than 30 calendar days. As in section (III.E.4.c) immediately above, this means that after 30 calendar days, the API Client must either delete or refresh the stored data.",
+  "quote_lang": "en",
+  "page": "https://developers.google.com/youtube/terms/developer-policies",
+  "read_at": "2026-11-19",
+  "basis": "YouTube API Services Developer Policies and Terms of Service, both last updated 2026-11-06 UTC; more quotes on the card (sources/youtube-replays/card.json)"
+ },
+ "interface": "YouTube Data API v3 (https://www.googleapis.com/youtube/v3/): channels.list (forHandle), playlistItems.list and videos.list, 1 quota unit each (50 ids a videos.list call); never search.list (100 units). Default quota 10,000 units a day. The key is a network secret of the environment, added by the proxy; the code holds none.",
+ "feed": null,
+ "contact_channel": "https://developers.google.com/youtube/terms/developer-policies",
+ "notes": "Non-Authorized Data may be stored 30 calendar days at most, then deleted or refreshed: this source keeps the latest read only, replaced every 6 hours, with no raw copy or history anywhere. No copy of the audiovisual content (link and YouTube's embedded player only). Show YouTube as the source and link https://www.youtube.com/t/terms where the data is shown. No aggregation across channels. Descriptions, thumbnails and comments are not kept. Commercial use of what YouTube serves: unclear (per item); the videos stay Web Summit's. First read 19 Nov 2026: 5 uploads since 1 Nov, no chapters in any description. Who accepted the API terms for the key's project is for Dinis to confirm.",
+ "researched_by": "data.b.dev@PrompTugal.dinis, for library.b@PrompTugal.dinis REQ-2026-0001",
+ "how": "Three or four requests every 6 hours (sources/youtube-replays/collect.mjs); served at /api/v1/youtube-replays/; no raw layer."
+}

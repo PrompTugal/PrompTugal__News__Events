@@ -1,0 +1,36 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values.",
+  "commercial_use": "allowed",
+  "commercial_note": "With credit to PrompTugal.news; values taken from a source keep that source's licence."
+ },
+ "id": "copernicus-edo",
+ "name": "European Drought Observatory (EDO), Copernicus Emergency Management Service",
+ "kind": "drought indicators",
+ "url": "https://drought.emergency.copernicus.eu/",
+ "owner": "Joint Research Centre (European Commission)",
+ "places": [
+  "europe",
+  "portugal"
+ ],
+ "country": "EU",
+ "gives": [
+  "drought indicators (soil moisture anomaly, SPI, fAPAR anomaly) as maps and downloadable layers"
+ ],
+ "status": "not-read",
+ "why": {
+  "quote": "User-agent: *\nDisallow:",
+  "quote_lang": "en",
+  "page": "https://drought.emergency.copernicus.eu/robots.txt",
+  "read_at": "2026-11-18",
+  "basis": "robots.txt (no disallow); the download page and terms text were not readable (the download page returned no body text to a plain request, so it is a gap)"
+ },
+ "interface": "Map viewer with WMS layers and a download page (/tumbo/edo/download/); interface and format not confirmed.",
+ "contact_channel": null,
+ "researched_by": "data.b.collector@PrompTugal.dinis (Sonnet)",
+ "notes": "Gap: licence not read and the download interface not confirmed; keyless is likely but unverified. The drought bulletin text on the home page is public. Do not build until a person has read the data terms.",
+ "how": null
+}

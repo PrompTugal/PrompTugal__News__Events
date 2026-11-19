@@ -1,0 +1,38 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values.",
+  "commercial_use": "allowed",
+  "commercial_note": "With credit to PrompTugal.news; values taken from a source keep that source's licence."
+ },
+ "id": "dgadr-albufeiras-hidroagricolas",
+ "name": "DGADR: storage in hydro-agricultural reservoirs (weekly)",
+ "kind": "public body",
+ "url": "https://www.dgadr.gov.pt/",
+ "owner": "Direção-Geral de Agricultura e Desenvolvimento Rural (DGADR)",
+ "places": [
+  "portugal"
+ ],
+ "country": "PT",
+ "gives": [
+  "weekly storage in reservoirs of hydro-agricultural schemes (irrigation), per the APA report"
+ ],
+ "status": "not-read",
+ "why": {
+  "quote": "User-agent: ClaudeBot\nDisallow: /",
+  "quote_lang": "en",
+  "page": "https://www.dgadr.gov.pt/robots.txt",
+  "read_at": "2026-11-18",
+  "basis": "robots.txt (200, read 2026-11-18) disallows ClaudeBot, ChatGPT-User, CCBot, bingbot and many other named crawlers with 'Disallow: /'. No 'User-agent: *' group was seen in the part read. An access rule, not a reuse licence."
+ },
+ "interface": "Not found. The only trace is the APA monthly report's Tabela 1 ('Armazenamento nas Albufeiras dos Aproveitamentos Hidroagrícolas ... DGADR Semanal') and its section 5 (monthly PDF, covered by the APA entry).",
+ "contact_channel": null,
+ "researched_by": "data.b.collector@PrompTugal.dinis (Sonnet), for data.b@PrompTugal.dinis",
+ "notes": "GAP. No public page for the weekly figures was found by search; the site disallows AI crawlers by name, so we do not read it. A request from our default curl user agent was reset (connection reset by peer); a request with an honest collector user agent returned the robots file once. Nothing else read. Irrigation reservoirs are mostly not the Algarve supply dams, so low priority.",
+ "how": null,
+ "refusals": [
+  "robots.txt disallows ClaudeBot and other named AI crawlers (18 Nov 2026)"
+ ]
+}

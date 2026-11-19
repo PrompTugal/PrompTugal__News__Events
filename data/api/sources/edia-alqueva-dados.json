@@ -1,0 +1,38 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values.",
+  "commercial_use": "allowed",
+  "commercial_note": "With credit to PrompTugal.news; values taken from a source keep that source's licence."
+ },
+ "id": "edia-alqueva-dados",
+ "name": "EDIA: Dados Alqueva (level and volume of Alqueva)",
+ "kind": "public body",
+ "url": "https://sigims.edia.pt/DadosAlqueva/index.html",
+ "owner": "EDIA, Empresa de Desenvolvimento e Infra-estruturas do Alqueva, S.A.",
+ "places": [
+  "portugal"
+ ],
+ "country": "PT",
+ "gives": [
+  "level and stored volume of the Alqueva reservoir (Alentejo and Guadiana, not an Algarve dam)"
+ ],
+ "status": "not-read",
+ "why": {
+  "quote": "User-agent: *\nDisallow: /\nAllow: /publico/",
+  "quote_lang": "en",
+  "page": "https://sigims.edia.pt/robots.txt",
+  "read_at": "2026-11-18",
+  "basis": "robots.txt (200, read 2026-11-18). The page /DadosAlqueva/ is not under /publico/, so it is disallowed. Main site https://www.edia.pt/robots.txt allows all ('Disallow:' empty) but links to the sigims page."
+ },
+ "interface": "ArcGIS JavaScript viewer (esri js 3.8), not a data feed; no API seen.",
+ "contact_channel": null,
+ "researched_by": "data.b.collector@PrompTugal.dinis (Sonnet), for data.b@PrompTugal.dinis",
+ "notes": "GAP. Disallowed by robots. Honest note: I fetched the viewer's index.html once (7 KB, just the HTML shell, in the same command that read robots.txt, so before reading the rule); I read no data from it and deleted the copy. Not to be read again. EDIA also publishes news about Alqueva at https://www.edia.pt/pt/ (robots allows), but a news item is not a series.",
+ "how": null,
+ "refusals": [
+  "robots.txt Disallow: / except /publico/ on sigims.edia.pt"
+ ]
+}

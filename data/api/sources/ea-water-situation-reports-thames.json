@@ -1,0 +1,41 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values.",
+  "commercial_use": "allowed",
+  "commercial_note": "With credit to PrompTugal.news; values taken from a source keep that source's licence."
+ },
+ "id": "ea-water-situation-reports-thames",
+ "name": "Environment Agency: Water situation reports, Thames area (monthly)",
+ "kind": "public body",
+ "url": "https://www.gov.uk/government/publications/water-situation-local-area-reports",
+ "owner": "Environment Agency (via GOV.UK)",
+ "places": [
+  "london"
+ ],
+ "country": "GB",
+ "gives": [
+  "end-of-month storage percent for Farmoor and the Lower Thames Reservoirs, with comparison to the long-term average",
+  "national reservoir stocks for England; rainfall, river flow and groundwater context"
+ ],
+ "status": "not-read",
+ "why": {
+  "quote": "All content is available under the Open Government Licence v3.0, except where otherwise stated",
+  "quote_lang": "en",
+  "page": "https://www.gov.uk/government/publications/water-situation-local-area-reports",
+  "read_at": "2026-11-18",
+  "basis": "publication page (Last updated 17 November 2026), as quoted by a page reader; Crown copyright. Summary pages state 'All data are provisional and may be subject to revision.' robots.txt (https://www.gov.uk/robots.txt, 200): 'User-agent: * / Disallow: /*/print$ / Disallow: /search/all*'."
+ },
+ "interface": "HTML summary page per area per month plus a PDF full report (Thames Area October 2026: 28 pages, 3.16 MB). Summary: https://www.gov.uk/government/publications/water-situation-local-area-reports/thames-water-situation-october-2026-summary . PDF: https://assets.publishing.service.gov.uk/media/6afb08769be17c68c69ca8f6/Thames_Area_water_situation_report_October_2026.pdf . No key. A national equivalent: https://www.gov.uk/government/publications/water-situation-national-monthly-reports-for-england-2026 (October 2026 added 11 Nov 2026).",
+ "contact_channel": null,
+ "researched_by": "data.b.collector@PrompTugal.dinis (Sonnet), for data.b@PrompTugal.dinis",
+ "notes": "Read 18 Nov 2026: the collection, area and national publication pages, and the Thames October summary (HTML), not the PDFs. Summary says (end of October 2026): Farmoor 74% of capacity, up from 69%, 15% below the long-term average; Lower Thames Reservoirs 51.9%, down from 53.1% (matches the London Datastore 53 for 30 Sep), 24% lower than average. Updated mid-month for the previous month, so about 2 to 3 weeks behind: fresher than the Datastore CSV. Free text in HTML, so extraction needs care. Page URLs follow a pattern per month but the asset PDF links carry hashes.",
+ "how": null,
+ "licence": {
+  "name": "Open Government Licence v3.0",
+  "url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+  "read_at": "2026-11-18"
+ }
+}

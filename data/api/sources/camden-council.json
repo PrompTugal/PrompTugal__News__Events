@@ -1,0 +1,36 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values.",
+  "commercial_use": "allowed",
+  "commercial_note": "With credit to PrompTugal.news; values taken from a source keep that source's licence."
+ },
+ "id": "camden-council",
+ "name": "Camden Council events and public data",
+ "kind": "events agenda",
+ "url": "https://www.camden.gov.uk/",
+ "owner": "London Borough of Camden",
+ "places": [
+  "london"
+ ],
+ "country": "GB",
+ "gives": [
+  "council events and notices"
+ ],
+ "status": "not-read",
+ "why": {
+  "quote": "403 (the terms page answered 403 to our reader)",
+  "quote_lang": "en",
+  "page": "https://www.camden.gov.uk/terms-and-conditions",
+  "read_at": "2026-11-18",
+  "basis": "refusal respected and recorded as a gap; robots.txt names a few crawlers and paths"
+ },
+ "interface": "HTML.",
+ "feed": null,
+ "contact_channel": "https://www.camden.gov.uk/",
+ "notes": "Gap: terms unread. Other London boroughs (Hackney, Southwark, Westminster) not yet looked at.",
+ "researched_by": "data.b.dev@PrompTugal.dinis (Sonnet), for data.b@",
+ "how": "Not collected yet. Decision by Dinis, 18 Nov 2026 about 22:20 UTC (PrompTugal__News__Website board/guidance/2026-11-18-london.md): London is the first place beyond Portugal; each UK source goes on the register with its terms read first, then is collected to the pipeline standard."
+}

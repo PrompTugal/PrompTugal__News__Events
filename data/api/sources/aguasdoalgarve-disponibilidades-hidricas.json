@@ -1,0 +1,41 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values.",
+  "commercial_use": "allowed",
+  "commercial_note": "With credit to PrompTugal.news; values taken from a source keep that source's licence."
+ },
+ "id": "aguasdoalgarve-disponibilidades-hidricas",
+ "name": "Águas do Algarve: Disponibilidades Hídricas (reservoir storage table)",
+ "kind": "public body",
+ "url": "https://www.aguasdoalgarve.pt/content/disponibilidades-hidricas",
+ "owner": "Águas do Algarve, S.A. (Grupo Águas de Portugal)",
+ "places": [
+  "algarve"
+ ],
+ "country": "PT",
+ "gives": [
+  "reservoir storage (volume in hm3 and percent, total and useful) for Odelouca, Odeleite and Beliche",
+  "reservoir capacity and full-storage level for those three dams"
+ ],
+ "status": "not-read",
+ "why": {
+  "quote": "© 2025, Águas do Algarve, SA.- Todos os direitos reservados.",
+  "quote_lang": "pt",
+  "page": "https://www.aguasdoalgarve.pt/content/disponibilidades-hidricas",
+  "read_at": "2026-11-18",
+  "basis": "page footer copyright notice (all rights reserved; no reuse licence or open-data terms found on the site, the only legal links being cookies and data protection); robots.txt (https://www.aguasdoalgarve.pt/robots.txt, 200) has User-agent * with Crawl-delay: 10 and does not disallow /content/"
+ },
+ "interface": "Server-rendered HTML page, no key, no login. Six HTML tables (one header block plus one dated table per dam). Per dam: Nível Máximo de Cheia (m), Nível de Pleno Armazenamento (m), Capacidade Total (hm3), Capacidade Útil (hm3); then rows of Data, Volume Total (hm3, %), Volume Útil (hm3, %). No JSON, CSV or API seen. Dates are written dd/mm/yy.",
+ "contact_channel": null,
+ "researched_by": "data.b.collector@PrompTugal.dinis (Sonnet), for data.b@PrompTugal.dinis",
+ "notes": "Read 18 Nov 2026. Rows shown: 16/10/25 (same week a year earlier) then weekly Fridays 18/09/26, 25/09/26, 02/10/26, 09/10/26, 16/10/26. Latest row 16/10/26 is therefore about a month behind today, so the page is updated late or in batches; check the lag before promising 'current'. Latest values (Águas do Algarve, 16/10/26): Odelouca 112.86 hm3, 71.82% total, 65.46% useful; Odeleite 91.65 hm3, 70.50% total, 64.75% useful; Beliche 29.96 hm3, 62.41% total, 57.94% useful. Capacities: Odelouca 157.14 hm3 total (128.2 useful), Odeleite 130.00 (108.80), Beliche 48.00 (42.89). Covers only the three dams that supply Águas do Algarve; Bravura, Arade and Funcho are NOT on this page. Because the site claims all rights reserved, taking figures on a schedule needs Dinis to decide, or a written OK from Águas do Algarve (geral.ada@adp.pt is the contact shown in the page header); facts such as a single percentage are not the same as copying the table, but that is a judgement for Dinis. Also read: robots Crawl-delay 10 means no more than one request per 10 seconds.",
+ "how": null,
+ "licence": {
+  "name": "none stated (all rights reserved)",
+  "url": "https://www.aguasdoalgarve.pt/content/disponibilidades-hidricas",
+  "read_at": "2026-11-18"
+ }
+}

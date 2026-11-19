@@ -1,0 +1,41 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values.",
+  "commercial_use": "allowed",
+  "commercial_note": "With credit to PrompTugal.news; values taken from a source keep that source's licence."
+ },
+ "id": "dadosgov-paap-nivel-pleno-armazenamento",
+ "name": "dados.gov.pt: Programas Especiais de Albufeiras (PAAP) - Nível de pleno armazenamento (APA)",
+ "kind": "open-data portal",
+ "url": "https://dados.gov.pt/datasets/programas-especiais-de-albufeiras-paap-nivel-de-pleno-armazenamento",
+ "owner": "Agência Portuguesa do Ambiente (APA)",
+ "places": [
+  "portugal",
+  "algarve"
+ ],
+ "country": "PT",
+ "gives": [
+  "polygon of each reservoir bed at the full storage level (NPA), a map outline, not a measurement of water held"
+ ],
+ "status": "not-read",
+ "why": {
+  "quote": "Representa a área correspondente ao leito da albufeira delimitado pela cota do Nível de Pleno Armazenamento, definida para cada albufeira no projeto da respetiva barragem.",
+  "quote_lang": "pt",
+  "page": "https://dados.gov.pt/datasets/programas-especiais-de-albufeiras-paap-nivel-de-pleno-armazenamento",
+  "read_at": "2026-11-18",
+  "basis": "dataset description (created and modified 2026-07-07); licence field 'notspecified' in the API (https://dados.gov.pt/api/1/datasets/6a4c7dd6aa49a7655e288d14/, 2026-11-18)"
+ },
+ "interface": "Shapefile zip https://sniambgeoviewer.apambiente.pt/Geodocs/shpzips/D304_OrdenamentoTerritorio_PAAP_nivel_pleno_armazenamento.zip (not downloaded). dados.gov.pt API is open JSON, no key.",
+ "contact_channel": null,
+ "researched_by": "data.b.collector@PrompTugal.dinis (Sonnet), for data.b@PrompTugal.dinis",
+ "notes": "Read 18 Nov 2026: metadata only. This is the 'nível de pleno armazenamento' dataset Dinis named: polygons, no coordinates of dams and no capacity in hm3. Covers only reservoirs with a PAAP. A related 2021 dataset 'PGRH Algarve - RH8 - Localização das barragens, açudes e charcas da RH8' is a PDF map only (https://dados.gov.pt/datasets/pgrh-algarve-rh8-localizacao-das-barragens-acudes-e-charcas-da-rh8, licence 'notspecified'), not machine-readable. dados.gov.pt has no dataset of current storage levels: queries for albufeiras, armazenamento, barragens, boletim, seca, SNIRH and Águas do Algarve (API, 18 Nov 2026) found only reference, planning and map data. dados.gov.pt robots.txt returned HTTP 500 on 18 Nov 2026 (so no robots rule could be read); the JSON API is the platform's documented interface.",
+ "how": null,
+ "licence": {
+  "name": "not specified in dataset record; platform default for state bodies is CC BY 4.0 unless otherwise specified",
+  "url": "https://dados.gov.pt/termos-de-utilizacao",
+  "read_at": "2026-11-18"
+ }
+}

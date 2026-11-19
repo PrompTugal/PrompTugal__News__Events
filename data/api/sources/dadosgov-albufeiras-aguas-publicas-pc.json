@@ -1,0 +1,39 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values.",
+  "commercial_use": "allowed",
+  "commercial_note": "With credit to PrompTugal.news; values taken from a source keep that source's licence."
+ },
+ "id": "dadosgov-albufeiras-aguas-publicas-pc",
+ "name": "dados.gov.pt: Albufeiras de águas públicas de Portugal continental (APA, INSPIRE polygons)",
+ "kind": "open-data portal",
+ "url": "https://dados.gov.pt/datasets/albufeiras-de-aguas-publicas-de-portugal-continental",
+ "owner": "Agência Portuguesa do Ambiente (APA), harvested from SNIG (DGT)",
+ "places": [
+  "portugal",
+  "algarve"
+ ],
+ "country": "PT",
+ "gives": [
+  "polygons of public-service reservoirs (shapes, not levels)"
+ ],
+ "status": "not-read",
+ "why": {
+  "quote": "Acesso público sem restrições",
+  "quote_lang": "pt",
+  "page": "https://dados.gov.pt/api/1/datasets/6543c7fba0df3a88ea65fcad/ (harvest:legal_constraints: 'Acesso público sem restrições', 'Sem restrições')",
+  "read_at": "2026-11-18",
+  "basis": "dataset metadata; licence field 'notspecified'; publisher contact sniamb@apambiente.pt; updated 05.03.2026 (dados.gov.pt page)"
+ },
+ "interface": "Resources: shapefile zip (https://sniambgeoviewer.apambiente.pt/Geodocs/shpzips/vw_alb_aguas_publicas.zip), WMS and WFS at inspire.apambiente.pt.",
+ "contact_channel": null,
+ "researched_by": "data.b.collector@PrompTugal.dinis (Sonnet), for data.b@PrompTugal.dinis",
+ "notes": "Read 18 Nov 2026: metadata only; the zip not downloaded. The inspire.apambiente.pt host answered 403 to https://inspire.apambiente.pt/robots.txt, so the WMS and WFS are a gap (refusal respected; not retried; the shapefile on the other host is the route if wanted). Boundaries only, no levels or volumes. Lower priority than the Atlas da Água dams file.",
+ "how": null,
+ "refusals": [
+  "HTTP 403 at https://inspire.apambiente.pt/robots.txt (18 Nov 2026, one request)"
+ ]
+}

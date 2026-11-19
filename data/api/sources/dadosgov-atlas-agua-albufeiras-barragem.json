@@ -1,0 +1,43 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values.",
+  "commercial_use": "allowed",
+  "commercial_note": "With credit to PrompTugal.news; values taken from a source keep that source's licence."
+ },
+ "id": "dadosgov-atlas-agua-albufeiras-barragem",
+ "name": "dados.gov.pt: Atlas da Água - Albufeiras (Barragem) (APA, dam coordinates)",
+ "kind": "open-data portal",
+ "url": "https://dados.gov.pt/datasets/atlas-da-agua-albufeiras-barragem",
+ "owner": "Agência Portuguesa do Ambiente (APA), published on dados.gov.pt",
+ "places": [
+  "portugal",
+  "algarve"
+ ],
+ "country": "PT",
+ "gives": [
+  "coordinates (WGS84 longitude and latitude, and ETRS89 PT-TM06 M and P) of 236 dams in the SNIRH monitoring network",
+  "for each: name, river, basin, district, concelho, freguesia, year in service, dam type, dam height, crest length, full storage level (NPA), maximum flood level (NMC), flooded area at NPA",
+  "includes all six Algarve dams: Arade, Funcho, Bravura, Odelouca, Odeleite, Beliche"
+ ],
+ "status": "not-read",
+ "why": {
+  "quote": "Coordenadas da barragem das albufeiras que fazem parte da rede de monitorização do SNIRH, encontrando-se disponiveis em http://www.snirh.pt - Dados Sintetizados / Características das Albufeiras",
+  "quote_lang": "pt",
+  "page": "https://dados.gov.pt/datasets/atlas-da-agua-albufeiras-barragem",
+  "read_at": "2026-11-18",
+  "basis": "dataset description; licence field in the dados.gov.pt API is 'notspecified' (https://dados.gov.pt/api/1/datasets/60255d43454ae3a8b5284f07/, 2026-11-18). The shapefile's own metadata (.shp.xml in the zip) says 'no conditions apply' and 'no limitations'. The platform terms (https://dados.gov.pt/termos-de-utilizacao, 'Atualizado a 29.09.2026') say: 'Todos os dados carregados por organismos do estado são publicados ao abrigo de uma licença Creative Commons CC BY 4.0' ... 'exceto se houver uma especificação em contrário.'"
+ },
+ "interface": "Shapefile zip at https://sniambgeoviewer.apambiente.pt/GeoDocs/shpzips/AtAgua_Agsup_ALB_NET_Project_PC.zip (62 KB, HTTP 200, files dated 14 Nov 2026 inside; no key). dados.gov.pt API https://dados.gov.pt/api/1/datasets/<id>/ is open JSON, no key.",
+ "contact_channel": null,
+ "researched_by": "data.b.collector@PrompTugal.dinis (Sonnet), for data.b@PrompTugal.dinis",
+ "notes": "Read 18 Nov 2026: dataset JSON, the zip (downloaded once into a scratch folder) and its attribute table. Static reference data (dataset 'modified' 2021-02-11 on dados.gov.pt, yet the zip's files are dated 14 Nov 2026, so the file is refreshed). Coordinates (long, lat): Odeleite -7.486446, 37.331100; Beliche -7.509227, 37.276414; Bravura -8.697778, 37.201749; Odelouca -8.474016, 37.288317; Funcho -8.382585, 37.262717; Arade -8.376265, 37.239474. Levels NPA/NMC (m): Odeleite 52.0/52.9, Beliche 52.0/52.5, Bravura 84.1/85.0, Odelouca 102.0/102.35, Funcho 96.0/96.8, Arade 61.0/62.5. It does NOT carry a capacity in hm3 for these dams (no such column; Odelouca's drainage-basin fields are zero); capacity must come from Águas do Algarve (three dams) or SNIRH (closed). Some text in the dbf is mis-encoded (accents) and needs repair. Licence: the register field says 'notspecified' while the platform terms default state-body data to CC BY 4.0 unless otherwise specified; the two do not clearly agree, so treat as 'open, attribute APA' and ask Dinis to confirm before publishing derived output. Fits the first build: pins and NPA for the six dams.",
+ "how": null,
+ "licence": {
+  "name": "not specified in dataset record; platform default for state bodies is CC BY 4.0 unless otherwise specified",
+  "url": "https://dados.gov.pt/termos-de-utilizacao",
+  "read_at": "2026-11-18"
+ }
+}

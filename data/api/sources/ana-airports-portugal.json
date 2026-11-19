@@ -1,0 +1,37 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values.",
+  "commercial_use": "allowed",
+  "commercial_note": "With credit to PrompTugal.news; values taken from a source keep that source's licence."
+ },
+ "id": "ana-airports-portugal",
+ "name": "ANA Aeroportos de Portugal (Lisbon, Faro, Porto)",
+ "kind": "airport data",
+ "url": "https://www.ana.pt/",
+ "owner": "ANA - Aeroportos de Portugal",
+ "places": [
+  "london",
+  "portugal"
+ ],
+ "country": "PT",
+ "gives": [
+  "flights between London and LIS, FAO and OPO; traffic statistics"
+ ],
+ "status": "not-read",
+ "why": {
+  "quote": "The fact that ANA makes this information available does not, under any circumstances, grant the user the right to reproduce or distribute this information. Such actions are not permitted without prior consent from ANA or the potential licensors referred to above.",
+  "quote_lang": "en",
+  "page": "https://www.ana.pt/en/terms-and-conditions",
+  "read_at": "2026-11-18",
+  "basis": "website terms, 'Intellectual property rights'; the flights page answered 200 with no readable text (script-built)"
+ },
+ "interface": "Flight pages need a browser; no open data interface found.",
+ "feed": null,
+ "contact_channel": "https://www.ana.pt/",
+ "notes": "Not collected. Routes can come from adsb.lol (see adsb-lol-london-airports).",
+ "researched_by": "data.b.dev@PrompTugal.dinis (Sonnet), for data.b@",
+ "how": "Not collected yet. Decision by Dinis, 18 Nov 2026 about 22:20 UTC (PrompTugal__News__Website board/guidance/2026-11-18-london.md): London is the first place beyond Portugal; each UK source goes on the register with its terms read first, then is collected to the pipeline standard."
+}

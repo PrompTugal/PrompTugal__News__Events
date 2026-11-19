@@ -1,0 +1,36 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values.",
+  "commercial_use": "allowed",
+  "commercial_note": "With credit to PrompTugal.news; values taken from a source keep that source's licence."
+ },
+ "id": "companies-house",
+ "name": "Companies House API",
+ "kind": "open-data API",
+ "url": "https://developer.company-information.service.gov.uk/",
+ "owner": "Companies House (Department for Business and Trade)",
+ "places": [
+  "london"
+ ],
+ "country": "GB",
+ "gives": [
+  "limited company records: name, number, status, registered office (not people)"
+ ],
+ "status": "not-read",
+ "why": {
+  "quote": "The Companies House API lets you retrieve information about limited companies (and other companies that fall within the Companies Act 2006). The data returned is live and real-time, and is simple to use and understand.",
+  "quote_lang": "en",
+  "page": "https://developer.company-information.service.gov.uk/",
+  "read_at": "2026-11-18",
+  "basis": "developer hub home page; the terms-of-use address tried returned 404, so the licence and rate limit are unread"
+ },
+ "interface": "REST API with a key.",
+ "feed": null,
+ "contact_channel": "https://developer.company-information.service.gov.uk/",
+ "notes": "waiting for a free key from Dinis. Officer and person-with-control records name private individuals: companies only, no people.",
+ "researched_by": "data.b.dev@PrompTugal.dinis (Sonnet), for data.b@",
+ "how": "Not collected yet. Decision by Dinis, 18 Nov 2026 about 22:20 UTC (PrompTugal__News__Website board/guidance/2026-11-18-london.md): London is the first place beyond Portugal; each UK source goes on the register with its terms read first, then is collected to the pipeline standard."
+}

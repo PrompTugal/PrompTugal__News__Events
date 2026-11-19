@@ -1,0 +1,40 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values.",
+  "commercial_use": "allowed",
+  "commercial_note": "With credit to PrompTugal.news; values taken from a source keep that source's licence."
+ },
+ "id": "thames-water-reservoir-levels",
+ "name": "Thames Water: Water resources in your area (reservoir levels and rainfall)",
+ "kind": "public body",
+ "url": "https://www.thameswater.co.uk/about-us/performance/reservoir-levels-and-rainfall-figures",
+ "owner": "Thames Water Utilities Limited",
+ "places": [
+  "london"
+ ],
+ "country": "GB",
+ "gives": [
+  "end-of-month London reservoir percent full, with West London and Lee Valley split, as page text and infographic images"
+ ],
+ "status": "not-read",
+ "why": {
+  "quote": "© 2001 - 2026 Thames Water Utilities Limited. All rights reserved.",
+  "quote_lang": "en",
+  "page": "https://www.thameswater.co.uk/about-us/performance/reservoir-levels-and-rainfall-figures",
+  "read_at": "2026-11-18",
+  "basis": "page footer as quoted by a page reader on 2026-11-18; page names no data licence and does not name a source for the figures. robots.txt (https://www.thameswater.co.uk/robots.txt, 200): 'User-agent: * / Allow: /' with some system paths disallowed (not this one)."
+ },
+ "interface": "HTML text plus two PNG images; no download, no API seen.",
+ "contact_channel": null,
+ "researched_by": "data.b.collector@PrompTugal.dinis (Sonnet), for data.b@PrompTugal.dinis",
+ "notes": "Read 18 Nov 2026. Says (end of October 2026): 'Reservoirs in London were 56% full (52% full in West London and 74% full in Lee Valley)', below average. All rights reserved and no data licence, so use only as a cross-check or a cited quote; build on the OGL sources above. Thames Water's open-data portal (https://data.thameswater.co.uk/) answered 200 but its terms and contents were not read; not known to hold reservoir series.",
+ "how": null,
+ "licence": {
+  "name": "none stated (all rights reserved)",
+  "url": "https://www.thameswater.co.uk/about-us/performance/reservoir-levels-and-rainfall-figures",
+  "read_at": "2026-11-18"
+ }
+}

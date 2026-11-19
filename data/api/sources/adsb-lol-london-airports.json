@@ -1,0 +1,36 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values.",
+  "commercial_use": "allowed",
+  "commercial_note": "With credit to PrompTugal.news; values taken from a source keep that source's licence."
+ },
+ "id": "adsb-lol-london-airports",
+ "name": "adsb.lol around Heathrow, Gatwick, London City, Stansted and Luton",
+ "kind": "open-data API",
+ "url": "https://api.adsb.lol/",
+ "owner": "adsb.lol (volunteer feeder network)",
+ "places": [
+  "london"
+ ],
+ "country": "GB",
+ "gives": [
+  "airline flights within a radius of each London airport (callsign, type, altitude, speed, heading)"
+ ],
+ "status": "not-read",
+ "why": {
+  "quote": "the API is available to everyone. license: ODbL 1.0. [...] limits no key: 500 requests/day per IP.",
+  "quote_lang": "en",
+  "page": "https://www.adsb.lol/docs/open-data/api/",
+  "read_at": "2026-11-18",
+  "basis": "adsb.lol docs, 'API' page"
+ },
+ "interface": "REST JSON, point and radius query, as sources/adsb-faro does for Faro.",
+ "feed": null,
+ "contact_channel": "https://api.adsb.lol/",
+ "notes": "ODbL needs attribution and share-alike on a derived database; same privacy rule as adsb-faro (no hex id or position of a private aircraft). Five airports is five requests a run against a 500 a day per IP limit with no key: to be checked before an hourly run. Update 18 Nov 2026: the keyless adsb.lol read that exists is sources/adsb-london-portugal (positions around Faro, Lisbon and Porto, route lookup to tie flights to the five London airports; 4 requests a run). This entry (positions around the London airports) stays not collected. A collector for the London to Faro, Lisbon and Porto routes is written (on-hold/adsb-london-portugal) and waits for adsb.lol's route lookup, which returned no routes on 18 Nov 2026.",
+ "researched_by": "data.b.dev@PrompTugal.dinis (Sonnet), for data.b@",
+ "how": "Not collected yet. Decision by Dinis, 18 Nov 2026 about 22:20 UTC (PrompTugal__News__Website board/guidance/2026-11-18-london.md): London is the first place beyond Portugal; each UK source goes on the register with its terms read first, then is collected to the pipeline standard."
+}

@@ -1,0 +1,36 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values.",
+  "commercial_use": "allowed",
+  "commercial_note": "With credit to PrompTugal.news; values taken from a source keep that source's licence."
+ },
+ "id": "ncsc-advisories",
+ "name": "NCSC (UK National Cyber Security Centre) advisories",
+ "kind": "cyber data source",
+ "url": "https://www.ncsc.gov.uk/",
+ "owner": "National Cyber Security Centre",
+ "places": [
+  "london"
+ ],
+ "country": "GB",
+ "gives": [
+  "advisories and alerts: title, date, link"
+ ],
+ "status": "not-read",
+ "why": {
+  "quote": "Content on the Websites is, unless stated otherwise, subject to Crown copyright. [...] you may use or reuse the content published on the Websites without prior permission but must adhere to and accept the terms of the Open Government Licence (OGL) v3.0. You must acknowledge the source of the content and include a link to the Open Government Licence wherever possible.",
+  "quote_lang": "en",
+  "page": "https://www.ncsc.gov.uk/section/about-this-website/terms-and-conditions",
+  "read_at": "2026-11-18",
+  "basis": "NCSC terms and conditions, 'Use of website content'"
+ },
+ "interface": "RSS feeds exist but the address was not confirmed by us (the guessed feeds page returned 404).",
+ "feed": null,
+ "contact_channel": "https://www.ncsc.gov.uk/",
+ "notes": "Title, date and link only; third-party material on a page is excluded from the OGL.",
+ "researched_by": "data.b.dev@PrompTugal.dinis (Sonnet), for data.b@",
+ "how": "Not collected yet. Decision by Dinis, 18 Nov 2026 about 22:20 UTC (PrompTugal__News__Website board/guidance/2026-11-18-london.md): London is the first place beyond Portugal; each UK source goes on the register with its terms read first, then is collected to the pipeline standard."
+}

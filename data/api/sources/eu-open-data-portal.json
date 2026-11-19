@@ -1,0 +1,37 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values.",
+  "commercial_use": "allowed",
+  "commercial_note": "With credit to PrompTugal.news; values taken from a source keep that source's licence."
+ },
+ "id": "eu-open-data-portal",
+ "name": "data.europa.eu (European Data Portal and EU Open Data Portal) search API",
+ "kind": "open data catalogue",
+ "url": "https://data.europa.eu/api/hub/search/",
+ "owner": "Publications Office of the European Union",
+ "places": [
+  "europe",
+  "portugal",
+  "london"
+ ],
+ "country": "EU",
+ "gives": [
+  "catalogue of about 2.0 million dataset records from European public bodies, with licence and download links per dataset; high-value datasets flagged (is_hvd)"
+ ],
+ "status": "not-read",
+ "why": {
+  "quote": "The Publications Office of the European Union maintains this website to enhance public access to information about its initiatives and European Union policies in general.",
+  "quote_lang": "en",
+  "page": "https://data.europa.eu/en/legal-notice",
+  "read_at": "2026-11-18",
+  "basis": "legal notice (a disclaimer; no reuse licence for the metadata found on that page); robots.txt allows the site's assets, full rules not read to the end"
+ },
+ "interface": "GET https://data.europa.eu/api/hub/search/search?q=...&limit=n&filter=dataset returns JSON (count 2,029,216 records for the empty query; 53,168 for 'weather forecast'). Each record carries distributions (download URLs) and is_hvd. A SPARQL page exists at https://data.europa.eu/data/sparql (not used). No key.",
+ "contact_channel": null,
+ "researched_by": "data.b.collector@PrompTugal.dinis (Sonnet)",
+ "notes": "Keyless. The catalogue is metadata; each dataset has its own licence and publisher, which a collector must read per dataset. Metadata reuse licence not found on the legal notice (gap). The separate host api.data.europa.eu returned a proxy 502 and was not read. Rate limits not found. Useful for discovering Portugal and Europe-wide open datasets, not as data itself.",
+ "how": null
+}

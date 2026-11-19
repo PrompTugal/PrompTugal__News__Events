@@ -1,0 +1,36 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values.",
+  "commercial_use": "allowed",
+  "commercial_note": "With credit to PrompTugal.news; values taken from a source keep that source's licence."
+ },
+ "id": "data-police-uk",
+ "name": "data.police.uk (street-level crime and outcomes)",
+ "kind": "open-data API",
+ "url": "https://data.police.uk/",
+ "owner": "Home Office / police forces of England, Wales and Northern Ireland",
+ "places": [
+  "london"
+ ],
+ "country": "GB",
+ "gives": [
+  "area totals of crime by category and month (Metropolitan Police and City of London Police areas)"
+ ],
+ "status": "not-read",
+ "why": {
+  "quote": "licence: Open Government Licence v3.0",
+  "quote_lang": "en",
+  "page": "https://data.police.uk/about/",
+  "read_at": "2026-11-18",
+  "basis": "'About' page, dataset descriptions"
+ },
+ "interface": "JSON API (data.police.uk/docs/) and monthly CSV archive.",
+ "feed": null,
+ "contact_channel": "https://data.police.uk/",
+ "notes": "Area totals only, by month and category: no street, no outcome row, no person. The publisher anonymises the data; location points are approximate (see the page's anonymisation table).",
+ "researched_by": "data.b.dev@PrompTugal.dinis (Sonnet), for data.b@",
+ "how": "Not collected yet. Decision by Dinis, 18 Nov 2026 about 22:20 UTC (PrompTugal__News__Website board/guidance/2026-11-18-london.md): London is the first place beyond Portugal; each UK source goes on the register with its terms read first, then is collected to the pipeline standard."
+}

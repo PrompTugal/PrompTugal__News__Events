@@ -1,0 +1,36 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values.",
+  "commercial_use": "allowed",
+  "commercial_note": "With credit to PrompTugal.news; values taken from a source keep that source's licence."
+ },
+ "id": "bbc-london",
+ "name": "BBC News London",
+ "kind": "news feed",
+ "url": "https://www.bbc.co.uk/news/england/london",
+ "owner": "BBC",
+ "places": [
+  "london"
+ ],
+ "country": "GB",
+ "gives": [
+  "headlines, links and dates of BBC London news"
+ ],
+ "status": "not-read",
+ "why": {
+  "quote": "No scraping, crawling, or systematic extraction of content [...] No creating datasets from BBC content [...] No business use without permission",
+  "quote_lang": "en",
+  "page": "https://www.bbc.co.uk/robots.txt",
+  "read_at": "2026-11-18",
+  "basis": "robots.txt header comment, quoted; the BBC's explainers list 'Can I reuse BBC content and services for my business?'"
+ },
+ "interface": "RSS exists but is not to be read by us given this statement.",
+ "feed": null,
+ "contact_channel": "https://www.bbc.co.uk/news/england/london",
+ "notes": "Refused: no collection. A person may ask the BBC through its published channel.",
+ "researched_by": "data.b.dev@PrompTugal.dinis (Sonnet), for data.b@",
+ "how": "Not collected yet. Decision by Dinis, 18 Nov 2026 about 22:20 UTC (PrompTugal__News__Website board/guidance/2026-11-18-london.md): London is the first place beyond Portugal; each UK source goes on the register with its terms read first, then is collected to the pipeline standard."
+}

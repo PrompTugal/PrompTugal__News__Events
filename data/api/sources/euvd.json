@@ -3,30 +3,29 @@
   "name": "CC BY 4.0",
   "url": "https://creativecommons.org/licenses/by/4.0/",
   "holder": "PrompTugal.news",
-  "note": "What PrompTugal.news makes: this file's structure, records and derived values."
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values.",
+  "commercial_use": "allowed",
+  "commercial_note": "With credit to PrompTugal.news; values taken from a source keep that source's licence."
  },
  "id": "euvd",
- "name": "EUVD, European Vulnerability Database",
- "kind": "cyber data source",
+ "name": "EU Vulnerability Database: latest, exploited and recently updated (ENISA EUVD)",
+ "kind": "open-data API",
  "url": "https://euvd.enisa.europa.eu/",
- "owner": "ENISA",
+ "owner": "ENISA (European Union Agency for Cybersecurity), EU Vulnerability Database",
  "places": [
-  "portugal",
-  "eu"
+  "europe"
  ],
+ "country": "EU",
  "gives": [
-  "EU vulnerability records, exploited and critical lists"
+  "ENISA's EU Vulnerability Database (EUVD), read through its published API: the vulnerabilities published or updated in the 24 hours before each read, and EUVD's own latest and exploited lists. Each has its EUVD identifier, CVE aliases (checked), published and updated times, CVSS base score and version, a severity band (ours, from the score), vendor and product names, whether EUVD lists it as exploited, and a link to its EUVD page; and totals per day and severity (14 days), for cyber.promptugal.news's pulse. Products only, never a victim, host or address. No descriptions or reference links are kept."
  ],
- "status": "not-read",
- "why": {
-  "text": "No terms found: euvd.enisa.europa.eu and /apidoc returned an 'Application Unavailable' fallback page.",
-  "page": "https://euvd.enisa.europa.eu/",
-  "read_at": "2026-11-18",
-  "basis": "app unavailable; terms not found"
+ "status": "read",
+ "how": "sources/euvd/collect.mjs reads https://euvd.enisa.europa.eu/ (every 6 hours)",
+ "terms": {
+  "summary": "EUVD's API page says no authentication is needed and sets limits of 100 records a request; the EUVD site's footer links ENISA's legal notice, 1.2: reproduction of material on ENISA's website is authorised if the source is acknowledged, unless stated otherwise. robots.txt of euvd.enisa.europa.eu: all agents, nothing disallowed; euvdservices.enisa.europa.eu (the API host) has no robots.txt (404). We name ENISA and the EUVD as the source. EUVD has no separate data licence page that we found: reuse rests on the ENISA legal notice (not reviewed by a person).",
+  "page": "https://www.enisa.europa.eu/about-enisa/legal-notice",
+  "read_at": "2026-11-18"
  },
- "interface": "Web application; API documentation at /apidoc not readable (the page returned only an 'Application Unavailable' fallback on 2026-11-18).",
- "feed": null,
- "contact_channel": "https://www.enisa.europa.eu/about-enisa/legal-notice",
- "notes": "No EUVD-specific terms found. ENISA's site legal notice (see entry enisa) says reproduction is authorised with source acknowledged; whether it covers EUVD data is unconfirmed. Would give Portugal: counts of exploited or critical vulnerabilities by vendor (Portuguese vendors) as aggregates. Lead to retry.",
- "researched_by": "data.b.collector@PrompTugal.dinis (Sonnet), checked by data.b@"
+ "on_this_site": "https://data.promptugal.news/sources/euvd/",
+ "collector": "sources/euvd/collect.mjs"
 }

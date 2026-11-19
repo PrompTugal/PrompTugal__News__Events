@@ -1,0 +1,36 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values.",
+  "commercial_use": "allowed",
+  "commercial_note": "With credit to PrompTugal.news; values taken from a source keep that source's licence."
+ },
+ "id": "laqn",
+ "name": "London Air Quality Network (King's College London, Environmental Research Group)",
+ "kind": "open-data API",
+ "url": "https://www.londonair.org.uk/",
+ "owner": "King's College London Environmental Research Group",
+ "places": [
+  "london"
+ ],
+ "country": "GB",
+ "gives": [
+  "air quality readings and index by monitoring site in London"
+ ],
+ "status": "not-read",
+ "why": {
+  "quote": "How do you use it? Read the Help documentation. Agreeing to the terms and conditions in the Open Government Licence. Go the Air Quality API and start using the URLs",
+  "quote_lang": "en",
+  "page": "https://www.londonair.org.uk/LondonAir/API/",
+  "read_at": "2026-11-18",
+  "basis": "LondonAir 'Data Feeds' page; the older disclaimer and data-sharing pages returned 404"
+ },
+ "interface": "XML and JSON web API, documented on the page.",
+ "feed": null,
+ "contact_channel": "https://www.londonair.org.uk/",
+ "notes": "The brief asked for the ERG's terms to be checked: the page names the OGL; the ERG's own attribution wording was not found and is to be confirmed.",
+ "researched_by": "data.b.dev@PrompTugal.dinis (Sonnet), for data.b@",
+ "how": "Not collected yet. Decision by Dinis, 18 Nov 2026 about 22:20 UTC (PrompTugal__News__Website board/guidance/2026-11-18-london.md): London is the first place beyond Portugal; each UK source goes on the register with its terms read first, then is collected to the pipeline standard."
+}

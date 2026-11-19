@@ -1,0 +1,36 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values.",
+  "commercial_use": "allowed",
+  "commercial_note": "With credit to PrompTugal.news; values taken from a source keep that source's licence."
+ },
+ "id": "copernicus-edo-drought",
+ "name": "Copernicus European and Global Drought Observatories (EDO/GDO)",
+ "kind": "open data",
+ "url": "https://drought.emergency.copernicus.eu/",
+ "owner": "European Commission Joint Research Centre (Copernicus Emergency Management Service)",
+ "places": [
+  "eu",
+  "portugal"
+ ],
+ "country": "EU",
+ "gives": [
+  "drought indicators (SPI, SPEI, soil moisture, vegetation, combined drought indicator) as maps and downloads; not reservoir levels"
+ ],
+ "status": "not-read",
+ "why": {
+  "quote": "users are granted free access to the data",
+  "quote_lang": "en",
+  "page": "https://drought.emergency.copernicus.eu/terms&conditions",
+  "read_at": "2026-11-18",
+  "basis": "terms page quoted by a page reader on 2026-11-18, which cut some sentences short; no page date shown; names no specific licence. Attribution notice asked for: 'Generated using Copernicus Emergency Management Service information [Year]'. robots.txt (https://drought.emergency.copernicus.eu/robots.txt, 200): 'User-agent: * / Disallow:' (nothing disallowed)."
+ },
+ "interface": "Map viewer, WMS and WCS services and downloads listed on the site; no reservoir series seen.",
+ "contact_channel": null,
+ "researched_by": "data.b.collector@PrompTugal.dinis (Sonnet), for data.b@PrompTugal.dinis",
+ "notes": "Read 18 Nov 2026: home page and terms. It gives rainfall and soil-dryness context, not the volume of any named dam. Useful only as context for a drought story, not for this dataset. The page does not mention reservoirs. Terms do not address automated access.",
+ "how": null
+}

@@ -55,6 +55,13 @@ const register = await copy('sources/index.json', 'data/api/sources/index.json')
 for (const id of (Array.isArray(register?.entries) ? register.entries : []).map((x) => x?.id).filter(okId).sort()) await copy(`sources/${id}.json`, `data/api/sources/${id}.json`);
 await copy('sources/gaps.json', 'data/api/sources/gaps.json');
 await copy('events-pt/latest.json', 'data/api/events-pt.json', (d) => ({ license: d.license, source: d.source, title: d.title, read_at: d.read_at, provenance: d.provenance, about: d.about, counts: d.counts, gaps: d.gaps }));
+// The registry of the PrompTugal sites, for the sites bar (rendered at build; on a failed read the last good copy stays in git).
+try {
+  const r = await fetch('https://promptugal.news/api/v1/sites.json', { headers: UA, signal: AbortSignal.timeout(20000) });
+  if (!r.ok) throw new Error(`HTTP ${r.status}`);
+  save('data/sites/sites.json', await r.json());
+  log.read.push({ path: 'https://promptugal.news/api/v1/sites.json', file: 'data/sites/sites.json', at: new Date().toISOString() });
+} catch (e) { log.failed.push({ path: 'https://promptugal.news/api/v1/sites.json', why: e.message, kept: existsSync('data/sites/sites.json') ? 'the last copy in git' : 'none' }); }
 log.finished = new Date().toISOString();
 save('data/api/sync.json', log);
 console.log(`synced ${log.read.length} files from ${API}${log.failed.length ? `; ${log.failed.length} failed (kept the last copy): ${log.failed.map((f) => f.path).join(', ')}` : ''}`);

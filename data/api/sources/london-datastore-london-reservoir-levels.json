@@ -1,0 +1,40 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values.",
+  "commercial_use": "allowed",
+  "commercial_note": "With credit to PrompTugal.news; values taken from a source keep that source's licence."
+ },
+ "id": "london-datastore-london-reservoir-levels",
+ "name": "London Datastore: London Reservoir Levels (Thames Water via Environment Agency)",
+ "kind": "open-data portal",
+ "url": "https://data.london.gov.uk/dataset/london-reservoir-levels",
+ "owner": "Greater London Authority (maintainer); Thames Water via Environment Agency (author)",
+ "places": [
+  "london"
+ ],
+ "country": "GB",
+ "gives": [
+  "daily reservoir level as percent of usable or deployable capacity for the Lower Lee Group and the Lower Thames Group of London reservoirs, from 1 Jan 1989"
+ ],
+ "status": "not-read",
+ "why": {
+  "quote": "Licence Open Government Licence v2 ... Update Frequency Monthly ... Table showing daily Reservoir levels in London since 1989 as percentage of usable or deployable capacity in the Lower Lee Group and Lower Thames Group reservoirs.",
+  "quote_lang": "en",
+  "page": "https://data.london.gov.uk/dataset/london-reservoir-levels",
+  "read_at": "2026-11-18",
+  "basis": "dataset page (Last Update 27 October 2026); licence link to https://www.nationalarchives.gov.uk/doc/open-government-licence/version/2/. Site terms (https://data.london.gov.uk/about/terms-and-conditions/, no date): 'May use the data contained in this site for any purpose, providing it does not infringe the terms and conditions'; asks users to state that the GLA 'cannot warrant the quality or accuracy of the data'; says nothing on automated access. robots.txt (https://data.london.gov.uk/robots.txt, 200): group * disallows /debug, /manage/, /login, /logout; a long list of named AI crawlers, including ClaudeBot, anthropic-ai and Claude-Web, is disallowed only /search, /dataset?, /dataset/?, /publisher/*? and /topic/*?. Dataset pages and /download/ are not disallowed."
+ },
+ "interface": "CSV, no key: https://data.london.gov.uk/download/24ry5/778eefb5-8cef-4d16-a4c8-77dee7ce7e81/london_reservoir_levels.csv (359 KB, 13,787 data rows; columns date, month, year, lower_lee_group, lower_thames_group; whole-number percent; date as dd-Mon-yy). XLSX copy also offered. The tried JSON route https://data.london.gov.uk/api/datasets/london-reservoir-levels returned 404, so use the CSV link from the dataset page (the id in the path may change when the file is replaced).",
+ "contact_channel": null,
+ "researched_by": "data.b.collector@PrompTugal.dinis (Sonnet), for data.b@PrompTugal.dinis",
+ "notes": "Read 18 Nov 2026: dataset page, terms, robots, and the CSV once (head and tail only inspected). Last row is 30-Sep-26: Lower Lee 69, Lower Thames 53. The file is refreshed monthly (27 Oct 2026 for September), so it lags by about 4 weeks, and on 18 Nov the October rows were not yet there. Values are whole percentages. Best keyless London source and the only machine-readable one found. Coverage is the London supply reservoirs only (the file names only the two groups, Lower Lee and Lower Thames; which reservoirs are in each was not read). Farmoor (Oxford, Thames Water) is not in it. Attribute: 'Contains public sector information licensed under the Open Government Licence v2.0', Thames Water via the Environment Agency, published by the GLA.",
+ "how": null,
+ "licence": {
+  "name": "Open Government Licence v2.0",
+  "url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/2/",
+  "read_at": "2026-11-18"
+ }
+}

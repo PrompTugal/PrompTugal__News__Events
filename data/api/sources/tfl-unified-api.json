@@ -1,0 +1,37 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values.",
+  "commercial_use": "allowed",
+  "commercial_note": "With credit to PrompTugal.news; values taken from a source keep that source's licence."
+ },
+ "id": "tfl-unified-api",
+ "name": "TfL Unified API (open data)",
+ "kind": "open-data API",
+ "url": "https://api.tfl.gov.uk/",
+ "owner": "Transport for London",
+ "places": [
+  "london"
+ ],
+ "country": "GB",
+ "gives": [
+  "line status, arrivals, road disruptions and other open transport data for London"
+ ],
+ "status": "not-read",
+ "why": {
+  "quote": "You are free to: Copy, publish, distribute and transmit the Information; Adapt the Information and Exploit the Information commercially and non-commercially",
+  "quote_lang": "en",
+  "page": "https://tfl.gov.uk/corporate/terms-and-conditions/transport-data-service",
+  "read_at": "2026-11-18",
+  "basis": "TfL's Transport Data Service terms, read by Dinis Cruz in a browser (tfl.gov.uk answers agents with a bot check). Credits: 'Powered by TfL Open Data' and the Ordnance Survey and Geomni statements; at most 500 calls a minute per feed."
+ },
+ "interface": "REST JSON API; the portal asks for a registered account and an app_key (a free 500 requests data plan): that is a key from Dinis, not taken here.",
+ "feed": null,
+ "contact_channel": "https://api.tfl.gov.uk/",
+ "notes": "Gap: TfL's terms page refused our reader (403), so the attribution wording is not confirmed by us from TfL. The brief gives the attribution 'Powered by TfL Open Data'; to be checked against the terms by a person before use. Needs a free key from Dinis before any collection.",
+ "researched_by": "data.b.dev@PrompTugal.dinis (Sonnet), for data.b@",
+ "how": "Not collected yet. Decision by Dinis, 18 Nov 2026 about 22:20 UTC (PrompTugal__News__Website board/guidance/2026-11-18-london.md): London is the first place beyond Portugal; each UK source goes on the register with its terms read first, then is collected to the pipeline standard.",
+ "commercial_use": "allowed"
+}

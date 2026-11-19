@@ -1,0 +1,31 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values.",
+  "commercial_use": "allowed",
+  "commercial_note": "With credit to PrompTugal.news; values taken from a source keep that source's licence."
+ },
+ "id": "tfl-jamcams",
+ "name": "London traffic cameras (TfL JamCams)",
+ "kind": "open-data API",
+ "url": "https://api.tfl.gov.uk/",
+ "owner": "Transport for London (TfL), Unified API",
+ "places": [
+  "portugal"
+ ],
+ "country": "GB",
+ "gives": [
+  "Transport for London's 889 traffic cameras: name, position, view, whether TfL marks each available, and the addresses of TfL's own still image and short clip. No image or clip is fetched or kept. Powered by TfL Open Data. Contains OS data © Crown copyright and database rights 2016 and Geomni UK Map data © and database rights [2019]."
+ ],
+ "status": "read",
+ "how": "sources/tfl-jamcams/collect.mjs reads https://api.tfl.gov.uk/ (hourly)",
+ "terms": {
+  "summary": "TfL's Transport Data Service terms (based on the Open Government Licence v2.0 with TfL amendments): free to copy, publish, distribute, transmit and adapt the information and to exploit it commercially and non-commercially. Required: the credit 'Powered by TfL Open Data' and 'Contains OS data © Crown copyright and database rights 2016' and Geomni UK Map data © and database rights [2019]; TfL's design and branding guidelines; at most 500 calls a minute per feed; no suggestion that TfL endorses us. Read by Dinis Cruz in a browser on 18 November 2026 (tfl.gov.uk answers agents with a bot check). Not legal advice.",
+  "page": "https://tfl.gov.uk/corporate/terms-and-conditions/transport-data-service",
+  "read_at": "2026-11-18"
+ },
+ "on_this_site": "https://data.promptugal.news/sources/tfl-jamcams/",
+ "collector": "sources/tfl-jamcams/collect.mjs"
+}

@@ -1,0 +1,36 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values.",
+  "commercial_use": "allowed",
+  "commercial_note": "With credit to PrompTugal.news; values taken from a source keep that source's licence."
+ },
+ "id": "london-datastore",
+ "name": "London Datastore (Greater London Authority)",
+ "kind": "open-data portal",
+ "url": "https://data.london.gov.uk/",
+ "owner": "Greater London Authority",
+ "places": [
+  "london"
+ ],
+ "country": "GB",
+ "gives": [
+  "datasets on London, each with its own licence"
+ ],
+ "status": "not-read",
+ "why": {
+  "quote": "May use the data contained in this site for any purpose, providing it does not infringe the terms and conditions. [...] Should, if you extract and re-use any data from this site, explicitly state that the Greater London Authority cannot warrant the quality or accuracy of the data. Must not in any way imply or explicitly state that a third party use or service created using data from this site has the endorsement, affiliation, support or approval of the Greater London Authority",
+  "quote_lang": "en",
+  "page": "https://data.london.gov.uk/about/terms-and-conditions/",
+  "read_at": "2026-11-18",
+  "basis": "site terms and conditions; each dataset also carries its own licence (to be read per dataset)"
+ },
+ "interface": "Catalogue and downloads; datasets to pick later.",
+ "feed": null,
+ "contact_channel": "https://data.london.gov.uk/",
+ "notes": "Per dataset licence still to read before any dataset is collected.",
+ "researched_by": "data.b.dev@PrompTugal.dinis (Sonnet), for data.b@",
+ "how": "Not collected yet. Decision by Dinis, 18 Nov 2026 about 22:20 UTC (PrompTugal__News__Website board/guidance/2026-11-18-london.md): London is the first place beyond Portugal; each UK source goes on the register with its terms read first, then is collected to the pipeline standard."
+}

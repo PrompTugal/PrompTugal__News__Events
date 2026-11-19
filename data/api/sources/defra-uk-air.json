@@ -1,0 +1,36 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values.",
+  "commercial_use": "allowed",
+  "commercial_note": "With credit to PrompTugal.news; values taken from a source keep that source's licence."
+ },
+ "id": "defra-uk-air",
+ "name": "DEFRA UK-AIR",
+ "kind": "open-data portal",
+ "url": "https://uk-air.defra.gov.uk/",
+ "owner": "Defra and the Devolved Administrations",
+ "places": [
+  "london"
+ ],
+ "country": "GB",
+ "gives": [
+  "national air quality monitoring data, London sites included; daily index and forecast"
+ ],
+ "status": "not-read",
+ "why": {
+  "quote": "Information on uk-air.defra.gov.uk is published by Defra and the Devolved Administrations under the Open Government Licence (OGL) and subject to the terms described in the \"licence\" or \"constraints\" of the OGL, except where otherwise noted.",
+  "quote_lang": "en",
+  "page": "https://uk-air.defra.gov.uk/data/",
+  "read_at": "2026-11-18",
+  "basis": "data archive page, 'Licencing'; robots.txt disallows /assets/downloads/, /datastore/ and /data-providers/ (to be respected)"
+ },
+ "interface": "Data selector, RSS of latest measurements, Sensor Observation Service.",
+ "feed": null,
+ "contact_channel": "https://uk-air.defra.gov.uk/",
+ "notes": "Attribution wanted: the page gives '(c) Crown 2026 copyright Defra via uk-air.defra.gov.uk, licenced under the Open Government Licence (OGL)'.",
+ "researched_by": "data.b.dev@PrompTugal.dinis (Sonnet), for data.b@",
+ "how": "Not collected yet. Decision by Dinis, 18 Nov 2026 about 22:20 UTC (PrompTugal__News__Website board/guidance/2026-11-18-london.md): London is the first place beyond Portugal; each UK source goes on the register with its terms read first, then is collected to the pipeline standard."
+}

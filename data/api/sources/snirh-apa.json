@@ -1,0 +1,40 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values.",
+  "commercial_use": "allowed",
+  "commercial_note": "With credit to PrompTugal.news; values taken from a source keep that source's licence."
+ },
+ "id": "snirh-apa",
+ "name": "SNIRH: Sistema Nacional de Informação de Recursos Hídricos (APA)",
+ "kind": "public portal",
+ "url": "https://snirh.apambiente.pt/",
+ "owner": "Agência Portuguesa do Ambiente (APA)",
+ "places": [
+  "portugal",
+  "algarve"
+ ],
+ "country": "PT",
+ "gives": [
+  "daily reservoir storage and level series, reservoir characteristics (capacity, levels) for the APA monitoring network",
+  "the primary official source of current reservoir levels"
+ ],
+ "status": "not-read",
+ "why": {
+  "quote": "403 (refused our request; reported by data.b, not retried)",
+  "quote_lang": "en",
+  "page": "https://snirh.apambiente.pt/",
+  "read_at": "2026-11-18",
+  "basis": "refusal reported to us by data.b on 18 Nov 2026; respected, not retried from other addresses, agents, caches or mirrors. Not re-tested by this researcher."
+ },
+ "interface": "none (refused)",
+ "contact_channel": null,
+ "researched_by": "data.b.collector@PrompTugal.dinis (Sonnet), for data.b@PrompTugal.dinis",
+ "notes": "GAP. The richest source is closed to us. Do not retry. Route round it only through sources APA itself publishes openly (the monthly PDF, dados.gov.pt), and say so. Other APA pages say 'Dados Sintetizados / Características das Albufeiras' live on SNIRH (dados.gov.pt dataset 'Atlas da Água - Albufeiras (Barragem)' description). If Dinis wants SNIRH, the route is to ask APA in writing for permission or an export (sniamb@apambiente.pt is the publisher contact shown on dados.gov.pt); a person sends it, not us.",
+ "how": null,
+ "refusals": [
+  "HTTP 403 at https://snirh.apambiente.pt/ (reported by data.b, 18 Nov 2026)"
+ ]
+}

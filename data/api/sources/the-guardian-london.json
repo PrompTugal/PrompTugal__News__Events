@@ -1,0 +1,36 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values.",
+  "commercial_use": "allowed",
+  "commercial_note": "With credit to PrompTugal.news; values taken from a source keep that source's licence."
+ },
+ "id": "the-guardian-london",
+ "name": "The Guardian London coverage",
+ "kind": "news feed",
+ "url": "https://www.theguardian.com/uk/london",
+ "owner": "Guardian Media Group",
+ "places": [
+  "london"
+ ],
+ "country": "GB",
+ "gives": [
+  "London headlines: title, link, date"
+ ],
+ "status": "not-read",
+ "why": {
+  "quote": "Client Challenge. JavaScript is disabled in your browser. Please enable JavaScript to proceed.",
+  "quote_lang": "en",
+  "page": "https://www.theguardian.com/help/feeds",
+  "read_at": "2026-11-18",
+  "basis": "bot challenge on the feeds and terms pages, respected and recorded as a gap"
+ },
+ "interface": "RSS feeds exist but the terms were not readable.",
+ "feed": null,
+ "contact_channel": "https://www.theguardian.com/uk/london",
+ "notes": "Gap: terms unread; nothing machine-read.",
+ "researched_by": "data.b.dev@PrompTugal.dinis (Sonnet), for data.b@",
+ "how": "Not collected yet. Decision by Dinis, 18 Nov 2026 about 22:20 UTC (PrompTugal__News__Website board/guidance/2026-11-18-london.md): London is the first place beyond Portugal; each UK source goes on the register with its terms read first, then is collected to the pipeline standard."
+}

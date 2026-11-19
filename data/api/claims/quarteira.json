@@ -3,10 +3,12 @@
   "name": "CC BY 4.0",
   "url": "https://creativecommons.org/licenses/by/4.0/",
   "holder": "PrompTugal.news",
-  "note": "What PrompTugal.news makes: this file's structure, records and derived values."
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values.",
+  "commercial_use": "allowed",
+  "commercial_note": "With credit to PrompTugal.news; values taken from a source keep that source's licence."
  },
  "place": "quarteira",
- "read_at": "2026-11-18T22:29:52Z",
+ "read_at": "2026-11-19T00:59:20Z",
  "discovery": {
   "asked_at": "2026-11-18T14:17:20Z",
   "model": "perplexity/sonar",
@@ -15,42 +17,11 @@
  },
  "about": "Events claimed for this place, each with every evidence link and whether this site may read that source (the register). Name, date and place come from discovery (Perplexity, through OpenRouter); other details only from a readable source. Not a confirmed listing.",
  "counts": {
-  "claims": 9,
+  "claims": 8,
   "confirmed": 0,
-  "withheld": 9
+  "withheld": 8
  },
  "claims": [
-  {
-   "@type": "Event",
-   "name": "Quarteira Wednesday Market",
-   "startDate": "2026-11-18",
-   "endDate": "2026-11-18",
-   "place": "quarteira",
-   "municipality": "Quarteira",
-   "evidence": [
-    {
-     "url": "https://algarvecircle.com/whats-on/november-2026",
-     "host": "algarvecircle.com",
-     "readable": false,
-     "register": "algarvecircle"
-    },
-    {
-     "url": "https://algarvecircle.com/events",
-     "host": "algarvecircle.com",
-     "readable": false,
-     "register": "algarvecircle"
-    }
-   ],
-   "status": "details withheld",
-   "details_from": null,
-   "details_note": "Details withheld: the sources cited (algarvecircle.com) are not ones whose terms let us copy them. Organiser: send them to us.",
-   "license": {
-    "name": "CC BY 4.0",
-    "url": "https://creativecommons.org/licenses/by/4.0/",
-    "holder": "PrompTugal.news",
-    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
-   }
-  },
   {
    "@type": "Event",
    "name": "Baile Social",
@@ -73,7 +44,9 @@
     "name": "CC BY 4.0",
     "url": "https://creativecommons.org/licenses/by/4.0/",
     "holder": "PrompTugal.news",
-    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms.",
+    "commercial_use": "allowed",
+    "commercial_note": "With credit to PrompTugal.news; values taken from a source keep that source's licence."
    }
   },
   {
@@ -98,7 +71,9 @@
     "name": "CC BY 4.0",
     "url": "https://creativecommons.org/licenses/by/4.0/",
     "holder": "PrompTugal.news",
-    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms.",
+    "commercial_use": "allowed",
+    "commercial_note": "With credit to PrompTugal.news; values taken from a source keep that source's licence."
    }
   },
   {
@@ -123,7 +98,9 @@
     "name": "CC BY 4.0",
     "url": "https://creativecommons.org/licenses/by/4.0/",
     "holder": "PrompTugal.news",
-    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms.",
+    "commercial_use": "allowed",
+    "commercial_note": "With credit to PrompTugal.news; values taken from a source keep that source's licence."
    }
   },
   {
@@ -148,7 +125,9 @@
     "name": "CC BY 4.0",
     "url": "https://creativecommons.org/licenses/by/4.0/",
     "holder": "PrompTugal.news",
-    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms.",
+    "commercial_use": "allowed",
+    "commercial_note": "With credit to PrompTugal.news; values taken from a source keep that source's licence."
    }
   },
   {
@@ -173,7 +152,9 @@
     "name": "CC BY 4.0",
     "url": "https://creativecommons.org/licenses/by/4.0/",
     "holder": "PrompTugal.news",
-    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms.",
+    "commercial_use": "allowed",
+    "commercial_note": "With credit to PrompTugal.news; values taken from a source keep that source's licence."
    }
   },
   {
@@ -198,7 +179,9 @@
     "name": "CC BY 4.0",
     "url": "https://creativecommons.org/licenses/by/4.0/",
     "holder": "PrompTugal.news",
-    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms.",
+    "commercial_use": "allowed",
+    "commercial_note": "With credit to PrompTugal.news; values taken from a source keep that source's licence."
    }
   },
   {
@@ -223,7 +206,9 @@
     "name": "CC BY 4.0",
     "url": "https://creativecommons.org/licenses/by/4.0/",
     "holder": "PrompTugal.news",
-    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms.",
+    "commercial_use": "allowed",
+    "commercial_note": "With credit to PrompTugal.news; values taken from a source keep that source's licence."
    }
   },
   {
@@ -248,7 +233,9 @@
     "name": "CC BY 4.0",
     "url": "https://creativecommons.org/licenses/by/4.0/",
     "holder": "PrompTugal.news",
-    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms."
+    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms.",
+    "commercial_use": "allowed",
+    "commercial_note": "With credit to PrompTugal.news; values taken from a source keep that source's licence."
    }
   }
  ]

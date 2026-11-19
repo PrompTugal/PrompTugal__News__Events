@@ -1,0 +1,36 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values.",
+  "commercial_use": "allowed",
+  "commercial_note": "With credit to PrompTugal.news; values taken from a source keep that source's licence."
+ },
+ "id": "met-office-datahub",
+ "name": "Met Office Weather DataHub",
+ "kind": "open-data API",
+ "url": "https://datahub.metoffice.gov.uk/",
+ "owner": "Met Office",
+ "places": [
+  "london"
+ ],
+ "country": "GB",
+ "gives": [
+  "site-specific and model forecasts and observations for the UK"
+ ],
+ "status": "not-read",
+ "why": {
+  "quote": "By ordering products from the Met Office Weather DataHub and clicking \"confirm\", you are agreeing to be bound by the Met Office Weather DataHub Terms and Conditions",
+  "quote_lang": "en",
+  "page": "https://datahub.metoffice.gov.uk/pricing",
+  "read_at": "2026-11-18",
+  "basis": "pricing page; the terms page itself (datahub.metoffice.gov.uk/terms) needs JavaScript and shows no terms text to our reader"
+ },
+ "interface": "REST API with a key; plans by daily request limit (limits not read).",
+ "feed": null,
+ "contact_channel": "https://datahub.metoffice.gov.uk/",
+ "notes": "waiting for a free key from Dinis. Accepting the terms and subscribing is Dinis's act, not ours.",
+ "researched_by": "data.b.dev@PrompTugal.dinis (Sonnet), for data.b@",
+ "how": "Not collected yet. Decision by Dinis, 18 Nov 2026 about 22:20 UTC (PrompTugal__News__Website board/guidance/2026-11-18-london.md): London is the first place beyond Portugal; each UK source goes on the register with its terms read first, then is collected to the pipeline standard."
+}

@@ -1,0 +1,36 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values.",
+  "commercial_use": "allowed",
+  "commercial_note": "With credit to PrompTugal.news; values taken from a source keep that source's licence."
+ },
+ "id": "eu-fts",
+ "name": "EU Financial Transparency System (FTS)",
+ "kind": "public money data",
+ "url": "https://ec.europa.eu/budget/financial-transparency-system/",
+ "owner": "European Commission (DG Budget)",
+ "places": [
+  "europe",
+  "portugal"
+ ],
+ "country": "EU",
+ "gives": [
+  "EU budget funds committed to beneficiaries by year, country and programme"
+ ],
+ "status": "not-read",
+ "why": {
+  "quote": "(no terms text read: the site is a JavaScript application and its help and open-data pages did not yield a licence)",
+  "quote_lang": "en",
+  "page": "https://ec.europa.eu/budget/financial-transparency-system/",
+  "read_at": "2026-11-18",
+  "basis": "page answered HTTP 200 but no licence, reuse or privacy text was readable; the old open-data page /budget/fts/open_data_en.htm returned 404; ec.europa.eu/robots.txt has no rule naming /budget (not read in full)"
+ },
+ "interface": "Web application with a download of full datasets (CSV and XML) and, reportedly, an export per search; an API was not found. Not confirmed.",
+ "contact_channel": null,
+ "researched_by": "data.b.collector@PrompTugal.dinis (Sonnet)",
+ "notes": "Gap: terms and download interface not confirmed. Beneficiaries can include natural persons (the FTS publishes some farmer and individual payments with limits), so the same privacy rule applies: companies and public bodies only, never a natural person. A person should read the terms and the download page before any build.",
+ "how": null
+}

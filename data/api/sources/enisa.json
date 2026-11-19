@@ -3,7 +3,9 @@
   "name": "CC BY 4.0",
   "url": "https://creativecommons.org/licenses/by/4.0/",
   "holder": "PrompTugal.news",
-  "note": "What PrompTugal.news makes: this file's structure, records and derived values."
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values.",
+  "commercial_use": "allowed",
+  "commercial_note": "With credit to PrompTugal.news; values taken from a source keep that source's licence."
  },
  "id": "enisa",
  "name": "ENISA (European Union Agency for Cybersecurity)",
@@ -19,18 +21,18 @@
   "advisories",
   "publications"
  ],
- "status": "not-read",
+ "status": "read",
  "why": {
   "quote": "Reproduction of ENISA material published on this website is authorized, provided the source is acknowledged, unless it is stated otherwise.",
   "quote_lang": "en",
   "page": "https://www.enisa.europa.eu/about-enisa/legal-notice",
   "read_at": "2026-11-18",
-  "basis": "published legal notice, 1.2 Authorization"
+  "basis": "published legal notice, 1.2 Authorization; Dinis decided (18 Nov 2026, about 23:40 UTC, in cyber.b@'s session; PrompTugal__News__Cyber board/team/cyber/briefs/2026-11-18-dinis-answers.md, relayed): \"I don't think we are a crawler per se ... we're just trying to use data that they have ... I'm assuming that [ENISA] published data available in APIs\". So ENISA is read through its published interfaces."
  },
  "interface": "No RSS or JSON feed (/rss.xml, /publications/rss.xml, /publications/feed, /rss, /feeds/publications all 404; none linked from the page). The HTML list https://www.enisa.europa.eu/publications answers 200 (about 80 KB, 10 items with title, date, link, topics).",
  "feed": null,
  "contact_channel": "https://www.enisa.europa.eu/about-enisa/legal-notice",
- "notes": "Fits aggregate-only use with attribution, unless a specific report says otherwise. robots.txt (read 18 Nov 2026): Crawl-delay 10; /publications not disallowed; named AI crawlers are disallowed everywhere (our collector is code, no model, and not named; a person may want to confirm). Only title, date, link and topics are kept; no report text or images. On hold (data.b@, 18 Nov 2026): robots.txt disallows named AI crawlers; Dinis to decide. The collector sources/enisa-pubs is written and does not run.",
+ "notes": "Fits aggregate-only use with attribution, unless a specific report says otherwise. robots.txt (read 18 Nov 2026): Crawl-delay 10; /publications not disallowed; named AI crawlers are disallowed everywhere (our collector is code, no model, and not named; a person may want to confirm). Only title, date, link and topics are kept; no report text or images. Held earlier (data.b@, 18 Nov 2026) because robots.txt disallows named AI crawlers. Dinis decided (18 Nov 2026, about 23:40 UTC, in cyber.b@'s session; PrompTugal__News__Cyber board/team/cyber/briefs/2026-11-18-dinis-answers.md, relayed): \"I don't think we are a crawler per se ... we're just trying to use data that they have ... I'm assuming that [ENISA] published data available in APIs\". So ENISA is read through its published interfaces. The collector sources/enisa-pubs runs again (moved back from on-hold/).",
  "researched_by": "data.b.collector@PrompTugal.dinis (Sonnet), checked by data.b@",
- "how": "One GET of the first page of ENISA's publications list every 6 hours (sources/enisa-pubs/collect.mjs), 10 second crawl delay respected; keeps title, date, link on enisa.europa.eu and topics; served at /api/v1/enisa-pubs/; raw HTML kept in the vault copy. Asked by cyber.b@PrompTugal.dinis, 18 Nov 2026."
+ "how": "One GET of the first page of ENISA's publications list every 6 hours (sources/enisa-pubs/collect.mjs), 10 second crawl delay respected; keeps title, date, link on enisa.europa.eu and topics; served at /api/v1/enisa-pubs/; raw HTML kept in the vault copy. Asked by cyber.b@PrompTugal.dinis, 18 Nov 2026. Back in service on 18 Nov 2026 after Dinis's decision."
 }

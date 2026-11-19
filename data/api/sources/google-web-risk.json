@@ -1,0 +1,34 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values.",
+  "commercial_use": "allowed",
+  "commercial_note": "With credit to PrompTugal.news; values taken from a source keep that source's licence."
+ },
+ "id": "google-web-risk",
+ "name": "Google Web Risk API",
+ "kind": "security API",
+ "url": "https://cloud.google.com/web-risk",
+ "owner": "Google",
+ "places": [
+  "europe"
+ ],
+ "country": null,
+ "gives": [
+  "URL threat lists"
+ ],
+ "status": "not-read",
+ "why": {
+  "quote": null,
+  "page": "https://cloud.google.com/web-risk/docs",
+  "read_at": "2026-11-18",
+  "basis": "Results may not be redistributed and are cached only until expireTime (as relayed from videos.b@'s checked page); held by Dinis."
+ },
+ "interface": "needs a Google key",
+ "contact_channel": null,
+ "researched_by": "data.b@PrompTugal.dinis",
+ "notes": "Held by Dinis (18 Nov 2026, about 23:38 UTC, relayed by conductor.b@): \"leave Web Risk off the key for now\". No credential is asked for and no call is made.",
+ "how": null
+}

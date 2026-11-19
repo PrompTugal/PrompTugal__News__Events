@@ -1,0 +1,36 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values.",
+  "commercial_use": "allowed",
+  "commercial_note": "With credit to PrompTugal.news; values taken from a source keep that source's licence."
+ },
+ "id": "national-rail-darwin",
+ "name": "National Rail Darwin data feeds",
+ "kind": "open-data API",
+ "url": "https://www.nationalrail.co.uk/developers/darwin-data-feeds/",
+ "owner": "National Rail Enquiries / Rail Delivery Group",
+ "places": [
+  "london"
+ ],
+ "country": "GB",
+ "gives": [
+  "real-time train running information"
+ ],
+ "status": "not-read",
+ "why": {
+  "quote": "Darwin data feeds are openly available to everyone. Registering for access couldn't be easier, simply register via the Rail Data Marketplace",
+  "quote_lang": "en",
+  "page": "https://www.nationalrail.co.uk/developers/darwin-data-feeds/",
+  "read_at": "2026-11-18",
+  "basis": "Darwin data feeds page; the feed list shows 'Licence: NRE OGL' for the LDB webservice"
+ },
+ "interface": "JSON API and push port feeds, through the Rail Data Marketplace.",
+ "feed": null,
+ "contact_channel": "https://www.nationalrail.co.uk/developers/darwin-data-feeds/",
+ "notes": "waiting for a free key from Dinis. The NRE OGL wording was seen only as a label; its full text is to be read when the key arrives.",
+ "researched_by": "data.b.dev@PrompTugal.dinis (Sonnet), for data.b@",
+ "how": "Not collected yet. Decision by Dinis, 18 Nov 2026 about 22:20 UTC (PrompTugal__News__Website board/guidance/2026-11-18-london.md): London is the first place beyond Portugal; each UK source goes on the register with its terms read first, then is collected to the pipeline standard."
+}
