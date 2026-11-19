@@ -19,7 +19,7 @@
 // Public keys are allowed only in team/keys.json and team/keys/*.json, and only
 // when those files hold no private part. Any change to the allowlist below must
 // be narrow (one path, one kind) and say why.
-import { readFileSync, existsSync, statSync, readdirSync } from 'node:fs';
+import { readFileSync, existsSync, statSync, lstatSync, readdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { execFileSync } from 'node:child_process';
@@ -144,11 +144,15 @@ export function scanText(path, text) {
 
 function isBinary(buf) { return buf.subarray(0, 8000).includes(0); }
 
+// Never follows a symbolic link: a link is reported, not read (library.b@'s LIB-2026-067).
+const links = [];
 function walk(dir) {
   if (!existsSync(dir)) return [];
   return readdirSync(dir).flatMap((n) => {
     const p = join(dir, n);
-    return statSync(p).isDirectory() ? walk(p) : [p];
+    const st = lstatSync(p);
+    if (st.isSymbolicLink()) { links.push(p); return []; }
+    return st.isDirectory() ? walk(p) : [p];
   });
 }
 
@@ -159,26 +163,45 @@ function scanTree() {
   if (!existsSync(join(siteDir, 'index.html'))) return { errors: ['_site/ is not built: run node scripts/build.mjs first'], count: 0 };
   const paths = [...new Set([...files, ...walk(siteDir).map((p) => p.slice(root.length + 1))])];
   const errors = [];
-  let count = 0, skipped = 0;
+  let count = 0, skipped = 0, binary = 0;
   // The vault's own secrets, when this checkout holds them, must appear nowhere.
   const secrets = [];
   for (const k of ['.sg_vault/local/vault_key', '.sg_vault/local/token']) {
     const f = join(root, k);
     if (existsSync(f)) { const v = readFileSync(f, 'utf8').trim(); secrets.push(v, v.split(':')[0]); }
   }
+  // Tracked files are read from git's objects, not the working tree, so a pushed .gitattributes (an encoding or filter
+  // applied at checkout) cannot change the bytes scanned (signals.b@'s 75a59d0). A symbolic link is reported, never read.
+  const blobs = new Map();
+  for (const rec of execFileSync('git', ['ls-files', '-s', '-z'], { cwd: root, maxBuffer: 1 << 28 }).toString().split('\0').filter(Boolean)) {
+    const m = /^(\d{6}) ([0-9a-f]{40,64}) \d\t(.*)$/s.exec(rec);
+    if (m) blobs.set(m[3], { mode: m[1], oid: m[2] });
+  }
+  for (const l of links) errors.push(`${l.slice(root.length + 1)}: a symbolic link (not followed)`);
   for (const p of paths) {
     if (p.startsWith('.sg_vault/local/')) { errors.push(`${p}: a file from .sg_vault/local/ is in the tree (it holds vault keys)`); continue; }
     if (p.startsWith('.sg_vault/bare/')) { skipped++; continue; } // ciphertext, protected by the vault key
-    const full = join(root, p);
-    if (!existsSync(full) || statSync(full).isDirectory()) continue; // deleted in the working tree
-    const buf = readFileSync(full);
-    if (isBinary(buf)) { skipped++; continue; }
+    const b = blobs.get(p);
+    if (b && b.mode === '120000') { errors.push(`${p}: a symbolic link (not followed)`); continue; }
+    if (b && b.mode === '160000') continue; // a submodule entry: no content here
+    let buf;
+    if (b) buf = execFileSync('git', ['cat-file', 'blob', b.oid], { cwd: root, maxBuffer: 1 << 28 });
+    else {
+      const full = join(root, p);
+      if (!existsSync(full)) continue;
+      const st = lstatSync(full);
+      if (st.isSymbolicLink()) { errors.push(`${p}: a symbolic link (not followed)`); continue; }
+      if (st.isDirectory()) continue;
+      buf = readFileSync(full);
+    }
+    // A file with a NUL byte is scanned too, byte for byte, never skipped (library.b@'s LIB-2026-067).
+    if (isBinary(buf)) binary++;
     count++;
-    const t = buf.toString('utf8');
+    const t = isBinary(buf) ? buf.toString('latin1') : buf.toString('utf8');
     for (const f of scanText(p, t)) errors.push(`${p}:${f.line}: ${f.kind}`);
     for (const x of secrets) if (x && x.length >= 8 && t.includes(x)) errors.push(`${p}: holds this checkout's vault key or token`);
   }
-  return { errors, count, skipped };
+  return { errors, count, skipped, binary };
 }
 
 function scanHistory() {
@@ -210,11 +233,11 @@ function scanHistory() {
 
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
   const history = process.argv.includes('--history');
-  const { errors, count, skipped } = history ? scanHistory() : scanTree();
+  const { errors, count, skipped, binary } = history ? scanHistory() : scanTree();
   if (errors.length) {
     console.error(errors.join('\n'));
     console.error(`FAILED (${errors.length}) in ${count} ${history ? 'commits' : 'files'}`);
     process.exit(1);
   }
-  console.log(history ? `OK (${count} commits)` : `OK (${count} files, ${skipped} binary skipped)`);
+  console.log(history ? `OK (${count} commits)` : `OK (${count} files scanned, ${binary} of them with NUL bytes, ${skipped} vault ciphertext skipped)`);
 }

@@ -64,3 +64,39 @@ let failed = 0;
 for (const c of cases) { let ok = false; try { ok = c.fn(); } catch (e) { console.error(`  error: ${e.message}`); } if (!ok) { failed++; console.error(`FAIL: ${c.name}`); } }
 if (failed) { console.error(`leak-scan tests FAILED (${failed} of ${cases.length})`); process.exit(1); }
 console.log(`leak-scan tests OK (${cases.length} cases)`);
+
+// Whole-tree cases (library.b@'s LIB-2026-067, signals.b@'s 75a59d0): run the real scan in a throwaway repository.
+import { execFileSync } from 'node:child_process';
+import { mkdtempSync, writeFileSync, mkdirSync, symlinkSync, rmSync } from 'node:fs';
+import { tmpdir } from 'node:os';
+import { join, dirname } from 'node:path';
+import { fileURLToPath } from 'node:url';
+const scanner = join(dirname(fileURLToPath(import.meta.url)), 'leak-scan.mjs');
+const token = () => 'gh' + 'p_' + randomBytes(27).toString('base64').replace(/[^A-Za-z0-9]/g, 'a').slice(0, 36);
+function tree(setup) {
+  const r = mkdtempSync(join(tmpdir(), 'leaktree-'));
+  const g = (...a) => execFileSync('git', ['-C', r, ...a], { stdio: 'pipe' });
+  g('init', '-q'); g('config', 'user.email', 't@example.invalid'); g('config', 'user.name', 't'); g('config', 'commit.gpgsign', 'false');
+  mkdirSync(join(r, '_site')); writeFileSync(join(r, '_site/index.html'), '<p>ok</p>\n');
+  setup(r, g);
+  g('add', '-A'); g('commit', '-q', '-m', 'x');
+  let out = '';
+  try { execFileSync('node', [scanner], { cwd: r, stdio: 'pipe' }); out = '(passed)'; } catch (e) { out = String(e.stderr); }
+  rmSync(r, { recursive: true, force: true });
+  return out;
+}
+const treeCases = [
+  ['a tracked symbolic link is reported, not followed', () => /a symbolic link \(not followed\)/.test(tree((r) => { symlinkSync('/etc/hostname', join(r, 'link')); }))],
+  ['a symbolic link in _site/ is reported, not followed', () => /_site\/l: a symbolic link \(not followed\)/.test(tree((r) => { symlinkSync('/etc/hostname', join(r, '_site/l')); }))],
+  ['a file with a NUL byte is scanned, not skipped', () => /bin\.dat:1: GitHub token/.test(tree((r) => { writeFileSync(join(r, 'bin.dat'), Buffer.concat([Buffer.from([0, 1, 2]), Buffer.from(' ' + token() + ' ')])); }))],
+  ['a pushed .gitattributes re-encoding a file at checkout cannot hide it (bytes come from git objects)', () => /enc\.txt:1: GitHub token/.test(tree((r, g) => {
+    // in the working tree the file is UTF-16LE (NUL-laden, unreadable as text); git stores it as UTF-8 in its objects
+    writeFileSync(join(r, '.gitattributes'), 'enc.txt working-tree-encoding=UTF-16LE\n');
+    writeFileSync(join(r, 'enc.txt'), Buffer.from(token() + '\n', 'utf16le'));
+  }))],
+  ['a clean tree passes', () => tree(() => {}) === '(passed)'],
+];
+let treeFailed = 0;
+for (const [name, fn] of treeCases) { let ok = false; try { ok = fn(); } catch (e) { console.error(`  error: ${e.message}`); } if (!ok) { treeFailed++; console.error(`FAIL: ${name}`); } }
+if (treeFailed) { console.error(`leak-scan tree tests FAILED (${treeFailed} of ${treeCases.length})`); process.exit(1); }
+console.log(`leak-scan tree tests OK (${treeCases.length} cases)`);

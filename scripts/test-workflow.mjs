@@ -6,11 +6,15 @@
 // guarded here by shape. events.b@PrompTugal.dinis, 19 November 2026. Code: Apache-2.0.
 import { readFileSync } from 'node:fs';
 
-const wf = readFileSync('.github/workflows/pages.yml', 'utf8');
-const rel = readFileSync('scripts/release.sh', 'utf8');
+// Comments are removed first, so no test can be satisfied by a comment that merely mentions a step (library.b@'s
+// LIB-2026-067): whole comment lines, and a trailing " # ..." after code.
+const strip = (t) => t.split('\n').filter((l) => !/^\s*#/.test(l)).map((l) => l.replace(/\s+#\s.*$/, '')).join('\n');
+const wf = strip(readFileSync('.github/workflows/pages.yml', 'utf8'));
+const rel = strip(readFileSync('scripts/release.sh', 'utf8'));
 const job = (name) => { const i = wf.indexOf(`\n  ${name}:\n`); if (i < 0) return ''; const rest = wf.slice(i + 1); const m = rest.slice(1).search(/\n  [a-z][a-z0-9_-]*:\n/); return m < 0 ? rest : rest.slice(0, m + 1); };
 const verify = job('verify'), build = job('build'), deploy = job('deploy'), tag = job('tag');
 const cases = [
+  ['comments are not counted: a check present only in a comment is not found', () => !strip('      # node "$T/check-signatures.mjs" "$AFTER"\n      run: true  # needs: [build, verify]\n').includes('check-signatures') && !strip('x  # needs: [build, verify]').includes('needs')],
   ['a verify job exists and anchors on the latest successful push run of this workflow on dev (actions: read)', () => /actions\/workflows\/pages\.yml\/runs\?branch=dev&event=push&status=success/.test(verify) && /\.path == "\.github\/workflows\/pages\.yml" and \.head_branch == "dev" and \.event == "push" and \.conclusion == "success"/.test(verify) && /permissions:[\s\S]*?actions: read/.test(verify) && !/deployments\?environment/.test(verify)],
   ['the verify job runs no code from the pushed tree (no node, npm or bash of a repository script)', () => verify && !/(node|npm|npx|bash|sh)\s+(\.\/)?scripts\//.test(verify) && !/run: \.\//.test(verify)],
   ['the verify job takes the build output only as the Pages artifact, as data', () => /actions\/download-artifact@[0-9a-f]{40}/.test(verify) && /name: github-pages/.test(verify) && /tar -xf/.test(verify)],
