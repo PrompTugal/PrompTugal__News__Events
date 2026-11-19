@@ -1,0 +1,156 @@
+{
+ "about": "Each place's position on the shared map (ptmap), [longitude, latitude], copied from the PrompTugal__News__Website repository at commit c644a7831 (19 Nov 2026), file and that file's own source named per place. Until ontologist@ adds 'at' to data/site/places-registry.json.",
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news"
+ },
+ "from_repository": "PrompTugal/PrompTugal__News__Website",
+ "at_commit": "c644a7831",
+ "places": {
+  "albufeira": {
+   "at": [
+    -8.25,
+    37.089
+   ],
+   "from": "data/places/albufeira/place.json",
+   "its_source": "desks/researcher/algarve-evolution-round-1.md"
+  },
+  "alcoutim": {
+   "at": [
+    -7.471,
+    37.471
+   ],
+   "from": "data/places/alcoutim/place.json",
+   "its_source": "data/by-place/places.json"
+  },
+  "aljezur": {
+   "at": [
+    -8.803,
+    37.318
+   ],
+   "from": "data/places/aljezur/place.json",
+   "its_source": "data/by-place/places.json"
+  },
+  "castro-marim": {
+   "at": [
+    -7.443,
+    37.218
+   ],
+   "from": "data/places/castro-marim/place.json",
+   "its_source": "data/by-place/places.json"
+  },
+  "faro": {
+   "at": [
+    -7.935,
+    37.019
+   ],
+   "from": "data/places/faro/place.json",
+   "its_source": "desks/researcher/algarve-evolution-round-1.md"
+  },
+  "lagoa": {
+   "at": [
+    -8.453,
+    37.135
+   ],
+   "from": "data/places/lagoa/place.json",
+   "its_source": "data/by-place/places.json"
+  },
+  "lagos": {
+   "at": [
+    -8.673,
+    37.102
+   ],
+   "from": "data/places/lagos/place.json",
+   "its_source": "https://www.algarveevolution.pt/event/gdg-lagos-182/register"
+  },
+  "loule": {
+   "at": [
+    -8.023,
+    37.138
+   ],
+   "from": "data/places/loule/place.json",
+   "its_source": "data/by-place/places.json"
+  },
+  "monchique": {
+   "at": [
+    -8.555,
+    37.317
+   ],
+   "from": "data/places/monchique/place.json",
+   "its_source": "data/by-place/places.json"
+  },
+  "olhao": {
+   "at": [
+    -7.841,
+    37.026
+   ],
+   "from": "data/places/olhao/place.json",
+   "its_source": "data/by-place/places.json"
+  },
+  "portimao": {
+   "at": [
+    -8.537,
+    37.138
+   ],
+   "from": "data/places/portimao/place.json",
+   "its_source": "https://www.algarveevolution.pt/event/tourism-management-computing-technologies-international-conference-149/register"
+  },
+  "quarteira": {
+   "at": [
+    -8.103,
+    37.069
+   ],
+   "from": "data/places/quarteira/place.json",
+   "its_source": "data/by-place/places.json"
+  },
+  "sao-bras-de-alportel": {
+   "at": [
+    -7.888,
+    37.153
+   ],
+   "from": "data/places/sao-bras-de-alportel/place.json",
+   "its_source": "data/by-place/places.json"
+  },
+  "silves": {
+   "at": [
+    -8.44,
+    37.189
+   ],
+   "from": "data/places/silves/place.json",
+   "its_source": "data/by-place/places.json"
+  },
+  "tavira": {
+   "at": [
+    -7.649,
+    37.127
+   ],
+   "from": "data/places/tavira/place.json",
+   "its_source": "desks/researcher/algarve-evolution-round-1.md"
+  },
+  "vila-do-bispo": {
+   "at": [
+    -8.911,
+    37.083
+   ],
+   "from": "data/places/vila-do-bispo/place.json",
+   "its_source": "data/by-place/places.json"
+  },
+  "vila-real-de-santo-antonio": {
+   "at": [
+    -7.418,
+    37.195
+   ],
+   "from": "data/places/vila-real-de-santo-antonio/place.json",
+   "its_source": "data/by-place/places.json"
+  },
+  "lisboa": {
+   "at": [
+    -9.139,
+    38.722
+   ],
+   "from": "data/by-place/places.json (place.districts@PrompTugal.dinis)",
+   "its_source": null
+  }
+ }
+}

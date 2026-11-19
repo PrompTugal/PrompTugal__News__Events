@@ -68,6 +68,28 @@ let TZ_OFF = '', TZ_TABLE = null;
   TZ_TABLE = t;
 })();
 if (TZ_OFF) console.warn(`build: ${TZ_OFF}`);
+// The shared map, ptmap (designer@'s; Dinis, 19 Nov 2026 ~17:40 UTC, Website board/guidance/2026-11-19-cameras-as-links-and-the-map.md;
+// security@'s go, Website b5fc4fdef), vendored unchanged from PrompTugal__News__Website design/shared-map/v1.0.0/ (9f5ba1d44) and
+// checked like the bar against the live registry's map.versions[v].integrity.<file>. On only when the registry lists this
+// version with its review "passed" (map_install); off, with the reason logged, otherwise. A byte mismatch stops the build.
+const MAP_VERSION = '1.0.0', MAPD = `src/assets/ptmap/${MAP_VERSION}/`;
+let MAP_OFF = '';
+const MAP_PIN = {};
+(() => {
+  if (!REG) { MAP_OFF = `map ${MAP_VERSION} off: the registry could not be read (${REG_ERR})`; return; }
+  const m = REG.map, v = m?.versions?.[MAP_VERSION];
+  if (!v || typeof v !== 'object') { MAP_OFF = `map ${MAP_VERSION} off: the registry does not list it yet`; return; }
+  const review = String(v.review ?? m.review ?? '');
+  if (review !== 'passed') { MAP_OFF = `map ${MAP_VERSION} off: its review in the registry reads "${review.slice(0, 40) || 'none'}", not "passed"`; return; }
+  for (const f of ['ptmap.js', 'ptmap.css']) {
+    const pin = (v.integrity && typeof v.integrity === 'object' ? v.integrity[f] : undefined) ?? v[f];
+    // sha384 only, as map_install names (AppSec review, 19 Nov 2026)
+    if (typeof pin !== 'string' || !SRI.test(pin) || !pin.startsWith('sha384-')) { MAP_OFF = `map ${MAP_VERSION} off: the registry gives no usable sha384 pin for ${f}`; return; }
+    if (sri('sha384', readFileSync(MAPD + f)) !== pin) { console.error(`build: ${MAPD}${f} does not match the registry's pin for ${MAP_VERSION}`); process.exit(1); }
+    MAP_PIN[f] = pin;
+  }
+})();
+if (MAP_OFF) console.warn(`build: ${MAP_OFF}`);
 // The renderer is loaded only once its file has passed the check; with the bar off, nothing of it runs.
 const BAR_MOD = BAR_OFF ? null : await import(pathToFileURL(resolve(BAR + 'sites-bar-render.mjs')).href);
 const renderBar = BAR_MOD ? BAR_MOD.render : () => '';
@@ -87,6 +109,7 @@ const today = R.today;
 
 rmSync('_site', { recursive: true, force: true });
 cpSync('src', '_site', { recursive: true });
+if (MAP_OFF) { rmSync('_site/assets/ptmap', { recursive: true, force: true }); rmSync('_site/assets/map.js', { force: true }); }
 { // write the checked table into the page-view script (no network call in the browser); without it, no country is sent
   const f = '_site/assets/obs/obs.js', src = readFileSync(f, 'utf8');
   if (src.split('/*TZ_TABLE*/null').length !== 2) { console.error('build: obs.js has no single TZ_TABLE placeholder'); process.exit(1); }
@@ -162,6 +185,7 @@ function page({ path, title, description, section, body, md }) {
 ${SITES_BAR ? `<link rel="stylesheet" href="/assets/sites-bar/${BAR_VERSION}/sites-bar.css">` : ''}
 <link rel="stylesheet" href="/site.css?v=${esc(version)}">
 ${SITES_BAR ? `<script defer src="/assets/sites-bar/${BAR_VERSION}/sites-bar.js"></script>` : ''}
+${MAP_OFF ? '' : `<link rel="stylesheet" href="/assets/ptmap/${MAP_VERSION}/ptmap.css" integrity="${esc(MAP_PIN['ptmap.css'])}"><script defer src="/assets/ptmap/${MAP_VERSION}/ptmap.js" integrity="${esc(MAP_PIN['ptmap.js'])}"></script><script defer src="/assets/map.js?v=${esc(version)}"></script>`}
 <script type="module" src="/assets/live.js?v=${esc(version)}"></script>
 <script defer src="/assets/obs/obs.js?v=${esc(version)}" data-lane="events"></script>
 </head>
@@ -262,11 +286,24 @@ function pastSection(p) {
   return { html, md };
 }
 
+// ---------------------------------------------------------------- the map (ptmap): Portugal big; London small when this site has London events
+// Positions from data/map/places-at.json (copied from the Website repository, each with its source) until the places registry has them.
+const placesAt = readJson('data/map/places-at.json', { places: {} }).places || {};
+const okAt = (a) => Array.isArray(a) && a.length === 2 && a.every((x) => typeof x === 'number' && Number.isFinite(x)) && a[0] >= -9.65 && a[0] <= -6.1 && a[1] >= 36.85 && a[1] <= 42.2;
+function mapHtml(current) {
+  if (MAP_OFF) return '';
+  const places = placeIds.filter((p) => okAt(placesAt[p]?.at)).map((p) => ({ id: p, name: nameOf(p), at: placesAt[p].at, href: `${SITE}/places/${p}/`, n: stats[p].read + stats[p].found }));
+  if (!places.length) return '';
+  const opts = { places, label: 'Map of the places this site lists events for', ...(current && places.some((x) => x.id === current) ? { current } : {}),
+    ...(placeIds.includes('london') ? { london: { href: `${SITE}/places/london/`, n: stats.london.read + stats.london.found } } : {}) };
+  return `<figure class="map"><div id="map" data-map="${esc(JSON.stringify(opts))}"></div><figcaption class="small">The places this site lists, a dot for each, larger with more events; ${current && opts.current ? `${esc(nameOf(current))} marked. ` : ''}Positions from the PrompTugal.news places data. ${placeIds.includes('london') ? '' : 'London and the EU are not shown: this site has no events data for them yet. '}Outline: Natural Earth (public domain) via world-atlas (ISC licence, Michael Bostock). The shared map by designer@PrompTugal.dinis.</figcaption></figure>`;
+}
+
 // ---------------------------------------------------------------- places index and one page per place
 page({
   path: '/places/', section: '/places/', title: 'Places: PrompTugal.news Events',
   description: "Every place the events site covers: the Algarve's towns and Lisbon, with how many events each lists.",
-  body: `<h1>Places</h1><p class="standfirst">The Algarve's places and Lisbon first; more as data.promptugal.news reads more agendas.</p>${fresh}
+  body: `<h1>Places</h1><p class="standfirst">The Algarve's places and Lisbon first; more as data.promptugal.news reads more agendas.</p>${mapHtml('')}${fresh}
 <table class="places-table"><thead><tr><th scope="col">Place</th><th scope="col">Read from an agenda</th><th scope="col">Found through Perplexity</th></tr></thead><tbody>
 ${[REGION, ...placeIds].map((p) => `<tr><th scope="row"><a href="/places/${p}/">${esc(placeLabel(p))}</a></th><td class="n">${stats[p].read}</td><td class="n">${stats[p].found}</td></tr>`).join('\n')}
 </tbody></table>
@@ -294,6 +331,7 @@ ${read?.source_note && stats[p].read ? `<details class="small"><summary>The sour
 <p class="fresh" id="events-status">Built copy: data read ${esc(fmtStamp(dataReadAt))}. ${esc(licenceOf([read, feeds[p]?.claims]))} Your browser loads the live file when it can.</p>
 <div id="events" data-places="${p}" data-show-place="${p === REGION ? 1 : 0}" data-read-at="${esc(dataReadAt || '')}" data-stale-after="${staleAfter}">${L.count ? L.html : `<p class="none">${empty}</p>`}</div>
 <p class="small">The data: ${apiLinks || 'none yet'}. ${p === REGION ? `The Algarve's Perplexity finds are gathered from each place's own file.` : ''} Licences: the records CC BY 4.0, each event under its source's terms as linked.</p>
+${mapHtml(p === REGION ? '' : p)}
 ${past.html}`,
     md: `${stats[p].read} read from official agendas, ${stats[p].found} found through Perplexity. Data read ${fmtStamp(dataReadAt)}.\n\n${listMd(items) || 'No events listed yet: no source we may read covers this place.'}${past.md}`,
   });
