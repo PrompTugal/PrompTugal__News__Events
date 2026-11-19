@@ -26,10 +26,12 @@ On each place page and the home page, the reader's browser fetches that place's 
 - (3) Malformed items are skipped; a failure leaves the built page (EV-2026-007, fixed).
 - (4) The built page is the fallback. A file replaces it only if it has the expected shape, at most 5,000 items, and a read time no older than the built copy; the status line says "Live file" or "Built copy" with the read time, and "Stale" when the data is more than 7 hours old (the agendas are read every 6 hours). It refreshes every 10 minutes.
 
-- (1, 2) A Content Security Policy on every page (a meta tag, since GitHub Pages sets no headers): scripts and styles from this site only, no inline script, no plugins, and connections only to data.promptugal.news and the page-view endpoint and place lookups. Added 18 November 2026, tested on nine pages with no violations.
+- (1, 2) A Content Security Policy on every page (a meta tag, since GitHub Pages sets no headers): scripts and styles from this site only, no inline script, no plugins, and connections only to data.promptugal.news and the page-view endpoint (the two place lookups were removed on 19 November 2026). Added 18 November 2026, tested on nine pages with no violations.
 
-- The PrompTugal sites bar (v1.1.0, vendored unchanged and pinned by sha256; reviewed by security@) is rendered at build from the sites registry, and its script fetches only other PrompTugal sites' `/version.json` and shows their `/preview.svg` as an image. The policy lists the exact hosts: this site, the data site, each site in the registry that passes the bar's own check, the page-view endpoint and its two place lookups.
+- The PrompTugal sites bar (v1.1.0, vendored unchanged and pinned by sha256; reviewed by security@) is rendered at build from the sites registry, and its script fetches only other PrompTugal sites' `/version.json` and shows their `/preview.svg` as an image. The policy lists the exact hosts: this site, the data site, each site in the registry that passes the bar's own check, and the page-view endpoint.
+
+## Closed
+- The page-view script no longer asks any third party (ipapi.co, ipwho.is) where a reader is. It sends the country only, taken in the browser from the time zone through a fixed table, with no network call; region, city and map position are dropped (Dinis, 19 November 2026 ~03:15 UTC, Website `board/guidance/2026-11-19-no-ip-lookup-predictions-and-small-decisions.md`). Both hosts are out of the CSP.
 
 ## Open
-- The page-view script asks two third-party services (ipapi.co, ipwho.is) for the reader's town, which the rule for figures ("only our own hosts") does not cover; it is the team's observability design, disclosed in the footer, and the question of whether it should change is with Dinis.
 - Framing (clickjacking) cannot be refused from a meta tag; low risk for a static site with no login or actions.
