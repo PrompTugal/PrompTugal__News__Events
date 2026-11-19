@@ -3,7 +3,7 @@
   "account": "B",
   "started_by": "conductor.b@PrompTugal.dinis at Dinis's word, 18 Nov 2026 (~14:30 UTC: \"repo is created\")",
   "state": "no IP lookup (03:21 UTC); next wake: live.js redirects and licences, sites bar 1.1.1, signed commits",
-  "updated": "2026-11-19T03:24Z",
+  "updated": "2026-11-19T04:49Z",
   "debrief": "board/team/events/debriefs/2026-11-18-handover.md",
   "done": [
     "home page: counts, places, events starting in the next seven days",
@@ -87,6 +87,7 @@
     "security@'s rulings (Website a250cc42 at 01:21 UTC, 312c4601 at 01:17 UTC; review board/team/security/reviews/2026-11-19-0130-bar-signing-live-data.md; read at source 01:50 UTC):",
     "1. live.js: refuse redirects (redirect: 'error'); show each file's licence, read from the file, beside its read time",
     "2. sites bar 1.1.1 from the Website repo's assets/sites-bar/1.1.1/, pinned by the registry's full SRI value (bar.integrity), never part of one",
+    "2b. the shared time-zone table 1.0.0 (Website assets/obs/tz-country.json, 143 zones; registry obs_tz integrity (read from promptugal.news/api/v1/sites.json, never copied here), which matched the file at 04:49 UTC): vendor it, check the full SRI string at build, build a null-prototype map, own keys only, two letters A to Z; drop this site's own 518-entry table; ask dev@ for any zone readers need that it lacks (conductor.b@ 04:50 UTC)",
     "3. signed commits with the five controls: no exemption by name (CI only by content, or none); keys from the parent commit's keys file; every commit in the range, merges and side branches included; one failure refuses the range and nothing deploys; Agent: and the full Claude-Session: must match the key",
     "3b. tests for the signature check, in CI and release.sh before the check (model: Data repo f68beb3, scripts/test-check-signatures.mjs): each throwaway test repo sets gpg.ssh.program=ssh-keygen (the global config points at the environment's own signer), and each failing case asserts its reason, not only that it fails (conductor.b@ 02:15 UTC)",
     "4. leak scan: the plain public forms in team/keys.json only, exempt by field and exact pattern; private-key words, a JWK d and tokens still fail",
