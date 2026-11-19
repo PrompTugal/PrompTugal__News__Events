@@ -134,18 +134,22 @@ jobs:
           # control-10 begin: no symlinks, unless listed with a reason in A's tree (security@'s control 10, Website ed70bd996).
           # Every commit in A..AFTER (merges against each parent), not only the final tree; then the checked-out tree. A new
           # exception counts only from the next anchor, since the list is read from A. The built site allows none (below).
-          # An exception names a path, not a target (a listed link may point anywhere): security@ reviews each one.
-          EXC=()
-          listed() { local x; case "$1" in *$'\n'*|*$'\r'*) return 1;; esac; for x in "${EXC[@]}"; do [ "$x" = "$1" ] && return 0; done; return 1; }
+          # An exception is a path, a tab, the link's exact target, a tab and a reason: a listed link re-pointed elsewhere fails
+          # (library.b@'s LIB-2026-069, via conductor.b@ 19:46 UTC). Paths and targets compare as raw bytes.
+          EXC=(); TGT=()
+          # A link's target, byte for byte (a trailing newline kept, so "f" + newline never matches "f"), into T; a failed read stops.
+          blob_target() { T=$(git cat-file blob "$1" && printf x) || { echo "cannot read the target of a link ($1): refused" >&2; exit 1; }; T=${T%x}; }
+          disk_target() { T=$(readlink -- "$1" && printf x) || { echo "cannot read the target of a link ($1): refused" >&2; exit 1; }; T=${T%$'\n'x}; }
+          listed() { local i; case "$1$2" in *$'\n'*|*$'\r'*) return 1;; esac; for i in "${!EXC[@]}"; do [ "${EXC[$i]}" = "$1" ] && [ "${TGT[$i]}" = "$2" ] && return 0; done; return 1; }
           emode=$(git ls-tree "$A" .github/symlink-exceptions.txt | cut -d' ' -f1)
           if [ -n "$emode" ]; then
             [ "$emode" = "100644" ] || { echo "the symlink exceptions file in the anchor is not a regular file: refused" >&2; exit 1; }
             git show "$A:.github/symlink-exceptions.txt" > "$RUNNER_TEMP/symlink-exceptions.raw"
             while IFS= read -r l || [ -n "$l" ]; do
               case "$l" in ''|'#'*) continue;; esac
-              p=${l%%$'\t'*}; r=${l#*$'\t'}
-              if [ "$p" = "$l" ] || [ -z "$p" ] || [ -z "${r//[[:space:]]/}" ]; then echo "a symlink exception needs a path, a tab and a reason: refused" >&2; exit 1; fi
-              EXC+=("$p")
+              p=${l%%$'\t'*}; rest=${l#*$'\t'}; t=${rest%%$'\t'*}; r=${rest#*$'\t'}
+              if [ "$p" = "$l" ] || [ "$r" = "$rest" ] || [ -z "$p" ] || [ -z "$t" ] || [ -z "${r//[[:space:]]/}" ]; then echo "a symlink exception needs a path, a tab, a target, a tab and a reason: refused" >&2; exit 1; fi
+              EXC+=("$p"); TGT+=("$t")
             done < "$RUNNER_TEMP/symlink-exceptions.raw"
           fi
           bad=0
@@ -154,12 +158,21 @@ jobs:
             git diff-tree -z -r --raw --no-commit-id --no-renames --root -m "$c" > "$RUNNER_TEMP/dt"
             while IFS= read -r -d '' meta && IFS= read -r -d '' path; do
               set -- $meta
-              if [ "$2" = "120000" ] && ! listed "$path"; then echo "${c:0:7}: adds or changes a symbolic link: $path" >&2; bad=1; fi
+              if [ "$2" = "120000" ]; then blob_target "$4"; fi
+              if [ "$2" = "120000" ] && ! listed "$path" "$T"; then echo "${c:0:7}: adds or changes a symbolic link: $path" >&2; bad=1; fi
             done < "$RUNNER_TEMP/dt"
           done < "$RUNNER_TEMP/range"
+          # AFTER's own tree, whatever the range shows (LIB-2026-069 point 4)
+          git ls-tree -r -z "$AFTER" > "$RUNNER_TEMP/tree"
+          while IFS= read -r -d '' rec; do
+            meta=${rec%%$'\t'*}; path=${rec#*$'\t'}; set -- $meta
+            if [ "$1" = "120000" ]; then blob_target "$3"; fi
+            if [ "$1" = "120000" ] && ! listed "$path" "$T"; then echo "a symbolic link in the pushed tree: $path" >&2; bad=1; fi
+          done < "$RUNNER_TEMP/tree"
           find . -path ./.git -prune -o -type l -print0 > "$RUNNER_TEMP/links"
           while IFS= read -r -d '' path; do
-            if ! listed "${path#./}"; then echo "a symbolic link in the checked-out tree: ${path#./}" >&2; bad=1; fi
+            disk_target "$path"
+            if ! listed "${path#./}" "$T"; then echo "a symbolic link in the checked-out tree: ${path#./}" >&2; bad=1; fi
           done < "$RUNNER_TEMP/links"
           [ "$bad" = 0 ] || { echo "symbolic links refused (control 10)" >&2; exit 1; }
           # control-10 end

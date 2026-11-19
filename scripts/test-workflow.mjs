@@ -70,23 +70,31 @@ const cases = [
     const commit = (g, m) => { g('add', '-A'); g('commit', '-qm', m); };
     const exc = (r, line) => { mkdirSync(join(r, '.github'), { recursive: true }); writeFileSync(join(r, '.github/symlink-exceptions.txt'), `# path<TAB>reason\n${line}\n`); };
     const pushed = run((r, g) => { symlinkSync('f', join(r, 'link')); commit(g, 'link'); });
-    const listed = run((r, g) => { exc(r, 'link\tneeded by the test'); commit(g, 'exceptions'); const A = g('rev-parse', 'HEAD'); symlinkSync('f', join(r, 'link')); commit(g, 'link'); return A; });
-    const onlyPushed = run((r, g) => { exc(r, 'link\tlisted in the push itself'); symlinkSync('f', join(r, 'link')); commit(g, 'link and its exception'); });
+    const listed = run((r, g) => { exc(r, 'link\tf\tneeded by the test'); commit(g, 'exceptions'); const A = g('rev-parse', 'HEAD'); symlinkSync('f', join(r, 'link')); commit(g, 'link'); return A; });
+    const onlyPushed = run((r, g) => { exc(r, 'link\tf\tlisted in the push itself'); symlinkSync('f', join(r, 'link')); commit(g, 'link and its exception'); });
     const noReason = run((r, g) => { exc(r, 'link'); commit(g, 'exceptions'); const A = g('rev-parse', 'HEAD'); symlinkSync('f', join(r, 'link')); commit(g, 'link'); return A; });
     const addRemove = run((r, g) => { const A = g('rev-parse', 'HEAD'); symlinkSync('f', join(r, 'link')); commit(g, 'add'); rmSync(join(r, 'link')); commit(g, 'remove'); return A; });
     const untracked = run((r, g) => { writeFileSync(join(r, 'g'), 'y\n'); commit(g, 'plain'); symlinkSync('/etc/hostname', join(r, 'stray')); });
     const merged = run((r, g) => { const A = g('rev-parse', 'HEAD'); g('checkout', '-qb', 'side'); symlinkSync('f', join(r, 'link')); commit(g, 'side link'); g('checkout', '-q', '-'); writeFileSync(join(r, 'h'), 'z\n'); commit(g, 'main'); g('merge', '-q', '--no-ff', '-m', 'merge', 'side'); g('rm', '-q', 'link'); commit(g, 'drop'); return A; });
     // a symlink that only the merge commit itself brings in (seen only with diff-tree -m)
     const evilMerge = run((r, g) => { const A = g('rev-parse', 'HEAD'); g('checkout', '-qb', 'side'); writeFileSync(join(r, 's'), 's\n'); commit(g, 'side'); g('checkout', '-q', '-'); writeFileSync(join(r, 'h'), 'z\n'); commit(g, 'main'); g('merge', '-q', '--no-ff', '--no-commit', 'side'); symlinkSync('f', join(r, 'link')); g('add', '-A'); g('commit', '-qm', 'merge'); g('rm', '-q', 'link'); commit(g, 'drop'); return A; });
-    const blankReason = run((r, g) => { exc(r, 'link\t   '); commit(g, 'exceptions'); const A = g('rev-parse', 'HEAD'); symlinkSync('f', join(r, 'link')); commit(g, 'link'); return A; });
+    const blankReason = run((r, g) => { exc(r, 'link\tf\t   '); commit(g, 'exceptions'); const A = g('rev-parse', 'HEAD'); symlinkSync('f', join(r, 'link')); commit(g, 'link'); return A; });
     const clean = run((r, g) => { writeFileSync(join(r, 'g'), 'y\n'); commit(g, 'plain'); });
     // a newline in a link's name must not match a listed path (AppSec review, 19 Nov 2026)
-    const newline = run((r, g) => { exc(r, 'docs\tlisted'); commit(g, 'exceptions'); const A = g('rev-parse', 'HEAD'); symlinkSync('f', join(r, 'docs\nevil')); commit(g, 'newline link'); return A; });
+    const newline = run((r, g) => { exc(r, 'docs\tf\tlisted'); commit(g, 'exceptions'); const A = g('rev-parse', 'HEAD'); symlinkSync('f', join(r, 'docs\nevil')); commit(g, 'newline link'); return A; });
+    // a listed link re-pointed fails (the target is pinned); an exception with no target is refused; a symlink already in A's tree,
+    // not listed and gone from the disk, is still caught in AFTER's own tree (library.b@'s LIB-2026-069)
+    const repointed = run((r, g) => { exc(r, 'link\tf\tneeded'); symlinkSync('f', join(r, 'link')); commit(g, 'listed link'); const A = g('rev-parse', 'HEAD'); rmSync(join(r, 'link')); symlinkSync('/etc/passwd', join(r, 'link')); commit(g, 're-point'); return A; });
+    const noTarget = run((r, g) => { exc(r, 'link\tneeded, but no target'); commit(g, 'exceptions'); const A = g('rev-parse', 'HEAD'); symlinkSync('f', join(r, 'link')); commit(g, 'link'); return A; });
+    const inA = run((r, g) => { symlinkSync('f', join(r, 'old')); commit(g, 'old link before the control'); const A = g('rev-parse', 'HEAD'); writeFileSync(join(r, 'g'), 'y\n'); commit(g, 'plain'); rmSync(join(r, 'old')); return A; });
+    // a target that differs only by a trailing newline fails; a listed link re-pointed only on disk fails (AppSec review)
+    const trailingNl = run((r, g) => { exc(r, 'link\tf\tneeded'); commit(g, 'exceptions'); const A = g('rev-parse', 'HEAD'); symlinkSync('f\n', join(r, 'link')); commit(g, 'link to f and a newline'); return A; });
+    const diskOnly = run((r, g) => { exc(r, 'link\tf\tneeded'); symlinkSync('f', join(r, 'link')); commit(g, 'listed link'); const A = g('rev-parse', 'HEAD'); writeFileSync(join(r, 'g'), 'y\n'); commit(g, 'plain'); rmSync(join(r, 'link')); symlinkSync('/etc/passwd', join(r, 'link')); return A; });
     const refused = (x, why) => x !== 'PASS' && x.includes(why) && x.includes('symbolic links refused (control 10)');
     const link = 'adds or changes a symbolic link: ';
-    const ok = refused(pushed, link + 'link') && listed === 'PASS' && refused(onlyPushed, link + 'link') && /needs a path, a tab and a reason: refused/.test(noReason) && /needs a path, a tab and a reason: refused/.test(blankReason)
-      && refused(addRemove, link + 'link') && refused(untracked, 'in the checked-out tree: stray') && refused(merged, link + 'link') && refused(evilMerge, link + 'link') && refused(newline, link + 'docs\nevil') && clean === 'PASS';
-    if (!ok) console.error('  control 10:', JSON.stringify({ pushed, listed, onlyPushed, noReason, addRemove, untracked, merged, evilMerge, blankReason, newline, clean }));
+    const ok = refused(pushed, link + 'link') && listed === 'PASS' && refused(onlyPushed, link + 'link') && /needs a path, a tab, a target, a tab and a reason: refused/.test(noReason) && /needs a path, a tab, a target, a tab and a reason: refused/.test(blankReason) && /needs a path, a tab, a target/.test(noTarget)
+      && refused(addRemove, link + 'link') && refused(untracked, 'in the checked-out tree: stray') && refused(merged, link + 'link') && refused(evilMerge, link + 'link') && refused(newline, link + 'docs\nevil') && refused(repointed, link + 'link') && refused(inA, 'in the pushed tree: old') && refused(trailingNl, link + 'link') && refused(diskOnly, 'in the checked-out tree: link') && clean === 'PASS';
+    if (!ok) console.error('  control 10:', JSON.stringify({ pushed, listed, onlyPushed, noReason, addRemove, untracked, merged, evilMerge, blankReason, newline, repointed, noTarget, inA, trailingNl, diskOnly, clean }));
     return ok;
   }],
   ['verify, deploy and tag run only for refs/heads/dev', () => [verify, deploy, tag].every((j) => /\n    if: [^\n]*github\.ref == 'refs\/heads\/dev'/.test(j))],
