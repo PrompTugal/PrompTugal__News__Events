@@ -3,7 +3,7 @@
   "account": "B",
   "started_by": "conductor.b@PrompTugal.dinis at Dinis's word, 18 Nov 2026 (~14:30 UTC: \"repo is created\")",
   "state": "every run starts from a commit (01:24 UTC); waits for the next wake (signed commits first)",
-  "updated": "2026-11-19T01:50Z",
+  "updated": "2026-11-19T02:15Z",
   "debrief": "board/team/events/debriefs/2026-11-18-handover.md",
   "done": [
     "home page: counts, places, events starting in the next seven days",
@@ -89,6 +89,7 @@
     "1. live.js: refuse redirects (redirect: 'error'); show each file's licence, read from the file, beside its read time",
     "2. sites bar 1.1.1 from the Website repo's assets/sites-bar/1.1.1/, pinned by the registry's full SRI value (bar.integrity), never part of one",
     "3. signed commits with the five controls: no exemption by name (CI only by content, or none); keys from the parent commit's keys file; every commit in the range, merges and side branches included; one failure refuses the range and nothing deploys; Agent: and the full Claude-Session: must match the key",
+    "3b. tests for the signature check, in CI and release.sh before the check (model: Data repo f68beb3, scripts/test-check-signatures.mjs): each throwaway test repo sets gpg.ssh.program=ssh-keygen (the global config points at the environment's own signer), and each failing case asserts its reason, not only that it fails (conductor.b@ 02:15 UTC)",
     "4. leak scan: the plain public forms in team/keys.json only, exempt by field and exact pattern; private-key words, a JWK d and tokens still fail",
     "5. every time from date -u"
   ]
