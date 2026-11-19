@@ -16,19 +16,24 @@ node scripts/test-check-signatures.mjs
 node scripts/test-leak-scan.mjs
 node scripts/test-workflow.mjs
 # The security checks run from the anchor's copy: the newest commit GitHub's own record shows was deployed to
-# github-pages by a passing run (security@'s fourth ruling, Website 948820a7e; read here from the live version.json). Tags
+# this workflow's latest successful push run on dev (security@'s sixth ruling, Website 0ba439611). Tags
 # are not used. No anchor, an anchor that is not an ancestor of HEAD, or a missing checker fails: there is no fallback.
 anchor() {
-  # Locally, the live site's /version.json names the same commit as GitHub's deployment record: only a passing CI run can
-  # deploy it, so a push alone cannot write it (the public API is rate-limited from shared hosts). CI reads the deployment record.
+  # The head commit of the latest successful push run of this workflow on dev (security@'s sixth ruling), from GitHub's API;
+  # if the API is rate-limited from this shared host, the live /version.json, which only a passing run deploys. CI is the authority.
   node -e '
-    fetch("https://events.promptugal.news/version.json", { cache: "no-store", redirect: "error", signal: AbortSignal.timeout(20000) })
+    const q = "https://api.github.com/repos/PrompTugal/PrompTugal__News__Events/actions/workflows/pages.yml/runs?branch=dev&event=push&status=success&per_page=1";
+    const ok = (sha) => typeof sha === "string" && /^[0-9a-f]{40}$/.test(sha);
+    fetch(q, { headers: { "user-agent": "events-release-check", accept: "application/vnd.github+json" }, redirect: "error", signal: AbortSignal.timeout(20000) })
       .then((r) => r.ok ? r.json() : Promise.reject(new Error("HTTP " + r.status)))
-      .then((v) => { if (typeof v.commit !== "string" || !/^[0-9a-f]{40}$/.test(v.commit)) process.exit(1); console.log(v.commit); })
+      .then((d) => { const r = d.workflow_runs && d.workflow_runs[0]; if (!r || r.path !== ".github/workflows/pages.yml" || r.head_branch !== "dev" || r.event !== "push" || r.conclusion !== "success" || !ok(r.head_sha)) process.exit(1); console.log(r.head_sha); })
+      .catch(() => fetch("https://events.promptugal.news/version.json", { cache: "no-store", redirect: "error", signal: AbortSignal.timeout(20000) })
+        .then((r) => r.ok ? r.json() : Promise.reject(new Error("HTTP " + r.status)))
+        .then((v) => { if (!ok(v.commit)) process.exit(1); console.error("(the API is rate-limited here: anchoring on the live version.json)"); console.log(v.commit); }))
       .catch(() => process.exit(1));'
 }
 trusted_check() {
-  local a d rc=0; a=$(anchor) || { echo "no successful github-pages deployment to anchor on" >&2; return 1; }
+  local a d rc=0; a=$(anchor) || { echo "no successful push run of this workflow on dev to anchor on" >&2; return 1; }
   git cat-file -e "$a^{commit}" 2>/dev/null || { echo "the anchor $a is not in this history (git fetch)" >&2; return 1; }
   git merge-base --is-ancestor "$a" HEAD || { echo "the anchor $a is not an ancestor of HEAD" >&2; return 1; }
   d=$(mktemp -d)

@@ -67,8 +67,8 @@ jobs:
           path: _site
   verify:
     # security@'s control 9 (Website 16402a95c, from civic): the security checks run in their own job, which runs no code from
-    # the pushed tree. It checks out, reads the anchor A from GitHub's API (the newest github-pages deployment whose latest
-    # status is success; fourth ruling, 948820a7e), takes the checkers from A's tree (regular files only, no symlinks) into
+    # the pushed tree. It checks out, reads the anchor A from GitHub's API (the head commit of the latest successful push run
+    # of this workflow on dev; sixth ruling, 0ba439611), takes the checkers from A's tree (regular files only, no symlinks) into
     # RUNNER_TEMP, and runs them with an absolute node path under env -i (no NODE_OPTIONS) and GIT_NO_REPLACE_OBJECTS=1.
     # The built site reaches it only as data, the Pages artifact, unpacked into _site/ for the leak scan. The checked range is
     # A..AFTER. A missing A, an A that is not an ancestor of AFTER, or a missing checker fails: no fallback, no tags.
@@ -78,7 +78,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
-      deployments: read
+      actions: read
     env:
       GIT_NO_REPLACE_OBJECTS: '1'
     steps:
@@ -100,12 +100,13 @@ jobs:
         run: |
           NODE=$(command -v node); case "$NODE" in /*) ;; *) echo "no absolute path to node" >&2; exit 1;; esac
           if [ "$(git rev-parse --is-shallow-repository)" != "false" ]; then echo "a shallow checkout: the checks need the full history" >&2; exit 1; fi
-          A=""
-          for row in $(gh api "repos/$GITHUB_REPOSITORY/deployments?environment=github-pages&per_page=50" --jq '.[] | "\(.id):\(.sha)"'); do
-            state=$(gh api "repos/$GITHUB_REPOSITORY/deployments/${row%%:*}/statuses?per_page=1" --jq '.[0].state // ""') || { echo "cannot read a deployment status" >&2; exit 1; }
-            if [ "$state" = "success" ]; then A="${row##*:}"; break; fi
-          done
-          if ! printf '%s' "$A" | grep -Eq '^[0-9a-f]{40}$'; then echo "no successful github-pages deployment to anchor on" >&2; exit 1; fi
+          # A: the head commit of the latest run of this workflow file, on dev, for a push, that concluded success (security@'s
+          # sixth ruling, Website 0ba439611; only GitHub Actions creates runs). Read from GitHub's API, never from git.
+          row=$(gh api "repos/$GITHUB_REPOSITORY/actions/workflows/pages.yml/runs?branch=dev&event=push&status=success&per_page=1" \
+            --jq '.workflow_runs[0] | select(.path == ".github/workflows/pages.yml" and .head_branch == "dev" and .event == "push" and .conclusion == "success") | .head_sha') \
+            || { echo "cannot read this workflow's runs" >&2; exit 1; }
+          A="$row"
+          if ! printf '%s' "$A" | grep -Eq '^[0-9a-f]{40}$'; then echo "no successful push run of this workflow on dev to anchor on" >&2; exit 1; fi
           git cat-file -e "$A^{commit}" 2>/dev/null || { echo "the anchor $A is not in this history" >&2; exit 1; }
           git merge-base --is-ancestor "$A" "$AFTER" || { echo "the anchor $A is not an ancestor of $AFTER (a force push?)" >&2; exit 1; }
           # The built site is hostile data from a job that ran pushed code: list it first and refuse anything but plain files
