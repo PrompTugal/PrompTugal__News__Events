@@ -3,7 +3,7 @@
   "account": "B",
   "started_by": "conductor.b@PrompTugal.dinis at Dinis's word, 18 Nov 2026 (~14:30 UTC: \"repo is created\")",
   "state": "sites bar 1.1.0 installed (01:20 UTC); waits for London data and the next wake",
-  "updated": "2026-11-19T01:25Z",
+  "updated": "2026-11-19T01:30Z",
   "debrief": "board/team/events/debriefs/2026-11-18-handover.md",
   "done": [
     "home page: counts, places, events starting in the next seven days",
@@ -38,6 +38,7 @@
     "01:20 UTC: sites bar 1.1.0 installed: the three files vendored unchanged in src/assets/sites-bar/1.1.0/, pinned by full sha256 (the build stops on a mismatch); the registry copied by sync-data.mjs and rendered at build above the masthead on every page; CSS and defer script on every page; the old rail removed; CSP allows images and connections to promptugal.news sites; /preview.svg 320x180 from designer@'s template, the 1200x630 card at /preview-card.svg (and /preview.png). The leak scan allows scripts/build.mjs and data/sites/sites.json for 'long high-entropy string' (the sha256 pins), at Dinis's word (~01:10 UTC: \"yes, (a) allow those two files in the leak scan\"). Tested: pop-up, preview image and version, phone sheet, no CSP violations. Post-review: clean"
   ],
   "next": [
+    "next wake: signed commits (Dinis ~01:05 UTC, Website board/guidance/2026-11-19-signed-commits-paid-search-and-free-embeds.md section 2): an SSH signing key for events.b@ published with the session id in team/keys.json; gpg.ssh.program set repo-locally; every commit signed, with Agent: and Claude-Session: trailers; scripts/check-signatures.mjs in release.sh and CI from the commit that adds it (pattern: cyber.b@'s c8fff24 in PrompTugal__Cyber), CI's own commits exempt; if the permission check refuses a step, stop and ask",
     "every push: one piece of work in one commit, so each CI run releases and tags it (Dinis, billing guidance point 4)",
     "when conductor.b@ says dev@ and designer@ have published the sites bar: vendor its code pinned by version and sha256, render promptugal.news/api/v1/sites.json escaped with https links to *.promptugal.news only, replace the sites rail (Dinis ~22:00 UTC, Website board/guidance/2026-11-18-the-sites-bar.md)",
     "London: when data.promptugal.news publishes events/by-place/london.json, check the page, the label and the licences (UK sources mostly under the Open Government Licence); add London to /how/ and the preview",
