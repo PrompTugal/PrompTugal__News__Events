@@ -1,6 +1,7 @@
 // ACC-015: every non-merge commit a push adds to dev must carry a readable Agent: trailer,
 // read the way git reads it: git log --format=%(trailers:key=Agent,valueonly).
-// Usage: node scripts/check-commits.mjs <before> <after>   (the pushed range, before..after)
+// Usage: node <the anchor's copy of check-commits.mjs> <anchor> <after>   (the range anchor..after: the anchor is the last
+// commit a passing run deployed, so commits of dropped runs are covered; security@'s fourth ruling, Website 948820a7e)
 // Only ancestors of the pinned trusted base are skipped, decided by ancestry (security@'s control 8). No exemptions.
 // It is run from the last release tag's copy in CI (security@'s control 7). History is not rewritten (ACC-015).
 // Prints OK or lists each commit that fails and exits 1.

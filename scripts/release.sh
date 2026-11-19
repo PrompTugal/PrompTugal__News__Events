@@ -14,18 +14,29 @@ node scripts/leak-scan.mjs
 node scripts/check-commits.mjs origin/dev HEAD
 node scripts/test-check-signatures.mjs
 node scripts/test-leak-scan.mjs
-# The security checks run from the last release tag's copy, never this tree's, and fail if it is missing (security@'s
-# controls 7 and 8, Website fae9649db). The functional gates (data, build, validate) run from this tree.
-git fetch -q --tags origin
+node scripts/test-workflow.mjs
+# The security checks run from the anchor's copy: the newest commit GitHub's own record shows was deployed to
+# github-pages by a passing run (security@'s fourth ruling, Website 948820a7e; read here from the live version.json). Tags
+# are not used. No anchor, an anchor that is not an ancestor of HEAD, or a missing checker fails: there is no fallback.
+anchor() {
+  # Locally, the live site's /version.json names the same commit as GitHub's deployment record: only a passing CI run can
+  # deploy it, so a push alone cannot write it (the public API is rate-limited from shared hosts). CI reads the deployment record.
+  node -e '
+    fetch("https://events.promptugal.news/version.json", { cache: "no-store", redirect: "error", signal: AbortSignal.timeout(20000) })
+      .then((r) => r.ok ? r.json() : Promise.reject(new Error("HTTP " + r.status)))
+      .then((v) => { if (typeof v.commit !== "string" || !/^[0-9a-f]{40}$/.test(v.commit)) process.exit(1); console.log(v.commit); })
+      .catch(() => process.exit(1));'
+}
 trusted_check() {
-  local last d rc=0; last=$(git describe --tags --abbrev=0 --match 'v*' origin/dev 2>/dev/null || true)
-  [ -n "$last" ] || { echo "no release tag to take the checks from" >&2; return 1; }
+  local a d rc=0; a=$(anchor) || { echo "no successful github-pages deployment to anchor on" >&2; return 1; }
+  git cat-file -e "$a^{commit}" 2>/dev/null || { echo "the anchor $a is not in this history (git fetch)" >&2; return 1; }
+  git merge-base --is-ancestor "$a" HEAD || { echo "the anchor $a is not an ancestor of HEAD" >&2; return 1; }
   d=$(mktemp -d)
   for f in check-signatures.mjs check-commits.mjs leak-scan.mjs; do
-    git cat-file -e "$last:scripts/$f" 2>/dev/null || { echo "no released copy of scripts/$f in $last" >&2; rm -rf "$d"; return 1; }
-    git show "$last:scripts/$f" > "$d/$f"
+    git cat-file -e "$a:scripts/$f" 2>/dev/null || { echo "no copy of scripts/$f in the anchor $a" >&2; rm -rf "$d"; return 1; }
+    git show "$a:scripts/$f" > "$d/$f"
   done
-  node "$d/leak-scan.mjs" && node "$d/check-commits.mjs" origin/dev HEAD && node "$d/check-signatures.mjs" HEAD || rc=1
+  node "$d/leak-scan.mjs" && node "$d/check-commits.mjs" "$a" HEAD && node "$d/check-signatures.mjs" HEAD || rc=1
   rm -rf "$d"; return $rc
 }
 trusted_check

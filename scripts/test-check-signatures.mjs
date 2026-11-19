@@ -130,6 +130,11 @@ t('a commit that removes the checker and adds an unsigned change fails (skips by
   x.g('rm', '-q', 'scripts/check-signatures.mjs');
   x.commit('remove the checker, unsigned');
 }, /: unsigned$/);
+t('an unsigned commit from a dropped run (between the last verified commit and the last push) still fails', (x) => {
+  x.commit('verified and deployed', { signer: KA });
+  x.commit('a push whose run was dropped, unsigned');
+  x.commit('the next push, signed', { signer: KA });
+}, /: unsigned$/);
 t('one bad commit among good ones fails the whole range', (x) => { x.commit('g1', { signer: KA }); x.commit('bad'); x.commit('g2', { signer: KA }); }, /: unsigned$/);
 
 // The checker is run from the trusted copy, never the pushed tree's: a push that replaces it with one that always passes,

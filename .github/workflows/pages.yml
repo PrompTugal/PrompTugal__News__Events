@@ -22,6 +22,10 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
+    # deployments: read lets the run read CI's own record of the last deployment that passed (security@'s fourth ruling).
+    permissions:
+      contents: read
+      deployments: read
     outputs:
       version: ${{ steps.version.outputs.version }}
       deploy: ${{ steps.mode.outputs.deploy }}
@@ -45,30 +49,40 @@ jobs:
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with:
           node-version: 22
-      - name: The trailer and signature checks, from the last release, before any pushed-tree code runs
-        # security@'s controls 7 (widened) and 8 (Website fae9649db): the security checks and their configs (keys, trusted bases,
-        # no exemptions) come from the last release tag's copy, extracted and run in this one step before any code from the
-        # pushed tree runs, under a clean environment (env -i), so nothing pushed can replace them or steer node. If the tag or a
-        # file is missing, this fails: there is no fallback. From the last release tag, not github.event.before: GitHub drops a
-        # pending run when a newer one queues (specialist.code@ finding 3b).
+      - name: The trailer and signature checks, from the last verified deployment, before any pushed-tree code runs
+        # security@'s fourth ruling (Website 948820a7e): the anchor A is the newest commit a passing run deployed, read from
+        # GitHub's own deployment record for github-pages with this run's read token (a push alone cannot write it; a person
+        # or token with deployments write access could, until Dinis restricts the github-pages environment to dev). Tags are not
+        # used. A must exist and be an ancestor of AFTER, or the run fails. The checked range is A..AFTER (so commits of
+        # dropped runs are covered) and the checkers come from A's tree, extracted and run in this step before any pushed-tree
+        # code runs, under env -i. There is no fallback: no A, no checker in A, or A not an ancestor of AFTER fails the run.
         id: trusted
         env:
           AFTER: ${{ github.sha }}
+          GH_TOKEN: ${{ github.token }}
         run: |
           if [ "$(git rev-parse --is-shallow-repository)" != "false" ]; then echo "a shallow checkout: the checks need the full history" >&2; exit 1; fi
-          last=$(git describe --tags --abbrev=0 --match "v${VERSION_BASE}.*" "$AFTER^" 2>/dev/null || true)
-          if [ -z "$last" ]; then echo "no release tag to take the checks from" >&2; exit 1; fi
-          echo "last=$last" >> "$GITHUB_OUTPUT"
+          A=""
+          for row in $(gh api "repos/$GITHUB_REPOSITORY/deployments?environment=github-pages&per_page=50" --jq '.[] | "\(.id):\(.sha)"'); do
+            state=$(gh api "repos/$GITHUB_REPOSITORY/deployments/${row%%:*}/statuses?per_page=1" --jq '.[0].state // ""') || { echo "cannot read a deployment status" >&2; exit 1; }
+            if [ "$state" = "success" ]; then A="${row##*:}"; break; fi
+          done
+          if ! printf '%s' "$A" | grep -Eq '^[0-9a-f]{40}$'; then echo "no successful github-pages deployment to anchor on" >&2; exit 1; fi
+          git cat-file -e "$A^{commit}" 2>/dev/null || { echo "the anchor $A is not in this history" >&2; exit 1; }
+          git merge-base --is-ancestor "$A" "$AFTER" || { echo "the anchor $A is not an ancestor of $AFTER (a force push?)" >&2; exit 1; }
+          echo "anchor=$A" >> "$GITHUB_OUTPUT"
           d=$(mktemp -d)
           for f in check-commits.mjs check-signatures.mjs; do
-            git cat-file -e "$last:scripts/$f" 2>/dev/null || { echo "no released copy of scripts/$f in $last" >&2; exit 1; }
-            git show "$last:scripts/$f" > "$d/$f"
+            git cat-file -e "$A:scripts/$f" 2>/dev/null || { echo "no copy of scripts/$f in the anchor $A" >&2; exit 1; }
+            git show "$A:scripts/$f" > "$d/$f"
           done
-          env -i PATH="$PATH" HOME="$HOME" node "$d/check-commits.mjs" "$last" "$AFTER"
+          env -i PATH="$PATH" HOME="$HOME" node "$d/check-commits.mjs" "$A" "$AFTER"
           env -i PATH="$PATH" HOME="$HOME" node "$d/check-signatures.mjs" "$AFTER"
           rm -rf "$d"
-      - name: The signature check's own tests (the pushed code)
-        run: node scripts/test-check-signatures.mjs
+      - name: The signature check's and the workflow's own tests (the pushed code)
+        run: |
+          node scripts/test-check-signatures.mjs
+          node scripts/test-workflow.mjs
       - name: The leak scan's key rules have tests
         run: node scripts/test-leak-scan.mjs
       - name: Copy the events data from data.promptugal.news (a failed read keeps the copy in git)
@@ -79,13 +93,13 @@ jobs:
         env:
           SITE_VERSION: ${{ steps.version.outputs.version }}
       - run: node scripts/validate.mjs
-      - name: Leak scan (tracked files and the built site; the released scan, extracted and run in this step, clean environment)
+      - name: Leak scan (tracked files and the built site; the anchor's scan, extracted and run in this step, clean environment)
         env:
-          LAST: ${{ steps.trusted.outputs.last }}
+          A: ${{ steps.trusted.outputs.anchor }}
         run: |
           d=$(mktemp -d)
-          git cat-file -e "$LAST:scripts/leak-scan.mjs" 2>/dev/null || { echo "no released copy of the leak scan in $LAST" >&2; exit 1; }
-          git show "$LAST:scripts/leak-scan.mjs" > "$d/leak-scan.mjs"
+          git cat-file -e "$A:scripts/leak-scan.mjs" 2>/dev/null || { echo "no copy of the leak scan in the anchor $A" >&2; exit 1; }
+          git show "$A:scripts/leak-scan.mjs" > "$d/leak-scan.mjs"
           env -i PATH="$PATH" HOME="$HOME" node "$d/leak-scan.mjs"
       - if: steps.mode.outputs.deploy == 'true'
         uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b # v5
