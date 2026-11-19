@@ -5,7 +5,10 @@
 // change their result. These read the workflow and release.sh as text: that shell runs only in CI and at release, so it is
 // guarded here by shape. events.b@PrompTugal.dinis, 19 November 2026. Code: Apache-2.0.
 import { readFileSync } from 'node:fs';
-import { spawnSync } from 'node:child_process';
+import { spawnSync, execFileSync } from 'node:child_process';
+import { mkdtempSync, writeFileSync, mkdirSync, symlinkSync, rmSync } from 'node:fs';
+import { tmpdir } from 'node:os';
+import { join } from 'node:path';
 
 // Comments are removed first, so no test can be satisfied by a comment that merely mentions a step (library.b@'s
 // LIB-2026-067): whole comment lines, and a trailing " # ..." after code.
@@ -48,6 +51,43 @@ const cases = [
     const refuse = ['git version 2.41.9', 'git version 1.99', 'git version 2.39.5 (Apple Git-154)', 'git version 08.1.0', 'git version 2.08.0', 'git version 2.042.0',
       'git version 2.18446744073709551700.0', 'git version x.y', 'git version 2.43-rc1', 'git version 2.42rc', ''];
     return pass.every(run) && !refuse.some(run);
+  }],
+  // security@'s control 10 (Website ed70bd996): the block in the verify job, run in throwaway repositories.
+  ['control 10: a pushed symlink fails, one listed in A passes, one listed only in the pushed tree fails, one added and removed fails', () => {
+    const raw = readFileSync('.github/workflows/pages.yml', 'utf8').split('\n');
+    const i = raw.findIndex((l) => /# control-10 begin/.test(l)), j = raw.findIndex((l) => /# control-10 end/.test(l));
+    if (i < 0 || j < i) return false;
+    const block = raw.slice(i, j + 1).map((l) => l.replace(/^ {10}/, '')).join('\n');
+    const run = (setup) => {
+      const r = mkdtempSync(join(tmpdir(), 'ctl10-')), tmp = mkdtempSync(join(tmpdir(), 'ctl10t-'));
+      const g = (...a) => execFileSync('git', ['-C', r, '-c', 'user.email=t@example.invalid', '-c', 'user.name=t', '-c', 'commit.gpgsign=false', ...a], { stdio: 'pipe' }).toString().trim();
+      g('init', '-q'); writeFileSync(join(r, 'f'), 'x\n'); g('add', '-A'); g('commit', '-qm', 'base');
+      const A = setup(r, g) || g('rev-parse', 'HEAD~1');
+      const out = spawnSync('bash', ['-e', '-c', block + '\necho PASS'], { cwd: r, env: { PATH: process.env.PATH, HOME: tmp, A, AFTER: g('rev-parse', 'HEAD'), RUNNER_TEMP: tmp }, encoding: 'utf8' });
+      rmSync(r, { recursive: true, force: true }); rmSync(tmp, { recursive: true, force: true });
+      return out.stdout.includes('PASS') ? 'PASS' : out.stderr;
+    };
+    const commit = (g, m) => { g('add', '-A'); g('commit', '-qm', m); };
+    const exc = (r, line) => { mkdirSync(join(r, '.github'), { recursive: true }); writeFileSync(join(r, '.github/symlink-exceptions.txt'), `# path<TAB>reason\n${line}\n`); };
+    const pushed = run((r, g) => { symlinkSync('f', join(r, 'link')); commit(g, 'link'); });
+    const listed = run((r, g) => { exc(r, 'link\tneeded by the test'); commit(g, 'exceptions'); const A = g('rev-parse', 'HEAD'); symlinkSync('f', join(r, 'link')); commit(g, 'link'); return A; });
+    const onlyPushed = run((r, g) => { exc(r, 'link\tlisted in the push itself'); symlinkSync('f', join(r, 'link')); commit(g, 'link and its exception'); });
+    const noReason = run((r, g) => { exc(r, 'link'); commit(g, 'exceptions'); const A = g('rev-parse', 'HEAD'); symlinkSync('f', join(r, 'link')); commit(g, 'link'); return A; });
+    const addRemove = run((r, g) => { const A = g('rev-parse', 'HEAD'); symlinkSync('f', join(r, 'link')); commit(g, 'add'); rmSync(join(r, 'link')); commit(g, 'remove'); return A; });
+    const untracked = run((r, g) => { writeFileSync(join(r, 'g'), 'y\n'); commit(g, 'plain'); symlinkSync('/etc/hostname', join(r, 'stray')); });
+    const merged = run((r, g) => { const A = g('rev-parse', 'HEAD'); g('checkout', '-qb', 'side'); symlinkSync('f', join(r, 'link')); commit(g, 'side link'); g('checkout', '-q', '-'); writeFileSync(join(r, 'h'), 'z\n'); commit(g, 'main'); g('merge', '-q', '--no-ff', '-m', 'merge', 'side'); g('rm', '-q', 'link'); commit(g, 'drop'); return A; });
+    // a symlink that only the merge commit itself brings in (seen only with diff-tree -m)
+    const evilMerge = run((r, g) => { const A = g('rev-parse', 'HEAD'); g('checkout', '-qb', 'side'); writeFileSync(join(r, 's'), 's\n'); commit(g, 'side'); g('checkout', '-q', '-'); writeFileSync(join(r, 'h'), 'z\n'); commit(g, 'main'); g('merge', '-q', '--no-ff', '--no-commit', 'side'); symlinkSync('f', join(r, 'link')); g('add', '-A'); g('commit', '-qm', 'merge'); g('rm', '-q', 'link'); commit(g, 'drop'); return A; });
+    const blankReason = run((r, g) => { exc(r, 'link\t   '); commit(g, 'exceptions'); const A = g('rev-parse', 'HEAD'); symlinkSync('f', join(r, 'link')); commit(g, 'link'); return A; });
+    const clean = run((r, g) => { writeFileSync(join(r, 'g'), 'y\n'); commit(g, 'plain'); });
+    // a newline in a link's name must not match a listed path (AppSec review, 19 Nov 2026)
+    const newline = run((r, g) => { exc(r, 'docs\tlisted'); commit(g, 'exceptions'); const A = g('rev-parse', 'HEAD'); symlinkSync('f', join(r, 'docs\nevil')); commit(g, 'newline link'); return A; });
+    const refused = (x, why) => x !== 'PASS' && x.includes(why) && x.includes('symbolic links refused (control 10)');
+    const link = 'adds or changes a symbolic link: ';
+    const ok = refused(pushed, link + 'link') && listed === 'PASS' && refused(onlyPushed, link + 'link') && /needs a path, a tab and a reason: refused/.test(noReason) && /needs a path, a tab and a reason: refused/.test(blankReason)
+      && refused(addRemove, link + 'link') && refused(untracked, 'in the checked-out tree: stray') && refused(merged, link + 'link') && refused(evilMerge, link + 'link') && refused(newline, link + 'docs\nevil') && clean === 'PASS';
+    if (!ok) console.error('  control 10:', JSON.stringify({ pushed, listed, onlyPushed, noReason, addRemove, untracked, merged, evilMerge, blankReason, newline, clean }));
+    return ok;
   }],
   ['verify, deploy and tag run only for refs/heads/dev', () => [verify, deploy, tag].every((j) => /\n    if: [^\n]*github\.ref == 'refs\/heads\/dev'/.test(j))],
 ];
