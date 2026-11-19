@@ -114,6 +114,14 @@ t('an orphan commit merged in fails as an orphan', (x) => {
   x.g('checkout', '-q', '-f', 'dev');
   x.g('-c', 'commit.gpgsign=true', '-c', `user.signingkey=${KA.priv}`, 'merge', '-q', '--no-ff', '--allow-unrelated-histories', 'loose', '-m', `merge\n\nAgent: ${AGENT_A}\nClaude-Session: ${SESSION_A}`);
 }, /an orphan commit/);
+t('an orphan signed with its own key, carrying that key in its own tree, fails when merged in', (x) => {
+  x.g('checkout', '-q', '--orphan', 'own'); x.g('rm', '-rq', '--cached', '.');
+  writeFileSync(join(x.r, 'team/keys.json'), JSON.stringify({ keys: [{ agent: AGENT_B, session: SESSION_B, ssh_signing: { public_key: KB.pub } }] }));
+  x.g('add', 'team/keys.json');
+  x.g('-c', 'commit.gpgsign=true', '-c', `user.signingkey=${KB.priv}`, 'commit', '-q', '-m', `own keys\n\nAgent: ${AGENT_B}\nClaude-Session: ${SESSION_B}`);
+  x.g('checkout', '-q', '-f', 'dev');
+  x.g('-c', 'commit.gpgsign=true', '-c', `user.signingkey=${KA.priv}`, 'merge', '-q', '--no-ff', '--allow-unrelated-histories', '-X', 'ours', 'own', '-m', `merge\n\nAgent: ${AGENT_A}\nClaude-Session: ${SESSION_A}`);
+}, /an orphan commit/);
 t('a new history that does not descend from the trusted base fails', (x) => {
   x.g('checkout', '-q', '--orphan', 'fresh');
   x.g('-c', 'commit.gpgsign=true', '-c', `user.signingkey=${KA.priv}`, 'commit', '-q', '-m', `fresh root with its own keys\n\nAgent: ${AGENT_A}\nClaude-Session: ${SESSION_A}`);
@@ -131,6 +139,13 @@ cases.push({ name: 'a pushed checker that always passes cannot check itself: the
   let out = '';
   try { execFileSync('node', [trusted, 'HEAD', `--base=${x.base}`], { cwd: x.r, stdio: 'pipe' }); out = '(passed)'; } catch (e) { out = String(e.stderr); }
   x.result = pushed === 'passes' && /: unsigned/.test(out) ? [] : [`pushed copy ${pushed}; trusted copy: ${out.trim()}`];
+}, expect: 'custom' });
+cases.push({ name: 'a shallow checkout is refused', fn: (x) => {
+  x.commit('ok', { signer: KA });
+  const shallow = join(root, `shallow${Math.random().toString(36).slice(2, 8)}`);
+  execFileSync('git', ['clone', '-q', '--depth', '1', `file://${x.r}`, shallow], { stdio: 'pipe' });
+  const { failures } = check('HEAD', shallow, { base: x.base });
+  x.result = failures.some((f) => /a shallow checkout/.test(f)) ? [] : [`got: ${failures.join(' | ') || '(passed)'}`];
 }, expect: 'custom' });
 let failed = 0, i = 0;
 try {

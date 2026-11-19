@@ -42,6 +42,8 @@ export const TRUSTED_BASE = '284a5ea016a9e93ab10a639cd7be186ec7b2a843';
 export function check(tip = 'HEAD', cwd = process.cwd(), { base: trusted = TRUSTED_BASE } = {}) {
   const failures = [];
   if (!tryGit(['-C', cwd, 'rev-parse', '--verify', '--quiet', `${tip}^{commit}`])) return { failures: [`${tip}: unknown commit`], checked: 0 };
+  // A shallow checkout hides history (and parents), so it is refused (security@'s control 6, 19 Nov 2026).
+  if (tryGit(['-C', cwd, 'rev-parse', '--is-shallow-repository']) !== 'false') return { failures: ['a shallow checkout: fetch the full history (fetch-depth 0)'], checked: 0 };
   if (!/^[0-9a-f]{40}$/.test(trusted) || !tryGit(['-C', cwd, 'rev-parse', '--verify', '--quiet', `${trusted}^{commit}`])) return { failures: ['the trusted base is not in this repository'], checked: 0 };
   if (tryGit(['-C', cwd, 'merge-base', '--is-ancestor', trusted, tip]) === null) return { failures: [`${tip}: does not descend from the trusted base ${trusted.slice(0, 7)}`], checked: 0 };
   const base = trusted;

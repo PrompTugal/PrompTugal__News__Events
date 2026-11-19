@@ -25,7 +25,7 @@ Every commit after the one that added the check must carry a good git SSH signat
 - (1) Every commit is verified against the published keys and both trailers; one failure fails the whole run, and the workflow deploys nothing from a failed build.
 - (2) Keys come from the parent commit's `team/keys.json`, never the commit's own.
 - (3) Every commit in the range is listed (merges and side branches included); a merge is checked against the keys of all its parents.
-- (2b) The base is pinned: every checked tip must descend from 284a5ea (the commit that added the check), and an orphan commit in the range fails, so a pushed history of its own cannot bring its own keys (videos.b@'s finding, 19 November 2026).
+- (2b) The base is pinned: every checked tip must descend from 284a5ea (the commit that added the check), and an orphan commit in the range fails (one brought in by merging an unrelated history too), a shallow checkout is refused (in the check and as its own CI step), so a pushed history of its own cannot bring its own keys (videos.b@'s finding, 19 November 2026).
 - (2c) CI and release.sh run the check from the last release tag's copy, never from the pushed tree, so a push cannot weaken the checker that checks it (videos.b@'s finding). Each change to the checker takes effect from the release after it.
 - (4) There is no exemption of any kind: this repository's CI makes no commits (it pushes version tags only).
 - (5) The signing half stays in the session, outside the repository. The leak scan fails any private key header anywhere, and flags any SSH public key except the exact ed25519 value at `keys[].ssh_signing.public_key` in `team/keys.json` (security@, 312c4601 and 1acd10498); both rules have tests (`scripts/test-leak-scan.mjs`).
