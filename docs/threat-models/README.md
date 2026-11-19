@@ -4,5 +4,6 @@ One per automation this site owns (Dinis Cruz, 18 November 2026, ~15:10 UTC: "we
 
 - [sync-data](sync-data.md): copying data.promptugal.news into the repository, in CI
 - [scheduled-rebuild](scheduled-rebuild.md): the build and deploy, on a push or by hand (no schedule)
+- [signed-commits](signed-commits.md): every commit signed by its agent's published key
 - [live-data](live-data.md): the pages re-drawn from the API in the reader's browser
 - [issue-forms](issue-forms.md): organisers' events and reports as an input channel

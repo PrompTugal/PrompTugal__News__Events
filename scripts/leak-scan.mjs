@@ -97,18 +97,38 @@ const allowed = (path, kind) => ALLOW.some(([p, k]) => p === path && k === kind)
 const PUBLIC_KEY_FILES = (p) => p === 'team/keys.json' || /^team\/keys\/[a-z0-9-]+\.json$/.test(p);
 
 // Returns a list of {line, kind} for one file's text. Never returns the match.
+// SSH public keys, every form (security@, Website 1acd10498; library.b@'s LIB-2026-060: ecdsa-sha2-* and sk- forms too).
+// Allowed only as the exact value of keys[].ssh_signing.public_key in team/keys.json, and only as ssh-ed25519.
+const SSH_PUB = new RegExp(`(?:^|[^A-Za-z0-9@.-])(?:ssh-ed25519|ssh-rsa|ssh-dss|ecdsa-sha2-nistp(?:256|384|521)|sk-ssh-ed25519@openssh\\.com|sk-ecdsa-sha2-nistp256@openssh\\.com)\\s+AAAA[A-Za-z0-9+/]{16,}={0,3}`);
+const SSH_PUBLISHED = /^ssh-ed25519 [A-Za-z0-9+/]{68}$/;
+const SSH_FINGERPRINT = /^SHA256:[A-Za-z0-9+/]{43}$/;
+// The exact published values: keys[].ssh_signing.public_key (ssh-ed25519 only) and keys[].ssh_signing.fingerprint (SHA256 form only).
+function publishedSshKeys(path, text) {
+  if (path !== 'team/keys.json') return [];
+  try {
+    const d = JSON.parse(text); const ks = Array.isArray(d?.keys) ? d.keys : [];
+    return [...ks.map((k) => k?.ssh_signing?.public_key).filter((v) => typeof v === 'string' && SSH_PUBLISHED.test(v)),
+      ...ks.map((k) => k?.ssh_signing?.fingerprint).filter((v) => typeof v === 'string' && SSH_FINGERPRINT.test(v))];
+  } catch { return []; }
+}
+
 export function scanText(path, text) {
   const found = [];
   const add = (line, kind) => { if (!allowed(path, kind)) found.push({ line, kind }); };
+  // A private key header fails everywhere, with no allowance of any kind (security@, Website 1acd10498).
+  text.split('\n').forEach((line, i) => { if (PRIVATE_BLOCK.test(line)) found.push({ line: i + 1, kind: 'private key block' }); });
   let body = text;
   if (PUBLIC_KEY_FILES(path)) {
     if (/private|passphrase|secret|seed/i.test(text)) add(0, 'public key file mentions a private part');
     // Blank the allowed public key blocks, keeping line numbers.
     body = text.replace(PUBLIC_BLOCK, (b) => b.replace(/[^\n]/g, ' '));
   }
+  // Blank each published SSH value only where it stands as its own field: "public_key": <value> or "fingerprint": <value>.
+  for (const v of publishedSshKeys(path, text)) for (const f of ['public_key', 'fingerprint']) { const pair = `"${f}": ${JSON.stringify(v)}`; body = body.split(pair).join(`"${f}": ${JSON.stringify(v).replace(/./g, ' ')}`); }
   body.split('\n').forEach((line, i) => {
     const n = i + 1;
-    for (const [kind, re] of SHAPES) if (re.test(line)) add(n, kind);
+    for (const [kind, re] of SHAPES) if (kind !== 'private key block' && re.test(line)) add(n, kind);
+    if (SSH_PUB.test(line)) found.push({ line: n, kind: 'ssh public key outside its published field' });
     if (PUBLIC_BEGIN.test(line)) add(n, 'public key outside team/keys');
     if (vaultPair(line)) add(n, 'sgit vault key shape (passphrase:vault_id)');
     for (const m of line.matchAll(ASSIGN)) {

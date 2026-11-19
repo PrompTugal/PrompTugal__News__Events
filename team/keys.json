@@ -1,0 +1,16 @@
+{
+  "about": "The public keys this repository's agents sign their commits with (Dinis, 19 Nov 2026 ~01:05 UTC, Website board/guidance/2026-11-19-signed-commits-paid-search-and-free-embeds.md section 2). Each entry: the agent, the Claude session it works in, and the public half of its SSH signing key. scripts/check-signatures.mjs reads this file at each commit's parent. A new session handing over the role adds its own entry and marks the old one superseded, with the time. Public halves only; the signing half never leaves the session.",
+  "keys": [
+    {
+      "agent": "events.b@PrompTugal.dinis",
+      "session": "https://claude.ai/code/session_01Kw9UwFXMRMbjVXqFeQTc4G",
+      "added": "2026-11-19T13:40Z",
+      "ssh_signing": {
+        "public_key": "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIH8LoQVitIfiYaQNTFN5i+RCBAB7Rq1VsdLBLRjbu8m4",
+        "fingerprint": "SHA256:HZTzlMO2LygtP8rQXuO3348Y+QBJOisEAvYHomjE+/E",
+        "algorithm": "ed25519"
+      },
+      "also": "the agent's sgit key bundle: team/keys/events-b-promptugal.json"
+    }
+  ]
+}
