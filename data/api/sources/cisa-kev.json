@@ -19,7 +19,7 @@
   "The US Cybersecurity and Infrastructure Security Agency's catalogue of vulnerabilities known to be exploited: each CVE with vendor, product, the day added and ransomware use; and totals per week and vendor, for cyber.promptugal.news's pulse. Products only, never a victim, host or address."
  ],
  "status": "read",
- "how": "sources/cisa-kev/collect.mjs reads https://www.cisa.gov/known-exploited-vulnerabilities-catalog (every 6 hours)",
+ "how": "sources/cisa-kev/collect.mjs reads https://www.cisa.gov/known-exploited-vulnerabilities-catalog (twice a day, at data.b@'s wakes; the source's own cadence: every 6 hours)",
  "terms": {
   "summary": "CC0 1.0: \"You may use this data in any legal manner\"; third-party links keep their own terms; no use of the CISA logo or DHS seal, no endorsement implied. Not reviewed by a person.",
   "page": "https://github.com/cisagov/kev-data/blob/develop/LICENSE",

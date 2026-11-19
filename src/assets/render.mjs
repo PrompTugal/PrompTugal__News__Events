@@ -200,3 +200,62 @@ export function listTree(items, opts = {}) {
 }
 export const eventHtml = (it, opts) => toHtml(eventTree(it, opts));
 export function listHtml(items, opts = {}) { const L = listTree(items, opts); return { html: L.nodes.map(toHtml).join('\n'), count: L.count }; }
+
+// ---- The past (Dinis, 19 Nov 2026 ~01:17 UTC, "show the past"), from data.b@'s events history: one renderer for the build
+// and the browser. Each event as its source first listed it, every change seen since, last seen and gone; the claims kept.
+// The same rules as the data gate (scripts/check-data.mjs): an item that fails them is dropped.
+const okDn = (d) => d == null || d === '' || okDate(d);
+export const okHistVal = (v) => v == null || (typeof v === 'string' && v.length <= 500) || (typeof v === 'number' && Number.isFinite(v));
+export const okHistEvent = (e) => !!e && typeof e === 'object' && okUrl(e.url) && !!e.first && typeof e.first === 'object' && typeof e.first.name === 'string' && e.first.name.trim() !== '' && e.first.name.length <= 2000
+  && okDate(e.first.startDate) && okDn(e.first.endDate) && (e.first.venue == null || (typeof e.first.venue === 'string' && e.first.venue.length <= 2000)) && okDate(e.first.at)
+  && okDn(e.last_seen) && okDn(e.gone_at) && (e.changes == null || (Array.isArray(e.changes) && e.changes.length <= 200));
+export const okHistClaim = (c) => !!c && typeof c === 'object' && typeof c.name === 'string' && c.name.trim() !== '' && c.name.length <= 2000 && okDate(c.startDate) && okDn(c.endDate);
+// At most 20 changes shown per event, 3000 events and 3000 claims in all (AppSec review, 19 Nov 2026: a bounded page).
+export const PAST_MAX = { events: 3000, claims: 3000, changes: 20 };
+export const histChangesOf = (e) => arr(e.changes).slice(0, 200).filter((c) => c && typeof c === 'object' && typeof c.field === 'string' && /^[A-Za-z_]{1,40}$/.test(c.field) && okDate(c.at) && okHistVal(c.from) && okHistVal(c.to)).slice(0, PAST_MAX.changes);
+// files: history files, each { place, history_from, data_read_at, events, claims }. A region's own file goes last: one event per
+// url, one claim per name and start date (the Algarve's file repeated its towns' claims until data.b@'s 15cdd1e).
+export function pastOf(files) {
+  const fs = arr(files).filter((h) => h && typeof h === 'object' && okId(h.place));
+  if (!fs.length) return null;
+  const seen = new Set(), seenC = new Set(), events = [], claims = [];
+  for (const h of fs) {
+    for (const e of arr(h.events).filter(okHistEvent)) if (!seen.has(e.url) && events.length < PAST_MAX.events) { seen.add(e.url); events.push({ ...e, place: h.place }); }
+    for (const c of arr(h.claims).filter(okHistClaim)) { const k = `${clean(c.name).toLowerCase()}|${dayPart(c.startDate)}`; if (!seenC.has(k) && claims.length < PAST_MAX.claims) { seenC.add(k); claims.push({ ...c, place: h.place }); } }
+  }
+  const endH = (e) => dayPart(e.first.endDate || e.first.startDate);
+  const times = (k) => fs.map((h) => h[k]).filter((x) => typeof x === 'string' && okDate(x)).sort();
+  return {
+    from: times('history_from')[0] || '', oldest: times('data_read_at')[0] || '', readAt: times('data_read_at').pop() || '',
+    events, claims,
+    changed: events.filter((e) => histChangesOf(e).length),
+    gone: events.filter((e) => e.gone_at),
+    passed: events.filter((e) => endH(e) < today).sort((a, b) => endH(b).localeCompare(endH(a))),
+    claimsPassed: claims.filter((c) => dayPart(c.endDate || c.startDate) < today),
+  };
+}
+const histVal = (v) => (v == null || v === '' ? '(none)' : clean(String(v).slice(0, 500)).slice(0, 200));
+function histItem(e, showPlace) {
+  const ch = histChangesOf(e).map((c) => n('li', null, `${c.field}: from ${histVal(c.from)} to ${histVal(c.to)} `, n('span', { class: 'small' }, `(seen ${fmtStamp(c.at)})`)));
+  return n('li', null, n('b', null, e.first.name), showPlace ? [' ', n('span', { class: 'small' }, `(${nameOf(e.place)})`)] : '',
+    `: first listed for ${fmtWhen(e.first.startDate, e.first.endDate)}${e.first.venue ? ` at ${e.first.venue}` : ''} `,
+    n('span', { class: 'small' }, `(first seen ${fmtStamp(e.first.at)}; last seen in its source ${fmtStamp(e.last_seen)}${e.gone_at ? `; gone from its source ${fmtStamp(e.gone_at)}` : ''}; `, A(e.url, `its page on ${host(e.url) || 'its source'}`), ')'),
+    ch.length ? n('ul', { class: 'changes' }, ch) : '');
+}
+// The section's content (its heading and status line stay on the page). opts: name, showPlace, cadence.
+export function pastTree(H, { name, showPlace = false, cadence = 'twice a day' } = {}) {
+  const list = (xs) => n('ul', { class: 'past' }, xs.map((e) => histItem(e, showPlace)));
+  const from = fmtStamp(H.from);
+  return [
+    n('p', null, `Since ${from}, data.promptugal.news has kept each event listed for ${name} exactly as its source first listed it, and every change seen since. Kept: `,
+      n('b', null, String(H.events.length)), ' events. Changed since: ', n('b', null, String(H.changed.length)), '. Gone from their source before their date: ', n('b', null, String(H.gone.length)),
+      `.${!H.changed.length && !H.gone.length && H.events.length ? ' None has changed or gone since it was first seen.' : ''} Before ${from} nothing was kept: a gap, not an absence. data.promptugal.news collects events ${cadence}, so a change is dated by the collection that first saw it.`),
+    ...(H.passed.length
+      ? [n('h3', null, `Dates passed (${H.passed.length})`), n('p', { class: 'small' }, 'What the organiser said would happen, as first listed. We have no record that it did; the history shows only whether the listing changed.'), list(H.passed)]
+      : [n('p', { class: 'small' }, `No event kept for ${name} has reached its date yet.`)]),
+    ...(H.changed.length ? [n('h3', null, `Changed since first listed (${H.changed.length})`), list(H.changed)] : []),
+    ...(H.gone.length ? [n('h3', null, `Gone from their source before their date (${H.gone.length})`), list(H.gone)] : []),
+    n('p', null, 'Claims found through Perplexity, kept as answered with their evidence, to be checked when their date comes: ', n('b', null, String(H.claims.length)),
+      H.claimsPassed.length ? `, ${H.claimsPassed.length} of them with their date passed` : '', '. None checked yet: they are claims, not confirmed listings.'),
+  ];
+}

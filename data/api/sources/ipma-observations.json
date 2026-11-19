@@ -19,7 +19,7 @@
   "The latest hourly observation of each IPMA surface station: temperature, humidity, wind, rain, pressure and radiation, with the station's name and position."
  ],
  "status": "read",
- "how": "sources/ipma-observations/collect.mjs reads https://api.ipma.pt/open-data/observation/meteorology/stations/observations.json (hourly)",
+ "how": "sources/ipma-observations/collect.mjs reads https://api.ipma.pt/open-data/observation/meteorology/stations/observations.json (twice a day, at data.b@'s wakes; the source's own cadence: hourly)",
  "terms": {
   "summary": "IPMA: free to copy and use for personal or public use if the use has no profit-making or offensive purpose; always name IPMA as the source.",
   "page": "https://api.ipma.pt/",

@@ -1,4 +1,17 @@
 {
+ "data_read_at": "2026-11-19T18:11:23Z",
+ "expected_cadence": {
+  "name": "twice a day",
+  "seconds": 43200,
+  "stale_after_seconds": 46800,
+  "collected_as": "hourly",
+  "why": "data.b@ collects twice a day (07:03 and 18:03 Lisbon) since 19 Nov 2026"
+ },
+ "schema": {
+  "openapi": "https://data.promptugal.news/api/v1/openapi.json",
+  "path": "/api/v1/history/events/index.json",
+  "version": "v1"
+ },
  "license": {
   "name": "CC BY 4.0",
   "url": "https://creativecommons.org/licenses/by/4.0/",
@@ -8,7 +21,6 @@
   "commercial_note": "Each history file states its own licence; IPMA and Open-Meteo values are not for commercial use."
  },
  "about": "Events as first listed and every change since, and the claims kept to be checked, one file per place.",
- "data_read_at": "2026-11-19T12:12:43Z",
  "history_from": "2026-11-18T23:43:33Z",
  "places": [
   {
@@ -17,6 +29,7 @@
    "changed": 0,
    "gone": 0,
    "claims": 9,
+   "claims_in_towns_files": 0,
    "claims_dropped_wording": 0,
    "url": "https://data.promptugal.news/api/v1/history/events/albufeira.json"
   },
@@ -26,6 +39,7 @@
    "changed": 0,
    "gone": 0,
    "claims": 3,
+   "claims_in_towns_files": 0,
    "claims_dropped_wording": 0,
    "url": "https://data.promptugal.news/api/v1/history/events/alcoutim.json"
   },
@@ -34,8 +48,9 @@
    "events": 0,
    "changed": 0,
    "gone": 0,
-   "claims": 98,
-   "claims_dropped_wording": 1,
+   "claims": 0,
+   "claims_in_towns_files": 99,
+   "claims_dropped_wording": 0,
    "url": "https://data.promptugal.news/api/v1/history/events/algarve.json"
   },
   {
@@ -44,6 +59,7 @@
    "changed": 0,
    "gone": 0,
    "claims": 1,
+   "claims_in_towns_files": 0,
    "claims_dropped_wording": 0,
    "url": "https://data.promptugal.news/api/v1/history/events/aljezur.json"
   },
@@ -53,6 +69,7 @@
    "changed": 0,
    "gone": 0,
    "claims": 4,
+   "claims_in_towns_files": 0,
    "claims_dropped_wording": 0,
    "url": "https://data.promptugal.news/api/v1/history/events/castro-marim.json"
   },
@@ -62,6 +79,7 @@
    "changed": 0,
    "gone": 0,
    "claims": 7,
+   "claims_in_towns_files": 0,
    "claims_dropped_wording": 0,
    "url": "https://data.promptugal.news/api/v1/history/events/faro.json"
   },
@@ -71,6 +89,7 @@
    "changed": 0,
    "gone": 0,
    "claims": 8,
+   "claims_in_towns_files": 0,
    "claims_dropped_wording": 0,
    "url": "https://data.promptugal.news/api/v1/history/events/lagoa.json"
   },
@@ -80,6 +99,7 @@
    "changed": 0,
    "gone": 0,
    "claims": 5,
+   "claims_in_towns_files": 0,
    "claims_dropped_wording": 0,
    "url": "https://data.promptugal.news/api/v1/history/events/lagos.json"
   },
@@ -89,6 +109,7 @@
    "changed": 0,
    "gone": 0,
    "claims": 0,
+   "claims_in_towns_files": 0,
    "claims_dropped_wording": 0,
    "url": "https://data.promptugal.news/api/v1/history/events/lisboa.json"
   },
@@ -98,6 +119,7 @@
    "changed": 0,
    "gone": 0,
    "claims": 11,
+   "claims_in_towns_files": 0,
    "claims_dropped_wording": 0,
    "url": "https://data.promptugal.news/api/v1/history/events/loule.json"
   },
@@ -107,6 +129,7 @@
    "changed": 0,
    "gone": 0,
    "claims": 3,
+   "claims_in_towns_files": 0,
    "claims_dropped_wording": 0,
    "url": "https://data.promptugal.news/api/v1/history/events/monchique.json"
   },
@@ -116,6 +139,7 @@
    "changed": 0,
    "gone": 0,
    "claims": 9,
+   "claims_in_towns_files": 0,
    "claims_dropped_wording": 0,
    "url": "https://data.promptugal.news/api/v1/history/events/olhao.json"
   },
@@ -125,6 +149,7 @@
    "changed": 0,
    "gone": 0,
    "claims": 4,
+   "claims_in_towns_files": 0,
    "claims_dropped_wording": 0,
    "url": "https://data.promptugal.news/api/v1/history/events/portimao.json"
   },
@@ -134,6 +159,7 @@
    "changed": 0,
    "gone": 0,
    "claims": 9,
+   "claims_in_towns_files": 0,
    "claims_dropped_wording": 0,
    "url": "https://data.promptugal.news/api/v1/history/events/quarteira.json"
   },
@@ -143,6 +169,7 @@
    "changed": 0,
    "gone": 0,
    "claims": 9,
+   "claims_in_towns_files": 0,
    "claims_dropped_wording": 0,
    "url": "https://data.promptugal.news/api/v1/history/events/sao-bras-de-alportel.json"
   },
@@ -152,6 +179,7 @@
    "changed": 0,
    "gone": 0,
    "claims": 4,
+   "claims_in_towns_files": 0,
    "claims_dropped_wording": 0,
    "url": "https://data.promptugal.news/api/v1/history/events/silves.json"
   },
@@ -161,6 +189,7 @@
    "changed": 0,
    "gone": 0,
    "claims": 13,
+   "claims_in_towns_files": 0,
    "claims_dropped_wording": 1,
    "url": "https://data.promptugal.news/api/v1/history/events/tavira.json"
   },
@@ -170,6 +199,7 @@
    "changed": 0,
    "gone": 0,
    "claims": 6,
+   "claims_in_towns_files": 0,
    "claims_dropped_wording": 0,
    "url": "https://data.promptugal.news/api/v1/history/events/vila-do-bispo.json"
   },
@@ -179,6 +209,7 @@
    "changed": 0,
    "gone": 0,
    "claims": 3,
+   "claims_in_towns_files": 0,
    "claims_dropped_wording": 0,
    "url": "https://data.promptugal.news/api/v1/history/events/vila-real-de-santo-antonio.json"
   }

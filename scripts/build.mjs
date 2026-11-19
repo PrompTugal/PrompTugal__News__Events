@@ -243,58 +243,22 @@ ${fresh}
 }
 
 // ---------------------------------------------------------------- the past (Dinis, 19 Nov 2026 ~01:17 UTC, Website board/guidance/2026-11-19-show-the-past.md)
-// From data.b@'s events history: each event as its source first listed it (never overwritten), every change seen since,
-// when it was last seen and when it went; and the claims found through Perplexity, kept to be checked. Built copy; the
-// history from its first read on (history_from) only, and that gap is said on the page.
+// From data.b@'s events history, drawn by render.mjs's pastTree for both the build and the browser (live.js reloads it, Dinis
+// ~01:13 UTC: load the data in the browser). The history from its first read on (history_from) only; the gap is said.
 const histIndex = readJson('data/api/history/index.json', null);
 const histFile = (p) => { const h = readJson(`data/api/history/${p}.json`, null); return h && h.place === p ? h : null; };
-const dayOf = (x) => String(x || '').slice(0, 10);
-// The same rules as the data gate (scripts/check-data.mjs), since the gate lets a few bad items through: a bad item is dropped.
-const okD = (d) => okDate(d), okDn = (d) => d == null || d === '' || okDate(d);
-const okVal = (v) => v == null || (typeof v === 'string' && v.length <= 500) || (typeof v === 'number' && Number.isFinite(v));
-const okH = (e) => e && typeof e === 'object' && okUrl(e.url) && e.first && typeof e.first === 'object' && typeof e.first.name === 'string' && e.first.name.trim() && e.first.name.length <= 2000
-  && okD(e.first.startDate) && okDn(e.first.endDate) && (e.first.venue == null || (typeof e.first.venue === 'string' && e.first.venue.length <= 2000)) && okD(e.first.at)
-  && okDn(e.last_seen) && okDn(e.gone_at) && (e.changes == null || (Array.isArray(e.changes) && e.changes.length <= 200));
-const okC = (c) => c && typeof c === 'object' && typeof c.name === 'string' && c.name.trim() && c.name.length <= 2000 && okD(c.startDate) && okDn(c.endDate);
-const changesOf = (e) => (Array.isArray(e.changes) ? e.changes : []).filter((c) => c && typeof c === 'object' && typeof c.field === 'string' && /^[A-Za-z_]{1,40}$/.test(c.field) && okD(c.at) && okVal(c.from) && okVal(c.to));
-const histFiles = (p) => (p === REGION ? [REGION, ...algarveIds] : [p]).filter((q) => histFile(q));
-function histOf(p) {
-  const files = histFiles(p).map(histFile);
-  if (!files.length) return null;
-  const seen = new Set(), seenC = new Set(), events = [], claims = [];
-  for (const h of [...files].sort((x, y) => (x.place === REGION) - (y.place === REGION))) {
-    for (const e of (Array.isArray(h.events) ? h.events : []).filter(okH)) if (!seen.has(e.url)) { seen.add(e.url); events.push({ ...e, place: h.place }); }
-    // The Algarve's own file repeats its towns' claims (92 of its 92 names, 19 Nov 2026): one claim per name and start date.
-    for (const c of (Array.isArray(h.claims) ? h.claims : []).filter(okC)) { const k = `${clean(c.name).toLowerCase()}|${dayOf(c.startDate)}`; if (!seenC.has(k)) { seenC.add(k); claims.push({ ...c, place: h.place }); } }
-  }
-  const endH = (e) => dayOf(e.first.endDate || e.first.startDate);
-  return {
-    from: files.map((h) => h.history_from).filter(Boolean).sort()[0] || histIndex?.history_from,
-    readAt: files.map((h) => h.data_read_at).filter(Boolean).sort().pop(),
-    events, claims,
-    changed: events.filter((e) => changesOf(e).length),
-    gone: events.filter((e) => e.gone_at),
-    passed: events.filter((e) => endH(e) < today).sort((a, b) => endH(b).localeCompare(endH(a))),
-    claimsPassed: claims.filter((c) => dayOf(c.endDate || c.startDate) < today),
-  };
-}
-const val = (v) => (v == null || v === '' ? '(none)' : clean(String(v).slice(0, 500)).slice(0, 200));
-const histLine = (e, showPlace) => {
-  const ch = changesOf(e).map((c) => `<li>${esc(c.field)}: from ${esc(val(c.from))} to ${esc(val(c.to))} <span class="small">(seen ${esc(fmtStamp(c.at))})</span></li>`).join('');
-  return `<li><b>${esc(e.first.name)}</b>${showPlace ? ` <span class="small">(${esc(nameOf(e.place))})</span>` : ''}: first listed for ${esc(fmtWhen(e.first.startDate, e.first.endDate))}${e.first.venue ? ` at ${esc(e.first.venue)}` : ''} <span class="small">(first seen ${esc(fmtStamp(e.first.at))}; last seen in its source ${esc(fmtStamp(e.last_seen))}${e.gone_at ? `; gone from its source ${esc(fmtStamp(e.gone_at))}` : ''}; ${link(e.url, 'its page')})</span>${ch ? `<ul class="changes">${ch}</ul>` : ''}</li>`;
-};
+// The Algarve's own file goes last, after its towns' (see pastOf).
+const histFiles = (p) => (p === REGION ? [...algarveIds, REGION] : [p]).filter((q) => histFile(q));
+const histOf = (p) => { const H = R.pastOf(histFiles(p).map(histFile)); if (H && !H.from && histIndex?.history_from) H.from = histIndex.history_from; return H; };
 function pastSection(p) {
-  const H = histOf(p), nm = nameOf(p);
+  const H = histOf(p), nm = nameOf(p), files = histFiles(p);
   if (!H) return { html: `<section id="past"><h2>The past</h2><p class="none">No history kept for ${esc(nm)} yet.</p></section>`, md: '' };
-  const list = (xs) => `<ul class="past">${xs.map((e) => histLine(e, p === REGION)).join('')}</ul>`;
+  const body = R.pastTree(H, { name: nm, showPlace: p === REGION, cadence }).map(R.toHtml).join('\n');
   const html = `<section id="past"><h2>The past: what was listed, kept as first listed</h2>
-<p>Since ${esc(fmtStamp(H.from))}, data.promptugal.news has kept each event listed for ${esc(nm)} exactly as its source first listed it, and every change seen since. Kept: <b>${H.events.length}</b> events. Changed since: <b>${H.changed.length}</b>. Gone from their source before their date: <b>${H.gone.length}</b>.${!H.changed.length && !H.gone.length && H.events.length ? ' None has changed or gone since it was first seen.' : ''} Before ${esc(fmtStamp(H.from))} nothing was kept: a gap, not an absence. data.promptugal.news collects events ${esc(cadence)}, so a change is dated by the collection that first saw it.</p>
-${H.passed.length ? `<h3>Dates passed (${H.passed.length})</h3><p class="small">What the organiser said would happen, as first listed. We have no record that it did; the history shows only whether the listing changed.</p>${list(H.passed)}` : `<p class="small">No event kept for ${esc(nm)} has reached its date yet.</p>`}
-${H.changed.length ? `<h3>Changed since first listed (${H.changed.length})</h3>${list(H.changed)}` : ''}
-${H.gone.length ? `<h3>Gone from their source before their date (${H.gone.length})</h3>${list(H.gone)}` : ''}
-<p>Claims found through Perplexity, kept as answered with their evidence, to be checked when their date comes: <b>${H.claims.length}</b>${H.claimsPassed.length ? `, ${H.claimsPassed.length} of them with their date passed` : ''}. None checked yet: they are claims, not confirmed listings.</p>
-<p class="fresh">Built copy: history read ${esc(fmtStamp(H.readAt))}. The data: ${histFiles(p).map((q) => link(`${DATA}/api/v1/history/events/${q}.json`, `history/events/${q}.json`)).join(', ')}. The records CC BY 4.0 (PrompTugal.news); each event under its source's terms. <a href="/past/">Every place's past</a>.</p></section>`;
-  const md = `\n\n## The past\n\nSince ${fmtStamp(H.from)}: ${H.events.length} events kept as first listed, ${H.changed.length} changed, ${H.gone.length} gone from their source, ${H.passed.length} with their date passed; ${H.claims.length} claims found through Perplexity kept to be checked.${H.passed.length ? `\n\n${H.passed.map((e) => `- ${mdLink(e.url, e.first.name)}: first listed for ${fmtWhen(e.first.startDate, e.first.endDate)}${e.first.venue ? ` at ${mdText(e.first.venue)}` : ''}; last seen ${fmtStamp(e.last_seen)}${changesOf(e).length ? `; ${changesOf(e).length} change(s)` : ''}`).join('\n')}` : ''}`;
+<div id="past-body" data-hist="${files.join(',')}" data-name="${esc(nm)}" data-show-place="${p === REGION ? 1 : 0}" data-read-at="${esc(H.readAt)}" data-stale-after="${staleAfter}" data-cadence="${esc(cadence)}">${body}</div>
+<p class="fresh" id="past-status">Built copy: history read ${esc(fmtStamp(H.readAt))}. ${esc(licenceOf(files.map(histFile)))} Your browser loads the live files when it can.</p>
+<p class="small">The data: ${files.map((q) => link(`${DATA}/api/v1/history/events/${q}.json`, `history/events/${q}.json`)).join(', ')}. The records CC BY 4.0 (PrompTugal.news); each event under its source's terms. <a href="/past/">Every place's past</a>.</p></section>`;
+  const md = `\n\n## The past\n\nSince ${fmtStamp(H.from)}: ${H.events.length} events kept as first listed, ${H.changed.length} changed, ${H.gone.length} gone from their source, ${H.passed.length} with their date passed; ${H.claims.length} claims found through Perplexity kept to be checked.${H.passed.length ? `\n\n${H.passed.map((e) => `- ${mdLink(e.url, e.first.name)}: first listed for ${fmtWhen(e.first.startDate, e.first.endDate)}${e.first.venue ? ` at ${mdText(e.first.venue)}` : ''}; last seen ${fmtStamp(e.last_seen)}${R.histChangesOf(e).length ? `; ${R.histChangesOf(e).length} change(s)` : ''}`).join('\n')}` : ''}`;
   return { html, md };
 }
 

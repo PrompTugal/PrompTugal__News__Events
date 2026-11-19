@@ -19,7 +19,7 @@
   "Wave height, period and direction, total sea and sea temperature for each coastal place, today and the next two days."
  ],
  "status": "read",
- "how": "sources/ipma-sea/collect.mjs reads https://api.ipma.pt/open-data/forecast/oceanography/daily/ (hourly)",
+ "how": "sources/ipma-sea/collect.mjs reads https://api.ipma.pt/open-data/forecast/oceanography/daily/ (twice a day, at data.b@'s wakes; the source's own cadence: hourly)",
  "terms": {
   "summary": "IPMA: free to copy and use for personal or public use if the use has no profit-making or offensive purpose; always name IPMA as the source.",
   "page": "https://api.ipma.pt/",

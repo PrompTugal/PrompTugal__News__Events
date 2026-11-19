@@ -19,7 +19,7 @@
   "The UV index forecast by place and day."
  ],
  "status": "read",
- "how": "sources/ipma-uv/collect.mjs reads https://api.ipma.pt/open-data/forecast/meteorology/uv/uv.json (hourly)",
+ "how": "sources/ipma-uv/collect.mjs reads https://api.ipma.pt/open-data/forecast/meteorology/uv/uv.json (twice a day, at data.b@'s wakes; the source's own cadence: hourly)",
  "terms": {
   "summary": "IPMA: free to copy and use for personal or public use if the use has no profit-making or offensive purpose; always name IPMA as the source.",
   "page": "https://api.ipma.pt/",

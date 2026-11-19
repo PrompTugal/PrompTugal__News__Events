@@ -20,7 +20,7 @@
   "ENISA's EU Vulnerability Database (EUVD), read through its published API: the vulnerabilities published or updated in the 24 hours before each read, and EUVD's own latest and exploited lists. Each has its EUVD identifier, CVE aliases (checked), published and updated times, CVSS base score and version, a severity band (ours, from the score), vendor and product names, whether EUVD lists it as exploited, and a link to its EUVD page; and totals per day and severity (14 days), for cyber.promptugal.news's pulse. Products only, never a victim, host or address. No descriptions or reference links are kept."
  ],
  "status": "read",
- "how": "sources/euvd/collect.mjs reads https://euvd.enisa.europa.eu/ (every 6 hours)",
+ "how": "sources/euvd/collect.mjs reads https://euvd.enisa.europa.eu/ (twice a day, at data.b@'s wakes; the source's own cadence: every 6 hours)",
  "terms": {
   "summary": "EUVD's API page says no authentication is needed and sets limits of 100 records a request; the EUVD site's footer links ENISA's legal notice, 1.2: reproduction of material on ENISA's website is authorised if the source is acknowledged, unless stated otherwise. robots.txt of euvd.enisa.europa.eu: all agents, nothing disallowed; euvdservices.enisa.europa.eu (the API host) has no robots.txt (404). We name ENISA and the EUVD as the source. EUVD has no separate data licence page that we found: reuse rests on the ENISA legal notice (not reviewed by a person).",
   "page": "https://www.enisa.europa.eu/about-enisa/legal-notice",

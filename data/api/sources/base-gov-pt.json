@@ -19,7 +19,7 @@
   "Public contracts of the câmaras municipais of Lisboa and the Algarve's 16 municipalities, as contracting entity: object, contractors that are companies, price, dates and procedure, for the last 90 days."
  ],
  "status": "read",
- "how": "sources/base-gov-pt/collect.mjs reads https://dados.gov.pt/pt/datasets/66d72d488ca4b7cb2de28712/ (every 6 hours)",
+ "how": "sources/base-gov-pt/collect.mjs reads https://dados.gov.pt/pt/datasets/66d72d488ca4b7cb2de28712/ (twice a day, at data.b@'s wakes; the source's own cadence: every 6 hours)",
  "terms": {
   "summary": "IMPIC publishes these contracts as open data on dados.gov.pt with the licence \"Outra (Domínio Público)\" (other-pd, public domain); we name IMPIC and the Portal BASE as the source and link each contract's page.",
   "page": "https://dados.gov.pt/api/1/datasets/66d72d488ca4b7cb2de28712/",

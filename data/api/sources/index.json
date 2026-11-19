@@ -9,7 +9,7 @@
  },
  "about": "Every source PrompTugal knows of, read or not. For each one we do not read, the reason, quoted from its terms or robots.txt with the page and the date read. We respect whatever a source says; a request on the record is drafted by outreach@ and sent by a person, and the answer is kept here as written.",
  "counts": {
-  "read": 37,
+  "read": 38,
   "not-read": 129,
   "asked": 0,
   "allowed": 0,
@@ -56,6 +56,16 @@
     "portugal"
    ],
    "url": "https://data.promptugal.news/api/v1/sources/cisa-kev.json"
+  },
+  {
+   "id": "contracts-finder",
+   "name": "London public contracts (Contracts Finder)",
+   "kind": "open-data API",
+   "status": "read",
+   "places": [
+    "london"
+   ],
+   "url": "https://data.promptugal.news/api/v1/sources/contracts-finder.json"
   },
   {
    "id": "ea-flood",
@@ -1144,16 +1154,6 @@
    "url": "https://data.promptugal.news/api/v1/sources/london-datastore.json"
   },
   {
-   "id": "contracts-finder",
-   "name": "Contracts Finder (UK government procurement notices)",
-   "kind": "open-data API",
-   "status": "not-read",
-   "places": [
-    "london"
-   ],
-   "url": "https://data.promptugal.news/api/v1/sources/contracts-finder.json"
-  },
-  {
    "id": "data-police-uk",
    "name": "data.police.uk (street-level crime and outcomes)",
    "kind": "open-data API",
@@ -1742,6 +1742,17 @@
    "status": "not-read",
    "places": [],
    "url": "https://data.promptugal.news/api/v1/sources/first-epss.json"
+  },
+  {
+   "id": "skylinewebcams",
+   "name": "SkylineWebcams",
+   "kind": "public live camera",
+   "status": "not-read",
+   "places": [
+    "faro",
+    "portimao"
+   ],
+   "url": "https://data.promptugal.news/api/v1/sources/skylinewebcams.json"
   }
  ]
 }

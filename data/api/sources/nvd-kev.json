@@ -19,7 +19,7 @@
   "NIST's National Vulnerability Database, CVE API 2.0 with the hasKev filter: every CVE on CISA's Known Exploited Vulnerabilities list as NVD records it (CNA domain, status, CVSS, weakness types, vendors and products, published and lastModified, NVD's copy of the KEV dates), once a day. Descriptions and references are not kept."
  ],
  "status": "read",
- "how": "sources/nvd-kev/collect.mjs reads https://nvd.nist.gov/ (daily)",
+ "how": "sources/nvd-kev/collect.mjs reads https://nvd.nist.gov/ (daily; the source's own cadence: daily)",
  "terms": {
   "summary": "NVD API Terms of Use: the API is for building a service to \"search, display, analyze, retrieve, view and otherwise get\" NVD data; asked to display \"This product uses the NVD API but is not endorsed or certified by the NVD.\"; the NVD name may identify the source but not imply endorsement; if you modify the content you may not attribute it to the NVD (our totals are ours, our per-CVE values are kept as served); public rate limit 5 requests in a rolling 30 seconds without a key (we use none, seven seconds apart); no more than once every two hours (we read every 6 hours). Not reviewed by a person.",
   "page": "https://nvd.nist.gov/developers/terms-of-use",

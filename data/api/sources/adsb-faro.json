@@ -19,7 +19,7 @@
   "Aircraft seen within 40 nautical miles of Faro airport: airline flights by callsign, airline and type; every other aircraft only counted."
  ],
  "status": "read",
- "how": "sources/adsb-faro/collect.mjs reads https://api.adsb.lol/v2/point/37.0144/-7.9659/40 (hourly)",
+ "how": "sources/adsb-faro/collect.mjs reads https://api.adsb.lol/v2/point/37.0144/-7.9659/40 (twice a day, at data.b@'s wakes; the source's own cadence: hourly)",
  "terms": {
   "summary": "adsb.lol: its API data is licensed under the Open Database License (ODbL 1.0): share-alike, with attribution; no key needed up to 500 requests a day per address.",
   "page": "https://www.adsb.lol/docs/open-data/api/",

@@ -1,4 +1,17 @@
 {
+ "data_read_at": "2026-11-19T19:30:26Z",
+ "expected_cadence": {
+  "name": "twice a day",
+  "seconds": 43200,
+  "stale_after_seconds": 46800,
+  "collected_as": "hourly",
+  "why": "data.b@ collects twice a day (07:03 and 18:03 Lisbon) since 19 Nov 2026"
+ },
+ "schema": {
+  "openapi": "https://data.promptugal.news/api/v1/openapi.json",
+  "path": "/api/v1/events/by-place/lisboa.json",
+  "version": "v1"
+ },
  "license": {
   "name": "CC BY 4.0",
   "url": "https://creativecommons.org/licenses/by/4.0/",
@@ -8,11 +21,11 @@
   "commercial_note": "With credit to PrompTugal.news; values taken from a source keep that source's licence."
  },
  "place": "lisboa",
- "read_at": "2026-11-19T16:07:38Z",
- "source_read_at": "2026-11-19T12:12:43Z",
+ "read_at": "2026-11-19T19:30:26Z",
+ "source_read_at": "2026-11-19T18:11:23Z",
  "by": "collect/events-by-place.mjs (code, no model; data.b@PrompTugal.dinis), from data/events-pt/latest.json",
  "about": "Public events on now or starting within 60 days in this place, as schema.org Event records, each with its source URL and the time read. A dated record, not a ticketing service. An empty list means no source covers this place yet, not that nothing is happening.",
- "source_note": "Read 2026-11-19T12:12:43Z from www.agendalx.pt and www.cm-lagos.pt and teatrodasfiguras.pt and cm-tavira.pt; sources with no feed or refused are in gaps (https://data.promptugal.news/api/v1/events-pt/latest.json). Terms: Strictest of the sources: no reuse licence or terms page was found for any of the four hosts (teatrodasfiguras.pt and cm-tavira.pt show only \"Todos os direitos reservados\" in their footers, and cm-tavira.pt has no robots.txt). The robots.txt files that exist allow the paths read; agendalx.pt sets Content-Signal search=yes, ai-train=no, use=reference. So: reference use only, name the source, link to the event, no AI training. Not reviewed by a person: whether this is enough to republish is for Dinis.",
+ "source_note": "Read 2026-11-19T18:11:23Z from www.agendalx.pt and www.cm-lagos.pt and teatrodasfiguras.pt and cm-tavira.pt; sources with no feed or refused are in gaps (https://data.promptugal.news/api/v1/events-pt/latest.json). Terms: Strictest of the sources: no reuse licence or terms page was found for any of the four hosts (teatrodasfiguras.pt and cm-tavira.pt show only \"Todos os direitos reservados\" in their footers, and cm-tavira.pt has no robots.txt). The robots.txt files that exist allow the paths read; agendalx.pt sets Content-Signal search=yes, ai-train=no, use=reference. So: reference use only, name the source, link to the event, no AI training. Not reviewed by a person: whether this is enough to republish is for Dinis.",
  "count": 432,
  "events": [
   {
@@ -29,7 +42,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/a-caca-ao-estripador-de-lisboa/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:54Z",
+   "read_at": "2026-11-19T18:11:34Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -52,7 +65,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/a-cidade-em-frames-4/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:49Z",
+   "read_at": "2026-11-19T18:11:29Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -75,7 +88,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/a-exposicao-de-um-sonho/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:49Z",
+   "read_at": "2026-11-19T18:11:29Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -98,7 +111,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/a-maior-exposicao-de-modelos-feitos-com-pecas-de-lego-da-europa/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:47Z",
+   "read_at": "2026-11-19T18:11:27Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -121,7 +134,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/ah-amalia/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:52Z",
+   "read_at": "2026-11-19T18:11:32Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -144,7 +157,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/alexandre-estrela-4/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:47Z",
+   "read_at": "2026-11-19T18:11:27Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -167,7 +180,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/amelie-von-wulffen/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:49Z",
+   "read_at": "2026-11-19T18:11:29Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -190,7 +203,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/andrea-valencia/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:47Z",
+   "read_at": "2026-11-19T18:11:27Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -213,7 +226,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/angela-ferreira-8/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:49Z",
+   "read_at": "2026-11-19T18:11:29Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -236,7 +249,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/cidade-animal-outra-historia-de-lisboa/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:52Z",
+   "read_at": "2026-11-19T18:11:32Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -259,7 +272,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/antologias-da-memoria/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:52Z",
+   "read_at": "2026-11-19T18:11:32Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -282,7 +295,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/antropocenico-no-tempo-dos-humanos/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:49Z",
+   "read_at": "2026-11-19T18:11:29Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -305,7 +318,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/anunciacao/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:52Z",
+   "read_at": "2026-11-19T18:11:32Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -328,7 +341,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/ao-lado-do-cinema/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:52Z",
+   "read_at": "2026-11-19T18:11:32Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -351,7 +364,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/arpad/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:52Z",
+   "read_at": "2026-11-19T18:11:32Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -374,7 +387,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/arte-magica-2-o-friso/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:47Z",
+   "read_at": "2026-11-19T18:11:27Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -397,7 +410,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/arte-no-dinheiro/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:49Z",
+   "read_at": "2026-11-19T18:11:29Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -420,7 +433,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/as-mulheres-com-abril-na-boca/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:52Z",
+   "read_at": "2026-11-19T18:11:32Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -443,7 +456,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/beatrice-balcou/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:47Z",
+   "read_at": "2026-11-19T18:11:27Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -466,7 +479,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/beatriz-horta-correia-2/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:47Z",
+   "read_at": "2026-11-19T18:11:27Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -489,7 +502,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/beco/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:47Z",
+   "read_at": "2026-11-19T18:11:27Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -512,7 +525,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/breath/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:47Z",
+   "read_at": "2026-11-19T18:11:27Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -535,7 +548,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/carlos-antunes/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:49Z",
+   "read_at": "2026-11-19T18:11:29Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -558,7 +571,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/ciclo-aureo/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:49Z",
+   "read_at": "2026-11-19T18:11:29Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -581,7 +594,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/closer/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:52Z",
+   "read_at": "2026-11-19T18:11:32Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -604,7 +617,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/clube-dos-poetas-mortos/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:54Z",
+   "read_at": "2026-11-19T18:11:34Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -627,7 +640,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/coexistencias-a-joalharia-e-a-beleza-do-mundo/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:49Z",
+   "read_at": "2026-11-19T18:11:29Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -650,7 +663,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/como-punhos-para-decifrar-o-futuro-para-ilda-figueiredo/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:52Z",
+   "read_at": "2026-11-19T18:11:32Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -673,7 +686,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/comunicar-e-natural/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:47Z",
+   "read_at": "2026-11-19T18:11:27Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -696,7 +709,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/correspondencias-rita-azevedo-gomes/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:49Z",
+   "read_at": "2026-11-19T18:11:29Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -719,7 +732,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/cristina-ataide-5/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:49Z",
+   "read_at": "2026-11-19T18:11:29Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -742,7 +755,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/cristina-lamas-4/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:52Z",
+   "read_at": "2026-11-19T18:11:32Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -765,7 +778,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/daniel-v-melin/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:49Z",
+   "read_at": "2026-11-19T18:11:29Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -788,7 +801,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/edson-chagas-2/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:47Z",
+   "read_at": "2026-11-19T18:11:27Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -811,7 +824,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/eduardo-prado-cardoso-e-amadea-kovic/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:52Z",
+   "read_at": "2026-11-19T18:11:32Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -834,7 +847,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/elas-tiveram-medo-e-foram/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:52Z",
+   "read_at": "2026-11-19T18:11:32Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -857,7 +870,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/enquanto-ha-espaco/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:52Z",
+   "read_at": "2026-11-19T18:11:32Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -880,7 +893,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/era-uma-vez-na-america-2/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:47Z",
+   "read_at": "2026-11-19T18:11:27Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -903,7 +916,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/espacos-em-movimento/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:49Z",
+   "read_at": "2026-11-19T18:11:29Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -926,7 +939,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/este-mundo/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:54Z",
+   "read_at": "2026-11-19T18:11:34Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -949,7 +962,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/eu-sou-daqui-e-aqui-estou-eu/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:52Z",
+   "read_at": "2026-11-19T18:11:32Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -972,7 +985,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/expor-publicar-o-maat-impresso-2016-2026/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:47Z",
+   "read_at": "2026-11-19T18:11:27Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -995,7 +1008,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/exposicao-de-um-sonho/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:47Z",
+   "read_at": "2026-11-19T18:11:27Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -1018,7 +1031,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/filomena-morim-2/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:47Z",
+   "read_at": "2026-11-19T18:11:27Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -1041,7 +1054,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/floresta-uma-experiencia-de-raiz/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:49Z",
+   "read_at": "2026-11-19T18:11:29Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -1064,7 +1077,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/fragmentos-de-liberdade/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:49Z",
+   "read_at": "2026-11-19T18:11:29Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -1087,7 +1100,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/frank-borzage-o-lugar-mais-sagrado/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:49Z",
+   "read_at": "2026-11-19T18:11:29Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -1110,7 +1123,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/gabriel-abrantes-4/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:49Z",
+   "read_at": "2026-11-19T18:11:29Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -1133,7 +1146,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/giulia-paz/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:52Z",
+   "read_at": "2026-11-19T18:11:32Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -1156,7 +1169,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/happy-new-lear/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:54Z",
+   "read_at": "2026-11-19T18:11:34Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -1179,7 +1192,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/histeriotipo/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:54Z",
+   "read_at": "2026-11-19T18:11:34Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -1202,7 +1215,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/igor-jesus-2/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:49Z",
+   "read_at": "2026-11-19T18:11:29Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -1225,7 +1238,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/imago-lisboa-photo-festival-2/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:49Z",
+   "read_at": "2026-11-19T18:11:29Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -1248,7 +1261,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/ines-mendes-leal-3/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:49Z",
+   "read_at": "2026-11-19T18:11:29Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -1271,7 +1284,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/ines-raposo/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:52Z",
+   "read_at": "2026-11-19T18:11:32Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -1294,7 +1307,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/ines-zenha/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:47Z",
+   "read_at": "2026-11-19T18:11:27Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -1317,7 +1330,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/inshadow-lisbon-screendance-festiva/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:52Z",
+   "read_at": "2026-11-19T18:11:32Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -1340,7 +1353,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/interchange/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:47Z",
+   "read_at": "2026-11-19T18:11:27Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -1363,7 +1376,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/irene-de-vilder/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:49Z",
+   "read_at": "2026-11-19T18:11:29Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -1386,7 +1399,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/iris-buccholz-chocolate/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:52Z",
+   "read_at": "2026-11-19T18:11:32Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -1409,7 +1422,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/5922/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:47Z",
+   "read_at": "2026-11-19T18:11:27Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -1432,7 +1445,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/jeremy-gardiner/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:52Z",
+   "read_at": "2026-11-19T18:11:32Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -1455,7 +1468,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/joana-estrela/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:52Z",
+   "read_at": "2026-11-19T18:11:32Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -1478,7 +1491,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/joana-vasconcelos-6/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:52Z",
+   "read_at": "2026-11-19T18:11:32Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -1501,7 +1514,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/joao-paulo-faria-nunes/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:47Z",
+   "read_at": "2026-11-19T18:11:27Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -1524,7 +1537,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/joao-pimenta-gomes-2/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:47Z",
+   "read_at": "2026-11-19T18:11:27Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -1547,7 +1560,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/joao-pimenta-gomes-3/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:49Z",
+   "read_at": "2026-11-19T18:11:29Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -1570,7 +1583,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/joao-tabarra/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:49Z",
+   "read_at": "2026-11-19T18:11:29Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -1593,7 +1606,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/joaquin-sorolla/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:47Z",
+   "read_at": "2026-11-19T18:11:27Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -1616,7 +1629,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/jornal-arkivo/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:47Z",
+   "read_at": "2026-11-19T18:11:27Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -1639,7 +1652,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/juan-escauriaza/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:52Z",
+   "read_at": "2026-11-19T18:11:32Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -1662,7 +1675,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/julio-pomar-e-gabriel-abrantes/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:49Z",
+   "read_at": "2026-11-19T18:11:29Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -1685,7 +1698,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/julio-pomar-equus/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:47Z",
+   "read_at": "2026-11-19T18:11:27Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -1708,7 +1721,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/kathy-hinde/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:52Z",
+   "read_at": "2026-11-19T18:11:32Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -1731,7 +1744,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/katia-canton/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:49Z",
+   "read_at": "2026-11-19T18:11:29Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -1754,7 +1767,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/lambchop/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:54Z",
+   "read_at": "2026-11-19T18:11:34Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -1777,7 +1790,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/laura-pilar-delgado/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:47Z",
+   "read_at": "2026-11-19T18:11:27Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -1800,7 +1813,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/leonel-dos-santos-2/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:47Z",
+   "read_at": "2026-11-19T18:11:27Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -1823,7 +1836,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/les-ballets-trockadero-de-monte-carlo-2/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:54Z",
+   "read_at": "2026-11-19T18:11:34Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -1846,7 +1859,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/life-is-the-game/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:47Z",
+   "read_at": "2026-11-19T18:11:27Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -1869,7 +1882,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/lingua-e-memoria-dicionarios-portugueses/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:52Z",
+   "read_at": "2026-11-19T18:11:32Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -1892,7 +1905,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/linha-do-tempo/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:47Z",
+   "read_at": "2026-11-19T18:11:27Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -1915,7 +1928,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/247102/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:52Z",
+   "read_at": "2026-11-19T18:11:32Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -1938,7 +1951,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/los-bravu/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:49Z",
+   "read_at": "2026-11-19T18:11:29Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -1961,7 +1974,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/lugares-que-se-desenham/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:49Z",
+   "read_at": "2026-11-19T18:11:29Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -1984,7 +1997,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/mane-pacheco-2/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:49Z",
+   "read_at": "2026-11-19T18:11:29Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -2007,7 +2020,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/manuel-de-guimaraes/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:54Z",
+   "read_at": "2026-11-19T18:11:34Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -2030,7 +2043,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/marcus-bohler/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:52Z",
+   "read_at": "2026-11-19T18:11:32Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -2053,7 +2066,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/maria-madeira/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:47Z",
+   "read_at": "2026-11-19T18:11:27Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -2076,7 +2089,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/maria-seruya/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:52Z",
+   "read_at": "2026-11-19T18:11:32Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -2099,7 +2112,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/mariana-gillot-3/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:49Z",
+   "read_at": "2026-11-19T18:11:29Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -2122,7 +2135,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/246451/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:49Z",
+   "read_at": "2026-11-19T18:11:29Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -2145,7 +2158,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/maruja-mallo/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:47Z",
+   "read_at": "2026-11-19T18:11:27Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -2168,7 +2181,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/matilde-costa/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:49Z",
+   "read_at": "2026-11-19T18:11:29Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -2191,7 +2204,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/may-i-help-you-posso-ajudar/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:52Z",
+   "read_at": "2026-11-19T18:11:32Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -2214,7 +2227,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/menez-na-colecao-manuel-de-brito/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:47Z",
+   "read_at": "2026-11-19T18:11:27Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -2237,7 +2250,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/mercado-gourmet-da-ladra/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:52Z",
+   "read_at": "2026-11-19T18:11:32Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -2260,7 +2273,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/mil-vezes-revista/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:52Z",
+   "read_at": "2026-11-19T18:11:32Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -2283,7 +2296,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/javhlan-byamba/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:52Z",
+   "read_at": "2026-11-19T18:11:32Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -2306,7 +2319,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/mostra-espanha/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:49Z",
+   "read_at": "2026-11-19T18:11:29Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -2329,7 +2342,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/noites-de-novembro/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:54Z",
+   "read_at": "2026-11-19T18:11:34Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -2352,7 +2365,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/novembro-na-casa-do-jardim-da-estrela/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:52Z",
+   "read_at": "2026-11-19T18:11:32Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -2375,7 +2388,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/novembro-na-quinta-alegre-3/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:52Z",
+   "read_at": "2026-11-19T18:11:32Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -2398,7 +2411,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/novembro-no-avenidas-3/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:52Z",
+   "read_at": "2026-11-19T18:11:32Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -2421,7 +2434,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/salao-lisboa-exposicao-de-fotografia/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:52Z",
+   "read_at": "2026-11-19T18:11:32Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -2444,7 +2457,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/o-som-interior/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:54Z",
+   "read_at": "2026-11-19T18:11:34Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -2467,7 +2480,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/olaria-de-cabo-verde-tecnicas-de-modelacao-e-revestimentos/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:49Z",
+   "read_at": "2026-11-19T18:11:29Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -2490,7 +2503,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/open-azulejo-palacio-da-calheta/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:54Z",
+   "read_at": "2026-11-19T18:11:34Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -2513,7 +2526,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/os-espacialistas-goncalo-m-tavares/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:47Z",
+   "read_at": "2026-11-19T18:11:27Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -2536,7 +2549,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/os-outros-santos-antonio/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:49Z",
+   "read_at": "2026-11-19T18:11:29Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -2559,7 +2572,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/os-teus-direitos-a-tua-voz-exposicao-na-provedoria/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:49Z",
+   "read_at": "2026-11-19T18:11:29Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -2582,7 +2595,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/padrao-casa-obsessao/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:52Z",
+   "read_at": "2026-11-19T18:11:32Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -2605,7 +2618,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/pantonio-2/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:52Z",
+   "read_at": "2026-11-19T18:11:32Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -2628,7 +2641,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/paolo-deganello/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:52Z",
+   "read_at": "2026-11-19T18:11:32Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -2651,7 +2664,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/paraiso-hoje/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:49Z",
+   "read_at": "2026-11-19T18:11:29Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -2674,7 +2687,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/passeios-bike-a-wish/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:54Z",
+   "read_at": "2026-11-19T18:11:34Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -2697,7 +2710,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/paula-rito-2/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:52Z",
+   "read_at": "2026-11-19T18:11:32Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -2720,7 +2733,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/paulo-branco-ou-va-gloria-de-produzir/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:54Z",
+   "read_at": "2026-11-19T18:11:34Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -2743,7 +2756,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/pedro-cabrita-reis-5/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:47Z",
+   "read_at": "2026-11-19T18:11:27Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -2766,7 +2779,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/pedro-cabrita-reis-6/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:47Z",
+   "read_at": "2026-11-19T18:11:27Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -2789,7 +2802,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/pedro-reis/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:49Z",
+   "read_at": "2026-11-19T18:11:29Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -2812,7 +2825,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/personae/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:47Z",
+   "read_at": "2026-11-19T18:11:27Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -2835,7 +2848,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/peso-contra-peso/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:47Z",
+   "read_at": "2026-11-19T18:11:27Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -2858,7 +2871,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/phoebe-boswell/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:52Z",
+   "read_at": "2026-11-19T18:11:32Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -2881,7 +2894,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/pintar-e-facil-faca-voce-mesmo/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:54Z",
+   "read_at": "2026-11-19T18:11:34Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -2904,7 +2917,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/pura-loucura/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:54Z",
+   "read_at": "2026-11-19T18:11:34Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -2927,7 +2940,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/rafael-barros/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:52Z",
+   "read_at": "2026-11-19T18:11:32Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -2950,7 +2963,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/raquel-amorim/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:52Z",
+   "read_at": "2026-11-19T18:11:32Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -2973,7 +2986,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/reflexo-30-anos-30-projetos/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:52Z",
+   "read_at": "2026-11-19T18:11:32Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -2996,7 +3009,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/reservas-visitaveis-do-museu-nacional-de-etnologia/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:54Z",
+   "read_at": "2026-11-19T18:11:34Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -3019,7 +3032,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/rita-vian-2/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:54Z",
+   "read_at": "2026-11-19T18:11:34Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -3042,7 +3055,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/roberto-ruspoli/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:47Z",
+   "read_at": "2026-11-19T18:11:27Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -3065,7 +3078,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/rua-gagarin/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:52Z",
+   "read_at": "2026-11-19T18:11:32Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -3088,7 +3101,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/sam-baron/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:49Z",
+   "read_at": "2026-11-19T18:11:29Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -3111,7 +3124,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/sandra-lori/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:49Z",
+   "read_at": "2026-11-19T18:11:29Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -3134,7 +3147,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/sandra-muteteri-heremans/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:47Z",
+   "read_at": "2026-11-19T18:11:27Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -3157,7 +3170,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/sapadores-bombeiros-de-lisboa-historia-identidade-e-memoria/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:49Z",
+   "read_at": "2026-11-19T18:11:29Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -3180,7 +3193,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/sei-miguel/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:49Z",
+   "read_at": "2026-11-19T18:11:29Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -3203,7 +3216,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/setembro-a-novembro-nos-corucheus/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:52Z",
+   "read_at": "2026-11-19T18:11:32Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -3226,7 +3239,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/sob-pressao/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:52Z",
+   "read_at": "2026-11-19T18:11:32Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -3249,7 +3262,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/sonia-navarro-2/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:49Z",
+   "read_at": "2026-11-19T18:11:29Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -3272,7 +3285,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/stabat-mater-2/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:52Z",
+   "read_at": "2026-11-19T18:11:32Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -3295,7 +3308,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/surma-7/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:52Z",
+   "read_at": "2026-11-19T18:11:32Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -3318,7 +3331,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/svaneborg-kardyb-vega-trails/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:54Z",
+   "read_at": "2026-11-19T18:11:34Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -3341,7 +3354,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/t2-em-benfica-por-600-euros-2/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:54Z",
+   "read_at": "2026-11-19T18:11:34Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -3364,7 +3377,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/tales-frey-2/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:47Z",
+   "read_at": "2026-11-19T18:11:27Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -3387,7 +3400,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/the-nature-of-things/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:49Z",
+   "read_at": "2026-11-19T18:11:29Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -3410,7 +3423,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/tiago-cutileiro/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:49Z",
+   "read_at": "2026-11-19T18:11:29Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -3433,7 +3446,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/timeless-lisbon/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:47Z",
+   "read_at": "2026-11-19T18:11:27Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -3456,7 +3469,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/trienal-de-arte-contemporanea-art-cut/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:49Z",
+   "read_at": "2026-11-19T18:11:29Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -3479,7 +3492,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/tudo-e-semente-exposicao-na-assembleia-da-republica/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:49Z",
+   "read_at": "2026-11-19T18:11:29Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -3502,7 +3515,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/turn-around/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:47Z",
+   "read_at": "2026-11-19T18:11:27Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -3525,7 +3538,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/um-lugar-chamado-variedades/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:47Z",
+   "read_at": "2026-11-19T18:11:27Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -3548,7 +3561,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/uma-aventura-a-exposicao/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:49Z",
+   "read_at": "2026-11-19T18:11:29Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -3571,7 +3584,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/uma-ponte-duas-margens/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:47Z",
+   "read_at": "2026-11-19T18:11:27Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -3594,7 +3607,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/ceramicas-do-mundo-cabo-verde-un-ben-konta-bu-un-storia/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:49Z",
+   "read_at": "2026-11-19T18:11:29Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -3617,7 +3630,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/vasco-araujo-7/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:47Z",
+   "read_at": "2026-11-19T18:11:27Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -3640,7 +3653,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/veja-ciclo-sergio-trefaut/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:47Z",
+   "read_at": "2026-11-19T18:11:27Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -3663,7 +3676,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/venus-valentino-garavani-pelo-olhar-de-joana-vasconcelos/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:47Z",
+   "read_at": "2026-11-19T18:11:27Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -3686,7 +3699,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/casa-asia-colecao-francisco-capelo/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:47Z",
+   "read_at": "2026-11-19T18:11:27Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -3709,7 +3722,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/visitas-guiadas-a-fabrica-da-eletricidade/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:47Z",
+   "read_at": "2026-11-19T18:11:27Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -3732,7 +3745,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/visita-ao-palacio-alverca-e-degustacao/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:54Z",
+   "read_at": "2026-11-19T18:11:34Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -3755,7 +3768,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/visitas-aos-palacio-de-santos/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:54Z",
+   "read_at": "2026-11-19T18:11:34Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -3778,7 +3791,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/visitas-ao-templo-radha-krishna/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:47Z",
+   "read_at": "2026-11-19T18:11:27Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -3801,7 +3814,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/visitas-comentadas/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:47Z",
+   "read_at": "2026-11-19T18:11:27Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -3824,7 +3837,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/visitas-guiadas-ao-b-mad-museu-berardo-arte-deco/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:47Z",
+   "read_at": "2026-11-19T18:11:27Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -3847,7 +3860,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/ways-of-growing/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:49Z",
+   "read_at": "2026-11-19T18:11:29Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -3870,7 +3883,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/wilame-lima-vallantin/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:47Z",
+   "read_at": "2026-11-19T18:11:27Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -3893,7 +3906,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/xavier-3/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:49Z",
+   "read_at": "2026-11-19T18:11:29Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -3916,7 +3929,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/xerazade-a-interminavel-colecao-do-cam/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:52Z",
+   "read_at": "2026-11-19T18:11:32Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -3939,7 +3952,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/yann-datessen/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:52Z",
+   "read_at": "2026-11-19T18:11:32Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -3962,7 +3975,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/along-a-line/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:54Z",
+   "read_at": "2026-11-19T18:11:34Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -3985,7 +3998,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/bazar-diplomatico-2026/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:54Z",
+   "read_at": "2026-11-19T18:11:34Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -4008,7 +4021,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/behind/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:54Z",
+   "read_at": "2026-11-19T18:11:34Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -4031,7 +4044,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/cadencias-crioulas-dez-mil-vezes-desdobradas/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:54Z",
+   "read_at": "2026-11-19T18:11:34Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -4054,7 +4067,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/centenario-de-john-berger/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:54Z",
+   "read_at": "2026-11-19T18:11:34Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -4077,7 +4090,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/chttahh/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:54Z",
+   "read_at": "2026-11-19T18:11:34Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -4100,7 +4113,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/cinema-nas-avenidas-novas/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:54Z",
+   "read_at": "2026-11-19T18:11:34Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -4123,7 +4136,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/a-arte-da-critica/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:54Z",
+   "read_at": "2026-11-19T18:11:34Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -4146,7 +4159,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/espioes-apocalypse-how/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:54Z",
+   "read_at": "2026-11-19T18:11:34Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -4169,7 +4182,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/esta-noite-grita-se-5/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:54Z",
+   "read_at": "2026-11-19T18:11:34Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -4192,7 +4205,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/graca-santos/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:54Z",
+   "read_at": "2026-11-19T18:11:34Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -4215,7 +4228,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/arquitetura-sustentavel-e-saberes-ancestrais/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:54Z",
+   "read_at": "2026-11-19T18:11:34Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -4238,7 +4251,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/jasmim-3/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:54Z",
+   "read_at": "2026-11-19T18:11:34Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -4261,7 +4274,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/ciclo-leffest-continuacao/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:54Z",
+   "read_at": "2026-11-19T18:11:34Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -4284,7 +4297,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/lime-garden/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:54Z",
+   "read_at": "2026-11-19T18:11:34Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -4307,7 +4320,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/manobras-de-aproximacao-casas-otimistas-para-o-agora/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:54Z",
+   "read_at": "2026-11-19T18:11:34Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -4330,7 +4343,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/my-body-my-sex/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:54Z",
+   "read_at": "2026-11-19T18:11:34Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -4353,7 +4366,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/noticias-falseadas-o-poder-da-mentira/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:54Z",
+   "read_at": "2026-11-19T18:11:34Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -4376,7 +4389,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/o-algoritmo-2/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:54Z",
+   "read_at": "2026-11-19T18:11:34Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -4399,7 +4412,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/245749/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:54Z",
+   "read_at": "2026-11-19T18:11:34Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -4422,7 +4435,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/raul-refree-maria-mazzotta/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:54Z",
+   "read_at": "2026-11-19T18:11:34Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -4445,7 +4458,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/rosaline-a-ex-de-romeu/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:54Z",
+   "read_at": "2026-11-19T18:11:34Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -4468,7 +4481,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/separados-mas-pouco-2/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:54Z",
+   "read_at": "2026-11-19T18:11:34Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -4491,7 +4504,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/sonia-godinho/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:54Z",
+   "read_at": "2026-11-19T18:11:34Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -4514,7 +4527,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/superstar/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:54Z",
+   "read_at": "2026-11-19T18:11:34Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -4537,7 +4550,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/the-human-beast/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:54Z",
+   "read_at": "2026-11-19T18:11:34Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -4560,7 +4573,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/this-is-michael/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:54Z",
+   "read_at": "2026-11-19T18:11:34Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -4583,7 +4596,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/tybyra/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:54Z",
+   "read_at": "2026-11-19T18:11:34Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -4606,7 +4619,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/xix-festa-do-livro/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:54Z",
+   "read_at": "2026-11-19T18:11:34Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -4629,7 +4642,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/24-horas-para-tentar-salvar-o-nata/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:57Z",
+   "read_at": "2026-11-19T18:11:37Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -4652,7 +4665,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/a-cinemateca-com-o-docs-kingdom-2026/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:57Z",
+   "read_at": "2026-11-19T18:11:37Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -4675,7 +4688,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/a-colecao-imaginaria-ceramicas-e-texteis-de-teresa-segurado-pavao/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:57Z",
+   "read_at": "2026-11-19T18:11:37Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -4698,7 +4711,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/a-fabrica-da-eletricidade-para-os-mais-pequenos/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:57Z",
+   "read_at": "2026-11-19T18:11:37Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -4721,7 +4734,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/a-historia-de-um-gato-e-de-um-rato-que-se-tornaram-amigos/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:57Z",
+   "read_at": "2026-11-19T18:11:37Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -4744,7 +4757,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/a-menina-que-queria-ser-pirata/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:57Z",
+   "read_at": "2026-11-19T18:11:37Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -4767,7 +4780,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/alan-stivell/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:57Z",
+   "read_at": "2026-11-19T18:11:37Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -4790,7 +4803,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/alma-portuguesa-pelas-ruas-de-lisboa/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:57Z",
+   "read_at": "2026-11-19T18:11:37Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -4813,7 +4826,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/antes-da-estreia-e-depois-dos-creditos/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:57Z",
+   "read_at": "2026-11-19T18:11:37Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -4836,7 +4849,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/as-cartas-do-pai-natal-2/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:57Z",
+   "read_at": "2026-11-19T18:11:37Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -4859,7 +4872,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/biblioteca-da-democracia/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:57Z",
+   "read_at": "2026-11-19T18:11:37Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -4882,7 +4895,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/bichole/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:57Z",
+   "read_at": "2026-11-19T18:11:37Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -4905,7 +4918,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/ciclo-de-cinema-de-natal/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:57Z",
+   "read_at": "2026-11-19T18:11:37Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -4928,7 +4941,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/cinderela-6/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:57Z",
+   "read_at": "2026-11-19T18:11:37Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -4951,7 +4964,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/coisa-ponta/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:57Z",
+   "read_at": "2026-11-19T18:11:37Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -4974,7 +4987,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/cuidarte/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:57Z",
+   "read_at": "2026-11-19T18:11:37Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -4997,7 +5010,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/cultura-e-sustentabilidade-2026/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:57Z",
+   "read_at": "2026-11-19T18:11:37Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -5020,7 +5033,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/ensaio-sobre-a-cegueira/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:57Z",
+   "read_at": "2026-11-19T18:11:37Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -5043,7 +5056,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/escrever-um-haiku/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:57Z",
+   "read_at": "2026-11-19T18:11:37Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -5066,7 +5079,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/fame-jr/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:57Z",
+   "read_at": "2026-11-19T18:11:37Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -5089,7 +5102,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/filminhos-infantis-a-solta-pelo-pais-73/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:57Z",
+   "read_at": "2026-11-19T18:11:37Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -5112,7 +5125,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/iranian-short-films/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:57Z",
+   "read_at": "2026-11-19T18:11:37Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -5135,7 +5148,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/luis-bunuel-periodo-frances/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:57Z",
+   "read_at": "2026-11-19T18:11:37Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -5158,7 +5171,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/mali-futur-live/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:57Z",
+   "read_at": "2026-11-19T18:11:37Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -5181,7 +5194,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/mercado-de-vinhos-5/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:57Z",
+   "read_at": "2026-11-19T18:11:37Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -5204,7 +5217,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/mowgli-o-livro-da-selva/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:57Z",
+   "read_at": "2026-11-19T18:11:37Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -5227,7 +5240,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/museu-nacional-de-arte-antiga/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:57Z",
+   "read_at": "2026-11-19T18:11:37Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -5250,7 +5263,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/niklas-paschburg/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:57Z",
+   "read_at": "2026-11-19T18:11:37Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -5273,7 +5286,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/o-estado-do-mundo-quando-acordas-3/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:57Z",
+   "read_at": "2026-11-19T18:11:37Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -5296,7 +5309,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/o-principezinho-o-novo-musical/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:57Z",
+   "read_at": "2026-11-19T18:11:37Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -5319,7 +5332,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/os-macaquinhos-do-meu-sotao/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:57Z",
+   "read_at": "2026-11-19T18:11:37Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -5342,7 +5355,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/palasseando-com-ciencia-um-rei-marinheiro-na-era-do-progresso/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:57Z",
+   "read_at": "2026-11-19T18:11:37Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -5365,7 +5378,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/paus-4/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:57Z",
+   "read_at": "2026-11-19T18:11:37Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -5388,7 +5401,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/pedro-gramaxo-2/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:57Z",
+   "read_at": "2026-11-19T18:11:37Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -5411,7 +5424,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/pocahontas-2/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:57Z",
+   "read_at": "2026-11-19T18:11:37Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -5434,7 +5447,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/salao-piolho-8/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:57Z",
+   "read_at": "2026-11-19T18:11:37Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -5457,7 +5470,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/semana-da-cultura-cientifica-2/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:57Z",
+   "read_at": "2026-11-19T18:11:37Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -5480,7 +5493,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/sochristmas-2/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:57Z",
+   "read_at": "2026-11-19T18:11:37Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -5503,7 +5516,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/tasting-fado/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:57Z",
+   "read_at": "2026-11-19T18:11:37Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -5526,7 +5539,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/topografias-imaginarias-7/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:57Z",
+   "read_at": "2026-11-19T18:11:37Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -5549,7 +5562,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/vamos-obi/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:57Z",
+   "read_at": "2026-11-19T18:11:37Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -5572,7 +5585,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/vincent-peirani/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:57Z",
+   "read_at": "2026-11-19T18:11:37Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -5595,7 +5608,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/visitas-guiadas-a-broteria/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:57Z",
+   "read_at": "2026-11-19T18:11:37Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -5618,7 +5631,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/visitas-guiadas-ao-palacio-de-belem/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:57Z",
+   "read_at": "2026-11-19T18:11:37Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -5641,7 +5654,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/visitas-orientadas-a-casa-fernando-pessoa/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:57Z",
+   "read_at": "2026-11-19T18:11:37Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -5664,7 +5677,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/vontade-propria/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:57Z",
+   "read_at": "2026-11-19T18:11:37Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -5687,7 +5700,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/memoria-de-rapariga-de-judith-godreche/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:59Z",
+   "read_at": "2026-11-19T18:11:39Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -5710,7 +5723,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/a-magia-da-estrelinha-de-natal/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:59Z",
+   "read_at": "2026-11-19T18:11:39Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -5733,7 +5746,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/a-pequena-sereia/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:59Z",
+   "read_at": "2026-11-19T18:11:39Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -5756,7 +5769,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/arte-na-praca/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:57Z",
+   "read_at": "2026-11-19T18:11:37Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -5779,7 +5792,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/branca-de-neve/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:59Z",
+   "read_at": "2026-11-19T18:11:39Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -5802,7 +5815,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/cinema-acapela-ciclo-luis-alves-de-matos/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:59Z",
+   "read_at": "2026-11-19T18:11:39Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -5825,7 +5838,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/cinepop-4/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:57Z",
+   "read_at": "2026-11-19T18:11:37Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -5848,7 +5861,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/contos-de-fadas/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:59Z",
+   "read_at": "2026-11-19T18:11:39Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -5871,7 +5884,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/estas-obras-maatam-me/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:59Z",
+   "read_at": "2026-11-19T18:11:39Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -5894,7 +5907,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/festival-internacional-de-trompete-almost6/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:59Z",
+   "read_at": "2026-11-19T18:11:39Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -5917,7 +5930,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/josh-cohen/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:59Z",
+   "read_at": "2026-11-19T18:11:39Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -5940,7 +5953,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/levi-schechtmann/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:59Z",
+   "read_at": "2026-11-19T18:11:39Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -5963,7 +5976,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/noticias-em-cena/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:59Z",
+   "read_at": "2026-11-19T18:11:39Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -5986,7 +5999,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/o-domingo-e-na-quinta-9/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:59Z",
+   "read_at": "2026-11-19T18:11:39Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -6009,7 +6022,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/o-quebra-nozes-5/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:59Z",
+   "read_at": "2026-11-19T18:11:39Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -6032,7 +6045,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/o-segredo-da-avo/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:59Z",
+   "read_at": "2026-11-19T18:11:39Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -6055,7 +6068,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/o-tal-natal-que-tal/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:59Z",
+   "read_at": "2026-11-19T18:11:39Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -6078,7 +6091,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/pe-i-o-auuuuuuu/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:59Z",
+   "read_at": "2026-11-19T18:11:39Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -6101,7 +6114,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/peddy/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:57Z",
+   "read_at": "2026-11-19T18:11:37Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -6124,7 +6137,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/sessoes-de-cinema-no-turim-12/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:57Z",
+   "read_at": "2026-11-19T18:11:37Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -6147,7 +6160,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/almocreves-500/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:59Z",
+   "read_at": "2026-11-19T18:11:39Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -6170,7 +6183,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/cock/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:59Z",
+   "read_at": "2026-11-19T18:11:39Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -6193,7 +6206,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/e-a-nossa-historia-e-a-nossa-vida/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:59Z",
+   "read_at": "2026-11-19T18:11:39Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -6216,7 +6229,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/olhares-da-eslovenia/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:59Z",
+   "read_at": "2026-11-19T18:11:39Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -6239,7 +6252,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/olhares-do-mediterraneo-6/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:59Z",
+   "read_at": "2026-11-19T18:11:39Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -6262,7 +6275,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/solistas-da-orquestra-gulbenkian-41/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:59Z",
+   "read_at": "2026-11-19T18:11:39Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -6285,7 +6298,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/visitas-guiadas-ao-tribunal-constitucional/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:59Z",
+   "read_at": "2026-11-19T18:11:39Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -6308,7 +6321,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/a-obra-eleita-9/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:59Z",
+   "read_at": "2026-11-19T18:11:39Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -6331,7 +6344,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/miramar-5/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:59Z",
+   "read_at": "2026-11-19T18:11:39Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -6354,7 +6367,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/nada-deve-parecer-impossivel-de-mudar/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:59Z",
+   "read_at": "2026-11-19T18:11:39Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -6377,7 +6390,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/nena-3/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:59Z",
+   "read_at": "2026-11-19T18:11:39Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -6400,7 +6413,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/para-alem-das-arquiteturas/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:59Z",
+   "read_at": "2026-11-19T18:11:39Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -6423,7 +6436,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/50-madrugadas-4/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:59Z",
+   "read_at": "2026-11-19T18:11:39Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -6446,7 +6459,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/barbara-hendricks-her-blues-band/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:59Z",
+   "read_at": "2026-11-19T18:11:39Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -6469,7 +6482,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/caligrafia-japonesa-4/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:59Z",
+   "read_at": "2026-11-19T18:11:39Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -6492,7 +6505,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/ceramicas-da-dinastia-han-a-dinastia-tan/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:59Z",
+   "read_at": "2026-11-19T18:11:39Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -6515,7 +6528,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/flying-mantis-duo/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:59Z",
+   "read_at": "2026-11-19T18:11:39Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -6538,7 +6551,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/gold-mother/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:59Z",
+   "read_at": "2026-11-19T18:11:39Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -6561,7 +6574,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/kino-wunderbar-2/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:59Z",
+   "read_at": "2026-11-19T18:11:39Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -6584,7 +6597,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/laurent-filipe/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:59Z",
+   "read_at": "2026-11-19T18:11:39Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -6607,7 +6620,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/miguel-araujo-6/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:59Z",
+   "read_at": "2026-11-19T18:11:39Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -6630,7 +6643,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/the-mo-you-know/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:59Z",
+   "read_at": "2026-11-19T18:11:39Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -6653,7 +6666,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/viagem-ao-fim-do-mudo-13/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:59Z",
+   "read_at": "2026-11-19T18:11:39Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -6676,7 +6689,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/outlasting-living-archives-of-older-queers/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:59Z",
+   "read_at": "2026-11-19T18:11:39Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -6699,7 +6712,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/a-cantora-careca-2/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:59Z",
+   "read_at": "2026-11-19T18:11:39Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -6722,7 +6735,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/adriana-progano-4/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:59Z",
+   "read_at": "2026-11-19T18:11:39Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -6745,7 +6758,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/conferencia-calcada-portuguesa-desafios-do-patrimonio-e-da-memoria/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:59Z",
+   "read_at": "2026-11-19T18:11:39Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -6768,7 +6781,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/christian-loffler-4/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:59Z",
+   "read_at": "2026-11-19T18:11:39Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -6791,7 +6804,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/hmb-tim/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:59Z",
+   "read_at": "2026-11-19T18:11:39Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -6814,7 +6827,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/jeanine-de-bique-apollos-fire/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:59Z",
+   "read_at": "2026-11-19T18:11:39Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -6837,7 +6850,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/mesa-4/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:59Z",
+   "read_at": "2026-11-19T18:11:39Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -6860,7 +6873,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/os-favoritos-dos-espectadores-do-nimas/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:02Z",
+   "read_at": "2026-11-19T18:11:42Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -6883,7 +6896,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/teresa-da-palma-pereira-2/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:59Z",
+   "read_at": "2026-11-19T18:11:39Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -6906,7 +6919,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/the-2026-sovereign-portuguese-art-prize-finalist-exhibition/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:59Z",
+   "read_at": "2026-11-19T18:11:39Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -6929,7 +6942,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/239453/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:12:59Z",
+   "read_at": "2026-11-19T18:11:39Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -6952,7 +6965,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/al-di-meola-2/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:02Z",
+   "read_at": "2026-11-19T18:11:42Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -6975,7 +6988,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/cinema-e-direito-2/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:02Z",
+   "read_at": "2026-11-19T18:11:42Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -6998,7 +7011,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/janeiro-6/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:02Z",
+   "read_at": "2026-11-19T18:11:42Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -7021,7 +7034,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/japao-festas-e-rituais-3/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:02Z",
+   "read_at": "2026-11-19T18:11:42Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -7044,7 +7057,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/livros-da-pia-ao-vivo/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:02Z",
+   "read_at": "2026-11-19T18:11:42Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -7067,7 +7080,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/mark-delman/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:02Z",
+   "read_at": "2026-11-19T18:11:42Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -7090,7 +7103,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/247113/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:02Z",
+   "read_at": "2026-11-19T18:11:42Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -7113,7 +7126,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/motel-plaza/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:02Z",
+   "read_at": "2026-11-19T18:11:42Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -7136,7 +7149,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/nancy-vieira-francisco-sassetti/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:02Z",
+   "read_at": "2026-11-19T18:11:42Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -7159,7 +7172,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/o-filho-3/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:02Z",
+   "read_at": "2026-11-19T18:11:42Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -7182,7 +7195,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/orquestra-sinfonica-juvenil-20/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:02Z",
+   "read_at": "2026-11-19T18:11:42Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -7205,7 +7218,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/please-love-me/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:02Z",
+   "read_at": "2026-11-19T18:11:42Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -7228,7 +7241,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/quando-vi-o-mar/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:02Z",
+   "read_at": "2026-11-19T18:11:42Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -7251,7 +7264,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/visitas-guiadas-a-igreja-e-museu-de-sao-roque/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:02Z",
+   "read_at": "2026-11-19T18:11:42Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -7274,7 +7287,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/25-anos/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:02Z",
+   "read_at": "2026-11-19T18:11:42Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -7297,7 +7310,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/ciencia-de-indiana-jones-no-museu-da-farmacia/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:02Z",
+   "read_at": "2026-11-19T18:11:42Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -7320,7 +7333,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/a-noite-no-estadio/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:02Z",
+   "read_at": "2026-11-19T18:11:42Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -7343,7 +7356,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/cassete-pirata-7/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:02Z",
+   "read_at": "2026-11-19T18:11:42Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -7366,7 +7379,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/cemiterios-de-lisboa/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:02Z",
+   "read_at": "2026-11-19T18:11:42Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -7389,7 +7402,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/conhecer-os-cantos-a-casa/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:02Z",
+   "read_at": "2026-11-19T18:11:42Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -7412,7 +7425,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/cristina-neves/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:02Z",
+   "read_at": "2026-11-19T18:11:42Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -7435,7 +7448,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/david-fonseca-7/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:02Z",
+   "read_at": "2026-11-19T18:11:42Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -7458,7 +7471,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/de-bengala-mas-de-pe/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:02Z",
+   "read_at": "2026-11-19T18:11:42Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -7481,7 +7494,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/duo-eklektika-4/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:02Z",
+   "read_at": "2026-11-19T18:11:42Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -7504,7 +7517,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/eliana-glass/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:02Z",
+   "read_at": "2026-11-19T18:11:42Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -7527,7 +7540,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/ethical-assembly-2026/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:02Z",
+   "read_at": "2026-11-19T18:11:42Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -7550,7 +7563,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/feira-de-natal-9/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:02Z",
+   "read_at": "2026-11-19T18:11:42Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -7573,7 +7586,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/fim-do-ano/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:02Z",
+   "read_at": "2026-11-19T18:11:42Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -7596,7 +7609,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/freya-skye/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:02Z",
+   "read_at": "2026-11-19T18:11:42Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -7619,7 +7632,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/hospital-dos-pequeninos-2/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:02Z",
+   "read_at": "2026-11-19T18:11:42Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -7642,7 +7655,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/jp-simoes-4/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:02Z",
+   "read_at": "2026-11-19T18:11:42Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -7665,7 +7678,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/maria-joao-joao-farinha/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:02Z",
+   "read_at": "2026-11-19T18:11:42Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -7688,7 +7701,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/new-dystopias/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:02Z",
+   "read_at": "2026-11-19T18:11:42Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -7711,7 +7724,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/o-grilo-do-pai-natal/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:02Z",
+   "read_at": "2026-11-19T18:11:42Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -7734,7 +7747,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/oficina-maker-minecraft-craft-light/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:02Z",
+   "read_at": "2026-11-19T18:11:42Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -7757,7 +7770,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/omah-lay/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:02Z",
+   "read_at": "2026-11-19T18:11:42Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -7780,7 +7793,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/ouvir-duas-vezes-a-sinfonia/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:02Z",
+   "read_at": "2026-11-19T18:11:42Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -7803,7 +7816,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/para-uma-breve-historia-da-agua/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:02Z",
+   "read_at": "2026-11-19T18:11:42Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -7826,7 +7839,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/parlamento-de-portas-abertas-3/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:02Z",
+   "read_at": "2026-11-19T18:11:42Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -7849,7 +7862,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/parque-jurassico/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:02Z",
+   "read_at": "2026-11-19T18:11:42Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -7872,7 +7885,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/prato-feito-repara/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:02Z",
+   "read_at": "2026-11-19T18:11:42Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -7895,7 +7908,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/quem-e-o-pai-natal/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:02Z",
+   "read_at": "2026-11-19T18:11:42Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -7918,7 +7931,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/quentinho-do-frio/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:02Z",
+   "read_at": "2026-11-19T18:11:42Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -7941,7 +7954,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/tony-carreira-3/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:02Z",
+   "read_at": "2026-11-19T18:11:42Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -7964,7 +7977,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/uma-cidade-com-2000-anos/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:02Z",
+   "read_at": "2026-11-19T18:11:42Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -7987,7 +8000,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/banda-da-armada-2/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:04Z",
+   "read_at": "2026-11-19T18:11:44Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -8010,7 +8023,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/visitas-ao-mosteiro-de-sao-vicente-de-fora/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:02Z",
+   "read_at": "2026-11-19T18:11:42Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -8033,7 +8046,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/historias-com-asas-e-cauda/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:04Z",
+   "read_at": "2026-11-19T18:11:44Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -8056,7 +8069,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/joias-para-a-arvore-de-natal-2/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:02Z",
+   "read_at": "2026-11-19T18:11:42Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -8079,7 +8092,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/laura-misch-anne-paceo-e-mammal-hands/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:04Z",
+   "read_at": "2026-11-19T18:11:44Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -8102,7 +8115,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/lubiana/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:04Z",
+   "read_at": "2026-11-19T18:11:44Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -8125,7 +8138,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/luisa-sobral-5/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:04Z",
+   "read_at": "2026-11-19T18:11:44Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -8148,7 +8161,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/mokina/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:04Z",
+   "read_at": "2026-11-19T18:11:44Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -8171,7 +8184,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/numa-marioneta-mil-historias/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:02Z",
+   "read_at": "2026-11-19T18:11:42Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -8194,7 +8207,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/o-genio-de-murnau/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:02Z",
+   "read_at": "2026-11-19T18:11:42Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -8217,7 +8230,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/youn-sun-nah/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:04Z",
+   "read_at": "2026-11-19T18:11:44Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -8240,7 +8253,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/centenario-de-miles-davis/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:04Z",
+   "read_at": "2026-11-19T18:11:44Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -8263,7 +8276,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/a-alegre-historia-de-portugal-em-90-minutos/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:04Z",
+   "read_at": "2026-11-19T18:11:44Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -8286,7 +8299,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/a-saude-na-reconquista-e-nas-cruzadas/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:04Z",
+   "read_at": "2026-11-19T18:11:44Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -8309,7 +8322,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/desconfortavel-um-monologo-2/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:04Z",
+   "read_at": "2026-11-19T18:11:44Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -8332,7 +8345,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/maior-fa/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:04Z",
+   "read_at": "2026-11-19T18:11:44Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -8355,7 +8368,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/a-toca-das-loucas-2/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:04Z",
+   "read_at": "2026-11-19T18:11:44Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -8378,7 +8391,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/a-toca-das-loucas-3/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:04Z",
+   "read_at": "2026-11-19T18:11:44Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -8401,7 +8414,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/ibeyi/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:04Z",
+   "read_at": "2026-11-19T18:11:44Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -8424,7 +8437,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/roda-viva/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:04Z",
+   "read_at": "2026-11-19T18:11:44Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -8447,7 +8460,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/al-sirah-al-hilaliyyah/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:04Z",
+   "read_at": "2026-11-19T18:11:44Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -8470,7 +8483,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/cinema-e-filosofia/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:04Z",
+   "read_at": "2026-11-19T18:11:44Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -8493,7 +8506,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/espoletar/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:04Z",
+   "read_at": "2026-11-19T18:11:44Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -8516,7 +8529,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/francisca-carvalho-6/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:04Z",
+   "read_at": "2026-11-19T18:11:44Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -8539,7 +8552,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/neil-beloufa/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:04Z",
+   "read_at": "2026-11-19T18:11:44Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -8562,7 +8575,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/o-espirito-da-ra-azul-e-outros-contos-2/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:04Z",
+   "read_at": "2026-11-19T18:11:44Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -8585,7 +8598,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/petrus-pedro-veiga-autor-editor/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:04Z",
+   "read_at": "2026-11-19T18:11:44Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -8608,7 +8621,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/ponto-de-partida-2/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:04Z",
+   "read_at": "2026-11-19T18:11:44Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -8631,7 +8644,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/auto-da-criacao-do-mundo-5/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:04Z",
+   "read_at": "2026-11-19T18:11:44Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -8654,7 +8667,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/246312/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:04Z",
+   "read_at": "2026-11-19T18:11:44Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -8677,7 +8690,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/para-nao-esquecermos/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:04Z",
+   "read_at": "2026-11-19T18:11:44Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -8700,7 +8713,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/pequenos-formatos-3/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:04Z",
+   "read_at": "2026-11-19T18:11:44Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -8723,7 +8736,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/auto-do-nascimento-do-menino-jesus-2/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:04Z",
+   "read_at": "2026-11-19T18:11:44Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -8746,7 +8759,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/chico-chico/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:04Z",
+   "read_at": "2026-11-19T18:11:44Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -8769,7 +8782,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/liza-minnelli/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:04Z",
+   "read_at": "2026-11-19T18:11:44Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -8792,7 +8805,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/241549/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:04Z",
+   "read_at": "2026-11-19T18:11:44Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -8815,7 +8828,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/mercado-de-trocas-2/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:04Z",
+   "read_at": "2026-11-19T18:11:44Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -8838,7 +8851,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/246849/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:04Z",
+   "read_at": "2026-11-19T18:11:44Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -8861,7 +8874,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/sabados-no-museu/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:04Z",
+   "read_at": "2026-11-19T18:11:44Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -8884,7 +8897,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/the-beatles-symphonic-fantasy/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:04Z",
+   "read_at": "2026-11-19T18:11:44Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -8907,7 +8920,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/museu-fora-do-armario-uma-outra-lisboa-de-sodomitas-a-queers/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:04Z",
+   "read_at": "2026-11-19T18:11:44Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -8930,7 +8943,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/percurso-secreto/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:04Z",
+   "read_at": "2026-11-19T18:11:44Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -8953,7 +8966,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/visita-aos-pacos-do-concelho/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:04Z",
+   "read_at": "2026-11-19T18:11:44Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -8976,7 +8989,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/american-buffalo/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:04Z",
+   "read_at": "2026-11-19T18:11:44Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -8999,7 +9012,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/jane-monheit/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:04Z",
+   "read_at": "2026-11-19T18:11:44Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -9022,7 +9035,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/grande-entre-os-assassinos-2/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:04Z",
+   "read_at": "2026-11-19T18:11:44Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -9045,7 +9058,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/heroes-unite/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:04Z",
+   "read_at": "2026-11-19T18:11:44Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -9068,7 +9081,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/yes-daddy-%d8%ad%d8%a7%d8%b6%d8%b1-%d9%8a%d8%a7-%d8%a3%d8%a8%d9%8a/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:04Z",
+   "read_at": "2026-11-19T18:11:44Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -9091,7 +9104,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/eu-preciso-disto/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:04Z",
+   "read_at": "2026-11-19T18:11:44Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -9114,7 +9127,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/quem-matou-edgar-allan-poe/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:04Z",
+   "read_at": "2026-11-19T18:11:44Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -9137,7 +9150,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/as-ilhas-desconhecidas/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:04Z",
+   "read_at": "2026-11-19T18:11:44Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -9160,7 +9173,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/black-heritage-choir/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:04Z",
+   "read_at": "2026-11-19T18:11:44Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -9183,7 +9196,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/ciclo-comparatista-pessoano/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:04Z",
+   "read_at": "2026-11-19T18:11:44Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -9206,7 +9219,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/do-pensamento-ao-papel/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:07Z",
+   "read_at": "2026-11-19T18:11:47Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -9229,7 +9242,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/joao-so-tiago-nogueira/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:07Z",
+   "read_at": "2026-11-19T18:11:47Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -9252,7 +9265,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/presenca-portuguesa-na-asia/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:07Z",
+   "read_at": "2026-11-19T18:11:47Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -9275,7 +9288,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/rui-zambujeiro/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:04Z",
+   "read_at": "2026-11-19T18:11:44Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -9298,7 +9311,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/suplicantes/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:07Z",
+   "read_at": "2026-11-19T18:11:47Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -9321,7 +9334,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/10-o-aniversario-do-polo-cultural-gaivotas-boavista/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:07Z",
+   "read_at": "2026-11-19T18:11:47Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -9344,7 +9357,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/bli/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:07Z",
+   "read_at": "2026-11-19T18:11:47Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -9367,7 +9380,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/calendar-girls-o-musical-2/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:07Z",
+   "read_at": "2026-11-19T18:11:47Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -9390,7 +9403,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/feira-de-natal-no-patio-3/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:07Z",
+   "read_at": "2026-11-19T18:11:47Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -9413,7 +9426,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/mercado-de-nata/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:07Z",
+   "read_at": "2026-11-19T18:11:47Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -9436,7 +9449,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/palasseando-aos-sabados-4/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:07Z",
+   "read_at": "2026-11-19T18:11:47Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -9459,7 +9472,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/richie-campbell-3/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:07Z",
+   "read_at": "2026-11-19T18:11:47Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -9482,7 +9495,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/moullinex-presents/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:07Z",
+   "read_at": "2026-11-19T18:11:47Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -9505,7 +9518,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/visitas-ao-teatro-variedades/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:07Z",
+   "read_at": "2026-11-19T18:11:47Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -9528,7 +9541,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/luca-argel-10/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:07Z",
+   "read_at": "2026-11-19T18:11:47Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -9551,7 +9564,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/massa-mae-3/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:07Z",
+   "read_at": "2026-11-19T18:11:47Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -9574,7 +9587,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/caminhos-da-arte-portuguesa/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:07Z",
+   "read_at": "2026-11-19T18:11:47Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -9597,7 +9610,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/white-christmas/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:07Z",
+   "read_at": "2026-11-19T18:11:47Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -9620,7 +9633,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/hedda-gabler-4/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:07Z",
+   "read_at": "2026-11-19T18:11:47Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -9643,7 +9656,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/marisol-quando-tudo-esta-apenas-a-comecar/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:07Z",
+   "read_at": "2026-11-19T18:11:47Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -9666,7 +9679,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/ao-2/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:07Z",
+   "read_at": "2026-11-19T18:11:47Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -9689,7 +9702,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/oficinas-de-sensibilizacao-de-jardinagem/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:07Z",
+   "read_at": "2026-11-19T18:11:47Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -9712,7 +9725,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/rodrigo-leao-12/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:07Z",
+   "read_at": "2026-11-19T18:11:47Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -9735,7 +9748,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/contar-a-floresta/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:07Z",
+   "read_at": "2026-11-19T18:11:47Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -9758,7 +9771,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/macy-gray-2/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:07Z",
+   "read_at": "2026-11-19T18:11:47Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -9781,7 +9794,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/terapia/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:07Z",
+   "read_at": "2026-11-19T18:11:47Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -9804,7 +9817,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/camara-escura/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:07Z",
+   "read_at": "2026-11-19T18:11:47Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -9827,7 +9840,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/visitas-a-igreja-do-menino-deus/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:07Z",
+   "read_at": "2026-11-19T18:11:47Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -9850,7 +9863,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/a-descoberta-do-castelo-de-sao-jorge-5/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:07Z",
+   "read_at": "2026-11-19T18:11:47Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -9873,7 +9886,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/5-a-corrida-de-ano-novo-de-santa-maria-maior/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:07Z",
+   "read_at": "2026-11-19T18:11:47Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -9896,7 +9909,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/muse/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:07Z",
+   "read_at": "2026-11-19T18:11:47Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -9919,7 +9932,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/na-idade-maior/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:07Z",
+   "read_at": "2026-11-19T18:11:47Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",
@@ -9942,7 +9955,7 @@
    "organizer": null,
    "url": "https://www.agendalx.pt/events/event/veronica-vleck/",
    "source": "https://www.agendalx.pt/ (Agenda Cultural de Lisboa, route /wp-json/agendalx/v1/events)",
-   "read_at": "2026-11-19T12:13:07Z",
+   "read_at": "2026-11-19T18:11:47Z",
    "place": "lisboa",
    "license": {
     "name": "the source's terms",

@@ -19,7 +19,7 @@
   "Links to recent public posts by the official accounts of organisations (câmaras, public bodies, venues, organisers, news outlets, companies) on Bluesky and Mastodon, with metadata only: account, time, matched topics and places, language, media or not. No post text or media is stored."
  ],
  "status": "read",
- "how": "sources/social/collect.mjs reads https://public.api.bsky.app/xrpc/ (every 6 hours)",
+ "how": "sources/social/collect.mjs reads https://public.api.bsky.app/xrpc/ (twice a day, at data.b@'s wakes; the source's own cadence: every 6 hours)",
  "terms": {
   "summary": "Organisations only, official interfaces only, by link. Bluesky: robots.txt of the public API allows crawling it and asks for backoff on 429; the Terms of Service (14 Aug 2025) leave each post's content with its author, so we store link and metadata only and credit the organisation. Mastodon: mastodon.social's terms (effective 2026-08-31) say whoever owns the content retains ownership and allow API access; its robots.txt disallows only /media_proxy/, /interact/ and a domain-blocks path. Licence on each post: the platform's terms, holder the organisation. Not reviewed by a person.",
   "page": "https://public.api.bsky.app/robots.txt",

@@ -20,7 +20,7 @@
   "The recorded talks of Web Summit 2026 (Lisbon, 9 to 12 November 2026; Day Two, 11 November, cancelled) that Web Summit's official YouTube channel published since 1 November 2026: title, time published, length, view and like counts as read, a link to YouTube, the address for YouTube's own player, and the chapters (talk start times and titles, speakers where the line names them) read from each description's timestamp lines. The videos stay Web Summit's: we link and embed with YouTube's player, and keep no description, thumbnail or comment."
  ],
  "status": "read",
- "how": "sources/youtube-replays/collect.mjs reads https://www.youtube.com/@WebSummit (every 6 hours)",
+ "how": "sources/youtube-replays/collect.mjs reads https://www.youtube.com/@WebSummit (twice a day, at data.b@'s wakes; the source's own cadence: every 6 hours)",
  "terms": {
   "summary": "YouTube API Services Terms of Service and Developer Policies (both last updated 2026-11-06 UTC). Data read without a user's sign-in is Non-Authorized Data: stored for no longer than 30 calendar days, then deleted or refreshed; so this source keeps only the latest read, replaced every run, with no raw copy or history in a vault. YouTube must be shown as the source and its Terms linked (https://www.youtube.com/t/terms); no copy or offline use of the audiovisual content (we link and use YouTube's embedded player only); no aggregation of API Data beyond one content owner's own channels (we read one channel and add no totals across channels). The videos, titles and descriptions stay Web Summit's. Not reviewed by a person.",
   "page": "https://developers.google.com/youtube/terms/developer-policies",

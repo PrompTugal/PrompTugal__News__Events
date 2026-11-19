@@ -19,7 +19,7 @@
   "The data files behind storm-charles.promptugal.news (Lisbon and Madeira, 10 to 12 November 2026): decisions, exposure, flights, transport, weather and the signal timeline, every file with its size and sha256, checked against the bytes served."
  ],
  "status": "read",
- "how": "sources/storm-charles-archive/collect.mjs reads https://storm-charles.promptugal.news/api/v1/index.json (once)",
+ "how": "sources/storm-charles-archive/collect.mjs reads https://storm-charles.promptugal.news/api/v1/index.json (twice a day, at data.b@'s wakes; the source's own cadence: once)",
  "terms": {
   "summary": "The storm site's own data: Apache-2.0 (its repository's licence). Quoted sources keep their own terms; each item links its source.",
   "page": "https://storm-charles.promptugal.news/api/v1/index.json",

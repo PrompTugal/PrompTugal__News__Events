@@ -19,7 +19,7 @@
   "Every CAP warning message in MeteoAlarm's Portugal feed, one line each: area, hazard, level, onset, expiry, time of issue and text, with what appeared or left since the read before."
  ],
  "status": "read",
- "how": "sources/meteoalarm-pt/collect.mjs reads https://feeds.meteoalarm.org/api/v1/warnings/feeds-portugal (hourly)",
+ "how": "sources/meteoalarm-pt/collect.mjs reads https://feeds.meteoalarm.org/api/v1/warnings/feeds-portugal (twice a day, at data.b@'s wakes; the source's own cadence: hourly)",
  "terms": {
   "summary": "MeteoAlarm: re-users must name the national service (IPMA), keep the time of issue, link www.meteoalarm.org and publish MeteoAlarm's disclaimer. latest.json carries all four.",
   "page": "https://www.meteoalarm.org/en/live/page/terms-and-conditions",

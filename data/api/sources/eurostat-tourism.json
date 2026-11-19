@@ -24,7 +24,7 @@
   "Nights spent at tourist accommodation (hotels, short-stay accommodation and camping) by the guest's residence, for Portugal, the Algarve (PT15), the Lisbon metropolitan area (PT17) and London (UKI): annual for the last 10 years and monthly for Portugal for 36 months. Regions are split into domestic, foreign and total guests; Portugal as a whole is also split by named country (United Kingdom, Germany, France, Spain, the Netherlands, the United States). Lisbon is PT17 to 2022 and Grande Lisboa (PT1A) plus Península de Setúbal (PT1B) from 2023, as Eurostat changed the regions. Eurostat's London data stops in 2016."
  ],
  "status": "read",
- "how": "sources/eurostat-tourism/collect.mjs reads https://ec.europa.eu/eurostat/web/tourism/database (every 6 hours)",
+ "how": "sources/eurostat-tourism/collect.mjs reads https://ec.europa.eu/eurostat/web/tourism/database (twice a day, at data.b@'s wakes; the source's own cadence: every 6 hours)",
  "terms": {
   "summary": "Reuse of statistical data is authorised for commercial or non-commercial purposes provided the source is acknowledged (Commission Decision of 12 December 2011); no key. Acknowledge with \"Source: Eurostat\" and the dataset code. Not reviewed by a person.",
   "page": "https://ec.europa.eu/eurostat/web/main/help/copyright-notice",

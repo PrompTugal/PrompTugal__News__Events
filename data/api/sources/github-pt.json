@@ -19,7 +19,7 @@
   "Public repositories and latest releases of Portuguese startups, companies, public bodies, universities and open-source projects on GitHub, each with its source URL, licence and the time read."
  ],
  "status": "read",
- "how": "sources/github-pt/collect.mjs reads https://api.github.com/ (every 6 hours)",
+ "how": "sources/github-pt/collect.mjs reads https://api.github.com/ (twice a day, at data.b@'s wakes; the source's own cadence: every 6 hours)",
  "terms": {
   "summary": "GitHub's terms allow this use: reading public data through the API is permitted; excessive requests may be suspended; data must not be used for spam or to sell users' personal information. We read organisations' public repositories and releases only, collect no personal data, stay well under the rate limits, and keep each repository's own licence (or a link to its terms) on every item. Not reviewed by a person.",
   "page": "https://docs.github.com/en/site-policy/github-terms/github-terms-of-service#h-api-terms",

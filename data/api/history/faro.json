@@ -1,4 +1,17 @@
 {
+ "data_read_at": "2026-11-19T18:11:23Z",
+ "expected_cadence": {
+  "name": "twice a day",
+  "seconds": 43200,
+  "stale_after_seconds": 46800,
+  "collected_as": "hourly",
+  "why": "data.b@ collects twice a day (07:03 and 18:03 Lisbon) since 19 Nov 2026"
+ },
+ "schema": {
+  "openapi": "https://data.promptugal.news/api/v1/openapi.json",
+  "path": "/api/v1/history/events/faro.json",
+  "version": "v1"
+ },
  "license": {
   "name": "CC BY 4.0",
   "url": "https://creativecommons.org/licenses/by/4.0/",
@@ -8,7 +21,6 @@
   "commercial_note": "Each history file states its own licence; IPMA and Open-Meteo values are not for commercial use."
  },
  "place": "faro",
- "data_read_at": "2026-11-19T12:12:43Z",
  "history_from": "2026-11-18T23:43:33Z",
  "about": "Events in faro: each exactly as first listed by its organiser's page (first: name, dates, venue, and the read that first saw it), never overwritten; every later change seen (changes: field, from, to, at); last_seen; gone_at when it stopped being listed before its date. Events read every 6 hours, so a change is dated by the read that first saw it. Claims: what Perplexity (through OpenRouter) said would happen, kept as answered with its evidence links and the time asked, to be checked when the date comes. Not confirmed listings.",
  "sources": {
@@ -21,12 +33,13 @@
    "field": "claims"
   }
  },
- "commit": "8f6a905cc07022fcc9a937a50685ab937525edc8",
+ "commit": "a6271b3e2e34cbef33afadc8f74ca7e5c1cf4c64",
  "counts": {
   "events": 10,
   "changed": 0,
   "gone": 0,
   "claims": 7,
+  "claims_in_towns_files": 0,
   "claims_dropped_wording": 0
  },
  "events": [
@@ -45,7 +58,7 @@
     "venue": "Teatro das Figuras"
    },
    "changes": [],
-   "last_seen": "2026-11-19T12:13:17Z",
+   "last_seen": "2026-11-19T18:11:57Z",
    "gone_at": null
   },
   {
@@ -63,7 +76,7 @@
     "venue": "Teatro das Figuras"
    },
    "changes": [],
-   "last_seen": "2026-11-19T12:13:17Z",
+   "last_seen": "2026-11-19T18:11:57Z",
    "gone_at": null
   },
   {
@@ -81,7 +94,7 @@
     "venue": "Teatro das Figuras"
    },
    "changes": [],
-   "last_seen": "2026-11-19T12:13:17Z",
+   "last_seen": "2026-11-19T18:11:57Z",
    "gone_at": null
   },
   {
@@ -99,7 +112,7 @@
     "venue": "Teatro das Figuras"
    },
    "changes": [],
-   "last_seen": "2026-11-19T12:13:17Z",
+   "last_seen": "2026-11-19T18:11:57Z",
    "gone_at": null
   },
   {
@@ -117,7 +130,7 @@
     "venue": "Teatro das Figuras"
    },
    "changes": [],
-   "last_seen": "2026-11-19T12:13:17Z",
+   "last_seen": "2026-11-19T18:11:57Z",
    "gone_at": null
   },
   {
@@ -135,7 +148,7 @@
     "venue": "Teatro das Figuras"
    },
    "changes": [],
-   "last_seen": "2026-11-19T12:13:17Z",
+   "last_seen": "2026-11-19T18:11:57Z",
    "gone_at": null
   },
   {
@@ -153,7 +166,7 @@
     "venue": "Teatro das Figuras"
    },
    "changes": [],
-   "last_seen": "2026-11-19T12:13:17Z",
+   "last_seen": "2026-11-19T18:11:57Z",
    "gone_at": null
   },
   {
@@ -171,7 +184,7 @@
     "venue": "Teatro das Figuras"
    },
    "changes": [],
-   "last_seen": "2026-11-19T12:13:17Z",
+   "last_seen": "2026-11-19T18:11:57Z",
    "gone_at": null
   },
   {
@@ -189,7 +202,7 @@
     "venue": "Teatro das Figuras"
    },
    "changes": [],
-   "last_seen": "2026-11-19T12:13:17Z",
+   "last_seen": "2026-11-19T18:11:57Z",
    "gone_at": null
   },
   {
@@ -207,7 +220,7 @@
     "venue": "Teatro das Figuras"
    },
    "changes": [],
-   "last_seen": "2026-11-19T12:13:17Z",
+   "last_seen": "2026-11-19T18:11:57Z",
    "gone_at": null
   }
  ],

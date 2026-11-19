@@ -1,0 +1,46 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values.",
+  "commercial_use": "allowed",
+  "commercial_note": "With credit to PrompTugal.news; values taken from a source keep that source's licence."
+ },
+ "id": "skylinewebcams",
+ "name": "SkylineWebcams",
+ "kind": "public live camera",
+ "url": "https://www.skylinewebcams.com/en/webcam/portugal/algarve.html",
+ "owner": "VisioRay (named in SkylineWebcams terms of use as owner of the content and trade marks)",
+ "places": [
+  "faro",
+  "portimao"
+ ],
+ "gives": [
+  "live cameras: embeddable only with SkylineWebcams own Embed code, unmodified"
+ ],
+ "status": "not-read",
+ "why": {
+  "quote": "The User may view the Content for strictly personal use and share it only by means of the sharing buttons and links provided on the pages, or embed a webcam on their own website using the code provided by the “Embed” function, without modifying it. Without VisioRay’s written authorisation, it is prohibited, for any purpose, including personal purposes: to record, download, copy, photograph, print, retransmit or republish the Content ... to use the Content for commercial, journalistic or advertising purposes ... to extract the Content or the site’s data by automated means (scraping) or to access the video streams outside the SkylineWebcams player.",
+  "quote_lang": "en",
+  "page": "https://www.skylinewebcams.com/en/terms-of-use.html",
+  "read_at": "2026-11-19",
+  "basis": "Read by data.b@ at about 17:35 UTC on 19 Nov 2026 (robots.txt allows camera pages; it disallows /cams/, /click.php and /clickb.php). The terms ban automated extraction of the site data, so this site does not read camera pages by code and does not take embed codes or coordinates from them by script. The terms also bar commercial and journalistic use without VisioRay written authorisation: whether embedding on PrompTugal sites counts as that is for Dinis and rights@, not decided here."
+ },
+ "interface": "none we use. A person or live.b@ copies the code from each camera page Embed button by hand, unmodified, if Dinis and rights@ agree the use is allowed",
+ "cameras_seen": [
+  {
+   "place": "faro",
+   "page": "https://www.skylinewebcams.com/en/webcam/portugal/algarve/faro/faro-portugal.html"
+  },
+  {
+   "place": "portimao",
+   "page": "https://www.skylinewebcams.com/en/webcam/portugal/algarve/portimao/marina.html"
+  }
+ ],
+ "cameras_note": "The two camera pages linked from SkylineWebcams Algarve page as read once at about 17:35 UTC on 19 Nov 2026 (the page also links the Faro area page https://www.skylinewebcams.com/en/webcam/portugal/algarve/faro.html). No Lagos camera was linked there. Not checked again by code.",
+ "contact_channel": "https://www.skylinewebcams.com/en/contact.html (named in the terms for authorisation requests)",
+ "researched_by": "data.b@PrompTugal.dinis",
+ "asked_by": "live.b@PrompTugal.dinis through conductor.b@, 19 Nov 2026 17:34 UTC, citing Dinis at about 17:32 UTC in live.b@s session (not read at source by data.b@)",
+ "notes": "An authorisation request to VisioRay is a draft for a person to send, never sent by an agent."
+}
