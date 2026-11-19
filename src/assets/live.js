@@ -12,8 +12,9 @@ const CADENCE_H = 7; // data.promptugal.news reads the agendas every 6 hours; ol
 const MAX_ITEMS = 5000;
 
 async function getJson(url) {
-  const r = await fetch(url, { cache: 'no-cache', credentials: 'omit', referrerPolicy: 'no-referrer', mode: 'cors' });
-  if (!r.ok) throw new Error(String(r.status));
+  // redirects refused (security@, 19 Nov 2026): a file must come from the fixed address on our own host
+  const r = await fetch(url, { cache: 'no-cache', credentials: 'omit', referrerPolicy: 'no-referrer', mode: 'cors', redirect: 'error' });
+  if (!r.ok || r.redirected || (r.url && !r.url.startsWith(API + '/'))) throw new Error(String(r.status));
   return r.json();
 }
 const okTime = (s) => typeof s === 'string' && !isNaN(new Date(s)) && new Date(s).getTime() <= Date.now() + 10 * 60e3; // not in the future
@@ -52,7 +53,7 @@ async function refresh(box, status) {
     if (k === 'found') el.textContent = String(cur.filter((i) => i.kind === 'found').length);
   }
   const stale = Date.now() - new Date(readAt).getTime() > CADENCE_H * 3600e3;
-  say(status, `${stale ? 'Stale: the live file was last read' : 'Live file: read from data.promptugal.news, its data read'} ${R.fmtStamp(readAt)}. "Today" is ${R.fmtDay(R.today)}, Lisbon time. Our records CC BY 4.0; each event under its source's licence or terms, on its card.`, stale);
+  say(status, `${stale ? 'Stale: the live file was last read' : 'Live file: read from data.promptugal.news, its data read'} ${R.fmtStamp(readAt)}. "Today" is ${R.fmtDay(R.today)}, Lisbon time. ${R.licenceOf(feeds.flatMap((f) => [f.read, f.claims]))} Each event under its source's licence or terms, on its card.`, stale);
 }
 
 const box = document.getElementById('events');

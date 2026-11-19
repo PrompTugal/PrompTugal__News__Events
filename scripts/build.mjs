@@ -30,6 +30,7 @@ const SITE_HOSTS = (() => { try { return [...new Set((checkRegistry(JSON.parse(r
 const CSP_SITES = [...new Set(['https://promptugal.news', 'https://data.promptugal.news', ...SITE_HOSTS])].join(' ');
 const SITES_BAR = (() => { try { return renderBar(JSON.parse(readFileSync('data/sites/sites.json', 'utf8')), { here: 'events.promptugal.news' }); } catch { return ''; } })();
 if (!SITES_BAR) console.warn('build: the sites registry was refused or missing: pages built without the sites bar');
+const { licenceOf } = R;
 const { okId, SITE, DATA, CCBY, REGION, NAMES, nameOf, lisbonDay, clean, esc, escUrl, okUrl, link, mdText, mdLink, host, fmtDay, fmtWhen, fmtStamp, addDays, readItemsOf, foundItemsOf, endOf, startOf, isCurrent, groupByDay, eventHtml, eventMd, listHtml, listMd, timePart } = R;
 R.setToday(lisbonDay(builtAt));
 const today = R.today;
@@ -177,7 +178,7 @@ ${fresh}
 <p class="note">Two kinds of listing: <b>read</b> events come from a public agenda we may read (the agendas data.promptugal.news reads: ${esc(sourcesRead.join(' and ') || 'none yet')}), with the details it gives; events <b>found through Perplexity</b> show only their title, date, place and the links that point to them, because the sites those links lead to do not let us copy their details. <a href="/organisers/">Organisers: send us yours.</a></p>
 </section>
 <section><h2>Places</h2><ul class="places">${placeRows}</ul>${lisbonNote ? `<p class="small">${lisbonNote}</p>` : ''}</section>
-<section><h2>Starting in the next seven days</h2><p class="fresh" id="events-status">Built copy: data read ${esc(fmtStamp(dataReadAt))}. Your browser loads the live file when it can.</p><div id="events" data-places="${["algarve", "lisboa", ...beyondIds].join(",")}" data-window="7" data-show-place="1" data-read-at="${esc(dataReadAt || '')}">${wk.count ? wk.html : '<p class="none">Nothing listed yet for the next seven days.</p>'}</div><p class="small">Long-running exhibitions and events already on are on each place's page, under "On now".</p></section>`,
+<section><h2>Starting in the next seven days</h2><p class="fresh" id="events-status">Built copy: data read ${esc(fmtStamp(dataReadAt))}. ${esc(licenceOf(["algarve", "lisboa", ...beyondIds].flatMap((q) => [feeds[q]?.read, feeds[q]?.claims])))} Your browser loads the live file when it can.</p><div id="events" data-places="${["algarve", "lisboa", ...beyondIds].join(",")}" data-window="7" data-show-place="1" data-read-at="${esc(dataReadAt || '')}">${wk.count ? wk.html : '<p class="none">Nothing listed yet for the next seven days.</p>'}</div><p class="small">Long-running exhibitions and events already on are on each place's page, under "On now".</p></section>`,
     md: `${totalRead} events read from official agendas and ${totalFound} found through Perplexity, across ${placeIds.length} places. Data read ${fmtStamp(dataReadAt)}.\n\n## Places\n\n${[REGION, ...placeIds].map((p) => `- ${mdLink(`${SITE}/places/${p}/`, nameOf(p))}: ${counts(p).replace(/<[^>]+>/g, '')}`).join('\n')}\n\n## Starting in the next seven days\n\n${listMd(algItems) || 'Nothing listed yet.'}`,
   });
 }
@@ -210,7 +211,7 @@ for (const p of [REGION, ...placeIds]) {
 <p class="standfirst"><span data-count="read">${stats[p].read}</span> events read from official agendas${stats[p].found ? ` and <span data-count="found">${stats[p].found}</span> found through Perplexity` : ''}, on now or starting within about 60 days, by day.</p>
 ${fresh}
 ${read?.source_note && stats[p].read ? `<details class="small"><summary>The sources and their terms</summary><p>${esc(read.source_note)}</p></details>` : ''}
-<p class="fresh" id="events-status">Built copy: data read ${esc(fmtStamp(dataReadAt))}. Your browser loads the live file when it can.</p>
+<p class="fresh" id="events-status">Built copy: data read ${esc(fmtStamp(dataReadAt))}. ${esc(licenceOf([read, feeds[p]?.claims]))} Your browser loads the live file when it can.</p>
 <div id="events" data-places="${p}" data-show-place="${p === REGION ? 1 : 0}" data-read-at="${esc(dataReadAt || '')}">${L.count ? L.html : `<p class="none">${empty}</p>`}</div>
 <p class="small">The data: ${apiLinks || 'none yet'}. ${p === REGION ? `The Algarve's Perplexity finds are gathered from each place's own file.` : ''} Licences: the records CC BY 4.0, each event under its source's terms as linked.</p>`,
     md: `${stats[p].read} read from official agendas, ${stats[p].found} found through Perplexity. Data read ${fmtStamp(dataReadAt)}.\n\n${listMd(items) || 'No events listed yet: no source we may read covers this place.'}`,

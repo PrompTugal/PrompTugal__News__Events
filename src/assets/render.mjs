@@ -117,6 +117,19 @@ const okHref = (u) => okUrl(u) || /^\/(?!\/)[a-z0-9/-]*$/.test(u);
 const A = (u, text) => (okUrl(u) ? n('a', { href: u }, text) : text);
 const P = (path, text) => n('a', { href: path }, text);
 // Text fragments keep their outer spaces ("; ", " ("): the same cleaning as clean(), without the trim.
+// Each loaded file's own licence, read from the file (security@'s ruling, 19 Nov 2026: licence and provenance travel with
+// the loaded data). Plain text only; a name or holder that is not a short plain string is left out.
+const okLicText = (s) => typeof s === 'string' && s.length > 0 && s.length <= 80 && /^[\p{L}\p{N} .,()'&+\/-]+$/u.test(s);
+export function licenceOf(files) {
+  const seen = [];
+  for (const f of files || []) {
+    const l = f && typeof f === 'object' ? f.license : null;
+    if (!l || typeof l !== 'object' || !okLicText(l.name)) continue;
+    const t = okLicText(l.holder) ? `${l.name} (${l.holder})` : l.name;
+    if (!seen.includes(t)) seen.push(t);
+  }
+  return seen.length ? `The files' own licence: ${seen.join('; ')}.` : 'The files name no licence.';
+}
 const cleanKeep = (s) => String(s ?? '').replace(/\u2014/g, '\u2013').replace(/\s+/g, ' ');
 const escText = (s) => cleanKeep(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const escAttr = (s) => String(s).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');

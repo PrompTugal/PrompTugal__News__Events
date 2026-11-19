@@ -21,6 +21,8 @@ On each place page and the home page, the reader's browser fetches that place's 
 4. The data site being down: readers see nothing.
 
 ## Mitigations
+- Redirects are refused (`redirect: 'error'`, and a response not from the fixed address under data.promptugal.news/api/v1/events/ is dropped): a moved or hijacked path cannot hand the page a file from elsewhere; the built copy stays (security@'s ruling, 19 November 2026; tested with a 302 at 07:35 UTC).
+- Each loaded file's own licence is shown beside its read time, read from the file's `license` (name and holder, short plain text only, set with textContent), in the built copy and the live one.
 - (1) Every value is escaped before it reaches the HTML; place ids and dates are checked against strict patterns and anything else is dropped or replaced (finding EV-2026-001, high, fixed; EV-2026-002, fixed). Tested with crafted input.
 - (2) Only `http` and `https` links without spaces, quotes or angle brackets are made into links (EV-2026-004, fixed).
 - (3) Malformed items are skipped; a failure leaves the built page (EV-2026-007, fixed).
