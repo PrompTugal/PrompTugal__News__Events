@@ -23,6 +23,11 @@ for (const [f, h] of Object.entries(BAR_SHA)) if (createHash('sha256').update(re
 const { render: renderBar } = await import(pathToFileURL(resolve(BAR + 'sites-bar-render.mjs')).href);
 // The registry, copied by scripts/sync-data.mjs (if it is down, the last good copy in git is used). An empty result means no bar,
 // never a hand-made one.
+// The exact hosts the pages may load images from and connect to (Dinis, 19 Nov 2026: connect-src lists the exact hosts):
+// this site, the data site, the page-view endpoint and lookups, and each site in the registry that passed the bar's own check.
+const { check: checkRegistry } = await import(pathToFileURL(resolve(BAR + 'sites-bar-render.mjs')).href);
+const SITE_HOSTS = (() => { try { return [...new Set((checkRegistry(JSON.parse(readFileSync('data/sites/sites.json', 'utf8'))) || []).map((x) => new URL(x.url).hostname))].filter((h) => /^([a-z0-9-]+\.)*promptugal\.news$/.test(h)).map((h) => `https://${h}`); } catch { return []; } })();
+const CSP_SITES = [...new Set(['https://promptugal.news', 'https://data.promptugal.news', ...SITE_HOSTS])].join(' ');
 const SITES_BAR = (() => { try { return renderBar(JSON.parse(readFileSync('data/sites/sites.json', 'utf8')), { here: 'events.promptugal.news' }); } catch { return ''; } })();
 if (!SITES_BAR) console.warn('build: the sites registry was refused or missing: pages built without the sites bar');
 const { okId, SITE, DATA, CCBY, REGION, NAMES, nameOf, lisbonDay, clean, esc, escUrl, okUrl, link, mdText, mdLink, host, fmtDay, fmtWhen, fmtStamp, addDays, readItemsOf, foundItemsOf, endOf, startOf, isCurrent, groupByDay, eventHtml, eventMd, listHtml, listMd, timePart } = R;
@@ -84,7 +89,7 @@ function page({ path, title, description, section, body, md }) {
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: https://promptugal.news https://*.promptugal.news; connect-src 'self' https://promptugal.news https://*.promptugal.news https://dev.send.sgraph.ai https://ipapi.co https://ipwho.is; object-src 'none'; base-uri 'self'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: ${CSP_SITES}; connect-src 'self' ${CSP_SITES} https://dev.send.sgraph.ai https://ipapi.co https://ipwho.is; object-src 'none'; base-uri 'self'; form-action 'none'">
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(description)}">
 <link rel="canonical" href="${SITE}${path}">
@@ -172,7 +177,7 @@ ${fresh}
 <p class="note">Two kinds of listing: <b>read</b> events come from a public agenda we may read (the agendas data.promptugal.news reads: ${esc(sourcesRead.join(' and ') || 'none yet')}), with the details it gives; events <b>found through Perplexity</b> show only their title, date, place and the links that point to them, because the sites those links lead to do not let us copy their details. <a href="/organisers/">Organisers: send us yours.</a></p>
 </section>
 <section><h2>Places</h2><ul class="places">${placeRows}</ul>${lisbonNote ? `<p class="small">${lisbonNote}</p>` : ''}</section>
-<section><h2>Starting in the next seven days</h2><div id="events" data-places="${["algarve", "lisboa", ...beyondIds].join(",")}" data-window="7" data-show-place="1" data-read-at="${esc(dataReadAt || '')}">${wk.count ? wk.html : '<p class="none">Nothing listed yet for the next seven days.</p>'}</div><p class="small">Long-running exhibitions and events already on are on each place's page, under "On now".</p></section>`,
+<section><h2>Starting in the next seven days</h2><p class="fresh" id="events-status">Built copy: data read ${esc(fmtStamp(dataReadAt))}. Your browser loads the live file when it can.</p><div id="events" data-places="${["algarve", "lisboa", ...beyondIds].join(",")}" data-window="7" data-show-place="1" data-read-at="${esc(dataReadAt || '')}">${wk.count ? wk.html : '<p class="none">Nothing listed yet for the next seven days.</p>'}</div><p class="small">Long-running exhibitions and events already on are on each place's page, under "On now".</p></section>`,
     md: `${totalRead} events read from official agendas and ${totalFound} found through Perplexity, across ${placeIds.length} places. Data read ${fmtStamp(dataReadAt)}.\n\n## Places\n\n${[REGION, ...placeIds].map((p) => `- ${mdLink(`${SITE}/places/${p}/`, nameOf(p))}: ${counts(p).replace(/<[^>]+>/g, '')}`).join('\n')}\n\n## Starting in the next seven days\n\n${listMd(algItems) || 'Nothing listed yet.'}`,
   });
 }
@@ -202,9 +207,10 @@ for (const p of [REGION, ...placeIds]) {
     description: `Events in ${nm} by day: ${stats[p].read} read from official agendas, ${stats[p].found} found through Perplexity, each with its date, venue, organiser, evidence and licence.`,
     body: `<p class="crumbs"><a href="/places/">Places</a> › ${esc(nm)}</p>
 <h1>${esc(nm)}${p === REGION ? ': every place' : ''}</h1>
-<p class="standfirst">${stats[p].read} events read from official agendas${stats[p].found ? ` and ${stats[p].found} found through Perplexity` : ''}, on now or starting within about 60 days, by day.</p>
+<p class="standfirst"><span data-count="read">${stats[p].read}</span> events read from official agendas${stats[p].found ? ` and <span data-count="found">${stats[p].found}</span> found through Perplexity` : ''}, on now or starting within about 60 days, by day.</p>
 ${fresh}
 ${read?.source_note && stats[p].read ? `<details class="small"><summary>The sources and their terms</summary><p>${esc(read.source_note)}</p></details>` : ''}
+<p class="fresh" id="events-status">Built copy: data read ${esc(fmtStamp(dataReadAt))}. Your browser loads the live file when it can.</p>
 <div id="events" data-places="${p}" data-show-place="${p === REGION ? 1 : 0}" data-read-at="${esc(dataReadAt || '')}">${L.count ? L.html : `<p class="none">${empty}</p>`}</div>
 <p class="small">The data: ${apiLinks || 'none yet'}. ${p === REGION ? `The Algarve's Perplexity finds are gathered from each place's own file.` : ''} Licences: the records CC BY 4.0, each event under its source's terms as linked.</p>`,
     md: `${stats[p].read} read from official agendas, ${stats[p].found} found through Perplexity. Data read ${fmtStamp(dataReadAt)}.\n\n${listMd(items) || 'No events listed yet: no source we may read covers this place.'}`,

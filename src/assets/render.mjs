@@ -86,41 +86,6 @@ export function licenceMd(l) {
 export function sourceLabel(e) { return clean(String(e.source || '').replace(/^https?:\/\/\S+\s*/, '').replace(/^\(|\)$/g, '')) || host(e.url); }
 export function sourceUrl(e) { return (/^(https?:\/\/\S+)/.exec(String(e.source || '')) || [])[1] || ''; }
 
-export function eventHtml(it, { showPlace = false } = {}) {
-  const e = it.e;
-  const place = nameOf(it.place);
-  if (it.kind === 'read') {
-    const venue = e.location?.name ? esc(e.location.name) : '<span class="none">not given by the source</span>';
-    const org = e.organizer?.name ? esc(e.organizer.name) : `<span class="none">not named by the source; listed by ${esc(PUBLISHER_FALLBACK(e))}</span>`;
-    return `<li class="ev ev-read">
-<h4 class="ev-name">${link(e.url, e.name)}</h4>
-<dl class="ev-facts"><dt>When</dt><dd>${esc(fmtWhen(e.startDate, e.endDate))}</dd>${showPlace ? `<dt>Place</dt><dd><a href="/places/${it.place}/">${esc(place)}</a></dd>` : `<dt>Place</dt><dd>${esc(place)}</dd>`}<dt>Venue</dt><dd>${venue}</dd><dt>Organiser</dt><dd>${org}</dd>
-<dt>Evidence</dt><dd>${link(e.url, `the event's page on ${host(e.url) || 'the source'}`)}${sourceUrl(e) ? `; ${link(sourceUrl(e), sourceLabel(e) || 'the list it was read from')}` : ''}; ${e.stale ? `<b>as read at ${esc(fmtStamp(e.read_at))}</b> (the source has not answered since; kept up to 48 hours)` : `read ${esc(fmtStamp(e.read_at))}`}</dd>
-<dt>Licence</dt><dd>${licenceHtml(e.license)}</dd>
-<dt>Provenance</dt><dd>${esc(readHow(it))} (<a href="/how/">how it works</a>)</dd></dl>
-<p class="report"><a href="/report/">Something wrong? Tell us</a></p>
-</li>`;
-  }
-  const ev = arr(e.evidence).filter((x) => x && okUrl(x.url));
-  const evHtml = ev.map((x) => `${link(x.url, x.host || host(x.url))} <span class="flag ${x.readable ? 'ok' : 'no'}">${x.readable ? 'we may read it' : 'we do not copy it'}</span>`).join('; ') || '<span class="none">none kept</span>';
-  const df = e.details_from;
-  const confirm = e.status === 'confirmed'
-    ? `<p class="withheld">Confirmed at a source we may read${df ? `: ${(() => { const u = String(typeof df === 'string' ? df : df.url || '').split(' ')[0]; return okUrl(u) ? link(u, host(u)) : esc(typeof df === 'string' ? df : ''); })()}` : ''}.</p>`
-    : e.status === 'details withheld'
-    ? `<p class="withheld">Details withheld: the source's terms do not let us copy them. <a href="/organisers/">Organisers, send them to us.</a></p>`
-    : `<p class="withheld">${esc(e.status === 'to confirm at a readable source' ? 'To confirm: a source we may read is cited, and its details are not read yet.' : (e.details_note || e.status || ''))} <a href="/organisers/">Organisers, send us the details.</a></p>`;
-  const d = it.discovery;
-  return `<li class="ev ev-found">
-<p class="badge">Found through Perplexity</p>
-<h4 class="ev-name">${esc(e.name)}</h4>
-<dl class="ev-facts"><dt>When</dt><dd>${esc(fmtWhen(e.startDate, e.endDate))}</dd><dt>Place</dt><dd>${showPlace ? `<a href="/places/${it.place}/">${esc(place)}</a>` : esc(place)}</dd>
-<dt>Evidence</dt><dd>${evHtml}</dd>
-<dt>Found</dt><dd>through Perplexity${d ? ` (${esc(d.model || 'sonar')}, via ${esc(d.via || 'OpenRouter')}, asked ${esc(fmtStamp(d.asked_at))})` : ''}, by <a href="${DATA}/">data.promptugal.news</a>; ${esc(SHOWN)} (<a href="/how/">how it works</a>)</dd>
-<dt>Licence</dt><dd>${licenceHtml(e.license)}; each evidence link is under its own source's terms</dd></dl>
-${confirm}
-<p class="report"><a href="/report/">Something wrong? Tell us</a></p>
-</li>`;
-}
 export function eventMd(it) {
   const e = it.e, place = nameOf(it.place);
   if (it.kind === 'read') {
@@ -135,13 +100,6 @@ export function eventMd(it) {
     `  - Licence: ${licenceMd(e.license)}; each evidence link under its own source's terms`, `  - Provenance: found through Perplexity${it.discovery ? ` (${mdText(it.discovery.model || 'sonar')}, asked ${fmtStamp(it.discovery.asked_at)})` : ''} by data.promptugal.news; ${SHOWN}`].join('\n');
 }
 
-export function listHtml(items, opts = {}) {
-  const { now, days } = groupByDay(items);
-  const out = [];
-  if (now.length) out.push(`<section class="day" id="on-now"><h3>On now <span class="n">${now.length}</span></h3><p class="small">Started before today and still running, ending soonest first.</p><ul class="evs">${now.map((it) => eventHtml(it, opts)).join('\n')}</ul></section>`);
-  for (const [day, list] of days) out.push(`<section class="day" id="d-${day}"><h3>${esc(fmtDay(day))}${day === today ? ' (today)' : ''} <span class="n">${list.length}</span></h3><ul class="evs">${list.map((it) => eventHtml(it, opts)).join('\n')}</ul></section>`);
-  return { html: out.join('\n'), count: now.length + days.reduce((n, [, l]) => n + l.length, 0) };
-}
 export function listMd(items) {
   const { now, days } = groupByDay(items);
   const out = [];
@@ -150,3 +108,82 @@ export function listMd(items) {
   return out.join('\n\n');
 }
 
+// ---- One event as a tree of elements and text (Dinis, 19 Nov 2026 ~01:13 UTC: data in the browser, values by textContent).
+// n(tag, attrs, ...kids): kids are strings (text) or nodes. toHtml escapes everything for the build; toDom builds DOM nodes
+// with createElement and textContent for the browser. Links only from okUrl() or this site's own paths.
+export const n = (t, a, ...k) => ({ t, a: a || {}, k: k.flat().filter((x) => x != null && x !== false && x !== '') });
+// Links from the data: http(s) only. Links to this site's own pages: only the literal paths this code writes (P below).
+const okHref = (u) => okUrl(u) || /^\/(?!\/)[a-z0-9/-]*$/.test(u);
+const A = (u, text) => (okUrl(u) ? n('a', { href: u }, text) : text);
+const P = (path, text) => n('a', { href: path }, text);
+// Text fragments keep their outer spaces ("; ", " ("): the same cleaning as clean(), without the trim.
+const cleanKeep = (s) => String(s ?? '').replace(/\u2014/g, '\u2013').replace(/\s+/g, ' ');
+const escText = (s) => cleanKeep(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+const escAttr = (s) => String(s).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+export function toHtml(x) {
+  if (typeof x === 'string') return escText(x);
+  const attrs = Object.entries(x.a).filter(([k, v]) => v != null && (k !== 'href' || okHref(v))).map(([k, v]) => ` ${k}="${escAttr(v)}"`).join('');
+  return `<${x.t}${attrs}>${x.k.map(toHtml).join('')}</${x.t}>`;
+}
+export function toDom(x, doc) {
+  if (typeof x === 'string') return doc.createTextNode(cleanKeep(x));
+  const el = doc.createElement(x.t);
+  for (const [k, v] of Object.entries(x.a)) if (v != null && (k !== 'href' || okHref(v))) el.setAttribute(k, String(v));
+  for (const c of x.k) el.appendChild(toDom(c, doc));
+  return el;
+}
+const none = (s) => n('span', { class: 'none' }, s);
+function licenceTree(l) {
+  if (!l) return [n('a', { class: 'lic', href: CCBY }, 'CC BY 4.0'), ' (our record)'];
+  const name = l.name === "the source's terms" ? `the source's terms${l.holder ? ` (${l.holder})` : ''}` : `${l.name}${l.holder && l.holder !== 'PrompTugal.news' ? ` (${l.holder})` : ''}`;
+  return okUrl(l.url) ? [n('a', { class: 'lic', href: l.url }, name)] : [name];
+}
+const join = (parts, sep) => parts.flatMap((p, i) => (i ? [sep, ...[].concat(p)] : [].concat(p)));
+export function eventTree(it, { showPlace = false } = {}) {
+  const e = it.e, place = nameOf(it.place);
+  const placeDd = showPlace && okId(it.place) ? P(`/places/${it.place}/`, place) : place;
+  const report = n('p', { class: 'report' }, P('/report/', 'Something wrong? Tell us'));
+  if (it.kind === 'read') {
+    const ev = [A(e.url, `the event's page on ${host(e.url) || 'the source'}`)];
+    if (sourceUrl(e)) ev.push('; ', A(sourceUrl(e), sourceLabel(e) || 'the list it was read from'));
+    ev.push('; ', e.stale ? [n('b', null, `as read at ${fmtStamp(e.read_at)}`), ' (the source has not answered since; kept up to 48 hours)'] : `read ${fmtStamp(e.read_at)}`);
+    return n('li', { class: 'ev ev-read' },
+      n('h4', { class: 'ev-name' }, A(e.url, e.name)),
+      n('dl', { class: 'ev-facts' },
+        n('dt', null, 'When'), n('dd', null, fmtWhen(e.startDate, e.endDate)),
+        n('dt', null, 'Place'), n('dd', null, placeDd),
+        n('dt', null, 'Venue'), n('dd', null, e.location?.name ? e.location.name : none('not given by the source')),
+        n('dt', null, 'Organiser'), n('dd', null, e.organizer?.name ? e.organizer.name : none(`not named by the source; listed by ${PUBLISHER_FALLBACK(e)}`)),
+        n('dt', null, 'Evidence'), n('dd', null, ev),
+        n('dt', null, 'Licence'), n('dd', null, licenceTree(e.license)),
+        n('dt', null, 'Provenance'), n('dd', null, readHow(it), ' (', P('/how/', 'how it works'), ')')),
+      report);
+  }
+  const evs = arr(e.evidence).filter((x) => x && okUrl(x.url)).map((x) => [A(x.url, x.host || host(x.url)), ' ', n('span', { class: `flag ${x.readable ? 'ok' : 'no'}` }, x.readable ? 'we may read it' : 'we do not copy it')]);
+  const df = e.details_from, dfu = String(typeof df === 'string' ? df : (df && df.url) || '').split(' ')[0];
+  const confirm = e.status === 'confirmed'
+    ? n('p', { class: 'withheld' }, 'Confirmed at a source we may read', df ? [': ', okUrl(dfu) ? A(dfu, host(dfu)) : (typeof df === 'string' ? df : '')] : '', '.')
+    : e.status === 'details withheld'
+    ? n('p', { class: 'withheld' }, "Details withheld: the source's terms do not let us copy them. ", P('/organisers/', 'Organisers, send them to us.'))
+    : n('p', { class: 'withheld' }, e.status === 'to confirm at a readable source' ? 'To confirm: a source we may read is cited, and its details are not read yet.' : (e.details_note || e.status || ''), ' ', P('/organisers/', 'Organisers, send us the details.'));
+  const d = it.discovery;
+  return n('li', { class: 'ev ev-found' },
+    n('p', { class: 'badge' }, 'Found through Perplexity'),
+    n('h4', { class: 'ev-name' }, e.name),
+    n('dl', { class: 'ev-facts' },
+      n('dt', null, 'When'), n('dd', null, fmtWhen(e.startDate, e.endDate)),
+      n('dt', null, 'Place'), n('dd', null, placeDd),
+      n('dt', null, 'Evidence'), n('dd', null, evs.length ? join(evs, '; ') : none('none kept')),
+      n('dt', null, 'Found'), n('dd', null, `through Perplexity${d ? ` (${d.model || 'sonar'}, via ${d.via || 'OpenRouter'}, asked ${fmtStamp(d.asked_at)})` : ''}, by `, A(`${DATA}/`, 'data.promptugal.news'), `; ${SHOWN} (`, P('/how/', 'how it works'), ')'),
+      n('dt', null, 'Licence'), n('dd', null, licenceTree(e.license), "; each evidence link is under its own source's terms")),
+    confirm, report);
+}
+export function listTree(items, opts = {}) {
+  const { now, days } = groupByDay(items);
+  const out = [];
+  if (now.length) out.push(n('section', { class: 'day', id: 'on-now' }, n('h3', null, 'On now ', n('span', { class: 'n' }, String(now.length))), n('p', { class: 'small' }, 'Started before today and still running, ending soonest first.'), n('ul', { class: 'evs' }, now.map((it) => eventTree(it, opts)))));
+  for (const [day, list] of days) out.push(n('section', { class: 'day', id: `d-${day}` }, n('h3', null, `${fmtDay(day)}${day === today ? ' (today)' : ''} `, n('span', { class: 'n' }, String(list.length))), n('ul', { class: 'evs' }, list.map((it) => eventTree(it, opts)))));
+  return { nodes: out, count: now.length + days.reduce((k, [, l]) => k + l.length, 0) };
+}
+export const eventHtml = (it, opts) => toHtml(eventTree(it, opts));
+export function listHtml(items, opts = {}) { const L = listTree(items, opts); return { html: L.nodes.map(toHtml).join('\n'), count: L.count }; }

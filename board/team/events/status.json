@@ -2,8 +2,8 @@
   "role": "events.b@PrompTugal.dinis",
   "account": "B",
   "started_by": "conductor.b@PrompTugal.dinis at Dinis's word, 18 Nov 2026 (~14:30 UTC: \"repo is created\")",
-  "state": "sites bar 1.1.0 installed (01:20 UTC); waits for London data and the next wake",
-  "updated": "2026-11-19T01:30Z",
+  "state": "data in the browser (01:45 UTC); waits for the next wake (signed commits first)",
+  "updated": "2026-11-19T01:50Z",
   "debrief": "board/team/events/debriefs/2026-11-18-handover.md",
   "done": [
     "home page: counts, places, events starting in the next seven days",
@@ -35,7 +35,8 @@
     "22:35 UTC: London-ready (Dinis ~22:20 UTC, Website board/guidance/2026-11-18-london.md): the Algarve is an explicit list; a place outside Portugal gets its own page labelled 'Beyond Portugal: London' (conductor.b@'s proposed label, Dinis's to change), joins the home week and the live data, and is never folded into the Algarve; tested with a made-up London file. Post-review: clean (two low notes applied)",
     "wake 22:33 UTC: a Content Security Policy on every page (scripts and styles from this site only; connections only to data.promptugal.news, the page-view endpoint and the two place lookups); tested on nine pages, no violations, live data and page views working; live-data threat model updated; /preview.png refreshed. Inner passes: post-review clean. Library requests: none for events. London data and the sites bar: not published yet",
     "23:40 UTC: the meter chip's text says this site is free and carries no billing, only promptugal.news bills (Dinis ~23:45 UTC, Website board/guidance/2026-11-18-billing-only-on-the-main-site.md); from now on one piece of work per push, so each push is one tagged release",
-    "01:20 UTC: sites bar 1.1.0 installed: the three files vendored unchanged in src/assets/sites-bar/1.1.0/, pinned by full sha256 (the build stops on a mismatch); the registry copied by sync-data.mjs and rendered at build above the masthead on every page; CSS and defer script on every page; the old rail removed; CSP allows images and connections to promptugal.news sites; /preview.svg 320x180 from designer@'s template, the 1200x630 card at /preview-card.svg (and /preview.png). The leak scan allows scripts/build.mjs and data/sites/sites.json for 'long high-entropy string' (the sha256 pins), at Dinis's word (~01:10 UTC: \"yes, (a) allow those two files in the leak scan\"). Tested: pop-up, preview image and version, phone sheet, no CSP violations. Post-review: clean"
+    "01:20 UTC: sites bar 1.1.0 installed: the three files vendored unchanged in src/assets/sites-bar/1.1.0/, pinned by full sha256 (the build stops on a mismatch); the registry copied by sync-data.mjs and rendered at build above the masthead on every page; CSS and defer script on every page; the old rail removed; CSP allows images and connections to promptugal.news sites; /preview.svg 320x180 from designer@'s template, the 1200x630 card at /preview-card.svg (and /preview.png). The leak scan allows scripts/build.mjs and data/sites/sites.json for 'long high-entropy string' (the sha256 pins), at Dinis's word (~01:10 UTC: \"yes, (a) allow those two files in the leak scan\"). Tested: pop-up, preview image and version, phone sheet, no CSP violations. Post-review: clean",
+    "01:45 UTC: data in the browser, to Dinis's rule (~01:13 UTC, Website board/guidance/2026-11-19-load-the-data-in-the-browser.md): live.js fetches data.promptugal.news with no cookie and no referrer, on open and every 10 minutes; replaces the built list only with a file of the expected shape, within bounds and no older than the built copy; writes DOM nodes and textContent only (the renderer is now an element tree serialised to escaped HTML at build and to DOM in the browser); a status line says 'Live file' or 'Built copy' with its read time, 'Stale' past 7 hours; place-page counts update; the CSP lists exact hosts from the registry instead of *.promptugal.news. Tested: built pages unchanged in text, live on Lagos, the Algarve and home, no CSP violations, no referrer or cookie on 10 data requests. Post-review: one low finding (protocol-relative links) fixed, and read times now compared as dates and refused if in the future"
   ],
   "next": [
     "next wake: signed commits (Dinis ~01:05 UTC, Website board/guidance/2026-11-19-signed-commits-paid-search-and-free-embeds.md section 2): an SSH signing key for events.b@ published with the session id in team/keys.json; gpg.ssh.program set repo-locally; every commit signed, with Agent: and Claude-Session: trailers; scripts/check-signatures.mjs in release.sh and CI from the commit that adds it (pattern: cyber.b@'s c8fff24 in PrompTugal__Cyber), CI's own commits exempt; if the permission check refuses a step, stop and ask",
@@ -57,6 +58,7 @@
     "register the key on pki.sgit.ai"
   ],
   "asks": [
+    "Dinis: the browser rule says pages fetch only from our own hosts, but the page-view script (the team's observability design since 6 Nov) asks ipapi.co or ipwho.is for the reader's town, which sees the reader's IP; it is disclosed in the footer with a Pause switch. Keep it as is, or drop the town lookup on this site?",
     "Dinis (via conductor.b@): observability lane 'events' needs its tokens from observability@ on account A"
   ],
   "for_data_b": [
