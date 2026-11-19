@@ -45,30 +45,30 @@ jobs:
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with:
           node-version: 22
-      - name: Every commit since the last release carries an Agent trailer
-        # From the last release tag, not github.event.before: GitHub drops a pending run when a
-        # newer one queues, and the surviving run's "before" is the dropped push's head, so the
-        # dropped push's commits were never checked (specialist.code@ finding 3b).
-        env:
-          BEFORE: ${{ github.event.before }}
-          AFTER: ${{ github.sha }}
-        run: |
-          last=$(git describe --tags --abbrev=0 --match "v${VERSION_BASE}.*" "$AFTER" 2>/dev/null || true)
-          node scripts/check-commits.mjs "${last:-$BEFORE}" "$AFTER"
-      - name: The signature check's own tests, then every commit since the check began is signed by its agent's published key
-        # Dinis, 19 Nov 2026 ~01:05 UTC, and security@'s five controls (Website a250cc42): keys from each parent's
-        # team/keys.json, every commit checked (merges and side branches too), no exemption by name, one failure fails the run.
-        # The check itself runs from the last release tag's copy, never the pushed tree's, so a push cannot change the checker
-        # that checks it (videos.b@'s finding, via conductor.b@ 19 Nov 2026 14:01 UTC). The pushed tree's tests still run first.
+      - name: The trailer and signature checks, from the last release, before any pushed-tree code runs
+        # security@'s controls 7 (widened) and 8 (Website fae9649db): the security checks and their configs (keys, trusted bases,
+        # no exemptions) come from the last release tag's copy, extracted and run in this one step before any code from the
+        # pushed tree runs, under a clean environment (env -i), so nothing pushed can replace them or steer node. If the tag or a
+        # file is missing, this fails: there is no fallback. From the last release tag, not github.event.before: GitHub drops a
+        # pending run when a newer one queues (specialist.code@ finding 3b).
+        id: trusted
         env:
           AFTER: ${{ github.sha }}
         run: |
-          if [ "$(git rev-parse --is-shallow-repository)" != "false" ]; then echo "a shallow checkout: the signature check needs the full history" >&2; exit 1; fi
-          node scripts/test-check-signatures.mjs
+          if [ "$(git rev-parse --is-shallow-repository)" != "false" ]; then echo "a shallow checkout: the checks need the full history" >&2; exit 1; fi
           last=$(git describe --tags --abbrev=0 --match "v${VERSION_BASE}.*" "$AFTER^" 2>/dev/null || true)
-          if [ -z "$last" ] || ! git cat-file -e "$last:scripts/check-signatures.mjs" 2>/dev/null; then echo "no released copy of the signature check" >&2; exit 1; fi
-          git show "$last:scripts/check-signatures.mjs" > "$RUNNER_TEMP/check-signatures.mjs"
-          node "$RUNNER_TEMP/check-signatures.mjs" "$AFTER"
+          if [ -z "$last" ]; then echo "no release tag to take the checks from" >&2; exit 1; fi
+          echo "last=$last" >> "$GITHUB_OUTPUT"
+          d=$(mktemp -d)
+          for f in check-commits.mjs check-signatures.mjs; do
+            git cat-file -e "$last:scripts/$f" 2>/dev/null || { echo "no released copy of scripts/$f in $last" >&2; exit 1; }
+            git show "$last:scripts/$f" > "$d/$f"
+          done
+          env -i PATH="$PATH" HOME="$HOME" node "$d/check-commits.mjs" "$last" "$AFTER"
+          env -i PATH="$PATH" HOME="$HOME" node "$d/check-signatures.mjs" "$AFTER"
+          rm -rf "$d"
+      - name: The signature check's own tests (the pushed code)
+        run: node scripts/test-check-signatures.mjs
       - name: The leak scan's key rules have tests
         run: node scripts/test-leak-scan.mjs
       - name: Copy the events data from data.promptugal.news (a failed read keeps the copy in git)
@@ -79,8 +79,14 @@ jobs:
         env:
           SITE_VERSION: ${{ steps.version.outputs.version }}
       - run: node scripts/validate.mjs
-      - name: Leak scan (tracked files and the built site)
-        run: node scripts/leak-scan.mjs
+      - name: Leak scan (tracked files and the built site; the released scan, extracted and run in this step, clean environment)
+        env:
+          LAST: ${{ steps.trusted.outputs.last }}
+        run: |
+          d=$(mktemp -d)
+          git cat-file -e "$LAST:scripts/leak-scan.mjs" 2>/dev/null || { echo "no released copy of the leak scan in $LAST" >&2; exit 1; }
+          git show "$LAST:scripts/leak-scan.mjs" > "$d/leak-scan.mjs"
+          env -i PATH="$PATH" HOME="$HOME" node "$d/leak-scan.mjs"
       - if: steps.mode.outputs.deploy == 'true'
         uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b # v5
       - if: steps.mode.outputs.deploy == 'true'
