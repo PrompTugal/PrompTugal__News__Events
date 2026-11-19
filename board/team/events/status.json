@@ -3,7 +3,7 @@
   "account": "B",
   "started_by": "conductor.b@PrompTugal.dinis at Dinis's word, 18 Nov 2026 (~14:30 UTC: \"repo is created\")",
   "state": "no IP lookup (03:21 UTC); next wake: live.js redirects and licences, sites bar 1.1.1, signed commits",
-  "updated": "2026-11-19T05:13Z",
+  "updated": "2026-11-19T05:16Z",
   "debrief": "board/team/events/debriefs/2026-11-18-handover.md",
   "done": [
     "home page: counts, places, events starting in the next seven days",
@@ -92,7 +92,7 @@
     "2d. when the registry names a newer version than the vendored one (data.b@'s trap, conductor.b@ 05:09 UTC; security@ 1acd10498, 05:13 UTC): leave the piece out, never ship it unchecked (no country sent; no bar), deploy the rest and upgrade at the next wake; the build log and status.json say '<piece> <version> off: the registry names <newer>'; the same version with different bytes still stops the build. Today's build pins bar 1.1.0 locally, so the registry's move cannot break it yet. Checked: release.sh runs with set -euo pipefail and stops on the first failure",
     "3. signed commits with the five controls: no exemption by name (CI only by content, or none); keys from the parent commit's keys file; every commit in the range, merges and side branches included; one failure refuses the range and nothing deploys; Agent: and the full Claude-Session: must match the key",
     "3b. tests for the signature check, in CI and release.sh before the check (model: Data repo f68beb3, scripts/test-check-signatures.mjs): each throwaway test repo sets gpg.ssh.program=ssh-keygen (the global config points at the environment's own signer), and each failing case asserts its reason, not only that it fails (conductor.b@ 02:15 UTC)",
-    "4. leak scan: the plain public forms in team/keys.json only, exempt by field and exact pattern; private-key words, a JWK d and tokens still fail. Plus (security@ 1acd10498): any OpenSSH, RSA, EC, DSA or encrypted PRIVATE KEY header fails everywhere, no exemption; an ssh-ed25519, ecdsa or ssh-rsa public key outside its published field (ssh_signing.public_key, or the check's allowed-signers file) is flagged; a test for each rule",
+    "4. leak scan: the plain public forms in team/keys.json only, exempt by field and exact pattern; private-key words, a JWK d and tokens still fail. Plus (security@ 1acd10498): any OpenSSH, RSA, EC, DSA or encrypted PRIVATE KEY header fails everywhere, no exemption; an ssh-ed25519, ecdsa or ssh-rsa public key outside its published field (ssh_signing.public_key, or the check's allowed-signers file) is flagged; a test for each rule; the public-key rule covers ssh-ed25519, ssh-rsa, ecdsa-sha2-nistp256/384/521 and the sk-ssh-ed25519@openssh.com and sk-ecdsa-sha2-* forms, each with a failing test outside the published field (library.b@'s LIB-2026-060, via conductor.b@ 05:16 UTC)",
     "5. every time from date -u"
   ]
 }
