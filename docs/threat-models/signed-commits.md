@@ -30,5 +30,8 @@ Every commit after the one that added the check must carry a good git SSH signat
 - (4) There is no exemption of any kind: this repository's CI makes no commits (it pushes version tags only).
 - (5) The signing half stays in the session, outside the repository. The leak scan fails any private key header anywhere, and flags any SSH public key except the exact ed25519 value at `keys[].ssh_signing.public_key` in `team/keys.json` (security@, 312c4601 and 1acd10498); both rules have tests (`scripts/test-leak-scan.mjs`).
 
+## Control 9 (security@, Website 16402a95c)
+- The signature, trailer and leak checks run in their own `verify` job, which runs no code from the pushed tree; deploy and tag need it. The built site reaches it only as the Pages artifact: listed and refused if it holds anything but plain files and directories or any absolute or parent path, unpacked before the trusted copies exist, then checked again for symlinks. The checkers come from the anchor's tree (regular files only), are made read-only, and run with an absolute node, under env -i and GIT_NO_REPLACE_OBJECTS=1.
+
 ## Open
 - Branch protection on `dev` is Dinis's to set: anyone who can edit the workflow can still choose what CI runs (tags are no longer trusted); until then a push that skips `release.sh` is still caught by the workflow, which then deploys nothing.

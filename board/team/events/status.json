@@ -3,7 +3,7 @@
   "account": "B",
   "started_by": "conductor.b@PrompTugal.dinis at Dinis's word, 18 Nov 2026 (~14:30 UTC: \"repo is created\")",
   "state": "signed commits live from this release (13:45 UTC); next: the past view and predictions file once the history records changes",
-  "updated": "2026-11-19T14:20Z",
+  "updated": "2026-11-19T14:27Z",
   "debrief": "board/team/events/debriefs/2026-11-18-handover.md",
   "done": [
     "home page: counts, places, events starting in the next seven days",
@@ -48,7 +48,8 @@
     "14:07 UTC: controls 6 and 7 complete per security@'s ruling (a21986a69): shallow checkout refused (check and CI step); tests for an orphan with its own key and for a shallow clone; 20 tests",
     "14:11 UTC: release A for security@'s 7-widened and 8 (fae9649db): trailer check pinned to the seed commit, ancestry-only skips, no exemptions; leak scan runnable from a released copy; --base refused under CI; 22 signature tests",
     "14:15 UTC: release B: every security check in CI and release.sh from the last release's copy, failing closed; CI runs them under env -i before pushed-tree code (trailers, signatures) or extracted in their own step (leak scan)",
-    "14:20 UTC: security@'s fourth ruling (948820a7e): CI anchors on the newest successful github-pages deployment (deployments API, the run's read token; deployments: read), the anchor must be an ancestor of AFTER, the trailer range is anchor..AFTER, checkers from the anchor's tree; release.sh anchors on the live version.json; tags no longer used; tests: a dropped run's unsigned commit fails, 9 workflow structure tests (tags unused, missing anchor fails, not-an-ancestor fails, missing checker fails), mutation-checked"
+    "14:20 UTC: security@'s fourth ruling (948820a7e): CI anchors on the newest successful github-pages deployment (deployments API, the run's read token; deployments: read), the anchor must be an ancestor of AFTER, the trailer range is anchor..AFTER, checkers from the anchor's tree; release.sh anchors on the live version.json; tags no longer used; tests: a dropped run's unsigned commit fails, 9 workflow structure tests (tags unused, missing anchor fails, not-an-ancestor fails, missing checker fails), mutation-checked",
+    "14:27 UTC: control 9: security checks in their own verify job running no pushed code; artifact vetted and unpacked before the trusted copies exist; AppSec high (tar write-through) fixed before release"
   ],
   "next": [
     "next wake: signed commits (Dinis ~01:05 UTC, Website board/guidance/2026-11-19-signed-commits-paid-search-and-free-embeds.md section 2): an SSH signing key for events.b@ published with the session id in team/keys.json; gpg.ssh.program set repo-locally; every commit signed, with Agent: and Claude-Session: trailers; scripts/check-signatures.mjs in release.sh and CI from the commit that adds it (pattern: cyber.b@'s c8fff24 in PrompTugal__Cyber), CI's own commits exempt; if the permission check refuses a step, stop and ask. Build in from the start (signals.b@'s review, relayed by conductor.b@ 01:16 UTC): never exempt CI commits by author or committer name or address (anyone can set them), only by something a pusher cannot forge, or not at all; check each commit against the keys in its PARENT commit's team/keys.json, never its own, so a commit cannot add its own key and pass (a new key is added by a commit signed with an already listed key, or by a person)",

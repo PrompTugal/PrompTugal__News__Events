@@ -22,10 +22,6 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
-    # deployments: read lets the run read CI's own record of the last deployment that passed (security@'s fourth ruling).
-    permissions:
-      contents: read
-      deployments: read
     outputs:
       version: ${{ steps.version.outputs.version }}
       deploy: ${{ steps.mode.outputs.deploy }}
@@ -49,36 +45,6 @@ jobs:
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with:
           node-version: 22
-      - name: The trailer and signature checks, from the last verified deployment, before any pushed-tree code runs
-        # security@'s fourth ruling (Website 948820a7e): the anchor A is the newest commit a passing run deployed, read from
-        # GitHub's own deployment record for github-pages with this run's read token (a push alone cannot write it; a person
-        # or token with deployments write access could, until Dinis restricts the github-pages environment to dev). Tags are not
-        # used. A must exist and be an ancestor of AFTER, or the run fails. The checked range is A..AFTER (so commits of
-        # dropped runs are covered) and the checkers come from A's tree, extracted and run in this step before any pushed-tree
-        # code runs, under env -i. There is no fallback: no A, no checker in A, or A not an ancestor of AFTER fails the run.
-        id: trusted
-        env:
-          AFTER: ${{ github.sha }}
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          if [ "$(git rev-parse --is-shallow-repository)" != "false" ]; then echo "a shallow checkout: the checks need the full history" >&2; exit 1; fi
-          A=""
-          for row in $(gh api "repos/$GITHUB_REPOSITORY/deployments?environment=github-pages&per_page=50" --jq '.[] | "\(.id):\(.sha)"'); do
-            state=$(gh api "repos/$GITHUB_REPOSITORY/deployments/${row%%:*}/statuses?per_page=1" --jq '.[0].state // ""') || { echo "cannot read a deployment status" >&2; exit 1; }
-            if [ "$state" = "success" ]; then A="${row##*:}"; break; fi
-          done
-          if ! printf '%s' "$A" | grep -Eq '^[0-9a-f]{40}$'; then echo "no successful github-pages deployment to anchor on" >&2; exit 1; fi
-          git cat-file -e "$A^{commit}" 2>/dev/null || { echo "the anchor $A is not in this history" >&2; exit 1; }
-          git merge-base --is-ancestor "$A" "$AFTER" || { echo "the anchor $A is not an ancestor of $AFTER (a force push?)" >&2; exit 1; }
-          echo "anchor=$A" >> "$GITHUB_OUTPUT"
-          d=$(mktemp -d)
-          for f in check-commits.mjs check-signatures.mjs; do
-            git cat-file -e "$A:scripts/$f" 2>/dev/null || { echo "no copy of scripts/$f in the anchor $A" >&2; exit 1; }
-            git show "$A:scripts/$f" > "$d/$f"
-          done
-          env -i PATH="$PATH" HOME="$HOME" node "$d/check-commits.mjs" "$A" "$AFTER"
-          env -i PATH="$PATH" HOME="$HOME" node "$d/check-signatures.mjs" "$AFTER"
-          rm -rf "$d"
       - name: The signature check's and the workflow's own tests (the pushed code)
         run: |
           node scripts/test-check-signatures.mjs
@@ -93,22 +59,75 @@ jobs:
         env:
           SITE_VERSION: ${{ steps.version.outputs.version }}
       - run: node scripts/validate.mjs
-      - name: Leak scan (tracked files and the built site; the anchor's scan, extracted and run in this step, clean environment)
-        env:
-          A: ${{ steps.trusted.outputs.anchor }}
-        run: |
-          d=$(mktemp -d)
-          git cat-file -e "$A:scripts/leak-scan.mjs" 2>/dev/null || { echo "no copy of the leak scan in the anchor $A" >&2; exit 1; }
-          git show "$A:scripts/leak-scan.mjs" > "$d/leak-scan.mjs"
-          env -i PATH="$PATH" HOME="$HOME" node "$d/leak-scan.mjs"
       - if: steps.mode.outputs.deploy == 'true'
         uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b # v5
       - if: steps.mode.outputs.deploy == 'true'
         uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa # v3
         with:
           path: _site
-  deploy:
+  verify:
+    # security@'s control 9 (Website 16402a95c, from civic): the security checks run in their own job, which runs no code from
+    # the pushed tree. It checks out, reads the anchor A from GitHub's API (the newest github-pages deployment whose latest
+    # status is success; fourth ruling, 948820a7e), takes the checkers from A's tree (regular files only, no symlinks) into
+    # RUNNER_TEMP, and runs them with an absolute node path under env -i (no NODE_OPTIONS) and GIT_NO_REPLACE_OBJECTS=1.
+    # The built site reaches it only as data, the Pages artifact, unpacked into _site/ for the leak scan. The checked range is
+    # A..AFTER. A missing A, an A that is not an ancestor of AFTER, or a missing checker fails: no fallback, no tags.
+    # A run by hand (workflow_dispatch) checks A..HEAD the same way.
     needs: build
+    if: needs.build.outputs.deploy == 'true'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      deployments: read
+    env:
+      GIT_NO_REPLACE_OBJECTS: '1'
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: 22
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+        with:
+          name: github-pages
+          path: ${{ runner.temp }}/site-artifact
+      - name: Signatures, trailers and the leak scan, from the anchor A, in a job that has run no pushed code
+        env:
+          AFTER: ${{ github.sha }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          NODE=$(command -v node); case "$NODE" in /*) ;; *) echo "no absolute path to node" >&2; exit 1;; esac
+          if [ "$(git rev-parse --is-shallow-repository)" != "false" ]; then echo "a shallow checkout: the checks need the full history" >&2; exit 1; fi
+          A=""
+          for row in $(gh api "repos/$GITHUB_REPOSITORY/deployments?environment=github-pages&per_page=50" --jq '.[] | "\(.id):\(.sha)"'); do
+            state=$(gh api "repos/$GITHUB_REPOSITORY/deployments/${row%%:*}/statuses?per_page=1" --jq '.[0].state // ""') || { echo "cannot read a deployment status" >&2; exit 1; }
+            if [ "$state" = "success" ]; then A="${row##*:}"; break; fi
+          done
+          if ! printf '%s' "$A" | grep -Eq '^[0-9a-f]{40}$'; then echo "no successful github-pages deployment to anchor on" >&2; exit 1; fi
+          git cat-file -e "$A^{commit}" 2>/dev/null || { echo "the anchor $A is not in this history" >&2; exit 1; }
+          git merge-base --is-ancestor "$A" "$AFTER" || { echo "the anchor $A is not an ancestor of $AFTER (a force push?)" >&2; exit 1; }
+          # The built site is hostile data from a job that ran pushed code: list it first and refuse anything but plain files
+          # and directories, and any absolute or parent path; unpack it before the trusted copies exist (so nothing in it can
+          # write to them); refuse symlinks again after unpacking.
+          ART="$RUNNER_TEMP/site-artifact/artifact.tar"
+          if tar -tvf "$ART" | cut -c1 | grep -qv '^[-d]$'; then echo "the built site holds an entry that is not a plain file or directory: refused" >&2; exit 1; fi
+          if tar -tf "$ART" | grep -Eq '(^/|(^|/)\.\.(/|$))'; then echo "the built site holds an absolute or parent path: refused" >&2; exit 1; fi
+          rm -rf _site && mkdir _site && tar -xf "$ART" -C _site --no-same-owner --no-same-permissions --no-overwrite-dir
+          if [ -n "$(find _site -type l -print -quit)" ]; then echo "the built site holds a symbolic link: refused" >&2; exit 1; fi
+          T="$RUNNER_TEMP/trusted"; [ ! -e "$T" ] || { echo "$T exists before the trusted copies are written: refused" >&2; exit 1; }; mkdir "$T"
+          for f in check-commits.mjs check-signatures.mjs leak-scan.mjs; do
+            mode=$(git ls-tree "$A" "scripts/$f" | cut -d' ' -f1)
+            [ "$mode" = "100644" ] || [ "$mode" = "100755" ] || { echo "no regular-file copy of scripts/$f in the anchor $A (mode ${mode:-none})" >&2; exit 1; }
+            git show "$A:scripts/$f" > "$T/$f"
+          done
+          chmod -R a-w "$T"
+          env -i PATH="$PATH" HOME="$HOME" GIT_NO_REPLACE_OBJECTS=1 "$NODE" "$T/check-commits.mjs" "$A" "$AFTER"
+          env -i PATH="$PATH" HOME="$HOME" GIT_NO_REPLACE_OBJECTS=1 "$NODE" "$T/check-signatures.mjs" "$AFTER"
+          env -i PATH="$PATH" HOME="$HOME" GIT_NO_REPLACE_OBJECTS=1 "$NODE" "$T/leak-scan.mjs"
+  deploy:
+    needs: [build, verify]
     if: needs.build.outputs.deploy == 'true'
     runs-on: ubuntu-latest
     permissions:
@@ -121,9 +140,9 @@ jobs:
       - id: deployment
         uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4
   tag:
-    needs: [build, deploy]
+    needs: [build, verify, deploy]
     # Tags a push only; a run by hand deploys but does not tag (AppSec review, 18 Nov 2026).
-    if: ${{ always() && github.event_name == 'push' && needs.build.result == 'success' && (needs.deploy.result == 'success' || needs.deploy.result == 'skipped') }}
+    if: ${{ always() && github.event_name == 'push' && needs.build.result == 'success' && needs.verify.result == 'success' && needs.deploy.result == 'success' }}
     runs-on: ubuntu-latest
     permissions:
       contents: write
