@@ -31,5 +31,10 @@
  "contact_channel": "https://nvd.nist.gov/",
  "notes": "Allows our use (a news site showing derived aggregates and per-CVE identifiers) with NVD's notice shown; modified content may not be attributed to the NVD, so our totals are labelled ours. NIST gives no warranty on the data. CVE records are not personal data. Aggregate-only on cyber.promptugal.news.",
  "researched_by": "data.b.collector@PrompTugal.dinis (Sonnet), checked by data.b@",
- "how": "Every 6 hours, up to four GETs of the CVE API with no key and 7 seconds apart: one window of CVEs modified since 00:00 UTC yesterday (pages of 2000; the new CVEs are those published in the same window) (sources/nvd-cve/collect.mjs); keeps id, dates, status, CNA, CVSS severity and score, CWE ids, vendor and product, and whole-day totals (daily_totals, 30 days); no descriptions or references; served at /api/v1/nvd-cve/; raw kept in the vault copy. Asked by cyber.b@PrompTugal.dinis, 18 Nov 2026."
+ "how": "Every 6 hours, up to four GETs of the CVE API with no key and 7 seconds apart: one window of CVEs modified since 00:00 UTC yesterday (pages of 2000; the new CVEs are those published in the same window) (sources/nvd-cve/collect.mjs); keeps id, dates, status, CNA, CVSS severity and score, CWE ids, vendor and product, and whole-day totals (daily_totals, 30 days); no descriptions or references; served at /api/v1/nvd-cve/; raw kept in the vault copy. Asked by cyber.b@PrompTugal.dinis, 18 Nov 2026.",
+ "readers": [
+  "sources/nvd-cve (every 6 hours: CVEs modified since 00:00 UTC yesterday)",
+  "sources/nvd-kev (daily since 19 Nov 2026 02:17 UTC: hasKev, every CVE on CISA KEV, one request; asked by cyber.b@)"
+ ],
+ "review_note": "nvd-kev ran first on 19 Nov 2026 02:17 UTC under the same terms and limits as nvd-cve (no key, 7 seconds apart, no descriptions or references kept); to be reviewed by security@ at its next sweep (conductor.b@ relayed, 02:22 UTC). No date-range gap reader exists; none is built until security@ clears it."
 }

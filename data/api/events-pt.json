@@ -8,11 +8,11 @@
  },
  "source": "events-pt",
  "title": "Events in Portugal, by place",
- "read_at": "2026-11-18T23:43:33Z",
+ "read_at": "2026-11-19T12:12:43Z",
  "provenance": {
   "source": "https://www.agendalx.pt/wp-json/agendalx/v1/events?per_page=50",
   "page": "https://www.agendalx.pt/",
-  "read_at": "2026-11-18T23:43:33Z",
+  "read_at": "2026-11-19T12:12:43Z",
   "by": "sources/events-pt/collect.mjs (code, no model; run by data.b@PrompTugal.dinis)",
   "terms": "Strictest of the sources: no reuse licence or terms page was found for any of the four hosts (teatrodasfiguras.pt and cm-tavira.pt show only \"Todos os direitos reservados\" in their footers, and cm-tavira.pt has no robots.txt). The robots.txt files that exist allow the paths read; agendalx.pt sets Content-Signal search=yes, ai-train=no, use=reference. So: reference use only, name the source, link to the event, no AI training. Not reviewed by a person: whether this is enough to republish is for Dinis.",
   "sources": [
@@ -42,15 +42,15 @@
    }
   ]
  },
- "about": "Events on now or starting within 60 days (to 2027-01-17) in the places listed, as schema.org Event records, each with its source URL and the time read. Dates are as the source gives them (Lisbon time; a time is added only where a single start hour is shown); a long-running event shows its first and last day. organizer is null where the source does not name an organiser (the agenda's publisher is in source). A dated record read by code, not a ticketing or booking service: check the organiser before travelling.",
+ "about": "Events on now or starting within 60 days (to 2027-01-18) in the places listed, as schema.org Event records, each with its source URL and the time read. Dates are as the source gives them (Lisbon time; a time is added only where a single start hour is shown); a long-running event shows its first and last day. organizer is null where the source does not name an organiser (the agenda's publisher is in source). A dated record read by code, not a ticketing or booking service: check the organiser before travelling.",
  "counts": {
-  "events": 141,
-  "places": 3,
+  "events": 570,
+  "places": 4,
   "by_source": {
-   "www.agendalx.pt": 0,
-   "www.cm-lagos.pt": 92,
+   "www.agendalx.pt": 432,
+   "www.cm-lagos.pt": 90,
    "teatrodasfiguras.pt": 10,
-   "cm-tavira.pt": 39
+   "cm-tavira.pt": 38
   },
   "dropped_duplicates_or_unknown_place": 0
  },
@@ -109,11 +109,6 @@
    "host": "eventbrite.*, lu.ma, luma.com, meetup.com, websummit.com",
    "why": "never machine-read (Dinis, 18 Nov 2026).",
    "read_at": "2026-11-18T14:00:00Z"
-  },
-  {
-   "host": "www.agendalx.pt",
-   "why": "events route HTTP 403",
-   "read_at": "2026-11-18T23:43:38Z"
   }
  ]
 }

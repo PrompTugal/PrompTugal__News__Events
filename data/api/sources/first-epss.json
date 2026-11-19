@@ -1,0 +1,38 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values.",
+  "commercial_use": "allowed",
+  "commercial_note": "With credit to PrompTugal.news; values taken from a source keep that source's licence."
+ },
+ "id": "first-epss",
+ "name": "EPSS (Exploit Prediction Scoring System), FIRST",
+ "kind": "cyber data source",
+ "url": "https://www.first.org/epss/",
+ "owner": "Forum of Incident Response and Security Teams (FIRST)",
+ "places": [],
+ "country": null,
+ "gives": [
+  "a daily probability, per published CVE, that it will be exploited in the next 30 days (cve, epss, percentile)"
+ ],
+ "status": "not-read",
+ "why": {
+  "quote": "EPSS scores are published daily, free of charge, with no registration required. [...] Attribution is requested when EPSS data is used in publications or products.",
+  "quote_lang": "en",
+  "page": "https://www.first.org/epss/data and https://www.first.org/epss/faq",
+  "read_at": "2026-11-19",
+  "basis": "EPSS data page and FAQ. No licence is named for the scores. FIRST Services Terms of Use (https://www.first.org/about/policies/terms, v1.0.0, September 2023) allow viewing, copying and distributing content for vulnerability disclosure, incident response or preventative cybersecurity uses, and other uses need FIRST written permission; EPSS is not named there, so whether they apply is unclear."
+ },
+ "licence": {
+  "name": "unclear (no licence named; FIRST Services Terms may apply)",
+  "commercial_use": "unclear"
+ },
+ "interface": "Daily full file https://epss.empiricalsecurity.com/epss_scores-current.csv.gz (redirects; cve, epss, percentile); archive github.com/empiricalsec/epss_scores back to 2021-04-14. API https://api.first.org/data/v1/epss is for lookups, not bulk (1000 requests a minute unauthenticated). robots.txt at www.first.org disallows only /signin and /_/links; api.first.org has none (404).",
+ "feed": null,
+ "contact_channel": "https://www.first.org/epss/",
+ "notes": "Asked by cyber.b@ (19 Nov 2026 about 01:24 UTC) for the every-prediction-is-kept-and-checked guidance: keep each day's scores as read, check after 30 days against CISA KEV additions, worldwide totals only. EPSS is itself a prediction, so it fits. Not read until Dinis (or rights@) decides whether FIRST's terms allow a free public data site, and whether commercial use stays off.",
+ "researched_by": "data.b@PrompTugal.dinis (web-fetch sub-agent), 19 Nov 2026",
+ "how": "Not collected. Waiting on Dinis: do FIRST's Services Terms cover EPSS, and is our use (a free public site showing daily totals and a track record, for preventative cybersecurity) within them?"
+}

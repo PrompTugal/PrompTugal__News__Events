@@ -1,0 +1,94 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values.",
+  "commercial_use": "per item",
+  "commercial_note": "Each history file states its own licence; IPMA and Open-Meteo values are not for commercial use."
+ },
+ "place": "monchique",
+ "data_read_at": "2026-11-19T12:12:43Z",
+ "history_from": "2026-11-18T23:43:33Z",
+ "about": "Events in monchique: each exactly as first listed by its organiser's page (first: name, dates, venue, and the read that first saw it), never overwritten; every later change seen (changes: field, from, to, at); last_seen; gone_at when it stopped being listed before its date. Events read every 6 hours, so a change is dated by the read that first saw it. Claims: what Perplexity (through OpenRouter) said would happen, kept as answered with its evidence links and the time asked, to be checked when the date comes. Not confirmed listings.",
+ "sources": {
+  "events": {
+   "url": "https://data.promptugal.news/api/v1/events-pt/latest.json",
+   "field": "history"
+  },
+  "claims": {
+   "url": "https://github.com/PrompTugal/PrompTugal__News__Data/tree/dev/discovery/claims",
+   "field": "claims"
+  }
+ },
+ "commit": "1c49806996a28df6cde2dbb050fe59bcfd6590de",
+ "counts": {
+  "events": 0,
+  "changed": 0,
+  "gone": 0,
+  "claims": 3,
+  "claims_dropped_wording": 0
+ },
+ "events": [],
+ "claims": [
+  {
+   "name": "Hridaya Silent Meditation Retreat November 2026",
+   "startDate": "2026-11-18",
+   "endDate": "2026-11-20",
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://ecstatic.events/popular/portugal/november-2026",
+     "host": "ecstatic.events",
+     "readable": false
+    }
+   ],
+   "asked_at": "2026-11-18T14:18:16Z",
+   "model": "perplexity/sonar",
+   "via": "OpenRouter",
+   "answer_file": "discovery/by-place/monchique/2026-11-18.json",
+   "kept_in": "discovery/claims/by-place/monchique.json"
+  },
+  {
+   "name": "Monchique Walking Festival",
+   "startDate": "2026-11-27",
+   "endDate": "2026-11-29",
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://algarvecircle.com/events/6th-monchique-walking-festival-2026-11-27",
+     "host": "algarvecircle.com",
+     "readable": false
+    },
+    {
+     "url": "https://www.visitportugal.com/en/node/515845",
+     "host": "visitportugal.com",
+     "readable": false
+    }
+   ],
+   "asked_at": "2026-11-18T14:18:16Z",
+   "model": "perplexity/sonar",
+   "via": "OpenRouter",
+   "answer_file": "discovery/by-place/monchique/2026-11-18.json",
+   "kept_in": "discovery/claims/by-place/monchique.json"
+  },
+  {
+   "name": "Algarve Harp Festival concert in Monchique",
+   "startDate": "2026-11-28",
+   "endDate": "2026-11-28",
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://www.sulinformacao.pt/2026/10/festival-de-harpa-vai-espalhar-musica-por-lagoa-albufeira-e-monchique/",
+     "host": "sulinformacao.pt",
+     "readable": false
+    }
+   ],
+   "asked_at": "2026-11-18T14:18:16Z",
+   "model": "perplexity/sonar",
+   "via": "OpenRouter",
+   "answer_file": "discovery/by-place/monchique/2026-11-18.json",
+   "kept_in": "discovery/claims/by-place/monchique.json"
+  }
+ ]
+}

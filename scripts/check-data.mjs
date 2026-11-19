@@ -38,6 +38,15 @@ const okEvent = (e) => e && typeof e === 'object' && okText(e.name) && okDate(e.
   && (e.url == null || okUrl(e.url)) && (e.place == null || okId(e.place)) && (e.license == null || typeof e.license === 'object');
 const okClaim = (c) => okEvent({ ...c, url: null }) && (c.evidence == null || (Array.isArray(c.evidence) && c.evidence.every((x) => x && okUrl(x.url))));
 
+// The events history: each event as first listed (never overwritten), every change seen, last seen, gone.
+const okCount = (x) => Number.isInteger(x) && x >= 0 && x <= 1e6;
+// A change's from and to: a short string, a number or nothing, never an object (AppSec review, 19 Nov 2026).
+const okVal = (v) => v == null || (typeof v === 'string' && v.length <= 500) || (typeof v === 'number' && Number.isFinite(v));
+const okHist = (e) => e && typeof e === 'object' && okUrl(e.url) && e.first && typeof e.first === 'object' && okText(e.first.name) && okDate(e.first.startDate)
+  && (e.first.endDate == null || e.first.endDate === '' || okDate(e.first.endDate)) && (e.first.venue == null || (typeof e.first.venue === 'string' && e.first.venue.length <= LIMITS.text))
+  && okDate(e.first.at) && Array.isArray(e.changes) && e.changes.length <= 200
+  && e.changes.every((c) => c && typeof c === 'object' && typeof c.field === 'string' && /^[A-Za-z_]{1,40}$/.test(c.field) && okDate(c.at) && okVal(c.from) && okVal(c.to))
+  && (e.last_seen == null || okDate(e.last_seen)) && (e.gone_at == null || okDate(e.gone_at));
 const files = walk(DIR).filter((f) => f.endsWith('.json'));
 let total = 0;
 for (const f of files) {
@@ -50,6 +59,12 @@ for (const f of files) {
   else if (rel === 'claims-index.json') items(f, d.places, (p) => p && okId(p.place));
   else if (/^by-place\/[a-z0-9-]+\.json$/.test(rel)) items(f, d.events, okEvent);
   else if (/^claims\/[a-z0-9-]+\.json$/.test(rel)) items(f, d.claims, okClaim);
+  else if (rel === 'history/index.json') { items(f, d.places, (p) => p && okId(p.place) && ['events', 'changed', 'gone', 'claims'].every((k) => okCount(p[k]))); if (Array.isArray(d.places) && d.places.length > 200) fail(f, 'more than 200 places'); if (d.history_from != null && !okDate(d.history_from)) fail(f, 'bad history_from'); }
+  else if (/^history\/[a-z0-9-]+\.json$/.test(rel)) {
+    if (!okId(d.place) || `history/${d.place}.json` !== rel) fail(f, 'place does not match the file');
+    if (d.history_from != null && !okDate(d.history_from)) fail(f, 'bad history_from');
+    items(f, d.events ?? [], okHist); items(f, d.claims ?? [], okClaim);
+  }
   else if (rel === 'sources/index.json') items(f, d.entries, (e) => e && okId(e.id));
   else if (rel === 'sources/gaps.json') items(f, d.hosts, (h) => h && okText(h.host) && (h.example == null || okUrl(h.example)));
   else if (/^sources\/[a-z0-9-]+\.json$/.test(rel)) { if (!okId(d.id)) fail(f, 'bad id'); if (d.url != null && !okUrl(d.url)) fail(f, 'bad url'); }

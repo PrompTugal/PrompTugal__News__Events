@@ -1,0 +1,1969 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values.",
+  "commercial_use": "per item",
+  "commercial_note": "Each history file states its own licence; IPMA and Open-Meteo values are not for commercial use."
+ },
+ "place": "algarve",
+ "data_read_at": "2026-11-19T12:12:43Z",
+ "history_from": "2026-11-18T23:43:33Z",
+ "about": "Events in algarve: each exactly as first listed by its organiser's page (first: name, dates, venue, and the read that first saw it), never overwritten; every later change seen (changes: field, from, to, at); last_seen; gone_at when it stopped being listed before its date. Events read every 6 hours, so a change is dated by the read that first saw it. Claims: what Perplexity (through OpenRouter) said would happen, kept as answered with its evidence links and the time asked, to be checked when the date comes. Not confirmed listings.",
+ "sources": {
+  "events": {
+   "url": "https://data.promptugal.news/api/v1/events-pt/latest.json",
+   "field": "history"
+  },
+  "claims": {
+   "url": "https://github.com/PrompTugal/PrompTugal__News__Data/tree/dev/discovery/claims",
+   "field": "claims"
+  }
+ },
+ "commit": "1c49806996a28df6cde2dbb050fe59bcfd6590de",
+ "counts": {
+  "events": 0,
+  "changed": 0,
+  "gone": 0,
+  "claims": 98,
+  "claims_dropped_wording": 1
+ },
+ "events": [],
+ "claims": [
+  {
+   "name": "Palm, Esparto and Cane",
+   "startDate": "2026-09-25",
+   "endDate": "2026-11-21",
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://activealgarve.pt/event/exhibition-palm-esparto-and-cane-2026-09",
+     "host": "activealgarve.pt",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "Som Riscado Festival",
+   "startDate": "2026-11-01",
+   "endDate": "2026-11-30",
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://algarvecircle.com/events",
+     "host": "algarvecircle.com",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "Travelling Exhibition - Principles of the Charter of Educating Cities",
+   "startDate": "2026-11-02",
+   "endDate": "2026-12-04",
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://www.algarveatlas.com/en/events/exposicao-itinerante-principios-da-carta-das-cidades-educado-7722",
+     "host": "algarveatlas.com",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "A água e o mar para mim",
+   "startDate": "2026-11-05",
+   "endDate": "2026-12-18",
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://activealgarve.pt/events",
+     "host": "activealgarve.pt",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "Photography Exhibition Wabi Sabi",
+   "startDate": "2026-11-15",
+   "endDate": "2026-11-26",
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://algarvecircle.com/whats-on/november-2026",
+     "host": "algarvecircle.com",
+     "readable": false
+    },
+    {
+     "url": "https://algarvecircle.com/events",
+     "host": "algarvecircle.com",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "Photography Exhibition “Times that Pass … Memories that Remain\" by Vítor de Sousa",
+   "startDate": "2026-11-18",
+   "endDate": "2027-01-30",
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://www.algarveatlas.com/en/municipalities/albufeira",
+     "host": "algarveatlas.com",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "APS L Longevity Summit 2026",
+   "startDate": "2026-11-18",
+   "endDate": "2026-11-20",
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://www.algarveatlas.com/en/municipalities/albufeira",
+     "host": "algarveatlas.com",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "Photography Exhibition Almeida d'Eça",
+   "startDate": "2026-11-18",
+   "endDate": "2026-12-31",
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://www.algarveatlas.com/en/municipalities/faro",
+     "host": "algarveatlas.com",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "Painting Exhibition by José Passos Silva",
+   "startDate": "2026-11-18",
+   "endDate": "2026-11-30",
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://www.algarveatlas.com/en/municipalities/faro",
+     "host": "algarveatlas.com",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "International Algarve Organ Festival 2026",
+   "startDate": "2026-11-18",
+   "endDate": "2026-11-29",
+   "status": "to confirm at a readable source",
+   "evidence": [
+    {
+     "url": "https://www.cm-lagos.pt/municipio/eventos?filter_34[1]=2026-11-17&start=20",
+     "host": "cm-lagos.pt",
+     "readable": true
+    },
+    {
+     "url": "https://www.theportugalnews.com/news/2026-10-22/autumn-festivals-and-events-in-the-algarve/1104742",
+     "host": "theportugalnews.com",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "Loulé Flea Market",
+   "startDate": "2026-11-18",
+   "endDate": "2026-12-20",
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://www.algarveatlas.com/en/municipalities/loule",
+     "host": "algarveatlas.com",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "Hridaya Silent Meditation Retreat November 2026",
+   "startDate": "2026-11-18",
+   "endDate": "2026-11-20",
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://ecstatic.events/popular/portugal/november-2026",
+     "host": "ecstatic.events",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "Visual Arts Exhibition | Rita Tavares",
+   "startDate": "2026-11-18",
+   "endDate": "2026-12-11",
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://www.algarveatlas.com/en/events/exposicao-de-artes-visuais-rita-tavares-7849",
+     "host": "algarveatlas.com",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "Exhibition by the Cultural Sports Association",
+   "startDate": "2026-11-18",
+   "endDate": "2026-11-30",
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://www.algarveatlas.com/en/municipalities/olhao",
+     "host": "algarveatlas.com",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "Looking through the past",
+   "startDate": "2026-11-18",
+   "endDate": "2026-12-12",
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://www.algarveatlas.com/en/events/looking-through-the-past-7475",
+     "host": "algarveatlas.com",
+     "readable": false
+    },
+    {
+     "url": "https://www.algarveatlas.com/eventos/looking-through-the-past-7475",
+     "host": "algarveatlas.com",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "Markets of Silves",
+   "startDate": "2026-11-18",
+   "endDate": "2026-12-28",
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://www.algarveatlas.com/en/municipalities/silves",
+     "host": "algarveatlas.com",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "Antique Fair",
+   "startDate": "2026-11-18",
+   "endDate": "2026-12-26",
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://www.algarveatlas.com/en/municipalities/silves",
+     "host": "algarveatlas.com",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "Visual Arts Exhibition by Rita Tavares",
+   "startDate": "2026-11-18",
+   "endDate": "2026-12-11",
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://www.taviratimes.com/events",
+     "host": "taviratimes.com",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "The Images that Look at Us – Fernando Lemos",
+   "startDate": "2026-11-18",
+   "endDate": "2027-04-03",
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://www.algarveatlas.com/en/municipalities/tavira",
+     "host": "algarveatlas.com",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "The Great World Race",
+   "startDate": "2026-11-19",
+   "endDate": "2026-11-19",
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://cm-castromarim.pt/site/eventos",
+     "host": "cm-castromarim.pt",
+     "readable": false
+    },
+    {
+     "url": "http://cm-castromarim.pt/info/",
+     "host": "cm-castromarim.pt",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "Encontro Transfronteiriço de Mulheres Empreendedoras",
+   "startDate": "2026-11-19",
+   "endDate": "2026-11-19",
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://cm-castromarim.pt/site/eventos",
+     "host": "cm-castromarim.pt",
+     "readable": false
+    },
+    {
+     "url": "http://cm-castromarim.pt/info/",
+     "host": "cm-castromarim.pt",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "Alice in Wonderland",
+   "startDate": "2026-11-19",
+   "endDate": "2026-11-21",
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://algarvecircle.com/whats-on/november-2026",
+     "host": "algarvecircle.com",
+     "readable": false
+    },
+    {
+     "url": "https://www.algarveaddicts.com/algarve-events-november-2026",
+     "host": "algarveaddicts.com",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "Bienal da Participação Cívica e Cultura",
+   "startDate": "2026-11-19",
+   "endDate": "2026-11-22",
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://www.sulinformacao.pt/2026/10/participacao-civica-na-area-cultural-inspira-nova-bienal-em-olhao/",
+     "host": "sulinformacao.pt",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "Choque Frontal ao Vivo 2026",
+   "startDate": "2026-11-19",
+   "endDate": "2026-11-19",
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://algarveholidaytips.com/events/choque-frontal-ao-vivo-2026-portimao-tempo/",
+     "host": "algarveholidaytips.com",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "Algarve Real Estate Summit 2026",
+   "startDate": "2026-11-20",
+   "endDate": "2026-11-20",
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://www.theportugalnews.com/news/2026-11-02/the-algarve-deserves-its-own-stage-the-vision-behind-the-algarve-real-estate-summit-2026/1109007",
+     "host": "theportugalnews.com",
+     "readable": false
+    },
+    {
+     "url": "https://www.theportugalnews.com/news/2026-10-09/algarve-real-estate-summit-2026-where-the-algarve-meets-the-world/1097777",
+     "host": "theportugalnews.com",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "Feira Franca de Lagos 2026",
+   "startDate": "2026-11-20",
+   "endDate": "2026-11-22",
+   "status": "to confirm at a readable source",
+   "evidence": [
+    {
+     "url": "https://algarvecircle.com/events",
+     "host": "algarvecircle.com",
+     "readable": false
+    },
+    {
+     "url": "https://www.cm-lagos.pt/municipio/eventos?filter_34[1]=2026-11-17&start=20",
+     "host": "cm-lagos.pt",
+     "readable": true
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "Concert Os Amadores",
+   "startDate": "2026-11-20",
+   "endDate": null,
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://www.algarveatlas.com/en/municipalities/sao-bras-de-alportel",
+     "host": "algarveatlas.com",
+     "readable": false
+    },
+    {
+     "url": "https://algarvecircle.com/events",
+     "host": "algarvecircle.com",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "The Eternal Boy",
+   "startDate": "2026-11-20",
+   "endDate": null,
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://www.algarveatlas.com/en/events/exposicao-itinerante-principios-da-carta-das-cidades-educado-7722",
+     "host": "algarveatlas.com",
+     "readable": false
+    },
+    {
+     "url": "https://algarvecircle.com/whats-on/november-2026",
+     "host": "algarvecircle.com",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "XIX International Organ Festival of the Algarve 2026",
+   "startDate": "2026-11-21",
+   "endDate": "2026-11-21",
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://www.algarveatlas.com/en/municipalities/faro",
+     "host": "algarveatlas.com",
+     "readable": false
+    },
+    {
+     "url": "https://www.theportugalnews.com/news/2026-10-22/autumn-festivals-and-events-in-the-algarve/1104742",
+     "host": "theportugalnews.com",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "The Whole World Awaits",
+   "startDate": "2026-11-21",
+   "endDate": "2026-11-21",
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://www.algarveatlas.com/en/municipalities/faro",
+     "host": "algarveatlas.com",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "Crescendo Cycle Concert",
+   "startDate": "2026-11-21",
+   "endDate": "2026-11-21",
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://conservatoriodeloule.pt/en/events/crescendo-cycle-concert-november-2026/",
+     "host": "conservatoriodeloule.pt",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "Mostra-te: Hip Hop Fusion",
+   "startDate": "2026-11-21",
+   "endDate": null,
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://algarvecircle.com/events",
+     "host": "algarvecircle.com",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "Olhão Saturday Riverside Market",
+   "startDate": "2026-11-21",
+   "endDate": null,
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://algarvecircle.com/events",
+     "host": "algarvecircle.com",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "Reinis Jaunais: a solo musical journey",
+   "startDate": "2026-11-21",
+   "endDate": null,
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://algarvecircle.com/events",
+     "host": "algarvecircle.com",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "Noite Afrolatina no Illuminati",
+   "startDate": "2026-11-21",
+   "endDate": "2026-11-21",
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://bailaspot.com/portugal/quarteira",
+     "host": "bailaspot.com",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "Seminar Series on Rural Spaces",
+   "startDate": "2026-11-21",
+   "endDate": "2026-11-28",
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://www.sustainableliving.pt/events/seminar-series-on-rural-spaces-dbc2c9b4",
+     "host": "sustainableliving.pt",
+     "readable": false
+    },
+    {
+     "url": "https://www.sustainableliving.pt/events",
+     "host": "sustainableliving.pt",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "Saturdays at the Market",
+   "startDate": "2026-11-21",
+   "endDate": null,
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://www.algarveatlas.com/en/municipalities/sao-bras-de-alportel",
+     "host": "algarveatlas.com",
+     "readable": false
+    },
+    {
+     "url": "https://algarvecircle.com/councils/sao-bras-de-alportel",
+     "host": "algarvecircle.com",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "Rituais a Sul",
+   "startDate": "2026-11-21",
+   "endDate": "2026-11-22",
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://www.taviratimes.com/events",
+     "host": "taviratimes.com",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "Maiúscula",
+   "startDate": "2026-11-21",
+   "endDate": null,
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://algarvecircle.com/events",
+     "host": "algarvecircle.com",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "The Eternal Boy",
+   "startDate": "2026-11-21",
+   "endDate": null,
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://www.algarveatlas.com/en/events/exposicao-itinerante-principios-da-carta-das-cidades-educado-7722",
+     "host": "algarveatlas.com",
+     "readable": false
+    },
+    {
+     "url": "https://algarvecircle.com/whats-on/november-2026",
+     "host": "algarvecircle.com",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "Youth Accordion Festival of São Brás de Alportel",
+   "startDate": "2026-11-22",
+   "endDate": null,
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://www.portugal-news.today/en/article/374719",
+     "host": "portugal-news.today",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "St. Cecilia's Concert",
+   "startDate": "2026-11-23",
+   "endDate": "2026-11-23",
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://conservatoriodeloule.pt/en/events/crescendo-cycle-concert-november-2026/",
+     "host": "conservatoriodeloule.pt",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "Harp concert with Rebeca Csalog",
+   "startDate": "2026-11-25",
+   "endDate": "2026-11-25",
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://algarvecircle.com/whats-on/november-2026",
+     "host": "algarvecircle.com",
+     "readable": false
+    },
+    {
+     "url": "https://dailynata.com/whats-on",
+     "host": "dailynata.com",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "ALUT Algarviana Ultra Trail 2026 (8th edition)",
+   "startDate": "2026-11-26",
+   "endDate": "2026-11-29",
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://algarvecircle.com/events/alut-algarviana-ultra-trail-2026-8th-edition-2026-11-26",
+     "host": "algarvecircle.com",
+     "readable": false
+    },
+    {
+     "url": "https://gotrail.run/en/event/alut-algarviana-ultra-trail",
+     "host": "gotrail.run",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "The Impact of Food Systems on Climate Action - The Role of Local Power",
+   "startDate": "2026-11-26",
+   "endDate": null,
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://www.taviratimes.com/news/tavira-initiates-discussion-on-the-impact-of-food-systems-on-climate-action",
+     "host": "taviratimes.com",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "Aljezur Sweet Potato Festival",
+   "startDate": "2026-11-27",
+   "endDate": "2026-11-29",
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://www.visitportugal.com/en/node/525149",
+     "host": "visitportugal.com",
+     "readable": false
+    },
+    {
+     "url": "https://eventos.visitalgarve.pt/en/16443/aljezur-sweet-potato-festival",
+     "host": "eventos.visitalgarve.pt",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "Moby Dick",
+   "startDate": "2026-11-27",
+   "endDate": "2026-11-27",
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://www.algarveatlas.com/en/municipalities/faro",
+     "host": "algarveatlas.com",
+     "readable": false
+    },
+    {
+     "url": "https://algarvecircle.com/whats-on/november-2026",
+     "host": "algarvecircle.com",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "Monchique Walking Festival",
+   "startDate": "2026-11-27",
+   "endDate": "2026-11-29",
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://algarvecircle.com/events/6th-monchique-walking-festival-2026-11-27",
+     "host": "algarvecircle.com",
+     "readable": false
+    },
+    {
+     "url": "https://www.visitportugal.com/en/node/515845",
+     "host": "visitportugal.com",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "“Love is Like This”",
+   "startDate": "2026-11-27",
+   "endDate": "2026-11-28",
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://www.visitolhao.pt/agenda",
+     "host": "visitolhao.pt",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "A participação cívica em Portugal: desafios e oportunidades na área cultural",
+   "startDate": "2026-11-27",
+   "endDate": null,
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://www.sustainableliving.pt/pulse/2026-11-18",
+     "host": "sustainableliving.pt",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "Jazz nas Adegas: Low Tech Groove",
+   "startDate": "2026-11-27",
+   "endDate": null,
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://ma.to/event/jazz-nas-adegas-low-tech-groove-27-nov-2026",
+     "host": "ma.to",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "O Amor é Assim",
+   "startDate": "2026-11-27",
+   "endDate": "2026-11-28",
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://www.taviratimes.com/events",
+     "host": "taviratimes.com",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "Monte Gordo Sand Race 2026",
+   "startDate": "2026-11-27",
+   "endDate": "2026-11-29",
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://algarvecircle.com/events",
+     "host": "algarvecircle.com",
+     "readable": false
+    },
+    {
+     "url": "https://algarvecircle.com/whats-on/november-2026",
+     "host": "algarvecircle.com",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "Vila Coração",
+   "startDate": "2026-11-28",
+   "endDate": "2026-12-01",
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "http://cm-castromarim.pt/info/evento/vila-coracao",
+     "host": "cm-castromarim.pt",
+     "readable": false
+    },
+    {
+     "url": "https://cm-castromarim.pt/site/eventos",
+     "host": "cm-castromarim.pt",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "XIX International Organ Festival of the Algarve 2026",
+   "startDate": "2026-11-28",
+   "endDate": "2026-11-28",
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://www.algarveatlas.com/en/municipalities/faro",
+     "host": "algarveatlas.com",
+     "readable": false
+    },
+    {
+     "url": "https://www.theportugalnews.com/news/2026-10-22/autumn-festivals-and-events-in-the-algarve/1104742",
+     "host": "theportugalnews.com",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "Daniel Kemish in concert",
+   "startDate": "2026-11-28",
+   "endDate": "2026-11-28",
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://algarvecircle.com/whats-on/november-2026",
+     "host": "algarvecircle.com",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "Deliver Us from Hunger!",
+   "startDate": "2026-11-28",
+   "endDate": "2026-11-28",
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://algarvecircle.com/whats-on/november-2026",
+     "host": "algarvecircle.com",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "Lagos Baía de Natal",
+   "startDate": "2026-11-28",
+   "endDate": "2027-01-05",
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://algarvecircle.com/whats-on/december-2026",
+     "host": "algarvecircle.com",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "Mercadinho do Lagos Baía de Natal",
+   "startDate": "2026-11-28",
+   "endDate": "2027-01-05",
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://algarvecircle.com/whats-on/december-2026",
+     "host": "algarvecircle.com",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "Loulé Saturday Gypsy Market",
+   "startDate": "2026-11-28",
+   "endDate": "2026-11-28",
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://algarvecircle.com/events/loule-gypsy-market-2026-11-28",
+     "host": "algarvecircle.com",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "Contrapeso Festival #6: Vincent Peirani",
+   "startDate": "2026-11-28",
+   "endDate": "2026-11-28",
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://algarvecircle.com/events/contrapeso-festival-6-vincent-peirani-2026-11-28",
+     "host": "algarvecircle.com",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "Algarve Harp Festival concert in Monchique",
+   "startDate": "2026-11-28",
+   "endDate": "2026-11-28",
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://www.sulinformacao.pt/2026/10/festival-de-harpa-vai-espalhar-musica-por-lagoa-albufeira-e-monchique/",
+     "host": "sulinformacao.pt",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "November Workshops at the Educational Farm of Portimão",
+   "startDate": "2026-11-28",
+   "endDate": "2026-11-28",
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://www.algarveatlas.com/en/events/atelies-de-novembro-na-quinta-pedagogica-de-portimao-7805",
+     "host": "algarveatlas.com",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "Baile Social",
+   "startDate": "2026-11-28",
+   "endDate": "2026-11-28",
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://jf-quarteira.pt/agenda",
+     "host": "jf-quarteira.pt",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "Noite Afrolatina no Illuminati",
+   "startDate": "2026-11-28",
+   "endDate": "2026-11-28",
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://bailaspot.com/portugal/quarteira",
+     "host": "bailaspot.com",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "Youth Awards 2026",
+   "startDate": "2026-11-28",
+   "endDate": null,
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://www.algarveatlas.com/en/municipalities/sao-bras-de-alportel",
+     "host": "algarveatlas.com",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "East Algarve Golf Festival 2026",
+   "startDate": "2026-11-28",
+   "endDate": "2026-12-05",
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://algarvecircle.com/events/east-algarve-golf-festival-2026-2026-11-28",
+     "host": "algarvecircle.com",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "Monte Gordo Flea Market 2026",
+   "startDate": "2026-11-28",
+   "endDate": null,
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://algarvecircle.com/events/vila-real-de-santo-antonio-flea-market-2026-11-28",
+     "host": "algarvecircle.com",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "Mercado mensal no Azinhal",
+   "startDate": "2026-11-29",
+   "endDate": "2026-11-29",
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "http://cm-castromarim.pt/info/",
+     "host": "cm-castromarim.pt",
+     "readable": false
+    },
+    {
+     "url": "https://cm-castromarim.pt/site/eventos",
+     "host": "cm-castromarim.pt",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "Fado on Sundays - César Matoso",
+   "startDate": "2026-11-29",
+   "endDate": null,
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://www.algarveatlas.com/en/municipalities/olhao",
+     "host": "algarveatlas.com",
+     "readable": false
+    },
+    {
+     "url": "https://dailynata.com/whats-on",
+     "host": "dailynata.com",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "Fado Night",
+   "startDate": "2026-11-29",
+   "endDate": null,
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://www.algarveatlas.com/en/municipalities/sao-bras-de-alportel",
+     "host": "algarveatlas.com",
+     "readable": false
+    },
+    {
+     "url": "https://algarvecircle.com/towns/sao-bras-de-alportel",
+     "host": "algarvecircle.com",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "Feira Franca Annual Fair",
+   "startDate": "2026-11-30",
+   "endDate": null,
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://albufeira.com/events/regular/",
+     "host": "albufeira.com",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "Vila Natal and Giant Nativity Scene",
+   "startDate": "2026-11-30",
+   "endDate": "2027-01-06",
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://algarvecircle.com/events/vila-natal-and-giant-nativity-scene-vila-real-de-s-2026-11-30",
+     "host": "algarvecircle.com",
+     "readable": false
+    },
+    {
+     "url": "https://algarvecircle.com/whats-on/november-2026",
+     "host": "algarvecircle.com",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "Grande Entre os Assassinos",
+   "startDate": "2026-12-01",
+   "endDate": null,
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://algarvecircle.com/whats-on/december-2026",
+     "host": "algarvecircle.com",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "European Rapid, Blitz, and Fischer Random Chess Championships 2026",
+   "startDate": "2026-12-04",
+   "endDate": "2026-12-09",
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://www.europechess.org/wp-content/uploads/2026/09/Regulations_ERBCC2026.pdf",
+     "host": "europechess.org",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "Albufeira Christmas Market",
+   "startDate": "2026-12-05",
+   "endDate": null,
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://albufeira.com/events/regular/",
+     "host": "albufeira.com",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "VI Charity Christmas Choir Concert - Artenata",
+   "startDate": "2026-12-05",
+   "endDate": "2026-12-05",
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://www.algarveatlas.com/en/municipalities/lagoa",
+     "host": "algarveatlas.com",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "Feira da Serra de Natal",
+   "startDate": "2026-12-05",
+   "endDate": "2026-12-06",
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://activealgarve.pt/events",
+     "host": "activealgarve.pt",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "Fairy Gala of Portimão",
+   "startDate": "2026-12-05",
+   "endDate": "2026-12-05",
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://ground.news/article/fairy-gala-of-portimao-honors-helder-marques-and-receives-teresa-tapadas",
+     "host": "ground.news",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "Noite Afrolatina no Illuminati",
+   "startDate": "2026-12-05",
+   "endDate": "2026-12-05",
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://bailaspot.com/portugal/quarteira",
+     "host": "bailaspot.com",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "Gospel Collective",
+   "startDate": "2026-12-05",
+   "endDate": null,
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://algarvecircle.com/whats-on/december-2026",
+     "host": "algarvecircle.com",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "26th Lagoa Christmas Concert",
+   "startDate": "2026-12-06",
+   "endDate": "2026-12-06",
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://blog.algarve-ferias.com/en/events/",
+     "host": "blog.algarve-ferias.com",
+     "readable": false
+    },
+    {
+     "url": "https://www.algarveatlas.com/en/municipalities/lagoa",
+     "host": "algarveatlas.com",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "Maratona do Algarve",
+   "startDate": "2026-12-06",
+   "endDate": "2026-12-06",
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://worldsmarathons.com/fr/marathon/maratona-do-algarve",
+     "host": "worldsmarathons.com",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "Movimento e Magia: Tavira's Christmas in Dance 2026",
+   "startDate": "2026-12-06",
+   "endDate": "2026-12-08",
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://algarvecircle.com/events/movimento-e-magia-tavira-s-christmas-in-dance-2026-12-06",
+     "host": "algarvecircle.com",
+     "readable": false
+    },
+    {
+     "url": "https://algarvecircle.com/whats-on/december-2026",
+     "host": "algarvecircle.com",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "Vila do Bispo Market",
+   "startDate": "2026-12-07",
+   "endDate": null,
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://algarvecircle.com/events/vila-do-bispo-street-market-2026-11-02",
+     "host": "algarvecircle.com",
+     "readable": false
+    },
+    {
+     "url": "https://www.hostelworld.com/events/e/6ad1988aaa5f4fc6f57f70cd/vila-do-bispo-market/",
+     "host": "hostelworld.com",
+     "readable": false
+    },
+    {
+     "url": "https://algarvecircle.com/whats-on/december-2026",
+     "host": "algarvecircle.com",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "Lagoa Christmas Concert",
+   "startDate": "2026-12-08",
+   "endDate": "2026-12-08",
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://www.algarveatlas.com/en/municipalities/lagoa",
+     "host": "algarveatlas.com",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "Estátuas Vivas no Natal",
+   "startDate": "2026-12-11",
+   "endDate": "2026-12-12",
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://www.theportugalnews.com/news/2026-10-22/autumn-festivals-and-events-in-the-algarve/1104742",
+     "host": "theportugalnews.com",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "The Nest",
+   "startDate": "2026-12-11",
+   "endDate": null,
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://www.algarveatlas.com/en/events/exposicao-itinerante-principios-da-carta-das-cidades-educado-7722",
+     "host": "algarveatlas.com",
+     "readable": false
+    },
+    {
+     "url": "https://algarvecircle.com/whats-on/december-2026",
+     "host": "algarvecircle.com",
+     "readable": false
+    },
+    {
+     "url": "https://www.hostelworld.com/events/e/6aee978114b147c7975bef77/burromaquia/",
+     "host": "hostelworld.com",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "Noite Afrolatina no Illuminati",
+   "startDate": "2026-12-12",
+   "endDate": "2026-12-12",
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://bailaspot.com/portugal/quarteira",
+     "host": "bailaspot.com",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "Swan Lake",
+   "startDate": "2026-12-12",
+   "endDate": null,
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://algarvecircle.com/whats-on/december-2026",
+     "host": "algarvecircle.com",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "Burromaquia",
+   "startDate": "2026-12-12",
+   "endDate": null,
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://www.hostelworld.com/events/e/6aee978114b147c7975bef77/burromaquia/",
+     "host": "hostelworld.com",
+     "readable": false
+    },
+    {
+     "url": "https://algarvecircle.com/whats-on/december-2026",
+     "host": "algarvecircle.com",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "Uma Mirada por el Jardim de Pepe Gámez",
+   "startDate": "2026-12-13",
+   "endDate": "2026-12-31",
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://algarvecircle.com/whats-on/december-2026",
+     "host": "algarvecircle.com",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "Christmas concert",
+   "startDate": "2026-12-13",
+   "endDate": null,
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://algarvecircle.com/whats-on/december-2026",
+     "host": "algarvecircle.com",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "Santas on Bike Parade",
+   "startDate": "2026-12-15",
+   "endDate": null,
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://albufeira.com/events/regular/",
+     "host": "albufeira.com",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "Noite Afrolatina no Illuminati",
+   "startDate": "2026-12-19",
+   "endDate": "2026-12-19",
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://bailaspot.com/portugal/quarteira",
+     "host": "bailaspot.com",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "Orquestra do Algarve Christmas concert",
+   "startDate": "2026-12-19",
+   "endDate": null,
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://algarvecircle.com/whats-on/december-2026",
+     "host": "algarvecircle.com",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "Swap Fair",
+   "startDate": "2026-12-20",
+   "endDate": null,
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://eventos.visitalgarve.pt/en/events",
+     "host": "eventos.visitalgarve.pt",
+     "readable": false
+    },
+    {
+     "url": "https://algarvecircle.com/towns/sao-bras-de-alportel",
+     "host": "algarvecircle.com",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  },
+  {
+   "name": "New Years Eve Quarteira 2026/2027 Programme",
+   "startDate": "2026-12-29",
+   "endDate": "2026-12-31",
+   "status": "details withheld",
+   "evidence": [
+    {
+     "url": "https://activealgarve.pt/event/new-years-eve-20262027-2026-12",
+     "host": "activealgarve.pt",
+     "readable": false
+    }
+   ],
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/by-place/algarve.json"
+  }
+ ]
+}

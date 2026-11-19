@@ -1,0 +1,186 @@
+{
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "holder": "PrompTugal.news",
+  "note": "What PrompTugal.news makes: this file's structure, records and derived values.",
+  "commercial_use": "per item",
+  "commercial_note": "Each history file states its own licence; IPMA and Open-Meteo values are not for commercial use."
+ },
+ "about": "Events as first listed and every change since, and the claims kept to be checked, one file per place.",
+ "data_read_at": "2026-11-19T12:12:43Z",
+ "history_from": "2026-11-18T23:43:33Z",
+ "places": [
+  {
+   "place": "albufeira",
+   "events": 0,
+   "changed": 0,
+   "gone": 0,
+   "claims": 9,
+   "claims_dropped_wording": 0,
+   "url": "https://data.promptugal.news/api/v1/history/events/albufeira.json"
+  },
+  {
+   "place": "alcoutim",
+   "events": 0,
+   "changed": 0,
+   "gone": 0,
+   "claims": 3,
+   "claims_dropped_wording": 0,
+   "url": "https://data.promptugal.news/api/v1/history/events/alcoutim.json"
+  },
+  {
+   "place": "algarve",
+   "events": 0,
+   "changed": 0,
+   "gone": 0,
+   "claims": 98,
+   "claims_dropped_wording": 1,
+   "url": "https://data.promptugal.news/api/v1/history/events/algarve.json"
+  },
+  {
+   "place": "aljezur",
+   "events": 0,
+   "changed": 0,
+   "gone": 0,
+   "claims": 1,
+   "claims_dropped_wording": 0,
+   "url": "https://data.promptugal.news/api/v1/history/events/aljezur.json"
+  },
+  {
+   "place": "castro-marim",
+   "events": 0,
+   "changed": 0,
+   "gone": 0,
+   "claims": 4,
+   "claims_dropped_wording": 0,
+   "url": "https://data.promptugal.news/api/v1/history/events/castro-marim.json"
+  },
+  {
+   "place": "faro",
+   "events": 10,
+   "changed": 0,
+   "gone": 0,
+   "claims": 7,
+   "claims_dropped_wording": 0,
+   "url": "https://data.promptugal.news/api/v1/history/events/faro.json"
+  },
+  {
+   "place": "lagoa",
+   "events": 0,
+   "changed": 0,
+   "gone": 0,
+   "claims": 8,
+   "claims_dropped_wording": 0,
+   "url": "https://data.promptugal.news/api/v1/history/events/lagoa.json"
+  },
+  {
+   "place": "lagos",
+   "events": 92,
+   "changed": 0,
+   "gone": 0,
+   "claims": 5,
+   "claims_dropped_wording": 0,
+   "url": "https://data.promptugal.news/api/v1/history/events/lagos.json"
+  },
+  {
+   "place": "lisboa",
+   "events": 432,
+   "changed": 0,
+   "gone": 0,
+   "claims": 0,
+   "claims_dropped_wording": 0,
+   "url": "https://data.promptugal.news/api/v1/history/events/lisboa.json"
+  },
+  {
+   "place": "loule",
+   "events": 0,
+   "changed": 0,
+   "gone": 0,
+   "claims": 11,
+   "claims_dropped_wording": 0,
+   "url": "https://data.promptugal.news/api/v1/history/events/loule.json"
+  },
+  {
+   "place": "monchique",
+   "events": 0,
+   "changed": 0,
+   "gone": 0,
+   "claims": 3,
+   "claims_dropped_wording": 0,
+   "url": "https://data.promptugal.news/api/v1/history/events/monchique.json"
+  },
+  {
+   "place": "olhao",
+   "events": 0,
+   "changed": 0,
+   "gone": 0,
+   "claims": 9,
+   "claims_dropped_wording": 0,
+   "url": "https://data.promptugal.news/api/v1/history/events/olhao.json"
+  },
+  {
+   "place": "portimao",
+   "events": 0,
+   "changed": 0,
+   "gone": 0,
+   "claims": 4,
+   "claims_dropped_wording": 0,
+   "url": "https://data.promptugal.news/api/v1/history/events/portimao.json"
+  },
+  {
+   "place": "quarteira",
+   "events": 0,
+   "changed": 0,
+   "gone": 0,
+   "claims": 9,
+   "claims_dropped_wording": 0,
+   "url": "https://data.promptugal.news/api/v1/history/events/quarteira.json"
+  },
+  {
+   "place": "sao-bras-de-alportel",
+   "events": 0,
+   "changed": 0,
+   "gone": 0,
+   "claims": 9,
+   "claims_dropped_wording": 0,
+   "url": "https://data.promptugal.news/api/v1/history/events/sao-bras-de-alportel.json"
+  },
+  {
+   "place": "silves",
+   "events": 0,
+   "changed": 0,
+   "gone": 0,
+   "claims": 4,
+   "claims_dropped_wording": 0,
+   "url": "https://data.promptugal.news/api/v1/history/events/silves.json"
+  },
+  {
+   "place": "tavira",
+   "events": 39,
+   "changed": 0,
+   "gone": 0,
+   "claims": 13,
+   "claims_dropped_wording": 1,
+   "url": "https://data.promptugal.news/api/v1/history/events/tavira.json"
+  },
+  {
+   "place": "vila-do-bispo",
+   "events": 0,
+   "changed": 0,
+   "gone": 0,
+   "claims": 6,
+   "claims_dropped_wording": 0,
+   "url": "https://data.promptugal.news/api/v1/history/events/vila-do-bispo.json"
+  },
+  {
+   "place": "vila-real-de-santo-antonio",
+   "events": 0,
+   "changed": 0,
+   "gone": 0,
+   "claims": 3,
+   "claims_dropped_wording": 0,
+   "url": "https://data.promptugal.news/api/v1/history/events/vila-real-de-santo-antonio.json"
+  }
+ ]
+}

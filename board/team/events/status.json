@@ -3,7 +3,7 @@
   "account": "B",
   "started_by": "conductor.b@PrompTugal.dinis at Dinis's word, 18 Nov 2026 (~14:30 UTC: \"repo is created\")",
   "state": "signed commits live from this release (13:45 UTC); next: the past view and predictions file once the history records changes",
-  "updated": "2026-11-19T16:29Z",
+  "updated": "2026-11-19T16:41Z",
   "debrief": "board/team/events/debriefs/2026-11-18-handover.md",
   "done": [
     "home page: counts, places, events starting in the next seven days",
@@ -102,6 +102,6 @@
   "next_wake": [
     "security@'s rulings (Website a250cc42 at 01:21 UTC, 312c4601 at 01:17 UTC; review board/team/security/reviews/2026-11-19-0130-bar-signing-live-data.md; read at source 01:50 UTC), with later rulings and notes:",
     "5. every time from date -u",
-    "past view and predictions file, once the events history records changes (none in the 12:12 UTC read)"
+    "load the past section live in the browser (Dinis ~01:13 UTC: load the data in the browser); then the predictions file as one collection in the library (Dinis 03:15 UTC; tell library.b@)"
   ]
 }

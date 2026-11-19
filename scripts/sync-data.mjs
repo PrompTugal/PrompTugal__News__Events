@@ -5,6 +5,8 @@
 //   data/api/by-place/<place>.json       /api/v1/events/by-place/<place>.json   (events read from sources we may read)
 //   data/api/claims-index.json           /api/v1/events/claims/by-place/index.json
 //   data/api/claims/<place>.json         /api/v1/events/claims/by-place/<place>.json (found through Perplexity)
+//   data/api/history/index.json          /api/v1/history/events/index.json
+//   data/api/history/<place>.json        /api/v1/history/events/<place>.json (as first listed, every change, claims kept)
 //   data/api/events-pt.json              /api/v1/events-pt/latest.json: provenance, counts and gaps only (not the events again)
 //   data/api/sources/            /api/v1/sources/index.json, /api/v1/sources/<id>.json and /api/v1/sources/gaps.json (the register)
 //   data/api/sync.json                   when each file was read, and what failed
@@ -50,6 +52,10 @@ const claimsIndex = await copy('events/claims/by-place/index.json', 'data/api/cl
 const okId = (p) => /^[a-z0-9-]+$/.test(p) || (log.failed.push({ path: String(p), why: 'not a place id' }), false);
 for (const p of (Array.isArray(index?.places) ? index.places : []).map((x) => x?.id).filter(okId).sort()) await copy(`events/by-place/${p}.json`, `data/api/by-place/${p}.json`);
 for (const p of [...new Set([...(Array.isArray(claimsIndex?.places) ? claimsIndex.places : []).map((x) => x?.place), 'algarve'])].filter(okId).sort()) await copy(`events/claims/by-place/${p}.json`, `data/api/claims/${p}.json`);
+// The events history (data.b@, 19 Nov 2026): each event as first listed and every change since, and the claims kept
+// to be checked, one file per place; for the past view (Dinis, 19 Nov 2026 ~01:17 UTC: "show the past").
+const history = await copy('history/events/index.json', 'data/api/history/index.json');
+for (const p of (Array.isArray(history?.places) ? history.places : []).map((x) => x?.place).filter(okId).sort()) await copy(`history/events/${p}.json`, `data/api/history/${p}.json`);
 // The sources register (every source, read and not read, and why) and the hosts Perplexity cited that we do not read.
 const register = await copy('sources/index.json', 'data/api/sources/index.json');
 for (const id of (Array.isArray(register?.entries) ? register.entries : []).map((x) => x?.id).filter(okId).sort()) await copy(`sources/${id}.json`, `data/api/sources/${id}.json`);
