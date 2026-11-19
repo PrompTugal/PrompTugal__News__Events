@@ -184,24 +184,30 @@ function scanTree() {
     const b = blobs.get(p);
     if (b && b.mode === '120000') { errors.push(`${p}: a symbolic link (not followed)`); continue; }
     if (b && b.mode === '160000') continue; // a submodule entry: no content here
-    let buf;
-    if (b) buf = execFileSync('git', ['cat-file', 'blob', b.oid], { cwd: root, maxBuffer: 1 << 28 });
-    else {
-      const full = join(root, p);
-      if (!existsSync(full)) continue;
+    // Both copies are scanned: the bytes in git's objects (a pushed .gitattributes cannot change them) and the bytes on disk
+    // (what the build wrote, and what deploys), so a tracked path under _site/ is not hidden by its committed version.
+    const bufs = [];
+    if (b) bufs.push(execFileSync('git', ['cat-file', 'blob', b.oid], { cwd: root, maxBuffer: 1 << 28 }));
+    const full = join(root, p);
+    if (existsSync(full)) {
       const st = lstatSync(full);
       if (st.isSymbolicLink()) { errors.push(`${p}: a symbolic link (not followed)`); continue; }
-      if (st.isDirectory()) continue;
-      buf = readFileSync(full);
+      if (!st.isDirectory()) { const d = readFileSync(full); if (!bufs.length || !d.equals(bufs[0])) bufs.push(d); }
     }
-    // A file with a NUL byte is scanned too, byte for byte, never skipped (library.b@'s LIB-2026-067).
-    if (isBinary(buf)) binary++;
+    if (!bufs.length) continue;
     count++;
-    const t = isBinary(buf) ? buf.toString('latin1') : buf.toString('utf8');
+    for (const buf of bufs) {
+    // A file with a NUL byte is scanned too, never skipped: as bytes, and as UTF-16 in both byte orders, so a wide-encoded
+    // secret is read (library.b@'s LIB-2026-067; AppSec post-review, 19 Nov 2026).
+    if (isBinary(buf)) binary++;
+    const texts = isBinary(buf) ? [buf.toString('latin1'), buf.toString('utf16le'), Buffer.from(buf).swap16 && buf.length % 2 === 0 ? Buffer.from(buf).swap16().toString('utf16le') : buf.subarray(1).toString('utf16le')] : [buf.toString('utf8')];
+    for (const t of texts) {
     for (const f of scanText(p, t)) errors.push(`${p}:${f.line}: ${f.kind}`);
     for (const x of secrets) if (x && x.length >= 8 && t.includes(x)) errors.push(`${p}: holds this checkout's vault key or token`);
+    }
+    }
   }
-  return { errors, count, skipped, binary };
+  return { errors: [...new Set(errors)], count, skipped, binary };
 }
 
 function scanHistory() {

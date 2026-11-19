@@ -73,13 +73,14 @@ import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 const scanner = join(dirname(fileURLToPath(import.meta.url)), 'leak-scan.mjs');
 const token = () => 'gh' + 'p_' + randomBytes(27).toString('base64').replace(/[^A-Za-z0-9]/g, 'a').slice(0, 36);
-function tree(setup) {
+function tree(setup, { noAdd = false } = {}) {
   const r = mkdtempSync(join(tmpdir(), 'leaktree-'));
   const g = (...a) => execFileSync('git', ['-C', r, ...a], { stdio: 'pipe' });
   g('init', '-q'); g('config', 'user.email', 't@example.invalid'); g('config', 'user.name', 't'); g('config', 'commit.gpgsign', 'false');
   mkdirSync(join(r, '_site')); writeFileSync(join(r, '_site/index.html'), '<p>ok</p>\n');
+  g('add', '-A'); g('commit', '-q', '-m', 'base');
   setup(r, g);
-  g('add', '-A'); g('commit', '-q', '-m', 'x');
+  if (!noAdd) { g('add', '-A'); g('commit', '-q', '-m', 'x', '--allow-empty'); }
   let out = '';
   try { execFileSync('node', [scanner], { cwd: r, stdio: 'pipe' }); out = '(passed)'; } catch (e) { out = String(e.stderr); }
   rmSync(r, { recursive: true, force: true });
@@ -94,6 +95,12 @@ const treeCases = [
     writeFileSync(join(r, '.gitattributes'), 'enc.txt working-tree-encoding=UTF-16LE\n');
     writeFileSync(join(r, 'enc.txt'), Buffer.from(token() + '\n', 'utf16le'));
   }))],
+  ['a tracked file under _site/ is scanned as built on disk, not only as committed', () => /_site\/t\.html:1: GitHub token/.test(tree((r, g) => {
+    writeFileSync(join(r, '_site/t.html'), 'clean\n'); g('add', '-A'); g('commit', '-q', '-m', 'clean copy');
+    writeFileSync(join(r, '_site/t.html'), token() + '\n');
+  }, { noAdd: true }))],
+  ['a secret committed as UTF-16LE is found', () => /w16\.txt:1: GitHub token/.test(tree((r) => { writeFileSync(join(r, 'w16.txt'), Buffer.from('\ufeff' + token() + '\n', 'utf16le')); }))],
+  ['a secret committed as UTF-16BE is found', () => /w16b\.txt:1: GitHub token/.test(tree((r) => { const le = Buffer.from(token() + '\n', 'utf16le'); writeFileSync(join(r, 'w16b.txt'), Buffer.concat([Buffer.from([0xfe, 0xff]), Buffer.from(le).swap16()])); }))],
   ['a clean tree passes', () => tree(() => {}) === '(passed)'],
 ];
 let treeFailed = 0;
