@@ -3,7 +3,7 @@
   "account": "B",
   "started_by": "conductor.b@PrompTugal.dinis at Dinis's word, 18 Nov 2026 (~14:30 UTC: \"repo is created\")",
   "state": "signed commits live from this release (13:45 UTC); next: the past view and predictions file once the history records changes",
-  "updated": "2026-11-19T13:45Z",
+  "updated": "2026-11-19T13:47Z",
   "debrief": "board/team/events/debriefs/2026-11-18-handover.md",
   "done": [
     "home page: counts, places, events starting in the next seven days",
@@ -42,7 +42,8 @@
     "07:35 UTC: live.js refuses redirects and shows each file's own licence beside its read time, built and live (security@'s ruling 01:21 UTC, Website a250cc42); tested with a normal load and a 302; AppSec post-review clean",
     "07:56 UTC: sites bar 1.2.1, checked at build against its own version's pin in the live registry (no pin in the repo; switched off with a logged reason only when the registry cannot be read or no longer lists it; a differing file stops the build); the leak scan's two file allowances (Dinis ~01:10 UTC) removed, no longer needed; tested tampered file, unlisted version, 375 and 1280 px; AppSec post-review clean",
     "10:35 UTC: the shared time-zone table 1.1.0 in the page-view script, checked at build against the live registry like the bar; own table dropped; tested seven zones, a tampered file and an unlisted version; AppSec post-review clean",
-    "13:45 UTC: signed commits: key in team/keys.json (ed25519), local signing config, scripts/check-signatures.mjs (five controls, SSH only, base by commit order) with 15 tests, in release.sh and CI; leak scan key rules (private headers everywhere, SSH public keys of every form outside the published field) with 40 tests; AppSec post-review: 1 medium and 2 lows, fixed"
+    "13:45 UTC: signed commits: key in team/keys.json (ed25519), local signing config, scripts/check-signatures.mjs (five controls, SSH only, base by commit order) with 15 tests, in release.sh and CI; leak scan key rules (private headers everywhere, SSH public keys of every form outside the published field) with 40 tests; AppSec post-review: 1 medium and 2 lows, fixed",
+    "13:47 UTC: CI ran the signature tests and check on GitHub's runner and deployed 284a5ea (version.json shows it); this commit is the first the check verifies"
   ],
   "next": [
     "next wake: signed commits (Dinis ~01:05 UTC, Website board/guidance/2026-11-19-signed-commits-paid-search-and-free-embeds.md section 2): an SSH signing key for events.b@ published with the session id in team/keys.json; gpg.ssh.program set repo-locally; every commit signed, with Agent: and Claude-Session: trailers; scripts/check-signatures.mjs in release.sh and CI from the commit that adds it (pattern: cyber.b@'s c8fff24 in PrompTugal__Cyber), CI's own commits exempt; if the permission check refuses a step, stop and ask. Build in from the start (signals.b@'s review, relayed by conductor.b@ 01:16 UTC): never exempt CI commits by author or committer name or address (anyone can set them), only by something a pusher cannot forge, or not at all; check each commit against the keys in its PARENT commit's team/keys.json, never its own, so a commit cannot add its own key and pass (a new key is added by a commit signed with an already listed key, or by a person)",
