@@ -23,13 +23,15 @@ const BAR_FILES = { js: 'sites-bar.js', css: 'sites-bar.css', render: 'sites-bar
 const SRI = /^sha(256|384|512)-[A-Za-z0-9+/]{43,86}={0,2}$/;
 const sri = (alg, buf) => `${alg}-${createHash(alg).update(buf).digest('base64')}`;
 let BAR_OFF = '';
+let REG = null, REG_ERR = '';
+try {
+  const r = await fetch('https://promptugal.news/api/v1/sites.json', { redirect: 'error', signal: AbortSignal.timeout(20000) });
+  if (!r.ok) throw new Error(`HTTP ${r.status}`);
+  REG = await r.json();
+} catch (e) { REG_ERR = String(e.message).slice(0, 80); }
 await (async () => {
-  let reg;
-  try {
-    const r = await fetch('https://promptugal.news/api/v1/sites.json', { redirect: 'error', signal: AbortSignal.timeout(20000) });
-    if (!r.ok) throw new Error(`HTTP ${r.status}`);
-    reg = await r.json();
-  } catch (e) { BAR_OFF = `sites bar ${BAR_VERSION} off: the registry could not be read (${e.message})`; return; }
+  const reg = REG;
+  if (!reg) { BAR_OFF = `sites bar ${BAR_VERSION} off: the registry could not be read (${REG_ERR})`; return; }
   const v = reg?.bar?.versions?.[BAR_VERSION];
   if (!v || typeof v !== 'object') { BAR_OFF = `sites bar ${BAR_VERSION} off: the registry no longer lists it (it names ${String(reg?.bar?.version || 'none').slice(0, 20)})`; return; }
   for (const [key, file] of Object.entries(BAR_FILES)) {
@@ -40,6 +42,32 @@ await (async () => {
   }
 })();
 if (BAR_OFF) console.warn(`build: ${BAR_OFF}`);
+// The shared time-zone table (dev@, assets/obs/tz-country.json; Dinis, 19 Nov 2026: the country from the time zone, no IP lookup),
+// vendored in vendor/obs-tz/<version>/ and checked the same way against obs_tz.versions[v].integrity["tz-country.json"]
+// (or the older obs_tz.versions[v].sha256). A file that differs stops the build; an unreadable registry or an unlisted version
+// leaves the table out, so no country is sent. Keys any non-empty zone name (some are single words: Portugal, GB, PRC),
+// values two letters A to Z only.
+const TZ_VERSION = '1.1.0';
+const TZ_FILE = `vendor/obs-tz/${TZ_VERSION}/tz-country.json`;
+let TZ_OFF = '', TZ_TABLE = null;
+(() => {
+  if (!REG) { TZ_OFF = `time-zone table ${TZ_VERSION} off: the registry could not be read (${REG_ERR})`; return; }
+  const v = REG?.obs_tz?.versions?.[TZ_VERSION];
+  if (!v || typeof v !== 'object') { TZ_OFF = `time-zone table ${TZ_VERSION} off: the registry no longer lists it (it names ${String(REG?.obs_tz?.version || 'none').slice(0, 20)})`; return; }
+  const pin = (v.integrity && typeof v.integrity === 'object' ? v.integrity['tz-country.json'] : undefined) ?? v.sha256;
+  if (typeof pin !== 'string' || !SRI.test(pin)) { TZ_OFF = `time-zone table ${TZ_VERSION} off: the registry gives no usable pin`; return; }
+  const buf = readFileSync(TZ_FILE);
+  if (sri(pin.slice(0, pin.indexOf('-')), buf) !== pin) { console.error(`build: ${TZ_FILE} does not match the registry's pin for ${TZ_VERSION}`); process.exit(1); }
+  const zones = JSON.parse(buf.toString('utf8')).zones;
+  if (!zones || typeof zones !== 'object' || Array.isArray(zones)) { console.error(`build: ${TZ_FILE} has no zones map`); process.exit(1); }
+  const t = Object.create(null);
+  for (const [z, cc] of Object.entries(zones)) {
+    if (typeof z !== 'string' || !z.length || z.length > 64 || !/^[A-Za-z0-9/_+-]+$/.test(z) || typeof cc !== 'string' || !/^[A-Z]{2}$/.test(cc)) { console.error(`build: ${TZ_FILE} has a bad entry`); process.exit(1); }
+    t[z] = cc;
+  }
+  TZ_TABLE = t;
+})();
+if (TZ_OFF) console.warn(`build: ${TZ_OFF}`);
 // The renderer is loaded only once its file has passed the check; with the bar off, nothing of it runs.
 const BAR_MOD = BAR_OFF ? null : await import(pathToFileURL(resolve(BAR + 'sites-bar-render.mjs')).href);
 const renderBar = BAR_MOD ? BAR_MOD.render : () => '';
@@ -59,6 +87,11 @@ const today = R.today;
 
 rmSync('_site', { recursive: true, force: true });
 cpSync('src', '_site', { recursive: true });
+{ // write the checked table into the page-view script (no network call in the browser); without it, no country is sent
+  const f = '_site/assets/obs/obs.js', src = readFileSync(f, 'utf8');
+  if (src.split('/*TZ_TABLE*/null').length !== 2) { console.error('build: obs.js has no single TZ_TABLE placeholder'); process.exit(1); }
+  if (TZ_TABLE) writeFileSync(f, src.replace('/*TZ_TABLE*/null', JSON.stringify(TZ_TABLE)));
+}
 
 // ---------------------------------------------------------------- data
 const readJson = (f, fallback = null) => { try { return JSON.parse(readFileSync(f, 'utf8')); } catch { return fallback; } };
