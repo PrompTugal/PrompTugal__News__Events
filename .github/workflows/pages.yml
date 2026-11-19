@@ -5,11 +5,9 @@ name: Pages
 on:
   push:
     branches: [dev]
+  # By hand, by a person only. No schedule: every run starts from a commit (Dinis, 19 Nov 2026 ~01:20 UTC).
+  # Pages load the data live in the browser, so they follow data.promptugal.news without a rebuild.
   workflow_dispatch:
-  # Rebuild after data.promptugal.news reads the agendas (at :17 past 00, 06, 12, 18 UTC), so the built pages
-  # follow the data without a push (Dinis, 18 Nov 2026 ~14:55 UTC). Pages also load the data live in the browser.
-  schedule:
-    - cron: '47 0,6,12,18 * * *'
 permissions:
   contents: read
 concurrency:
@@ -88,8 +86,8 @@ jobs:
         uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4
   tag:
     needs: [build, deploy]
-    # A scheduled rebuild only refreshes the data: it deploys but does not tag a new version (AppSec review, 18 Nov 2026).
-    if: ${{ always() && github.event_name != 'schedule' && needs.build.result == 'success' && (needs.deploy.result == 'success' || needs.deploy.result == 'skipped') }}
+    # Tags a push only; a run by hand deploys but does not tag (AppSec review, 18 Nov 2026).
+    if: ${{ always() && github.event_name == 'push' && needs.build.result == 'success' && (needs.deploy.result == 'success' || needs.deploy.result == 'skipped') }}
     runs-on: ubuntu-latest
     permissions:
       contents: write

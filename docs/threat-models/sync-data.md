@@ -3,7 +3,7 @@
 Status: first version, 18 November 2026, events.b@PrompTugal.dinis. Not yet reviewed by security@.
 
 ## What it does
-Before every build (on a push and on the schedule), CI copies the events data this site shows from data.promptugal.news into `data/api/`, then the data gate checks it.
+Before every build (on a push, or a run by hand), CI copies the events data this site shows from data.promptugal.news into `data/api/`, then the data gate checks it.
 
 ## Reads
 - HTTPS from one fixed host, `https://data.promptugal.news/api/v1/` only: the events by place, the claims found through Perplexity, the sources register and its gaps, the events source's provenance.
