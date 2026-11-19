@@ -60,7 +60,7 @@ for (const p of (Array.isArray(history?.places) ? history.places : []).map((x) =
 const register = await copy('sources/index.json', 'data/api/sources/index.json');
 for (const id of (Array.isArray(register?.entries) ? register.entries : []).map((x) => x?.id).filter(okId).sort()) await copy(`sources/${id}.json`, `data/api/sources/${id}.json`);
 await copy('sources/gaps.json', 'data/api/sources/gaps.json');
-await copy('events-pt/latest.json', 'data/api/events-pt.json', (d) => ({ license: d.license, source: d.source, title: d.title, read_at: d.read_at, provenance: d.provenance, about: d.about, counts: d.counts, gaps: d.gaps }));
+await copy('events-pt/latest.json', 'data/api/events-pt.json', (d) => ({ license: d.license, source: d.source, title: d.title, read_at: d.read_at, provenance: d.provenance, about: d.about, counts: d.counts, gaps: d.gaps, expected_cadence: d.expected_cadence }));
 // The registry of the PrompTugal sites, for the sites bar (rendered at build; on a failed read the last good copy stays in git).
 try {
   const r = await fetch('https://promptugal.news/api/v1/sites.json', { headers: UA, signal: AbortSignal.timeout(20000) });

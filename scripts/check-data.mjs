@@ -72,6 +72,9 @@ for (const f of files) {
     const srcs = d.provenance?.sources;
     if (srcs != null) items(f, srcs, (s) => s && okText(s.what) && okText(s.host) && okUrl(s.route) && (s.terms == null || okText(s.terms)));
     if (d.gaps != null) items(f, d.gaps, (g) => g && okText(g.host) && (g.why == null || okText(g.why)));
+    const c = d.expected_cadence;
+    // The same rules as build.mjs and live.js: one name pattern, a window of 1 hour to 1 day.
+    if (c != null && !(typeof c === 'object' && typeof c.name === 'string' && /^[a-z0-9 ,-]{3,40}$/i.test(c.name) && Number.isInteger(c.stale_after_seconds) && c.stale_after_seconds >= 3600 && c.stale_after_seconds <= 86400)) fail(f, 'bad expected_cadence');
   }
   else if (rel === 'sync.json') { if (d.finished != null && !okDate(String(d.finished).slice(0, 10))) fail(f, 'bad time'); }
   else fail(f, 'unexpected file');

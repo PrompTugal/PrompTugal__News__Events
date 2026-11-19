@@ -102,6 +102,10 @@ if (!Array.isArray(claimsIndex.places)) claimsIndex.places = [];
 const num = (x) => String(Math.max(0, Math.floor(Number(x) || 0)));
 const eventsPt = readJson('data/api/events-pt.json', {});
 const sync = readJson('data/api/sync.json', {});
+// How often data.promptugal.news collects, as its own file states (data.b@'s 8f6a905); "twice a day" since Dinis's word of 19 Nov 2026 ~16:30 UTC.
+// The data gate checks both fields with the same rules; the stale window goes on each live box as data-stale-after.
+const cadence = (() => { const n = eventsPt.expected_cadence?.name; return typeof n === 'string' && /^[a-z0-9 ,-]{3,40}$/i.test(n) ? n : 'twice a day'; })();
+const staleAfter = (() => { const x = eventsPt.expected_cadence?.stale_after_seconds; return Number.isInteger(x) && x >= 3600 && x <= 86400 ? x : 46800; })();
 
 // The Algarve's places, explicitly: anything else is Lisbon or beyond Portugal, never folded into the Algarve.
 const ALGARVE = new Set(['albufeira', 'alcoutim', 'aljezur', 'castro-marim', 'faro', 'lagoa', 'lagos', 'loule', 'monchique', 'olhao', 'portimao', 'quarteira', 'sao-bras-de-alportel', 'silves', 'tavira', 'vila-do-bispo', 'vila-real-de-santo-antonio']);
@@ -233,7 +237,7 @@ ${fresh}
 <p class="note">Two kinds of listing: <b>read</b> events come from a public agenda we may read (the agendas data.promptugal.news reads: ${esc(sourcesRead.join(' and ') || 'none yet')}), with the details it gives; events <b>found through Perplexity</b> show only their title, date, place and the links that point to them, because the sites those links lead to do not let us copy their details. <a href="/organisers/">Organisers: send us yours.</a></p>
 </section>
 <section><h2>Places</h2><ul class="places">${placeRows}</ul>${lisbonNote ? `<p class="small">${lisbonNote}</p>` : ''}</section>
-<section><h2>Starting in the next seven days</h2><p class="fresh" id="events-status">Built copy: data read ${esc(fmtStamp(dataReadAt))}. ${esc(licenceOf(["algarve", "lisboa", ...beyondIds].flatMap((q) => [feeds[q]?.read, feeds[q]?.claims])))} Your browser loads the live file when it can.</p><div id="events" data-places="${["algarve", "lisboa", ...beyondIds].join(",")}" data-window="7" data-show-place="1" data-read-at="${esc(dataReadAt || '')}">${wk.count ? wk.html : '<p class="none">Nothing listed yet for the next seven days.</p>'}</div><p class="small">Long-running exhibitions and events already on are on each place's page, under "On now".</p></section>`,
+<section><h2>Starting in the next seven days</h2><p class="fresh" id="events-status">Built copy: data read ${esc(fmtStamp(dataReadAt))}. ${esc(licenceOf(["algarve", "lisboa", ...beyondIds].flatMap((q) => [feeds[q]?.read, feeds[q]?.claims])))} Your browser loads the live file when it can.</p><div id="events" data-places="${["algarve", "lisboa", ...beyondIds].join(",")}" data-window="7" data-show-place="1" data-read-at="${esc(dataReadAt || '')}" data-stale-after="${staleAfter}">${wk.count ? wk.html : '<p class="none">Nothing listed yet for the next seven days.</p>'}</div><p class="small">Long-running exhibitions and events already on are on each place's page, under "On now".</p></section>`,
     md: `${totalRead} events read from official agendas and ${totalFound} found through Perplexity, across ${placeIds.length} places. Data read ${fmtStamp(dataReadAt)}.\n\n## Places\n\n${[REGION, ...placeIds].map((p) => `- ${mdLink(`${SITE}/places/${p}/`, nameOf(p))}: ${counts(p).replace(/<[^>]+>/g, '')}`).join('\n')}\n\n## Starting in the next seven days\n\n${listMd(algItems) || 'Nothing listed yet.'}`,
   });
 }
@@ -284,7 +288,7 @@ function pastSection(p) {
   if (!H) return { html: `<section id="past"><h2>The past</h2><p class="none">No history kept for ${esc(nm)} yet.</p></section>`, md: '' };
   const list = (xs) => `<ul class="past">${xs.map((e) => histLine(e, p === REGION)).join('')}</ul>`;
   const html = `<section id="past"><h2>The past: what was listed, kept as first listed</h2>
-<p>Since ${esc(fmtStamp(H.from))}, data.promptugal.news has kept each event listed for ${esc(nm)} exactly as its source first listed it, and every change seen since. Kept: <b>${H.events.length}</b> events. Changed since: <b>${H.changed.length}</b>. Gone from their source before their date: <b>${H.gone.length}</b>.${!H.changed.length && !H.gone.length && H.events.length ? ' None has changed or gone since it was first seen.' : ''} Before ${esc(fmtStamp(H.from))} nothing was kept: a gap, not an absence. Events are read every 6 hours, so a change is dated by the read that first saw it.</p>
+<p>Since ${esc(fmtStamp(H.from))}, data.promptugal.news has kept each event listed for ${esc(nm)} exactly as its source first listed it, and every change seen since. Kept: <b>${H.events.length}</b> events. Changed since: <b>${H.changed.length}</b>. Gone from their source before their date: <b>${H.gone.length}</b>.${!H.changed.length && !H.gone.length && H.events.length ? ' None has changed or gone since it was first seen.' : ''} Before ${esc(fmtStamp(H.from))} nothing was kept: a gap, not an absence. data.promptugal.news collects events ${esc(cadence)}, so a change is dated by the collection that first saw it.</p>
 ${H.passed.length ? `<h3>Dates passed (${H.passed.length})</h3><p class="small">What the organiser said would happen, as first listed. We have no record that it did; the history shows only whether the listing changed.</p>${list(H.passed)}` : `<p class="small">No event kept for ${esc(nm)} has reached its date yet.</p>`}
 ${H.changed.length ? `<h3>Changed since first listed (${H.changed.length})</h3>${list(H.changed)}` : ''}
 ${H.gone.length ? `<h3>Gone from their source before their date (${H.gone.length})</h3>${list(H.gone)}` : ''}
@@ -324,7 +328,7 @@ for (const p of [REGION, ...placeIds]) {
 ${fresh}
 ${read?.source_note && stats[p].read ? `<details class="small"><summary>The sources and their terms</summary><p>${esc(read.source_note)}</p></details>` : ''}
 <p class="fresh" id="events-status">Built copy: data read ${esc(fmtStamp(dataReadAt))}. ${esc(licenceOf([read, feeds[p]?.claims]))} Your browser loads the live file when it can.</p>
-<div id="events" data-places="${p}" data-show-place="${p === REGION ? 1 : 0}" data-read-at="${esc(dataReadAt || '')}">${L.count ? L.html : `<p class="none">${empty}</p>`}</div>
+<div id="events" data-places="${p}" data-show-place="${p === REGION ? 1 : 0}" data-read-at="${esc(dataReadAt || '')}" data-stale-after="${staleAfter}">${L.count ? L.html : `<p class="none">${empty}</p>`}</div>
 <p class="small">The data: ${apiLinks || 'none yet'}. ${p === REGION ? `The Algarve's Perplexity finds are gathered from each place's own file.` : ''} Licences: the records CC BY 4.0, each event under its source's terms as linked.</p>
 ${past.html}`,
     md: `${stats[p].read} read from official agendas, ${stats[p].found} found through Perplexity. Data read ${fmtStamp(dataReadAt)}.\n\n${listMd(items) || 'No events listed yet: no source we may read covers this place.'}${past.md}`,
@@ -349,7 +353,7 @@ ${rows.map(({ p, H }) => `<tr><th scope="row"><a href="/places/${p}/#past">${esc
 <p class="small">"The Algarve" gathers every Algarve place, so its row repeats theirs. A dash means no history file for the place yet. Each place's page lists its events whose date has passed and every change, under "The past".</p>
 <section><h2>What this does and does not show</h2><ul>
 <li>It shows what a source listed and whether that listing changed. It does not show that an event took place: no source we read says so yet.</li>
-<li>A change is dated by the read that first saw it; events are read every 6 hours.</li>
+<li>A change is dated by the collection that first saw it; data.promptugal.news collects events ${esc(cadence)}.</li>
 <li>Claims found through Perplexity are kept exactly as answered, with their evidence links and the time asked. None has been checked yet.</li>
 </ul></section>
 <p class="fresh">Built copy: history read ${esc(fmtStamp(histIndex?.data_read_at))}. The data: ${link(`${DATA}/api/v1/history/events/index.json`, 'history/events/index.json')} and one file per place, kept by data.b@PrompTugal.dinis. The records CC BY 4.0 (PrompTugal.news); each event under its source's terms.</p>`,

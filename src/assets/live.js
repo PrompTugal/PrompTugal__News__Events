@@ -8,7 +8,12 @@
 import * as R from './render.mjs';
 
 const API = `${R.DATA}/api/v1/events`;
-const CADENCE_H = 7; // data.promptugal.news reads the agendas every 6 hours; older than 7 hours is stale
+// Stale after the window the build wrote on the box (data-stale-after, in seconds), taken from the checked events-pt file's
+// expected_cadence (data.b@'s 8f6a905: twice-daily collection, 13 hours), never from a fetched feed, which could otherwise
+// hide its own staleness (AppSec review, 19 Nov 2026); within 1 hour and 1 day, else 13 hours (Dinis, 19 Nov 2026 ~16:30 UTC,
+// Website board/guidance/2026-11-19-twice-a-day.md).
+const STALE_DEFAULT_S = 46800;
+const staleAfterS = (box) => { const s = Number(box.dataset.staleAfter); return Number.isInteger(s) && s >= 3600 && s <= 86400 ? s : STALE_DEFAULT_S; };
 const MAX_ITEMS = 5000;
 
 async function getJson(url) {
@@ -52,7 +57,7 @@ async function refresh(box, status) {
     if (k === 'read') el.textContent = String(cur.filter((i) => i.kind === 'read').length);
     if (k === 'found') el.textContent = String(cur.filter((i) => i.kind === 'found').length);
   }
-  const stale = Date.now() - new Date(readAt).getTime() > CADENCE_H * 3600e3;
+  const stale = Date.now() - new Date(readAt).getTime() > staleAfterS(box) * 1e3;
   say(status, `${stale ? 'Stale: the live file was last read' : 'Live file: read from data.promptugal.news, its data read'} ${R.fmtStamp(readAt)}. "Today" is ${R.fmtDay(R.today)}, Lisbon time. ${R.licenceOf(feeds.flatMap((f) => [f.read, f.claims]))} Each event under its source's licence or terms, on its card.`, stale);
 }
 
