@@ -14,7 +14,14 @@ node scripts/leak-scan.mjs
 node scripts/check-commits.mjs origin/dev HEAD
 node scripts/test-check-signatures.mjs
 node scripts/test-leak-scan.mjs
-node scripts/check-signatures.mjs HEAD
+# The signature check runs from the last release tag's copy, never this tree's (videos.b@'s finding, 19 Nov 2026).
+git fetch -q --tags origin
+trusted_check() {
+  local last; last=$(git describe --tags --abbrev=0 --match 'v*' origin/dev 2>/dev/null || true)
+  [ -n "$last" ] && git cat-file -e "$last:scripts/check-signatures.mjs" 2>/dev/null || { echo "no released copy of the signature check" >&2; return 1; }
+  local f; f=$(mktemp --suffix=.mjs); git show "$last:scripts/check-signatures.mjs" > "$f"; node "$f" HEAD || { rm -f "$f"; return 1; }; rm -f "$f"
+}
+trusted_check
 for i in 1 2 3 4 5; do
   git fetch -q origin dev
   git rebase -q origin/dev
@@ -24,7 +31,7 @@ for i in 1 2 3 4 5; do
   node scripts/validate.mjs >/dev/null
   node scripts/leak-scan.mjs >/dev/null
   node scripts/check-commits.mjs origin/dev HEAD >/dev/null
-  node scripts/check-signatures.mjs HEAD >/dev/null
+  trusted_check >/dev/null
   if git -c push.negotiate=true push -q origin HEAD:dev; then echo "released $(git rev-parse --short HEAD) to dev"; exit 0; fi
   sleep $((i * 3))
 done

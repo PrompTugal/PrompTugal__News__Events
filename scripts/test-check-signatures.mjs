@@ -42,8 +42,8 @@ function repo(name) {
   // the base commit: adds the check and publishes key A for agent A
   copyFileSync(join(here, 'check-signatures.mjs'), join(r, 'scripts/check-signatures.mjs'));
   keys([{ agent: AGENT_A, session: SESSION_A, ssh_signing: { public_key: KA.pub } }]);
-  commit('base', { signer: KA });
-  return { r, g, keys, commit };
+  const base = commit('base', { signer: KA });
+  return { r, g, keys, commit, base };
 }
 
 const cases = [];
@@ -107,15 +107,38 @@ t('deleting the check, an unsigned commit, then an old-dated re-add cannot move 
   execFileSync('git', ['-C', x.r, 'add', '-A']);
   execFileSync('git', ['-C', x.r, '-c', 'commit.gpgsign=true', '-c', `user.signingkey=${KA.priv}`, 'commit', '-q', '-m', `re-add\n\nAgent: ${AGENT_A}\nClaude-Session: ${SESSION_A}`], { env: { ...process.env, GIT_COMMITTER_DATE: '2001-01-01T00:00:00Z', GIT_AUTHOR_DATE: '2001-01-01T00:00:00Z' } });
 }, /: unsigned$/);
+t('an orphan commit merged in fails as an orphan', (x) => {
+  x.g('checkout', '-q', '--orphan', 'loose'); x.g('rm', '-rq', '--cached', '.');
+  writeFileSync(join(x.r, 'o.txt'), 'o'); x.g('add', 'o.txt');
+  x.g('-c', 'commit.gpgsign=true', '-c', `user.signingkey=${KA.priv}`, 'commit', '-q', '-m', `orphan\n\nAgent: ${AGENT_A}\nClaude-Session: ${SESSION_A}`);
+  x.g('checkout', '-q', '-f', 'dev');
+  x.g('-c', 'commit.gpgsign=true', '-c', `user.signingkey=${KA.priv}`, 'merge', '-q', '--no-ff', '--allow-unrelated-histories', 'loose', '-m', `merge\n\nAgent: ${AGENT_A}\nClaude-Session: ${SESSION_A}`);
+}, /an orphan commit/);
+t('a new history that does not descend from the trusted base fails', (x) => {
+  x.g('checkout', '-q', '--orphan', 'fresh');
+  x.g('-c', 'commit.gpgsign=true', '-c', `user.signingkey=${KA.priv}`, 'commit', '-q', '-m', `fresh root with its own keys\n\nAgent: ${AGENT_A}\nClaude-Session: ${SESSION_A}`);
+}, /does not descend from the trusted base/);
 t('one bad commit among good ones fails the whole range', (x) => { x.commit('g1', { signer: KA }); x.commit('bad'); x.commit('g2', { signer: KA }); }, /: unsigned$/);
 
+// The checker is run from the trusted copy, never the pushed tree's: a push that replaces it with one that always passes,
+// plus an unsigned commit, still fails when the release's copy is run (videos.b@'s finding).
+cases.push({ name: 'a pushed checker that always passes cannot check itself: the trusted copy still fails the push', fn: (x) => {
+  writeFileSync(join(x.r, 'scripts/check-signatures.mjs'), "console.log('signatures OK'); process.exit(0)\n");
+  x.commit('weaken the checker');
+  const trusted = join(root, 'trusted-check.mjs');
+  writeFileSync(trusted, execFileSync('git', ['-C', x.r, 'show', `${x.base}:scripts/check-signatures.mjs`]));
+  const pushed = (() => { try { execFileSync('node', [join(x.r, 'scripts/check-signatures.mjs')], { cwd: x.r, stdio: 'pipe' }); return 'passes'; } catch { return 'fails'; } })();
+  let out = '';
+  try { execFileSync('node', [trusted, 'HEAD', `--base=${x.base}`], { cwd: x.r, stdio: 'pipe' }); out = '(passed)'; } catch (e) { out = String(e.stderr); }
+  x.result = pushed === 'passes' && /: unsigned/.test(out) ? [] : [`pushed copy ${pushed}; trusted copy: ${out.trim()}`];
+}, expect: 'custom' });
 let failed = 0, i = 0;
 try {
   for (const c of cases) {
     const x = repo(`case${i++}`);
     c.fn(x);
-    const { failures } = check('HEAD', x.r);
-    const ok = c.expect === null ? failures.length === 0 : failures.length > 0 && failures.some((f) => c.expect.test(f));
+    const { failures } = c.expect === 'custom' ? { failures: x.result } : check('HEAD', x.r, { base: x.base });
+    const ok = c.expect === 'custom' ? failures.length === 0 : c.expect === null ? failures.length === 0 : failures.length > 0 && failures.some((f) => c.expect.test(f));
     if (!ok) { failed++; console.error(`FAIL: ${c.name}\n  got: ${failures.join(' | ') || '(passed)'}`); }
   }
 } finally { rmSync(root, { recursive: true, force: true }); }

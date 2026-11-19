@@ -58,9 +58,16 @@ jobs:
       - name: The signature check's own tests, then every commit since the check began is signed by its agent's published key
         # Dinis, 19 Nov 2026 ~01:05 UTC, and security@'s five controls (Website a250cc42): keys from each parent's
         # team/keys.json, every commit checked (merges and side branches too), no exemption by name, one failure fails the run.
+        # The check itself runs from the last release tag's copy, never the pushed tree's, so a push cannot change the checker
+        # that checks it (videos.b@'s finding, via conductor.b@ 19 Nov 2026 14:01 UTC). The pushed tree's tests still run first.
+        env:
+          AFTER: ${{ github.sha }}
         run: |
           node scripts/test-check-signatures.mjs
-          node scripts/check-signatures.mjs "${{ github.sha }}"
+          last=$(git describe --tags --abbrev=0 --match "v${VERSION_BASE}.*" "$AFTER^" 2>/dev/null || true)
+          if [ -z "$last" ] || ! git cat-file -e "$last:scripts/check-signatures.mjs" 2>/dev/null; then echo "no released copy of the signature check" >&2; exit 1; fi
+          git show "$last:scripts/check-signatures.mjs" > "$RUNNER_TEMP/check-signatures.mjs"
+          node "$RUNNER_TEMP/check-signatures.mjs" "$AFTER"
       - name: The leak scan's key rules have tests
         run: node scripts/test-leak-scan.mjs
       - name: Copy the events data from data.promptugal.news (a failed read keeps the copy in git)
