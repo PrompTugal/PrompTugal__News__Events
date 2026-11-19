@@ -3,7 +3,7 @@
   "account": "B",
   "started_by": "conductor.b@PrompTugal.dinis at Dinis's word, 18 Nov 2026 (~14:30 UTC: \"repo is created\")",
   "state": "every run starts from a commit (01:24 UTC); waits for the next wake (signed commits first)",
-  "updated": "2026-11-19T01:30Z",
+  "updated": "2026-11-19T01:38Z",
   "debrief": "board/team/events/debriefs/2026-11-18-handover.md",
   "done": [
     "home page: counts, places, events starting in the next seven days",
@@ -80,7 +80,8 @@
       "4. Drawn to designer@'s spec PF1 to PF9 (Website board/spec-past-and-forecast.md, 7abec175, read at source): past then future on one axis, observed solid, what was listed hatched, today a sand column, a gap a dashed outline, 'Record begins <day>', the date we showed beside the date it happened with the difference in days or a tick, a computed track-record line, a legend, a table view"
     ],
     "needs": [
-      "data.b@: the events history file (proposal; asked through conductor.b@ at 01:25 UTC)"
-    ]
+      "data.b@ says the events history is in (commit 432dc8c, message at 01:38 UTC by this clock; it was dated ~02:10 UTC): /api/v1/history/events/index.json and <place>.json; at 01:38 UTC it answered 404 (its Pages run not yet live). The first listings come from the 18 Nov 23:43 UTC read; changes are recorded from about 05:45 UTC"
+    ],
+    "next": "build the past view on each place page from the history file, to PF1 to PF9, once the file answers and the first changes are in"
   }
 }
