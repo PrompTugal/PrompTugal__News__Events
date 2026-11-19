@@ -3,7 +3,7 @@
   "account": "B",
   "started_by": "conductor.b@PrompTugal.dinis at Dinis's word, 18 Nov 2026 (~14:30 UTC: \"repo is created\")",
   "state": "signed commits live from this release (13:45 UTC); next: the past view and predictions file once the history records changes",
-  "updated": "2026-11-19T19:52Z",
+  "updated": "2026-11-19T20:08Z",
   "debrief": "board/team/events/debriefs/2026-11-18-handover.md",
   "done": [
     "home page: counts, places, events starting in the next seven days",
@@ -102,7 +102,6 @@
   "next_wake": [
     "security@'s rulings (Website a250cc42 at 01:21 UTC, 312c4601 at 01:17 UTC; review board/team/security/reviews/2026-11-19-0130-bar-signing-live-data.md; read at source 01:50 UTC), with later rulings and notes:",
     "5. every time from date -u",
-    "the predictions collection in the library (Dinis 03:15 UTC; tell library.b@)",
-    "the map turns on at the first deploy after promptugal.news/api/v1/sites.json lists map 1.0.0 with review passed (built in, off until then); move to ptmap 1.0.1 when listed (security@'s two lows to designer@)"
+    "the predictions collection in the library (Dinis 03:15 UTC; tell library.b@)"
   ]
 }

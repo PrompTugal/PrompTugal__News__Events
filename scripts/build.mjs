@@ -69,24 +69,24 @@ let TZ_OFF = '', TZ_TABLE = null;
 })();
 if (TZ_OFF) console.warn(`build: ${TZ_OFF}`);
 // The shared map, ptmap (designer@'s; Dinis, 19 Nov 2026 ~17:40 UTC, Website board/guidance/2026-11-19-cameras-as-links-and-the-map.md;
-// security@'s go, Website b5fc4fdef), vendored unchanged from PrompTugal__News__Website design/shared-map/v1.0.0/ (9f5ba1d44) and
+// security@'s review passed 1.0.2, Website 168c14fc5; full ISC notice, rights@'s R12), vendored unchanged from PrompTugal__News__Website
+// design/shared-map/v1.0.2/ (758810f86) and
 // checked like the bar against the live registry's map.versions[v].integrity.<file>. On only when the registry lists this
 // version with its review "passed" (map_install); off, with the reason logged, otherwise. A byte mismatch stops the build.
-const MAP_VERSION = '1.0.0', MAPD = `src/assets/ptmap/${MAP_VERSION}/`;
+const MAP_VERSION = '1.0.2', MAPD = `src/assets/ptmap/${MAP_VERSION}/`;
 let MAP_OFF = '';
-const MAP_PIN = {};
 (() => {
   if (!REG) { MAP_OFF = `map ${MAP_VERSION} off: the registry could not be read (${REG_ERR})`; return; }
   const m = REG.map, v = m?.versions?.[MAP_VERSION];
   if (!v || typeof v !== 'object') { MAP_OFF = `map ${MAP_VERSION} off: the registry does not list it yet`; return; }
   const review = String(v.review ?? m.review ?? '');
-  if (review !== 'passed') { MAP_OFF = `map ${MAP_VERSION} off: its review in the registry reads "${review.slice(0, 40) || 'none'}", not "passed"`; return; }
+  // "passed", optionally followed by the review's reference, e.g. "passed (security@ 168c14fc5)"
+  if (!/^passed(?: \(security@ [0-9a-f]{7,40}\))?$/.test(review)) { MAP_OFF = `map ${MAP_VERSION} off: its review in the registry reads "${review.slice(0, 40) || 'none'}", not "passed"`; return; }
   for (const f of ['ptmap.js', 'ptmap.css']) {
     const pin = (v.integrity && typeof v.integrity === 'object' ? v.integrity[f] : undefined) ?? v[f];
     // sha384 only, as map_install names (AppSec review, 19 Nov 2026)
     if (typeof pin !== 'string' || !SRI.test(pin) || !pin.startsWith('sha384-')) { MAP_OFF = `map ${MAP_VERSION} off: the registry gives no usable sha384 pin for ${f}`; return; }
     if (sri('sha384', readFileSync(MAPD + f)) !== pin) { console.error(`build: ${MAPD}${f} does not match the registry's pin for ${MAP_VERSION}`); process.exit(1); }
-    MAP_PIN[f] = pin;
   }
 })();
 if (MAP_OFF) console.warn(`build: ${MAP_OFF}`);
@@ -185,7 +185,7 @@ function page({ path, title, description, section, body, md }) {
 ${SITES_BAR ? `<link rel="stylesheet" href="/assets/sites-bar/${BAR_VERSION}/sites-bar.css">` : ''}
 <link rel="stylesheet" href="/site.css?v=${esc(version)}">
 ${SITES_BAR ? `<script defer src="/assets/sites-bar/${BAR_VERSION}/sites-bar.js"></script>` : ''}
-${MAP_OFF ? '' : `<link rel="stylesheet" href="/assets/ptmap/${MAP_VERSION}/ptmap.css" integrity="${esc(MAP_PIN['ptmap.css'])}"><script defer src="/assets/ptmap/${MAP_VERSION}/ptmap.js" integrity="${esc(MAP_PIN['ptmap.js'])}"></script><script defer src="/assets/map.js?v=${esc(version)}"></script>`}
+${MAP_OFF ? '' : `<link rel="stylesheet" href="/assets/ptmap/${MAP_VERSION}/ptmap.css"><script defer src="/assets/ptmap/${MAP_VERSION}/ptmap.js"></script><script defer src="/assets/map.js?v=${esc(version)}"></script>`}
 <script type="module" src="/assets/live.js?v=${esc(version)}"></script>
 <script defer src="/assets/obs/obs.js?v=${esc(version)}" data-lane="events"></script>
 </head>
