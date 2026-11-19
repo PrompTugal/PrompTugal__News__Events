@@ -96,8 +96,11 @@ jobs:
           AFTER: ${{ github.sha }}
         run: |
           if [ -n "$(git ls-tree "$AFTER" _site)" ] || [ -e _site ] || [ -L _site ]; then echo "the pushed tree holds a _site path: refused" >&2; exit 1; fi
-          v=$(git version | sed -E 's/^git version ([0-9]+)\.([0-9]+).*/\1 \2/'); set -- $v
-          if [ "$1" -lt 2 ] || { [ "$1" -eq 2 ] && [ "$2" -lt 42 ]; }; then echo "git $1.$2 ignores GIT_ATTR_SOURCE: refused" >&2; exit 1; fi
+          # Fail closed: the fields must be numbers first, since [ -lt ] on anything else errors and reads as false (videos.b@'s 7d1e31b);
+          # no leading zero (octal in (( ))) and at most four digits (no overflow), from the AppSec review.
+          gv=$(git version); [[ $gv =~ ^git\ version\ (0|[1-9][0-9]{0,3})\.(0|[1-9][0-9]{0,3})(\.|$) ]] || { echo "cannot read git's version ($gv): refused" >&2; exit 1; }
+          ma=${BASH_REMATCH[1]}; mi=${BASH_REMATCH[2]}
+          if (( ma < 2 || (ma == 2 && mi < 42) )); then echo "git $ma.$mi ignores GIT_ATTR_SOURCE: refused" >&2; exit 1; fi
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with:
           node-version: 22

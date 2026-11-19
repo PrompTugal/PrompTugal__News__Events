@@ -5,6 +5,7 @@
 // change their result. These read the workflow and release.sh as text: that shell runs only in CI and at release, so it is
 // guarded here by shape. events.b@PrompTugal.dinis, 19 November 2026. Code: Apache-2.0.
 import { readFileSync } from 'node:fs';
+import { spawnSync } from 'node:child_process';
 
 // Comments are removed first, so no test can be satisfied by a comment that merely mentions a step (library.b@'s
 // LIB-2026-067): whole comment lines, and a trailing " # ..." after code.
@@ -34,9 +35,20 @@ const cases = [
     const r = verify.indexOf('git ls-tree "$AFTER" _site'), d = verify.indexOf('actions/download-artifact@');
     return r > 0 && d > r && /git ls-tree "\$AFTER" _site\)" \] \|\| \[ -e _site \] \|\| \[ -L _site \]; then [^\n]*exit 1/.test(verify) && /path: \$\{\{ runner\.temp \}\}\/site-artifact/.test(verify);
   }],
-  ['pushed .gitattributes are off for every git command in verify (GIT_ATTR_SOURCE = the empty tree, git 2.42 or later)', () => /\n    env:\n(      [^\n]*\n)*      GIT_ATTR_SOURCE: 4b825dc642cb6eb9a060e54bf8d69288fbee4904\n/.test(verify) && (verify.match(/GIT_ATTR_SOURCE="\$GIT_ATTR_SOURCE" "\$NODE"/g) || []).length === 3 && /ignores GIT_ATTR_SOURCE: refused[^\n]*exit 1/.test(verify) && /-lt 42/.test(verify)],
+  ['pushed .gitattributes are off for every git command in verify (GIT_ATTR_SOURCE = the empty tree, git 2.42 or later)', () => /\n    env:\n(      [^\n]*\n)*      GIT_ATTR_SOURCE: 4b825dc642cb6eb9a060e54bf8d69288fbee4904\n/.test(verify) && (verify.match(/GIT_ATTR_SOURCE="\$GIT_ATTR_SOURCE" "\$NODE"/g) || []).length === 3 && /ignores GIT_ATTR_SOURCE: refused[^\n]*exit 1/.test(verify) && /\(\( ma < 2 \|\| \(ma == 2 && mi < 42\) \)\)/.test(verify) && !/-lt 42/.test(verify)],
   ['A is a run in which the job named verify passed, read from the run\'s jobs; an API error fails', () => /actions\/runs\/\$\{row%%:\*\}\/jobs/.test(verify) && /select\(\.name == "verify" and \.conclusion == "success"\)/.test(verify) && /cannot read a run's jobs[^\n]*exit 1/.test(verify) && /if \[ "\$v" = "1" \]; then A="\$\{row##\*:\}"; break; fi/.test(verify) && /\|\| \{ echo "cannot read this workflow's runs" >&2; exit 1; \}/.test(verify)],
   ['release.sh anchors on a run whose verify job passed, and falls back to version.json only on a rate limit (403 or 429)', () => /\/runs\/" \+ r\.id \+ "\/jobs/.test(rel) && /x\.name === "verify" && x\.conclusion === "success"/.test(rel) && /\.catch\(\(e\) => \(e\.status === 403 \|\| e\.status === 429\) \? fetch\("https:\/\/events\.promptugal\.news\/version\.json"/.test(rel) && /: process\.exit\(1\)\)/.test(rel)],
+  ['the git version gate, run under bash -e -o pipefail, passes 2.42 or later and refuses older or unreadable versions (fails closed)', () => {
+    const raw = readFileSync('.github/workflows/pages.yml', 'utf8').split('\n');
+    const i = raw.findIndex((l) => /^\s*gv=\$\(git version\)/.test(l)), j = raw.findIndex((l) => /ignores GIT_ATTR_SOURCE: refused/.test(l));
+    if (i < 0 || j < i) return false;
+    const gate = raw.slice(i, j + 1).map((l) => l.trim()).join('\n');
+    const run = (v) => spawnSync('bash', ['-e', '-o', 'pipefail', '-c', `git() { printf '%s\\n' "$FAKE"; }\n${gate}\necho PASS`], { env: { PATH: process.env.PATH, FAKE: v }, encoding: 'utf8' }).stdout.includes('PASS');
+    const pass = ['git version 2.42', 'git version 2.42.0', 'git version 2.43.0.windows.1', 'git version 3.0.1'];
+    const refuse = ['git version 2.41.9', 'git version 1.99', 'git version 2.39.5 (Apple Git-154)', 'git version 08.1.0', 'git version 2.08.0', 'git version 2.042.0',
+      'git version 2.18446744073709551700.0', 'git version x.y', 'git version 2.43-rc1', 'git version 2.42rc', ''];
+    return pass.every(run) && !refuse.some(run);
+  }],
   ['verify, deploy and tag run only for refs/heads/dev', () => [verify, deploy, tag].every((j) => /\n    if: [^\n]*github\.ref == 'refs\/heads\/dev'/.test(j))],
 ];
 let failed = 0;
