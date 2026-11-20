@@ -1,5 +1,5 @@
 {
- "data_read_at": "2026-11-19T01:21:32Z",
+ "data_read_at": "2026-11-20T07:18:52Z",
  "expected_cadence": {
   "name": "twice a day",
   "seconds": 43200,
@@ -21,7 +21,7 @@
   "commercial_note": "With credit to PrompTugal.news; values taken from a source keep that source's licence."
  },
  "place": "portimao",
- "read_at": "2026-11-19T01:21:32Z",
+ "read_at": "2026-11-20T07:18:52Z",
  "discovery": {
   "asked_at": "2026-11-18T14:17:45Z",
   "model": "perplexity/sonar",
@@ -30,38 +30,11 @@
  },
  "about": "Events claimed for this place, each with every evidence link and whether this site may read that source (the register). Name, date and place come from discovery (Perplexity, through OpenRouter); other details only from a readable source. Not a confirmed listing.",
  "counts": {
-  "claims": 4,
+  "claims": 3,
   "confirmed": 0,
-  "withheld": 4
+  "withheld": 3
  },
  "claims": [
-  {
-   "@type": "Event",
-   "name": "Choque Frontal ao Vivo 2026",
-   "startDate": "2026-11-19",
-   "endDate": "2026-11-19",
-   "place": "portimao",
-   "municipality": "Portimão",
-   "evidence": [
-    {
-     "url": "https://algarveholidaytips.com/events/choque-frontal-ao-vivo-2026-portimao-tempo/",
-     "host": "algarveholidaytips.com",
-     "readable": false,
-     "register": null
-    }
-   ],
-   "status": "details withheld",
-   "details_from": null,
-   "details_note": "Details withheld: the sources cited (algarveholidaytips.com) are not ones whose terms let us copy them. Organiser: send them to us.",
-   "license": {
-    "name": "CC BY 4.0",
-    "url": "https://creativecommons.org/licenses/by/4.0/",
-    "holder": "PrompTugal.news",
-    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms.",
-    "commercial_use": "allowed",
-    "commercial_note": "With credit to PrompTugal.news; values taken from a source keep that source's licence."
-   }
-  },
   {
    "@type": "Event",
    "name": "November Workshops at the Educational Farm of Portimão",

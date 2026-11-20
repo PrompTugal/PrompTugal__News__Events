@@ -1,5 +1,5 @@
 {
- "data_read_at": "2026-11-19T01:21:32Z",
+ "data_read_at": "2026-11-20T07:18:52Z",
  "expected_cadence": {
   "name": "twice a day",
   "seconds": 43200,
@@ -21,12 +21,12 @@
   "commercial_note": "With credit to PrompTugal.news; values taken from a source keep that source's licence."
  },
  "place": "algarve",
- "read_at": "2026-11-19T01:21:32Z",
+ "read_at": "2026-11-20T07:18:52Z",
  "about": "Every Algarve place's claims in one file (the places in index.json other than lisboa).",
  "counts": {
-  "claims": 99,
+  "claims": 96,
   "confirmed": 0,
-  "withheld": 97
+  "withheld": 94
  },
  "claims": [
   {
@@ -275,72 +275,6 @@
    "status": "details withheld",
    "details_from": null,
    "details_note": "Details withheld: the sources cited (visitportugal.com, eventos.visitalgarve.pt) are not ones whose terms let us copy them. Organiser: send them to us.",
-   "license": {
-    "name": "CC BY 4.0",
-    "url": "https://creativecommons.org/licenses/by/4.0/",
-    "holder": "PrompTugal.news",
-    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms.",
-    "commercial_use": "allowed",
-    "commercial_note": "With credit to PrompTugal.news; values taken from a source keep that source's licence."
-   }
-  },
-  {
-   "@type": "Event",
-   "name": "The Great World Race",
-   "startDate": "2026-11-19",
-   "endDate": "2026-11-19",
-   "place": "castro-marim",
-   "municipality": "Castro Marim",
-   "evidence": [
-    {
-     "url": "https://cm-castromarim.pt/site/eventos",
-     "host": "cm-castromarim.pt",
-     "readable": false,
-     "register": "cm-castromarim"
-    },
-    {
-     "url": "http://cm-castromarim.pt/info/",
-     "host": "cm-castromarim.pt",
-     "readable": false,
-     "register": "cm-castromarim"
-    }
-   ],
-   "status": "details withheld",
-   "details_from": null,
-   "details_note": "Details withheld: the sources cited (cm-castromarim.pt) are not ones whose terms let us copy them. Organiser: send them to us.",
-   "license": {
-    "name": "CC BY 4.0",
-    "url": "https://creativecommons.org/licenses/by/4.0/",
-    "holder": "PrompTugal.news",
-    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms.",
-    "commercial_use": "allowed",
-    "commercial_note": "With credit to PrompTugal.news; values taken from a source keep that source's licence."
-   }
-  },
-  {
-   "@type": "Event",
-   "name": "Encontro Transfronteiriço de Mulheres Empreendedoras",
-   "startDate": "2026-11-19",
-   "endDate": "2026-11-19",
-   "place": "castro-marim",
-   "municipality": "Castro Marim",
-   "evidence": [
-    {
-     "url": "https://cm-castromarim.pt/site/eventos",
-     "host": "cm-castromarim.pt",
-     "readable": false,
-     "register": "cm-castromarim"
-    },
-    {
-     "url": "http://cm-castromarim.pt/info/",
-     "host": "cm-castromarim.pt",
-     "readable": false,
-     "register": "cm-castromarim"
-    }
-   ],
-   "status": "details withheld",
-   "details_from": null,
-   "details_note": "Details withheld: the sources cited (cm-castromarim.pt) are not ones whose terms let us copy them. Organiser: send them to us.",
    "license": {
     "name": "CC BY 4.0",
     "url": "https://creativecommons.org/licenses/by/4.0/",
@@ -1532,33 +1466,6 @@
    "status": "details withheld",
    "details_from": null,
    "details_note": "Details withheld: the sources cited (algarveatlas.com) are not ones whose terms let us copy them. Organiser: send them to us.",
-   "license": {
-    "name": "CC BY 4.0",
-    "url": "https://creativecommons.org/licenses/by/4.0/",
-    "holder": "PrompTugal.news",
-    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms.",
-    "commercial_use": "allowed",
-    "commercial_note": "With credit to PrompTugal.news; values taken from a source keep that source's licence."
-   }
-  },
-  {
-   "@type": "Event",
-   "name": "Choque Frontal ao Vivo 2026",
-   "startDate": "2026-11-19",
-   "endDate": "2026-11-19",
-   "place": "portimao",
-   "municipality": "Portimão",
-   "evidence": [
-    {
-     "url": "https://algarveholidaytips.com/events/choque-frontal-ao-vivo-2026-portimao-tempo/",
-     "host": "algarveholidaytips.com",
-     "readable": false,
-     "register": null
-    }
-   ],
-   "status": "details withheld",
-   "details_from": null,
-   "details_note": "Details withheld: the sources cited (algarveholidaytips.com) are not ones whose terms let us copy them. Organiser: send them to us.",
    "license": {
     "name": "CC BY 4.0",
     "url": "https://creativecommons.org/licenses/by/4.0/",

@@ -14,6 +14,9 @@ node scripts/leak-scan.mjs
 node scripts/check-commits.mjs origin/dev HEAD
 node scripts/test-check-signatures.mjs
 node scripts/test-leak-scan.mjs
+# The predictions file for the library: the library's checks, and append only since dev (a correction is a new line).
+node scripts/test-predictions.mjs
+node scripts/check-predictions.mjs origin/dev
 node scripts/test-workflow.mjs
 # The security checks run from the anchor's copy: the newest commit GitHub's own record shows was deployed to
 # this workflow's latest successful push run on dev (security@'s sixth ruling, Website 0ba439611). Tags

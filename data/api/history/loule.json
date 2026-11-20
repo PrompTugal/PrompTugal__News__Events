@@ -1,5 +1,5 @@
 {
- "data_read_at": "2026-11-19T18:11:23Z",
+ "data_read_at": "2026-11-20T07:13:56Z",
  "expected_cadence": {
   "name": "twice a day",
   "seconds": 43200,
@@ -33,7 +33,7 @@
    "field": "claims"
   }
  },
- "commit": "a6271b3e2e34cbef33afadc8f74ca7e5c1cf4c64",
+ "commit": "10a52f0bdea7cdb9330c619826edd0fb0042e2f6",
  "counts": {
   "events": 0,
   "changed": 0,

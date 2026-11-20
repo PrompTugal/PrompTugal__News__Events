@@ -1,5 +1,5 @@
 {
- "data_read_at": "2026-11-19T01:21:32Z",
+ "data_read_at": "2026-11-20T07:18:52Z",
  "expected_cadence": {
   "name": "twice a day",
   "seconds": 43200,
@@ -20,7 +20,7 @@
   "commercial_use": "allowed",
   "commercial_note": "With credit to PrompTugal.news; values taken from a source keep that source's licence."
  },
- "read_at": "2026-11-19T01:21:32Z",
+ "read_at": "2026-11-20T07:18:52Z",
  "places": [
   {
    "place": "albufeira",
@@ -42,9 +42,9 @@
   },
   {
    "place": "castro-marim",
-   "claims": 4,
+   "claims": 2,
    "confirmed": 0,
-   "withheld": 4
+   "withheld": 2
   },
   {
    "place": "faro",
@@ -90,9 +90,9 @@
   },
   {
    "place": "portimao",
-   "claims": 4,
+   "claims": 3,
    "confirmed": 0,
-   "withheld": 4
+   "withheld": 3
   },
   {
    "place": "quarteira",

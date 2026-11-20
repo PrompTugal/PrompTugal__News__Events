@@ -22,7 +22,7 @@
  "status": "read",
  "how": "sources/contracts-finder/collect.mjs reads https://www.contractsfinder.service.gov.uk/ (twice a day, at data.b@'s wakes; the source's own cadence: every 6 hours)",
  "terms": {
-  "summary": "Open Government Licence v3.0: every OCDS package carries the licence; reuse with attribution. robots.txt has no rules (page not found). The published search needs no token. Natural persons are not kept (suppliers can be sole traders). Not reviewed by a person.",
+  "summary": "Open Government Licence v3.0, Crown copyright (Crown Commercial Service); credit every value with: \"Contains public sector information licensed under the Open Government Licence v3.0.\" Every OCDS package carries the licence. robots.txt has no rules (page not found). The published search needs no token. Natural persons are not kept (suppliers can be sole traders). Not reviewed by a person.",
   "page": "https://www.contractsfinder.service.gov.uk/apidocumentation",
   "read_at": "2026-11-19"
  },

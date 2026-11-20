@@ -51,6 +51,12 @@ jobs:
           node scripts/test-workflow.mjs
       - name: The leak scan's key rules have tests
         run: node scripts/test-leak-scan.mjs
+      - name: The predictions file passes the library's checks and only grows (the pushed code; release.sh checks it too)
+        env:
+          BEFORE: ${{ github.event.before }}
+        run: |
+          node scripts/test-predictions.mjs
+          case "$BEFORE" in ''|0000000000000000000000000000000000000000) node scripts/check-predictions.mjs ;; *) node scripts/check-predictions.mjs "$BEFORE" ;; esac
       - name: Copy the events data from data.promptugal.news (a failed read keeps the copy in git)
         run: node scripts/sync-data.mjs
       - name: Check the synced data (on failure, keep the last copy in git; finding EV-2026-006)
@@ -190,10 +196,15 @@ jobs:
             [ "$mode" = "100644" ] || [ "$mode" = "100755" ] || { echo "no regular-file copy of scripts/$f in the anchor $A (mode ${mode:-none})" >&2; exit 1; }
             git show "$A:scripts/$f" > "$T/$f"
           done
+          # The predictions file's checker too, from A once A has it (added 20 Nov 2026): append only since A, so a push cannot
+          # weaken the checker that checks it (AppSec review). Before A has it, the build job's run of the pushed copy stands.
+          pmode=$(git ls-tree "$A" scripts/check-predictions.mjs | cut -d' ' -f1)
+          case "$pmode" in 100644|100755) git show "$A:scripts/check-predictions.mjs" > "$T/check-predictions.mjs" ;; '') ;; *) echo "scripts/check-predictions.mjs in the anchor is not a regular file" >&2; exit 1 ;; esac
           chmod -R a-w "$T"
           env -i PATH="$PATH" HOME="$HOME" GIT_NO_REPLACE_OBJECTS=1 GIT_ATTR_SOURCE="$GIT_ATTR_SOURCE" "$NODE" "$T/check-commits.mjs" "$A" "$AFTER"
           env -i PATH="$PATH" HOME="$HOME" GIT_NO_REPLACE_OBJECTS=1 GIT_ATTR_SOURCE="$GIT_ATTR_SOURCE" "$NODE" "$T/check-signatures.mjs" "$AFTER"
           env -i PATH="$PATH" HOME="$HOME" GIT_NO_REPLACE_OBJECTS=1 GIT_ATTR_SOURCE="$GIT_ATTR_SOURCE" "$NODE" "$T/leak-scan.mjs"
+          if [ -f "$T/check-predictions.mjs" ]; then env -i PATH="$PATH" HOME="$HOME" GIT_NO_REPLACE_OBJECTS=1 GIT_ATTR_SOURCE="$GIT_ATTR_SOURCE" "$NODE" "$T/check-predictions.mjs" "$A"; fi
   deploy:
     needs: [build, verify]
     if: github.ref == 'refs/heads/dev' && needs.build.outputs.deploy == 'true' && needs.verify.result == 'success'
