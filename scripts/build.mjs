@@ -341,20 +341,21 @@ ${past.html}`,
 {
   const rows = [REGION, ...placeIds].map((p) => ({ p, H: histOf(p) }));
   // The site's totals: the Algarve (its towns together, each event and claim once) and every place outside it.
-  const tot = rows.filter((r) => (r.p === REGION || !ALGARVE.has(r.p)) && r.H).reduce((a, { H }) => ({ e: a.e + H.events.length, c: a.c + H.changed.length, g: a.g + H.gone.length, d: a.d + H.passed.length, k: a.k + H.claims.length }), { e: 0, c: 0, g: 0, d: 0, k: 0 });
+  const tot = rows.filter((r) => (r.p === REGION || !ALGARVE.has(r.p)) && r.H).reduce((a, { H }) => ({ e: a.e + H.events.length, c: a.c + H.changed.length, g: a.g + H.gone.length, d: a.d + H.passed.length, k: a.k + H.claims.length, r: a.r + H.rolling.length }), { e: 0, c: 0, g: 0, d: 0, k: 0, r: 0 });
   const td = (H, k) => `<td class="n">${H ? H[k].length : '–'}</td>`;
   page({
     path: '/past/', section: '/past/', title: 'The past: what was listed, and what changed · PrompTugal.news Events',
     description: `Every event as its source first listed it, kept and never overwritten, with every change seen since, for each place: ${tot.e} events kept, ${tot.c} changed, ${tot.g} gone.`,
     body: `<h1>The past</h1>
 <p class="standfirst">An events listing is a prediction: the organiser says what will happen. We keep each one as it was first listed and show what changed, so you can see how a listing held up, not only what it says today.</p>
-<p>Since ${esc(fmtStamp(histIndex?.history_from))}, data.promptugal.news has kept <b>${tot.e}</b> events as first listed across the places below. <b>${tot.c}</b> have changed since and <b>${tot.g}</b> have gone from their source before their date; <b>${tot.d}</b> have reached their date. It also keeps <b>${tot.k}</b> claims found through Perplexity, as answered, to be checked when their date comes. Before ${esc(fmtStamp(histIndex?.history_from))} nothing was kept: a gap, not an absence.</p>
+<p>Since ${esc(fmtStamp(histIndex?.history_from))}, data.promptugal.news has kept <b>${tot.e}</b> events as first listed across the places below. <b>${tot.c}</b> ${tot.c === 1 ? 'has' : 'have'} changed since and <b>${tot.g}</b> ${tot.g === 1 ? 'has' : 'have'} gone from their source before their date${tot.r ? ` (for ${tot.r} more, the source now gives the next date of a running event: not counted as a change)` : ''}; <b>${tot.d}</b> ${tot.d === 1 ? 'has' : 'have'} reached their date. It also keeps <b>${tot.k}</b> claims found through Perplexity, as answered, to be checked when their date comes. Before ${esc(fmtStamp(histIndex?.history_from))} nothing was kept: a gap, not an absence.</p>
 <table class="places-table"><thead><tr><th scope="col">Place</th><th scope="col">Kept as first listed</th><th scope="col">Changed</th><th scope="col">Gone</th><th scope="col">Date passed</th><th scope="col">Claims kept</th></tr></thead><tbody>
 ${rows.map(({ p, H }) => `<tr><th scope="row"><a href="/places/${p}/#past">${esc(placeLabel(p))}</a></th>${td(H, 'events')}${td(H, 'changed')}${td(H, 'gone')}${td(H, 'passed')}${td(H, 'claims')}</tr>`).join('\n')}
 </tbody></table>
 <p class="small">"The Algarve" gathers every Algarve place, so its row repeats theirs. A dash means no history file for the place yet. Each place's page lists its events whose date has passed and every change, under "The past".</p>
 <section><h2>What this does and does not show</h2><ul>
 <li>It shows what a source listed and whether that listing changed. It does not show that an event took place: no source we read says so yet.</li>
+<li>A later start date within an event's run as first listed is the next date of a running event, not a reschedule: it is counted apart. Every change, rolling or not, stays in the history file.</li>
 <li>A change is dated by the collection that first saw it; data.promptugal.news collects events ${esc(cadence)}.</li>
 <li>Claims found through Perplexity are kept exactly as answered, with their evidence links and the time asked. None has been checked yet.</li>
 <li>Each listing read from an agenda is also a line in this site's predictions file, <a href="${REPO}/blob/dev/data/predictions/predictions.jsonl">data/predictions/predictions.jsonl</a> (append only: the organiser's expected date, and when the date passes, what we know of the outcome). <a href="https://library.promptugal.news/predictions/">The library's predictions collection</a> catalogues it with every site's.</li>

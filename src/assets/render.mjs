@@ -212,7 +212,20 @@ export const okHistEvent = (e) => !!e && typeof e === 'object' && okUrl(e.url) &
 export const okHistClaim = (c) => !!c && typeof c === 'object' && typeof c.name === 'string' && c.name.trim() !== '' && c.name.length <= 2000 && okDate(c.startDate) && okDn(c.endDate);
 // At most 20 changes shown per event, 3000 events and 3000 claims in all (AppSec review, 19 Nov 2026: a bounded page).
 export const PAST_MAX = { events: 3000, claims: 3000, changes: 20 };
-export const histChangesOf = (e) => arr(e.changes).slice(0, 200).filter((c) => c && typeof c === 'object' && typeof c.field === 'string' && /^[A-Za-z_]{1,40}$/.test(c.field) && okDate(c.at) && okHistVal(c.from) && okHistVal(c.to)).slice(0, PAST_MAX.changes);
+// A rolling start: the source now gives a later start date that is still within the event's run as first listed (Agenda LX
+// gives a running exhibition's next date: 160 of 166 start-date changes in Lisbon on 20 Nov 2026 were this). It is not a
+// reschedule, so it is counted apart and not shown as a change.
+// Tight (AppSec review, 20 Nov 2026): both dates within the first-listed run (start to end, at most a year), the new start
+// later than the old and no later than the day after the read that saw it (the source's "today" for a running event).
+export const isRolling = (e, c) => {
+  if (c.field !== 'startDate' || typeof c.from !== 'string' || typeof c.to !== 'string' || !okDate(c.from) || !okDate(c.to) || !okDate(c.at)) return false;
+  const s0 = dayPart(e.first.startDate), s1 = dayPart(e.first.endDate), f = dayPart(c.from), t = dayPart(c.to);
+  if (!e.first.endDate || !okDate(e.first.endDate) || s1 < s0 || s1 > addDays(s0, 366)) return false;
+  return f >= s0 && t > f && t <= s1 && t <= addDays(dayPart(c.at), 1);
+};
+export const histAllChangesOf = (e) => arr(e.changes).slice(0, 200).filter((c) => c && typeof c === 'object' && typeof c.field === 'string' && /^[A-Za-z_]{1,40}$/.test(c.field) && okDate(c.at) && okHistVal(c.from) && okHistVal(c.to));
+export const histChangesOf = (e) => histAllChangesOf(e).filter((c) => !isRolling(e, c));
+export const histRollingOf = (e) => histAllChangesOf(e).filter((c) => isRolling(e, c));
 // files: history files, each { place, history_from, data_read_at, events, claims }. A region's own file goes last: one event per
 // url, one claim per name and start date (the Algarve's file repeated its towns' claims until data.b@'s 15cdd1e).
 export function pastOf(files) {
@@ -229,6 +242,7 @@ export function pastOf(files) {
     from: times('history_from')[0] || '', oldest: times('data_read_at')[0] || '', readAt: times('data_read_at').pop() || '',
     events, claims,
     changed: events.filter((e) => histChangesOf(e).length),
+    rolling: events.filter((e) => histRollingOf(e).length && !histChangesOf(e).length),
     gone: events.filter((e) => e.gone_at),
     passed: events.filter((e) => endH(e) < today).sort((a, b) => endH(b).localeCompare(endH(a))),
     claimsPassed: claims.filter((c) => dayPart(c.endDate || c.startDate) < today),
@@ -236,7 +250,8 @@ export function pastOf(files) {
 }
 const histVal = (v) => (v == null || v === '' ? '(none)' : clean(String(v).slice(0, 500)).slice(0, 200));
 function histItem(e, showPlace) {
-  const ch = histChangesOf(e).map((c) => n('li', null, `${c.field}: from ${histVal(c.from)} to ${histVal(c.to)} `, n('span', { class: 'small' }, `(seen ${fmtStamp(c.at)})`)));
+  // an event with a real change shows every change it has, a rolling start included, so the pair reads together
+  const ch = (histChangesOf(e).length ? histAllChangesOf(e) : []).slice(0, PAST_MAX.changes).map((c) => n('li', null, `${c.field}: from ${histVal(c.from)} to ${histVal(c.to)} `, n('span', { class: 'small' }, `(seen ${fmtStamp(c.at)})`)));
   return n('li', null, n('b', null, e.first.name), showPlace ? [' ', n('span', { class: 'small' }, `(${nameOf(e.place)})`)] : '',
     `: first listed for ${fmtWhen(e.first.startDate, e.first.endDate)}${e.first.venue ? ` at ${e.first.venue}` : ''} `,
     n('span', { class: 'small' }, `(first seen ${fmtStamp(e.first.at)}; last seen in its source ${fmtStamp(e.last_seen)}${e.gone_at ? `; gone from its source ${fmtStamp(e.gone_at)}` : ''}; `, A(e.url, `its page on ${host(e.url) || 'its source'}`), ')'),
@@ -249,7 +264,7 @@ export function pastTree(H, { name, showPlace = false, cadence = 'twice a day' }
   return [
     n('p', null, `Since ${from}, data.promptugal.news has kept each event listed for ${name} exactly as its source first listed it, and every change seen since. Kept: `,
       n('b', null, String(H.events.length)), ' events. Changed since: ', n('b', null, String(H.changed.length)), '. Gone from their source before their date: ', n('b', null, String(H.gone.length)),
-      `.${!H.changed.length && !H.gone.length && H.events.length ? ' None has changed or gone since it was first seen.' : ''} Before ${from} nothing was kept: a gap, not an absence. data.promptugal.news collects events ${cadence}, so a change is dated by the collection that first saw it.`),
+      `.${!H.changed.length && !H.gone.length && H.events.length ? ' None has changed or gone since it was first seen.' : ''}${H.rolling.length ? ` For ${H.rolling.length} more, the source now gives a later start date within the run first listed, about the day it was read (the next date of a running event): not counted as a change.` : ''} Before ${from} nothing was kept: a gap, not an absence. data.promptugal.news collects events ${cadence}, so a change is dated by the collection that first saw it.`),
     ...(H.passed.length
       ? [n('h3', null, `Dates passed (${H.passed.length})`), n('p', { class: 'small' }, 'What the organiser said would happen, as first listed. We have no record that it did; the history shows only whether the listing changed.'), list(H.passed)]
       : [n('p', { class: 'small' }, `No event kept for ${name} has reached its date yet.`)]),

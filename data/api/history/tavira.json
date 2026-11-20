@@ -1,5 +1,5 @@
 {
- "data_read_at": "2026-11-20T07:13:56Z",
+ "data_read_at": "2026-11-20T18:12:44Z",
  "expected_cadence": {
   "name": "twice a day",
   "seconds": 43200,
@@ -33,7 +33,7 @@
    "field": "claims"
   }
  },
- "commit": "10a52f0bdea7cdb9330c619826edd0fb0042e2f6",
+ "commit": "65c66677f4957a21ffbcf6d58b3f8794f505d39f",
  "counts": {
   "events": 39,
   "changed": 0,
@@ -76,7 +76,7 @@
     "venue": "Igreja do Carmo"
    },
    "changes": [],
-   "last_seen": "2026-11-20T07:14:38Z",
+   "last_seen": "2026-11-20T18:13:25Z",
    "gone_at": null
   },
   {
@@ -94,7 +94,7 @@
     "venue": "Biblioteca Municipal Álvaro de Campos"
    },
    "changes": [],
-   "last_seen": "2026-11-20T07:14:38Z",
+   "last_seen": "2026-11-20T18:13:25Z",
    "gone_at": null
   },
   {
@@ -112,7 +112,7 @@
     "venue": "Igreja Santiago – Tavira"
    },
    "changes": [],
-   "last_seen": "2026-11-20T07:14:38Z",
+   "last_seen": "2026-11-20T18:13:25Z",
    "gone_at": null
   },
   {
@@ -130,7 +130,7 @@
     "venue": "Casa do Povo de Santo Estêvão"
    },
    "changes": [],
-   "last_seen": "2026-11-20T07:14:38Z",
+   "last_seen": "2026-11-20T18:13:25Z",
    "gone_at": null
   },
   {
@@ -148,7 +148,7 @@
     "venue": "Museu Municipal de Tavira – Palácio da Galeria"
    },
    "changes": [],
-   "last_seen": "2026-11-20T07:14:38Z",
+   "last_seen": "2026-11-20T18:13:25Z",
    "gone_at": null
   },
   {
@@ -166,7 +166,7 @@
     "venue": "Santa Catarina da Fonte do Bispo"
    },
    "changes": [],
-   "last_seen": "2026-11-20T07:14:38Z",
+   "last_seen": "2026-11-20T18:13:25Z",
    "gone_at": null
   },
   {
@@ -184,7 +184,7 @@
     "venue": "Partida: Praça da República"
    },
    "changes": [],
-   "last_seen": "2026-11-20T07:14:38Z",
+   "last_seen": "2026-11-20T18:13:25Z",
    "gone_at": null
   },
   {
@@ -202,7 +202,7 @@
     "venue": "Vários sitios da cidade"
    },
    "changes": [],
-   "last_seen": "2026-11-20T07:14:38Z",
+   "last_seen": "2026-11-20T18:13:25Z",
    "gone_at": null
   },
   {
@@ -220,7 +220,7 @@
     "venue": "Biblioteca Municipal Álvaro de Campos"
    },
    "changes": [],
-   "last_seen": "2026-11-20T07:14:38Z",
+   "last_seen": "2026-11-20T18:13:25Z",
    "gone_at": null
   },
   {
@@ -238,7 +238,7 @@
     "venue": "Ermida de Santa Ana"
    },
    "changes": [],
-   "last_seen": "2026-11-20T07:14:38Z",
+   "last_seen": "2026-11-20T18:13:25Z",
    "gone_at": null
   },
   {
@@ -256,7 +256,7 @@
     "venue": "Horta Comunitária da Amendoeira (Posto Agrário de Tavira)"
    },
    "changes": [],
-   "last_seen": "2026-11-20T07:14:38Z",
+   "last_seen": "2026-11-20T18:13:25Z",
    "gone_at": null
   },
   {
@@ -274,7 +274,7 @@
     "venue": "Cachopo"
    },
    "changes": [],
-   "last_seen": "2026-11-20T07:14:38Z",
+   "last_seen": "2026-11-20T18:13:25Z",
    "gone_at": null
   },
   {
@@ -292,7 +292,7 @@
     "venue": "Cachopo"
    },
    "changes": [],
-   "last_seen": "2026-11-20T07:14:38Z",
+   "last_seen": "2026-11-20T18:13:25Z",
    "gone_at": null
   },
   {
@@ -310,7 +310,7 @@
     "venue": "Igreja do Carmo"
    },
    "changes": [],
-   "last_seen": "2026-11-20T07:14:38Z",
+   "last_seen": "2026-11-20T18:13:25Z",
    "gone_at": null
   },
   {
@@ -328,7 +328,7 @@
     "venue": "Clube Recreativo Cabanense"
    },
    "changes": [],
-   "last_seen": "2026-11-20T07:14:38Z",
+   "last_seen": "2026-11-20T18:13:25Z",
    "gone_at": null
   },
   {
@@ -346,7 +346,7 @@
     "venue": "Biblioteca Municipal Álvaro de Campos"
    },
    "changes": [],
-   "last_seen": "2026-11-20T07:14:38Z",
+   "last_seen": "2026-11-20T18:13:25Z",
    "gone_at": null
   },
   {
@@ -364,7 +364,7 @@
     "venue": "Sociedade Recreativa Musical Luzense, Luz de Tavira"
    },
    "changes": [],
-   "last_seen": "2026-11-20T07:14:38Z",
+   "last_seen": "2026-11-20T18:13:25Z",
    "gone_at": null
   },
   {
@@ -382,7 +382,7 @@
     "venue": "Teatro Municipal António Pinheiro"
    },
    "changes": [],
-   "last_seen": "2026-11-20T07:14:38Z",
+   "last_seen": "2026-11-20T18:13:25Z",
    "gone_at": null
   },
   {
@@ -400,7 +400,7 @@
     "venue": "Cachopo"
    },
    "changes": [],
-   "last_seen": "2026-11-20T07:14:38Z",
+   "last_seen": "2026-11-20T18:13:25Z",
    "gone_at": null
   },
   {
@@ -418,7 +418,7 @@
     "venue": "Biblioteca Municipal Álvaro de Campos"
    },
    "changes": [],
-   "last_seen": "2026-11-20T07:14:38Z",
+   "last_seen": "2026-11-20T18:13:25Z",
    "gone_at": null
   },
   {
@@ -436,7 +436,7 @@
     "venue": "Cachopo"
    },
    "changes": [],
-   "last_seen": "2026-11-20T07:14:38Z",
+   "last_seen": "2026-11-20T18:13:25Z",
    "gone_at": null
   },
   {
@@ -454,7 +454,7 @@
     "venue": "Biblioteca Municipal Álvaro de Campos"
    },
    "changes": [],
-   "last_seen": "2026-11-20T07:14:38Z",
+   "last_seen": "2026-11-20T18:13:25Z",
    "gone_at": null
   },
   {
@@ -472,7 +472,7 @@
     "venue": "Salão da Casa do Povo de Santa Catarina da Fonte do Bispo"
    },
    "changes": [],
-   "last_seen": "2026-11-20T07:14:38Z",
+   "last_seen": "2026-11-20T18:13:25Z",
    "gone_at": null
   },
   {
@@ -490,7 +490,7 @@
     "venue": "Museu Municipal de Tavira – Palácio da Galeria"
    },
    "changes": [],
-   "last_seen": "2026-11-20T07:14:38Z",
+   "last_seen": "2026-11-20T18:13:25Z",
    "gone_at": null
   },
   {
@@ -508,7 +508,7 @@
     "venue": "Cachopo"
    },
    "changes": [],
-   "last_seen": "2026-11-20T07:14:38Z",
+   "last_seen": "2026-11-20T18:13:25Z",
    "gone_at": null
   },
   {
@@ -526,7 +526,7 @@
     "venue": "Conceição de Tavira"
    },
    "changes": [],
-   "last_seen": "2026-11-20T07:14:38Z",
+   "last_seen": "2026-11-20T18:13:25Z",
    "gone_at": null
   },
   {
@@ -544,7 +544,7 @@
     "venue": "Conceição Tavira"
    },
    "changes": [],
-   "last_seen": "2026-11-20T07:14:38Z",
+   "last_seen": "2026-11-20T18:13:25Z",
    "gone_at": null
   },
   {
@@ -562,7 +562,7 @@
     "venue": "Hub Criativo da Ria Inquieta (Rua 4 de Outubro, n.º 24)"
    },
    "changes": [],
-   "last_seen": "2026-11-20T07:14:38Z",
+   "last_seen": "2026-11-20T18:13:25Z",
    "gone_at": null
   },
   {
@@ -580,7 +580,7 @@
     "venue": "Ponto de encontro: Núcleo Islâmico (Praça da República)"
    },
    "changes": [],
-   "last_seen": "2026-11-20T07:14:38Z",
+   "last_seen": "2026-11-20T18:13:25Z",
    "gone_at": null
   },
   {
@@ -598,7 +598,7 @@
     "venue": "Igreja da Misericódia"
    },
    "changes": [],
-   "last_seen": "2026-11-20T07:14:38Z",
+   "last_seen": "2026-11-20T18:13:25Z",
    "gone_at": null
   },
   {
@@ -616,7 +616,7 @@
     "venue": "Sede do Ginásio Clube de Tavira"
    },
    "changes": [],
-   "last_seen": "2026-11-20T07:14:38Z",
+   "last_seen": "2026-11-20T18:13:25Z",
    "gone_at": null
   },
   {
@@ -634,7 +634,7 @@
     "venue": "Ermida de São Sebastião"
    },
    "changes": [],
-   "last_seen": "2026-11-20T07:14:38Z",
+   "last_seen": "2026-11-20T18:13:25Z",
    "gone_at": null
   },
   {
@@ -652,7 +652,7 @@
     "venue": "Pavilhão Municipal Dr. Eduardo Mansinho"
    },
    "changes": [],
-   "last_seen": "2026-11-20T07:14:38Z",
+   "last_seen": "2026-11-20T18:13:25Z",
    "gone_at": null
   },
   {
@@ -670,7 +670,7 @@
     "venue": "Jardim Público de Santa Luzia"
    },
    "changes": [],
-   "last_seen": "2026-11-20T07:14:38Z",
+   "last_seen": "2026-11-20T18:13:25Z",
    "gone_at": null
   },
   {
@@ -688,7 +688,7 @@
     "venue": "Santa Catarina da Fonte do Bispo (centro da aldeia)"
    },
    "changes": [],
-   "last_seen": "2026-11-20T07:14:38Z",
+   "last_seen": "2026-11-20T18:13:25Z",
    "gone_at": null
   },
   {
@@ -706,7 +706,7 @@
     "venue": "Sede Moto Manos, Luz de Tavira"
    },
    "changes": [],
-   "last_seen": "2026-11-20T07:14:38Z",
+   "last_seen": "2026-11-20T18:13:25Z",
    "gone_at": null
   },
   {
@@ -724,7 +724,7 @@
     "venue": "Junta de Freguesia de Santo Estêvão"
    },
    "changes": [],
-   "last_seen": "2026-11-20T07:14:38Z",
+   "last_seen": "2026-11-20T18:13:25Z",
    "gone_at": null
   },
   {
@@ -742,7 +742,7 @@
     "venue": "Casa do Povo de Santa Catarina da Fonte do Bispo"
    },
    "changes": [],
-   "last_seen": "2026-11-20T07:14:38Z",
+   "last_seen": "2026-11-20T18:13:25Z",
    "gone_at": null
   }
  ],

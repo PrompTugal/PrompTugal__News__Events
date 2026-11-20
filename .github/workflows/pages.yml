@@ -56,6 +56,7 @@ jobs:
           BEFORE: ${{ github.event.before }}
         run: |
           node scripts/test-predictions.mjs
+          node scripts/test-past.mjs
           case "$BEFORE" in ''|0000000000000000000000000000000000000000) node scripts/check-predictions.mjs ;; *) node scripts/check-predictions.mjs "$BEFORE" ;; esac
       - name: Copy the events data from data.promptugal.news (a failed read keeps the copy in git)
         run: node scripts/sync-data.mjs

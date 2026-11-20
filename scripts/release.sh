@@ -16,6 +16,7 @@ node scripts/test-check-signatures.mjs
 node scripts/test-leak-scan.mjs
 # The predictions file for the library: the library's checks, and append only since dev (a correction is a new line).
 node scripts/test-predictions.mjs
+node scripts/test-past.mjs
 node scripts/check-predictions.mjs origin/dev
 node scripts/test-workflow.mjs
 # The security checks run from the anchor's copy: the newest commit GitHub's own record shows was deployed to

@@ -1,5 +1,5 @@
 {
- "data_read_at": "2026-11-20T07:13:56Z",
+ "data_read_at": "2026-11-20T18:12:44Z",
  "expected_cadence": {
   "name": "twice a day",
   "seconds": 43200,
@@ -33,9 +33,9 @@
    "field": "claims"
   }
  },
- "commit": "10a52f0bdea7cdb9330c619826edd0fb0042e2f6",
+ "commit": "65c66677f4957a21ffbcf6d58b3f8794f505d39f",
  "counts": {
-  "events": 10,
+  "events": 12,
   "changed": 0,
   "gone": 0,
   "claims": 7,
@@ -58,7 +58,7 @@
     "venue": "Teatro das Figuras"
    },
    "changes": [],
-   "last_seen": "2026-11-20T07:14:32Z",
+   "last_seen": "2026-11-20T18:13:20Z",
    "gone_at": null
   },
   {
@@ -76,7 +76,7 @@
     "venue": "Teatro das Figuras"
    },
    "changes": [],
-   "last_seen": "2026-11-20T07:14:32Z",
+   "last_seen": "2026-11-20T18:13:20Z",
    "gone_at": null
   },
   {
@@ -94,7 +94,7 @@
     "venue": "Teatro das Figuras"
    },
    "changes": [],
-   "last_seen": "2026-11-20T07:14:32Z",
+   "last_seen": "2026-11-20T18:13:20Z",
    "gone_at": null
   },
   {
@@ -112,7 +112,7 @@
     "venue": "Teatro das Figuras"
    },
    "changes": [],
-   "last_seen": "2026-11-20T07:14:32Z",
+   "last_seen": "2026-11-20T18:13:20Z",
    "gone_at": null
   },
   {
@@ -130,7 +130,7 @@
     "venue": "Teatro das Figuras"
    },
    "changes": [],
-   "last_seen": "2026-11-20T07:14:32Z",
+   "last_seen": "2026-11-20T18:13:20Z",
    "gone_at": null
   },
   {
@@ -148,7 +148,7 @@
     "venue": "Teatro das Figuras"
    },
    "changes": [],
-   "last_seen": "2026-11-20T07:14:32Z",
+   "last_seen": "2026-11-20T18:13:20Z",
    "gone_at": null
   },
   {
@@ -166,7 +166,7 @@
     "venue": "Teatro das Figuras"
    },
    "changes": [],
-   "last_seen": "2026-11-20T07:14:32Z",
+   "last_seen": "2026-11-20T18:13:20Z",
    "gone_at": null
   },
   {
@@ -184,7 +184,7 @@
     "venue": "Teatro das Figuras"
    },
    "changes": [],
-   "last_seen": "2026-11-20T07:14:32Z",
+   "last_seen": "2026-11-20T18:13:20Z",
    "gone_at": null
   },
   {
@@ -202,7 +202,7 @@
     "venue": "Teatro das Figuras"
    },
    "changes": [],
-   "last_seen": "2026-11-20T07:14:32Z",
+   "last_seen": "2026-11-20T18:13:20Z",
    "gone_at": null
   },
   {
@@ -220,7 +220,43 @@
     "venue": "Teatro das Figuras"
    },
    "changes": [],
-   "last_seen": "2026-11-20T07:14:32Z",
+   "last_seen": "2026-11-20T18:13:20Z",
+   "gone_at": null
+  },
+  {
+   "url": "https://teatrodasfiguras.pt/agenda/rua-florida",
+   "source": "https://teatrodasfiguras.pt/agenda (Teatro das Figuras, Faro, agenda page)",
+   "licence": {
+    "name": "the source's terms",
+    "url": "https://teatrodasfiguras.pt/"
+   },
+   "first": {
+    "at": "2026-11-20T18:13:20Z",
+    "name": "Rua Flórida",
+    "startDate": "2027-01-15",
+    "endDate": "2027-01-16",
+    "venue": "Teatro das Figuras"
+   },
+   "changes": [],
+   "last_seen": "2026-11-20T18:13:20Z",
+   "gone_at": null
+  },
+  {
+   "url": "https://teatrodasfiguras.pt/agenda/festival-de-piano-janeiro",
+   "source": "https://teatrodasfiguras.pt/agenda (Teatro das Figuras, Faro, agenda page)",
+   "licence": {
+    "name": "the source's terms",
+    "url": "https://teatrodasfiguras.pt/"
+   },
+   "first": {
+    "at": "2026-11-20T18:13:20Z",
+    "name": "XI Festival Internacional de Piano do Algarve",
+    "startDate": "2027-01-17",
+    "endDate": null,
+    "venue": "Teatro das Figuras"
+   },
+   "changes": [],
+   "last_seen": "2026-11-20T18:13:20Z",
    "gone_at": null
   }
  ],

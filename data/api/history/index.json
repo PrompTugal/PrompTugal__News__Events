@@ -1,5 +1,5 @@
 {
- "data_read_at": "2026-11-20T07:13:56Z",
+ "data_read_at": "2026-11-20T18:12:44Z",
  "expected_cadence": {
   "name": "twice a day",
   "seconds": 43200,
@@ -75,7 +75,7 @@
   },
   {
    "place": "faro",
-   "events": 10,
+   "events": 12,
    "changed": 0,
    "gone": 0,
    "claims": 7,
@@ -95,7 +95,7 @@
   },
   {
    "place": "lagos",
-   "events": 92,
+   "events": 94,
    "changed": 0,
    "gone": 0,
    "claims": 5,
