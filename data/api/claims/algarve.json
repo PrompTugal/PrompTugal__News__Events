@@ -1,5 +1,5 @@
 {
- "data_read_at": "2026-11-20T18:16:43Z",
+ "data_read_at": "2026-11-21T07:13:28Z",
  "expected_cadence": {
   "name": "twice a day",
   "seconds": 43200,
@@ -21,12 +21,12 @@
   "commercial_note": "With credit to PrompTugal.news; values taken from a source keep that source's licence."
  },
  "place": "algarve",
- "read_at": "2026-11-20T18:16:43Z",
+ "read_at": "2026-11-21T07:13:28Z",
  "about": "Every Algarve place's claims in one file (the places in index.json other than lisboa).",
  "counts": {
-  "claims": 96,
+  "claims": 91,
   "confirmed": 0,
-  "withheld": 94
+  "withheld": 89
  },
  "claims": [
   {
@@ -34,33 +34,6 @@
    "name": "Photography Exhibition “Times that Pass … Memories that Remain\" by Vítor de Sousa",
    "startDate": "2026-11-18",
    "endDate": "2027-01-30",
-   "place": "albufeira",
-   "municipality": "Albufeira",
-   "evidence": [
-    {
-     "url": "https://www.algarveatlas.com/en/municipalities/albufeira",
-     "host": "algarveatlas.com",
-     "readable": false,
-     "register": "algarveatlas"
-    }
-   ],
-   "status": "details withheld",
-   "details_from": null,
-   "details_note": "Details withheld: the sources cited (algarveatlas.com) are not ones whose terms let us copy them. Organiser: send them to us.",
-   "license": {
-    "name": "CC BY 4.0",
-    "url": "https://creativecommons.org/licenses/by/4.0/",
-    "holder": "PrompTugal.news",
-    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms.",
-    "commercial_use": "allowed",
-    "commercial_note": "With credit to PrompTugal.news; values taken from a source keep that source's licence."
-   }
-  },
-  {
-   "@type": "Event",
-   "name": "APS L Longevity Summit 2026",
-   "startDate": "2026-11-18",
-   "endDate": "2026-11-20",
    "place": "albufeira",
    "municipality": "Albufeira",
    "evidence": [
@@ -548,39 +521,6 @@
    "status": "details withheld",
    "details_from": null,
    "details_note": "Details withheld: the sources cited (algarvecircle.com) are not ones whose terms let us copy them. Organiser: send them to us.",
-   "license": {
-    "name": "CC BY 4.0",
-    "url": "https://creativecommons.org/licenses/by/4.0/",
-    "holder": "PrompTugal.news",
-    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms.",
-    "commercial_use": "allowed",
-    "commercial_note": "With credit to PrompTugal.news; values taken from a source keep that source's licence."
-   }
-  },
-  {
-   "@type": "Event",
-   "name": "Algarve Real Estate Summit 2026",
-   "startDate": "2026-11-20",
-   "endDate": "2026-11-20",
-   "place": "lagoa",
-   "municipality": "Lagoa",
-   "evidence": [
-    {
-     "url": "https://www.theportugalnews.com/news/2026-11-02/the-algarve-deserves-its-own-stage-the-vision-behind-the-algarve-real-estate-summit-2026/1109007",
-     "host": "theportugalnews.com",
-     "readable": false,
-     "register": "theportugalnews"
-    },
-    {
-     "url": "https://www.theportugalnews.com/news/2026-10-09/algarve-real-estate-summit-2026-where-the-algarve-meets-the-world/1097777",
-     "host": "theportugalnews.com",
-     "readable": false,
-     "register": "theportugalnews"
-    }
-   ],
-   "status": "details withheld",
-   "details_from": null,
-   "details_note": "Details withheld: the sources cited (theportugalnews.com) are not ones whose terms let us copy them. Organiser: send them to us.",
    "license": {
     "name": "CC BY 4.0",
     "url": "https://creativecommons.org/licenses/by/4.0/",
@@ -1124,33 +1064,6 @@
    "status": "details withheld",
    "details_from": null,
    "details_note": "Details withheld: the sources cited (activealgarve.pt) are not ones whose terms let us copy them. Organiser: send them to us.",
-   "license": {
-    "name": "CC BY 4.0",
-    "url": "https://creativecommons.org/licenses/by/4.0/",
-    "holder": "PrompTugal.news",
-    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms.",
-    "commercial_use": "allowed",
-    "commercial_note": "With credit to PrompTugal.news; values taken from a source keep that source's licence."
-   }
-  },
-  {
-   "@type": "Event",
-   "name": "Hridaya Silent Meditation Retreat November 2026",
-   "startDate": "2026-11-18",
-   "endDate": "2026-11-20",
-   "place": "monchique",
-   "municipality": "Monchique",
-   "evidence": [
-    {
-     "url": "https://ecstatic.events/popular/portugal/november-2026",
-     "host": "ecstatic.events",
-     "readable": false,
-     "register": null
-    }
-   ],
-   "status": "details withheld",
-   "details_from": null,
-   "details_note": "Details withheld: the sources cited (ecstatic.events) are not ones whose terms let us copy them. Organiser: send them to us.",
    "license": {
     "name": "CC BY 4.0",
     "url": "https://creativecommons.org/licenses/by/4.0/",
@@ -1867,39 +1780,6 @@
   },
   {
    "@type": "Event",
-   "name": "Concert Os Amadores",
-   "startDate": "2026-11-20",
-   "endDate": null,
-   "place": "sao-bras-de-alportel",
-   "municipality": "São Brás de Alportel",
-   "evidence": [
-    {
-     "url": "https://www.algarveatlas.com/en/municipalities/sao-bras-de-alportel",
-     "host": "algarveatlas.com",
-     "readable": false,
-     "register": "algarveatlas"
-    },
-    {
-     "url": "https://algarvecircle.com/events",
-     "host": "algarvecircle.com",
-     "readable": false,
-     "register": "algarvecircle"
-    }
-   ],
-   "status": "details withheld",
-   "details_from": null,
-   "details_note": "Details withheld: the sources cited (algarveatlas.com, algarvecircle.com) are not ones whose terms let us copy them. Organiser: send them to us.",
-   "license": {
-    "name": "CC BY 4.0",
-    "url": "https://creativecommons.org/licenses/by/4.0/",
-    "holder": "PrompTugal.news",
-    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms.",
-    "commercial_use": "allowed",
-    "commercial_note": "With credit to PrompTugal.news; values taken from a source keep that source's licence."
-   }
-  },
-  {
-   "@type": "Event",
    "name": "Youth Awards 2026",
    "startDate": "2026-11-28",
    "endDate": null,
@@ -2534,39 +2414,6 @@
    "status": "details withheld",
    "details_from": null,
    "details_note": "Details withheld: the sources cited (algarveatlas.com) are not ones whose terms let us copy them. Organiser: send them to us.",
-   "license": {
-    "name": "CC BY 4.0",
-    "url": "https://creativecommons.org/licenses/by/4.0/",
-    "holder": "PrompTugal.news",
-    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms.",
-    "commercial_use": "allowed",
-    "commercial_note": "With credit to PrompTugal.news; values taken from a source keep that source's licence."
-   }
-  },
-  {
-   "@type": "Event",
-   "name": "The Eternal Boy",
-   "startDate": "2026-11-20",
-   "endDate": null,
-   "place": "vila-do-bispo",
-   "municipality": "Vila do Bispo",
-   "evidence": [
-    {
-     "url": "https://www.algarveatlas.com/en/events/exposicao-itinerante-principios-da-carta-das-cidades-educado-7722",
-     "host": "algarveatlas.com",
-     "readable": false,
-     "register": "algarveatlas"
-    },
-    {
-     "url": "https://algarvecircle.com/whats-on/november-2026",
-     "host": "algarvecircle.com",
-     "readable": false,
-     "register": "algarvecircle"
-    }
-   ],
-   "status": "details withheld",
-   "details_from": null,
-   "details_note": "Details withheld: the sources cited (algarveatlas.com, algarvecircle.com) are not ones whose terms let us copy them. Organiser: send them to us.",
    "license": {
     "name": "CC BY 4.0",
     "url": "https://creativecommons.org/licenses/by/4.0/",

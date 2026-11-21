@@ -1,5 +1,5 @@
 {
- "data_read_at": "2026-11-20T18:12:44Z",
+ "data_read_at": "2026-11-21T07:09:28Z",
  "expected_cadence": {
   "name": "twice a day",
   "seconds": 43200,
@@ -33,7 +33,7 @@
    "field": "claims"
   }
  },
- "commit": "65c66677f4957a21ffbcf6d58b3f8794f505d39f",
+ "commit": "bd410a73762d6b0a755da0a946556d6e47d54c8e",
  "counts": {
   "events": 0,
   "changed": 0,
@@ -107,11 +107,11 @@
      "readable": false
     }
    ],
-   "asked_at": "2026-11-18T14:18:49Z",
-   "model": "perplexity/sonar",
-   "via": "OpenRouter",
-   "answer_file": "discovery/by-place/sao-bras-de-alportel/2026-11-18.json",
-   "kept_in": "discovery/claims/by-place/sao-bras-de-alportel.json"
+   "asked_at": null,
+   "model": null,
+   "via": null,
+   "answer_file": null,
+   "kept_in": "discovery/claims/past/sao-bras-de-alportel.json"
   },
   {
    "name": "Seminar Series on Rural Spaces",

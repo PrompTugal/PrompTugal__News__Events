@@ -1,5 +1,5 @@
 {
- "data_read_at": "2026-11-20T18:16:43Z",
+ "data_read_at": "2026-11-21T07:13:28Z",
  "expected_cadence": {
   "name": "twice a day",
   "seconds": 43200,
@@ -21,7 +21,7 @@
   "commercial_note": "With credit to PrompTugal.news; values taken from a source keep that source's licence."
  },
  "place": "quarteira",
- "read_at": "2026-11-20T18:16:43Z",
+ "read_at": "2026-11-21T07:13:28Z",
  "discovery": {
   "asked_at": "2026-11-18T14:17:20Z",
   "model": "perplexity/sonar",

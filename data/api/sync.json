@@ -1,1163 +1,1163 @@
 {
  "about": "When this site last read each file from data.promptugal.news, and what failed. Written by scripts/sync-data.mjs.",
- "started": "2026-11-20T19:33:59.326Z",
+ "started": "2026-11-21T08:33:59.181Z",
  "read": [
   {
    "path": "events/by-place/index.json",
    "file": "data/api/index.json",
-   "at": "2026-11-20T19:33:59.691Z"
+   "at": "2026-11-21T08:33:59.729Z"
   },
   {
    "path": "events/claims/by-place/index.json",
    "file": "data/api/claims-index.json",
-   "at": "2026-11-20T19:34:00.086Z"
+   "at": "2026-11-21T08:34:00.094Z"
   },
   {
    "path": "events/by-place/albufeira.json",
    "file": "data/api/by-place/albufeira.json",
-   "at": "2026-11-20T19:34:00.462Z"
+   "at": "2026-11-21T08:34:00.462Z"
   },
   {
    "path": "events/by-place/alcoutim.json",
    "file": "data/api/by-place/alcoutim.json",
-   "at": "2026-11-20T19:34:00.829Z"
+   "at": "2026-11-21T08:34:00.826Z"
   },
   {
    "path": "events/by-place/algarve.json",
    "file": "data/api/by-place/algarve.json",
-   "at": "2026-11-20T19:34:01.201Z"
+   "at": "2026-11-21T08:34:01.264Z"
   },
   {
    "path": "events/by-place/aljezur.json",
    "file": "data/api/by-place/aljezur.json",
-   "at": "2026-11-20T19:34:01.570Z"
+   "at": "2026-11-21T08:34:01.625Z"
   },
   {
    "path": "events/by-place/castro-marim.json",
    "file": "data/api/by-place/castro-marim.json",
-   "at": "2026-11-20T19:34:01.937Z"
+   "at": "2026-11-21T08:34:02.183Z"
   },
   {
    "path": "events/by-place/faro.json",
    "file": "data/api/by-place/faro.json",
-   "at": "2026-11-20T19:34:02.295Z"
+   "at": "2026-11-21T08:34:02.631Z"
   },
   {
    "path": "events/by-place/lagoa.json",
    "file": "data/api/by-place/lagoa.json",
-   "at": "2026-11-20T19:34:02.653Z"
+   "at": "2026-11-21T08:34:03.076Z"
   },
   {
    "path": "events/by-place/lagos.json",
    "file": "data/api/by-place/lagos.json",
-   "at": "2026-11-20T19:34:03.021Z"
+   "at": "2026-11-21T08:34:03.434Z"
   },
   {
    "path": "events/by-place/lisboa.json",
    "file": "data/api/by-place/lisboa.json",
-   "at": "2026-11-20T19:34:03.391Z"
+   "at": "2026-11-21T08:34:03.833Z"
   },
   {
    "path": "events/by-place/loule.json",
    "file": "data/api/by-place/loule.json",
-   "at": "2026-11-20T19:34:03.765Z"
+   "at": "2026-11-21T08:34:04.191Z"
   },
   {
    "path": "events/by-place/monchique.json",
    "file": "data/api/by-place/monchique.json",
-   "at": "2026-11-20T19:34:04.337Z"
+   "at": "2026-11-21T08:34:04.543Z"
   },
   {
    "path": "events/by-place/olhao.json",
    "file": "data/api/by-place/olhao.json",
-   "at": "2026-11-20T19:34:04.702Z"
+   "at": "2026-11-21T08:34:04.913Z"
   },
   {
    "path": "events/by-place/portimao.json",
    "file": "data/api/by-place/portimao.json",
-   "at": "2026-11-20T19:34:05.076Z"
+   "at": "2026-11-21T08:34:05.262Z"
   },
   {
    "path": "events/by-place/quarteira.json",
    "file": "data/api/by-place/quarteira.json",
-   "at": "2026-11-20T19:34:05.448Z"
+   "at": "2026-11-21T08:34:05.612Z"
   },
   {
    "path": "events/by-place/sao-bras-de-alportel.json",
    "file": "data/api/by-place/sao-bras-de-alportel.json",
-   "at": "2026-11-20T19:34:05.838Z"
+   "at": "2026-11-21T08:34:05.965Z"
   },
   {
    "path": "events/by-place/silves.json",
    "file": "data/api/by-place/silves.json",
-   "at": "2026-11-20T19:34:06.215Z"
+   "at": "2026-11-21T08:34:06.331Z"
   },
   {
    "path": "events/by-place/tavira.json",
    "file": "data/api/by-place/tavira.json",
-   "at": "2026-11-20T19:34:06.616Z"
+   "at": "2026-11-21T08:34:06.700Z"
   },
   {
    "path": "events/by-place/vila-do-bispo.json",
    "file": "data/api/by-place/vila-do-bispo.json",
-   "at": "2026-11-20T19:34:06.981Z"
+   "at": "2026-11-21T08:34:07.065Z"
   },
   {
    "path": "events/by-place/vila-real-de-santo-antonio.json",
    "file": "data/api/by-place/vila-real-de-santo-antonio.json",
-   "at": "2026-11-20T19:34:07.391Z"
+   "at": "2026-11-21T08:34:07.428Z"
   },
   {
    "path": "events/claims/by-place/albufeira.json",
    "file": "data/api/claims/albufeira.json",
-   "at": "2026-11-20T19:34:07.781Z"
+   "at": "2026-11-21T08:34:07.788Z"
   },
   {
    "path": "events/claims/by-place/alcoutim.json",
    "file": "data/api/claims/alcoutim.json",
-   "at": "2026-11-20T19:34:08.146Z"
+   "at": "2026-11-21T08:34:08.141Z"
   },
   {
    "path": "events/claims/by-place/algarve.json",
    "file": "data/api/claims/algarve.json",
-   "at": "2026-11-20T19:34:08.510Z"
+   "at": "2026-11-21T08:34:08.503Z"
   },
   {
    "path": "events/claims/by-place/aljezur.json",
    "file": "data/api/claims/aljezur.json",
-   "at": "2026-11-20T19:34:08.870Z"
+   "at": "2026-11-21T08:34:08.869Z"
   },
   {
    "path": "events/claims/by-place/castro-marim.json",
    "file": "data/api/claims/castro-marim.json",
-   "at": "2026-11-20T19:34:09.274Z"
+   "at": "2026-11-21T08:34:09.230Z"
   },
   {
    "path": "events/claims/by-place/faro.json",
    "file": "data/api/claims/faro.json",
-   "at": "2026-11-20T19:34:09.626Z"
+   "at": "2026-11-21T08:34:09.583Z"
   },
   {
    "path": "events/claims/by-place/lagoa.json",
    "file": "data/api/claims/lagoa.json",
-   "at": "2026-11-20T19:34:09.984Z"
+   "at": "2026-11-21T08:34:09.933Z"
   },
   {
    "path": "events/claims/by-place/lagos.json",
    "file": "data/api/claims/lagos.json",
-   "at": "2026-11-20T19:34:10.367Z"
+   "at": "2026-11-21T08:34:10.285Z"
   },
   {
    "path": "events/claims/by-place/lisboa.json",
    "file": "data/api/claims/lisboa.json",
-   "at": "2026-11-20T19:34:10.717Z"
+   "at": "2026-11-21T08:34:10.644Z"
   },
   {
    "path": "events/claims/by-place/loule.json",
    "file": "data/api/claims/loule.json",
-   "at": "2026-11-20T19:34:11.088Z"
+   "at": "2026-11-21T08:34:11.134Z"
   },
   {
    "path": "events/claims/by-place/monchique.json",
    "file": "data/api/claims/monchique.json",
-   "at": "2026-11-20T19:34:11.455Z"
+   "at": "2026-11-21T08:34:11.492Z"
   },
   {
    "path": "events/claims/by-place/olhao.json",
    "file": "data/api/claims/olhao.json",
-   "at": "2026-11-20T19:34:11.813Z"
+   "at": "2026-11-21T08:34:11.861Z"
   },
   {
    "path": "events/claims/by-place/portimao.json",
    "file": "data/api/claims/portimao.json",
-   "at": "2026-11-20T19:34:12.168Z"
+   "at": "2026-11-21T08:34:12.215Z"
   },
   {
    "path": "events/claims/by-place/quarteira.json",
    "file": "data/api/claims/quarteira.json",
-   "at": "2026-11-20T19:34:12.530Z"
+   "at": "2026-11-21T08:34:12.582Z"
   },
   {
    "path": "events/claims/by-place/sao-bras-de-alportel.json",
    "file": "data/api/claims/sao-bras-de-alportel.json",
-   "at": "2026-11-20T19:34:12.901Z"
+   "at": "2026-11-21T08:34:13.075Z"
   },
   {
    "path": "events/claims/by-place/silves.json",
    "file": "data/api/claims/silves.json",
-   "at": "2026-11-20T19:34:13.268Z"
+   "at": "2026-11-21T08:34:13.427Z"
   },
   {
    "path": "events/claims/by-place/tavira.json",
    "file": "data/api/claims/tavira.json",
-   "at": "2026-11-20T19:34:13.628Z"
+   "at": "2026-11-21T08:34:13.822Z"
   },
   {
    "path": "events/claims/by-place/vila-do-bispo.json",
    "file": "data/api/claims/vila-do-bispo.json",
-   "at": "2026-11-20T19:34:14.061Z"
+   "at": "2026-11-21T08:34:14.213Z"
   },
   {
    "path": "events/claims/by-place/vila-real-de-santo-antonio.json",
    "file": "data/api/claims/vila-real-de-santo-antonio.json",
-   "at": "2026-11-20T19:34:14.410Z"
+   "at": "2026-11-21T08:34:14.588Z"
   },
   {
    "path": "history/events/index.json",
    "file": "data/api/history/index.json",
-   "at": "2026-11-20T19:34:14.789Z"
+   "at": "2026-11-21T08:34:14.959Z"
   },
   {
    "path": "history/events/albufeira.json",
    "file": "data/api/history/albufeira.json",
-   "at": "2026-11-20T19:34:15.172Z"
+   "at": "2026-11-21T08:34:15.332Z"
   },
   {
    "path": "history/events/alcoutim.json",
    "file": "data/api/history/alcoutim.json",
-   "at": "2026-11-20T19:34:15.613Z"
+   "at": "2026-11-21T08:34:15.690Z"
   },
   {
    "path": "history/events/algarve.json",
    "file": "data/api/history/algarve.json",
-   "at": "2026-11-20T19:34:15.969Z"
+   "at": "2026-11-21T08:34:16.043Z"
   },
   {
    "path": "history/events/aljezur.json",
    "file": "data/api/history/aljezur.json",
-   "at": "2026-11-20T19:34:16.324Z"
+   "at": "2026-11-21T08:34:16.402Z"
   },
   {
    "path": "history/events/castro-marim.json",
    "file": "data/api/history/castro-marim.json",
-   "at": "2026-11-20T19:34:16.682Z"
+   "at": "2026-11-21T08:34:16.753Z"
   },
   {
    "path": "history/events/faro.json",
    "file": "data/api/history/faro.json",
-   "at": "2026-11-20T19:34:17.039Z"
+   "at": "2026-11-21T08:34:17.175Z"
   },
   {
    "path": "history/events/lagoa.json",
    "file": "data/api/history/lagoa.json",
-   "at": "2026-11-20T19:34:17.434Z"
+   "at": "2026-11-21T08:34:17.619Z"
   },
   {
    "path": "history/events/lagos.json",
    "file": "data/api/history/lagos.json",
-   "at": "2026-11-20T19:34:17.790Z"
+   "at": "2026-11-21T08:34:17.975Z"
   },
   {
    "path": "history/events/lisboa.json",
    "file": "data/api/history/lisboa.json",
-   "at": "2026-11-20T19:34:18.184Z"
+   "at": "2026-11-21T08:34:18.348Z"
   },
   {
    "path": "history/events/loule.json",
    "file": "data/api/history/loule.json",
-   "at": "2026-11-20T19:34:18.584Z"
+   "at": "2026-11-21T08:34:18.711Z"
   },
   {
    "path": "history/events/monchique.json",
    "file": "data/api/history/monchique.json",
-   "at": "2026-11-20T19:34:18.942Z"
+   "at": "2026-11-21T08:34:19.070Z"
   },
   {
    "path": "history/events/olhao.json",
    "file": "data/api/history/olhao.json",
-   "at": "2026-11-20T19:34:19.363Z"
+   "at": "2026-11-21T08:34:19.428Z"
   },
   {
    "path": "history/events/portimao.json",
    "file": "data/api/history/portimao.json",
-   "at": "2026-11-20T19:34:19.722Z"
+   "at": "2026-11-21T08:34:19.775Z"
   },
   {
    "path": "history/events/quarteira.json",
    "file": "data/api/history/quarteira.json",
-   "at": "2026-11-20T19:34:20.095Z"
+   "at": "2026-11-21T08:34:20.131Z"
   },
   {
    "path": "history/events/sao-bras-de-alportel.json",
    "file": "data/api/history/sao-bras-de-alportel.json",
-   "at": "2026-11-20T19:34:20.466Z"
+   "at": "2026-11-21T08:34:20.506Z"
   },
   {
    "path": "history/events/silves.json",
    "file": "data/api/history/silves.json",
-   "at": "2026-11-20T19:34:20.819Z"
+   "at": "2026-11-21T08:34:20.857Z"
   },
   {
    "path": "history/events/tavira.json",
    "file": "data/api/history/tavira.json",
-   "at": "2026-11-20T19:34:21.182Z"
+   "at": "2026-11-21T08:34:21.209Z"
   },
   {
    "path": "history/events/vila-do-bispo.json",
    "file": "data/api/history/vila-do-bispo.json",
-   "at": "2026-11-20T19:34:21.548Z"
+   "at": "2026-11-21T08:34:21.562Z"
   },
   {
    "path": "history/events/vila-real-de-santo-antonio.json",
    "file": "data/api/history/vila-real-de-santo-antonio.json",
-   "at": "2026-11-20T19:34:21.909Z"
+   "at": "2026-11-21T08:34:21.935Z"
   },
   {
    "path": "sources/index.json",
    "file": "data/api/sources/index.json",
-   "at": "2026-11-20T19:34:22.230Z"
+   "at": "2026-11-21T08:34:22.254Z"
   },
   {
    "path": "sources/abusech-threatfox.json",
    "file": "data/api/sources/abusech-threatfox.json",
-   "at": "2026-11-20T19:34:22.588Z"
+   "at": "2026-11-21T08:34:22.630Z"
   },
   {
    "path": "sources/abusech-urlhaus.json",
    "file": "data/api/sources/abusech-urlhaus.json",
-   "at": "2026-11-20T19:34:22.958Z"
+   "at": "2026-11-21T08:34:22.990Z"
   },
   {
    "path": "sources/adsb-faro.json",
    "file": "data/api/sources/adsb-faro.json",
-   "at": "2026-11-20T19:34:23.319Z"
+   "at": "2026-11-21T08:34:23.369Z"
   },
   {
    "path": "sources/adsb-lol-london-airports.json",
    "file": "data/api/sources/adsb-lol-london-airports.json",
-   "at": "2026-11-20T19:34:23.695Z"
+   "at": "2026-11-21T08:34:23.740Z"
   },
   {
    "path": "sources/aemtg-praia-da-rocha.json",
    "file": "data/api/sources/aemtg-praia-da-rocha.json",
-   "at": "2026-11-20T19:34:24.059Z"
+   "at": "2026-11-21T08:34:24.098Z"
   },
   {
    "path": "sources/agendalx.json",
    "file": "data/api/sources/agendalx.json",
-   "at": "2026-11-20T19:34:24.427Z"
+   "at": "2026-11-21T08:34:24.460Z"
   },
   {
    "path": "sources/aguasdoalgarve-disponibilidades-hidricas.json",
    "file": "data/api/sources/aguasdoalgarve-disponibilidades-hidricas.json",
-   "at": "2026-11-20T19:34:24.786Z"
+   "at": "2026-11-21T08:34:24.818Z"
   },
   {
    "path": "sources/algarve-evolution.json",
    "file": "data/api/sources/algarve-evolution.json",
-   "at": "2026-11-20T19:34:25.137Z"
+   "at": "2026-11-21T08:34:25.176Z"
   },
   {
    "path": "sources/algarveatlas.json",
    "file": "data/api/sources/algarveatlas.json",
-   "at": "2026-11-20T19:34:25.586Z"
+   "at": "2026-11-21T08:34:25.549Z"
   },
   {
    "path": "sources/algarvecircle.json",
    "file": "data/api/sources/algarvecircle.json",
-   "at": "2026-11-20T19:34:25.951Z"
+   "at": "2026-11-21T08:34:25.903Z"
   },
   {
    "path": "sources/ana.json",
    "file": "data/api/sources/ana.json",
-   "at": "2026-11-20T19:34:26.316Z"
+   "at": "2026-11-21T08:34:26.257Z"
   },
   {
    "path": "sources/ana-airports-portugal.json",
    "file": "data/api/sources/ana-airports-portugal.json",
-   "at": "2026-11-20T19:34:26.667Z"
+   "at": "2026-11-21T08:34:26.632Z"
   },
   {
    "path": "sources/ansr.json",
    "file": "data/api/sources/ansr.json",
-   "at": "2026-11-20T19:34:27.029Z"
+   "at": "2026-11-21T08:34:27.064Z"
   },
   {
    "path": "sources/apa-monitorizacao-agrometeorologica-hidrologica.json",
    "file": "data/api/sources/apa-monitorizacao-agrometeorologica-hidrologica.json",
-   "at": "2026-11-20T19:34:27.410Z"
+   "at": "2026-11-21T08:34:27.438Z"
   },
   {
    "path": "sources/apl-tejo-live.json",
    "file": "data/api/sources/apl-tejo-live.json",
-   "at": "2026-11-20T19:34:27.759Z"
+   "at": "2026-11-21T08:34:27.788Z"
   },
   {
    "path": "sources/aps-algarve.json",
    "file": "data/api/sources/aps-algarve.json",
-   "at": "2026-11-20T19:34:28.110Z"
+   "at": "2026-11-21T08:34:28.147Z"
   },
   {
    "path": "sources/autodromo-algarve.json",
    "file": "data/api/sources/autodromo-algarve.json",
-   "at": "2026-11-20T19:34:28.468Z"
+   "at": "2026-11-21T08:34:28.505Z"
   },
   {
    "path": "sources/barbican.json",
    "file": "data/api/sources/barbican.json",
-   "at": "2026-11-20T19:34:28.822Z"
+   "at": "2026-11-21T08:34:28.872Z"
   },
   {
    "path": "sources/base-gov-pt.json",
    "file": "data/api/sources/base-gov-pt.json",
-   "at": "2026-11-20T19:34:29.175Z"
+   "at": "2026-11-21T08:34:29.225Z"
   },
   {
    "path": "sources/base-gov-pt-portal.json",
    "file": "data/api/sources/base-gov-pt-portal.json",
-   "at": "2026-11-20T19:34:29.522Z"
+   "at": "2026-11-21T08:34:29.677Z"
   },
   {
    "path": "sources/bbc-london.json",
    "file": "data/api/sources/bbc-london.json",
-   "at": "2026-11-20T19:34:29.894Z"
+   "at": "2026-11-21T08:34:30.044Z"
   },
   {
    "path": "sources/blog-aventar.json",
    "file": "data/api/sources/blog-aventar.json",
-   "at": "2026-11-20T19:34:30.261Z"
+   "at": "2026-11-21T08:34:30.417Z"
   },
   {
    "path": "sources/blog-beyond-the-mainframe.json",
    "file": "data/api/sources/blog-beyond-the-mainframe.json",
-   "at": "2026-11-20T19:34:30.611Z"
+   "at": "2026-11-21T08:34:30.773Z"
   },
   {
    "path": "sources/blog-blasfemias.json",
    "file": "data/api/sources/blog-blasfemias.json",
-   "at": "2026-11-20T19:34:30.971Z"
+   "at": "2026-11-21T08:34:31.124Z"
   },
   {
    "path": "sources/blog-causa-nossa.json",
    "file": "data/api/sources/blog-causa-nossa.json",
-   "at": "2026-11-20T19:34:31.324Z"
+   "at": "2026-11-21T08:34:31.474Z"
   },
   {
    "path": "sources/blog-delito-de-opiniao.json",
    "file": "data/api/sources/blog-delito-de-opiniao.json",
-   "at": "2026-11-20T19:34:31.689Z"
+   "at": "2026-11-21T08:34:31.826Z"
   },
   {
    "path": "sources/blog-henrique-cruz.json",
    "file": "data/api/sources/blog-henrique-cruz.json",
-   "at": "2026-11-20T19:34:32.051Z"
+   "at": "2026-11-21T08:34:32.175Z"
   },
   {
    "path": "sources/blog-ladroes-de-bicicletas.json",
    "file": "data/api/sources/blog-ladroes-de-bicicletas.json",
-   "at": "2026-11-20T19:34:32.452Z"
+   "at": "2026-11-21T08:34:32.524Z"
   },
   {
    "path": "sources/blog-matosinhos-tech.json",
    "file": "data/api/sources/blog-matosinhos-tech.json",
-   "at": "2026-11-20T19:34:32.804Z"
+   "at": "2026-11-21T08:34:32.872Z"
   },
   {
    "path": "sources/blog-mt-newsletter.json",
    "file": "data/api/sources/blog-mt-newsletter.json",
-   "at": "2026-11-20T19:34:33.168Z"
+   "at": "2026-11-21T08:34:33.221Z"
   },
   {
    "path": "sources/blog-o-insurgente.json",
    "file": "data/api/sources/blog-o-insurgente.json",
-   "at": "2026-11-20T19:34:33.519Z"
+   "at": "2026-11-21T08:34:33.583Z"
   },
   {
    "path": "sources/blog-portugal-contemporaneo.json",
    "file": "data/api/sources/blog-portugal-contemporaneo.json",
-   "at": "2026-11-20T19:34:33.869Z"
+   "at": "2026-11-21T08:34:33.937Z"
   },
   {
    "path": "sources/blog-portugalist.json",
    "file": "data/api/sources/blog-portugalist.json",
-   "at": "2026-11-20T19:34:34.218Z"
+   "at": "2026-11-21T08:34:34.328Z"
   },
   {
    "path": "sources/blog-pplware.json",
    "file": "data/api/sources/blog-pplware.json",
-   "at": "2026-11-20T19:34:34.585Z"
+   "at": "2026-11-21T08:34:34.738Z"
   },
   {
    "path": "sources/blog-shifter.json",
    "file": "data/api/sources/blog-shifter.json",
-   "at": "2026-11-20T19:34:34.968Z"
+   "at": "2026-11-21T08:34:35.118Z"
   },
   {
    "path": "sources/blog-start-lisbon.json",
    "file": "data/api/sources/blog-start-lisbon.json",
-   "at": "2026-11-20T19:34:35.350Z"
+   "at": "2026-11-21T08:34:35.491Z"
   },
   {
    "path": "sources/blog-sul-informacao.json",
    "file": "data/api/sources/blog-sul-informacao.json",
-   "at": "2026-11-20T19:34:35.724Z"
+   "at": "2026-11-21T08:34:35.871Z"
   },
   {
    "path": "sources/blog-tugatech.json",
    "file": "data/api/sources/blog-tugatech.json",
-   "at": "2026-11-20T19:34:36.109Z"
+   "at": "2026-11-21T08:34:36.228Z"
   },
   {
    "path": "sources/blog-unbabel.json",
    "file": "data/api/sources/blog-unbabel.json",
-   "at": "2026-11-20T19:34:36.479Z"
+   "at": "2026-11-21T08:34:36.608Z"
   },
   {
    "path": "sources/bluesky.json",
    "file": "data/api/sources/bluesky.json",
-   "at": "2026-11-20T19:34:36.839Z"
+   "at": "2026-11-21T08:34:36.988Z"
   },
   {
    "path": "sources/camden-council.json",
    "file": "data/api/sources/camden-council.json",
-   "at": "2026-11-20T19:34:37.185Z"
+   "at": "2026-11-21T08:34:37.348Z"
   },
   {
    "path": "sources/cams.json",
    "file": "data/api/sources/cams.json",
-   "at": "2026-11-20T19:34:37.541Z"
+   "at": "2026-11-21T08:34:37.781Z"
   },
   {
    "path": "sources/ccdr-algarve.json",
    "file": "data/api/sources/ccdr-algarve.json",
-   "at": "2026-11-20T19:34:37.933Z"
+   "at": "2026-11-21T08:34:38.132Z"
   },
   {
    "path": "sources/cisa-kev.json",
    "file": "data/api/sources/cisa-kev.json",
-   "at": "2026-11-20T19:34:38.293Z"
+   "at": "2026-11-21T08:34:38.520Z"
   },
   {
    "path": "sources/city-of-london-corporation.json",
    "file": "data/api/sources/city-of-london-corporation.json",
-   "at": "2026-11-20T19:34:38.645Z"
+   "at": "2026-11-21T08:34:38.880Z"
   },
   {
    "path": "sources/cloudflare-radar.json",
    "file": "data/api/sources/cloudflare-radar.json",
-   "at": "2026-11-20T19:34:39.001Z"
+   "at": "2026-11-21T08:34:39.329Z"
   },
   {
    "path": "sources/cm-albufeira.json",
    "file": "data/api/sources/cm-albufeira.json",
-   "at": "2026-11-20T19:34:39.363Z"
+   "at": "2026-11-21T08:34:39.684Z"
   },
   {
    "path": "sources/cm-castromarim.json",
    "file": "data/api/sources/cm-castromarim.json",
-   "at": "2026-11-20T19:34:39.726Z"
+   "at": "2026-11-21T08:34:40.110Z"
   },
   {
    "path": "sources/cm-faro.json",
    "file": "data/api/sources/cm-faro.json",
-   "at": "2026-11-20T19:34:40.082Z"
+   "at": "2026-11-21T08:34:40.474Z"
   },
   {
    "path": "sources/cm-lisboa-open-data.json",
    "file": "data/api/sources/cm-lisboa-open-data.json",
-   "at": "2026-11-20T19:34:40.450Z"
+   "at": "2026-11-21T08:34:40.835Z"
   },
   {
    "path": "sources/cm-loule.json",
    "file": "data/api/sources/cm-loule.json",
-   "at": "2026-11-20T19:34:40.806Z"
+   "at": "2026-11-21T08:34:41.187Z"
   },
   {
    "path": "sources/cm-portimao.json",
    "file": "data/api/sources/cm-portimao.json",
-   "at": "2026-11-20T19:34:41.252Z"
+   "at": "2026-11-21T08:34:41.544Z"
   },
   {
    "path": "sources/cm-silves.json",
    "file": "data/api/sources/cm-silves.json",
-   "at": "2026-11-20T19:34:41.605Z"
+   "at": "2026-11-21T08:34:41.899Z"
   },
   {
    "path": "sources/cm-tavira.json",
    "file": "data/api/sources/cm-tavira.json",
-   "at": "2026-11-20T19:34:42.004Z"
+   "at": "2026-11-21T08:34:42.255Z"
   },
   {
    "path": "sources/cncs-certpt.json",
    "file": "data/api/sources/cncs-certpt.json",
-   "at": "2026-11-20T19:34:42.378Z"
+   "at": "2026-11-21T08:34:42.605Z"
   },
   {
    "path": "sources/cnpd-decisions.json",
    "file": "data/api/sources/cnpd-decisions.json",
-   "at": "2026-11-20T19:34:42.751Z"
+   "at": "2026-11-21T08:34:42.956Z"
   },
   {
    "path": "sources/companies-house.json",
    "file": "data/api/sources/companies-house.json",
-   "at": "2026-11-20T19:34:43.130Z"
+   "at": "2026-11-21T08:34:43.317Z"
   },
   {
    "path": "sources/contracts-finder.json",
    "file": "data/api/sources/contracts-finder.json",
-   "at": "2026-11-20T19:34:43.497Z"
+   "at": "2026-11-21T08:34:43.682Z"
   },
   {
    "path": "sources/copernicus-cams.json",
    "file": "data/api/sources/copernicus-cams.json",
-   "at": "2026-11-20T19:34:43.891Z"
+   "at": "2026-11-21T08:34:44.074Z"
   },
   {
    "path": "sources/copernicus-cds.json",
    "file": "data/api/sources/copernicus-cds.json",
-   "at": "2026-11-20T19:34:44.257Z"
+   "at": "2026-11-21T08:34:44.425Z"
   },
   {
    "path": "sources/copernicus-edo.json",
    "file": "data/api/sources/copernicus-edo.json",
-   "at": "2026-11-20T19:34:44.629Z"
+   "at": "2026-11-21T08:34:44.772Z"
   },
   {
    "path": "sources/copernicus-edo-drought.json",
    "file": "data/api/sources/copernicus-edo-drought.json",
-   "at": "2026-11-20T19:34:45.018Z"
+   "at": "2026-11-21T08:34:45.181Z"
   },
   {
    "path": "sources/copernicus-efas.json",
    "file": "data/api/sources/copernicus-efas.json",
-   "at": "2026-11-20T19:34:45.439Z"
+   "at": "2026-11-21T08:34:45.529Z"
   },
   {
    "path": "sources/copernicus-land.json",
    "file": "data/api/sources/copernicus-land.json",
-   "at": "2026-11-20T19:34:45.956Z"
+   "at": "2026-11-21T08:34:45.883Z"
   },
   {
    "path": "sources/copernicus-marine.json",
    "file": "data/api/sources/copernicus-marine.json",
-   "at": "2026-11-20T19:34:46.324Z"
+   "at": "2026-11-21T08:34:46.243Z"
   },
   {
    "path": "sources/cordis.json",
    "file": "data/api/sources/cordis.json",
-   "at": "2026-11-20T19:34:46.695Z"
+   "at": "2026-11-21T08:34:46.594Z"
   },
   {
    "path": "sources/cp.json",
    "file": "data/api/sources/cp.json",
-   "at": "2026-11-20T19:34:47.047Z"
+   "at": "2026-11-21T08:34:46.941Z"
   },
   {
    "path": "sources/cve-org.json",
    "file": "data/api/sources/cve-org.json",
-   "at": "2026-11-20T19:34:47.401Z"
+   "at": "2026-11-21T08:34:47.330Z"
   },
   {
    "path": "sources/dadosgov-albufeiras-aguas-publicas-pc.json",
    "file": "data/api/sources/dadosgov-albufeiras-aguas-publicas-pc.json",
-   "at": "2026-11-20T19:34:47.781Z"
+   "at": "2026-11-21T08:34:47.754Z"
   },
   {
    "path": "sources/dadosgov-atlas-agua-albufeiras-barragem.json",
    "file": "data/api/sources/dadosgov-atlas-agua-albufeiras-barragem.json",
-   "at": "2026-11-20T19:34:48.176Z"
+   "at": "2026-11-21T08:34:48.107Z"
   },
   {
    "path": "sources/dadosgov-paap-nivel-pleno-armazenamento.json",
    "file": "data/api/sources/dadosgov-paap-nivel-pleno-armazenamento.json",
-   "at": "2026-11-20T19:34:48.546Z"
+   "at": "2026-11-21T08:34:48.464Z"
   },
   {
    "path": "sources/data-police-uk.json",
    "file": "data/api/sources/data-police-uk.json",
-   "at": "2026-11-20T19:34:48.900Z"
+   "at": "2026-11-21T08:34:48.827Z"
   },
   {
    "path": "sources/defra-uk-air.json",
    "file": "data/api/sources/defra-uk-air.json",
-   "at": "2026-11-20T19:34:49.273Z"
+   "at": "2026-11-21T08:34:49.182Z"
   },
   {
    "path": "sources/dgadr-albufeiras-hidroagricolas.json",
    "file": "data/api/sources/dgadr-albufeiras-hidroagricolas.json",
-   "at": "2026-11-20T19:34:49.625Z"
+   "at": "2026-11-21T08:34:49.534Z"
   },
   {
    "path": "sources/ea-flood.json",
    "file": "data/api/sources/ea-flood.json",
-   "at": "2026-11-20T19:34:50.037Z"
+   "at": "2026-11-21T08:34:49.891Z"
   },
   {
    "path": "sources/ea-water-situation-reports-thames.json",
    "file": "data/api/sources/ea-water-situation-reports-thames.json",
-   "at": "2026-11-20T19:34:50.388Z"
+   "at": "2026-11-21T08:34:50.250Z"
   },
   {
    "path": "sources/ecmwf-open-data.json",
    "file": "data/api/sources/ecmwf-open-data.json",
-   "at": "2026-11-20T19:34:50.743Z"
+   "at": "2026-11-21T08:34:50.605Z"
   },
   {
    "path": "sources/edia-alqueva-dados.json",
    "file": "data/api/sources/edia-alqueva-dados.json",
-   "at": "2026-11-20T19:34:51.097Z"
+   "at": "2026-11-21T08:34:50.957Z"
   },
   {
    "path": "sources/eea-air-quality-download.json",
    "file": "data/api/sources/eea-air-quality-download.json",
-   "at": "2026-11-20T19:34:51.466Z"
+   "at": "2026-11-21T08:34:51.307Z"
   },
   {
    "path": "sources/enisa.json",
    "file": "data/api/sources/enisa.json",
-   "at": "2026-11-20T19:34:51.822Z"
+   "at": "2026-11-21T08:34:51.665Z"
   },
   {
    "path": "sources/enisa-pubs.json",
    "file": "data/api/sources/enisa-pubs.json",
-   "at": "2026-11-20T19:34:52.178Z"
+   "at": "2026-11-21T08:34:52.017Z"
   },
   {
    "path": "sources/eu-fts.json",
    "file": "data/api/sources/eu-fts.json",
-   "at": "2026-11-20T19:34:52.536Z"
+   "at": "2026-11-21T08:34:52.372Z"
   },
   {
    "path": "sources/eu-open-data-portal.json",
    "file": "data/api/sources/eu-open-data-portal.json",
-   "at": "2026-11-20T19:34:52.891Z"
+   "at": "2026-11-21T08:34:52.729Z"
   },
   {
    "path": "sources/eurostat-api.json",
    "file": "data/api/sources/eurostat-api.json",
-   "at": "2026-11-20T19:34:53.247Z"
+   "at": "2026-11-21T08:34:53.080Z"
   },
   {
    "path": "sources/eurostat-tourism.json",
    "file": "data/api/sources/eurostat-tourism.json",
-   "at": "2026-11-20T19:34:53.601Z"
+   "at": "2026-11-21T08:34:53.450Z"
   },
   {
    "path": "sources/euvd.json",
    "file": "data/api/sources/euvd.json",
-   "at": "2026-11-20T19:34:53.963Z"
+   "at": "2026-11-21T08:34:53.801Z"
   },
   {
    "path": "sources/eventbrite.json",
    "file": "data/api/sources/eventbrite.json",
-   "at": "2026-11-20T19:34:54.313Z"
+   "at": "2026-11-21T08:34:54.152Z"
   },
   {
    "path": "sources/eventbrite-portimao-digital-nomads.json",
    "file": "data/api/sources/eventbrite-portimao-digital-nomads.json",
-   "at": "2026-11-20T19:34:54.680Z"
+   "at": "2026-11-21T08:34:54.505Z"
   },
   {
    "path": "sources/events-pt.json",
    "file": "data/api/sources/events-pt.json",
-   "at": "2026-11-20T19:34:55.030Z"
+   "at": "2026-11-21T08:34:54.879Z"
   },
   {
    "path": "sources/facebook-autodromo.json",
    "file": "data/api/sources/facebook-autodromo.json",
-   "at": "2026-11-20T19:34:55.399Z"
+   "at": "2026-11-21T08:34:55.233Z"
   },
   {
    "path": "sources/first-epss.json",
    "file": "data/api/sources/first-epss.json",
-   "at": "2026-11-20T19:34:55.756Z"
+   "at": "2026-11-21T08:34:55.659Z"
   },
   {
    "path": "sources/gatwick-airport.json",
    "file": "data/api/sources/gatwick-airport.json",
-   "at": "2026-11-20T19:34:56.104Z"
+   "at": "2026-11-21T08:34:56.054Z"
   },
   {
    "path": "sources/github-api.json",
    "file": "data/api/sources/github-api.json",
-   "at": "2026-11-20T19:34:56.459Z"
+   "at": "2026-11-21T08:34:56.409Z"
   },
   {
    "path": "sources/github-pt.json",
    "file": "data/api/sources/github-pt.json",
-   "at": "2026-11-20T19:34:56.829Z"
+   "at": "2026-11-21T08:34:56.837Z"
   },
   {
    "path": "sources/google-news.json",
    "file": "data/api/sources/google-news.json",
-   "at": "2026-11-20T19:34:57.184Z"
+   "at": "2026-11-21T08:34:57.204Z"
   },
   {
    "path": "sources/google-web-risk.json",
    "file": "data/api/sources/google-web-risk.json",
-   "at": "2026-11-20T19:34:57.537Z"
+   "at": "2026-11-21T08:34:57.560Z"
   },
   {
    "path": "sources/heathrow-airport.json",
    "file": "data/api/sources/heathrow-airport.json",
-   "at": "2026-11-20T19:34:57.895Z"
+   "at": "2026-11-21T08:34:57.916Z"
   },
   {
    "path": "sources/impic-dados-gov-pt.json",
    "file": "data/api/sources/impic-dados-gov-pt.json",
-   "at": "2026-11-20T19:34:58.264Z"
+   "at": "2026-11-21T08:34:58.271Z"
   },
   {
    "path": "sources/ine-tourism-by-residence.json",
    "file": "data/api/sources/ine-tourism-by-residence.json",
-   "at": "2026-11-20T19:34:58.618Z"
+   "at": "2026-11-21T08:34:58.638Z"
   },
   {
    "path": "sources/ioda.json",
    "file": "data/api/sources/ioda.json",
-   "at": "2026-11-20T19:34:58.977Z"
+   "at": "2026-11-21T08:34:59.071Z"
   },
   {
    "path": "sources/ipma-city-forecasts.json",
    "file": "data/api/sources/ipma-city-forecasts.json",
-   "at": "2026-11-20T19:34:59.426Z"
+   "at": "2026-11-21T08:34:59.463Z"
   },
   {
    "path": "sources/ipma-fire-risk.json",
    "file": "data/api/sources/ipma-fire-risk.json",
-   "at": "2026-11-20T19:34:59.775Z"
+   "at": "2026-11-21T08:34:59.818Z"
   },
   {
    "path": "sources/ipma-observations.json",
    "file": "data/api/sources/ipma-observations.json",
-   "at": "2026-11-20T19:35:00.156Z"
+   "at": "2026-11-21T08:35:00.172Z"
   },
   {
    "path": "sources/ipma-sea.json",
    "file": "data/api/sources/ipma-sea.json",
-   "at": "2026-11-20T19:35:00.526Z"
+   "at": "2026-11-21T08:35:00.528Z"
   },
   {
    "path": "sources/ipma-uv.json",
    "file": "data/api/sources/ipma-uv.json",
-   "at": "2026-11-20T19:35:00.893Z"
+   "at": "2026-11-21T08:35:00.885Z"
   },
   {
    "path": "sources/ipma-warnings.json",
    "file": "data/api/sources/ipma-warnings.json",
-   "at": "2026-11-20T19:35:01.243Z"
+   "at": "2026-11-21T08:35:01.237Z"
   },
   {
    "path": "sources/jrc-pvgis.json",
    "file": "data/api/sources/jrc-pvgis.json",
-   "at": "2026-11-20T19:35:01.596Z"
+   "at": "2026-11-21T08:35:01.593Z"
   },
   {
    "path": "sources/laqn.json",
    "file": "data/api/sources/laqn.json",
-   "at": "2026-11-20T19:35:01.954Z"
+   "at": "2026-11-21T08:35:01.942Z"
   },
   {
    "path": "sources/linkedin.json",
    "file": "data/api/sources/linkedin.json",
-   "at": "2026-11-20T19:35:02.306Z"
+   "at": "2026-11-21T08:35:02.294Z"
   },
   {
    "path": "sources/lisboa-pt.json",
    "file": "data/api/sources/lisboa-pt.json",
-   "at": "2026-11-20T19:35:02.655Z"
+   "at": "2026-11-21T08:35:02.650Z"
   },
   {
    "path": "sources/london-centric.json",
    "file": "data/api/sources/london-centric.json",
-   "at": "2026-11-20T19:35:03.011Z"
+   "at": "2026-11-21T08:35:02.997Z"
   },
   {
    "path": "sources/london-city-airport.json",
    "file": "data/api/sources/london-city-airport.json",
-   "at": "2026-11-20T19:35:03.370Z"
+   "at": "2026-11-21T08:35:03.415Z"
   },
   {
    "path": "sources/london-datastore.json",
    "file": "data/api/sources/london-datastore.json",
-   "at": "2026-11-20T19:35:03.733Z"
+   "at": "2026-11-21T08:35:03.850Z"
   },
   {
    "path": "sources/london-datastore-london-reservoir-levels.json",
    "file": "data/api/sources/london-datastore-london-reservoir-levels.json",
-   "at": "2026-11-20T19:35:04.110Z"
+   "at": "2026-11-21T08:35:04.204Z"
   },
   {
    "path": "sources/london-gov-uk-events.json",
    "file": "data/api/sources/london-gov-uk-events.json",
-   "at": "2026-11-20T19:35:04.482Z"
+   "at": "2026-11-21T08:35:04.561Z"
   },
   {
    "path": "sources/london-luton-airport.json",
    "file": "data/api/sources/london-luton-airport.json",
-   "at": "2026-11-20T19:35:04.831Z"
+   "at": "2026-11-21T08:35:04.911Z"
   },
   {
    "path": "sources/londonist.json",
    "file": "data/api/sources/londonist.json",
-   "at": "2026-11-20T19:35:05.667Z"
+   "at": "2026-11-21T08:35:05.263Z"
   },
   {
    "path": "sources/luma.json",
    "file": "data/api/sources/luma.json",
-   "at": "2026-11-20T19:35:06.034Z"
+   "at": "2026-11-21T08:35:05.623Z"
   },
   {
    "path": "sources/mastodon.json",
    "file": "data/api/sources/mastodon.json",
-   "at": "2026-11-20T19:35:06.388Z"
+   "at": "2026-11-21T08:35:05.984Z"
   },
   {
    "path": "sources/meetup.json",
    "file": "data/api/sources/meetup.json",
-   "at": "2026-11-20T19:35:06.766Z"
+   "at": "2026-11-21T08:35:06.336Z"
   },
   {
    "path": "sources/meetup-start-algarve.json",
    "file": "data/api/sources/meetup-start-algarve.json",
-   "at": "2026-11-20T19:35:07.119Z"
+   "at": "2026-11-21T08:35:06.694Z"
   },
   {
    "path": "sources/meo-beachcam.json",
    "file": "data/api/sources/meo-beachcam.json",
-   "at": "2026-11-20T19:35:07.481Z"
+   "at": "2026-11-21T08:35:07.058Z"
   },
   {
    "path": "sources/met-office-datahub.json",
    "file": "data/api/sources/met-office-datahub.json",
-   "at": "2026-11-20T19:35:07.906Z"
+   "at": "2026-11-21T08:35:07.406Z"
   },
   {
    "path": "sources/meta.json",
    "file": "data/api/sources/meta.json",
-   "at": "2026-11-20T19:35:08.264Z"
+   "at": "2026-11-21T08:35:07.756Z"
   },
   {
    "path": "sources/meteoalarm-eu.json",
    "file": "data/api/sources/meteoalarm-eu.json",
-   "at": "2026-11-20T19:35:08.619Z"
+   "at": "2026-11-21T08:35:08.109Z"
   },
   {
    "path": "sources/meteoalarm-pt.json",
    "file": "data/api/sources/meteoalarm-pt.json",
-   "at": "2026-11-20T19:35:08.977Z"
+   "at": "2026-11-21T08:35:08.460Z"
   },
   {
    "path": "sources/national-rail-darwin.json",
    "file": "data/api/sources/national-rail-darwin.json",
-   "at": "2026-11-20T19:35:09.329Z"
+   "at": "2026-11-21T08:35:08.828Z"
   },
   {
    "path": "sources/ncsc-advisories.json",
    "file": "data/api/sources/ncsc-advisories.json",
-   "at": "2026-11-20T19:35:09.681Z"
+   "at": "2026-11-21T08:35:09.223Z"
   },
   {
    "path": "sources/nvd.json",
    "file": "data/api/sources/nvd.json",
-   "at": "2026-11-20T19:35:10.036Z"
+   "at": "2026-11-21T08:35:09.577Z"
   },
   {
    "path": "sources/nvd-cve.json",
    "file": "data/api/sources/nvd-cve.json",
-   "at": "2026-11-20T19:35:10.469Z"
+   "at": "2026-11-21T08:35:09.946Z"
   },
   {
    "path": "sources/nvd-kev.json",
    "file": "data/api/sources/nvd-kev.json",
-   "at": "2026-11-20T19:35:10.843Z"
+   "at": "2026-11-21T08:35:10.292Z"
   },
   {
    "path": "sources/odiariodeportugal.json",
    "file": "data/api/sources/odiariodeportugal.json",
-   "at": "2026-11-20T19:35:11.195Z"
+   "at": "2026-11-21T08:35:10.665Z"
   },
   {
    "path": "sources/on-london.json",
    "file": "data/api/sources/on-london.json",
-   "at": "2026-11-20T19:35:11.547Z"
+   "at": "2026-11-21T08:35:11.074Z"
   },
   {
    "path": "sources/ons-travel-trends.json",
    "file": "data/api/sources/ons-travel-trends.json",
-   "at": "2026-11-20T19:35:11.898Z"
+   "at": "2026-11-21T08:35:11.440Z"
   },
   {
    "path": "sources/open-meteo-london.json",
    "file": "data/api/sources/open-meteo-london.json",
-   "at": "2026-11-20T19:35:12.268Z"
+   "at": "2026-11-21T08:35:11.809Z"
   },
   {
    "path": "sources/perplexity.json",
    "file": "data/api/sources/perplexity.json",
-   "at": "2026-11-20T19:35:12.636Z"
+   "at": "2026-11-21T08:35:12.167Z"
   },
   {
    "path": "sources/portugal-tech-week.json",
    "file": "data/api/sources/portugal-tech-week.json",
-   "at": "2026-11-20T19:35:12.991Z"
+   "at": "2026-11-21T08:35:12.520Z"
   },
   {
    "path": "sources/portugalmotogp.json",
    "file": "data/api/sources/portugalmotogp.json",
-   "at": "2026-11-20T19:35:13.352Z"
+   "at": "2026-11-21T08:35:12.868Z"
   },
   {
    "path": "sources/ripestat.json",
    "file": "data/api/sources/ripestat.json",
-   "at": "2026-11-20T19:35:13.779Z"
+   "at": "2026-11-21T08:35:13.241Z"
   },
   {
    "path": "sources/shadowserver.json",
    "file": "data/api/sources/shadowserver.json",
-   "at": "2026-11-20T19:35:14.187Z"
+   "at": "2026-11-21T08:35:13.594Z"
   },
   {
    "path": "sources/sideevents-guide.json",
    "file": "data/api/sources/sideevents-guide.json",
-   "at": "2026-11-20T19:35:14.692Z"
+   "at": "2026-11-21T08:35:13.947Z"
   },
   {
    "path": "sources/skylinewebcams.json",
    "file": "data/api/sources/skylinewebcams.json",
-   "at": "2026-11-20T19:35:15.043Z"
+   "at": "2026-11-21T08:35:14.337Z"
   },
   {
    "path": "sources/snirh-apa.json",
    "file": "data/api/sources/snirh-apa.json",
-   "at": "2026-11-20T19:35:15.408Z"
+   "at": "2026-11-21T08:35:14.701Z"
   },
   {
    "path": "sources/social.json",
    "file": "data/api/sources/social.json",
-   "at": "2026-11-20T19:35:15.756Z"
+   "at": "2026-11-21T08:35:15.053Z"
   },
   {
    "path": "sources/southbank-centre.json",
    "file": "data/api/sources/southbank-centre.json",
-   "at": "2026-11-20T19:35:16.126Z"
+   "at": "2026-11-21T08:35:15.408Z"
   },
   {
    "path": "sources/stansted-airport.json",
    "file": "data/api/sources/stansted-airport.json",
-   "at": "2026-11-20T19:35:16.491Z"
+   "at": "2026-11-21T08:35:15.771Z"
   },
   {
    "path": "sources/storm-charles-archive.json",
    "file": "data/api/sources/storm-charles-archive.json",
-   "at": "2026-11-20T19:35:16.858Z"
+   "at": "2026-11-21T08:35:16.142Z"
   },
   {
    "path": "sources/teatro-das-figuras.json",
    "file": "data/api/sources/teatro-das-figuras.json",
-   "at": "2026-11-20T19:35:17.229Z"
+   "at": "2026-11-21T08:35:16.501Z"
   },
   {
    "path": "sources/ted-api.json",
    "file": "data/api/sources/ted-api.json",
-   "at": "2026-11-20T19:35:17.662Z"
+   "at": "2026-11-21T08:35:16.935Z"
   },
   {
    "path": "sources/telegram-algarvevents.json",
    "file": "data/api/sources/telegram-algarvevents.json",
-   "at": "2026-11-20T19:35:18.019Z"
+   "at": "2026-11-21T08:35:17.286Z"
   },
   {
    "path": "sources/tfl-jamcams.json",
    "file": "data/api/sources/tfl-jamcams.json",
-   "at": "2026-11-20T19:35:18.384Z"
+   "at": "2026-11-21T08:35:17.642Z"
   },
   {
    "path": "sources/tfl-unified-api.json",
    "file": "data/api/sources/tfl-unified-api.json",
-   "at": "2026-11-20T19:35:18.764Z"
+   "at": "2026-11-21T08:35:18.080Z"
   },
   {
    "path": "sources/thames-water-reservoir-levels.json",
    "file": "data/api/sources/thames-water-reservoir-levels.json",
-   "at": "2026-11-20T19:35:19.115Z"
+   "at": "2026-11-21T08:35:18.433Z"
   },
   {
    "path": "sources/the-guardian-london.json",
    "file": "data/api/sources/the-guardian-london.json",
-   "at": "2026-11-20T19:35:19.468Z"
+   "at": "2026-11-21T08:35:18.808Z"
   },
   {
    "path": "sources/theportugalnews.json",
    "file": "data/api/sources/theportugalnews.json",
-   "at": "2026-11-20T19:35:19.827Z"
+   "at": "2026-11-21T08:35:19.163Z"
   },
   {
    "path": "sources/tiktok.json",
    "file": "data/api/sources/tiktok.json",
-   "at": "2026-11-20T19:35:20.205Z"
+   "at": "2026-11-21T08:35:19.513Z"
   },
   {
    "path": "sources/turismo-portugal.json",
    "file": "data/api/sources/turismo-portugal.json",
-   "at": "2026-11-20T19:35:20.559Z"
+   "at": "2026-11-21T08:35:19.943Z"
   },
   {
    "path": "sources/turismo-portugal-travelbi.json",
    "file": "data/api/sources/turismo-portugal-travelbi.json",
-   "at": "2026-11-20T19:35:20.915Z"
+   "at": "2026-11-21T08:35:20.307Z"
   },
   {
    "path": "sources/ualg.json",
    "file": "data/api/sources/ualg.json",
-   "at": "2026-11-20T19:35:21.267Z"
+   "at": "2026-11-21T08:35:20.662Z"
   },
   {
    "path": "sources/ukceh-water-resources-portal.json",
    "file": "data/api/sources/ukceh-water-resources-portal.json",
-   "at": "2026-11-20T19:35:21.640Z"
+   "at": "2026-11-21T08:35:21.015Z"
   },
   {
    "path": "sources/visitalgarve.json",
    "file": "data/api/sources/visitalgarve.json",
-   "at": "2026-11-20T19:35:21.995Z"
+   "at": "2026-11-21T08:35:21.373Z"
   },
   {
    "path": "sources/visitlisboa.json",
    "file": "data/api/sources/visitlisboa.json",
-   "at": "2026-11-20T19:35:22.353Z"
+   "at": "2026-11-21T08:35:21.726Z"
   },
   {
    "path": "sources/x-motogp.json",
    "file": "data/api/sources/x-motogp.json",
-   "at": "2026-11-20T19:35:22.713Z"
+   "at": "2026-11-21T08:35:22.096Z"
   },
   {
    "path": "sources/x-twitter.json",
    "file": "data/api/sources/x-twitter.json",
-   "at": "2026-11-20T19:35:23.093Z"
+   "at": "2026-11-21T08:35:22.455Z"
   },
   {
    "path": "sources/youtube.json",
    "file": "data/api/sources/youtube.json",
-   "at": "2026-11-20T19:35:23.444Z"
+   "at": "2026-11-21T08:35:22.808Z"
   },
   {
    "path": "sources/youtube-data-api.json",
    "file": "data/api/sources/youtube-data-api.json",
-   "at": "2026-11-20T19:35:23.812Z"
+   "at": "2026-11-21T08:35:23.169Z"
   },
   {
    "path": "sources/youtube-replays.json",
    "file": "data/api/sources/youtube-replays.json",
-   "at": "2026-11-20T19:35:24.161Z"
+   "at": "2026-11-21T08:35:23.516Z"
   },
   {
    "path": "sources/gaps.json",
    "file": "data/api/sources/gaps.json",
-   "at": "2026-11-20T19:35:24.539Z"
+   "at": "2026-11-21T08:35:23.876Z"
   },
   {
    "path": "events-pt/latest.json",
    "file": "data/api/events-pt.json",
-   "at": "2026-11-20T19:35:24.927Z"
+   "at": "2026-11-21T08:35:24.306Z"
   },
   {
    "path": "https://promptugal.news/api/v1/sites.json",
    "file": "data/sites/sites.json",
-   "at": "2026-11-20T19:35:25.363Z"
+   "at": "2026-11-21T08:35:24.788Z"
   }
  ],
  "failed": [],
- "finished": "2026-11-20T19:35:25.363Z"
+ "finished": "2026-11-21T08:35:24.788Z"
 }

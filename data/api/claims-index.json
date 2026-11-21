@@ -1,5 +1,5 @@
 {
- "data_read_at": "2026-11-20T18:16:43Z",
+ "data_read_at": "2026-11-21T07:13:28Z",
  "expected_cadence": {
   "name": "twice a day",
   "seconds": 43200,
@@ -20,13 +20,13 @@
   "commercial_use": "allowed",
   "commercial_note": "With credit to PrompTugal.news; values taken from a source keep that source's licence."
  },
- "read_at": "2026-11-20T18:16:43Z",
+ "read_at": "2026-11-21T07:13:28Z",
  "places": [
   {
    "place": "albufeira",
-   "claims": 5,
+   "claims": 4,
    "confirmed": 0,
-   "withheld": 5
+   "withheld": 4
   },
   {
    "place": "alcoutim",
@@ -54,9 +54,9 @@
   },
   {
    "place": "lagoa",
-   "claims": 8,
+   "claims": 7,
    "confirmed": 0,
-   "withheld": 8
+   "withheld": 7
   },
   {
    "place": "lagos",
@@ -78,9 +78,9 @@
   },
   {
    "place": "monchique",
-   "claims": 3,
+   "claims": 2,
    "confirmed": 0,
-   "withheld": 3
+   "withheld": 2
   },
   {
    "place": "olhao",
@@ -102,9 +102,9 @@
   },
   {
    "place": "sao-bras-de-alportel",
-   "claims": 8,
+   "claims": 7,
    "confirmed": 0,
-   "withheld": 8
+   "withheld": 7
   },
   {
    "place": "silves",
@@ -120,9 +120,9 @@
   },
   {
    "place": "vila-do-bispo",
-   "claims": 6,
+   "claims": 5,
    "confirmed": 0,
-   "withheld": 6
+   "withheld": 5
   },
   {
    "place": "vila-real-de-santo-antonio",

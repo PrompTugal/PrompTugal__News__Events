@@ -10,7 +10,10 @@ const cases = [
   ['a single-day event moved a day is a change', () => !isRolling(ev({ startDate: '2026-11-19' }), sd('2026-11-19', '2026-11-20'))],
   ['an end-date change is never rolling', () => !isRolling(ev({ startDate: '2026-11-19', endDate: '2026-11-30' }), { field: 'endDate', from: '2026-11-30', to: null, at: '2026-11-20T07:14:07Z' })],
   ['a start moved before the first-listed start is a change', () => !isRolling(ev({ startDate: '2026-11-19', endDate: '2026-11-30' }), sd('2026-11-01', '2026-11-05'))],
-  ['a start moved well after the day it was seen is a change, even within the run', () => !isRolling(ev({ startDate: '2026-11-19', endDate: '2026-11-30' }), sd('2026-11-19', '2026-11-26'))],
+  ['a start moved more than a week after the read is a change, even within the run', () => !isRolling(ev({ startDate: '2026-11-19', endDate: '2026-12-31' }), sd('2026-11-19', '2026-11-30'))],
+  ['exactly 7 days after the read is rolling; 8 days is a change', () => isRolling(ev({ startDate: '2026-11-19', endDate: '2026-12-31' }), { field: 'startDate', from: '2026-11-20', to: '2026-11-28', at: '2026-11-21T07:09:42Z' })
+    && !isRolling(ev({ startDate: '2026-11-19', endDate: '2026-12-31' }), { field: 'startDate', from: '2026-11-20', to: '2026-11-29', at: '2026-11-21T07:09:42Z' })],
+  ['a start moved to the next open day after a weekend is rolling', () => isRolling(ev({ startDate: '2026-11-19', endDate: '2026-11-30' }), { field: 'startDate', from: '2026-11-20', to: '2026-11-23', at: '2026-11-21T07:09:42Z' })],
   ['a run of more than a year, or an end before the start, never makes a rolling start', () => !isRolling(ev({ startDate: '2026-11-19', endDate: '2028-01-01' }), sd('2026-11-19', '2026-11-20')) && !isRolling(ev({ startDate: '2026-11-19', endDate: '2026-11-01' }), sd('2026-11-19', '2026-11-20'))],
   ['non-string dates are never rolling', () => !isRolling(ev({ startDate: '2026-11-19', endDate: '2026-11-30' }), { field: 'startDate', from: 20261119, to: 20261120, at: '2026-11-20T07:14:07Z' })],
   ['a real change past the 20th change still counts as changed', () => {
@@ -24,7 +27,7 @@ const cases = [
     return H.rolling.length === 1 && H.changed.length === 1;
   }],
   ['an event with a real change and a rolling start counts once, as changed', () => {
-    const e = ev({ startDate: '2026-11-19', endDate: '2026-11-26' }, [sd('2026-11-19', '2026-11-26'), { field: 'endDate', from: '2026-11-26', to: null, at: '2026-11-20T07:14:12Z' }]);
+    const e = ev({ startDate: '2026-11-19', endDate: '2026-12-06' }, [sd('2026-11-19', '2026-12-06'), { field: 'endDate', from: '2026-12-06', to: null, at: '2026-11-20T07:14:12Z' }]);
     const H = pastOf([{ place: 'lisboa', events: [e] }]);
     return H.changed.length === 1 && H.rolling.length === 0 && histChangesOf(e).length === 2 && histRollingOf(e).length === 0;
   }],

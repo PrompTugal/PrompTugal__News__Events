@@ -1,5 +1,5 @@
 {
- "data_read_at": "2026-11-20T18:16:44Z",
+ "data_read_at": "2026-11-21T07:13:28Z",
  "expected_cadence": {
   "name": "twice a day",
   "seconds": 43200,
@@ -21,121 +21,121 @@
   "commercial_note": "With credit to PrompTugal.news; values taken from a source keep that source's licence."
  },
  "about": "Events per place: each a schema.org Event with its source and the time read, from official agendas and organisers' own public feeds (see the events-pt card). Not eventbrite, lu.ma, luma.com or meetup.com.",
- "read_at": "2026-11-20T18:16:44Z",
+ "read_at": "2026-11-21T07:13:28Z",
  "places": [
   {
    "id": "albufeira",
    "url": "https://data.promptugal.news/api/v1/events/by-place/albufeira.json",
    "events": 0,
-   "read_at": "2026-11-20T18:16:43Z"
+   "read_at": "2026-11-21T07:13:27Z"
   },
   {
    "id": "alcoutim",
    "url": "https://data.promptugal.news/api/v1/events/by-place/alcoutim.json",
    "events": 0,
-   "read_at": "2026-11-20T18:16:43Z"
+   "read_at": "2026-11-21T07:13:27Z"
   },
   {
    "id": "algarve",
    "url": "https://data.promptugal.news/api/v1/events/by-place/algarve.json",
-   "events": 141,
-   "read_at": "2026-11-20T18:16:43Z"
+   "events": 132,
+   "read_at": "2026-11-21T07:13:27Z"
   },
   {
    "id": "aljezur",
    "url": "https://data.promptugal.news/api/v1/events/by-place/aljezur.json",
    "events": 0,
-   "read_at": "2026-11-20T18:16:43Z"
+   "read_at": "2026-11-21T07:13:27Z"
   },
   {
    "id": "castro-marim",
    "url": "https://data.promptugal.news/api/v1/events/by-place/castro-marim.json",
    "events": 0,
-   "read_at": "2026-11-20T18:16:43Z"
+   "read_at": "2026-11-21T07:13:27Z"
   },
   {
    "id": "faro",
    "url": "https://data.promptugal.news/api/v1/events/by-place/faro.json",
    "events": 12,
-   "read_at": "2026-11-20T18:16:43Z"
+   "read_at": "2026-11-21T07:13:27Z"
   },
   {
    "id": "lagoa",
    "url": "https://data.promptugal.news/api/v1/events/by-place/lagoa.json",
    "events": 0,
-   "read_at": "2026-11-20T18:16:43Z"
+   "read_at": "2026-11-21T07:13:27Z"
   },
   {
    "id": "lagos",
    "url": "https://data.promptugal.news/api/v1/events/by-place/lagos.json",
-   "events": 91,
-   "read_at": "2026-11-20T18:16:43Z"
+   "events": 86,
+   "read_at": "2026-11-21T07:13:27Z"
   },
   {
    "id": "lisboa",
    "url": "https://data.promptugal.news/api/v1/events/by-place/lisboa.json",
-   "events": 442,
-   "read_at": "2026-11-20T18:16:43Z"
+   "events": 461,
+   "read_at": "2026-11-21T07:13:27Z"
   },
   {
    "id": "loule",
    "url": "https://data.promptugal.news/api/v1/events/by-place/loule.json",
    "events": 0,
-   "read_at": "2026-11-20T18:16:43Z"
+   "read_at": "2026-11-21T07:13:27Z"
   },
   {
    "id": "monchique",
    "url": "https://data.promptugal.news/api/v1/events/by-place/monchique.json",
    "events": 0,
-   "read_at": "2026-11-20T18:16:43Z"
+   "read_at": "2026-11-21T07:13:27Z"
   },
   {
    "id": "olhao",
    "url": "https://data.promptugal.news/api/v1/events/by-place/olhao.json",
    "events": 0,
-   "read_at": "2026-11-20T18:16:43Z"
+   "read_at": "2026-11-21T07:13:27Z"
   },
   {
    "id": "portimao",
    "url": "https://data.promptugal.news/api/v1/events/by-place/portimao.json",
    "events": 0,
-   "read_at": "2026-11-20T18:16:43Z"
+   "read_at": "2026-11-21T07:13:27Z"
   },
   {
    "id": "quarteira",
    "url": "https://data.promptugal.news/api/v1/events/by-place/quarteira.json",
    "events": 0,
-   "read_at": "2026-11-20T18:16:43Z"
+   "read_at": "2026-11-21T07:13:27Z"
   },
   {
    "id": "sao-bras-de-alportel",
    "url": "https://data.promptugal.news/api/v1/events/by-place/sao-bras-de-alportel.json",
    "events": 0,
-   "read_at": "2026-11-20T18:16:43Z"
+   "read_at": "2026-11-21T07:13:27Z"
   },
   {
    "id": "silves",
    "url": "https://data.promptugal.news/api/v1/events/by-place/silves.json",
    "events": 0,
-   "read_at": "2026-11-20T18:16:43Z"
+   "read_at": "2026-11-21T07:13:27Z"
   },
   {
    "id": "tavira",
    "url": "https://data.promptugal.news/api/v1/events/by-place/tavira.json",
-   "events": 38,
-   "read_at": "2026-11-20T18:16:43Z"
+   "events": 34,
+   "read_at": "2026-11-21T07:13:27Z"
   },
   {
    "id": "vila-do-bispo",
    "url": "https://data.promptugal.news/api/v1/events/by-place/vila-do-bispo.json",
    "events": 0,
-   "read_at": "2026-11-20T18:16:43Z"
+   "read_at": "2026-11-21T07:13:27Z"
   },
   {
    "id": "vila-real-de-santo-antonio",
    "url": "https://data.promptugal.news/api/v1/events/by-place/vila-real-de-santo-antonio.json",
    "events": 0,
-   "read_at": "2026-11-20T18:16:43Z"
+   "read_at": "2026-11-21T07:13:27Z"
   }
  ]
 }

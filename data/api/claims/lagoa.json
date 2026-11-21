@@ -1,5 +1,5 @@
 {
- "data_read_at": "2026-11-20T18:16:43Z",
+ "data_read_at": "2026-11-21T07:13:28Z",
  "expected_cadence": {
   "name": "twice a day",
   "seconds": 43200,
@@ -21,7 +21,7 @@
   "commercial_note": "With credit to PrompTugal.news; values taken from a source keep that source's licence."
  },
  "place": "lagoa",
- "read_at": "2026-11-20T18:16:43Z",
+ "read_at": "2026-11-21T07:13:28Z",
  "discovery": {
   "asked_at": "2026-11-18T14:18:08Z",
   "model": "perplexity/sonar",
@@ -30,44 +30,11 @@
  },
  "about": "Events claimed for this place, each with every evidence link and whether this site may read that source (the register). Name, date and place come from discovery (Perplexity, through OpenRouter); other details only from a readable source. Not a confirmed listing.",
  "counts": {
-  "claims": 8,
+  "claims": 7,
   "confirmed": 0,
-  "withheld": 8
+  "withheld": 7
  },
  "claims": [
-  {
-   "@type": "Event",
-   "name": "Algarve Real Estate Summit 2026",
-   "startDate": "2026-11-20",
-   "endDate": "2026-11-20",
-   "place": "lagoa",
-   "municipality": "Lagoa",
-   "evidence": [
-    {
-     "url": "https://www.theportugalnews.com/news/2026-11-02/the-algarve-deserves-its-own-stage-the-vision-behind-the-algarve-real-estate-summit-2026/1109007",
-     "host": "theportugalnews.com",
-     "readable": false,
-     "register": "theportugalnews"
-    },
-    {
-     "url": "https://www.theportugalnews.com/news/2026-10-09/algarve-real-estate-summit-2026-where-the-algarve-meets-the-world/1097777",
-     "host": "theportugalnews.com",
-     "readable": false,
-     "register": "theportugalnews"
-    }
-   ],
-   "status": "details withheld",
-   "details_from": null,
-   "details_note": "Details withheld: the sources cited (theportugalnews.com) are not ones whose terms let us copy them. Organiser: send them to us.",
-   "license": {
-    "name": "CC BY 4.0",
-    "url": "https://creativecommons.org/licenses/by/4.0/",
-    "holder": "PrompTugal.news",
-    "note": "Our record of the claim (title, date, place, evidence links), found through Perplexity; each evidence link is under its own source's terms.",
-    "commercial_use": "allowed",
-    "commercial_note": "With credit to PrompTugal.news; values taken from a source keep that source's licence."
-   }
-  },
   {
    "@type": "Event",
    "name": "Alice in Wonderland",
